@@ -7,6 +7,9 @@ extends CharacterBody2D
 var direction = "down"
 var state="idle"
 
+func _ready() -> void:
+	global_position=GameManager.playerPosition
+
 func _process(_delta: float) -> void:
 	velocity = Input.get_vector("left", "right", "up", "down") * speed
 	move_and_slide()

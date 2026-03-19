@@ -1,0 +1,61 @@
+[gd_scene load_steps=3 format=3 uid="uid://p6x3hd6afog6"]
+
+[ext_resource type="PackedScene" uid="uid://ba24hclljygvv" path="res://pokemonSelector.tscn" id="1_ip7xm"]
+[ext_resource type="Script" uid="uid://do3gaqda1wenc" path="res://battle.gd" id="1_oxp8w"]
+
+[node name="Battle" type="Node2D"]
+script = ExtResource("1_oxp8w")
+
+[node name="Player" parent="." instance=ExtResource("1_ip7xm")]
+position = Vector2(142, 305)
+
+[node name="Opponent" parent="." instance=ExtResource("1_ip7xm")]
+position = Vector2(692, 144)
+back = false
+pokemon = 0
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_top = 384.0
+offset_right = 958.0
+offset_bottom = 538.0
+mouse_filter = 2
+color = Color(0.44, 0.44, 0.44, 1)
+
+[node name="GridContainer" type="GridContainer" parent="ColorRect"]
+layout_mode = 0
+offset_left = 537.0
+offset_top = 14.0
+offset_right = 941.0
+offset_bottom = 138.0
+columns = 2
+
+[node name="Fight" type="Button" parent="ColorRect/GridContainer"]
+custom_minimum_size = Vector2(200, 60)
+layout_mode = 2
+text = "Fight"
+
+[node name="Catch" type="Button" parent="ColorRect/GridContainer"]
+custom_minimum_size = Vector2(200, 60)
+layout_mode = 2
+text = "Catch"
+
+[node name="Switch" type="Button" parent="ColorRect/GridContainer"]
+custom_minimum_size = Vector2(200, 60)
+layout_mode = 2
+text = "Switch"
+
+[node name="Run" type="Button" parent="ColorRect/GridContainer"]
+custom_minimum_size = Vector2(200, 60)
+layout_mode = 2
+text = "Run"
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+z_index = -1
+offset_right = 958.0
+offset_bottom = 531.0
+mouse_filter = 2
+color = Color(0.48909998, 0.73, 0.525235, 1)
+
+[node name="OpponentController" type="Node2D" parent="."]
+
+[connection signal="pressed" from="ColorRect/GridContainer/Run" to="." method="_on_run_pressed"]

@@ -1,0 +1,43 @@
+[gd_scene load_steps=8 format=3 uid="uid://ba24hclljygvv"]
+
+[ext_resource type="Script" uid="uid://bl525lufsugqy" path="res://pokemonSelector.gd" id="1_0uh2f"]
+[ext_resource type="Texture2D" uid="uid://bbctwkye4ujb4" path="res://Fakemon-PNG/timberry.png" id="2_m42bm"]
+[ext_resource type="Texture2D" uid="uid://b7bsg3hluh6en" path="res://Fakemon-PNG/frirate.png" id="3_cxv77"]
+[ext_resource type="Texture2D" uid="uid://cy5ixt1h2jqox" path="res://Fakemon-PNG/geckrow.png" id="4_lsc3l"]
+[ext_resource type="Texture2D" uid="uid://ii1pbb1pc3mv" path="res://Fakemon-PNG/timberry-back.png" id="5_bypo8"]
+[ext_resource type="Texture2D" uid="uid://cyafkvm465t4r" path="res://Fakemon-PNG/geckrow-back.png" id="6_y7fif"]
+[ext_resource type="Texture2D" uid="uid://dil1ihlph1k08" path="res://Fakemon-PNG/frirate-back.png" id="7_a0ket"]
+
+[node name="Pokemon" type="Node2D"]
+scale = Vector2(3, 3)
+script = ExtResource("1_0uh2f")
+back = true
+pokemon = 2
+
+[node name="Front" type="Node2D" parent="."]
+
+[node name="Timberry" type="Sprite2D" parent="Front"]
+visible = false
+texture = ExtResource("2_m42bm")
+
+[node name="Frirate" type="Sprite2D" parent="Front"]
+visible = false
+texture = ExtResource("3_cxv77")
+
+[node name="Geckrow" type="Sprite2D" parent="Front"]
+visible = false
+texture = ExtResource("4_lsc3l")
+
+[node name="Back" type="Node2D" parent="."]
+
+[node name="Timberry" type="Sprite2D" parent="Back"]
+visible = false
+texture = ExtResource("5_bypo8")
+
+[node name="Geckrow" type="Sprite2D" parent="Back"]
+visible = false
+texture = ExtResource("6_y7fif")
+
+[node name="Frirate" type="Sprite2D" parent="Back"]
+visible = false
+texture = ExtResource("7_a0ket")
