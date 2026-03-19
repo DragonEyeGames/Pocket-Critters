@@ -1,0 +1,38 @@
+[gd_scene load_steps=3 format=3 uid="uid://csi5giv4qbgfx"]
+
+[ext_resource type="PackedScene" uid="uid://ba24hclljygvv" path="res://Scenes/pokemonSelector.tscn" id="1_r058n"]
+[ext_resource type="Script" uid="uid://kugeqjublj4p" path="res://Scripts/team_slot.gd" id="1_utni4"]
+
+[node name="TeamSlot" type="Control"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_utni4")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 15.0
+offset_top = 15.0
+offset_right = -14.0
+offset_bottom = -14.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.3854925, 0.38549247, 0.38549247, 1)
+
+[node name="Pokemon" parent="." instance=ExtResource("1_r058n")]
+position = Vector2(73, 90)
+scale = Vector2(1.765, 1.765)
+back = false
+
+[node name="Name" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 15.0
+offset_right = 136.0
+offset_bottom = 47.0
+text = "YUr Mum HAA"
+horizontal_alignment = 1
+vertical_alignment = 1

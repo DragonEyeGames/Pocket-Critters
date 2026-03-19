@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dv4otklr3xj3k"
-path="res://.godot/imported/charsetB_1.png-d0bc242557c20ec2a3fe7f53526181db.ctex"
+path="res://.godot/imported/charsetB_1.png-7e0c72ffda94b94159011ae48b2f54cb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://charsetB_1.png"
-dest_files=["res://.godot/imported/charsetB_1.png-d0bc242557c20ec2a3fe7f53526181db.ctex"]
+source_file="res://Assets/charsetB_1.png"
+dest_files=["res://.godot/imported/charsetB_1.png-7e0c72ffda94b94159011ae48b2f54cb.ctex"]
 
 [params]
 

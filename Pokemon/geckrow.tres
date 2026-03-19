@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="SpeciesData" load_steps=4 format=3 uid="uid://dbpad56uixwli"]
+
+[ext_resource type="Script" uid="uid://c3odxqj7xy866" path="res://Resources/MoveResource.gd" id="1_jbw0n"]
+[ext_resource type="Resource" uid="uid://do0twrxr0jj58" path="res://Moves/leafSlice.tres" id="2_1poqq"]
+[ext_resource type="Script" uid="uid://1vun3nkcoo5i" path="res://Resources/SpeciesData.gd" id="3_o8wtw"]
+
+[resource]
+script = ExtResource("3_o8wtw")
+species = 2
+potentialMoves = Array[ExtResource("1_jbw0n")]([ExtResource("2_1poqq")])
+metadata/_custom_type_script = "uid://c7t80kmu0l21k"

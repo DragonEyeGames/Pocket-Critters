@@ -10,16 +10,17 @@ func _ready() -> void:
 func _on_area_2d_area_entered(area: Area2D) -> void:
 	if(randf() <= .1):
 		GameManager.playerPosition=area.get_parent().global_position
-		print(GameManager.pokemon.keys()[GameManager.encounterList.pick_random()])
-		GameManager.wildBattle(GameManager.encounterList.pick_random())
+		var picked_value = GameManager.encounterList.pick_random()
+		print(GameManager.pokemonName(picked_value))
+		GameManager.wildBattle(picked_value)
 		return
 	if(area.get_parent().global_position.y<=global_position.y):
 		sprite.position.y+=1
-		await get_tree().process_frame
-		await get_tree().process_frame
+		await get_tree().create_timer(0).timeout
+		await get_tree().create_timer(0).timeout
 		sprite.position.y-=1
 	elif(area.get_parent().global_position.y>global_position.y):
 		sprite.position.y-=1
-		await get_tree().process_frame
-		await get_tree().process_frame
+		await get_tree().create_timer(0).timeout
+		await get_tree().create_timer(0).timeout
 		sprite.position.y+=1

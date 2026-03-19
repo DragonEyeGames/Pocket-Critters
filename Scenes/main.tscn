@@ -1,10 +1,11 @@
-[gd_scene load_steps=10 format=4 uid="uid://4sc6wsoxl7ao"]
+[gd_scene load_steps=11 format=4 uid="uid://4sc6wsoxl7ao"]
 
-[ext_resource type="Texture2D" uid="uid://bo43kqdc3lvgx" path="res://Woods.png" id="1_ig7tw"]
-[ext_resource type="Script" uid="uid://swgsdmbo5fng" path="res://main.gd" id="1_lquwl"]
-[ext_resource type="PackedScene" uid="uid://c5yxtkkwi03pt" path="res://player.tscn" id="2_h2yge"]
-[ext_resource type="PackedScene" uid="uid://bw2ujrj6t7blx" path="res://grass.tscn" id="3_h2yge"]
-[ext_resource type="Script" uid="uid://b8lk6mbxbunri" path="res://y_sort.gd" id="4_1bvp3"]
+[ext_resource type="Texture2D" uid="uid://bo43kqdc3lvgx" path="res://Assets/Woods.png" id="1_ig7tw"]
+[ext_resource type="Script" uid="uid://swgsdmbo5fng" path="res://Scripts/main.gd" id="1_lquwl"]
+[ext_resource type="PackedScene" uid="uid://c5yxtkkwi03pt" path="res://Scenes/player.tscn" id="2_h2yge"]
+[ext_resource type="PackedScene" uid="uid://bw2ujrj6t7blx" path="res://Scenes/grass.tscn" id="3_h2yge"]
+[ext_resource type="Script" uid="uid://b8lk6mbxbunri" path="res://Scripts/y_sort.gd" id="4_1bvp3"]
+[ext_resource type="PackedScene" uid="uid://dwbnx0jnjv6yx" path="res://Scenes/pause.tscn" id="6_7mycd"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0xm2m"]
 texture = ExtResource("1_ig7tw")
@@ -305,3 +306,5 @@ position = Vector2(56, -28)
 
 [node name="Grass30" parent="Grasses" instance=ExtResource("3_h2yge")]
 position = Vector2(72, -28)
+
+[node name="Pause" parent="." instance=ExtResource("6_7mycd")]

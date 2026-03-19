@@ -1,0 +1,42 @@
+[gd_scene load_steps=2 format=3 uid="uid://csq0ccnt2o6ri"]
+
+[ext_resource type="Script" uid="uid://ca571jdvs688u" path="res://Scripts/stat_holder.gd" id="1_2unu8"]
+
+[node name="StatHolder" type="ColorRect"]
+offset_left = -237.0
+offset_top = -68.0
+offset_right = 270.0
+offset_bottom = 64.0
+color = Color(0.4392157, 0.4392157, 0.4392157, 1)
+script = ExtResource("1_2unu8")
+
+[node name="Name" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_right = 237.0
+offset_bottom = 69.0
+theme_override_font_sizes/normal_font_size = 29
+text = "Sprigatito"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Level" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 270.0
+offset_top = -1.0
+offset_right = 507.0
+offset_bottom = 68.0
+theme_override_font_sizes/normal_font_size = 29
+text = "Lv: 5"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Health" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 269.0
+offset_top = 61.0
+offset_right = 506.0
+offset_bottom = 130.0
+theme_override_font_sizes/normal_font_size = 29
+text = "20/20"
+horizontal_alignment = 1
+vertical_alignment = 1

@@ -1,0 +1,167 @@
+[gd_scene load_steps=3 format=3 uid="uid://dwbnx0jnjv6yx"]
+
+[ext_resource type="Script" uid="uid://dp2xe7ys1trpk" path="res://Scripts/pause.gd" id="1_aq7p1"]
+[ext_resource type="PackedScene" uid="uid://csi5giv4qbgfx" path="res://Scenes/team_slot.tscn" id="2_6eyaj"]
+
+[node name="Pause" type="CanvasLayer"]
+process_mode = 3
+script = ExtResource("1_aq7p1")
+
+[node name="Menu" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect2" type="ColorRect" parent="Menu"]
+layout_mode = 0
+offset_left = 766.0
+offset_top = -8.0
+offset_right = 966.0
+offset_bottom = 562.0
+mouse_filter = 2
+color = Color(0.8089983, 0.8089983, 0.8089982, 1)
+
+[node name="ColorRect" type="ColorRect" parent="Menu"]
+z_index = -1
+layout_mode = 0
+offset_left = -10.0
+offset_top = -8.0
+offset_right = 966.0
+offset_bottom = 562.0
+mouse_filter = 2
+color = Color(0, 0, 0, 0.20784314)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Menu"]
+layout_mode = 0
+offset_left = 773.0
+offset_top = 14.0
+offset_right = 952.0
+offset_bottom = 523.0
+
+[node name="Team" type="Control" parent="Menu/VBoxContainer"]
+custom_minimum_size = Vector2(0, 41.595)
+layout_mode = 2
+
+[node name="team" type="Button" parent="Menu/VBoxContainer/Team"]
+layout_mode = 0
+offset_right = 171.0
+offset_bottom = 35.0
+text = "Team"
+
+[node name="Bag" type="Control" parent="Menu/VBoxContainer"]
+custom_minimum_size = Vector2(0, 41.595)
+layout_mode = 2
+
+[node name="Button" type="Button" parent="Menu/VBoxContainer/Bag"]
+layout_mode = 0
+offset_right = 171.0
+offset_bottom = 35.0
+disabled = true
+text = "Bag"
+
+[node name="Save" type="Control" parent="Menu/VBoxContainer"]
+custom_minimum_size = Vector2(0, 41.595)
+layout_mode = 2
+
+[node name="Button" type="Button" parent="Menu/VBoxContainer/Save"]
+layout_mode = 0
+offset_right = 171.0
+offset_bottom = 35.0
+disabled = true
+text = "Save"
+
+[node name="Menu" type="Control" parent="Menu/VBoxContainer"]
+custom_minimum_size = Vector2(0, 41.595)
+layout_mode = 2
+
+[node name="Button" type="Button" parent="Menu/VBoxContainer/Menu"]
+layout_mode = 0
+offset_right = 171.0
+offset_bottom = 35.0
+disabled = true
+text = "Menu"
+
+[node name="Quit" type="Control" parent="Menu/VBoxContainer"]
+custom_minimum_size = Vector2(0, 41.595)
+layout_mode = 2
+
+[node name="Button" type="Button" parent="Menu/VBoxContainer/Quit"]
+layout_mode = 0
+offset_right = 171.0
+offset_bottom = 35.0
+disabled = true
+text = "Quit"
+
+[node name="Team Menu" type="Control" parent="."]
+visible = false
+z_index = 1
+layout_mode = 3
+anchors_preset = 0
+offset_left = 80.0
+offset_top = 61.0
+offset_right = 724.0
+offset_bottom = 463.0
+
+[node name="ColorRect" type="ColorRect" parent="Team Menu"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.80784315, 0.80784315, 0.80784315, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="Team Menu"]
+z_index = -1
+layout_mode = 0
+offset_left = -124.0
+offset_top = -85.0
+offset_right = 898.0
+offset_bottom = 491.0
+color = Color(0, 0, 0, 0.22745098)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Team Menu"]
+layout_mode = 0
+offset_right = 644.0
+offset_bottom = 69.0
+theme_override_font_sizes/normal_font_size = 39
+text = "Team"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="GridContainer" type="GridContainer" parent="Team Menu"]
+layout_mode = 0
+offset_left = 99.0
+offset_top = 68.0
+offset_right = 557.0
+offset_bottom = 382.0
+columns = 3
+
+[node name="TeamSlot" parent="Team Menu/GridContainer" instance=ExtResource("2_6eyaj")]
+layout_mode = 2
+
+[node name="TeamSlot2" parent="Team Menu/GridContainer" instance=ExtResource("2_6eyaj")]
+layout_mode = 2
+index = 1
+
+[node name="TeamSlot3" parent="Team Menu/GridContainer" instance=ExtResource("2_6eyaj")]
+layout_mode = 2
+index = 2
+
+[node name="TeamSlot4" parent="Team Menu/GridContainer" instance=ExtResource("2_6eyaj")]
+layout_mode = 2
+index = 3
+
+[node name="TeamSlot5" parent="Team Menu/GridContainer" instance=ExtResource("2_6eyaj")]
+layout_mode = 2
+index = 4
+
+[node name="TeamSlot6" parent="Team Menu/GridContainer" instance=ExtResource("2_6eyaj")]
+layout_mode = 2
+index = 5
+
+[connection signal="pressed" from="Menu/VBoxContainer/Team/team" to="." method="_on_team_pressed"]

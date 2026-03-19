@@ -8,11 +8,11 @@ func _ready() -> void:
 	$Player.pokemon=GameManager.playerTeam[0]
 	$Player.initialize()
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
-
-
 func _on_run_pressed() -> void:
 	get_tree().change_scene_to_file("res://main.tscn")
+
+
+func _on_catch_pressed() -> void:
+	if(len(GameManager.playerTeam)<=5):
+		GameManager.playerTeam.append(GameManager.toBattle)
+		get_tree().change_scene_to_file("res://main.tscn")

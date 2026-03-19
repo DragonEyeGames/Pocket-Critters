@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://p6x3hd6afog6"]
+[gd_scene load_steps=4 format=3 uid="uid://p6x3hd6afog6"]
 
-[ext_resource type="PackedScene" uid="uid://ba24hclljygvv" path="res://pokemonSelector.tscn" id="1_ip7xm"]
-[ext_resource type="Script" uid="uid://do3gaqda1wenc" path="res://battle.gd" id="1_oxp8w"]
+[ext_resource type="PackedScene" uid="uid://ba24hclljygvv" path="res://Scenes/pokemonSelector.tscn" id="1_ip7xm"]
+[ext_resource type="Script" uid="uid://do3gaqda1wenc" path="res://Scripts/battle.gd" id="1_oxp8w"]
+[ext_resource type="PackedScene" uid="uid://csq0ccnt2o6ri" path="res://Scenes/statHolder.tscn" id="3_7sfm4"]
 
 [node name="Battle" type="Node2D"]
 script = ExtResource("1_oxp8w")
@@ -32,21 +33,25 @@ columns = 2
 [node name="Fight" type="Button" parent="ColorRect/GridContainer"]
 custom_minimum_size = Vector2(200, 60)
 layout_mode = 2
+focus_mode = 0
 text = "Fight"
 
 [node name="Catch" type="Button" parent="ColorRect/GridContainer"]
 custom_minimum_size = Vector2(200, 60)
 layout_mode = 2
+focus_mode = 0
 text = "Catch"
 
 [node name="Switch" type="Button" parent="ColorRect/GridContainer"]
 custom_minimum_size = Vector2(200, 60)
 layout_mode = 2
+focus_mode = 0
 text = "Switch"
 
 [node name="Run" type="Button" parent="ColorRect/GridContainer"]
 custom_minimum_size = Vector2(200, 60)
 layout_mode = 2
+focus_mode = 0
 text = "Run"
 
 [node name="ColorRect2" type="ColorRect" parent="."]
@@ -58,4 +63,17 @@ color = Color(0.48909998, 0.73, 0.525235, 1)
 
 [node name="OpponentController" type="Node2D" parent="."]
 
+[node name="StatHolder" parent="." instance=ExtResource("3_7sfm4")]
+offset_left = 423.0
+offset_top = 230.0
+offset_right = 930.0
+offset_bottom = 362.0
+
+[node name="StatHolder2" parent="." instance=ExtResource("3_7sfm4")]
+offset_left = 19.0
+offset_top = 18.0
+offset_right = 526.0
+offset_bottom = 150.0
+
+[connection signal="pressed" from="ColorRect/GridContainer/Catch" to="." method="_on_catch_pressed"]
 [connection signal="pressed" from="ColorRect/GridContainer/Run" to="." method="_on_run_pressed"]
