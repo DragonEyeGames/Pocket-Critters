@@ -117,3 +117,7 @@ offset_bottom = 150.0
 [connection signal="pressed" from="BattleOptions/Options/Fight" to="." method="_on_fight_pressed"]
 [connection signal="pressed" from="BattleOptions/Options/Catch" to="." method="_on_catch_pressed"]
 [connection signal="pressed" from="BattleOptions/Options/Run" to="." method="_on_run_pressed"]
+[connection signal="pressed" from="BattleOptions/Moves/Move" to="." method="_on_move1_pressed"]
+[connection signal="pressed" from="BattleOptions/Moves/Move2" to="." method="_on_move_2_pressed"]
+[connection signal="pressed" from="BattleOptions/Moves/Move3" to="." method="_on_move_3_pressed"]
+[connection signal="pressed" from="BattleOptions/Moves/Move4" to="." method="_on_move_4_pressed"]
