@@ -52,6 +52,7 @@ func newPokemon(species, level = 5):
 	p.name = pokemonName(species)
 	p.species=species
 	p.level = level
+	p.xp=get_xp_for_level(level)
 	p.ivHealth=loadIV()
 	p.ivSpeed=loadIV()
 	p.ivAttack=loadIV()
@@ -83,3 +84,9 @@ func toMain():
 	
 func loadIV():
 	return randf_range(.9, 1.1)
+	
+func get_level_from_xp(xp: int) -> int:
+	return int(pow(xp, 1.0/3.0))
+	
+func get_xp_for_level(level: int) -> int:
+	return int(pow(level, 3))

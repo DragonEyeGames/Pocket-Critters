@@ -31,9 +31,6 @@ func initialize() -> void:
 			holder.health=0
 			pokemon.health=0
 		holder.initialize()
-		if(pokemon.health==0):
-			await get_tree().create_timer(1).timeout
-			GameManager.toMain()
 			
 func randomAttack():
 	return(pokemon.moves.pick_random())

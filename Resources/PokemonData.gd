@@ -4,6 +4,8 @@ class_name PokemonData
 @export var name: String = ""
 @export var base: SpeciesData
 @export var species: GameManager.pokemon
+
+@export var xp: int = 10
 @export var level: int = 5
 @export var maxHealth=10
 

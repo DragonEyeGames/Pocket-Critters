@@ -25,35 +25,75 @@ func _on_fight_pressed() -> void:
 
 
 func _on_move1_pressed() -> void:
-	attack($BattleOptions/Moves/Move.move, $Opponent, $Player)
-	attack($Opponent.randomAttack(), $Player, $Opponent)
+	loadAttack($BattleOptions/Moves/Move.move)
 
 
 func _on_move_2_pressed() -> void:
-	attack($BattleOptions/Moves/Move2.move, $Opponent, $Player)
-	attack($Opponent.randomAttack(), $Player, $Opponent)
+	loadAttack($BattleOptions/Moves/Move2.move)
 
 
 func _on_move_3_pressed() -> void:
-	attack($BattleOptions/Moves/Move3.move, $Opponent, $Player)
-	attack($Opponent.randomAttack(), $Player, $Opponent)
+	loadAttack($BattleOptions/Moves/Move3.move)
 
 
 func _on_move_4_pressed() -> void:
-	attack($BattleOptions/Moves/Move4.move, $Opponent, $Player)
-	attack($Opponent.randomAttack(), $Player, $Opponent)
+	loadAttack($BattleOptions/Moves/Move4.move)
+	
+func loadAttack(playerAttack):
+	$BattleOptions/Moves.visible=false
+	if($Player.pokemon.speed>=$Opponent.pokemon.speed):
+		attack(playerAttack, $Opponent, $Player)
+		await get_tree().create_timer(1).timeout
+		if($Opponent.pokemon.health>0):
+			attack($Opponent.randomAttack(), $Player, $Opponent)
+			await get_tree().create_timer(1).timeout
+		if($Opponent.pokemon.health<=0):
+			var xp = 50 * $Opponent.pokemon.level / 5
+			$Player.pokemon.xp+=xp
+			loadLevel($Player.pokemon)
+			GameManager.toMain()
+		if($Player.pokemon.health<=0):
+			$Player.pokemon.health=$Player.pokemon.maxHealth
+			GameManager.toMain()
+	else:
+		attack($Opponent.randomAttack(), $Player, $Opponent)
+		await get_tree().create_timer(1).timeout
+		if($Player.pokemon.health>0):
+			attack(playerAttack, $Opponent, $Player)
+			await get_tree().create_timer(1).timeout
+		if($Opponent.pokemon.health<=0):
+			var xp = 50 * $Opponent.pokemon.level / 5
+			$Player.pokemon.xp+=xp
+			loadLevel($Player.pokemon)
+			GameManager.toMain()
+		if($Player.pokemon.health<=0):
+			$Player.pokemon.health=$Player.pokemon.maxHealth
+			GameManager.toMain()
+	$BattleOptions/Options.visible=true
 	
 func attack(move, target, user):
-	print(move.moveType)
-	print(GameManager.moveTypes.keys()[move.moveType])
 	if(GameManager.moveTypes.keys()[move.moveType]=="Physical"):
-		print(target.pokemon.defense)
-		print(user.pokemon.attack)
-		print(move.power)
 		var newAttack = float(user.pokemon.attack)
 		var defense = float(target.pokemon.defense)
 		var power = float(move.power)
 
-		print(round((newAttack / defense) * (power / 10.0)) + 1)
 		target.pokemon.health-=round((newAttack / defense) * (power / 10.0) + 1)
 		target.initialize()
+		
+func loadLevel(p: PokemonData):
+	var backupLevel=p.level
+	var newLevel=GameManager.get_level_from_xp(p.xp)
+	print("old: " + str(backupLevel))
+	print("new: " + str(newLevel))
+	print("xp: " + str(p.xp))
+	print("xp needed: " + str(GameManager.get_xp_for_level(p.level+1)-p.xp))
+	if(backupLevel!=newLevel):
+		p.level=newLevel
+		var backupHealth=p.maxHealth
+		p.maxHealth=GameManager.get_stat(p.base.health, p.ivHealth, newLevel)
+		p.health+=p.maxHealth-backupHealth
+		p.attack=GameManager.get_stat(p.base.attack, p.ivAttack, newLevel)
+		p.defense=GameManager.get_stat(p.base.defense, p.ivDefense, newLevel)
+		p.specialAttack=GameManager.get_stat(p.base.specialAttack, p.ivSpecialAttack, newLevel)
+		p.specialDefense=GameManager.get_stat(p.base.specialDefense, p.ivSpecialDefense, newLevel)
+		p.speed=GameManager.get_stat(p.base.speed, p.ivSpeed, newLevel)
