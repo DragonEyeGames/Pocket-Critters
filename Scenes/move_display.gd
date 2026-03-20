@@ -23,4 +23,6 @@ func loadMove(newMove):
 	$ColorRect/Power.text=str(move.power)
 	$ColorRect/Accuracy.text=str(int(move.accuracy*100)) + "%"
 	$ColorRect/Type.text=str(GameManager.moveTypes.keys()[move.moveType])
+	for child in $Types.get_children():
+		child.visible=false
 	$"Type Animator".play(str(GameManager.types.keys()[move.type]))

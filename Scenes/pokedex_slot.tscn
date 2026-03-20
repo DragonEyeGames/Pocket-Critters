@@ -1,0 +1,64 @@
+[gd_scene load_steps=11 format=3 uid="uid://o4aurj5ha233"]
+
+[ext_resource type="Script" uid="uid://dq4jkmq4402hr" path="res://Scenes/pokedex_slot.gd" id="1_5lyfu"]
+[ext_resource type="Script" uid="uid://v80h5lclvn1j" path="res://Scenes/pokemonDisplay.gd" id="2_t6w81"]
+[ext_resource type="Texture2D" uid="uid://bbctwkye4ujb4" path="res://Fakemon-PNG/timberry.png" id="3_3em6j"]
+[ext_resource type="Texture2D" uid="uid://diwbntfmt43qj" path="res://Fakemon-PNG/pilfetch.png" id="4_oywqy"]
+[ext_resource type="Texture2D" uid="uid://cy5ixt1h2jqox" path="res://Fakemon-PNG/geckrow.png" id="5_xf0vc"]
+[ext_resource type="Texture2D" uid="uid://dmggf8l828rn7" path="res://Fakemon-PNG/sligment.png" id="6_1gy7e"]
+[ext_resource type="Texture2D" uid="uid://5bl0yq10tjgf" path="res://Fakemon-PNG/dunsparce.png" id="7_v63f4"]
+[ext_resource type="Texture2D" uid="uid://bk8ot7cpwdae3" path="res://Fakemon-PNG/pasturlo.png" id="8_v6207"]
+[ext_resource type="Texture2D" uid="uid://dhh1fa6gyyhfj" path="res://Fakemon-PNG/baoby.png" id="9_t7eqp"]
+[ext_resource type="Texture2D" uid="uid://cx0gdn7okrdob" path="res://Fakemon-PNG/varmot.png" id="10_e4ba0"]
+
+[node name="Pokedex Slot" type="Control"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_5lyfu")
+
+[node name="Backer" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Pokemon" type="Node2D" parent="."]
+position = Vector2(48, 50)
+scale = Vector2(1.735, 1.735)
+script = ExtResource("2_t6w81")
+
+[node name="Front" type="Node2D" parent="Pokemon"]
+
+[node name="Timberry" type="Sprite2D" parent="Pokemon/Front"]
+texture = ExtResource("3_3em6j")
+
+[node name="Pilfetch" type="Sprite2D" parent="Pokemon/Front"]
+visible = false
+texture = ExtResource("4_oywqy")
+
+[node name="Geckrow" type="Sprite2D" parent="Pokemon/Front"]
+visible = false
+texture = ExtResource("5_xf0vc")
+
+[node name="Sligment" type="Sprite2D" parent="Pokemon/Front"]
+visible = false
+texture = ExtResource("6_1gy7e")
+
+[node name="Dunsparce" type="Sprite2D" parent="Pokemon/Front"]
+visible = false
+texture = ExtResource("7_v63f4")
+
+[node name="Pasturlo" type="Sprite2D" parent="Pokemon/Front"]
+visible = false
+texture = ExtResource("8_v6207")
+
+[node name="Baoby" type="Sprite2D" parent="Pokemon/Front"]
+visible = false
+texture = ExtResource("9_t7eqp")
+
+[node name="Varmot" type="Sprite2D" parent="Pokemon/Front"]
+visible = false
+texture = ExtResource("10_e4ba0")

@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://dwbnx0jnjv6yx"]
+[gd_scene load_steps=5 format=3 uid="uid://dwbnx0jnjv6yx"]
 
 [ext_resource type="Script" uid="uid://dp2xe7ys1trpk" path="res://Scripts/pause.gd" id="1_aq7p1"]
 [ext_resource type="PackedScene" uid="uid://csi5giv4qbgfx" path="res://Scenes/team_slot.tscn" id="2_6eyaj"]
 [ext_resource type="PackedScene" uid="uid://dsf85ixufbmqg" path="res://Scenes/reorder_slot.tscn" id="3_5a6ek"]
+[ext_resource type="PackedScene" uid="uid://o4aurj5ha233" path="res://Scenes/pokedex_slot.tscn" id="4_e0jm0"]
 
 [node name="Pause" type="CanvasLayer"]
 process_mode = 3
@@ -60,7 +61,6 @@ layout_mode = 2
 layout_mode = 0
 offset_right = 171.0
 offset_bottom = 35.0
-disabled = true
 text = "Critterdex"
 
 [node name="Bag" type="Control" parent="Menu/VBoxContainer"]
@@ -108,6 +108,7 @@ disabled = true
 text = "Quit"
 
 [node name="Team Menu" type="Control" parent="."]
+visible = false
 z_index = 1
 layout_mode = 3
 anchors_preset = 0
@@ -186,6 +187,7 @@ theme_override_font_sizes/font_size = 26
 text = "Reorder Team"
 
 [node name="Reorder Team" type="Control" parent="."]
+visible = false
 z_index = 2
 layout_mode = 3
 anchors_preset = 0
@@ -269,7 +271,78 @@ offset_bottom = 449.0
 theme_override_font_sizes/font_size = 26
 text = "Save"
 
+[node name="Pokedex" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 32.0
+offset_top = 38.0
+offset_right = 727.0
+offset_bottom = 494.0
+
+[node name="ColorRect" type="ColorRect" parent="Pokedex"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.80784315, 0.80784315, 0.80784315, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="Pokedex"]
+z_index = -1
+layout_mode = 0
+offset_left = -124.0
+offset_top = -85.0
+offset_right = 974.0
+offset_bottom = 538.0
+color = Color(0, 0, 0, 0.22745098)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Pokedex"]
+layout_mode = 0
+offset_right = 644.0
+offset_bottom = 69.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 39
+text = "Critterdex"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="GridContainer" type="GridContainer" parent="Pokedex"]
+layout_mode = 0
+offset_left = 21.0
+offset_top = 74.0
+offset_right = 678.0
+offset_bottom = 426.0
+columns = 4
+
+[node name="Pokedex Slot" parent="Pokedex/GridContainer" instance=ExtResource("4_e0jm0")]
+layout_mode = 2
+
+[node name="Pokedex Slot2" parent="Pokedex/GridContainer" instance=ExtResource("4_e0jm0")]
+layout_mode = 2
+pokemon = 1
+
+[node name="Pokedex Slot3" parent="Pokedex/GridContainer" instance=ExtResource("4_e0jm0")]
+layout_mode = 2
+pokemon = 2
+
+[node name="Pokedex Slot4" parent="Pokedex/GridContainer" instance=ExtResource("4_e0jm0")]
+layout_mode = 2
+pokemon = 3
+
+[node name="Pokedex Slot5" parent="Pokedex/GridContainer" instance=ExtResource("4_e0jm0")]
+layout_mode = 2
+pokemon = 5
+
+[node name="Pokedex Slot6" parent="Pokedex/GridContainer" instance=ExtResource("4_e0jm0")]
+layout_mode = 2
+pokemon = 6
+
+[node name="Pokedex Slot7" parent="Pokedex/GridContainer" instance=ExtResource("4_e0jm0")]
+layout_mode = 2
+pokemon = 7
+
 [connection signal="pressed" from="Menu/VBoxContainer/Team/team" to="." method="_on_team_pressed"]
-[connection signal="pressed" from="Menu/VBoxContainer/Pokedex/pokedex" to="." method="_on_team_pressed"]
+[connection signal="pressed" from="Menu/VBoxContainer/Pokedex/pokedex" to="." method="_on_pokedex_pressed"]
 [connection signal="pressed" from="Team Menu/Reorder" to="." method="_on_reorder_pressed"]
 [connection signal="pressed" from="Reorder Team/Button" to="." method="_on_button_pressed"]

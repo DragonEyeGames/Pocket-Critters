@@ -1,0 +1,88 @@
+[gd_scene load_steps=2 format=3 uid="uid://ddok4gf43561p"]
+
+[ext_resource type="PackedScene" uid="uid://dsf85ixufbmqg" path="res://Scenes/reorder_slot.tscn" id="1_lam13"]
+
+[node name="Reorder Team" type="Control"]
+visible = false
+z_index = 2
+layout_mode = 3
+anchors_preset = 0
+offset_left = 80.0
+offset_top = 61.0
+offset_right = 724.0
+offset_bottom = 463.0
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 177.0
+offset_top = -43.0
+offset_right = -172.0
+offset_bottom = 66.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.80784315, 0.80784315, 0.80784315, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+z_index = -1
+layout_mode = 0
+offset_left = -124.0
+offset_top = -85.0
+offset_right = 898.0
+offset_bottom = 491.0
+color = Color(0, 0, 0, 0.22745098)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 184.0
+offset_top = -48.0
+offset_right = 468.0
+offset_bottom = 21.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 35
+text = "Reorder Team"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="GridContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 234.0
+offset_top = 10.0
+offset_right = 692.0
+offset_bottom = 930.0
+scale = Vector2(0.41, 0.41)
+
+[node name="ReorderSlot" parent="GridContainer" instance=ExtResource("1_lam13")]
+layout_mode = 2
+
+[node name="ReorderSlot2" parent="GridContainer" instance=ExtResource("1_lam13")]
+layout_mode = 2
+index = 1
+
+[node name="ReorderSlot3" parent="GridContainer" instance=ExtResource("1_lam13")]
+layout_mode = 2
+index = 2
+
+[node name="ReorderSlot4" parent="GridContainer" instance=ExtResource("1_lam13")]
+layout_mode = 2
+index = 3
+
+[node name="ReorderSlot5" parent="GridContainer" instance=ExtResource("1_lam13")]
+layout_mode = 2
+index = 4
+
+[node name="ReorderSlot6" parent="GridContainer" instance=ExtResource("1_lam13")]
+layout_mode = 2
+index = 5
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 208.0
+offset_top = 396.0
+offset_right = 447.0
+offset_bottom = 449.0
+theme_override_font_sizes/font_size = 26
+text = "Save"

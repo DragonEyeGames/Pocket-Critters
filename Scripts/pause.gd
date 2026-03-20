@@ -6,6 +6,7 @@ func _ready() -> void:
 	$Menu.visible=false
 	$"Team Menu".visible=false
 	$"Reorder Team".visible=false
+	$Pokedex.visible=false
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -16,6 +17,7 @@ func _process(delta: float) -> void:
 		$Menu.visible=paused
 		$"Team Menu".visible=false
 		$"Reorder Team".visible=false
+		$Pokedex.visible=false
 
 
 func _on_team_pressed() -> void:
@@ -32,3 +34,10 @@ func _on_reorder_pressed() -> void:
 
 func _on_button_pressed() -> void:
 	$"Reorder Team".visible=false
+
+
+func _on_pokedex_pressed() -> void:
+	GameManager.pokedex.sort()
+	$Pokedex.visible=true
+	for child in $Pokedex/GridContainer.get_children():
+		child.initialize()

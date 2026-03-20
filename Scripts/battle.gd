@@ -36,8 +36,10 @@ func _on_catch_pressed() -> void:
 	if(randf()<=GameManager.get_catch_chance($Opponent.pokemon, 1)):
 		$Catch.play("catch-succeed")
 		await get_tree().create_timer(2).timeout
-		$BattleOptions/Display.text="Caught it! " + $Opponent.pokemon.name + " Has been caught!"
+		$BattleOptions/Display.text="Caught it! " + $Opponent.pokemon.name + " has been caught!"
 		$Opponent.visible=false
+		GameManager.pokedex.append($Opponent.pokemon.species)
+		print(GameManager.pokedex)
 		if(len(GameManager.playerTeam)<=5):
 			GameManager.playerTeam.append(GameManager.toBattle)
 			await get_tree().create_timer(3).timeout
@@ -205,6 +207,7 @@ func checkPlayer():
 		for child in $"Reorder Team/GridContainer".get_children():
 			child.initialize()
 		return false
+	return true
 
 func undeadPokemon():
 	deadPokemon=false

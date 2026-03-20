@@ -94,6 +94,8 @@ var type_chart = {
 	}
 }
 
+var pokedex : Array[pokemon] = []
+
 #a safe time before pokemon can spawn
 var safe=false
 
@@ -113,11 +115,7 @@ func _ready() -> void:
 
 func restart():
 	playerTeam.append(newPokemon(pokemon.Geckrow))
-	playerTeam.append(newPokemon(pokemon.Timberry))
-	playerTeam.append(newPokemon(pokemon.Sligment))
-	playerTeam.append(newPokemon(pokemon.Baoby))
-	playerTeam.append(newPokemon(pokemon.Varmot))
-	playerTeam.append(newPokemon(pokemon.Pilfetch))
+	pokedex.append(pokemon.Geckrow)
 
 
 func wildBattle(newPokemonInstance):

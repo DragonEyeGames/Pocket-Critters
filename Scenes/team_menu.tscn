@@ -1,0 +1,82 @@
+[gd_scene load_steps=2 format=3 uid="uid://bvy6kg8javydv"]
+
+[ext_resource type="PackedScene" uid="uid://csi5giv4qbgfx" path="res://Scenes/team_slot.tscn" id="1_n1bxe"]
+
+[node name="Team Menu" type="Control"]
+visible = false
+z_index = 1
+layout_mode = 3
+anchors_preset = 0
+offset_left = 80.0
+offset_top = 61.0
+offset_right = 724.0
+offset_bottom = 463.0
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = 43.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.80784315, 0.80784315, 0.80784315, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+z_index = -1
+layout_mode = 0
+offset_left = -124.0
+offset_top = -85.0
+offset_right = 898.0
+offset_bottom = 491.0
+color = Color(0, 0, 0, 0.22745098)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_right = 644.0
+offset_bottom = 69.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 39
+text = "Team"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="GridContainer" type="GridContainer" parent="."]
+layout_mode = 0
+offset_left = 99.0
+offset_top = 68.0
+offset_right = 557.0
+offset_bottom = 382.0
+columns = 3
+
+[node name="TeamSlot" parent="GridContainer" instance=ExtResource("1_n1bxe")]
+layout_mode = 2
+
+[node name="TeamSlot2" parent="GridContainer" instance=ExtResource("1_n1bxe")]
+layout_mode = 2
+index = 1
+
+[node name="TeamSlot3" parent="GridContainer" instance=ExtResource("1_n1bxe")]
+layout_mode = 2
+index = 2
+
+[node name="TeamSlot4" parent="GridContainer" instance=ExtResource("1_n1bxe")]
+layout_mode = 2
+index = 3
+
+[node name="TeamSlot5" parent="GridContainer" instance=ExtResource("1_n1bxe")]
+layout_mode = 2
+index = 4
+
+[node name="TeamSlot6" parent="GridContainer" instance=ExtResource("1_n1bxe")]
+layout_mode = 2
+index = 5
+
+[node name="Reorder" type="Button" parent="."]
+layout_mode = 0
+offset_left = 207.0
+offset_top = 374.0
+offset_right = 446.0
+offset_bottom = 427.0
+theme_override_font_sizes/font_size = 26
+text = "Reorder Team"
