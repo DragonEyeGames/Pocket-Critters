@@ -11,6 +11,5 @@ func loadMoves(moves):
 		child.visible=false
 	var i = 0
 	for move in moves:
-		print(i)
 		get_child(i).loadMove(move)
 		i+=1
