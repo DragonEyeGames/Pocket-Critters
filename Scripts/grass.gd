@@ -8,10 +8,12 @@ func _ready() -> void:
 	pass # Replace with function body.
 
 func _on_area_2d_area_entered(area: Area2D) -> void:
+	if(GameManager.safe):
+		return
 	if(randf() <= .1):
 		GameManager.playerPosition=area.get_parent().global_position
 		var picked_value = GameManager.encounterList.pick_random()
-		GameManager.wildBattle(GameManager.newPokemon(picked_value))
+		GameManager.wildBattle(GameManager.newPokemon(picked_value, randi_range(GameManager.encounterMin, GameManager.encounterMax)))
 		return
 	if(area.get_parent().global_position.y<=global_position.y):
 		sprite.position.y+=1

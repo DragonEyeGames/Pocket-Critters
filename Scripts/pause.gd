@@ -3,7 +3,9 @@ extends CanvasLayer
 var paused=false
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	$Menu.visible=false
+	$"Team Menu".visible=false
+	$"Reorder Team".visible=false
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -13,9 +15,14 @@ func _process(delta: float) -> void:
 		get_tree().paused=paused
 		$Menu.visible=paused
 		$"Team Menu".visible=false
+		$"Reorder Team".visible=false
 
 
 func _on_team_pressed() -> void:
 	$"Team Menu".visible=true
 	for child in $"Team Menu/GridContainer".get_children():
 		child.loadSlot()
+
+
+func _on_reorder_pressed() -> void:
+	$"Reorder Team".visible=true

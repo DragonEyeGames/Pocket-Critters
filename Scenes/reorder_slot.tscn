@@ -1,0 +1,43 @@
+[gd_scene load_steps=3 format=3 uid="uid://dsf85ixufbmqg"]
+
+[ext_resource type="Script" uid="uid://cei68s080kli0" path="res://Scenes/reorder_slot.gd" id="1_ndmew"]
+[ext_resource type="PackedScene" uid="uid://csi5giv4qbgfx" path="res://Scenes/team_slot.tscn" id="1_tbjjy"]
+
+[node name="ReorderSlot" type="Control"]
+z_index = 1
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_ndmew")
+
+[node name="TeamSlot" parent="." instance=ExtResource("1_tbjjy")]
+layout_mode = 0
+offset_left = 59.74026
+offset_right = 209.74026
+offset_bottom = 150.0
+
+[node name="ColorRect" type="ColorRect" parent="."]
+z_index = -1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.973535, 0.9735351, 0.973535, 1)
+
+[node name="Up" type="Button" parent="."]
+layout_mode = 0
+offset_left = 15.584415
+offset_top = 20.77922
+offset_right = 44.15583
+offset_bottom = 51.77922
+text = "^"
+
+[node name="Down" type="Button" parent="."]
+layout_mode = 0
+offset_left = 18.181818
+offset_top = 96.1039
+offset_right = 46.753235
+offset_bottom = 127.1039
+text = "v"

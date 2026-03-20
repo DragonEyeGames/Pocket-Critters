@@ -57,6 +57,17 @@ layout_mode = 2
 focus_mode = 0
 text = "Run"
 
+[node name="RichTextLabel" type="RichTextLabel" parent="ColorRect"]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 14.0
+offset_right = 484.0
+offset_bottom = 132.0
+theme_override_font_sizes/normal_font_size = 39
+text = "What will Geckrow do?"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="ColorRect2" type="ColorRect" parent="."]
 z_index = -1
 offset_right = 958.0

@@ -9,7 +9,7 @@ func _ready() -> void:
 	$Player.initialize()
 
 func _on_run_pressed() -> void:
-	get_tree().change_scene_to_file("res://Scenes/main.tscn")
+	GameManager.toMain()
 
 
 func _on_catch_pressed() -> void:

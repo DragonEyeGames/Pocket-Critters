@@ -1,14 +1,14 @@
-[gd_scene load_steps=3 format=3 uid="uid://dwbnx0jnjv6yx"]
+[gd_scene load_steps=4 format=3 uid="uid://dwbnx0jnjv6yx"]
 
 [ext_resource type="Script" uid="uid://dp2xe7ys1trpk" path="res://Scripts/pause.gd" id="1_aq7p1"]
 [ext_resource type="PackedScene" uid="uid://csi5giv4qbgfx" path="res://Scenes/team_slot.tscn" id="2_6eyaj"]
+[ext_resource type="PackedScene" uid="uid://dsf85ixufbmqg" path="res://Scenes/reorder_slot.tscn" id="3_5a6ek"]
 
 [node name="Pause" type="CanvasLayer"]
 process_mode = 3
 script = ExtResource("1_aq7p1")
 
 [node name="Menu" type="Control" parent="."]
-visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -97,7 +97,6 @@ disabled = true
 text = "Quit"
 
 [node name="Team Menu" type="Control" parent="."]
-visible = false
 z_index = 1
 layout_mode = 3
 anchors_preset = 0
@@ -111,6 +110,7 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_bottom = 43.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.80784315, 0.80784315, 0.80784315, 1)
@@ -128,6 +128,7 @@ color = Color(0, 0, 0, 0.22745098)
 layout_mode = 0
 offset_right = 644.0
 offset_bottom = 69.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/normal_font_size = 39
 text = "Team"
 horizontal_alignment = 1
@@ -164,4 +165,98 @@ index = 4
 layout_mode = 2
 index = 5
 
+[node name="Reorder" type="Button" parent="Team Menu"]
+layout_mode = 0
+offset_left = 207.0
+offset_top = 374.0
+offset_right = 446.0
+offset_bottom = 427.0
+theme_override_font_sizes/font_size = 26
+text = "Reorder Team"
+
+[node name="Reorder Team" type="Control" parent="."]
+z_index = 2
+layout_mode = 3
+anchors_preset = 0
+offset_left = 80.0
+offset_top = 61.0
+offset_right = 724.0
+offset_bottom = 463.0
+
+[node name="ColorRect" type="ColorRect" parent="Reorder Team"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 177.0
+offset_top = -43.0
+offset_right = -172.0
+offset_bottom = 66.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.80784315, 0.80784315, 0.80784315, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="Reorder Team"]
+z_index = -1
+layout_mode = 0
+offset_left = -124.0
+offset_top = -85.0
+offset_right = 898.0
+offset_bottom = 491.0
+color = Color(0, 0, 0, 0.22745098)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Reorder Team"]
+layout_mode = 0
+offset_left = 184.0
+offset_top = -48.0
+offset_right = 468.0
+offset_bottom = 21.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 35
+text = "Reorder Team"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="GridContainer" type="VBoxContainer" parent="Reorder Team"]
+layout_mode = 0
+offset_left = 234.0
+offset_top = 10.0
+offset_right = 692.0
+offset_bottom = 930.0
+scale = Vector2(0.41, 0.41)
+
+[node name="ReorderSlot" parent="Reorder Team/GridContainer" instance=ExtResource("3_5a6ek")]
+layout_mode = 2
+
+[node name="ReorderSlot2" parent="Reorder Team/GridContainer" instance=ExtResource("3_5a6ek")]
+layout_mode = 2
+index = 1
+
+[node name="ReorderSlot3" parent="Reorder Team/GridContainer" instance=ExtResource("3_5a6ek")]
+layout_mode = 2
+index = 2
+
+[node name="ReorderSlot4" parent="Reorder Team/GridContainer" instance=ExtResource("3_5a6ek")]
+layout_mode = 2
+index = 3
+
+[node name="ReorderSlot5" parent="Reorder Team/GridContainer" instance=ExtResource("3_5a6ek")]
+layout_mode = 2
+index = 4
+
+[node name="ReorderSlot6" parent="Reorder Team/GridContainer" instance=ExtResource("3_5a6ek")]
+layout_mode = 2
+index = 5
+
+[node name="Button" type="Button" parent="Reorder Team"]
+layout_mode = 0
+offset_left = 208.0
+offset_top = 396.0
+offset_right = 447.0
+offset_bottom = 449.0
+theme_override_font_sizes/font_size = 26
+text = "Reorder Team"
+
 [connection signal="pressed" from="Menu/VBoxContainer/Team/team" to="." method="_on_team_pressed"]
+[connection signal="pressed" from="Team Menu/Reorder" to="." method="_on_reorder_pressed"]

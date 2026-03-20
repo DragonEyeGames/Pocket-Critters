@@ -20,7 +20,12 @@ enum moveTypes {
 	Physical
 }
 
+#a safe time before pokemon can spawn
+var safe=false
+
 @export var encounterList: Array[pokemon] = []
+@export var encounterMin: int
+@export var encounterMax: int
 
 @export var playerTeam: Array[PokemonData] = []
 
@@ -41,7 +46,7 @@ func pokemonName(value):
 			return n
 	return "Unknown"
 
-func newPokemon(species, health = null, level = 5):
+func newPokemon(species, level = 5):
 	var p = PokemonData.new()
 	p.base = load("res://Pokemon/" + pokemonName(species).to_lower() + ".tres")
 	p.name = pokemonName(species)
@@ -53,9 +58,7 @@ func newPokemon(species, health = null, level = 5):
 	p.ivSpecialAttack=randf_range(.8, 1.2)
 	p.ivDefense=randf_range(.8, 1.2)
 	p.ivSpecialDefense=randf_range(.8, 1.2)
-	if(health==null):
-		health=get_stat(p.base.health, p.ivHealth, level)
-	p.health=health
+	p.health=get_stat(p.base.health, p.ivHealth, level)
 	p.maxHealth=get_stat(p.base.health, p.ivHealth, level)
 	p.attack=get_stat(p.base.attack, p.ivAttack, level)
 	p.defense=get_stat(p.base.defense, p.ivDefense, level)
@@ -67,3 +70,9 @@ func newPokemon(species, health = null, level = 5):
 	
 func get_stat(base: int, iv: float,  level: int) -> int:
 	return int(base * (level / 10.0) * iv + 5)
+
+func toMain():
+	safe=true
+	get_tree().change_scene_to_file("res://Scenes/main.tscn")
+	await get_tree().create_timer(.5).timeout
+	safe=false
