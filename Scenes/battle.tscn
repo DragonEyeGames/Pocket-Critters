@@ -7,13 +7,16 @@
 [node name="Battle" type="Node2D"]
 script = ExtResource("1_oxp8w")
 
-[node name="Player" parent="." instance=ExtResource("1_ip7xm")]
+[node name="Player" parent="." node_paths=PackedStringArray("holder") instance=ExtResource("1_ip7xm")]
 position = Vector2(142, 305)
+pokemon = null
+holder = NodePath("../StatHolder")
 
-[node name="Opponent" parent="." instance=ExtResource("1_ip7xm")]
+[node name="Opponent" parent="." node_paths=PackedStringArray("holder") instance=ExtResource("1_ip7xm")]
 position = Vector2(692, 144)
 back = false
-pokemon = 0
+pokemon = null
+holder = NodePath("../StatHolder2")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 offset_top = 384.0

@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="SpeciesData" load_steps=4 format=3 uid="uid://b0ivyhj4g48un"]
+
+[ext_resource type="Script" uid="uid://c3odxqj7xy866" path="res://Resources/MoveResource.gd" id="1_qj25l"]
+[ext_resource type="Resource" uid="uid://do0twrxr0jj58" path="res://Moves/leafSlice.tres" id="2_wq3le"]
+[ext_resource type="Script" uid="uid://1vun3nkcoo5i" path="res://Resources/SpeciesData.gd" id="3_eh1sg"]
+
+[resource]
+script = ExtResource("3_eh1sg")
+species = 1
+health = 45
+attack = 55
+defense = 40
+specialAttack = 35
+specialDefense = 40
+speed = 65
+potentialMoves = Array[ExtResource("1_qj25l")]([ExtResource("2_wq3le")])
+metadata/_custom_type_script = "uid://c7t80kmu0l21k"

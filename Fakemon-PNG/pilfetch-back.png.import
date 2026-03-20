@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b7bsg3hluh6en"
-path="res://.godot/imported/frirate.png-8b0688d0e4bdfde01671a9ad04029a04.ctex"
+uid="uid://biriaivtjbjx5"
+path="res://.godot/imported/pilfetch-back.png-bd230c2438ab44f0dda3785cd90f2f86.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Fakemon-PNG/frirate.png"
-dest_files=["res://.godot/imported/frirate.png-8b0688d0e4bdfde01671a9ad04029a04.ctex"]
+source_file="res://Fakemon-PNG/pilfetch-back.png"
+dest_files=["res://.godot/imported/pilfetch-back.png-bd230c2438ab44f0dda3785cd90f2f86.ctex"]
 
 [params]
 

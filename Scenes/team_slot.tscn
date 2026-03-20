@@ -26,6 +26,7 @@ color = Color(0.3854925, 0.38549247, 0.38549247, 1)
 position = Vector2(73, 90)
 scale = Vector2(1.765, 1.765)
 back = false
+pokemon = null
 
 [node name="Name" type="RichTextLabel" parent="."]
 layout_mode = 0

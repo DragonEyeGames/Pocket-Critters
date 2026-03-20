@@ -9,10 +9,10 @@ func _ready() -> void:
 	$Player.initialize()
 
 func _on_run_pressed() -> void:
-	get_tree().change_scene_to_file("res://main.tscn")
+	get_tree().change_scene_to_file("res://Scenes/main.tscn")
 
 
 func _on_catch_pressed() -> void:
 	if(len(GameManager.playerTeam)<=5):
 		GameManager.playerTeam.append(GameManager.toBattle)
-		get_tree().change_scene_to_file("res://main.tscn")
+		get_tree().change_scene_to_file("res://Scenes/main.tscn")

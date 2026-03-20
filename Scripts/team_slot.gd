@@ -5,8 +5,9 @@ extends Control
 
 func loadSlot():
 	if(len(GameManager.playerTeam)-1>=index):
-		$Name.text=str(GameManager.pokemonName(GameManager.playerTeam[index]))
+		$Name.text=str(GameManager.playerTeam[index].name)
 		$Pokemon.pokemon=GameManager.playerTeam[index]
+		print(index)
 		$Pokemon.initialize()
 	else:
 		$Pokemon.visible=false
