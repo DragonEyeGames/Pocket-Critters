@@ -3,14 +3,26 @@ extends Node2D
 var activeIndex=0
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	var healthy : Array[PokemonData] = []
+	var fainted: Array[PokemonData] =[]
+	for pokemon in GameManager.playerTeam:
+		if(pokemon.health>0):
+			healthy.append(pokemon)
+		else:
+			fainted.append(pokemon)
+	if(len(healthy)>=1):
+		GameManager.healthyTeam = healthy
+	else:
+		get_tree().change_scene_to_file("res://Scenes/dead.tscn")
+		return
 	$Opponent.pokemon=GameManager.toBattle
 	$Opponent.initialize()
 	loadField()
 	
 func loadField():
-	$Player.pokemon=GameManager.playerTeam[activeIndex]
+	$Player.pokemon=GameManager.healthyTeam[activeIndex]
 	$Player.initialize()
-	$BattleOptions/Display.text="What will " + str(GameManager.playerTeam[activeIndex].name) + " do?"
+	$BattleOptions/Display.text="What will " + str(GameManager.healthyTeam[activeIndex].name) + " do?"
 
 func _on_run_pressed() -> void:
 	GameManager.toMain()
@@ -23,24 +35,29 @@ func _on_catch_pressed() -> void:
 	if(randf()<=GameManager.get_catch_chance($Opponent.pokemon, 1)):
 		$Catch.play("catch-succeed")
 		await get_tree().create_timer(2).timeout
+		$BattleOptions/Display.text="Caught it! " + $Opponent.pokemon.name + " Has been caught!"
+		$Opponent.visible=false
 		if(len(GameManager.playerTeam)<=5):
 			GameManager.playerTeam.append(GameManager.toBattle)
-			$BattleOptions/Display.text="Caught it! " + $Opponent.pokemon.name + " Has been caught!"
-			$Opponent.visible=false
 			await get_tree().create_timer(3).timeout
 			GameManager.toMain()
 			return
+		else:
+			$"Replace Team".visible=true
+			for child in $"Replace Team/GridContainer".get_children():
+				child.initialize()
+		return
 	else:
 		$Catch.play("catch-fail")
 		await get_tree().create_timer(2).timeout
 		$BattleOptions/Display.text="Aww man! " + $Opponent.pokemon.name + " Broke out!"
 		await get_tree().create_timer(1).timeout
-	nonAttack()
+		nonAttack()
 
 
 func _on_fight_pressed() -> void:
 	$BattleOptions/Options.visible=false
-	$BattleOptions/Moves.loadMoves(GameManager.playerTeam[activeIndex].moves)
+	$BattleOptions/Moves.loadMoves(GameManager.healthyTeam[activeIndex].moves)
 
 
 func _on_move1_pressed() -> void:
@@ -70,9 +87,7 @@ func loadAttack(playerAttack):
 			loadLevel($Player.pokemon)
 			GameManager.toMain()
 			return
-		if($Player.pokemon.health<=0):
-			$Player.pokemon.health=$Player.pokemon.maxHealth
-			GameManager.toMain()
+		if(!checkPlayer()):
 			return
 	else:
 		await attack($Opponent.randomAttack(), $Player, $Opponent)
@@ -84,11 +99,9 @@ func loadAttack(playerAttack):
 			loadLevel($Player.pokemon)
 			GameManager.toMain()
 			return
-		if($Player.pokemon.health<=0):
-			$Player.pokemon.health=$Player.pokemon.maxHealth
-			GameManager.toMain()
+		if(!checkPlayer()):
 			return
-	$BattleOptions/Display.text="What will " + str(GameManager.playerTeam[activeIndex].name) + " do?"
+	$BattleOptions/Display.text="What will " + str(GameManager.healthyTeam[activeIndex].name) + " do?"
 	$BattleOptions/Options.visible=true
 	
 func attack(move, target, user):
@@ -159,7 +172,31 @@ func nonAttack():
 	$BattleOptions/Moves.visible=false
 	$BattleOptions/Options.visible=false
 	await attack($Opponent.randomAttack(), $Player, $Opponent)
-	if($Player.pokemon.health<=0):
-		$Player.pokemon.health=$Player.pokemon.maxHealth
-		GameManager.toMain()
+	if(!checkPlayer()):
+		return
+	$BattleOptions/Display.text="What will " + str(GameManager.healthyTeam[activeIndex].name) + " do?"
 	$BattleOptions/Options.visible=true
+
+func replacePokemon(index: int):
+	GameManager.playerTeam[index]=$Opponent.pokemon
+	GameManager.toMain()
+
+func toBoxes() -> void:
+	GameManager.toMain()
+	
+func checkPlayer():
+	if($Player.pokemon.health<=0):
+		var healthy : Array[PokemonData] = []
+		var fainted: Array[PokemonData] =[]
+		for pokemon in GameManager.playerTeam:
+			if(pokemon.health>0):
+				healthy.append(pokemon)
+			else:
+				fainted.append(pokemon)
+		if(len(healthy)>=1):
+			GameManager.healthyTeam = healthy
+		else:
+			get_tree().change_scene_to_file("res://Scenes/dead.tscn")
+			return false
+		GameManager.toMain()
+		return false

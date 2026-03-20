@@ -8,6 +8,7 @@ func loadSlot():
 		$Name.text=str(GameManager.playerTeam[index].name)
 		$Pokemon.pokemon=GameManager.playerTeam[index]
 		print(index)
+		$Fainted.visible=GameManager.playerTeam[index].health<=0
 		$Pokemon.initialize()
 	else:
 		$Pokemon.visible=false

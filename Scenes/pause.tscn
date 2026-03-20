@@ -52,6 +52,17 @@ offset_right = 171.0
 offset_bottom = 35.0
 text = "Team"
 
+[node name="Pokedex" type="Control" parent="Menu/VBoxContainer"]
+custom_minimum_size = Vector2(0, 41.595)
+layout_mode = 2
+
+[node name="pokedex" type="Button" parent="Menu/VBoxContainer/Pokedex"]
+layout_mode = 0
+offset_right = 171.0
+offset_bottom = 35.0
+disabled = true
+text = "Critterdex"
+
 [node name="Bag" type="Control" parent="Menu/VBoxContainer"]
 custom_minimum_size = Vector2(0, 41.595)
 layout_mode = 2
@@ -259,5 +270,6 @@ theme_override_font_sizes/font_size = 26
 text = "Save"
 
 [connection signal="pressed" from="Menu/VBoxContainer/Team/team" to="." method="_on_team_pressed"]
+[connection signal="pressed" from="Menu/VBoxContainer/Pokedex/pokedex" to="." method="_on_team_pressed"]
 [connection signal="pressed" from="Team Menu/Reorder" to="." method="_on_reorder_pressed"]
 [connection signal="pressed" from="Reorder Team/Button" to="." method="_on_button_pressed"]

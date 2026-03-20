@@ -1,0 +1,38 @@
+[gd_scene load_steps=3 format=3 uid="uid://diacwj0uebdpj"]
+
+[ext_resource type="Script" uid="uid://c8oaleu0gofbj" path="res://Scenes/replaceSlot.gd" id="1_o0yrs"]
+[ext_resource type="PackedScene" uid="uid://csi5giv4qbgfx" path="res://Scenes/team_slot.tscn" id="2_0fm7u"]
+
+[node name="ReplaceSlot" type="Control"]
+z_index = 1
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_o0yrs")
+
+[node name="TeamSlot" parent="." instance=ExtResource("2_0fm7u")]
+layout_mode = 0
+offset_left = -2.4390068
+offset_right = 147.56099
+offset_bottom = 150.0
+
+[node name="ColorRect" type="ColorRect" parent="."]
+z_index = -1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.973535, 0.9735351, 0.973535, 1)
+
+[node name="Select" type="Button" parent="."]
+layout_mode = 0
+offset_left = 153.65851
+offset_top = 39.024395
+offset_right = 414.63422
+offset_bottom = 117.07321
+theme_override_font_sizes/font_size = 31
+text = "Replace"
+
+[connection signal="pressed" from="Select" to="." method="_on_select_pressed"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://p6x3hd6afog6"]
+[gd_scene load_steps=13 format=3 uid="uid://p6x3hd6afog6"]
 
 [ext_resource type="PackedScene" uid="uid://ba24hclljygvv" path="res://Scenes/pokemonSelector.tscn" id="1_ip7xm"]
 [ext_resource type="Script" uid="uid://do3gaqda1wenc" path="res://Scripts/battle.gd" id="1_oxp8w"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://csq0ccnt2o6ri" path="res://Scenes/statHolder.tscn" id="3_7sfm4"]
 [ext_resource type="PackedScene" uid="uid://b013ftqbgrpxx" path="res://Scenes/moveDisplay.tscn" id="4_pd5xk"]
 [ext_resource type="PackedScene" uid="uid://c1n8nkmvur2yk" path="res://Scenes/reselect_slot.tscn" id="6_f6xt6"]
+[ext_resource type="PackedScene" uid="uid://diacwj0uebdpj" path="res://Scenes/replace_slot.tscn" id="7_lrv64"]
 [ext_resource type="Texture2D" uid="uid://prt0a5vyjimx" path="res://Assets/Pokeball.png" id="7_ww2ai"]
 
 [sub_resource type="Animation" id="Animation_f6xt6"]
@@ -474,6 +475,97 @@ offset_bottom = 449.0
 theme_override_font_sizes/font_size = 26
 text = "Close"
 
+[node name="Replace Team" type="Control" parent="."]
+visible = false
+z_index = 2
+layout_mode = 3
+anchors_preset = 0
+offset_left = 140.0
+offset_top = 52.0
+offset_right = 784.0
+offset_bottom = 454.0
+
+[node name="ColorRect" type="ColorRect" parent="Replace Team"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 177.0
+offset_top = -43.0
+offset_right = -172.0
+offset_bottom = 66.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.80784315, 0.80784315, 0.80784315, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="Replace Team"]
+z_index = -1
+layout_mode = 0
+offset_left = -159.0
+offset_top = -69.0
+offset_right = 863.0
+offset_bottom = 507.0
+color = Color(0, 0, 0, 0.22745098)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Replace Team"]
+layout_mode = 0
+offset_left = 184.0
+offset_top = -48.0
+offset_right = 468.0
+offset_bottom = 21.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 19
+text = "Choose a Pokemon to replace"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="GridContainer" type="VBoxContainer" parent="Replace Team"]
+layout_mode = 0
+offset_left = 234.0
+offset_top = 10.0
+offset_right = 692.0
+offset_bottom = 930.0
+scale = Vector2(0.41, 0.41)
+
+[node name="ReplaceSlot" parent="Replace Team/GridContainer" node_paths=PackedStringArray("bigBoss") instance=ExtResource("7_lrv64")]
+layout_mode = 2
+bigBoss = NodePath("../../..")
+
+[node name="ReplaceSlot2" parent="Replace Team/GridContainer" node_paths=PackedStringArray("bigBoss") instance=ExtResource("7_lrv64")]
+layout_mode = 2
+index = 1
+bigBoss = NodePath("../../..")
+
+[node name="ReplaceSlot3" parent="Replace Team/GridContainer" node_paths=PackedStringArray("bigBoss") instance=ExtResource("7_lrv64")]
+layout_mode = 2
+index = 2
+bigBoss = NodePath("../../..")
+
+[node name="ReplaceSlot4" parent="Replace Team/GridContainer" node_paths=PackedStringArray("bigBoss") instance=ExtResource("7_lrv64")]
+layout_mode = 2
+index = 3
+bigBoss = NodePath("../../..")
+
+[node name="ReplaceSlot5" parent="Replace Team/GridContainer" node_paths=PackedStringArray("bigBoss") instance=ExtResource("7_lrv64")]
+layout_mode = 2
+index = 4
+bigBoss = NodePath("../../..")
+
+[node name="ReplaceSlot6" parent="Replace Team/GridContainer" node_paths=PackedStringArray("bigBoss") instance=ExtResource("7_lrv64")]
+layout_mode = 2
+index = 5
+bigBoss = NodePath("../../..")
+
+[node name="Button" type="Button" parent="Replace Team"]
+layout_mode = 0
+offset_left = 208.0
+offset_top = 396.0
+offset_right = 447.0
+offset_bottom = 449.0
+theme_override_font_sizes/font_size = 26
+text = "Send to Boxes"
+
 [node name="Catch" type="AnimationPlayer" parent="."]
 libraries = {
 &"": SubResource("AnimationLibrary_lrv64")
@@ -494,3 +586,4 @@ texture = ExtResource("7_ww2ai")
 [connection signal="pressed" from="BattleOptions/Moves/Move3" to="." method="_on_move_3_pressed"]
 [connection signal="pressed" from="BattleOptions/Moves/Move4" to="." method="_on_move_4_pressed"]
 [connection signal="pressed" from="Reorder Team/Button" to="." method="close"]
+[connection signal="pressed" from="Replace Team/Button" to="." method="toBoxes"]

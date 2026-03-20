@@ -37,3 +37,21 @@ offset_bottom = 47.0
 text = "YUr Mum HAA"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Fainted" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 15.0
+offset_right = 136.0
+offset_bottom = 136.0
+color = Color(0, 0, 0, 0.5921569)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Fainted"]
+layout_mode = 0
+offset_top = 52.0
+offset_right = 121.0
+offset_bottom = 92.0
+theme_override_font_sizes/normal_font_size = 24
+text = "Fainted"
+horizontal_alignment = 1
+vertical_alignment = 1

@@ -102,13 +102,23 @@ var safe=false
 @export var encounterMax: int
 
 @export var playerTeam: Array[PokemonData] = []
+@export var healthyTeam: Array[PokemonData] = []
 
-@export var playerPosition: Vector2
+@export var playerPosition:= Vector2.ZERO
 
 var toBattle: PokemonData
 
-func _ready():
+func _ready() -> void:
+	restart()
+
+func restart():
 	playerTeam.append(newPokemon(pokemon.Geckrow))
+	playerTeam.append(newPokemon(pokemon.Timberry))
+	playerTeam.append(newPokemon(pokemon.Sligment))
+	playerTeam.append(newPokemon(pokemon.Baoby))
+	playerTeam.append(newPokemon(pokemon.Varmot))
+	playerTeam.append(newPokemon(pokemon.Pilfetch))
+
 
 func wildBattle(newPokemonInstance):
 	toBattle=newPokemonInstance
@@ -133,7 +143,7 @@ func newPokemon(species, level = 5):
 	p.ivSpecialAttack=loadIV()
 	p.ivDefense=loadIV()
 	p.ivSpecialDefense=loadIV()
-	p.health=get_stat(p.base.health, p.ivHealth, level)
+	p.health=1#get_stat(p.base.health, p.ivHealth, level)
 	p.maxHealth=get_stat(p.base.health, p.ivHealth, level)
 	p.attack=get_stat(p.base.attack, p.ivAttack, level)
 	p.defense=get_stat(p.base.defense, p.ivDefense, level)
@@ -174,13 +184,13 @@ func get_type_multiplier(moveType: String, defenderType1: String, defenderType2:
 	
 	return multiplier
 	
-func get_catch_chance(pokemon, ball_multiplier: float) -> float:
-	var max_hp = pokemon.maxHealth
-	var current_hp = pokemon.health
-	var catch_rate = pokemon.base.catchRate
+func get_catch_chance(newPokemon2, ball_multiplier: float) -> float:
+	var max_hp = newPokemon2.maxHealth
+	var current_hp = newPokemon2.health
+	var catch_rate = newPokemon2.base.catchRate
 	
 	var hp_factor = (max_hp - current_hp) / max_hp
-	var level_modifier = get_level_modifier(pokemon.level)
+	var level_modifier = get_level_modifier(newPokemon2.level)
 	
 	var chance = catch_rate * ball_multiplier * (1.0 + hp_factor) * level_modifier
 	

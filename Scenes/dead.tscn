@@ -1,0 +1,42 @@
+[gd_scene load_steps=2 format=3 uid="uid://c0fibty7fcims"]
+
+[ext_resource type="Script" uid="uid://dct63hjivul2e" path="res://Scripts/dead.gd" id="1_6bsmv"]
+
+[node name="Dead" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6bsmv")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_right = 962.0
+offset_bottom = 168.0
+theme_override_font_sizes/normal_font_size = 40
+text = "All of you critters have fainted! Would you like to try to complete the critterdex again?"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Retry" type="Button" parent="."]
+layout_mode = 0
+offset_left = 256.0
+offset_top = 210.0
+offset_right = 721.0
+offset_bottom = 319.0
+theme_override_font_sizes/font_size = 50
+text = "Retry"
+
+[node name="Quit" type="Button" parent="."]
+layout_mode = 0
+offset_left = 259.0
+offset_top = 341.0
+offset_right = 724.0
+offset_bottom = 450.0
+theme_override_font_sizes/font_size = 50
+text = "Quit"
+
+[connection signal="pressed" from="Retry" to="." method="_on_retry_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
