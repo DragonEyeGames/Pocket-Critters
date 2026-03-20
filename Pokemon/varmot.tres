@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="SpeciesData" load_steps=7 format=3 uid="uid://c0q2k1knc2h1k"]
+
+[ext_resource type="Script" uid="uid://c3odxqj7xy866" path="res://Resources/MoveResource.gd" id="1_2ckxj"]
+[ext_resource type="Resource" uid="uid://e8nuvn8kesjr" path="res://Moves/nibble.tres" id="2_wclrw"]
+[ext_resource type="Resource" uid="uid://cepnl6u878py5" path="res://Moves/tackle.tres" id="3_kh6el"]
+[ext_resource type="Script" uid="uid://1vun3nkcoo5i" path="res://Resources/SpeciesData.gd" id="4_77ofq"]
+[ext_resource type="Resource" uid="uid://dmyk1bgbcldu6" path="res://Moves/headbutt.tres" id="4_kh6el"]
+[ext_resource type="Resource" uid="uid://q0vo23uv30ly" path="res://Moves/bite.tres" id="5_kh6el"]
+
+[resource]
+script = ExtResource("4_77ofq")
+species = 7
+type1 = 4
+type2 = 4
+health = 35
+attack = 55
+defense = 30
+specialAttack = 35
+specialDefense = 30
+speed = 65
+potentialMoves = Array[ExtResource("1_2ckxj")]([ExtResource("2_wclrw"), ExtResource("3_kh6el"), ExtResource("4_kh6el"), ExtResource("5_kh6el")])
+metadata/_custom_type_script = "uid://c7t80kmu0l21k"

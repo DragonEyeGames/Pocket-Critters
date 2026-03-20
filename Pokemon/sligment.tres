@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="SpeciesData" load_steps=6 format=3 uid="uid://qg7i6v3i2kk4"]
+
+[ext_resource type="Script" uid="uid://c3odxqj7xy866" path="res://Resources/MoveResource.gd" id="1_ans5u"]
+[ext_resource type="Resource" uid="uid://e8nuvn8kesjr" path="res://Moves/nibble.tres" id="2_lwwfj"]
+[ext_resource type="Resource" uid="uid://cepnl6u878py5" path="res://Moves/tackle.tres" id="3_jmtj6"]
+[ext_resource type="Resource" uid="uid://d2elyxqn20jr2" path="res://Moves/bugBite.tres" id="3_tp0eo"]
+[ext_resource type="Script" uid="uid://1vun3nkcoo5i" path="res://Resources/SpeciesData.gd" id="4_tp0eo"]
+
+[resource]
+script = ExtResource("4_tp0eo")
+species = 3
+type1 = 6
+type2 = 6
+health = 50
+attack = 30
+defense = 50
+specialAttack = 25
+specialDefense = 45
+speed = 20
+potentialMoves = Array[ExtResource("1_ans5u")]([ExtResource("2_lwwfj"), ExtResource("3_tp0eo"), ExtResource("3_jmtj6")])
+metadata/_custom_type_script = "uid://c7t80kmu0l21k"

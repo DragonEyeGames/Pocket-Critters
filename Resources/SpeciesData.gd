@@ -2,6 +2,8 @@ extends Resource
 class_name SpeciesData
 
 @export var species: GameManager.pokemon
+@export var type1: GameManager.types
+@export var type2: GameManager.types
 @export var health = 10
 @export var attack = 10
 @export var defense = 10

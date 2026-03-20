@@ -1,12 +1,22 @@
-[gd_scene load_steps=8 format=3 uid="uid://ba24hclljygvv"]
+[gd_scene load_steps=18 format=3 uid="uid://ba24hclljygvv"]
 
 [ext_resource type="Script" uid="uid://bl525lufsugqy" path="res://Scripts/pokemonSelector.gd" id="1_0uh2f"]
 [ext_resource type="Texture2D" uid="uid://bbctwkye4ujb4" path="res://Fakemon-PNG/timberry.png" id="2_m42bm"]
 [ext_resource type="Texture2D" uid="uid://diwbntfmt43qj" path="res://Fakemon-PNG/pilfetch.png" id="3_egjkw"]
 [ext_resource type="Texture2D" uid="uid://cy5ixt1h2jqox" path="res://Fakemon-PNG/geckrow.png" id="4_lsc3l"]
 [ext_resource type="Texture2D" uid="uid://ii1pbb1pc3mv" path="res://Fakemon-PNG/timberry-back.png" id="5_bypo8"]
+[ext_resource type="Texture2D" uid="uid://dmggf8l828rn7" path="res://Fakemon-PNG/sligment.png" id="5_oypsu"]
+[ext_resource type="Texture2D" uid="uid://5bl0yq10tjgf" path="res://Fakemon-PNG/dunsparce.png" id="6_k0ukg"]
 [ext_resource type="Texture2D" uid="uid://cyafkvm465t4r" path="res://Fakemon-PNG/geckrow-back.png" id="6_y7fif"]
 [ext_resource type="Texture2D" uid="uid://biriaivtjbjx5" path="res://Fakemon-PNG/pilfetch-back.png" id="7_85yhy"]
+[ext_resource type="Texture2D" uid="uid://bk8ot7cpwdae3" path="res://Fakemon-PNG/pasturlo.png" id="7_k0ukg"]
+[ext_resource type="Texture2D" uid="uid://dhh1fa6gyyhfj" path="res://Fakemon-PNG/baoby.png" id="8_0s6cp"]
+[ext_resource type="Texture2D" uid="uid://cx0gdn7okrdob" path="res://Fakemon-PNG/varmot.png" id="9_vtbuo"]
+[ext_resource type="Texture2D" uid="uid://cfqgnasa27orh" path="res://Fakemon-PNG/sligment-back.png" id="13_usm3x"]
+[ext_resource type="Texture2D" uid="uid://doa4hdrlyh5vq" path="res://Fakemon-PNG/dunsparce-back.png" id="14_40ktw"]
+[ext_resource type="Texture2D" uid="uid://b3p3ovwwgolld" path="res://Fakemon-PNG/pasturlo-back.png" id="15_r7ogs"]
+[ext_resource type="Texture2D" uid="uid://q5f2y5hibdcr" path="res://Fakemon-PNG/baoby-back.png" id="16_exi05"]
+[ext_resource type="Texture2D" uid="uid://cdt3aw3drbacm" path="res://Fakemon-PNG/varmot-back.png" id="17_1l2i3"]
 
 [node name="Pokemon" type="Node2D"]
 scale = Vector2(3, 3)
@@ -28,16 +38,56 @@ texture = ExtResource("3_egjkw")
 visible = false
 texture = ExtResource("4_lsc3l")
 
+[node name="Sligment" type="Sprite2D" parent="Front"]
+visible = false
+texture = ExtResource("5_oypsu")
+
+[node name="Dunsparce" type="Sprite2D" parent="Front"]
+visible = false
+texture = ExtResource("6_k0ukg")
+
+[node name="Pasturlo" type="Sprite2D" parent="Front"]
+visible = false
+texture = ExtResource("7_k0ukg")
+
+[node name="Baoby" type="Sprite2D" parent="Front"]
+visible = false
+texture = ExtResource("8_0s6cp")
+
+[node name="Varmot" type="Sprite2D" parent="Front"]
+visible = false
+texture = ExtResource("9_vtbuo")
+
 [node name="Back" type="Node2D" parent="."]
 
 [node name="Timberry" type="Sprite2D" parent="Back"]
 visible = false
 texture = ExtResource("5_bypo8")
 
+[node name="Pilfetch" type="Sprite2D" parent="Back"]
+visible = false
+texture = ExtResource("7_85yhy")
+
 [node name="Geckrow" type="Sprite2D" parent="Back"]
 visible = false
 texture = ExtResource("6_y7fif")
 
-[node name="Pilfetch" type="Sprite2D" parent="Back"]
+[node name="Sligment" type="Sprite2D" parent="Back"]
 visible = false
-texture = ExtResource("7_85yhy")
+texture = ExtResource("13_usm3x")
+
+[node name="Dunsparce" type="Sprite2D" parent="Back"]
+visible = false
+texture = ExtResource("14_40ktw")
+
+[node name="Pasturlo" type="Sprite2D" parent="Back"]
+visible = false
+texture = ExtResource("15_r7ogs")
+
+[node name="Baoby" type="Sprite2D" parent="Back"]
+visible = false
+texture = ExtResource("16_exi05")
+
+[node name="Varmot" type="Sprite2D" parent="Back"]
+visible = false
+texture = ExtResource("17_1l2i3")

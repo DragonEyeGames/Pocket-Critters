@@ -3,7 +3,12 @@ extends Node
 enum pokemon {
 	Timberry,
 	Pilfetch,
-	Geckrow
+	Geckrow,
+	Sligment,
+	Dunsparce,
+	Pasturlo,
+	Baoby,
+	Varmot
 }
 
 enum types {
@@ -12,7 +17,19 @@ enum types {
 	Water,
 	Flying,
 	Normal,
-	Electric
+	Electric,
+	Bug,
+	Ghost,
+	Psychic,
+	Dark,
+	Dragon,
+	Fairy,
+	Fighting,
+	Ground,
+	Ice,
+	Poison,
+	Rock,
+	Steel
 }
 
 enum moveTypes {

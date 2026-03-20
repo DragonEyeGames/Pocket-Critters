@@ -1,37 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://b013ftqbgrpxx"]
+[gd_scene load_steps=14 format=3 uid="uid://b013ftqbgrpxx"]
 
 [ext_resource type="Script" uid="uid://cfmuoh8gh7gx6" path="res://Scenes/move_display.gd" id="1_y1whx"]
 [ext_resource type="Texture2D" uid="uid://7wj1ubb3bdnp" path="res://Assets/PokemonTypes/normal.png" id="2_puv86"]
 [ext_resource type="Texture2D" uid="uid://d0i6w16fnln0l" path="res://Assets/PokemonTypes/grass.png" id="3_kcutj"]
 [ext_resource type="Texture2D" uid="uid://dcbad7vydy0wa" path="res://Assets/PokemonTypes/flying.png" id="4_54dxv"]
-
-[sub_resource type="Animation" id="Animation_kcutj"]
-resource_name = "Normal"
-length = 0.1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Types/Normal:visible")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("ColorRect:color")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(0.7708395, 0.77083945, 0.77083945, 1)]
-}
+[ext_resource type="Texture2D" uid="uid://drpdahjorb8xu" path="res://Assets/PokemonTypes/dark.png" id="5_q7ryp"]
+[ext_resource type="Texture2D" uid="uid://bolnyus8kljn2" path="res://Assets/PokemonTypes/bug.png" id="6_lwgvd"]
 
 [sub_resource type="Animation" id="Animation_54dxv"]
 resource_name = "Grass"
@@ -59,6 +33,34 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Color(0.61151993, 0.91, 0.53690004, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_kcutj"]
+resource_name = "Normal"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Types/Normal:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ColorRect:color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.7708395, 0.77083945, 0.77083945, 1)]
 }
 
 [sub_resource type="Animation" id="Animation_q7ryp"]
@@ -111,9 +113,120 @@ tracks/3/keys = {
 "update": 0,
 "values": [Color(1, 1, 1, 1)]
 }
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Types/Dark:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Types/Bug:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_qawhb"]
+resource_name = "Flying"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Types/Flying:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ColorRect:color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.6688, 0.81663996, 0.88, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_trkvg"]
+resource_name = "Bug"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Types/Bug:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ColorRect:color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.68688005, 0.72, 0.5544, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_lwgvd"]
+resource_name = "Dark"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Types/Dark:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ColorRect:color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.4327103, 0.40073356, 0.4321643, 1)]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_lwgvd"]
 _data = {
+&"Bug": SubResource("Animation_trkvg"),
+&"Dark": SubResource("Animation_lwgvd"),
+&"Flying": SubResource("Animation_qawhb"),
 &"Grass": SubResource("Animation_54dxv"),
 &"Normal": SubResource("Animation_kcutj"),
 &"RESET": SubResource("Animation_q7ryp")
@@ -209,6 +322,14 @@ texture = ExtResource("3_kcutj")
 [node name="Flying" type="Sprite2D" parent="Types"]
 visible = false
 texture = ExtResource("4_54dxv")
+
+[node name="Dark" type="Sprite2D" parent="Types"]
+visible = false
+texture = ExtResource("5_q7ryp")
+
+[node name="Bug" type="Sprite2D" parent="Types"]
+visible = false
+texture = ExtResource("6_lwgvd")
 
 [node name="Type Animator" type="AnimationPlayer" parent="."]
 libraries = {

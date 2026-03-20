@@ -1,13 +1,16 @@
 extends Node2D
 
-
+var activeIndex=0
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	$Opponent.pokemon=GameManager.toBattle
 	$Opponent.initialize()
-	$Player.pokemon=GameManager.playerTeam[0]
+	loadField()
+	
+func loadField():
+	$Player.pokemon=GameManager.playerTeam[activeIndex]
 	$Player.initialize()
-	$BattleOptions/Display.text="What will " + str(GameManager.playerTeam[0].name) + " do?"
+	$BattleOptions/Display.text="What will " + str(GameManager.playerTeam[activeIndex].name) + " do?"
 
 func _on_run_pressed() -> void:
 	GameManager.toMain()
@@ -21,7 +24,7 @@ func _on_catch_pressed() -> void:
 
 func _on_fight_pressed() -> void:
 	$BattleOptions/Options.visible=false
-	$BattleOptions/Moves.loadMoves(GameManager.playerTeam[0].moves)
+	$BattleOptions/Moves.loadMoves(GameManager.playerTeam[activeIndex].moves)
 
 
 func _on_move1_pressed() -> void:
@@ -72,9 +75,17 @@ func loadAttack(playerAttack):
 	$BattleOptions/Options.visible=true
 	
 func attack(move, target, user):
+	$BattleOptions/Display.text=str(user.pokemon.name) + " used " + str(move.name)
 	if(GameManager.moveTypes.keys()[move.moveType]=="Physical"):
 		var newAttack = float(user.pokemon.attack)
 		var defense = float(target.pokemon.defense)
+		var power = float(move.power)
+
+		target.pokemon.health-=round((newAttack / defense) * (power / 10.0) + 1)
+		target.initialize()
+	if(GameManager.moveTypes.keys()[move.moveType]=="Special"):
+		var newAttack = float(user.pokemon.specialAttack)
+		var defense = float(target.pokemon.specialDefense)
 		var power = float(move.power)
 
 		target.pokemon.health-=round((newAttack / defense) * (power / 10.0) + 1)
@@ -97,3 +108,23 @@ func loadLevel(p: PokemonData):
 		p.specialAttack=GameManager.get_stat(p.base.specialAttack, p.ivSpecialAttack, newLevel)
 		p.specialDefense=GameManager.get_stat(p.base.specialDefense, p.ivSpecialDefense, newLevel)
 		p.speed=GameManager.get_stat(p.base.speed, p.ivSpeed, newLevel)
+
+
+func _on_switch_pressed() -> void:
+	$"Reorder Team".visible=true
+	for child in $"Reorder Team/GridContainer".get_children():
+		child.initialize()
+
+
+func close() -> void:
+	$"Reorder Team".visible=false
+	
+func nonAttack():
+	$BattleOptions/Moves.visible=false
+	$BattleOptions/Options.visible=false
+	attack($Opponent.randomAttack(), $Player, $Opponent)
+	await get_tree().create_timer(1).timeout
+	if($Player.pokemon.health<=0):
+		$Player.pokemon.health=$Player.pokemon.maxHealth
+		GameManager.toMain()
+	$BattleOptions/Options.visible=true

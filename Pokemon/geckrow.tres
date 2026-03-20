@@ -1,18 +1,22 @@
-[gd_resource type="Resource" script_class="SpeciesData" load_steps=5 format=3 uid="uid://dbpad56uixwli"]
+[gd_resource type="Resource" script_class="SpeciesData" load_steps=7 format=3 uid="uid://dbpad56uixwli"]
 
 [ext_resource type="Script" uid="uid://c3odxqj7xy866" path="res://Resources/MoveResource.gd" id="1_jbw0n"]
 [ext_resource type="Resource" uid="uid://do0twrxr0jj58" path="res://Moves/leafSlice.tres" id="2_1poqq"]
 [ext_resource type="Script" uid="uid://1vun3nkcoo5i" path="res://Resources/SpeciesData.gd" id="3_1poqq"]
+[ext_resource type="Resource" uid="uid://dmyk1bgbcldu6" path="res://Moves/headbutt.tres" id="3_jfmia"]
 [ext_resource type="Resource" uid="uid://cepnl6u878py5" path="res://Moves/tackle.tres" id="3_o8wtw"]
+[ext_resource type="Resource" uid="uid://c5ube7xccexqk" path="res://Moves/seedShot.tres" id="5_x2lk4"]
 
 [resource]
 script = ExtResource("3_1poqq")
 species = 2
+type1 = 1
+type2 = 1
 health = 62
 attack = 56
 defense = 50
 specialAttack = 48
 specialDefense = 60
 speed = 42
-potentialMoves = Array[ExtResource("1_jbw0n")]([ExtResource("2_1poqq"), ExtResource("3_o8wtw")])
+potentialMoves = Array[ExtResource("1_jbw0n")]([ExtResource("3_o8wtw"), ExtResource("3_jfmia"), ExtResource("2_1poqq"), ExtResource("5_x2lk4")])
 metadata/_custom_type_script = "uid://c7t80kmu0l21k"
