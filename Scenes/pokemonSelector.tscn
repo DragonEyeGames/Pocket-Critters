@@ -27,7 +27,6 @@ pokemon = 2
 [node name="Front" type="Node2D" parent="."]
 
 [node name="Timberry" type="Sprite2D" parent="Front"]
-visible = false
 texture = ExtResource("2_m42bm")
 
 [node name="Pilfetch" type="Sprite2D" parent="Front"]

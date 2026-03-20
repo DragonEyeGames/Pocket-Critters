@@ -11,3 +11,5 @@ class_name SpeciesData
 @export var specialDefense = 10
 @export var speed = 10
 @export var potentialMoves: Array[MoveResource]
+
+@export var catchRate:= 0.0

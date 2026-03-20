@@ -175,12 +175,16 @@ func get_type_multiplier(moveType: String, defenderType1: String, defenderType2:
 	return multiplier
 	
 func get_catch_chance(pokemon, ball_multiplier: float) -> float:
-	var max_hp = pokemon.max_hp
-	var current_hp = pokemon.current_hp
-	var catch_rate = pokemon.catch_rate # like 0.2, 0.4, etc
+	var max_hp = pokemon.maxHealth
+	var current_hp = pokemon.health
+	var catch_rate = pokemon.base.catchRate
 	
 	var hp_factor = (max_hp - current_hp) / max_hp
+	var level_modifier = get_level_modifier(pokemon.level)
 	
-	var chance = catch_rate * ball_multiplier * (1.0 + hp_factor)
+	var chance = catch_rate * ball_multiplier * (1.0 + hp_factor) * level_modifier
 	
 	return clamp(chance, 0.0, 1.0)
+
+func get_level_modifier(pokemon_level: int) -> float:
+	return 1.0 / (1.0 + pokemon_level / 20.0)

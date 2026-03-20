@@ -17,10 +17,25 @@ func _on_run_pressed() -> void:
 
 
 func _on_catch_pressed() -> void:
+	$BattleOptions/Options.visible=false
+	$BattleOptions/Display.text="Threw a ball at " + $Opponent.pokemon.name + "!"
 	print(GameManager.get_catch_chance($Opponent.pokemon, 1))
-	if(len(GameManager.playerTeam)<=5):
-		GameManager.playerTeam.append(GameManager.toBattle)
-		GameManager.toMain()
+	if(randf()<=GameManager.get_catch_chance($Opponent.pokemon, 1)):
+		$Catch.play("catch-succeed")
+		await get_tree().create_timer(2).timeout
+		if(len(GameManager.playerTeam)<=5):
+			GameManager.playerTeam.append(GameManager.toBattle)
+			$BattleOptions/Display.text="Caught it! " + $Opponent.pokemon.name + " Has been caught!"
+			$Opponent.visible=false
+			await get_tree().create_timer(3).timeout
+			GameManager.toMain()
+			return
+	else:
+		$Catch.play("catch-fail")
+		await get_tree().create_timer(2).timeout
+		$BattleOptions/Display.text="Aww man! " + $Opponent.pokemon.name + " Broke out!"
+		await get_tree().create_timer(1).timeout
+	nonAttack()
 
 
 func _on_fight_pressed() -> void:
@@ -143,8 +158,7 @@ func close() -> void:
 func nonAttack():
 	$BattleOptions/Moves.visible=false
 	$BattleOptions/Options.visible=false
-	attack($Opponent.randomAttack(), $Player, $Opponent)
-	await get_tree().create_timer(1).timeout
+	await attack($Opponent.randomAttack(), $Player, $Opponent)
 	if($Player.pokemon.health<=0):
 		$Player.pokemon.health=$Player.pokemon.maxHealth
 		GameManager.toMain()

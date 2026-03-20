@@ -18,4 +18,5 @@ specialAttack = 35
 specialDefense = 40
 speed = 65
 potentialMoves = Array[ExtResource("1_qj25l")]([ExtResource("2_qj25l"), ExtResource("3_rwyfl"), ExtResource("4_glfcl")])
+catchRate = 0.45
 metadata/_custom_type_script = "uid://c7t80kmu0l21k"
