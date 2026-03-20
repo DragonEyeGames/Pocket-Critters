@@ -41,3 +41,6 @@ offset_top = 96.1039
 offset_right = 46.753235
 offset_bottom = 127.1039
 text = "v"
+
+[connection signal="pressed" from="Up" to="." method="_on_up_pressed"]
+[connection signal="pressed" from="Down" to="." method="_on_down_pressed"]

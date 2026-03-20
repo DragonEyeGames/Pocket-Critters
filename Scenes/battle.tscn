@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://p6x3hd6afog6"]
+[gd_scene load_steps=6 format=3 uid="uid://p6x3hd6afog6"]
 
 [ext_resource type="PackedScene" uid="uid://ba24hclljygvv" path="res://Scenes/pokemonSelector.tscn" id="1_ip7xm"]
 [ext_resource type="Script" uid="uid://do3gaqda1wenc" path="res://Scripts/battle.gd" id="1_oxp8w"]
+[ext_resource type="Script" uid="uid://b5ehmgk77btv7" path="res://Scenes/moves.gd" id="3_1otgo"]
 [ext_resource type="PackedScene" uid="uid://csq0ccnt2o6ri" path="res://Scenes/statHolder.tscn" id="3_7sfm4"]
+[ext_resource type="PackedScene" uid="uid://b013ftqbgrpxx" path="res://Scenes/moveDisplay.tscn" id="4_pd5xk"]
 
 [node name="Battle" type="Node2D"]
 script = ExtResource("1_oxp8w")
@@ -18,14 +20,14 @@ back = false
 pokemon = null
 holder = NodePath("../StatHolder2")
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="BattleOptions" type="ColorRect" parent="."]
 offset_top = 384.0
 offset_right = 958.0
 offset_bottom = 538.0
 mouse_filter = 2
 color = Color(0.44, 0.44, 0.44, 1)
 
-[node name="GridContainer" type="GridContainer" parent="ColorRect"]
+[node name="Options" type="GridContainer" parent="BattleOptions"]
 layout_mode = 0
 offset_left = 537.0
 offset_top = 14.0
@@ -33,31 +35,54 @@ offset_right = 941.0
 offset_bottom = 138.0
 columns = 2
 
-[node name="Fight" type="Button" parent="ColorRect/GridContainer"]
+[node name="Fight" type="Button" parent="BattleOptions/Options"]
 custom_minimum_size = Vector2(200, 60)
 layout_mode = 2
 focus_mode = 0
 text = "Fight"
 
-[node name="Catch" type="Button" parent="ColorRect/GridContainer"]
+[node name="Catch" type="Button" parent="BattleOptions/Options"]
 custom_minimum_size = Vector2(200, 60)
 layout_mode = 2
 focus_mode = 0
 text = "Catch"
 
-[node name="Switch" type="Button" parent="ColorRect/GridContainer"]
+[node name="Switch" type="Button" parent="BattleOptions/Options"]
 custom_minimum_size = Vector2(200, 60)
 layout_mode = 2
 focus_mode = 0
+disabled = true
 text = "Switch"
 
-[node name="Run" type="Button" parent="ColorRect/GridContainer"]
+[node name="Run" type="Button" parent="BattleOptions/Options"]
 custom_minimum_size = Vector2(200, 60)
 layout_mode = 2
 focus_mode = 0
 text = "Run"
 
-[node name="RichTextLabel" type="RichTextLabel" parent="ColorRect"]
+[node name="Moves" type="GridContainer" parent="BattleOptions"]
+visible = false
+layout_mode = 0
+offset_left = 537.0
+offset_top = 14.0
+offset_right = 941.0
+offset_bottom = 138.0
+columns = 2
+script = ExtResource("3_1otgo")
+
+[node name="Move" parent="BattleOptions/Moves" instance=ExtResource("4_pd5xk")]
+layout_mode = 2
+
+[node name="Move2" parent="BattleOptions/Moves" instance=ExtResource("4_pd5xk")]
+layout_mode = 2
+
+[node name="Move3" parent="BattleOptions/Moves" instance=ExtResource("4_pd5xk")]
+layout_mode = 2
+
+[node name="Move4" parent="BattleOptions/Moves" instance=ExtResource("4_pd5xk")]
+layout_mode = 2
+
+[node name="Display" type="RichTextLabel" parent="BattleOptions"]
 layout_mode = 0
 offset_left = 12.0
 offset_top = 14.0
@@ -89,5 +114,6 @@ offset_top = 18.0
 offset_right = 526.0
 offset_bottom = 150.0
 
-[connection signal="pressed" from="ColorRect/GridContainer/Catch" to="." method="_on_catch_pressed"]
-[connection signal="pressed" from="ColorRect/GridContainer/Run" to="." method="_on_run_pressed"]
+[connection signal="pressed" from="BattleOptions/Options/Fight" to="." method="_on_fight_pressed"]
+[connection signal="pressed" from="BattleOptions/Options/Catch" to="." method="_on_catch_pressed"]
+[connection signal="pressed" from="BattleOptions/Options/Run" to="." method="_on_run_pressed"]

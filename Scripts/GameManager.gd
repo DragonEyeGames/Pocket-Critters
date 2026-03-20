@@ -52,12 +52,12 @@ func newPokemon(species, level = 5):
 	p.name = pokemonName(species)
 	p.species=species
 	p.level = level
-	p.ivHealth=randf_range(.8, 1.2)
-	p.ivSpeed=randf_range(.8, 1.2)
-	p.ivAttack=randf_range(.8, 1.2)
-	p.ivSpecialAttack=randf_range(.8, 1.2)
-	p.ivDefense=randf_range(.8, 1.2)
-	p.ivSpecialDefense=randf_range(.8, 1.2)
+	p.ivHealth=loadIV()
+	p.ivSpeed=loadIV()
+	p.ivAttack=loadIV()
+	p.ivSpecialAttack=loadIV()
+	p.ivDefense=loadIV()
+	p.ivSpecialDefense=loadIV()
 	p.health=get_stat(p.base.health, p.ivHealth, level)
 	p.maxHealth=get_stat(p.base.health, p.ivHealth, level)
 	p.attack=get_stat(p.base.attack, p.ivAttack, level)
@@ -65,7 +65,11 @@ func newPokemon(species, level = 5):
 	p.specialAttack=get_stat(p.base.specialAttack, p.ivSpecialAttack, level)
 	p.specialDefense=get_stat(p.base.specialDefense, p.ivSpecialDefense, level)
 	p.speed=get_stat(p.base.speed, p.ivSpeed, level)
-	p.moves.append(preload("res://Moves/leafSlice.tres"))
+	var backupMoves = p.base.potentialMoves.duplicate()
+	while len(backupMoves)>=1:
+		var move = backupMoves.pick_random()
+		p.moves.append(move)
+		backupMoves.erase(move)
 	return p
 	
 func get_stat(base: int, iv: float,  level: int) -> int:
@@ -76,3 +80,6 @@ func toMain():
 	get_tree().change_scene_to_file("res://Scenes/main.tscn")
 	await get_tree().create_timer(.5).timeout
 	safe=false
+	
+func loadIV():
+	return randf_range(.9, 1.1)

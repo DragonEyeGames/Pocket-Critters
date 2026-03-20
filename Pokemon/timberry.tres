@@ -1,7 +1,8 @@
-[gd_resource type="Resource" script_class="SpeciesData" load_steps=4 format=3 uid="uid://ggusoa0ceclr"]
+[gd_resource type="Resource" script_class="SpeciesData" load_steps=5 format=3 uid="uid://ggusoa0ceclr"]
 
 [ext_resource type="Script" uid="uid://c3odxqj7xy866" path="res://Resources/MoveResource.gd" id="1_2pi4b"]
 [ext_resource type="Resource" uid="uid://do0twrxr0jj58" path="res://Moves/leafSlice.tres" id="2_8nkby"]
+[ext_resource type="Resource" uid="uid://cepnl6u878py5" path="res://Moves/tackle.tres" id="3_8nkby"]
 [ext_resource type="Script" uid="uid://1vun3nkcoo5i" path="res://Resources/SpeciesData.gd" id="3_qcl64"]
 
 [resource]
@@ -12,5 +13,5 @@ defense = 45
 specialAttack = 40
 specialDefense = 45
 speed = 60
-potentialMoves = Array[ExtResource("1_2pi4b")]([ExtResource("2_8nkby")])
+potentialMoves = Array[ExtResource("1_2pi4b")]([ExtResource("2_8nkby"), ExtResource("3_8nkby")])
 metadata/_custom_type_script = "uid://c7t80kmu0l21k"

@@ -26,3 +26,9 @@ func _on_team_pressed() -> void:
 
 func _on_reorder_pressed() -> void:
 	$"Reorder Team".visible=true
+	for child in $"Reorder Team/GridContainer".get_children():
+		child.initialize()
+
+
+func _on_button_pressed() -> void:
+	$"Reorder Team".visible=false
