@@ -8,7 +8,10 @@ func initialize():
 		visible=true
 		$TeamSlot.index=index
 		$TeamSlot.loadSlot()
-		$Select.visible=!bigBoss.activeIndex==GameManager.healthyTeam.find(GameManager.playerTeam[index])
+		if(not bigBoss.deadPokemon):
+			$Select.visible=!bigBoss.activeIndex==GameManager.healthyTeam.find(GameManager.playerTeam[index])
+		else:
+			$Select.visible=true
 		if(GameManager.playerTeam[index].health<=0):
 			$Select.visible=false
 	else:
@@ -19,4 +22,8 @@ func _on_select_pressed() -> void:
 	bigBoss.activeIndex=GameManager.healthyTeam.find(GameManager.playerTeam[index])
 	bigBoss.loadField()
 	bigBoss.close()
-	bigBoss.nonAttack()
+	if(not bigBoss.deadPokemon):
+		bigBoss.nonAttack()
+	else:
+		bigBoss.undeadPokemon()
+		

@@ -1,6 +1,7 @@
 extends Node2D
 
 var activeIndex=0
+var deadPokemon=false
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	var healthy : Array[PokemonData] = []
@@ -132,12 +133,12 @@ func attack(move, target, user):
 			target.pokemon.health-=round(((newAttack / defense) * (power / 10.0) + 1) * multiplier)
 			target.initialize()
 			print(multiplier)
-			if(multiplier>1):
+			if(multiplier==0):
+				$BattleOptions/Display.text="It had no effect"
+			elif(multiplier>1):
 				$BattleOptions/Display.text="It's super effective!"
 			elif(multiplier<1):
 				$BattleOptions/Display.text="It's not very effective..."
-			elif(multiplier==0):
-				$BattleOptions/Display.text="It had no effect"
 			else:
 				$BattleOptions/Display.text=""
 	else:
@@ -198,5 +199,17 @@ func checkPlayer():
 		else:
 			get_tree().change_scene_to_file("res://Scenes/dead.tscn")
 			return false
-		GameManager.toMain()
+		$"Reorder Team".visible=true
+		$"Reorder Team/Button".visible=false
+		deadPokemon=true
+		for child in $"Reorder Team/GridContainer".get_children():
+			child.initialize()
 		return false
+
+func undeadPokemon():
+	deadPokemon=false
+	$"Reorder Team/Button".visible=true
+	$BattleOptions/Display.text="What will " + str(GameManager.healthyTeam[activeIndex].name) + " do?"
+	$BattleOptions/Options.visible=true
+	$Player.visible=true
+	loadField()
