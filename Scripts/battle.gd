@@ -144,7 +144,6 @@ func attack(move, target, user):
 			var damage = round(((newAttack / defense) * (power / 10.0) + 1) * multiplier * stab)
 			target.pokemon.health-=damage
 			target.initialize()
-			calculateAbilities(move, user, target, damage)
 			if(multiplier==0):
 				$BattleOptions/Display.text="It had no effect"
 			elif(multiplier>1):
@@ -153,6 +152,7 @@ func attack(move, target, user):
 				$BattleOptions/Display.text="It's not very effective..."
 			else:
 				$BattleOptions/Display.text=""
+			await calculateAbilities(move, user, target, damage)
 		if(GameManager.moveTypes.keys()[move.moveType]=="Special"):
 			var newAttack = float(user.pokemon.specialAttack)
 			newAttack *= GameManager.get_stage_multiplier(user.specialAttack)
@@ -166,7 +166,6 @@ func attack(move, target, user):
 			var damage = round(((newAttack / defense) * (power / 10.0) + 1) * multiplier * stab)
 			target.pokemon.health-=damage
 			target.initialize()
-			calculateAbilities(move, user, target, damage)
 			if(multiplier==0):
 				$BattleOptions/Display.text="It had no effect"
 			elif(multiplier>1):
@@ -175,34 +174,63 @@ func attack(move, target, user):
 				$BattleOptions/Display.text="It's not very effective..."
 			else:
 				$BattleOptions/Display.text=""
+			await calculateAbilities(move, user, target, damage)
 		if(GameManager.moveTypes.keys()[move.moveType]=="Status"):
 			var abilities = move.abilities.duplicate()
 			while len(abilities)>=1:
 				if(abilities[0].stat==GameManager.stats.Attack):
 					if(abilities[0].targetsSelf):
 						user.attack+=abilities[0].change
+						$BattleOptions/Display.text=calculateAmount(abilities[0].change, "attack", user)
+						await get_tree().create_timer(1).timeout
 					else:
 						target.attack+=abilities[0].change
+						$BattleOptions/Display.text=calculateAmount(abilities[0].change, "attack", target)
+						await get_tree().create_timer(1).timeout
 				if(abilities[0].stat==GameManager.stats.Defense):
 					if(abilities[0].targetsSelf):
 						user.defense+=abilities[0].change
+						$BattleOptions/Display.text=calculateAmount(abilities[0].change, "defense", user)
+						await get_tree().create_timer(1).timeout
 					else:
 						target.defense+=abilities[0].change
+						$BattleOptions/Display.text=calculateAmount(abilities[0].change, "defense", target)
+					await get_tree().create_timer(1).timeout
 				if(abilities[0].stat==GameManager.stats.SpecialAttack):
 					if(abilities[0].targetsSelf):
 						user.specialAttack+=abilities[0].change
+						$BattleOptions/Display.text=calculateAmount(abilities[0].change, "special attack", user)
+						await get_tree().create_timer(1).timeout
 					else:
 						target.specialAttack+=abilities[0].change
+						$BattleOptions/Display.text=calculateAmount(abilities[0].change, "special attack", target)
+						await get_tree().create_timer(1).timeout
 				if(abilities[0].stat==GameManager.stats.SpecialDefense):
 					if(abilities[0].targetsSelf):
 						user.specialDefense+=abilities[0].change
+						$BattleOptions/Display.text=calculateAmount(abilities[0].change, "special defense", user)
+						await get_tree().create_timer(1).timeout
 					else:
 						target.specialDefense+=abilities[0].change
+						$BattleOptions/Display.text=calculateAmount(abilities[0].change, "special defense", target)
+						await get_tree().create_timer(1).timeout
 				if(abilities[0].stat==GameManager.stats.Speed):
 					if(abilities[0].targetsSelf):
 						user.speed+=abilities[0].change
+						$BattleOptions/Display.text=calculateAmount(abilities[0].change, "speed", user)
+						await get_tree().create_timer(1).timeout
 					else:
 						target.speed+=abilities[0].change
+						$BattleOptions/Display.text=calculateAmount(abilities[0].change, "speed", target)
+				if(abilities[0].stat==GameManager.stats.Accuracy):
+					if(abilities[0].targetsSelf):
+						user.accuracy+=abilities[0].change
+						$BattleOptions/Display.text=calculateAmount(abilities[0].change, "accuracy", user)
+						await get_tree().create_timer(1).timeout
+					else:
+						target.accuracy+=abilities[0].change
+						$BattleOptions/Display.text=calculateAmount(abilities[0].change, "accuracy", target)
+						await get_tree().create_timer(1).timeout
 				abilities.remove_at(0)
 	else:
 		$BattleOptions/Display.text="But it missed!"
@@ -279,6 +307,7 @@ func undeadPokemon():
 	loadField()
 	
 func calculateAbilities(move, user, target, damage):
+	await get_tree().create_timer(1).timeout
 	var abilities = move.abilities.duplicate()
 	while len(abilities)>=1:
 		print(abilities[0].chance	)
@@ -286,43 +315,71 @@ func calculateAbilities(move, user, target, damage):
 			if(abilities[0].stat==GameManager.stats.Attack):
 				if(abilities[0].targetsSelf):
 					user.attack+=abilities[0].change
+					$BattleOptions/Display.text=calculateAmount(abilities[0].change, "attack", user)
+					await get_tree().create_timer(1).timeout
 				else:
 					target.attack+=abilities[0].change
+					$BattleOptions/Display.text=calculateAmount(abilities[0].change, "attack", target)
+					await get_tree().create_timer(1).timeout
 			if(abilities[0].stat==GameManager.stats.Defense):
 				if(abilities[0].targetsSelf):
 					user.defense+=abilities[0].change
+					$BattleOptions/Display.text=calculateAmount(abilities[0].change, "defense", user)
+					await get_tree().create_timer(1).timeout
 				else:
 					target.defense+=abilities[0].change
+					$BattleOptions/Display.text=calculateAmount(abilities[0].change, "defense", target)
+					await get_tree().create_timer(1).timeout
 			if(abilities[0].stat==GameManager.stats.SpecialAttack):
 				if(abilities[0].targetsSelf):
 					user.specialAttack+=abilities[0].change
+					$BattleOptions/Display.text=calculateAmount(abilities[0].change, "special attack", user)
+					await get_tree().create_timer(1).timeout
 				else:
 					target.specialAttack+=abilities[0].change
+					$BattleOptions/Display.text=calculateAmount(abilities[0].change, "special attack", target)
+					await get_tree().create_timer(1).timeout
 			if(abilities[0].stat==GameManager.stats.SpecialDefense):
 				if(abilities[0].targetsSelf):
 					user.specialDefense+=abilities[0].change
+					$BattleOptions/Display.text=calculateAmount(abilities[0].change, "special defense", user)
+					await get_tree().create_timer(1).timeout
 				else:
 					target.specialDefense+=abilities[0].change
+					$BattleOptions/Display.text=calculateAmount(abilities[0].change, "special defense", target)
+					await get_tree().create_timer(1).timeout
 			if(abilities[0].stat==GameManager.stats.Speed):
 				if(abilities[0].targetsSelf):
 					user.speed+=abilities[0].change
+					$BattleOptions/Display.text=calculateAmount(abilities[0].change, "speed", user)
+					await get_tree().create_timer(1).timeout
 				else:
 					target.speed+=abilities[0].change
+					$BattleOptions/Display.text=calculateAmount(abilities[0].change, "speed", target)
+					await get_tree().create_timer(1).timeout
 			if(abilities[0].stat==GameManager.stats.Accuracy):
 				if(abilities[0].targetsSelf):
 					user.accuracy+=abilities[0].change
+					$BattleOptions/Display.text=calculateAmount(abilities[0].change, "accuracy", user)
+					await get_tree().create_timer(1).timeout
 				else:
 					target.accuracy+=abilities[0].change
+					$BattleOptions/Display.text=calculateAmount(abilities[0].change, "accuracy", target)
+					await get_tree().create_timer(1).timeout
 			if(abilities[0].stat==GameManager.stats.Health):
 				if(abilities[0].targetsSelf):
 					user.pokemon.health+=round((float(abilities[0].change/100.0)*float(damage)))
 					if(user.pokemon.health>user.pokemon.maxHealth):
 						user.pokemon.health=user.pokemon.maxHealth
+					$BattleOptions/Display.text=user.pokemon.name + " regained some health!"
+					await get_tree().create_timer(1).timeout
 					$Player.initialize()
 				else:
 					target.speed+=(abilities[0].change/100)*damage
 					if(target.pokemon.health>target.pokemon.maxHealth):
 						target.pokemon.health=user.pokemon.maxHealth
+					$BattleOptions/Display.text=target.pokemon.name + " regained some health!"
+					await get_tree().create_timer(1).timeout
 					$Opponent.initialize()
 			
 		abilities.remove_at(0)
@@ -351,3 +408,13 @@ func teamBattleDead():
 		$BattleOptions/Display.text="Blaze has been defeated!"
 		await get_tree().create_timer(3).timeout
 		GameManager.toMain()
+
+func calculateAmount(change, newText, target):
+	var amountText=" rose!"
+	if(change==2):
+		amountText=" rose sharply!"
+	if(change==-1):
+		amountText=" fell!"
+	if(change==-2):
+		amountText=" fell sharply!"
+	return target.pokemon.name + "'s " + newText + amountText
