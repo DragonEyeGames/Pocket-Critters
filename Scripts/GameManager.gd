@@ -216,3 +216,9 @@ func get_catch_chance(newPokemon2, ball_multiplier: float) -> float:
 
 func get_level_modifier(pokemon_level: int) -> float:
 	return 1.0 / (1.0 + pokemon_level / 20.0)
+	
+func get_stage_multiplier(stage: int) -> float:
+	if stage >= 0:
+		return (2.0 + stage) / 2.0
+	else:
+		return 2.0 / (2.0 - stage)

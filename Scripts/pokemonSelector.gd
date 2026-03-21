@@ -4,6 +4,12 @@ extends Node2D
 @export var pokemon: PokemonData
 @export var holder: StatBlock
 
+@export var attack=0
+@export var defense=0
+@export var specialAttack=0
+@export var specialDefense=0
+@export var speed=0
+
 # Called when the node enters the scene tree for the first time.
 func initialize() -> void:
 	for child in $Back.get_children():

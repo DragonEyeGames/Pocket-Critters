@@ -80,11 +80,22 @@ func _on_move_4_pressed() -> void:
 	loadAttack($BattleOptions/Moves/Move4.move)
 	
 func loadAttack(playerAttack):
+	var opponentAttack = $Opponent.randomAttack()
 	$BattleOptions/Moves.visible=false
-	if($Player.pokemon.speed>=$Opponent.pokemon.speed):
+	var playerSpeed=$Player.pokemon.speed * GameManager.get_stage_multiplier($Player.speed)
+	if(len(playerAttack.abilities)>=1):
+		for ability in playerAttack.abilities:
+			if(ability.stat==GameManager.stats.Priority):
+				playerSpeed+=1000
+	var opponentSpeed=$Opponent.pokemon.speed * GameManager.get_stage_multiplier($Opponent.speed)
+	if(len(opponentAttack.abilities)>=1):
+		for ability in opponentAttack.abilities:
+			if(ability.stat==GameManager.stats.Priority):
+				opponentSpeed+=1000
+	if(playerSpeed>=opponentSpeed):
 		await attack(playerAttack, $Opponent, $Player)
 		if($Opponent.pokemon.health>0):
-			await attack($Opponent.randomAttack(), $Player, $Opponent)
+			await attack(opponentAttack, $Player, $Opponent)
 		if($Opponent.pokemon.health<=0):
 			var xp = 50 * $Opponent.pokemon.level / 5
 			$Player.pokemon.xp+=xp
@@ -94,7 +105,7 @@ func loadAttack(playerAttack):
 		if(!checkPlayer()):
 			return
 	else:
-		await attack($Opponent.randomAttack(), $Player, $Opponent)
+		await attack(opponentAttack, $Player, $Opponent)
 		if($Player.pokemon.health>0):
 			await attack(playerAttack, $Opponent, $Player)
 		if($Opponent.pokemon.health<=0):
@@ -114,7 +125,9 @@ func attack(move, target, user):
 	if(randf()<=move.accuracy):
 		if(GameManager.moveTypes.keys()[move.moveType]=="Physical"):
 			var newAttack = float(user.pokemon.attack)
+			newAttack *= GameManager.get_stage_multiplier(user.attack)
 			var defense = float(target.pokemon.defense)
+			defense*=GameManager.get_stage_multiplier(target.defense)
 			var power = float(move.power)
 			var multiplier = GameManager.get_type_multiplier(GameManager.types.keys()[move.type], GameManager.types.keys()[target.pokemon.base.type1], GameManager.types.keys()[target.pokemon.base.type2])
 			target.pokemon.health-=round(((newAttack / defense) * (power / 10.0) + 1) * multiplier)
@@ -130,7 +143,9 @@ func attack(move, target, user):
 				$BattleOptions/Display.text=""
 		if(GameManager.moveTypes.keys()[move.moveType]=="Special"):
 			var newAttack = float(user.pokemon.specialAttack)
+			newAttack *= GameManager.get_stage_multiplier(user.specialAttack)
 			var defense = float(target.pokemon.specialDefense)
+			defense*=GameManager.get_stage_multiplier(target.specialDefense)
 			var power = float(move.power)
 			var multiplier = GameManager.get_type_multiplier(GameManager.types.keys()[move.type], GameManager.types.keys()[target.pokemon.base.type1], GameManager.types.keys()[target.pokemon.base.type2])
 			target.pokemon.health-=round(((newAttack / defense) * (power / 10.0) + 1) * multiplier)
@@ -144,6 +159,35 @@ func attack(move, target, user):
 				$BattleOptions/Display.text="It's not very effective..."
 			else:
 				$BattleOptions/Display.text=""
+		if(GameManager.moveTypes.keys()[move.moveType]=="Status"):
+			var abilities = move.abilities.duplicate()
+			while len(abilities)>=1:
+				if(abilities[0].stat==GameManager.stats.Attack):
+					if(abilities[0].targetsSelf):
+						user.attack+=abilities[0].change
+					else:
+						target.attack+=abilities[0].change
+				if(abilities[0].stat==GameManager.stats.Defense):
+					if(abilities[0].targetsSelf):
+						user.defense+=abilities[0].change
+					else:
+						target.defense+=abilities[0].change
+				if(abilities[0].stat==GameManager.stats.SpecialAttack):
+					if(abilities[0].targetsSelf):
+						user.specialAttack+=abilities[0].change
+					else:
+						target.specialAttack+=abilities[0].change
+				if(abilities[0].stat==GameManager.stats.SpecialDefense):
+					if(abilities[0].targetsSelf):
+						user.specialDefense+=abilities[0].change
+					else:
+						target.specialDefense+=abilities[0].change
+				if(abilities[0].stat==GameManager.stats.Speed):
+					if(abilities[0].targetsSelf):
+						user.speed+=abilities[0].change
+					else:
+						target.speed+=abilities[0].change
+				abilities.remove_at(0)
 	else:
 		$BattleOptions/Display.text="But it missed!"
 	await get_tree().create_timer(1).timeout
