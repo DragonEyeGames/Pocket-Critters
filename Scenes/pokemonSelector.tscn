@@ -51,7 +51,6 @@ visible = false
 texture = ExtResource("3_egjkw")
 
 [node name="Geckrow" type="Sprite2D" parent="Front"]
-visible = false
 texture = ExtResource("4_lsc3l")
 
 [node name="Sligment" type="Sprite2D" parent="Front"]

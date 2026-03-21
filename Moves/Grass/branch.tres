@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="MoveResource" load_steps=3 format=3 uid="uid://5go1ihkf80au"]
+
+[ext_resource type="Script" uid="uid://2fme8eqsovvo" path="res://Resources/AbilityData.gd" id="1_n67dv"]
+[ext_resource type="Script" uid="uid://c3odxqj7xy866" path="res://Resources/MoveResource.gd" id="2_7rfox"]
+
+[resource]
+script = ExtResource("2_7rfox")
+name = "Branch Poke"
+type = 1
+moveType = 1
+power = 40
+metadata/_custom_type_script = "uid://c3odxqj7xy866"

@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="MoveResource" load_steps=4 format=3 uid="uid://cao3lrn2sxdaa"]
+
+[ext_resource type="Script" uid="uid://2fme8eqsovvo" path="res://Resources/AbilityData.gd" id="1_ovg2e"]
+[ext_resource type="Script" uid="uid://c3odxqj7xy866" path="res://Resources/MoveResource.gd" id="2_2xbdb"]
+
+[sub_resource type="Resource" id="Resource_mwkem"]
+script = ExtResource("1_ovg2e")
+stat = 1
+change = 1
+chance = 1.0
+metadata/_custom_type_script = "uid://2fme8eqsovvo"
+
+[resource]
+script = ExtResource("2_2xbdb")
+name = "Focus"
+type = 4
+moveType = 2
+power = 0
+abilities = Array[ExtResource("1_ovg2e")]([SubResource("Resource_mwkem")])
+metadata/_custom_type_script = "uid://c3odxqj7xy866"

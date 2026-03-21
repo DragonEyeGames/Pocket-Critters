@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="MoveResource" load_steps=3 format=3 uid="uid://bd1h37ujt4yux"]
+
+[ext_resource type="Script" uid="uid://2fme8eqsovvo" path="res://Resources/AbilityData.gd" id="1_x4di3"]
+[ext_resource type="Script" uid="uid://c3odxqj7xy866" path="res://Resources/MoveResource.gd" id="2_dcyfe"]
+
+[resource]
+script = ExtResource("2_dcyfe")
+name = "Headbutt"
+type = 4
+moveType = 1
+power = 40
+accuracy = 0.9
+metadata/_custom_type_script = "uid://c3odxqj7xy866"

@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="MoveResource" load_steps=3 format=3 uid="uid://cjwtbcu7vkxjk"]
+
+[ext_resource type="Script" uid="uid://2fme8eqsovvo" path="res://Resources/AbilityData.gd" id="1_ge678"]
+[ext_resource type="Script" uid="uid://c3odxqj7xy866" path="res://Resources/MoveResource.gd" id="2_tw72n"]
+
+[resource]
+script = ExtResource("2_tw72n")
+name = "Tackle"
+type = 4
+moveType = 1
+power = 30
+metadata/_custom_type_script = "uid://c3odxqj7xy866"

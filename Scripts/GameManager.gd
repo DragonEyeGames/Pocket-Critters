@@ -47,11 +47,13 @@ enum moveTypes {
 }
 
 enum stats {
+	Health,
 	Attack,
 	Defense,
 	Speed,
 	SpecialAttack,
-	SpecialDefense
+	SpecialDefense,
+	Priority
 }
 
 var type_chart = {
@@ -167,7 +169,7 @@ func newPokemon(species, level = 5):
 	p.specialDefense=get_stat(p.base.specialDefense, p.ivSpecialDefense, level)
 	p.speed=get_stat(p.base.speed, p.ivSpeed, level)
 	var backupMoves = p.base.potentialMoves.duplicate()
-	while len(backupMoves)>=1:
+	while len(backupMoves)>=1 and len(p.moves) < 4:
 		var move = backupMoves.pick_random()
 		p.moves.append(move)
 		backupMoves.erase(move)

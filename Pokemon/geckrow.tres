@@ -1,11 +1,16 @@
-[gd_resource type="Resource" script_class="SpeciesData" load_steps=7 format=3 uid="uid://dbpad56uixwli"]
+[gd_resource type="Resource" script_class="SpeciesData" load_steps=12 format=3 uid="uid://dbpad56uixwli"]
 
 [ext_resource type="Script" uid="uid://c3odxqj7xy866" path="res://Resources/MoveResource.gd" id="1_jbw0n"]
-[ext_resource type="Resource" uid="uid://do0twrxr0jj58" path="res://Moves/leafSlice.tres" id="2_1poqq"]
 [ext_resource type="Script" uid="uid://1vun3nkcoo5i" path="res://Resources/SpeciesData.gd" id="3_1poqq"]
-[ext_resource type="Resource" uid="uid://dmyk1bgbcldu6" path="res://Moves/headbutt.tres" id="3_jfmia"]
-[ext_resource type="Resource" uid="uid://cepnl6u878py5" path="res://Moves/tackle.tres" id="3_o8wtw"]
-[ext_resource type="Resource" uid="uid://c5ube7xccexqk" path="res://Moves/seedShot.tres" id="5_x2lk4"]
+[ext_resource type="Resource" uid="uid://5go1ihkf80au" path="res://Moves/Grass/branch.tres" id="3_hjwmc"]
+[ext_resource type="Resource" uid="uid://cepnl6u878py5" path="res://Moves/Grass/absorb.tres" id="3_o8wtw"]
+[ext_resource type="Resource" uid="uid://bme468jn1i7gt" path="res://Moves/Grass/cotton.tres" id="4_w4xxf"]
+[ext_resource type="Resource" uid="uid://cvqv22tmh0ni1" path="res://Moves/Grass/razorLeaf.tres" id="5_i1mt6"]
+[ext_resource type="Resource" uid="uid://drfam3qlv8mbg" path="res://Moves/Grass/seedBomb.tres" id="6_6el0v"]
+[ext_resource type="Resource" uid="uid://c3w2860616tbu" path="res://Moves/Normal/growl.tres" id="7_oi4u0"]
+[ext_resource type="Resource" uid="uid://cbp1qoovefw0w" path="res://Moves/Normal/leer.tres" id="8_6kh7r"]
+[ext_resource type="Resource" uid="uid://0swwqh1y5jcf" path="res://Moves/Normal/quickAttack.tres" id="9_cxorh"]
+[ext_resource type="Resource" uid="uid://cjwtbcu7vkxjk" path="res://Moves/Normal/tackle.tres" id="10_d5p8u"]
 
 [resource]
 script = ExtResource("3_1poqq")
@@ -18,6 +23,6 @@ defense = 50
 specialAttack = 48
 specialDefense = 60
 speed = 42
-potentialMoves = Array[ExtResource("1_jbw0n")]([ExtResource("3_o8wtw"), ExtResource("3_jfmia"), ExtResource("2_1poqq"), ExtResource("5_x2lk4")])
+potentialMoves = Array[ExtResource("1_jbw0n")]([ExtResource("3_o8wtw"), ExtResource("3_hjwmc"), ExtResource("4_w4xxf"), ExtResource("5_i1mt6"), ExtResource("6_6el0v"), ExtResource("7_oi4u0"), ExtResource("8_6kh7r"), ExtResource("9_cxorh"), ExtResource("10_d5p8u")])
 catchRate = 0.45
 metadata/_custom_type_script = "uid://c7t80kmu0l21k"
