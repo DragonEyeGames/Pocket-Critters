@@ -17,6 +17,9 @@ var battleTeam: Array[PokemonData] = []
 var defeated=false
 
 func _ready():
+	if(trainerData.rival==1 and GameManager.blaze1):
+		visible=false
+		call_deferred("queue_free")
 	SignalBus.defeated.connect(_on_defeat)
 	for member in trainerData.team:
 		battleTeam.append(GameManager.setPokemon(member.species, member.level, member.moves))
@@ -65,6 +68,9 @@ func _on_defeat(trainerID):
 		dialogue.speaker=self
 		defeated=true
 		dialogue.loadDialogue()
+		if(trainerData.rival==1):
+			await get_tree().create_timer(2).timeout
+			GameManager.blaze1=true
 		
 func _process(_delta: float) -> void:
 	if(walkingAway):

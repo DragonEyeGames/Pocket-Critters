@@ -138,6 +138,8 @@ var attackingID:=0
 
 @export var currentScene = "res://Levels/forest-1.tscn"
 
+@export var blaze1:=false
+
 var toBattle: PokemonData
 
 func _ready() -> void:

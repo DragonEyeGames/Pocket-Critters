@@ -43,4 +43,5 @@ trainerName = "Blaze"
 preFightDialogue = Array[String](["Well well well. What do we have here? A wee-trainer trying to progress?", "A mere pipsqueak trying to move on?", "I think not. You will be crushed by the all mighty Blaze!"])
 afterFightDialogue = Array[String](["No way that I, Blaze, could have lost to a mere noob like yourself.", "Surely there was a fluke of some sort in that battle.", "I will train up my team regardless.", "Till next time sucker."])
 team = Array[ExtResource("2_kvqy2")]([SubResource("Resource_fvh2i"), SubResource("Resource_17hu6"), SubResource("Resource_3gri5")])
+rival = 1
 metadata/_custom_type_script = "uid://0mhfdoexj3v2"
