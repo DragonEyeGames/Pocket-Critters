@@ -6,3 +6,4 @@ class_name TrainerData
 @export var afterFightDialogue: Array[String]=[]
 @export var team: Array[TeamData]
 @export var rival:=0
+@export var sprite:= ""

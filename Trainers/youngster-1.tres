@@ -1,0 +1,34 @@
+[gd_resource type="Resource" script_class="TrainerData" load_steps=13 format=3 uid="uid://7stw2esp4fm5"]
+
+[ext_resource type="Script" uid="uid://0mhfdoexj3v2" path="res://Resources/TrainerData.gd" id="1_d8vc6"]
+[ext_resource type="Script" uid="uid://dxn4lkbl53l63" path="res://Resources/TeamData.gd" id="2_85jdt"]
+[ext_resource type="Script" uid="uid://c3odxqj7xy866" path="res://Resources/MoveData.gd" id="3_oiqpx"]
+[ext_resource type="Resource" uid="uid://cfuas1q540ijn" path="res://Moves/Dark/bite.tres" id="4_sppg7"]
+[ext_resource type="Resource" uid="uid://c3w2860616tbu" path="res://Moves/Normal/growl.tres" id="6_6ein8"]
+[ext_resource type="Resource" uid="uid://cepnl6u878py5" path="res://Moves/Grass/absorb.tres" id="7_7dk7e"]
+[ext_resource type="Resource" uid="uid://d4e4hfx0m8ar4" path="res://Moves/Ground/stomp.tres" id="8_g6vvf"]
+[ext_resource type="Resource" uid="uid://bd1h37ujt4yux" path="res://Moves/Normal/headbutt.tres" id="9_6oi06"]
+[ext_resource type="Resource" uid="uid://cbp1qoovefw0w" path="res://Moves/Normal/leer.tres" id="10_d8vc6"]
+[ext_resource type="Resource" uid="uid://cjwtbcu7vkxjk" path="res://Moves/Normal/tackle.tres" id="11_q1gaf"]
+
+[sub_resource type="Resource" id="Resource_85jdt"]
+script = ExtResource("2_85jdt")
+level = 2
+moves = Array[ExtResource("3_oiqpx")]([ExtResource("4_sppg7"), ExtResource("11_q1gaf"), ExtResource("6_6ein8"), ExtResource("7_7dk7e")])
+metadata/_custom_type_script = "uid://dxn4lkbl53l63"
+
+[sub_resource type="Resource" id="Resource_oiqpx"]
+script = ExtResource("2_85jdt")
+species = 6
+level = 3
+moves = Array[ExtResource("3_oiqpx")]([ExtResource("7_7dk7e"), ExtResource("8_g6vvf"), ExtResource("9_6oi06"), ExtResource("10_d8vc6")])
+metadata/_custom_type_script = "uid://dxn4lkbl53l63"
+
+[resource]
+script = ExtResource("1_d8vc6")
+trainerName = "Youngster"
+preFightDialogue = Array[String](["Hey Mister! Check out my cool critter collection!"])
+afterFightDialogue = Array[String](["I guess you had a cooler collection.", "Good battle though."])
+team = Array[ExtResource("2_85jdt")]([SubResource("Resource_85jdt"), SubResource("Resource_oiqpx")])
+sprite = "M2"
+metadata/_custom_type_script = "uid://0mhfdoexj3v2"

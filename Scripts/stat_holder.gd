@@ -10,5 +10,7 @@ func initialize():
 	$Name.text=pokemonName
 	$Level.text="Lv: " + str(level)
 	$Health.text = str(health) + "/" + str(maxHealth)
+	$"Health Bar".max_value=maxHealth
+	$"Health Bar".value=health
 	$Type1/AnimationPlayer.play(str(GameManager.types.keys()[type1]))
 	$Type2/AnimationPlayer.play(str(GameManager.types.keys()[type2]))

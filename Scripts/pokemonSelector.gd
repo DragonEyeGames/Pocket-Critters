@@ -11,8 +11,19 @@ extends Node2D
 @export var speed=0
 @export var accuracy=0
 
+var backupPokemon=null
+
 # Called when the node enters the scene tree for the first time.
 func initialize() -> void:
+	if(backupPokemon!=pokemon):
+		attack=0
+		defense=0
+		specialAttack=0
+		specialDefense=0
+		speed=0
+		accuracy=0
+		backupPokemon=pokemon
+		print("refreshed stats")
 	for child in $Back.get_children():
 		child.visible=false
 	for child in $Front.get_children():

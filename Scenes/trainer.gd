@@ -1,8 +1,8 @@
 extends Node2D
 
-@export var ID: int
+var ID: int = 0
 
-@onready var sprite =$Sprite
+var sprite
 @export var dialogue: CanvasLayer
 
 @export var trainerData: TrainerData
@@ -17,14 +17,24 @@ var battleTeam: Array[PokemonData] = []
 var defeated=false
 
 func _ready():
+	ID=0
+	if ID == 0:
+		ID = str(get_path()).hash()
+	if(ID in GameManager.defeated):
+		defeated=true
+		speechPage=len(trainerData.afterFightDialogue)+1
+	for child in $Sprites.get_children():
+		child.visible=false
+	sprite=get_node("Sprites/" + trainerData.sprite)
+	sprite.visible=true
 	if(trainerData.rival==1 and GameManager.blaze1):
 		visible=false
 		call_deferred("queue_free")
 	SignalBus.defeated.connect(_on_defeat)
 	for member in trainerData.team:
 		battleTeam.append(GameManager.setPokemon(member.species, member.level, member.moves))
-		await get_tree().create_timer(1).timeout
-		$Area2D/CollisionShape2D.set_deferred("disabled", false)
+	await get_tree().create_timer(1).timeout
+	$Area2D/CollisionShape2D.set_deferred("disabled", false)
 
 func _on_area_2d_area_entered(area: Area2D) -> void:
 	if(defeated):
@@ -55,8 +65,9 @@ func nextText():
 			dialogue.visible=false
 			player.canMove=true
 			$Area2D.queue_free()
-			sprite.play("walk-up")
-			walkingAway=true
+			if(trainerData.rival!=0):
+				sprite.play("walk-up")
+				walkingAway=true
 		
 func _on_defeat(trainerID):
 	if(trainerID==ID):

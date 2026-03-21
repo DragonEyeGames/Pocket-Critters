@@ -391,21 +391,21 @@ func _process(_delta: float) -> void:
 
 func teamBattleDead():
 	if(len(GameManager.opposingTeam)>=1):
-		$BattleOptions/Display.text="Knocked out Blaze's " + $Opponent.pokemon.name + "!"
+		$BattleOptions/Display.text="Knocked out " + GameManager.attacking + "'s " + $Opponent.pokemon.name + "!"
 		await get_tree().create_timer(1).timeout
 		$Opponent.pokemon=GameManager.opposingTeam[0]
 		GameManager.opposingTeam.remove_at(0)
 		$Opponent.initialize()
 		$Opponent.visible=true
-		$BattleOptions/Display.text="Blaze sent out " + $Opponent.pokemon.name + "!"
+		$BattleOptions/Display.text=GameManager.attacking + " sent out " + $Opponent.pokemon.name + "!"
 		await get_tree().create_timer(1).timeout
 		$BattleOptions/Display.text="What will " + $Player.pokemon.name + " do?"
 		$BattleOptions/Options.visible=true
 		
 	else:
-		$BattleOptions/Display.text="Knocked out Blaze's " + $Opponent.pokemon.name + "!"
+		$BattleOptions/Display.text="Knocked out " + GameManager.attacking + "'s " + $Opponent.pokemon.name + "!"
 		await get_tree().create_timer(1).timeout
-		$BattleOptions/Display.text="Blaze has been defeated!"
+		$BattleOptions/Display.text=GameManager.attacking + " has been defeated!"
 		await get_tree().create_timer(3).timeout
 		GameManager.toMain()
 

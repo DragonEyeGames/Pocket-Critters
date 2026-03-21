@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=4 uid="uid://4sc6wsoxl7ao"]
+[gd_scene load_steps=18 format=4 uid="uid://4sc6wsoxl7ao"]
 
 [ext_resource type="Texture2D" uid="uid://bo43kqdc3lvgx" path="res://Assets/Woods.png" id="1_ig7tw"]
 [ext_resource type="Script" uid="uid://swgsdmbo5fng" path="res://Scripts/main.gd" id="1_lquwl"]
@@ -7,8 +7,11 @@
 [ext_resource type="Script" uid="uid://b8lk6mbxbunri" path="res://Scripts/y_sort.gd" id="4_1bvp3"]
 [ext_resource type="PackedScene" uid="uid://bw2ujrj6t7blx" path="res://Scenes/grass.tscn" id="5_yq0ru"]
 [ext_resource type="PackedScene" uid="uid://dwbnx0jnjv6yx" path="res://Scenes/pause.tscn" id="6_7mycd"]
-[ext_resource type="PackedScene" uid="uid://bmsyi0138rgpo" path="res://Scenes/trainer.tscn" id="7_6bp64"]
+[ext_resource type="PackedScene" uid="uid://bmsyi0138rgpo" path="res://Trainers/trainer.tscn" id="7_6bp64"]
 [ext_resource type="Resource" uid="uid://byrlv6tws4kjy" path="res://Trainers/blaze-1.tres" id="9_4yc05"]
+[ext_resource type="Resource" uid="uid://7stw2esp4fm5" path="res://Trainers/youngster-1.tres" id="10_pu377"]
+[ext_resource type="Resource" uid="uid://dp31kdgf40175" path="res://Trainers/rookie-1.tres" id="11_st1th"]
+[ext_resource type="Resource" uid="uid://ddvy8op0ryf1g" path="res://Trainers/scout-1.tres" id="12_kkedj"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0xm2m"]
 texture = ExtResource("1_ig7tw")
@@ -262,7 +265,21 @@ player = NodePath("../Player")
 [node name="Pause" parent="." instance=ExtResource("6_7mycd")]
 
 [node name="Blaze" parent="." node_paths=PackedStringArray("player") instance=ExtResource("7_6bp64")]
-position = Vector2(-1, 49)
-ID = 0
+position = Vector2(-528, -1225)
 trainerData = ExtResource("9_4yc05")
+player = NodePath("../Player")
+
+[node name="Youngster" parent="." node_paths=PackedStringArray("player") instance=ExtResource("7_6bp64")]
+position = Vector2(237, -388)
+trainerData = ExtResource("10_pu377")
+player = NodePath("../Player")
+
+[node name="Rookie" parent="." node_paths=PackedStringArray("player") instance=ExtResource("7_6bp64")]
+position = Vector2(-294, -649)
+trainerData = ExtResource("11_st1th")
+player = NodePath("../Player")
+
+[node name="Scout" parent="." node_paths=PackedStringArray("player") instance=ExtResource("7_6bp64")]
+position = Vector2(-669, -822)
+trainerData = ExtResource("12_kkedj")
 player = NodePath("../Player")

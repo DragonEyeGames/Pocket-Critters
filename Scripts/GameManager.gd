@@ -142,6 +142,8 @@ var attackingID:=0
 
 var toBattle: PokemonData
 
+var defeated=[]
+
 func _ready() -> void:
 	restart()
 
@@ -232,6 +234,8 @@ func toMain():
 		teamBattle=false
 		SignalBus.emit_signal("defeated", attackingID)
 		attacking=""
+		await get_tree().create_timer(1).timeout
+		defeated.append(attackingID)
 	safe=false
 	
 func loadIV():

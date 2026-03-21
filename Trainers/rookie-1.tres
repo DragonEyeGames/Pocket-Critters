@@ -1,0 +1,36 @@
+[gd_resource type="Resource" script_class="TrainerData" load_steps=14 format=3 uid="uid://dp31kdgf40175"]
+
+[ext_resource type="Script" uid="uid://0mhfdoexj3v2" path="res://Resources/TrainerData.gd" id="1_6cpjc"]
+[ext_resource type="Script" uid="uid://dxn4lkbl53l63" path="res://Resources/TeamData.gd" id="2_ejocf"]
+[ext_resource type="Script" uid="uid://c3odxqj7xy866" path="res://Resources/MoveData.gd" id="3_c4g85"]
+[ext_resource type="Resource" uid="uid://cfuas1q540ijn" path="res://Moves/Dark/bite.tres" id="4_fj0su"]
+[ext_resource type="Resource" uid="uid://0adu54ws8kpt" path="res://Moves/Dark/gnaw.tres" id="5_ejocf"]
+[ext_resource type="Resource" uid="uid://cjwtbcu7vkxjk" path="res://Moves/Normal/tackle.tres" id="5_i3qw8"]
+[ext_resource type="Resource" uid="uid://c4l7dhw8hhqmu" path="res://Moves/Fighting/punch.tres" id="6_c4g85"]
+[ext_resource type="Resource" uid="uid://ch7rxit3qljs8" path="res://Moves/Flying/liftOff.tres" id="8_fj0su"]
+[ext_resource type="Resource" uid="uid://cowyv6e3lbnco" path="res://Moves/Flying/quickPeck.tres" id="9_i3qw8"]
+[ext_resource type="Resource" uid="uid://bu7rm71701ktv" path="res://Moves/Flying/peck.tres" id="10_cp8op"]
+[ext_resource type="Resource" uid="uid://cfn1x8bt84qye" path="res://Moves/Flying/airCut.tres" id="11_l4cut"]
+
+[sub_resource type="Resource" id="Resource_bhuov"]
+script = ExtResource("2_ejocf")
+species = 7
+level = 4
+moves = Array[ExtResource("3_c4g85")]([ExtResource("4_fj0su"), ExtResource("5_ejocf"), ExtResource("6_c4g85"), ExtResource("5_i3qw8")])
+metadata/_custom_type_script = "uid://dxn4lkbl53l63"
+
+[sub_resource type="Resource" id="Resource_nfa4g"]
+script = ExtResource("2_ejocf")
+species = 1
+level = 2
+moves = Array[ExtResource("3_c4g85")]([ExtResource("8_fj0su"), ExtResource("9_i3qw8"), ExtResource("10_cp8op"), ExtResource("11_l4cut")])
+metadata/_custom_type_script = "uid://dxn4lkbl53l63"
+
+[resource]
+script = ExtResource("1_6cpjc")
+trainerName = "Rookie"
+preFightDialogue = Array[String](["I may have just started, but I think I'm the strongest in the land!", "Prepare for a crushing defeat!"])
+afterFightDialogue = Array[String](["Guess I overestimated my team a little."])
+team = Array[ExtResource("2_ejocf")]([SubResource("Resource_bhuov"), SubResource("Resource_nfa4g")])
+sprite = "M4"
+metadata/_custom_type_script = "uid://0mhfdoexj3v2"

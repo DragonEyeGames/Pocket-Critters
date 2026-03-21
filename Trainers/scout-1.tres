@@ -1,0 +1,45 @@
+[gd_resource type="Resource" script_class="TrainerData" load_steps=18 format=3 uid="uid://ddvy8op0ryf1g"]
+
+[ext_resource type="Script" uid="uid://0mhfdoexj3v2" path="res://Resources/TrainerData.gd" id="1_n883y"]
+[ext_resource type="Script" uid="uid://dxn4lkbl53l63" path="res://Resources/TeamData.gd" id="2_tjyiu"]
+[ext_resource type="Script" uid="uid://c3odxqj7xy866" path="res://Resources/MoveData.gd" id="3_1b184"]
+[ext_resource type="Resource" uid="uid://5go1ihkf80au" path="res://Moves/Grass/branch.tres" id="5_n883y"]
+[ext_resource type="Resource" uid="uid://c3w2860616tbu" path="res://Moves/Normal/growl.tres" id="6_tjyiu"]
+[ext_resource type="Resource" uid="uid://cepnl6u878py5" path="res://Moves/Grass/absorb.tres" id="7_1b184"]
+[ext_resource type="Resource" uid="uid://cjwtbcu7vkxjk" path="res://Moves/Normal/tackle.tres" id="7_k3w2l"]
+[ext_resource type="Resource" uid="uid://c4btm4xgx3fmv" path="res://Moves/Bug/bugBite.tres" id="8_xr5lu"]
+[ext_resource type="Resource" uid="uid://4s8nxmssg4o7" path="res://Moves/Bug/dustSpray.tres" id="9_ryu8a"]
+[ext_resource type="Resource" uid="uid://ymo5t14wyvl1" path="res://Moves/Bug/larvaLunge.tres" id="10_yg51d"]
+[ext_resource type="Resource" uid="uid://bhcuqnwgqnn3i" path="res://Moves/Bug/stringShot.tres" id="11_k3w2l"]
+[ext_resource type="Resource" uid="uid://bxow2byw80u2u" path="res://Moves/Fairy/fairySpark.tres" id="12_xr5lu"]
+[ext_resource type="Resource" uid="uid://bgnpn75ef6edg" path="res://Moves/Fairy/pixieTap.tres" id="13_ryu8a"]
+[ext_resource type="Resource" uid="uid://d4h6nnasslirk" path="res://Moves/Fairy/twinkleGuard.tres" id="14_yg51d"]
+
+[sub_resource type="Resource" id="Resource_xq83u"]
+script = ExtResource("2_tjyiu")
+level = 2
+moves = Array[ExtResource("3_1b184")]([ExtResource("7_k3w2l"), ExtResource("5_n883y"), ExtResource("6_tjyiu"), ExtResource("7_1b184")])
+metadata/_custom_type_script = "uid://dxn4lkbl53l63"
+
+[sub_resource type="Resource" id="Resource_fetqp"]
+script = ExtResource("2_tjyiu")
+species = 3
+level = 2
+moves = Array[ExtResource("3_1b184")]([ExtResource("8_xr5lu"), ExtResource("9_ryu8a"), ExtResource("10_yg51d"), ExtResource("11_k3w2l")])
+metadata/_custom_type_script = "uid://dxn4lkbl53l63"
+
+[sub_resource type="Resource" id="Resource_6t8bx"]
+script = ExtResource("2_tjyiu")
+species = 9
+level = 3
+moves = Array[ExtResource("3_1b184")]([ExtResource("12_xr5lu"), ExtResource("13_ryu8a"), ExtResource("14_yg51d"), ExtResource("7_k3w2l")])
+metadata/_custom_type_script = "uid://dxn4lkbl53l63"
+
+[resource]
+script = ExtResource("1_n883y")
+trainerName = "Scout"
+preFightDialogue = Array[String](["If I beat you I'll get a pokemon battling badge!"])
+afterFightDialogue = Array[String](["Good thing there is a badge for losing a battle too."])
+team = Array[ExtResource("2_tjyiu")]([SubResource("Resource_xq83u"), SubResource("Resource_fetqp"), SubResource("Resource_6t8bx")])
+sprite = "M4"
+metadata/_custom_type_script = "uid://0mhfdoexj3v2"
