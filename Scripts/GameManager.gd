@@ -123,7 +123,9 @@ var safe=false
 
 var teamBattle=false
 var opposingTeam: Array[PokemonData] = []
+
 var attacking:="" 
+var attackingID:=0
 
 @export var encounterList: Array[pokemon] = []
 @export var encounterMin: int
@@ -133,8 +135,6 @@ var attacking:=""
 @export var healthyTeam: Array[PokemonData] = []
 
 @export var playerPosition:= Vector2.ZERO
-
-@export var blazeFled1=false
 
 @export var currentScene = "res://Levels/forest-1.tscn"
 
@@ -153,7 +153,8 @@ func wildBattle(newPokemonInstance):
 	toBattle=newPokemonInstance
 	get_tree().call_deferred("change_scene_to_file", "res://Scenes/battle.tscn")
 	
-func trainerBattle(trainerName, pokemonList):
+func trainerBattle(trainerName, pokemonList, ID):
+	attackingID=ID
 	attacking=trainerName
 	toBattle=pokemonList[0]
 	pokemonList.remove_at(0)
@@ -227,7 +228,7 @@ func toMain():
 	await get_tree().create_timer(.5).timeout
 	if(teamBattle):
 		teamBattle=false
-		SignalBus.emit_signal("defeated", attacking)
+		SignalBus.emit_signal("defeated", attackingID)
 		attacking=""
 	safe=false
 	

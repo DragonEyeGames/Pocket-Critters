@@ -262,7 +262,7 @@ player = NodePath("../Player")
 [node name="Pause" parent="." instance=ExtResource("6_7mycd")]
 
 [node name="Blaze" parent="." node_paths=PackedStringArray("player") instance=ExtResource("7_6bp64")]
-position = Vector2(-1, 49)
+position = Vector2(0, -311)
 ID = 0
 trainerData = ExtResource("9_4yc05")
 player = NodePath("../Player")

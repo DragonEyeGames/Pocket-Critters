@@ -353,10 +353,12 @@ layout_mode = 2
 pokemon = 9
 
 [node name="Pokedex Slot10" parent="Pokedex/GridContainer" instance=ExtResource("4_e0jm0")]
+visible = false
 layout_mode = 2
 pokemon = 10
 
 [node name="Pokedex Slot11" parent="Pokedex/GridContainer" instance=ExtResource("4_e0jm0")]
+visible = false
 layout_mode = 2
 pokemon = 11
 
@@ -365,14 +367,17 @@ layout_mode = 2
 pokemon = 12
 
 [node name="Pokedex Slot13" parent="Pokedex/GridContainer" instance=ExtResource("4_e0jm0")]
+visible = false
 layout_mode = 2
 pokemon = 13
 
 [node name="Pokedex Slot14" parent="Pokedex/GridContainer" instance=ExtResource("4_e0jm0")]
+visible = false
 layout_mode = 2
 pokemon = 14
 
 [node name="Pokedex Slot15" parent="Pokedex/GridContainer" instance=ExtResource("4_e0jm0")]
+visible = false
 layout_mode = 2
 pokemon = 15
 

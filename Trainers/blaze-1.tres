@@ -1,0 +1,46 @@
+[gd_resource type="Resource" script_class="TrainerData" load_steps=19 format=3 uid="uid://byrlv6tws4kjy"]
+
+[ext_resource type="Script" uid="uid://0mhfdoexj3v2" path="res://Resources/TrainerData.gd" id="1_u2jk4"]
+[ext_resource type="Script" uid="uid://dxn4lkbl53l63" path="res://Resources/TeamData.gd" id="2_kvqy2"]
+[ext_resource type="Script" uid="uid://c3odxqj7xy866" path="res://Resources/MoveData.gd" id="3_ks0yj"]
+[ext_resource type="Resource" uid="uid://dxfv2rnraqnvq" path="res://Moves/Dragon/ancientSpark.tres" id="4_gsfpv"]
+[ext_resource type="Resource" uid="uid://c8cuk8cgdl73a" path="res://Moves/Dragon/draconicRoar.tres" id="5_e0bbw"]
+[ext_resource type="Resource" uid="uid://clxxnxbimbhvg" path="res://Moves/Dragon/wyrmRush.tres" id="6_ef840"]
+[ext_resource type="Resource" uid="uid://egtxpc610uld" path="res://Moves/Bug/nibble.tres" id="7_6w3ij"]
+[ext_resource type="Resource" uid="uid://ch7rxit3qljs8" path="res://Moves/Flying/liftOff.tres" id="8_wdvs4"]
+[ext_resource type="Resource" uid="uid://cfn1x8bt84qye" path="res://Moves/Flying/airCut.tres" id="9_63gro"]
+[ext_resource type="Resource" uid="uid://cowyv6e3lbnco" path="res://Moves/Flying/quickPeck.tres" id="10_pt80o"]
+[ext_resource type="Resource" uid="uid://cjwtbcu7vkxjk" path="res://Moves/Normal/tackle.tres" id="11_7io7q"]
+[ext_resource type="Resource" uid="uid://3ergnnh6o0xr" path="res://Moves/Fighting/focusEnergy.tres" id="12_tkv0i"]
+[ext_resource type="Resource" uid="uid://d1crvcuhrw8ib" path="res://Moves/Fighting/quickJab.tres" id="13_8ttth"]
+[ext_resource type="Resource" uid="uid://bpht2yixi5184" path="res://Moves/Fire/ashSwipe.tres" id="14_cy2sd"]
+[ext_resource type="Resource" uid="uid://bacv10uanvi4l" path="res://Moves/Fire/blazeKick.tres" id="15_308o3"]
+
+[sub_resource type="Resource" id="Resource_fvh2i"]
+script = ExtResource("2_kvqy2")
+species = 8
+level = 1
+moves = Array[ExtResource("3_ks0yj")]([ExtResource("4_gsfpv"), ExtResource("5_e0bbw"), ExtResource("6_ef840"), ExtResource("7_6w3ij")])
+metadata/_custom_type_script = "uid://dxn4lkbl53l63"
+
+[sub_resource type="Resource" id="Resource_17hu6"]
+script = ExtResource("2_kvqy2")
+species = 1
+level = 1
+moves = Array[ExtResource("3_ks0yj")]([ExtResource("8_wdvs4"), ExtResource("9_63gro"), ExtResource("10_pt80o"), ExtResource("11_7io7q")])
+metadata/_custom_type_script = "uid://dxn4lkbl53l63"
+
+[sub_resource type="Resource" id="Resource_3gri5"]
+script = ExtResource("2_kvqy2")
+species = 12
+level = 1
+moves = Array[ExtResource("3_ks0yj")]([ExtResource("12_tkv0i"), ExtResource("13_8ttth"), ExtResource("14_cy2sd"), ExtResource("15_308o3")])
+metadata/_custom_type_script = "uid://dxn4lkbl53l63"
+
+[resource]
+script = ExtResource("1_u2jk4")
+trainerName = "Blaze"
+preFightDialogue = Array[String](["Well well well. What do we have here? A wee-trainer trying to progress?", "A mere pipsqueak trying to move on?", "I think not. You will be crushed by the all mighty Blaze!"])
+afterFightDialogue = Array[String](["No way that I, Blaze, could have lost to a mere noob like yourself.", "Surely there was a fluke of some sort in that battle.", "I will train up my team regardless.", "Till next time sucker."])
+team = Array[ExtResource("2_kvqy2")]([SubResource("Resource_fvh2i"), SubResource("Resource_17hu6"), SubResource("Resource_3gri5")])
+metadata/_custom_type_script = "uid://0mhfdoexj3v2"
