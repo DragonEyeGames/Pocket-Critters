@@ -1,11 +1,7 @@
-[gd_resource type="Resource" script_class="SpeciesData" load_steps=7 format=3 uid="uid://ggusoa0ceclr"]
+[gd_resource type="Resource" script_class="SpeciesData" load_steps=3 format=3 uid="uid://ggusoa0ceclr"]
 
 [ext_resource type="Script" uid="uid://c3odxqj7xy866" path="res://Resources/MoveResource.gd" id="1_2pi4b"]
-[ext_resource type="Resource" uid="uid://do0twrxr0jj58" path="res://Moves/leafSlice.tres" id="2_8nkby"]
-[ext_resource type="Resource" uid="uid://c5ube7xccexqk" path="res://Moves/seedShot.tres" id="3_8dvy1"]
-[ext_resource type="Resource" uid="uid://cepnl6u878py5" path="res://Moves/tackle.tres" id="3_8nkby"]
 [ext_resource type="Script" uid="uid://1vun3nkcoo5i" path="res://Resources/SpeciesData.gd" id="3_qcl64"]
-[ext_resource type="Resource" uid="uid://dmyk1bgbcldu6" path="res://Moves/headbutt.tres" id="5_5l7y5"]
 
 [resource]
 script = ExtResource("3_qcl64")
@@ -17,6 +13,5 @@ defense = 45
 specialAttack = 40
 specialDefense = 45
 speed = 60
-potentialMoves = Array[ExtResource("1_2pi4b")]([ExtResource("2_8nkby"), ExtResource("3_8dvy1"), ExtResource("3_8nkby"), ExtResource("5_5l7y5")])
 catchRate = 0.4
 metadata/_custom_type_script = "uid://c7t80kmu0l21k"

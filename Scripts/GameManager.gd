@@ -8,7 +8,15 @@ enum pokemon {
 	Dunsparce,
 	Pasturlo,
 	Baoby,
-	Varmot
+	Varmot,
+	Merlicun,
+	Pompet,
+	Saurky,
+	Dampurr,
+	Bonfur,
+	Lollybog,
+	Kankwart,
+	Baulder
 }
 
 enum types {
@@ -34,7 +42,16 @@ enum types {
 
 enum moveTypes {
 	Special,
-	Physical
+	Physical,
+	Status
+}
+
+enum stats {
+	Attack,
+	Defense,
+	Speed,
+	SpecialAttack,
+	SpecialDefense
 }
 
 var type_chart = {
@@ -95,6 +112,7 @@ var type_chart = {
 }
 
 var pokedex : Array[pokemon] = []
+var seenDex : Array[pokemon] = []
 
 #a safe time before pokemon can spawn
 var safe=false

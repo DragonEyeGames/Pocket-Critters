@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="SpeciesData" load_steps=3 format=3 uid="uid://dtuq4g1im6mlr"]
+
+[ext_resource type="Script" uid="uid://c3odxqj7xy866" path="res://Resources/MoveResource.gd" id="1_1v1tl"]
+[ext_resource type="Script" uid="uid://1vun3nkcoo5i" path="res://Resources/SpeciesData.gd" id="6_n5bsg"]
+
+[resource]
+script = ExtResource("6_n5bsg")
+species = 12
+health = 55
+attack = 60
+defense = 45
+specialAttack = 40
+specialDefense = 40
+speed = 30
+catchRate = 0.55
+metadata/_custom_type_script = "uid://c7t80kmu0l21k"

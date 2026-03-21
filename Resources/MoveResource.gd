@@ -6,3 +6,4 @@ class_name MoveResource
 @export var moveType: GameManager.moveTypes
 @export var power: int = 50
 @export var accuracy: float = 1.0
+@export var abilities: Array[AbilityData] = []

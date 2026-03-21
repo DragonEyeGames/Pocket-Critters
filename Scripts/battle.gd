@@ -17,6 +17,7 @@ func _ready() -> void:
 		get_tree().change_scene_to_file("res://Scenes/dead.tscn")
 		return
 	$Opponent.pokemon=GameManager.toBattle
+	GameManager.seenDex.append(GameManager.toBattle.species)
 	$Opponent.initialize()
 	loadField()
 	

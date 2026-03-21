@@ -309,11 +309,11 @@ vertical_alignment = 1
 
 [node name="GridContainer" type="GridContainer" parent="Pokedex"]
 layout_mode = 0
-offset_left = 21.0
-offset_top = 74.0
-offset_right = 678.0
-offset_bottom = 426.0
-columns = 4
+offset_left = 72.0
+offset_top = 96.0
+offset_right = 588.0
+offset_bottom = 404.0
+columns = 5
 
 [node name="Pokedex Slot" parent="Pokedex/GridContainer" instance=ExtResource("4_e0jm0")]
 layout_mode = 2
@@ -341,6 +341,38 @@ pokemon = 6
 [node name="Pokedex Slot7" parent="Pokedex/GridContainer" instance=ExtResource("4_e0jm0")]
 layout_mode = 2
 pokemon = 7
+
+[node name="Pokedex Slot8" parent="Pokedex/GridContainer" instance=ExtResource("4_e0jm0")]
+layout_mode = 2
+pokemon = 8
+
+[node name="Pokedex Slot9" parent="Pokedex/GridContainer" instance=ExtResource("4_e0jm0")]
+layout_mode = 2
+pokemon = 9
+
+[node name="Pokedex Slot10" parent="Pokedex/GridContainer" instance=ExtResource("4_e0jm0")]
+layout_mode = 2
+pokemon = 10
+
+[node name="Pokedex Slot11" parent="Pokedex/GridContainer" instance=ExtResource("4_e0jm0")]
+layout_mode = 2
+pokemon = 11
+
+[node name="Pokedex Slot12" parent="Pokedex/GridContainer" instance=ExtResource("4_e0jm0")]
+layout_mode = 2
+pokemon = 12
+
+[node name="Pokedex Slot13" parent="Pokedex/GridContainer" instance=ExtResource("4_e0jm0")]
+layout_mode = 2
+pokemon = 13
+
+[node name="Pokedex Slot14" parent="Pokedex/GridContainer" instance=ExtResource("4_e0jm0")]
+layout_mode = 2
+pokemon = 14
+
+[node name="Pokedex Slot15" parent="Pokedex/GridContainer" instance=ExtResource("4_e0jm0")]
+layout_mode = 2
+pokemon = 15
 
 [connection signal="pressed" from="Menu/VBoxContainer/Team/team" to="." method="_on_team_pressed"]
 [connection signal="pressed" from="Menu/VBoxContainer/Pokedex/pokedex" to="." method="_on_pokedex_pressed"]

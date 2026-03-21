@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://o4aurj5ha233"]
+[gd_scene load_steps=19 format=3 uid="uid://o4aurj5ha233"]
 
 [ext_resource type="Script" uid="uid://dq4jkmq4402hr" path="res://Scenes/pokedex_slot.gd" id="1_5lyfu"]
 [ext_resource type="Script" uid="uid://v80h5lclvn1j" path="res://Scenes/pokemonDisplay.gd" id="2_t6w81"]
@@ -10,6 +10,14 @@
 [ext_resource type="Texture2D" uid="uid://bk8ot7cpwdae3" path="res://Fakemon-PNG/pasturlo.png" id="8_v6207"]
 [ext_resource type="Texture2D" uid="uid://dhh1fa6gyyhfj" path="res://Fakemon-PNG/baoby.png" id="9_t7eqp"]
 [ext_resource type="Texture2D" uid="uid://cx0gdn7okrdob" path="res://Fakemon-PNG/varmot.png" id="10_e4ba0"]
+[ext_resource type="Texture2D" uid="uid://con11d3l6ipsl" path="res://Fakemon-PNG/merlicun.png" id="11_t6w81"]
+[ext_resource type="Texture2D" uid="uid://d3ckwj4klm3xv" path="res://Fakemon-PNG/pompet.png" id="12_3em6j"]
+[ext_resource type="Texture2D" uid="uid://b7kb5xv1u1k3n" path="res://Fakemon-PNG/saurky.png" id="13_oywqy"]
+[ext_resource type="Texture2D" uid="uid://dcu31aa4er1iu" path="res://Fakemon-PNG/dampurr.png" id="14_xf0vc"]
+[ext_resource type="Texture2D" uid="uid://bqfx8jaeuhf05" path="res://Fakemon-PNG/bonfur.png" id="15_1gy7e"]
+[ext_resource type="Texture2D" uid="uid://blbo0dto4hfos" path="res://Fakemon-PNG/lollybog.png" id="16_v63f4"]
+[ext_resource type="Texture2D" uid="uid://delt5pm1csr0u" path="res://Fakemon-PNG/kankwart.png" id="17_v6207"]
+[ext_resource type="Texture2D" uid="uid://rurari3qfhj8" path="res://Fakemon-PNG/baulder.png" id="18_t7eqp"]
 
 [node name="Pokedex Slot" type="Control"]
 custom_minimum_size = Vector2(100, 100)
@@ -62,3 +70,35 @@ texture = ExtResource("9_t7eqp")
 [node name="Varmot" type="Sprite2D" parent="Pokemon/Front"]
 visible = false
 texture = ExtResource("10_e4ba0")
+
+[node name="Merlicun" type="Sprite2D" parent="Pokemon/Front"]
+visible = false
+texture = ExtResource("11_t6w81")
+
+[node name="Pompet" type="Sprite2D" parent="Pokemon/Front"]
+visible = false
+texture = ExtResource("12_3em6j")
+
+[node name="Saurky" type="Sprite2D" parent="Pokemon/Front"]
+visible = false
+texture = ExtResource("13_oywqy")
+
+[node name="Dampurr" type="Sprite2D" parent="Pokemon/Front"]
+visible = false
+texture = ExtResource("14_xf0vc")
+
+[node name="Bonfur" type="Sprite2D" parent="Pokemon/Front"]
+visible = false
+texture = ExtResource("15_1gy7e")
+
+[node name="Lollybog" type="Sprite2D" parent="Pokemon/Front"]
+visible = false
+texture = ExtResource("16_v63f4")
+
+[node name="Kankwart" type="Sprite2D" parent="Pokemon/Front"]
+visible = false
+texture = ExtResource("17_v6207")
+
+[node name="Baulder" type="Sprite2D" parent="Pokemon/Front"]
+visible = false
+texture = ExtResource("18_t7eqp")
