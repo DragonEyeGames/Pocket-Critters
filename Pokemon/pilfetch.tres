@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="SpeciesData" load_steps=6 format=3 uid="uid://b0ivyhj4g48un"]
 
-[ext_resource type="Script" uid="uid://c3odxqj7xy866" path="res://Resources/MoveResource.gd" id="1_qj25l"]
+[ext_resource type="Script" uid="uid://c3odxqj7xy866" path="res://Resources/MoveData.gd" id="1_qj25l"]
 [ext_resource type="Resource" uid="uid://cepnl6u878py5" path="res://Moves/Grass/absorb.tres" id="2_qj25l"]
 [ext_resource type="Script" uid="uid://1vun3nkcoo5i" path="res://Resources/SpeciesData.gd" id="3_eh1sg"]
 [ext_resource type="Resource" path="res://Moves/gust.tres" id="3_rwyfl"]

@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="MoveDatas" load_steps=4 format=3 uid="uid://q6b04edas3s7"]
+
+[ext_resource type="Script" uid="uid://2fme8eqsovvo" path="res://Resources/AbilityData.gd" id="1_pp8e6"]
+[ext_resource type="Script" uid="uid://c3odxqj7xy866" path="res://Resources/MoveData.gd" id="2_ds5o7"]
+
+[sub_resource type="Resource" id="Resource_pp8e6"]
+script = ExtResource("1_pp8e6")
+stat = 3
+targetsSelf = false
+change = -1
+chance = 0.1
+metadata/_custom_type_script = "uid://2fme8eqsovvo"
+
+[resource]
+script = ExtResource("2_ds5o7")
+name = "Earth Crack"
+type = 13
+power = 45
+accuracy = 0.9
+abilities = Array[ExtResource("1_pp8e6")]([SubResource("Resource_pp8e6")])
+metadata/_custom_type_script = "uid://c3odxqj7xy866"

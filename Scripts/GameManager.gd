@@ -53,7 +53,8 @@ enum stats {
 	Speed,
 	SpecialAttack,
 	SpecialDefense,
-	Priority
+	Priority,
+	Accuracy
 }
 
 var type_chart = {
@@ -134,8 +135,9 @@ func _ready() -> void:
 	restart()
 
 func restart():
-	playerTeam.append(newPokemon(pokemon.Geckrow))
-	pokedex.append(pokemon.Geckrow)
+	playerTeam.append(newPokemon(pokemon.Baoby))
+	pokedex.append(pokemon.Baoby)
+	seenDex.append(pokemon.Baoby)
 
 
 func wildBattle(newPokemonInstance):
@@ -171,7 +173,8 @@ func newPokemon(species, level = 5):
 	var backupMoves = p.base.potentialMoves.duplicate()
 	while len(backupMoves)>=1 and len(p.moves) < 4:
 		var move = backupMoves.pick_random()
-		p.moves.append(move)
+		if(move.level<=p.level):
+			p.moves.append(move.move)
 		backupMoves.erase(move)
 	return p
 	

@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="MoveDatas" load_steps=3 format=3 uid="uid://crywc7gj4128d"]
+
+[ext_resource type="Script" uid="uid://2fme8eqsovvo" path="res://Resources/AbilityData.gd" id="1_tbdiy"]
+[ext_resource type="Script" uid="uid://c3odxqj7xy866" path="res://Resources/MoveData.gd" id="2_e20ft"]
+
+[resource]
+script = ExtResource("2_e20ft")
+name = "Ground Jab"
+type = 13
+moveType = 1
+power = 35
+metadata/_custom_type_script = "uid://c3odxqj7xy866"

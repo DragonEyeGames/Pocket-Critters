@@ -9,6 +9,7 @@ extends Node2D
 @export var specialAttack=0
 @export var specialDefense=0
 @export var speed=0
+@export var accuracy=0
 
 # Called when the node enters the scene tree for the first time.
 func initialize() -> void:

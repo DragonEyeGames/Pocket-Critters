@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="SpeciesData" load_steps=3 format=3 uid="uid://c26vdjfpvb5q"]
 
-[ext_resource type="Script" uid="uid://c3odxqj7xy866" path="res://Resources/MoveResource.gd" id="1_q2tl2"]
+[ext_resource type="Script" uid="uid://c3odxqj7xy866" path="res://Resources/MoveData.gd" id="1_q2tl2"]
 [ext_resource type="Script" uid="uid://1vun3nkcoo5i" path="res://Resources/SpeciesData.gd" id="6_ibtjy"]
 
 [resource]

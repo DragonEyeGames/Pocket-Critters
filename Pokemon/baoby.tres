@@ -1,29 +1,103 @@
-[gd_resource type="Resource" script_class="SpeciesData" load_steps=13 format=3 uid="uid://u8yynao88t20"]
+[gd_resource type="Resource" script_class="SpeciesData" load_steps=27 format=3 uid="uid://u8yynao88t20"]
 
-[ext_resource type="Script" uid="uid://c3odxqj7xy866" path="res://Resources/MoveResource.gd" id="1_405vs"]
-[ext_resource type="Resource" uid="uid://cepnl6u878py5" path="res://Moves/Grass/absorb.tres" id="2_s2pr0"]
-[ext_resource type="Resource" uid="uid://brvhs3akjs2ul" path="res://Moves/Grass/bramble.tres" id="3_veuph"]
-[ext_resource type="Resource" uid="uid://5go1ihkf80au" path="res://Moves/Grass/branch.tres" id="4_ln024"]
+[ext_resource type="Script" uid="uid://kmcanhhb04o0" path="res://Resources/MoveResource.gd" id="1_t552i"]
+[ext_resource type="Resource" uid="uid://cepnl6u878py5" path="res://Moves/Grass/absorb.tres" id="2_p1wfu"]
+[ext_resource type="Resource" uid="uid://5go1ihkf80au" path="res://Moves/Grass/branch.tres" id="3_s2pr0"]
 [ext_resource type="Script" uid="uid://1vun3nkcoo5i" path="res://Resources/SpeciesData.gd" id="4_s6xgl"]
-[ext_resource type="Resource" uid="uid://drfam3qlv8mbg" path="res://Moves/Grass/seedBomb.tres" id="5_bidxp"]
-[ext_resource type="Resource" uid="uid://dv7idluwle71n" path="res://Moves/Grass/energyBall.tres" id="6_j1pn3"]
-[ext_resource type="Resource" uid="uid://bgileglrg45p2" path="res://Moves/Grass/trailblaze.tres" id="7_e0luk"]
-[ext_resource type="Resource" uid="uid://cao3lrn2sxdaa" path="res://Moves/Normal/focus.tres" id="8_bb8jb"]
-[ext_resource type="Resource" uid="uid://0swwqh1y5jcf" path="res://Moves/Normal/quickAttack.tres" id="9_fyfiv"]
-[ext_resource type="Resource" uid="uid://cjwtbcu7vkxjk" path="res://Moves/Normal/tackle.tres" id="10_rb51j"]
-[ext_resource type="Resource" uid="uid://bd1h37ujt4yux" path="res://Moves/Normal/headbutt.tres" id="11_le7m8"]
+[ext_resource type="Resource" uid="uid://b82sm6juqfhay" path="res://Moves/Grass/gigaDrain.tres" id="4_veuph"]
+[ext_resource type="Resource" uid="uid://drfam3qlv8mbg" path="res://Moves/Grass/seedBomb.tres" id="5_ln024"]
+[ext_resource type="Resource" uid="uid://bgileglrg45p2" path="res://Moves/Grass/trailblaze.tres" id="6_bidxp"]
+[ext_resource type="Resource" uid="uid://cjwtbcu7vkxjk" path="res://Moves/Normal/tackle.tres" id="7_j1pn3"]
+[ext_resource type="Resource" uid="uid://bd1h37ujt4yux" path="res://Moves/Normal/headbutt.tres" id="8_e0luk"]
+[ext_resource type="Resource" uid="uid://c3w2860616tbu" path="res://Moves/Normal/growl.tres" id="9_bb8jb"]
+[ext_resource type="Resource" uid="uid://cbp1qoovefw0w" path="res://Moves/Normal/leer.tres" id="10_fyfiv"]
+[ext_resource type="Resource" uid="uid://d4e4hfx0m8ar4" path="res://Moves/Ground/stomp.tres" id="11_ln024"]
+[ext_resource type="Resource" uid="uid://clq4k01n5yevi" path="res://Moves/Ground/mudSlap.tres" id="12_bidxp"]
+[ext_resource type="Resource" uid="uid://7c6dd5xtespl" path="res://Moves/Ground/heavyStomp.tres" id="13_j1pn3"]
+
+[sub_resource type="Resource" id="Resource_jrds2"]
+script = ExtResource("1_t552i")
+move = ExtResource("2_p1wfu")
+level = 5
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_rb51j"]
+script = ExtResource("1_t552i")
+move = ExtResource("3_s2pr0")
+level = 1
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_le7m8"]
+script = ExtResource("1_t552i")
+move = ExtResource("4_veuph")
+level = 12
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_kkabu"]
+script = ExtResource("1_t552i")
+move = ExtResource("5_ln024")
+level = 7
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_qwrtc"]
+script = ExtResource("1_t552i")
+move = ExtResource("6_bidxp")
+level = 15
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_c8i04"]
+script = ExtResource("1_t552i")
+move = ExtResource("7_j1pn3")
+level = 1
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_ydh57"]
+script = ExtResource("1_t552i")
+move = ExtResource("8_e0luk")
+level = 8
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_vbf8m"]
+script = ExtResource("1_t552i")
+move = ExtResource("9_bb8jb")
+level = 1
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_2ciah"]
+script = ExtResource("1_t552i")
+move = ExtResource("10_fyfiv")
+level = 1
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_e0luk"]
+script = ExtResource("1_t552i")
+move = ExtResource("11_ln024")
+level = 1
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_bb8jb"]
+script = ExtResource("1_t552i")
+move = ExtResource("12_bidxp")
+level = 4
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_fyfiv"]
+script = ExtResource("1_t552i")
+move = ExtResource("13_j1pn3")
+level = 8
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
 
 [resource]
 script = ExtResource("4_s6xgl")
 species = 6
-type1 = 4
-type2 = 4
+type1 = 1
+type2 = 1
 health = 80
 attack = 55
 defense = 60
 specialAttack = 40
 specialDefense = 45
 speed = 40
-potentialMoves = Array[ExtResource("1_405vs")]([ExtResource("2_s2pr0"), ExtResource("3_veuph"), ExtResource("4_ln024"), ExtResource("5_bidxp"), ExtResource("6_j1pn3"), ExtResource("7_e0luk"), ExtResource("8_bb8jb"), ExtResource("9_fyfiv"), ExtResource("10_rb51j"), ExtResource("11_le7m8")])
+potentialMoves = Array[ExtResource("1_t552i")]([SubResource("Resource_jrds2"), SubResource("Resource_rb51j"), SubResource("Resource_le7m8"), SubResource("Resource_kkabu"), SubResource("Resource_qwrtc"), SubResource("Resource_c8i04"), SubResource("Resource_ydh57"), SubResource("Resource_vbf8m"), SubResource("Resource_2ciah"), SubResource("Resource_e0luk"), SubResource("Resource_bb8jb"), SubResource("Resource_fyfiv")])
 catchRate = 0.5
 metadata/_custom_type_script = "uid://c7t80kmu0l21k"

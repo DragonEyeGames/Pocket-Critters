@@ -14,9 +14,11 @@ func _process(_delta: float) -> void:
 	$Player/VBoxContainer/SpecialAttack.text=str("Sp Attack: " + str($"../Player".specialAttack))
 	$Player/VBoxContainer/SpecialDefense.text=str("Sp Defense: " + str($"../Player".specialDefense))
 	$Player/VBoxContainer/Speed.text=str("Speed: " + str($"../Player".speed))
+	$Player/VBoxContainer/Accuracy.text=str("Accuracy: " + str($"../Player".accuracy))
 	
 	$Opponent/VBoxContainer/Attack.text=str("Attack: " + str($"../Opponent".attack))
 	$Opponent/VBoxContainer/Defense.text=str("Defense: " + str($"../Opponent".defense))
 	$Opponent/VBoxContainer/SpecialAttack.text=str("Sp Attack: " + str($"../Opponent".specialAttack))
 	$Opponent/VBoxContainer/SpecialDefense.text=str("Sp Defense: " + str($"../Opponent".specialDefense))
 	$Opponent/VBoxContainer/Speed.text=str("Speed: " + str($"../Opponent".speed))
+	$Opponent/VBoxContainer/Accuracy.text=str("Accuracy: " + str($"../Opponent".accuracy))

@@ -26,4 +26,4 @@ class_name PokemonData
 @export var ivSpeed = 1
 
 #Moves
-@export var moves: Array[MoveResource] = []
+@export var moves: Array[MoveDatas] = []

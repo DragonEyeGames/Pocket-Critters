@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="MoveResource" load_steps=3 format=3 uid="uid://5go1ihkf80au"]
 
 [ext_resource type="Script" uid="uid://2fme8eqsovvo" path="res://Resources/AbilityData.gd" id="1_n67dv"]
-[ext_resource type="Script" uid="uid://c3odxqj7xy866" path="res://Resources/MoveResource.gd" id="2_7rfox"]
+[ext_resource type="Script" uid="uid://c3odxqj7xy866" path="res://Resources/MoveData.gd" id="2_7rfox"]
 
 [resource]
 script = ExtResource("2_7rfox")

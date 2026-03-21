@@ -121,7 +121,7 @@ func loadAttack(playerAttack):
 func attack(move, target, user):
 	$BattleOptions/Display.text=str(user.pokemon.name) + " used " + str(move.name)
 	await get_tree().create_timer(1).timeout
-	if(randf()<=move.accuracy):
+	if(randf()<=(move.accuracy * GameManager.get_stage_multiplier(user.accuracy))):
 		if(GameManager.moveTypes.keys()[move.moveType]=="Physical"):
 			var newAttack = float(user.pokemon.attack)
 			newAttack *= GameManager.get_stage_multiplier(user.attack)
@@ -132,7 +132,6 @@ func attack(move, target, user):
 			var stab = 1.0
 			if(user.pokemon.base.type1==move.type or user.pokemon.base.type2==move.type):
 				stab=1.5
-				print("STAB")
 			var damage = round(((newAttack / defense) * (power / 10.0) + 1) * multiplier * stab)
 			target.pokemon.health-=damage
 			target.initialize()
@@ -159,7 +158,6 @@ func attack(move, target, user):
 			target.pokemon.health-=damage
 			target.initialize()
 			calculateAbilities(move, user, target, damage)
-			print(multiplier)
 			if(multiplier==0):
 				$BattleOptions/Display.text="It had no effect"
 			elif(multiplier>1):
@@ -274,7 +272,8 @@ func undeadPokemon():
 func calculateAbilities(move, user, target, damage):
 	var abilities = move.abilities.duplicate()
 	while len(abilities)>=1:
-		if(randf()<=move.accuracy):
+		print(abilities[0].chance	)
+		if(randf()<=abilities[0].chance):
 			if(abilities[0].stat==GameManager.stats.Attack):
 				if(abilities[0].targetsSelf):
 					user.attack+=abilities[0].change
@@ -300,6 +299,11 @@ func calculateAbilities(move, user, target, damage):
 					user.speed+=abilities[0].change
 				else:
 					target.speed+=abilities[0].change
+			if(abilities[0].stat==GameManager.stats.Accuracy):
+				if(abilities[0].targetsSelf):
+					user.accuracy+=abilities[0].change
+				else:
+					target.accuracy+=abilities[0].change
 			if(abilities[0].stat==GameManager.stats.Health):
 				if(abilities[0].targetsSelf):
 					user.pokemon.health+=round((float(abilities[0].change/100.0)*float(damage)))

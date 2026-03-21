@@ -1,4 +1,4 @@
-extends ColorRect
+extends Control
 class_name StatBlock
 @export var pokemonName: String
 @export var level: int
