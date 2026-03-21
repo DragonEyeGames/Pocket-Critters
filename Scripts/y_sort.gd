@@ -9,4 +9,4 @@ func _ready() -> void:
 		thing.get_parent().call_deferred("remove_child", thing)
 		call_deferred("add_child", thing)
 		
-		thing.global_position = global
+		thing.set_deferred("global_position", global)

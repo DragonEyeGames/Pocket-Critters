@@ -10,6 +10,7 @@ process_mode = 3
 script = ExtResource("1_aq7p1")
 
 [node name="Menu" type="Control" parent="."]
+visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -272,6 +273,7 @@ theme_override_font_sizes/font_size = 26
 text = "Save"
 
 [node name="Pokedex" type="Control" parent="."]
+visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_left = 32.0

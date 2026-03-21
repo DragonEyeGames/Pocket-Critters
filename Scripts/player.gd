@@ -3,6 +3,7 @@ extends CharacterBody2D
 
 @export var speed = 30
 @onready var sprite = $Sprite
+var canMove=true
 
 var direction = "down"
 var state="idle"
@@ -12,7 +13,8 @@ func _ready() -> void:
 
 func _process(_delta: float) -> void:
 	velocity = Input.get_vector("left", "right", "up", "down") * speed
-	move_and_slide()
+	if(canMove):
+		move_and_slide()
 	if(velocity.x<-.5):
 		direction="left"
 	elif(velocity.x>.5):
