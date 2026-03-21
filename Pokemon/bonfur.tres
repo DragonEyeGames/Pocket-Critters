@@ -1,7 +1,84 @@
-[gd_resource type="Resource" script_class="SpeciesData" load_steps=3 format=3 uid="uid://dtuq4g1im6mlr"]
+[gd_resource type="Resource" script_class="SpeciesData" load_steps=25 format=3 uid="uid://dtuq4g1im6mlr"]
 
-[ext_resource type="Script" uid="uid://c3odxqj7xy866" path="res://Resources/MoveData.gd" id="1_1v1tl"]
+[ext_resource type="Script" uid="uid://kmcanhhb04o0" path="res://Resources/MoveResource.gd" id="1_my1tx"]
+[ext_resource type="Resource" uid="uid://bpht2yixi5184" path="res://Moves/Fire/ashSwipe.tres" id="2_cjjkr"]
+[ext_resource type="Resource" uid="uid://bacv10uanvi4l" path="res://Moves/Fire/blazeKick.tres" id="3_qj5bt"]
+[ext_resource type="Resource" uid="uid://lpni5h5rdw7w" path="res://Moves/Fire/fireFang.tres" id="4_2gkwp"]
+[ext_resource type="Resource" uid="uid://k7cdsl68ij0w" path="res://Moves/Fire/heatUp.tres" id="5_84ced"]
+[ext_resource type="Resource" uid="uid://3ergnnh6o0xr" path="res://Moves/Fighting/focusEnergy.tres" id="6_l4qr4"]
 [ext_resource type="Script" uid="uid://1vun3nkcoo5i" path="res://Resources/SpeciesData.gd" id="6_n5bsg"]
+[ext_resource type="Resource" uid="uid://d1crvcuhrw8ib" path="res://Moves/Fighting/quickJab.tres" id="7_rrfnc"]
+[ext_resource type="Resource" uid="uid://c2x8bnb1jliut" path="res://Moves/Fighting/headStrike.tres" id="8_qje2l"]
+[ext_resource type="Resource" uid="uid://c3w2860616tbu" path="res://Moves/Normal/growl.tres" id="9_nqgru"]
+[ext_resource type="Resource" uid="uid://cbp1qoovefw0w" path="res://Moves/Normal/leer.tres" id="10_tytq4"]
+[ext_resource type="Resource" uid="uid://cjwtbcu7vkxjk" path="res://Moves/Normal/tackle.tres" id="11_v7xcf"]
+[ext_resource type="Resource" uid="uid://bd1h37ujt4yux" path="res://Moves/Normal/headbutt.tres" id="12_fkyyx"]
+
+[sub_resource type="Resource" id="Resource_ktj1j"]
+script = ExtResource("1_my1tx")
+move = ExtResource("2_cjjkr")
+level = 1
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_qjp8d"]
+script = ExtResource("1_my1tx")
+move = ExtResource("3_qj5bt")
+level = 6
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_x1557"]
+script = ExtResource("1_my1tx")
+move = ExtResource("4_2gkwp")
+level = 3
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_hlk4o"]
+script = ExtResource("1_my1tx")
+move = ExtResource("5_84ced")
+level = 1
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_pk2h4"]
+script = ExtResource("1_my1tx")
+move = ExtResource("6_l4qr4")
+level = 6
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_121jp"]
+script = ExtResource("1_my1tx")
+move = ExtResource("7_rrfnc")
+level = 1
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_hb324"]
+script = ExtResource("1_my1tx")
+move = ExtResource("8_qje2l")
+level = 7
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_faiwf"]
+script = ExtResource("1_my1tx")
+move = ExtResource("9_nqgru")
+level = 1
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_apii5"]
+script = ExtResource("1_my1tx")
+move = ExtResource("10_tytq4")
+level = 1
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_jlh5k"]
+script = ExtResource("1_my1tx")
+move = ExtResource("11_v7xcf")
+level = 1
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_402b2"]
+script = ExtResource("1_my1tx")
+move = ExtResource("12_fkyyx")
+level = 10
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
 
 [resource]
 script = ExtResource("6_n5bsg")
@@ -12,5 +89,6 @@ defense = 45
 specialAttack = 40
 specialDefense = 40
 speed = 30
+potentialMoves = Array[ExtResource("1_my1tx")]([SubResource("Resource_ktj1j"), SubResource("Resource_qjp8d"), SubResource("Resource_x1557"), SubResource("Resource_hlk4o"), SubResource("Resource_pk2h4"), SubResource("Resource_121jp"), SubResource("Resource_hb324"), SubResource("Resource_faiwf"), SubResource("Resource_apii5"), SubResource("Resource_jlh5k"), SubResource("Resource_402b2")])
 catchRate = 0.55
 metadata/_custom_type_script = "uid://c7t80kmu0l21k"

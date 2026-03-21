@@ -12,9 +12,11 @@ func _ready() -> void:
 	global_position=GameManager.playerPosition
 
 func _process(_delta: float) -> void:
-	velocity = Input.get_vector("left", "right", "up", "down") * speed
 	if(canMove):
-		move_and_slide()
+		velocity = Input.get_vector("left", "right", "up", "down") * speed
+	else:
+		velocity=Vector2.ZERO
+	move_and_slide()
 	if(velocity.x<-.5):
 		direction="left"
 	elif(velocity.x>.5):

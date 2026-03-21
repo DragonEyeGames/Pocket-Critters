@@ -31,6 +31,13 @@ window/stretch/mode="canvas_items"
 
 enabled=PackedStringArray("res://addons/godot_super-wakatime/plugin.cfg")
 
+[file_customization]
+
+folder_colors={
+"res://Levels/": "green",
+"res://Moves/": "red"
+}
+
 [global_group]
 
 Y-Sort=""

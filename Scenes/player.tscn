@@ -169,10 +169,6 @@ animation = &"up-walk"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_2cqfq")
 
-[node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(2.675, 2.675)
-position_smoothing_enabled = true
-
 [node name="Collision" type="Area2D" parent="."]
 collision_layer = 2
 collision_mask = 0

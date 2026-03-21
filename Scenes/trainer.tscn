@@ -1,36 +1,59 @@
-[gd_scene load_steps=20 format=3 uid="uid://bmsyi0138rgpo"]
+[gd_scene load_steps=28 format=3 uid="uid://bmsyi0138rgpo"]
 
 [ext_resource type="Texture2D" uid="uid://bhngxc6jw5euf" path="res://Assets/charsetA_1.png" id="1_2jmqy"]
 [ext_resource type="Script" uid="uid://ddt23cppjdwcy" path="res://Scenes/trainer.gd" id="1_j355o"]
 [ext_resource type="Script" uid="uid://dxn4lkbl53l63" path="res://Resources/TeamData.gd" id="2_p4kg0"]
 [ext_resource type="Script" uid="uid://crp3g76avkl7g" path="res://Scenes/dialogue.gd" id="3_ryukr"]
-[ext_resource type="Resource" uid="uid://dxfv2rnraqnvq" path="res://Moves/Dragon/ancientSpark.tres" id="4_qwip1"]
+[ext_resource type="Resource" uid="uid://dxmq5lmjkulio" path="res://Moves/Bug/creepCrawl.tres" id="4_tmbaw"]
 [ext_resource type="Script" uid="uid://c3odxqj7xy866" path="res://Resources/MoveData.gd" id="4_u6nue"]
+[ext_resource type="Resource" uid="uid://ymo5t14wyvl1" path="res://Moves/Bug/larvaLunge.tres" id="5_ic3rr"]
 [ext_resource type="Resource" uid="uid://clxxnxbimbhvg" path="res://Moves/Dragon/wyrmRush.tres" id="5_tmbaw"]
-[ext_resource type="Resource" uid="uid://cmql8akm7x2a3" path="res://Moves/Dragon/tailSlam.tres" id="6_ic3rr"]
-[ext_resource type="Resource" uid="uid://dxdatetbl8tj" path="res://Moves/Dark/crunch.tres" id="7_axlm5"]
+[ext_resource type="Resource" uid="uid://c4fwbby5qdn45" path="res://Moves/Dragon/dragonPulse.tres" id="6_axlm5"]
 [ext_resource type="Resource" uid="uid://cfn1x8bt84qye" path="res://Moves/Flying/airCut.tres" id="8_axlm5"]
+[ext_resource type="Resource" uid="uid://ch7rxit3qljs8" path="res://Moves/Flying/liftOff.tres" id="9_amx0o"]
 [ext_resource type="Resource" uid="uid://cowyv6e3lbnco" path="res://Moves/Flying/quickPeck.tres" id="9_divup"]
-[ext_resource type="Resource" uid="uid://bv8cu7pjltfm5" path="res://Moves/Flying/whirlwind.tres" id="10_amx0o"]
-[ext_resource type="Resource" uid="uid://dekuq5aj6tnxh" path="res://Moves/Flying/wingSlap.tres" id="11_1a8a1"]
+[ext_resource type="Resource" uid="uid://bd1h37ujt4yux" path="res://Moves/Normal/headbutt.tres" id="11_1a8a1"]
+[ext_resource type="Resource" uid="uid://bacv10uanvi4l" path="res://Moves/Fire/blazeKick.tres" id="12_pqt5m"]
+[ext_resource type="Resource" uid="uid://lpni5h5rdw7w" path="res://Moves/Fire/fireFang.tres" id="13_urdbb"]
+[ext_resource type="Resource" uid="uid://k7cdsl68ij0w" path="res://Moves/Fire/heatUp.tres" id="14_123dk"]
+[ext_resource type="Resource" uid="uid://d1crvcuhrw8ib" path="res://Moves/Fighting/quickJab.tres" id="15_o11oh"]
 
 [sub_resource type="Resource" id="Resource_divup"]
 script = ExtResource("2_p4kg0")
 species = 8
-level = 1
-moves = Array[ExtResource("4_u6nue")]([ExtResource("4_qwip1"), ExtResource("5_tmbaw"), ExtResource("6_ic3rr"), ExtResource("7_axlm5")])
+level = 4
+moves = Array[ExtResource("4_u6nue")]([ExtResource("4_tmbaw"), ExtResource("5_ic3rr"), ExtResource("6_axlm5"), ExtResource("5_tmbaw")])
 metadata/_custom_type_script = "uid://dxn4lkbl53l63"
 
 [sub_resource type="Resource" id="Resource_pqt5m"]
 script = ExtResource("2_p4kg0")
 species = 1
-level = 1
-moves = Array[ExtResource("4_u6nue")]([ExtResource("8_axlm5"), ExtResource("9_divup"), ExtResource("10_amx0o"), ExtResource("11_1a8a1")])
+level = 5
+moves = Array[ExtResource("4_u6nue")]([ExtResource("8_axlm5"), ExtResource("9_amx0o"), ExtResource("9_divup"), ExtResource("11_1a8a1")])
+metadata/_custom_type_script = "uid://dxn4lkbl53l63"
+
+[sub_resource type="Resource" id="Resource_g46p5"]
+script = ExtResource("2_p4kg0")
+species = 12
+level = 4
+moves = Array[ExtResource("4_u6nue")]([ExtResource("12_pqt5m"), ExtResource("13_urdbb"), ExtResource("14_123dk"), ExtResource("15_o11oh")])
 metadata/_custom_type_script = "uid://dxn4lkbl53l63"
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_344ge"]
 atlas = ExtResource("1_2jmqy")
 region = Rect2(16, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_axlm5"]
+atlas = ExtResource("1_2jmqy")
+region = Rect2(0, 96, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_divup"]
+atlas = ExtResource("1_2jmqy")
+region = Rect2(16, 96, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_amx0o"]
+atlas = ExtResource("1_2jmqy")
+region = Rect2(32, 96, 16, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ynf5e"]
 animations = [{
@@ -39,8 +62,25 @@ animations = [{
 "texture": SubResource("AtlasTexture_344ge")
 }],
 "loop": true,
-"name": &"default",
+"name": &"idle",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_axlm5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_divup")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_amx0o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_divup")
+}],
+"loop": true,
+"name": &"walk-up",
+"speed": 7.0
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_6bp64"]
@@ -53,11 +93,14 @@ radius = 25.0
 script = ExtResource("1_j355o")
 dialogue = NodePath("Dialogue")
 toSay = Array[String](["You will not progress further without beating the critter master. Me, Blaze!", "Prepare to lose pipsqueak!", "I will become unbeatable, and not even you will stop me.", "Till then, sucker."])
-team = Array[ExtResource("2_p4kg0")]([SubResource("Resource_divup"), SubResource("Resource_pqt5m")])
+team = Array[ExtResource("2_p4kg0")]([SubResource("Resource_divup"), SubResource("Resource_pqt5m"), SubResource("Resource_g46p5")])
 
 [node name="Sprite" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -13)
 sprite_frames = SubResource("SpriteFrames_ynf5e")
+animation = &"walk-up"
+autoplay = "idle"
+frame_progress = 0.12055267
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 

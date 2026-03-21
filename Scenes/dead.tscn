@@ -16,7 +16,7 @@ layout_mode = 0
 offset_right = 962.0
 offset_bottom = 168.0
 theme_override_font_sizes/normal_font_size = 40
-text = "All of you critters have fainted! Would you like to try to complete the critterdex again?"
+text = "All of you critters have fainted! You got it this time!"
 horizontal_alignment = 1
 vertical_alignment = 1
 

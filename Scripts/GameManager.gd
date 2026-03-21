@@ -134,6 +134,10 @@ var attacking:=""
 
 @export var playerPosition:= Vector2.ZERO
 
+@export var blazeFled1=false
+
+@export var currentScene = "res://Levels/forest-1.tscn"
+
 var toBattle: PokemonData
 
 func _ready() -> void:
@@ -219,7 +223,7 @@ func get_stat(base: int, iv: float,  level: int) -> int:
 
 func toMain():
 	safe=true
-	get_tree().change_scene_to_file("res://Scenes/main.tscn")
+	get_tree().change_scene_to_file(currentScene)
 	await get_tree().create_timer(.5).timeout
 	if(teamBattle):
 		teamBattle=false

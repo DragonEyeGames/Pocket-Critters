@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://jy4vn4rtcgkl"]
+[gd_scene load_steps=11 format=3 uid="uid://jy4vn4rtcgkl"]
 
 [ext_resource type="Script" uid="uid://bk7icv30he8vy" path="res://Scenes/typeRect.gd" id="1_qcpwj"]
 
@@ -113,11 +113,28 @@ tracks/0/keys = {
 "values": [Color(0.7, 0.266, 0.57703334, 1)]
 }
 
+[sub_resource type="Animation" id="Animation_084si"]
+resource_name = "Fire"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.41, 0, 0.006833229, 1)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_14h86"]
 _data = {
 &"Bug": SubResource("Animation_ucl33"),
 &"Dragon": SubResource("Animation_0ygm8"),
 &"Fairy": SubResource("Animation_kx05s"),
+&"Fire": SubResource("Animation_084si"),
 &"Flying": SubResource("Animation_qcpwj"),
 &"Grass": SubResource("Animation_dswqo"),
 &"Normal": SubResource("Animation_5i5ho"),
