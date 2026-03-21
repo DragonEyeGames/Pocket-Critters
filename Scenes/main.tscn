@@ -168,7 +168,7 @@ size = Vector2(118.5, 33)
 [node name="Main" type="Node2D"]
 texture_filter = 1
 script = ExtResource("1_lquwl")
-pokemonEncounters = Array[int]([6, 8, 2, 5, 1])
+pokemonEncounters = Array[int]([6, 8, 2, 5, 1, 9, 3, 0, 7])
 levelMin = 1
 levelMax = 7
 

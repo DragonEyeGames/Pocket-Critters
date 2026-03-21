@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://b013ftqbgrpxx"]
+[gd_scene load_steps=22 format=3 uid="uid://b013ftqbgrpxx"]
 
 [ext_resource type="Script" uid="uid://cfmuoh8gh7gx6" path="res://Scenes/move_display.gd" id="1_y1whx"]
 [ext_resource type="Texture2D" uid="uid://7wj1ubb3bdnp" path="res://Assets/PokemonTypes/normal.png" id="2_puv86"]
@@ -8,6 +8,8 @@
 [ext_resource type="Texture2D" uid="uid://bolnyus8kljn2" path="res://Assets/PokemonTypes/bug.png" id="6_lwgvd"]
 [ext_resource type="Texture2D" uid="uid://bwer0db82wicq" path="res://Assets/PokemonTypes/ground.png" id="7_lwgvd"]
 [ext_resource type="Texture2D" uid="uid://dq0djsvh8vuac" path="res://Assets/PokemonTypes/dragon.png" id="8_qawhb"]
+[ext_resource type="Texture2D" uid="uid://bkhylnp658apc" path="res://Assets/PokemonTypes/fairy.png" id="9_trkvg"]
+[ext_resource type="Texture2D" uid="uid://tngu8uybt6mh" path="res://Assets/PokemonTypes/fighting.png" id="10_sdyjp"]
 
 [sub_resource type="Animation" id="Animation_trkvg"]
 resource_name = "Bug"
@@ -247,6 +249,30 @@ tracks/7/keys = {
 "update": 1,
 "values": [false]
 }
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Types/Fairy:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Types/Fighting:visible")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
 
 [sub_resource type="Animation" id="Animation_sdyjp"]
 resource_name = "Ground"
@@ -304,11 +330,69 @@ tracks/1/keys = {
 "values": [Color(0.6887001, 0.72620666, 0.97, 1)]
 }
 
+[sub_resource type="Animation" id="Animation_23fuj"]
+resource_name = "Fairy"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Types/Fairy:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ColorRect:color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.96, 0.768, 0.9567999, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_mkqv3"]
+resource_name = "Fighting"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Types/Fighting:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ColorRect:color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 0.775, 0.55, 1)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_lwgvd"]
 _data = {
 &"Bug": SubResource("Animation_trkvg"),
 &"Dark": SubResource("Animation_lwgvd"),
 &"Dragon": SubResource("Animation_rfvlf"),
+&"Fairy": SubResource("Animation_23fuj"),
+&"Fighting": SubResource("Animation_mkqv3"),
 &"Flying": SubResource("Animation_qawhb"),
 &"Grass": SubResource("Animation_54dxv"),
 &"Ground": SubResource("Animation_sdyjp"),
@@ -423,6 +507,14 @@ texture = ExtResource("7_lwgvd")
 [node name="Dragon" type="Sprite2D" parent="Types"]
 visible = false
 texture = ExtResource("8_qawhb")
+
+[node name="Fairy" type="Sprite2D" parent="Types"]
+visible = false
+texture = ExtResource("9_trkvg")
+
+[node name="Fighting" type="Sprite2D" parent="Types"]
+visible = false
+texture = ExtResource("10_sdyjp")
 
 [node name="Type Animator" type="AnimationPlayer" parent="."]
 libraries = {

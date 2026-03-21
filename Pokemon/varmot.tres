@@ -1,11 +1,77 @@
-[gd_resource type="Resource" script_class="SpeciesData" load_steps=7 format=3 uid="uid://c0q2k1knc2h1k"]
+[gd_resource type="Resource" script_class="SpeciesData" load_steps=23 format=3 uid="uid://c0q2k1knc2h1k"]
 
-[ext_resource type="Script" uid="uid://c3odxqj7xy866" path="res://Resources/MoveData.gd" id="1_2ckxj"]
-[ext_resource type="Resource" path="res://Moves/nibble.tres" id="2_wclrw"]
-[ext_resource type="Resource" uid="uid://cepnl6u878py5" path="res://Moves/Grass/absorb.tres" id="3_kh6el"]
+[ext_resource type="Script" uid="uid://kmcanhhb04o0" path="res://Resources/MoveResource.gd" id="1_yd43s"]
+[ext_resource type="Resource" uid="uid://c4l7dhw8hhqmu" path="res://Moves/Fighting/punch.tres" id="2_sr6xn"]
+[ext_resource type="Resource" uid="uid://3ergnnh6o0xr" path="res://Moves/Fighting/focusEnergy.tres" id="3_0sdyv"]
 [ext_resource type="Script" uid="uid://1vun3nkcoo5i" path="res://Resources/SpeciesData.gd" id="4_77ofq"]
-[ext_resource type="Resource" path="res://Moves/headbutt.tres" id="4_kh6el"]
-[ext_resource type="Resource" path="res://Moves/bite.tres" id="5_kh6el"]
+[ext_resource type="Resource" uid="uid://cfuas1q540ijn" path="res://Moves/Dark/bite.tres" id="4_ra1hq"]
+[ext_resource type="Resource" uid="uid://b7icu6ylr0opg" path="res://Moves/Dark/ambush.tres" id="5_hykww"]
+[ext_resource type="Resource" uid="uid://dxdatetbl8tj" path="res://Moves/Dark/crunch.tres" id="6_ptwvn"]
+[ext_resource type="Resource" uid="uid://dk8voplr2wdmb" path="res://Moves/Dark/creepStrike.tres" id="7_g2bik"]
+[ext_resource type="Resource" uid="uid://c3w2860616tbu" path="res://Moves/Normal/growl.tres" id="8_u4pot"]
+[ext_resource type="Resource" uid="uid://cbp1qoovefw0w" path="res://Moves/Normal/leer.tres" id="9_bl3wq"]
+[ext_resource type="Resource" uid="uid://bd1h37ujt4yux" path="res://Moves/Normal/headbutt.tres" id="10_bcim1"]
+[ext_resource type="Resource" uid="uid://0swwqh1y5jcf" path="res://Moves/Normal/quickAttack.tres" id="11_nypkq"]
+
+[sub_resource type="Resource" id="Resource_2ti7m"]
+script = ExtResource("1_yd43s")
+move = ExtResource("2_sr6xn")
+level = 1
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_yqjjk"]
+script = ExtResource("1_yd43s")
+move = ExtResource("3_0sdyv")
+level = 1
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_81bnf"]
+script = ExtResource("1_yd43s")
+move = ExtResource("4_ra1hq")
+level = 1
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_vxje8"]
+script = ExtResource("1_yd43s")
+move = ExtResource("5_hykww")
+level = 5
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_aa8q6"]
+script = ExtResource("1_yd43s")
+move = ExtResource("6_ptwvn")
+level = 8
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_ad3qy"]
+script = ExtResource("1_yd43s")
+move = ExtResource("7_g2bik")
+level = 10
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_00h27"]
+script = ExtResource("1_yd43s")
+move = ExtResource("8_u4pot")
+level = 1
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_qucws"]
+script = ExtResource("1_yd43s")
+move = ExtResource("9_bl3wq")
+level = 1
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_621nr"]
+script = ExtResource("1_yd43s")
+move = ExtResource("10_bcim1")
+level = 9
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_1to7j"]
+script = ExtResource("1_yd43s")
+move = ExtResource("11_nypkq")
+level = 6
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
 
 [resource]
 script = ExtResource("4_77ofq")
@@ -18,6 +84,6 @@ defense = 30
 specialAttack = 35
 specialDefense = 30
 speed = 65
-potentialMoves = Array[ExtResource("1_2ckxj")]([ExtResource("2_wclrw"), ExtResource("3_kh6el"), ExtResource("4_kh6el"), ExtResource("5_kh6el")])
+potentialMoves = Array[ExtResource("1_yd43s")]([SubResource("Resource_2ti7m"), SubResource("Resource_yqjjk"), SubResource("Resource_81bnf"), SubResource("Resource_vxje8"), SubResource("Resource_aa8q6"), SubResource("Resource_ad3qy"), SubResource("Resource_00h27"), SubResource("Resource_qucws"), SubResource("Resource_621nr"), SubResource("Resource_1to7j")])
 catchRate = 0.5
 metadata/_custom_type_script = "uid://c7t80kmu0l21k"

@@ -1,0 +1,29 @@
+[gd_resource type="Resource" script_class="MoveDatas" load_steps=5 format=3 uid="uid://cva7mwo0kvgv5"]
+
+[ext_resource type="Script" uid="uid://2fme8eqsovvo" path="res://Resources/AbilityData.gd" id="1_8phlv"]
+[ext_resource type="Script" uid="uid://c3odxqj7xy866" path="res://Resources/MoveData.gd" id="2_edsf3"]
+
+[sub_resource type="Resource" id="Resource_8phlv"]
+script = ExtResource("1_8phlv")
+stat = 1
+targetsSelf = false
+change = -1
+chance = 1.0
+metadata/_custom_type_script = "uid://2fme8eqsovvo"
+
+[sub_resource type="Resource" id="Resource_edsf3"]
+script = ExtResource("1_8phlv")
+stat = 4
+targetsSelf = false
+change = -1
+chance = 1.0
+metadata/_custom_type_script = "uid://2fme8eqsovvo"
+
+[resource]
+script = ExtResource("2_edsf3")
+name = "Charm"
+type = 11
+moveType = 2
+power = 0
+abilities = Array[ExtResource("1_8phlv")]([SubResource("Resource_8phlv"), SubResource("Resource_edsf3")])
+metadata/_custom_type_script = "uid://c3odxqj7xy866"

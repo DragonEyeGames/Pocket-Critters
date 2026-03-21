@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="MoveDatas" load_steps=4 format=3 uid="uid://d1crvcuhrw8ib"]
+
+[ext_resource type="Script" uid="uid://2fme8eqsovvo" path="res://Resources/AbilityData.gd" id="1_l7kkf"]
+[ext_resource type="Script" uid="uid://c3odxqj7xy866" path="res://Resources/MoveData.gd" id="2_01wk7"]
+
+[sub_resource type="Resource" id="Resource_l7kkf"]
+script = ExtResource("1_l7kkf")
+stat = 6
+change = 1
+chance = 1.0
+metadata/_custom_type_script = "uid://2fme8eqsovvo"
+
+[resource]
+script = ExtResource("2_01wk7")
+name = "Quick Jab"
+type = 12
+moveType = 1
+power = 25
+abilities = Array[ExtResource("1_l7kkf")]([SubResource("Resource_l7kkf")])
+metadata/_custom_type_script = "uid://c3odxqj7xy866"

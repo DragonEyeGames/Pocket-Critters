@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="MoveDatas" load_steps=3 format=3 uid="uid://c2x8bnb1jliut"]
+
+[ext_resource type="Script" uid="uid://2fme8eqsovvo" path="res://Resources/AbilityData.gd" id="1_jtvgs"]
+[ext_resource type="Script" uid="uid://c3odxqj7xy866" path="res://Resources/MoveData.gd" id="2_kups1"]
+
+[resource]
+script = ExtResource("2_kups1")
+name = "Head Strike"
+type = 12
+moveType = 1
+power = 40
+accuracy = 0.95
+metadata/_custom_type_script = "uid://c3odxqj7xy866"
