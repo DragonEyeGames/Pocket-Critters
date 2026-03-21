@@ -135,9 +135,9 @@ func _ready() -> void:
 	restart()
 
 func restart():
-	playerTeam.append(newPokemon(pokemon.Baoby))
-	pokedex.append(pokemon.Baoby)
-	seenDex.append(pokemon.Baoby)
+	playerTeam.append(newPokemon(pokemon.Geckrow))
+	pokedex.append(pokemon.Geckrow)
+	seenDex.append(pokemon.Geckrow)
 
 
 func wildBattle(newPokemonInstance):

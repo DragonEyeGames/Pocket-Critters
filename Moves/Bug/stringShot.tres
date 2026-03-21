@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="MoveDatas" load_steps=4 format=3 uid="uid://bhcuqnwgqnn3i"]
+
+[ext_resource type="Script" uid="uid://2fme8eqsovvo" path="res://Resources/AbilityData.gd" id="1_dkg2g"]
+[ext_resource type="Script" uid="uid://c3odxqj7xy866" path="res://Resources/MoveData.gd" id="2_o1v0m"]
+
+[sub_resource type="Resource" id="Resource_dkg2g"]
+script = ExtResource("1_dkg2g")
+stat = 3
+targetsSelf = false
+change = -1
+chance = 1.0
+metadata/_custom_type_script = "uid://2fme8eqsovvo"
+
+[resource]
+script = ExtResource("2_o1v0m")
+name = "String Shot"
+type = 6
+moveType = 2
+power = 0
+accuracy = 0.95
+abilities = Array[ExtResource("1_dkg2g")]([SubResource("Resource_dkg2g")])
+metadata/_custom_type_script = "uid://c3odxqj7xy866"

@@ -1,10 +1,63 @@
-[gd_resource type="Resource" script_class="SpeciesData" load_steps=6 format=3 uid="uid://b0ivyhj4g48un"]
+[gd_resource type="Resource" script_class="SpeciesData" load_steps=19 format=3 uid="uid://b0ivyhj4g48un"]
 
-[ext_resource type="Script" uid="uid://c3odxqj7xy866" path="res://Resources/MoveData.gd" id="1_qj25l"]
-[ext_resource type="Resource" uid="uid://cepnl6u878py5" path="res://Moves/Grass/absorb.tres" id="2_qj25l"]
+[ext_resource type="Script" uid="uid://kmcanhhb04o0" path="res://Resources/MoveResource.gd" id="1_rnmic"]
+[ext_resource type="Resource" uid="uid://bu7rm71701ktv" path="res://Moves/Flying/peck.tres" id="2_gpgau"]
 [ext_resource type="Script" uid="uid://1vun3nkcoo5i" path="res://Resources/SpeciesData.gd" id="3_eh1sg"]
-[ext_resource type="Resource" path="res://Moves/gust.tres" id="3_rwyfl"]
-[ext_resource type="Resource" path="res://Moves/peck.tres" id="4_glfcl"]
+[ext_resource type="Resource" uid="uid://cowyv6e3lbnco" path="res://Moves/Flying/quickPeck.tres" id="3_xjnv1"]
+[ext_resource type="Resource" uid="uid://dekuq5aj6tnxh" path="res://Moves/Flying/wingSlap.tres" id="4_y8a34"]
+[ext_resource type="Resource" uid="uid://ch7rxit3qljs8" path="res://Moves/Flying/liftOff.tres" id="5_43sv0"]
+[ext_resource type="Resource" uid="uid://cfn1x8bt84qye" path="res://Moves/Flying/airCut.tres" id="6_f31f3"]
+[ext_resource type="Resource" uid="uid://cao3lrn2sxdaa" path="res://Moves/Normal/focus.tres" id="7_nn3a1"]
+[ext_resource type="Resource" uid="uid://cjwtbcu7vkxjk" path="res://Moves/Normal/tackle.tres" id="8_l2m6l"]
+[ext_resource type="Resource" uid="uid://cbp1qoovefw0w" path="res://Moves/Normal/leer.tres" id="9_x3njm"]
+
+[sub_resource type="Resource" id="Resource_obhjb"]
+script = ExtResource("1_rnmic")
+move = ExtResource("2_gpgau")
+level = 1
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_uippx"]
+script = ExtResource("1_rnmic")
+move = ExtResource("3_xjnv1")
+level = 2
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_8k7m8"]
+script = ExtResource("1_rnmic")
+move = ExtResource("4_y8a34")
+level = 5
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_ihn01"]
+script = ExtResource("1_rnmic")
+move = ExtResource("5_43sv0")
+level = 4
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_vbm5g"]
+script = ExtResource("1_rnmic")
+move = ExtResource("6_f31f3")
+level = 6
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_jrt7w"]
+script = ExtResource("1_rnmic")
+move = ExtResource("7_nn3a1")
+level = 1
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_lwqc5"]
+script = ExtResource("1_rnmic")
+move = ExtResource("8_l2m6l")
+level = 1
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_407wf"]
+script = ExtResource("1_rnmic")
+move = ExtResource("9_x3njm")
+level = 1
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
 
 [resource]
 script = ExtResource("3_eh1sg")
@@ -17,6 +70,6 @@ defense = 40
 specialAttack = 35
 specialDefense = 40
 speed = 65
-potentialMoves = Array[ExtResource("1_qj25l")]([ExtResource("2_qj25l"), ExtResource("3_rwyfl"), ExtResource("4_glfcl")])
+potentialMoves = Array[ExtResource("1_rnmic")]([SubResource("Resource_obhjb"), SubResource("Resource_uippx"), SubResource("Resource_8k7m8"), SubResource("Resource_ihn01"), SubResource("Resource_vbm5g"), SubResource("Resource_jrt7w"), SubResource("Resource_lwqc5"), SubResource("Resource_407wf")])
 catchRate = 0.45
 metadata/_custom_type_script = "uid://c7t80kmu0l21k"

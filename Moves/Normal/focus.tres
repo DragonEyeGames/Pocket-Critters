@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="MoveResource" load_steps=4 format=3 uid="uid://cao3lrn2sxdaa"]
+[gd_resource type="Resource" script_class="MoveDatas" load_steps=4 format=3 uid="uid://cao3lrn2sxdaa"]
 
 [ext_resource type="Script" uid="uid://2fme8eqsovvo" path="res://Resources/AbilityData.gd" id="1_ovg2e"]
 [ext_resource type="Script" uid="uid://c3odxqj7xy866" path="res://Resources/MoveData.gd" id="2_2xbdb"]

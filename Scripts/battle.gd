@@ -317,3 +317,8 @@ func calculateAbilities(move, user, target, damage):
 					$Opponent.initialize()
 			
 		abilities.remove_at(0)
+
+func _process(_delta: float) -> void:
+	if(Input.is_action_just_pressed("Pause") and $BattleOptions/Moves.visible):
+		$BattleOptions/Moves.visible=false
+		$BattleOptions/Options.visible=true

@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="MoveDatas" load_steps=4 format=3 uid="uid://dxmq5lmjkulio"]
+
+[ext_resource type="Script" uid="uid://2fme8eqsovvo" path="res://Resources/AbilityData.gd" id="1_omlma"]
+[ext_resource type="Script" uid="uid://c3odxqj7xy866" path="res://Resources/MoveData.gd" id="2_ubs1i"]
+
+[sub_resource type="Resource" id="Resource_omlma"]
+script = ExtResource("1_omlma")
+stat = 3
+change = 1
+chance = 0.15
+metadata/_custom_type_script = "uid://2fme8eqsovvo"
+
+[resource]
+script = ExtResource("2_ubs1i")
+name = "Creep Crawl"
+type = 6
+moveType = 1
+power = 30
+abilities = Array[ExtResource("1_omlma")]([SubResource("Resource_omlma")])
+metadata/_custom_type_script = "uid://c3odxqj7xy866"

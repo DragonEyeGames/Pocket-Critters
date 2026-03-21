@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="MoveDatas" load_steps=5 format=3 uid="uid://biimupcttiomf"]
+
+[ext_resource type="Script" uid="uid://2fme8eqsovvo" path="res://Resources/AbilityData.gd" id="1_ocqw3"]
+[ext_resource type="Script" uid="uid://c3odxqj7xy866" path="res://Resources/MoveData.gd" id="2_hvv6j"]
+
+[sub_resource type="Resource" id="Resource_ocqw3"]
+script = ExtResource("1_ocqw3")
+stat = 1
+change = 1
+chance = 1.0
+metadata/_custom_type_script = "uid://2fme8eqsovvo"
+
+[sub_resource type="Resource" id="Resource_hvv6j"]
+script = ExtResource("1_ocqw3")
+stat = 4
+change = 1
+chance = 1.0
+metadata/_custom_type_script = "uid://2fme8eqsovvo"
+
+[resource]
+script = ExtResource("2_hvv6j")
+name = "Dragon Focus"
+type = 10
+moveType = 2
+power = 0
+accuracy = 100.0
+abilities = Array[ExtResource("1_ocqw3")]([SubResource("Resource_ocqw3"), SubResource("Resource_hvv6j")])
+metadata/_custom_type_script = "uid://c3odxqj7xy866"

@@ -1,0 +1,29 @@
+[gd_resource type="Resource" script_class="MoveDatas" load_steps=5 format=3 uid="uid://c8cuk8cgdl73a"]
+
+[ext_resource type="Script" uid="uid://2fme8eqsovvo" path="res://Resources/AbilityData.gd" id="1_57mb3"]
+[ext_resource type="Script" uid="uid://c3odxqj7xy866" path="res://Resources/MoveData.gd" id="2_d6pv6"]
+
+[sub_resource type="Resource" id="Resource_f5nr7"]
+script = ExtResource("1_57mb3")
+stat = 1
+targetsSelf = false
+change = -1
+chance = 1.0
+metadata/_custom_type_script = "uid://2fme8eqsovvo"
+
+[sub_resource type="Resource" id="Resource_7lvpg"]
+script = ExtResource("1_57mb3")
+stat = 1
+change = 1
+chance = 1.0
+metadata/_custom_type_script = "uid://2fme8eqsovvo"
+
+[resource]
+script = ExtResource("2_d6pv6")
+name = "Draconic Roar"
+type = 10
+moveType = 2
+power = 0
+accuracy = 0.9
+abilities = Array[ExtResource("1_57mb3")]([SubResource("Resource_f5nr7"), SubResource("Resource_7lvpg")])
+metadata/_custom_type_script = "uid://c3odxqj7xy866"

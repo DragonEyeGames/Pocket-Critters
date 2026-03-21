@@ -1,16 +1,84 @@
-[gd_resource type="Resource" script_class="SpeciesData" load_steps=12 format=3 uid="uid://b5b2lwrh2qibl"]
+[gd_resource type="Resource" script_class="SpeciesData" load_steps=25 format=3 uid="uid://b5b2lwrh2qibl"]
 
-[ext_resource type="Script" uid="uid://c3odxqj7xy866" path="res://Resources/MoveData.gd" id="1_ge0vo"]
+[ext_resource type="Script" uid="uid://kmcanhhb04o0" path="res://Resources/MoveResource.gd" id="1_iii08"]
 [ext_resource type="Resource" uid="uid://bd1h37ujt4yux" path="res://Moves/Normal/headbutt.tres" id="2_rkcer"]
-[ext_resource type="Resource" uid="uid://cao3lrn2sxdaa" path="res://Moves/Normal/focus.tres" id="3_13kfi"]
+[ext_resource type="Resource" uid="uid://cvqv22tmh0ni1" path="res://Moves/Grass/razorLeaf.tres" id="3_csnb7"]
 [ext_resource type="Script" uid="uid://1vun3nkcoo5i" path="res://Resources/SpeciesData.gd" id="4_5647h"]
-[ext_resource type="Resource" uid="uid://c3w2860616tbu" path="res://Moves/Normal/growl.tres" id="4_iii08"]
-[ext_resource type="Resource" uid="uid://cbp1qoovefw0w" path="res://Moves/Normal/leer.tres" id="5_csnb7"]
+[ext_resource type="Resource" uid="uid://cepnl6u878py5" path="res://Moves/Grass/absorb.tres" id="5_skgof"]
+[ext_resource type="Resource" uid="uid://d4e4hfx0m8ar4" path="res://Moves/Ground/stomp.tres" id="6_jyk1k"]
 [ext_resource type="Resource" uid="uid://cjwtbcu7vkxjk" path="res://Moves/Normal/tackle.tres" id="6_skgof"]
+[ext_resource type="Resource" uid="uid://7c6dd5xtespl" path="res://Moves/Ground/heavyStomp.tres" id="7_3wfhv"]
 [ext_resource type="Resource" uid="uid://dt7an0nxj7dpr" path="res://Moves/Normal/shove.tres" id="7_jyk1k"]
+[ext_resource type="Resource" uid="uid://r1xk2iaavgak" path="res://Moves/Ground/pebbleKick.tres" id="8_0pmhf"]
 [ext_resource type="Resource" uid="uid://bgileglrg45p2" path="res://Moves/Grass/trailblaze.tres" id="8_3wfhv"]
-[ext_resource type="Resource" uid="uid://5go1ihkf80au" path="res://Moves/Grass/branch.tres" id="9_0pmhf"]
+[ext_resource type="Resource" uid="uid://q6b04edas3s7" path="res://Moves/Ground/earthCrack.tres" id="9_nee4x"]
 [ext_resource type="Resource" uid="uid://brvhs3akjs2ul" path="res://Moves/Grass/bramble.tres" id="10_nee4x"]
+
+[sub_resource type="Resource" id="Resource_0yjwp"]
+script = ExtResource("1_iii08")
+move = ExtResource("10_nee4x")
+level = 1
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_lk0i8"]
+script = ExtResource("1_iii08")
+move = ExtResource("3_csnb7")
+level = 5
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_d5ftb"]
+script = ExtResource("1_iii08")
+move = ExtResource("8_3wfhv")
+level = 7
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_48m7w"]
+script = ExtResource("1_iii08")
+move = ExtResource("5_skgof")
+level = 3
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_gjd11"]
+script = ExtResource("1_iii08")
+move = ExtResource("6_jyk1k")
+level = 1
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_6grfh"]
+script = ExtResource("1_iii08")
+move = ExtResource("7_3wfhv")
+level = 7
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_6jgla"]
+script = ExtResource("1_iii08")
+move = ExtResource("8_0pmhf")
+level = 1
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_irejm"]
+script = ExtResource("1_iii08")
+move = ExtResource("9_nee4x")
+level = 9
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_x5ni2"]
+script = ExtResource("1_iii08")
+move = ExtResource("6_skgof")
+level = 1
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_f7j1g"]
+script = ExtResource("1_iii08")
+move = ExtResource("2_rkcer")
+level = 5
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_do2ml"]
+script = ExtResource("1_iii08")
+move = ExtResource("7_jyk1k")
+level = 6
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
 
 [resource]
 script = ExtResource("4_5647h")
@@ -23,6 +91,6 @@ defense = 58
 specialAttack = 51
 specialDefense = 40
 speed = 43
-potentialMoves = Array[ExtResource("1_ge0vo")]([ExtResource("2_rkcer"), ExtResource("3_13kfi"), ExtResource("4_iii08"), ExtResource("5_csnb7"), ExtResource("6_skgof"), ExtResource("7_jyk1k"), ExtResource("8_3wfhv"), ExtResource("9_0pmhf"), ExtResource("10_nee4x")])
+potentialMoves = Array[ExtResource("1_iii08")]([SubResource("Resource_0yjwp"), SubResource("Resource_lk0i8"), SubResource("Resource_d5ftb"), SubResource("Resource_48m7w"), SubResource("Resource_gjd11"), SubResource("Resource_6grfh"), SubResource("Resource_6jgla"), SubResource("Resource_irejm"), SubResource("Resource_x5ni2"), SubResource("Resource_f7j1g"), SubResource("Resource_do2ml")])
 catchRate = 0.45
 metadata/_custom_type_script = "uid://c7t80kmu0l21k"

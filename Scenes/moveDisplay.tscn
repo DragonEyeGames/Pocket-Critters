@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://b013ftqbgrpxx"]
+[gd_scene load_steps=18 format=3 uid="uid://b013ftqbgrpxx"]
 
 [ext_resource type="Script" uid="uid://cfmuoh8gh7gx6" path="res://Scenes/move_display.gd" id="1_y1whx"]
 [ext_resource type="Texture2D" uid="uid://7wj1ubb3bdnp" path="res://Assets/PokemonTypes/normal.png" id="2_puv86"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://drpdahjorb8xu" path="res://Assets/PokemonTypes/dark.png" id="5_q7ryp"]
 [ext_resource type="Texture2D" uid="uid://bolnyus8kljn2" path="res://Assets/PokemonTypes/bug.png" id="6_lwgvd"]
 [ext_resource type="Texture2D" uid="uid://bwer0db82wicq" path="res://Assets/PokemonTypes/ground.png" id="7_lwgvd"]
+[ext_resource type="Texture2D" uid="uid://dq0djsvh8vuac" path="res://Assets/PokemonTypes/dragon.png" id="8_qawhb"]
 
 [sub_resource type="Animation" id="Animation_trkvg"]
 resource_name = "Bug"
@@ -234,6 +235,18 @@ tracks/6/keys = {
 "update": 1,
 "values": [false]
 }
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Types/Dragon:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
 
 [sub_resource type="Animation" id="Animation_sdyjp"]
 resource_name = "Ground"
@@ -263,10 +276,39 @@ tracks/1/keys = {
 "values": [Color(0.85, 0.5921667, 0.40800002, 1)]
 }
 
+[sub_resource type="Animation" id="Animation_rfvlf"]
+resource_name = "Dragon"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Types/Dragon:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ColorRect:color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.6887001, 0.72620666, 0.97, 1)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_lwgvd"]
 _data = {
 &"Bug": SubResource("Animation_trkvg"),
 &"Dark": SubResource("Animation_lwgvd"),
+&"Dragon": SubResource("Animation_rfvlf"),
 &"Flying": SubResource("Animation_qawhb"),
 &"Grass": SubResource("Animation_54dxv"),
 &"Ground": SubResource("Animation_sdyjp"),
@@ -377,6 +419,10 @@ texture = ExtResource("6_lwgvd")
 [node name="Ground" type="Sprite2D" parent="Types"]
 visible = false
 texture = ExtResource("7_lwgvd")
+
+[node name="Dragon" type="Sprite2D" parent="Types"]
+visible = false
+texture = ExtResource("8_qawhb")
 
 [node name="Type Animator" type="AnimationPlayer" parent="."]
 libraries = {

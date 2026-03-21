@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="MoveDatas" load_steps=4 format=3 uid="uid://b7icu6ylr0opg"]
+
+[ext_resource type="Script" uid="uid://2fme8eqsovvo" path="res://Resources/AbilityData.gd" id="1_nrf5g"]
+[ext_resource type="Script" uid="uid://c3odxqj7xy866" path="res://Resources/MoveData.gd" id="2_r0e1j"]
+
+[sub_resource type="Resource" id="Resource_nrf5g"]
+script = ExtResource("1_nrf5g")
+stat = 6
+change = 1
+chance = 1.0
+metadata/_custom_type_script = "uid://2fme8eqsovvo"
+
+[resource]
+script = ExtResource("2_r0e1j")
+name = "Ambush"
+type = 9
+moveType = 1
+power = 35
+abilities = Array[ExtResource("1_nrf5g")]([SubResource("Resource_nrf5g")])
+metadata/_custom_type_script = "uid://c3odxqj7xy866"
