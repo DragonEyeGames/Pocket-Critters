@@ -4,6 +4,9 @@ var activeIndex=0
 var deadPokemon=false
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	if(GameManager.teamBattle):
+		$BattleOptions/Options/Catch.disabled=true
+		$BattleOptions/Options/Run.disabled=true
 	var healthy : Array[PokemonData] = []
 	var fainted: Array[PokemonData] =[]
 	for pokemon in GameManager.playerTeam:
@@ -99,7 +102,10 @@ func loadAttack(playerAttack):
 			var xp = 50 * $Opponent.pokemon.level / 5
 			$Player.pokemon.xp+=xp
 			loadLevel($Player.pokemon)
-			GameManager.toMain()
+			if(!GameManager.teamBattle):
+				GameManager.toMain()
+			else:
+				teamBattleDead()
 			return
 		if(!checkPlayer()):
 			return
@@ -111,7 +117,10 @@ func loadAttack(playerAttack):
 			var xp = 50 * $Opponent.pokemon.level / 5
 			$Player.pokemon.xp+=xp
 			loadLevel($Player.pokemon)
-			GameManager.toMain()
+			if(!GameManager.teamBattle):
+				GameManager.toMain()
+			else:
+				teamBattleDead()
 			return
 		if(!checkPlayer()):
 			return
@@ -136,12 +145,12 @@ func attack(move, target, user):
 			target.pokemon.health-=damage
 			target.initialize()
 			calculateAbilities(move, user, target, damage)
-			if(multiplier>1):
+			if(multiplier==0):
+				$BattleOptions/Display.text="It had no effect"
+			elif(multiplier>1):
 				$BattleOptions/Display.text="It's super effective!"
 			elif(multiplier<1):
 				$BattleOptions/Display.text="It's not very effective..."
-			elif(multiplier==0):
-				$BattleOptions/Display.text="It had no effect"
 			else:
 				$BattleOptions/Display.text=""
 		if(GameManager.moveTypes.keys()[move.moveType]=="Special"):
@@ -322,3 +331,23 @@ func _process(_delta: float) -> void:
 	if(Input.is_action_just_pressed("Pause") and $BattleOptions/Moves.visible):
 		$BattleOptions/Moves.visible=false
 		$BattleOptions/Options.visible=true
+
+func teamBattleDead():
+	if(len(GameManager.opposingTeam)>=1):
+		$BattleOptions/Display.text="Knocked out Blaze's " + $Opponent.pokemon.name + "!"
+		await get_tree().create_timer(1).timeout
+		$Opponent.pokemon=GameManager.opposingTeam[0]
+		GameManager.opposingTeam.remove_at(0)
+		$Opponent.initialize()
+		$Opponent.visible=true
+		$BattleOptions/Display.text="Blaze sent out " + $Opponent.pokemon.name + "!"
+		await get_tree().create_timer(1).timeout
+		$BattleOptions/Display.text="What will " + $Player.pokemon.name + " do?"
+		$BattleOptions/Options.visible=true
+		
+	else:
+		$BattleOptions/Display.text="Knocked out Blaze's " + $Opponent.pokemon.name + "!"
+		await get_tree().create_timer(1).timeout
+		$BattleOptions/Display.text="Blaze has been defeated!"
+		await get_tree().create_timer(3).timeout
+		GameManager.toMain()

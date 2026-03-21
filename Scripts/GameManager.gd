@@ -120,6 +120,11 @@ var seenDex : Array[pokemon] = []
 #a safe time before pokemon can spawn
 var safe=false
 
+
+var teamBattle=false
+var opposingTeam: Array[PokemonData] = []
+var attacking:="" 
+
 @export var encounterList: Array[pokemon] = []
 @export var encounterMin: int
 @export var encounterMax: int
@@ -142,6 +147,14 @@ func restart():
 
 func wildBattle(newPokemonInstance):
 	toBattle=newPokemonInstance
+	get_tree().call_deferred("change_scene_to_file", "res://Scenes/battle.tscn")
+	
+func trainerBattle(trainerName, pokemonList):
+	attacking=trainerName
+	toBattle=pokemonList[0]
+	pokemonList.remove_at(0)
+	opposingTeam=pokemonList.duplicate()
+	teamBattle=true
 	get_tree().call_deferred("change_scene_to_file", "res://Scenes/battle.tscn")
 
 func pokemonName(value):
@@ -178,6 +191,29 @@ func newPokemon(species, level = 5):
 		backupMoves.erase(move)
 	return p
 	
+func setPokemon(species, level, moves):
+	var p = PokemonData.new()
+	p.base = load("res://Pokemon/" + pokemonName(species).to_lower() + ".tres")
+	p.name = pokemonName(species)
+	p.species=species
+	p.level = level
+	p.xp=get_xp_for_level(level)
+	p.ivHealth=loadIV()
+	p.ivSpeed=loadIV()
+	p.ivAttack=loadIV()
+	p.ivSpecialAttack=loadIV()
+	p.ivDefense=loadIV()
+	p.ivSpecialDefense=loadIV()
+	p.health=get_stat(p.base.health, p.ivHealth, level)
+	p.maxHealth=get_stat(p.base.health, p.ivHealth, level)
+	p.attack=get_stat(p.base.attack, p.ivAttack, level)
+	p.defense=get_stat(p.base.defense, p.ivDefense, level)
+	p.specialAttack=get_stat(p.base.specialAttack, p.ivSpecialAttack, level)
+	p.specialDefense=get_stat(p.base.specialDefense, p.ivSpecialDefense, level)
+	p.speed=get_stat(p.base.speed, p.ivSpeed, level)
+	p.moves=moves
+	return p
+	
 func get_stat(base: int, iv: float,  level: int) -> int:
 	return int(base * (level / 10.0) * iv + 5)
 
@@ -185,6 +221,10 @@ func toMain():
 	safe=true
 	get_tree().change_scene_to_file("res://Scenes/main.tscn")
 	await get_tree().create_timer(.5).timeout
+	if(teamBattle):
+		teamBattle=false
+		SignalBus.emit_signal("defeated", attacking)
+		attacking=""
 	safe=false
 	
 func loadIV():
