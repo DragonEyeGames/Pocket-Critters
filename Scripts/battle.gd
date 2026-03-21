@@ -40,7 +40,6 @@ func _on_catch_pressed() -> void:
 		$BattleOptions/Display.text="Caught it! " + $Opponent.pokemon.name + " has been caught!"
 		$Opponent.visible=false
 		GameManager.pokedex.append($Opponent.pokemon.species)
-		print(GameManager.pokedex)
 		if(len(GameManager.playerTeam)<=5):
 			GameManager.playerTeam.append(GameManager.toBattle)
 			await get_tree().create_timer(3).timeout
@@ -130,9 +129,14 @@ func attack(move, target, user):
 			defense*=GameManager.get_stage_multiplier(target.defense)
 			var power = float(move.power)
 			var multiplier = GameManager.get_type_multiplier(GameManager.types.keys()[move.type], GameManager.types.keys()[target.pokemon.base.type1], GameManager.types.keys()[target.pokemon.base.type2])
-			target.pokemon.health-=round(((newAttack / defense) * (power / 10.0) + 1) * multiplier)
+			var stab = 1.0
+			if(user.pokemon.base.type1==move.type or user.pokemon.base.type2==move.type):
+				stab=1.5
+				print("STAB")
+			var damage = round(((newAttack / defense) * (power / 10.0) + 1) * multiplier * stab)
+			target.pokemon.health-=damage
 			target.initialize()
-			print(multiplier)
+			calculateAbilities(move, user, target, damage)
 			if(multiplier>1):
 				$BattleOptions/Display.text="It's super effective!"
 			elif(multiplier<1):
@@ -148,8 +152,13 @@ func attack(move, target, user):
 			defense*=GameManager.get_stage_multiplier(target.specialDefense)
 			var power = float(move.power)
 			var multiplier = GameManager.get_type_multiplier(GameManager.types.keys()[move.type], GameManager.types.keys()[target.pokemon.base.type1], GameManager.types.keys()[target.pokemon.base.type2])
-			target.pokemon.health-=round(((newAttack / defense) * (power / 10.0) + 1) * multiplier)
+			var stab = 1.0
+			if(user.pokemon.base.type1==move.type or user.pokemon.base.type2==move.type):
+				stab=1.5
+			var damage = round(((newAttack / defense) * (power / 10.0) + 1) * multiplier * stab)
+			target.pokemon.health-=damage
 			target.initialize()
+			calculateAbilities(move, user, target, damage)
 			print(multiplier)
 			if(multiplier==0):
 				$BattleOptions/Display.text="It had no effect"
@@ -261,3 +270,46 @@ func undeadPokemon():
 	$BattleOptions/Options.visible=true
 	$Player.visible=true
 	loadField()
+	
+func calculateAbilities(move, user, target, damage):
+	var abilities = move.abilities.duplicate()
+	while len(abilities)>=1:
+		if(randf()<=move.accuracy):
+			if(abilities[0].stat==GameManager.stats.Attack):
+				if(abilities[0].targetsSelf):
+					user.attack+=abilities[0].change
+				else:
+					target.attack+=abilities[0].change
+			if(abilities[0].stat==GameManager.stats.Defense):
+				if(abilities[0].targetsSelf):
+					user.defense+=abilities[0].change
+				else:
+					target.defense+=abilities[0].change
+			if(abilities[0].stat==GameManager.stats.SpecialAttack):
+				if(abilities[0].targetsSelf):
+					user.specialAttack+=abilities[0].change
+				else:
+					target.specialAttack+=abilities[0].change
+			if(abilities[0].stat==GameManager.stats.SpecialDefense):
+				if(abilities[0].targetsSelf):
+					user.specialDefense+=abilities[0].change
+				else:
+					target.specialDefense+=abilities[0].change
+			if(abilities[0].stat==GameManager.stats.Speed):
+				if(abilities[0].targetsSelf):
+					user.speed+=abilities[0].change
+				else:
+					target.speed+=abilities[0].change
+			if(abilities[0].stat==GameManager.stats.Health):
+				if(abilities[0].targetsSelf):
+					user.pokemon.health+=round((float(abilities[0].change/100.0)*float(damage)))
+					if(user.pokemon.health>user.pokemon.maxHealth):
+						user.pokemon.health=user.pokemon.maxHealth
+					$Player.initialize()
+				else:
+					target.speed+=(abilities[0].change/100)*damage
+					if(target.pokemon.health>target.pokemon.maxHealth):
+						target.pokemon.health=user.pokemon.maxHealth
+					$Opponent.initialize()
+			
+		abilities.remove_at(0)

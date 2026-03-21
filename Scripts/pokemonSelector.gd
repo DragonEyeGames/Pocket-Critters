@@ -29,6 +29,8 @@ func initialize() -> void:
 	
 	if(holder!=null):
 		holder.pokemonName=str(GameManager.pokemonName(pokemon.species))
+		holder.type1=pokemon.base.type1
+		holder.type2=pokemon.base.type2
 		holder.level=pokemon.level
 		holder.health=pokemon.health
 		holder.maxHealth=pokemon.maxHealth
