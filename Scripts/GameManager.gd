@@ -120,6 +120,7 @@ var seenDex : Array[pokemon] = []
 #a safe time before pokemon can spawn
 var safe=false
 
+var canPause=true
 
 var teamBattle=false
 var opposingTeam: Array[PokemonData] = []
@@ -147,6 +148,8 @@ var toBattle: PokemonData
 
 var defeated=[]
 
+var transitionAnimator: AnimationPlayer
+
 func _ready() -> void:
 	if(not loadGame()):
 		restart()
@@ -160,6 +163,9 @@ func restart():
 
 
 func wildBattle(newPokemonInstance):
+	transitionAnimator.play("transition")
+	await get_tree().create_timer(1.1).timeout
+	canPause=true
 	toBattle=newPokemonInstance
 	get_tree().call_deferred("change_scene_to_file", "res://Scenes/battle.tscn")
 	

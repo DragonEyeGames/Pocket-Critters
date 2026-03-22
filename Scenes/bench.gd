@@ -12,6 +12,7 @@ func _ready() -> void:
 func _process(_delta: float) -> void:
 	if(playerEntered and Input.is_action_just_pressed("Interact") and not inProgress):
 		player.canMove=false
+		GameManager.canPause=false
 		inProgress=true
 		$StaticBody2D/CollisionShape2D.set_deferred("disabled", true)
 		player.sprite.play("up-walk")
@@ -40,6 +41,7 @@ func _process(_delta: float) -> void:
 		player.canMove=true
 		playerEntered=false
 		inProgress=false
+		GameManager.canPause=true
 		$StaticBody2D/CollisionShape2D.set_deferred("disabled", false)
 
 

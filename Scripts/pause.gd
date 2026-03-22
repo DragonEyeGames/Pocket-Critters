@@ -10,7 +10,9 @@ func _ready() -> void:
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
+	if(not GameManager.canPause):
+		return
 	if(Input.is_action_just_pressed("Pause")):
 		if($Menu.visible and ($"Team Menu".visible or $"Reorder Team".visible or $Pokedex.visible)):
 			$"Team Menu".visible=false

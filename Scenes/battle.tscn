@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://p6x3hd6afog6"]
+[gd_scene load_steps=25 format=3 uid="uid://p6x3hd6afog6"]
 
 [ext_resource type="PackedScene" uid="uid://ba24hclljygvv" path="res://Scenes/pokemonSelector.tscn" id="1_ip7xm"]
 [ext_resource type="Script" uid="uid://do3gaqda1wenc" path="res://Scripts/battle.gd" id="1_oxp8w"]
@@ -446,12 +446,169 @@ _data = {
 &"catch-succeed": SubResource("Animation_lrv64")
 }
 
+[sub_resource type="Animation" id="Animation_xkp4y"]
+resource_name = "load"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Player:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 0.75),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1e-05, 1e-05), Vector2(1e-05, 1e-05), Vector2(3, 3)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Opponent:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1059, 135), Vector2(709, 135)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Player:material:shader_parameter/flash_value")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.5, 0.8666667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [1.0, 0.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("BattleOptions:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.85, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(3, 547), Vector2(0, 386)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("StatHolder:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.85, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(988, 230), Vector2(441, 242)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("StatHolder2:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0.85, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-526, 18), Vector2(28, 35)]
+}
+
+[sub_resource type="Animation" id="Animation_vd41i"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Player:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1e-05, 1e-05)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Opponent:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1059, 135)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Player:material:shader_parameter/flash_value")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("BattleOptions:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(3, 547)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("StatHolder:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(988, 230)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("StatHolder2:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-526, 18)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_nne6o"]
+_data = {
+&"RESET": SubResource("Animation_vd41i"),
+&"load": SubResource("Animation_xkp4y")
+}
+
 [node name="Battle" type="Node2D"]
 script = ExtResource("1_oxp8w")
 
 [node name="Player" parent="." node_paths=PackedStringArray("holder") instance=ExtResource("1_ip7xm")]
 material = SubResource("ShaderMaterial_upb72")
 position = Vector2(142, 305)
+scale = Vector2(1e-05, 1e-05)
 holder = NodePath("../StatHolder")
 
 [node name="Hit" type="AnimationPlayer" parent="Player"]
@@ -462,7 +619,7 @@ speed_scale = 0.5
 
 [node name="Opponent" parent="." node_paths=PackedStringArray("holder") instance=ExtResource("1_ip7xm")]
 material = SubResource("ShaderMaterial_rssjf")
-position = Vector2(692, 144)
+position = Vector2(1059, 135)
 back = false
 holder = NodePath("../StatHolder2")
 
@@ -473,10 +630,10 @@ libraries = {
 speed_scale = 0.5
 
 [node name="BattleOptions" type="ColorRect" parent="."]
-offset_left = -6.1035156e-05
-offset_top = 384.0
-offset_right = 959.99994
-offset_bottom = 538.0
+offset_left = 3.0
+offset_top = 547.0
+offset_right = 963.0
+offset_bottom = 701.0001
 mouse_filter = 2
 color = Color(0.44, 0.44, 0.44, 1)
 
@@ -554,15 +711,15 @@ color = Color(0.48909998, 0.73, 0.525235, 1)
 [node name="OpponentController" type="Node2D" parent="."]
 
 [node name="StatHolder" parent="." instance=ExtResource("3_7sfm4")]
-offset_left = 423.0
+offset_left = 988.0
 offset_top = 230.0
-offset_right = 929.9988
+offset_right = 1494.9988
 offset_bottom = 361.9997
 
 [node name="StatHolder2" parent="." instance=ExtResource("3_7sfm4")]
-offset_left = 19.0
+offset_left = -526.0
 offset_top = 18.0
-offset_right = 526.0
+offset_right = -19.0
 offset_bottom = 150.0
 
 [node name="Reorder Team" type="Control" parent="."]
@@ -853,6 +1010,13 @@ text = "Speed: -1"
 custom_minimum_size = Vector2(100, 23.765)
 layout_mode = 2
 text = "Accuracy: -1"
+
+[node name="Intro" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_nne6o")
+}
+autoplay = "load"
+speed_scale = 0.8
 
 [connection signal="pressed" from="BattleOptions/Options/Fight" to="." method="_on_fight_pressed"]
 [connection signal="pressed" from="BattleOptions/Options/Catch" to="." method="_on_catch_pressed"]

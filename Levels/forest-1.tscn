@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=4 uid="uid://4sc6wsoxl7ao"]
+[gd_scene load_steps=23 format=4 uid="uid://4sc6wsoxl7ao"]
 
 [ext_resource type="Texture2D" uid="uid://bo43kqdc3lvgx" path="res://Assets/Woods.png" id="1_ig7tw"]
 [ext_resource type="Script" uid="uid://swgsdmbo5fng" path="res://Scripts/main.gd" id="1_lquwl"]
@@ -15,6 +15,7 @@
 [ext_resource type="Resource" uid="uid://d2e001rb1jev2" path="res://Trainers/trainee-1.tres" id="12_m8lh2"]
 [ext_resource type="Resource" uid="uid://b7ul6d7ek0cy2" path="res://Trainers/collector-1.tres" id="14_s0lm4"]
 [ext_resource type="PackedScene" uid="uid://bnmu8nd6pmhbt" path="res://Scenes/bench.tscn" id="15_xg0ie"]
+[ext_resource type="Shader" uid="uid://cfeiswkbpxh1p" path="res://Levels/transition.gdshader" id="16_cqqw3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0xm2m"]
 texture = ExtResource("1_ig7tw")
@@ -185,6 +186,47 @@ texture = ExtResource("1_ig7tw")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_0xm2m")
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_sxxgb"]
+shader = ExtResource("16_cqqw3")
+shader_parameter/progress_trans = 0.0
+shader_parameter/transition_color = Color(0, 0, 0, 1)
+
+[sub_resource type="Animation" id="Animation_cqqw3"]
+resource_name = "transition"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:material:shader_parameter/progress_trans")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="Animation" id="Animation_sxxgb"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:material:shader_parameter/progress_trans")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_sxxgb"]
+_data = {
+&"RESET": SubResource("Animation_sxxgb"),
+&"transition": SubResource("Animation_cqqw3")
+}
+
 [node name="Main" type="Node2D"]
 texture_filter = 1
 script = ExtResource("1_lquwl")
@@ -267,3 +309,21 @@ position = Vector2(243, -622)
 
 [node name="Bench3" parent="." instance=ExtResource("15_xg0ie")]
 position = Vector2(-670, -1025)
+
+[node name="Transition" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="Transition"]
+material = SubResource("ShaderMaterial_sxxgb")
+offset_left = -2.0
+offset_top = -3.0
+offset_right = 964.0
+offset_bottom = 544.0
+mouse_filter = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Transition"]
+libraries = {
+&"": SubResource("AnimationLibrary_sxxgb")
+}
+
+[node name="Bench" parent="Transition" instance=ExtResource("15_xg0ie")]
+position = Vector2(-295, -850)

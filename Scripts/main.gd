@@ -8,9 +8,5 @@ func _ready() -> void:
 	GameManager.encounterList=pokemonEncounters
 	GameManager.encounterMin=levelMin
 	GameManager.encounterMax=levelMax
+	GameManager.transitionAnimator=$Transition/AnimationPlayer
 	#pass
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
