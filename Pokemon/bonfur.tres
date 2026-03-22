@@ -81,6 +81,7 @@ level = 10
 metadata/_custom_type_script = "uid://kmcanhhb04o0"
 
 [resource]
+resource_name = "res://PokemonCries/darumaka.wav"
 script = ExtResource("6_n5bsg")
 species = 12
 health = 55

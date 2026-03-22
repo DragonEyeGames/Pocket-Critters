@@ -88,6 +88,7 @@ level = 8
 metadata/_custom_type_script = "uid://kmcanhhb04o0"
 
 [resource]
+resource_name = "res://PokemonCries/mudbray.wav"
 script = ExtResource("4_s6xgl")
 species = 6
 type1 = 1

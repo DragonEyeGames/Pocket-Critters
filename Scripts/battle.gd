@@ -26,6 +26,9 @@ func _ready() -> void:
 	await get_tree().create_timer(1.1).timeout
 	$Opponent/Animate.play("idle")
 	$Player/Animate.play("idle")
+	$Opponent.cry()
+	await get_tree().create_timer(1).timeout
+	$Player.cry()
 	
 func loadField():
 	$Player.pokemon=GameManager.healthyTeam[activeIndex]

@@ -13,3 +13,5 @@ class_name SpeciesData
 @export var potentialMoves: Array[MoveResource]
 
 @export var catchRate:= 0.0
+
+@export var cryPath: String

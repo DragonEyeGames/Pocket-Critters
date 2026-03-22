@@ -100,4 +100,5 @@ specialDefense = 55
 speed = 50
 potentialMoves = Array[ExtResource("1_ljenr")]([SubResource("Resource_5aumt"), SubResource("Resource_h3s8p"), SubResource("Resource_ja62e"), SubResource("Resource_fwrfq"), SubResource("Resource_rhqvu"), SubResource("Resource_ohy8v"), SubResource("Resource_vcv8e"), SubResource("Resource_pxqoe"), SubResource("Resource_nbjpb"), SubResource("Resource_nv4rk"), SubResource("Resource_yqw6e"), SubResource("Resource_yewbj")])
 catchRate = 0.6
+cryPath = "res://PokemonCries/swirlix.wav"
 metadata/_custom_type_script = "uid://c7t80kmu0l21k"

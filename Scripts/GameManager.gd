@@ -240,6 +240,7 @@ func get_stat(base: int, iv: float,  level: int) -> int:
 
 func toMain():
 	safe=true
+	Music.battleEnded()
 	get_tree().change_scene_to_file(currentScene)
 	await get_tree().create_timer(.5).timeout
 	if(teamBattle):

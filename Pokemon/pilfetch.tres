@@ -72,4 +72,5 @@ specialDefense = 40
 speed = 65
 potentialMoves = Array[ExtResource("1_rnmic")]([SubResource("Resource_obhjb"), SubResource("Resource_uippx"), SubResource("Resource_8k7m8"), SubResource("Resource_ihn01"), SubResource("Resource_vbm5g"), SubResource("Resource_jrt7w"), SubResource("Resource_lwqc5"), SubResource("Resource_407wf")])
 catchRate = 0.45
+cryPath = "res://PokemonCries/fletchling.mp3"
 metadata/_custom_type_script = "uid://c7t80kmu0l21k"

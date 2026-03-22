@@ -19,6 +19,7 @@ config/icon="res://Assets/icon.svg"
 
 GameManager="*res://Scripts/GameManager.gd"
 SignalBus="*res://Scripts/SignalBus.gd"
+Music="*res://Scenes/music.tscn"
 
 [display]
 
@@ -35,7 +36,8 @@ enabled=PackedStringArray("res://addons/godot_super-wakatime/plugin.cfg")
 
 folder_colors={
 "res://Levels/": "green",
-"res://Moves/": "red"
+"res://Moves/": "red",
+"res://Music/": "purple"
 }
 
 [global_group]

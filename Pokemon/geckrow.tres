@@ -107,4 +107,5 @@ specialDefense = 60
 speed = 42
 potentialMoves = Array[ExtResource("1_i1mt6")]([SubResource("Resource_0gxab"), SubResource("Resource_f81nk"), SubResource("Resource_nwt6u"), SubResource("Resource_cvrrh"), SubResource("Resource_rggud"), SubResource("Resource_w12tr"), SubResource("Resource_ymqal"), SubResource("Resource_1df78"), SubResource("Resource_swn0w"), SubResource("Resource_2t72q"), SubResource("Resource_d50oh"), SubResource("Resource_cxorh"), SubResource("Resource_d5p8u")])
 catchRate = 0.45
+cryPath = "res://PokemonCries/snivy.wav"
 metadata/_custom_type_script = "uid://c7t80kmu0l21k"

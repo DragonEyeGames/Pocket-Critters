@@ -93,4 +93,5 @@ specialDefense = 40
 speed = 43
 potentialMoves = Array[ExtResource("1_iii08")]([SubResource("Resource_0yjwp"), SubResource("Resource_lk0i8"), SubResource("Resource_d5ftb"), SubResource("Resource_48m7w"), SubResource("Resource_gjd11"), SubResource("Resource_6grfh"), SubResource("Resource_6jgla"), SubResource("Resource_irejm"), SubResource("Resource_x5ni2"), SubResource("Resource_f7j1g"), SubResource("Resource_do2ml")])
 catchRate = 0.45
+cryPath = "res://PokemonCries/bouffalant.wav"
 metadata/_custom_type_script = "uid://c7t80kmu0l21k"

@@ -11,6 +11,7 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 	if(GameManager.safe):
 		return
 	if(randf() <= .1):
+		Music.battle()
 		GameManager.canPause=false
 		area.get_parent().canMove=false
 		GameManager.playerPosition=area.get_parent().global_position

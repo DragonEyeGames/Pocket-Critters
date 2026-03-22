@@ -86,4 +86,5 @@ specialDefense = 30
 speed = 65
 potentialMoves = Array[ExtResource("1_yd43s")]([SubResource("Resource_2ti7m"), SubResource("Resource_yqjjk"), SubResource("Resource_81bnf"), SubResource("Resource_vxje8"), SubResource("Resource_aa8q6"), SubResource("Resource_ad3qy"), SubResource("Resource_00h27"), SubResource("Resource_qucws"), SubResource("Resource_621nr"), SubResource("Resource_1to7j")])
 catchRate = 0.5
+cryPath = "res://PokemonCries/mankey.wav"
 metadata/_custom_type_script = "uid://c7t80kmu0l21k"

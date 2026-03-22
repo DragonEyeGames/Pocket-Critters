@@ -85,4 +85,5 @@ specialDefense = 45
 speed = 60
 potentialMoves = Array[ExtResource("1_j0lyw")]([SubResource("Resource_letcp"), SubResource("Resource_xws2l"), SubResource("Resource_y187y"), SubResource("Resource_ywh05"), SubResource("Resource_suq7j"), SubResource("Resource_dnfov"), SubResource("Resource_h5iak"), SubResource("Resource_ag6th"), SubResource("Resource_5i03j"), SubResource("Resource_t0h1g")])
 catchRate = 0.4
+cryPath = "res://PokemonCries/rockruff.wav"
 metadata/_custom_type_script = "uid://c7t80kmu0l21k"

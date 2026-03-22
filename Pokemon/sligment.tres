@@ -72,4 +72,5 @@ specialDefense = 45
 speed = 20
 potentialMoves = Array[ExtResource("1_wkyvk")]([SubResource("Resource_isabj"), SubResource("Resource_8dqty"), SubResource("Resource_cqt66"), SubResource("Resource_m8r8u"), SubResource("Resource_oqjap"), SubResource("Resource_gp4da"), SubResource("Resource_kqhvv"), SubResource("Resource_vr67p")])
 catchRate = 0.6
+cryPath = "res://PokemonCries/goomy.wav"
 metadata/_custom_type_script = "uid://c7t80kmu0l21k"

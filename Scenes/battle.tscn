@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://p6x3hd6afog6"]
+[gd_scene load_steps=38 format=3 uid="uid://p6x3hd6afog6"]
 
 [ext_resource type="PackedScene" uid="uid://ba24hclljygvv" path="res://Scenes/pokemonSelector.tscn" id="1_ip7xm"]
 [ext_resource type="Script" uid="uid://do3gaqda1wenc" path="res://Scripts/battle.gd" id="1_oxp8w"]
@@ -248,10 +248,39 @@ tracks/1/keys = {
 "values": [0.0]
 }
 
+[sub_resource type="Animation" id="Animation_cwdtu"]
+resource_name = "call"
+length = 0.65
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.53333336, 0.65),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(142, 305), Vector2(135, 302), Vector2(142, 305), Vector2(155, 294), Vector2(142, 305), Vector2(155.99, 289), Vector2(142, 305)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.53333336, 0.65),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, -0.2617994, 0.0, 0.14835298, 0.0, -0.08726646, 0.0]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_hgaye"]
 _data = {
 &"RESET": SubResource("Animation_emx8f"),
 &"attack": SubResource("Animation_kcxpu"),
+&"call": SubResource("Animation_cwdtu"),
 &"hit": SubResource("Animation_hgaye"),
 &"idle": SubResource("Animation_387br")
 }
@@ -373,10 +402,39 @@ tracks/1/keys = {
 "values": [0.0]
 }
 
+[sub_resource type="Animation" id="Animation_ljaiu"]
+resource_name = "call"
+length = 0.65
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Opponent:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.23333333, 0.36666667, 0.46, 0.56, 0.65),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(692, 144), Vector2(677, 138), Vector2(692, 144), Vector2(724, 137.00002), Vector2(692, 144), Vector2(692, 130), Vector2(692, 144)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Opponent:rotation")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.23333333, 0.36666667, 0.46, 0.56, 0.65),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, -0.34906584, 0.0, 0.34906584, 0.0, -0.12217305, 0.0]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_387br"]
 _data = {
 &"RESET": SubResource("Animation_fonr4"),
 &"attack": SubResource("Animation_7vlph"),
+&"call": SubResource("Animation_ljaiu"),
 &"hit": SubResource("Animation_486ce"),
 &"idle": SubResource("Animation_nne6o")
 }

@@ -25,6 +25,7 @@ func initialize() -> void:
 		accuracy=0
 		backupPokemon=pokemon
 		print("refreshed stats")
+		$Appear.play("spawn")
 		refresh=true
 	for child in $Back.get_children():
 		child.visible=false
@@ -62,3 +63,16 @@ func randomAttack():
 
 func xp(old, new):
 	await holder.xp(old, new, pokemon)
+
+func cry():
+	if(pokemon.base.cryPath==""):
+		return
+	get_node("Animate").play("call")
+	var player = AudioStreamPlayer.new()
+	player.stream = load(pokemon.base.cryPath)
+	player.volume_db=-10
+	add_child(player)
+	player.play()
+	
+	await player.finished
+	player.queue_free()

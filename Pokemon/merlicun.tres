@@ -100,4 +100,5 @@ specialDefense = 60
 speed = 45
 potentialMoves = Array[ExtResource("1_ibtjy")]([SubResource("Resource_jhc5f"), SubResource("Resource_6q12k"), SubResource("Resource_i0mh3"), SubResource("Resource_e27h2"), SubResource("Resource_4mw77"), SubResource("Resource_mtog6"), SubResource("Resource_d1wb5"), SubResource("Resource_b1geo"), SubResource("Resource_bl487"), SubResource("Resource_t0lwv"), SubResource("Resource_8gubq"), SubResource("Resource_fe7kq")])
 catchRate = 0.25
+cryPath = "res://PokemonCries/wimpod.wav"
 metadata/_custom_type_script = "uid://c7t80kmu0l21k"
