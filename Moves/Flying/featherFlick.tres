@@ -18,4 +18,5 @@ type = 3
 moveType = 1
 power = 25
 abilities = Array[ExtResource("1_oxf35")]([SubResource("Resource_oxf35")])
+soundPath = "res://BattleSounds/False Swipe.mp3"
 metadata/_custom_type_script = "uid://c3odxqj7xy866"

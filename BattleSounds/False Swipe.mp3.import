@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cxxyjurk01sg0"
+path="res://.godot/imported/False Swipe.mp3-0a8477579599861970c48d1e1c860791.mp3str"
+
+[deps]
+
+source_file="res://BattleSounds/False Swipe.mp3"
+dest_files=["res://.godot/imported/False Swipe.mp3-0a8477579599861970c48d1e1c860791.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

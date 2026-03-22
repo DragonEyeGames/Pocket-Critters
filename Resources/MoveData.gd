@@ -7,3 +7,5 @@ class_name MoveDatas
 @export var power: int = 50
 @export var accuracy: float = 1.0
 @export var abilities: Array[AbilityData] = []
+
+@export var soundPath: String

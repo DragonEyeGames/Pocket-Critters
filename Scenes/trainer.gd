@@ -55,6 +55,7 @@ func nextText():
 	else:
 		if(not defeated):
 			GameManager.playerPosition=player.global_position
+			Music.trainer()
 			GameManager.trainerBattle(trainerData.trainerName, battleTeam, ID)
 		elif(len(trainerData.afterFightDialogue)>speechPage):
 			dialogue.nameText=trainerData.trainerName

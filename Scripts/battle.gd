@@ -136,8 +136,10 @@ func loadAttack(playerAttack):
 func attack(move, target, user):
 	$BattleOptions/Display.text=str(user.pokemon.name) + " used " + str(move.name)
 	await get_tree().create_timer(.85).timeout
+	
 	if(not GameManager.moveTypes.keys()[move.moveType]=="Status"):
 		user.get_node("Animate").play("attack")
+		noise(move.soundPath)
 	await get_tree().create_timer(.15).timeout
 	if(randf()<=(move.accuracy * GameManager.get_stage_multiplier(user.accuracy))):
 		if(GameManager.moveTypes.keys()[move.moveType]=="Physical"):
@@ -431,14 +433,18 @@ func calculateAmount(change, newText, target):
 	if(change==2):
 		amountText=" rose sharply!"
 		target.get_node("Hit").play("statUp")
+		$statUp.play()
 	elif(change==-1):
 		amountText=" fell!"
 		target.get_node("Hit").play("statDown")
+		$statDown.play()
 	elif(change==-2):
 		amountText=" fell sharply!"
 		target.get_node("Hit").play("statDown")
+		$statDown.play()
 	else:
 		target.get_node("Hit").play("statUp")
+		$statUp.play()
 	return target.pokemon.name + "'s " + newText + amountText
 
 func xp():
@@ -457,3 +463,16 @@ func _on_animate_animation_finished(_anim_name: StringName) -> void:
 
 func _player_animation_finished(_anim_name: StringName) -> void:
 	$Player/Animate.play("idle")
+
+func noise(soundPath):
+	if(soundPath==""):
+		soundPath="res://BattleSounds/Tackle.mp3"
+	var player = AudioStreamPlayer.new()
+	player.stream = load(soundPath)
+	player.volume_db=-10
+	player.pitch_scale=randf_range(.9, 1.1)
+	add_child(player)
+	player.play()
+	
+	await player.finished
+	player.queue_free()

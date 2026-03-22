@@ -9,4 +9,5 @@ name = "Crunch"
 type = 9
 moveType = 1
 accuracy = 0.95
+soundPath = "res://BattleSounds/Crunch.mp3"
 metadata/_custom_type_script = "uid://c3odxqj7xy866"

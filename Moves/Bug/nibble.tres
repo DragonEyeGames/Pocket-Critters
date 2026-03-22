@@ -18,4 +18,5 @@ type = 6
 moveType = 1
 power = 25
 abilities = Array[ExtResource("1_6ao6f")]([SubResource("Resource_6ao6f")])
+soundPath = "res://BattleSounds/Bite.mp3"
 metadata/_custom_type_script = "uid://c3odxqj7xy866"

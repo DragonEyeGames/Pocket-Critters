@@ -18,4 +18,5 @@ type = 9
 moveType = 2
 power = 0
 abilities = Array[ExtResource("1_n2lcp")]([SubResource("Resource_n2lcp")])
+soundPath = "res://BattleSounds/Scary Face.mp3"
 metadata/_custom_type_script = "uid://c3odxqj7xy866"

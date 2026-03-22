@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=3 uid="uid://ba24hclljygvv"]
+[gd_scene load_steps=36 format=3 uid="uid://ba24hclljygvv"]
 
 [ext_resource type="Script" uid="uid://bl525lufsugqy" path="res://Scripts/pokemonSelector.gd" id="1_0uh2f"]
 [ext_resource type="Shader" uid="uid://bomfvo6o4mvg6" path="res://Scenes/flash.gdshader" id="1_6atxy"]
@@ -41,70 +41,9 @@ shader = ExtResource("1_6atxy")
 shader_parameter/flash_color = Color(1, 1, 1, 1)
 shader_parameter/flash_value = 0.0
 
-[sub_resource type="Animation" id="Animation_6atxy"]
-resource_name = "spawn"
-length = 0.3
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:scale")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.2),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(1e-05, 1e-05), Vector2(3, 3)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".:material:shader_parameter/flash_value")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.3),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [1.0, 0.0]
-}
-
-[sub_resource type="Animation" id="Animation_30jyd"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:scale")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(3, 3)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".:material:shader_parameter/flash_value")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.0]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_dao0j"]
-_data = {
-&"RESET": SubResource("Animation_30jyd"),
-&"spawn": SubResource("Animation_6atxy")
-}
-
 [node name="Pokemon" type="Node2D"]
 material = SubResource("ShaderMaterial_30jyd")
-scale = Vector2(3, 3)
+scale = Vector2(1.001358e-05, 1.001358e-05)
 script = ExtResource("1_0uh2f")
 back = true
 
@@ -272,9 +211,3 @@ texture = ExtResource("32_y5por")
 visible = false
 use_parent_material = true
 texture = ExtResource("33_ryx7p")
-
-[node name="Appear" type="AnimationPlayer" parent="."]
-libraries = {
-&"": SubResource("AnimationLibrary_dao0j")
-}
-speed_scale = 1.6

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cqpb18urcwm3b"
+path="res://.godot/imported/Bug Bite.mp3-cfa30e40e354581408da4dd1784059ea.mp3str"
+
+[deps]
+
+source_file="res://BattleSounds/Bug Bite.mp3"
+dest_files=["res://.godot/imported/Bug Bite.mp3-cfa30e40e354581408da4dd1784059ea.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

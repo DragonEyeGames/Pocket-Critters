@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cypfe3lm7t6fd"
+path="res://.godot/imported/Giga Drain.mp3-10b9834d0f843272baf9f4f5ebf60577.mp3str"
+
+[deps]
+
+source_file="res://BattleSounds/Giga Drain.mp3"
+dest_files=["res://.godot/imported/Giga Drain.mp3-10b9834d0f843272baf9f4f5ebf60577.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

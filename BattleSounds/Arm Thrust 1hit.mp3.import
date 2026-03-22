@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c7bapwimod407"
+path="res://.godot/imported/Arm Thrust 1hit.mp3-a97dae64e3cb9ba05d9520070ce48bee.mp3str"
+
+[deps]
+
+source_file="res://BattleSounds/Arm Thrust 1hit.mp3"
+dest_files=["res://.godot/imported/Arm Thrust 1hit.mp3-a97dae64e3cb9ba05d9520070ce48bee.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

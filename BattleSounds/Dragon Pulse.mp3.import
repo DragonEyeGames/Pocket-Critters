@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dr2oi2r8rwmht"
+path="res://.godot/imported/Dragon Pulse.mp3-89c85342e563e175366984a9b331dd78.mp3str"
+
+[deps]
+
+source_file="res://BattleSounds/Dragon Pulse.mp3"
+dest_files=["res://.godot/imported/Dragon Pulse.mp3-89c85342e563e175366984a9b331dd78.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

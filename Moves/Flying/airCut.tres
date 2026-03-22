@@ -10,4 +10,5 @@ type = 3
 moveType = 1
 power = 40
 accuracy = 0.95
+soundPath = "res://BattleSounds/Air Slash.mp3"
 metadata/_custom_type_script = "uid://c3odxqj7xy866"

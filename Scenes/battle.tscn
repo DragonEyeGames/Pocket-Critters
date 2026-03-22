@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://p6x3hd6afog6"]
+[gd_scene load_steps=43 format=3 uid="uid://p6x3hd6afog6"]
 
 [ext_resource type="PackedScene" uid="uid://ba24hclljygvv" path="res://Scenes/pokemonSelector.tscn" id="1_ip7xm"]
 [ext_resource type="Script" uid="uid://do3gaqda1wenc" path="res://Scripts/battle.gd" id="1_oxp8w"]
@@ -11,6 +11,8 @@
 [ext_resource type="Texture2D" uid="uid://prt0a5vyjimx" path="res://Assets/Pokeball.png" id="7_ww2ai"]
 [ext_resource type="Script" uid="uid://drpkax8na82vo" path="res://Scenes/stats.gd" id="9_qeyqd"]
 [ext_resource type="Script" uid="uid://klm0bf5usy6q" path="res://Scenes/cinematicCamera.gd" id="11_upb72"]
+[ext_resource type="AudioStream" uid="uid://dru46jgfsbs2p" path="res://BattleSounds/stat-down.mp3" id="12_heh15"]
+[ext_resource type="AudioStream" uid="uid://3v3vqera0ljs" path="res://BattleSounds/stat-up.mp3" id="13_xkp4y"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_upb72"]
 resource_local_to_scene = true
@@ -283,6 +285,67 @@ _data = {
 &"call": SubResource("Animation_cwdtu"),
 &"hit": SubResource("Animation_hgaye"),
 &"idle": SubResource("Animation_387br")
+}
+
+[sub_resource type="Animation" id="Animation_6atxy"]
+resource_name = "spawn"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1e-05, 1e-05), Vector2(3, 3)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:material:shader_parameter/flash_value")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [1.0, 0.0]
+}
+
+[sub_resource type="Animation" id="Animation_30jyd"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(3, 3)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:material:shader_parameter/flash_value")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_dao0j"]
+_data = {
+&"RESET": SubResource("Animation_30jyd"),
+&"spawn": SubResource("Animation_6atxy")
 }
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_rssjf"]
@@ -919,9 +982,16 @@ libraries = {
 &"": SubResource("AnimationLibrary_hgaye")
 }
 
+[node name="Appear" type="AnimationPlayer" parent="Player"]
+libraries = {
+&"": SubResource("AnimationLibrary_dao0j")
+}
+speed_scale = 1.6
+
 [node name="Opponent" parent="." node_paths=PackedStringArray("holder") instance=ExtResource("1_ip7xm")]
 material = SubResource("ShaderMaterial_rssjf")
 position = Vector2(1059, 135)
+scale = Vector2(3, 3)
 back = false
 holder = NodePath("../StatHolder2")
 
@@ -936,6 +1006,12 @@ libraries = {
 &"": SubResource("AnimationLibrary_rssjf")
 }
 speed_scale = 0.5
+
+[node name="Appear" type="AnimationPlayer" parent="Opponent"]
+libraries = {
+&"": SubResource("AnimationLibrary_dao0j")
+}
+speed_scale = 1.6
 
 [node name="BattleOptions" type="ColorRect" parent="."]
 offset_left = 3.0
@@ -1331,6 +1407,14 @@ speed_scale = 0.8
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(480, 270)
 script = ExtResource("11_upb72")
+
+[node name="statDown" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("12_heh15")
+volume_db = -8.0
+
+[node name="statUp" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("13_xkp4y")
+volume_db = -8.0
 
 [connection signal="animation_finished" from="Player/Animate" to="." method="_player_animation_finished"]
 [connection signal="animation_finished" from="Opponent/Animate" to="." method="_on_animate_animation_finished"]

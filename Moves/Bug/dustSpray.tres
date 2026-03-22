@@ -18,4 +18,5 @@ type = 6
 power = 30
 accuracy = 0.95
 abilities = Array[ExtResource("1_n0gnn")]([SubResource("Resource_n0gnn")])
+soundPath = "res://BattleSounds/String Shot.mp3"
 metadata/_custom_type_script = "uid://c3odxqj7xy866"

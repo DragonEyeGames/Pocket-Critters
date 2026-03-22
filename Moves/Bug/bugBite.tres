@@ -9,4 +9,5 @@ name = "Bug Bite"
 type = 6
 moveType = 1
 power = 30
+soundPath = "res://BattleSounds/Bug Bite.mp3"
 metadata/_custom_type_script = "uid://c3odxqj7xy866"

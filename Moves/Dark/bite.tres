@@ -9,4 +9,5 @@ name = "Bite"
 type = 9
 moveType = 1
 power = 35
+soundPath = "res://BattleSounds/Bite.mp3"
 metadata/_custom_type_script = "uid://c3odxqj7xy866"

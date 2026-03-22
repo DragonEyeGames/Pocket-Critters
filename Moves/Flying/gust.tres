@@ -9,4 +9,5 @@ name = "Gust"
 type = 3
 power = 30
 accuracy = 100.0
+soundPath = "res://BattleSounds/Air Slash.mp3"
 metadata/_custom_type_script = "uid://c3odxqj7xy866"

@@ -17,4 +17,5 @@ type = 6
 moveType = 1
 power = 30
 abilities = Array[ExtResource("1_omlma")]([SubResource("Resource_omlma")])
+soundPath = "\"res://BattleSounds/Scratch.mp3\""
 metadata/_custom_type_script = "uid://c3odxqj7xy866"

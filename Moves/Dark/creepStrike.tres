@@ -18,4 +18,5 @@ moveType = 1
 power = 35
 accuracy = 0.95
 abilities = Array[ExtResource("1_paqax")]([SubResource("Resource_paqax")])
+soundPath = "res://BattleSounds/Tackle.mp3"
 metadata/_custom_type_script = "uid://c3odxqj7xy866"

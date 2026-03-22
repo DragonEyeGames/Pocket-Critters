@@ -9,4 +9,5 @@ name = "Shadow Snap"
 type = 9
 power = 40
 accuracy = 0.95
+soundPath = "res://BattleSounds/Scratch.mp3"
 metadata/_custom_type_script = "uid://c3odxqj7xy866"

@@ -25,7 +25,8 @@ func initialize() -> void:
 		accuracy=0
 		backupPokemon=pokemon
 		print("refreshed stats")
-		$Appear.play("spawn")
+		if has_node("Appear"):
+			get_node("Appear").play("spawn")
 		refresh=true
 	for child in $Back.get_children():
 		child.visible=false

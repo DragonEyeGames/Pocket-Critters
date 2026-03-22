@@ -101,4 +101,5 @@ specialDefense = 45
 speed = 40
 potentialMoves = Array[ExtResource("1_t552i")]([SubResource("Resource_jrds2"), SubResource("Resource_rb51j"), SubResource("Resource_le7m8"), SubResource("Resource_kkabu"), SubResource("Resource_qwrtc"), SubResource("Resource_c8i04"), SubResource("Resource_ydh57"), SubResource("Resource_vbf8m"), SubResource("Resource_2ciah"), SubResource("Resource_e0luk"), SubResource("Resource_bb8jb"), SubResource("Resource_fyfiv")])
 catchRate = 0.5
+cryPath = "res://PokemonCries/mudbray.wav"
 metadata/_custom_type_script = "uid://c7t80kmu0l21k"
