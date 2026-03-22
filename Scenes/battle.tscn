@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://p6x3hd6afog6"]
+[gd_scene load_steps=36 format=3 uid="uid://p6x3hd6afog6"]
 
 [ext_resource type="PackedScene" uid="uid://ba24hclljygvv" path="res://Scenes/pokemonSelector.tscn" id="1_ip7xm"]
 [ext_resource type="Script" uid="uid://do3gaqda1wenc" path="res://Scripts/battle.gd" id="1_oxp8w"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://diacwj0uebdpj" path="res://Scenes/replace_slot.tscn" id="7_lrv64"]
 [ext_resource type="Texture2D" uid="uid://prt0a5vyjimx" path="res://Assets/Pokeball.png" id="7_ww2ai"]
 [ext_resource type="Script" uid="uid://drpkax8na82vo" path="res://Scenes/stats.gd" id="9_qeyqd"]
+[ext_resource type="Script" uid="uid://klm0bf5usy6q" path="res://Scenes/cinematicCamera.gd" id="11_upb72"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_upb72"]
 resource_local_to_scene = true
@@ -136,11 +137,249 @@ _data = {
 &"statUp": SubResource("Animation_rssjf")
 }
 
+[sub_resource type="Animation" id="Animation_387br"]
+resource_name = "idle"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.5, 0.75, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.08726646, 0.0, -0.08726646, 0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.5, 0.75, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(142, 305), Vector2(145.21, 304.085), Vector2(142, 305), Vector2(138.88, 299.97), Vector2(142, 305)]
+}
+
+[sub_resource type="Animation" id="Animation_emx8f"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(142, 305)]
+}
+
+[sub_resource type="Animation" id="Animation_kcxpu"]
+resource_name = "attack"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.15, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(142, 305), Vector2(193.00002, 305), Vector2(142, 305)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.15, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 0.34906584, 0.0]
+}
+
+[sub_resource type="Animation" id="Animation_hgaye"]
+resource_name = "hit"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(142, 305), Vector2(143, 290), Vector2(142, 305)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_hgaye"]
+_data = {
+&"RESET": SubResource("Animation_emx8f"),
+&"attack": SubResource("Animation_kcxpu"),
+&"hit": SubResource("Animation_hgaye"),
+&"idle": SubResource("Animation_387br")
+}
+
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_rssjf"]
 resource_local_to_scene = true
 shader = ExtResource("3_k7mbx")
 shader_parameter/flash_color = Color(1, 1, 1, 1)
 shader_parameter/flash_value = 0.0
+
+[sub_resource type="Animation" id="Animation_nne6o"]
+resource_name = "idle"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Opponent:rotation")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.26666668, 0.5, 0.75, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, -0.08726646259971647, 0.0, 0.08726646259971647, 0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Opponent:position")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.5, 0.75, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(692, 144), Vector2(688.13, 137.98), Vector2(692, 144), Vector2(692.155, 139.425), Vector2(692, 144)]
+}
+
+[sub_resource type="Animation" id="Animation_fonr4"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Opponent:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Opponent:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(692, 144)]
+}
+
+[sub_resource type="Animation" id="Animation_7vlph"]
+resource_name = "attack"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Opponent:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.15, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(692, 144), Vector2(632.39, 145.305), Vector2(692, 144)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Opponent:rotation")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.15, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, -0.5235988, 0.0]
+}
+
+[sub_resource type="Animation" id="Animation_486ce"]
+resource_name = "hit"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Opponent:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(692, 144), Vector2(695, 130), Vector2(692, 144)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Opponent:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_387br"]
+_data = {
+&"RESET": SubResource("Animation_fonr4"),
+&"attack": SubResource("Animation_7vlph"),
+&"hit": SubResource("Animation_486ce"),
+&"idle": SubResource("Animation_nne6o")
+}
 
 [sub_resource type="Animation" id="Animation_ww2ai"]
 length = 0.001
@@ -617,11 +856,22 @@ libraries = {
 }
 speed_scale = 0.5
 
+[node name="Animate" type="AnimationPlayer" parent="Player"]
+libraries = {
+&"": SubResource("AnimationLibrary_hgaye")
+}
+
 [node name="Opponent" parent="." node_paths=PackedStringArray("holder") instance=ExtResource("1_ip7xm")]
 material = SubResource("ShaderMaterial_rssjf")
 position = Vector2(1059, 135)
 back = false
 holder = NodePath("../StatHolder2")
+
+[node name="Animate" type="AnimationPlayer" parent="Opponent"]
+root_node = NodePath("../../Player")
+libraries = {
+&"": SubResource("AnimationLibrary_387br")
+}
 
 [node name="Hit" type="AnimationPlayer" parent="Opponent"]
 libraries = {
@@ -632,17 +882,17 @@ speed_scale = 0.5
 [node name="BattleOptions" type="ColorRect" parent="."]
 offset_left = 3.0
 offset_top = 547.0
-offset_right = 963.0
-offset_bottom = 701.0001
+offset_right = 1040.0
+offset_bottom = 730.0001
 mouse_filter = 2
 color = Color(0.44, 0.44, 0.44, 1)
 
 [node name="Options" type="GridContainer" parent="BattleOptions"]
 layout_mode = 0
-offset_left = 537.0
-offset_top = 14.0
-offset_right = 941.0
-offset_bottom = 138.0
+offset_left = 546.0
+offset_top = 10.0
+offset_right = 950.0
+offset_bottom = 134.0
 columns = 2
 
 [node name="Fight" type="Button" parent="BattleOptions/Options"]
@@ -693,18 +943,20 @@ layout_mode = 2
 
 [node name="Display" type="RichTextLabel" parent="BattleOptions"]
 layout_mode = 0
-offset_left = 12.0
-offset_top = 14.0
-offset_right = 484.0
-offset_bottom = 132.0
+offset_left = 21.0
+offset_top = 10.0
+offset_right = 493.0
+offset_bottom = 128.0
 theme_override_font_sizes/normal_font_size = 39
 text = "What will Geckrow do?"
 vertical_alignment = 1
 
 [node name="ColorRect2" type="ColorRect" parent="."]
 z_index = -1
-offset_right = 958.0
-offset_bottom = 531.0
+offset_left = -47.0
+offset_top = -34.0
+offset_right = 1004.0
+offset_bottom = 603.0
 mouse_filter = 2
 color = Color(0.48909998, 0.73, 0.525235, 1)
 
@@ -714,7 +966,7 @@ color = Color(0.48909998, 0.73, 0.525235, 1)
 offset_left = 988.0
 offset_top = 230.0
 offset_right = 1494.9988
-offset_bottom = 361.9997
+offset_bottom = 361.99966
 
 [node name="StatHolder2" parent="." instance=ExtResource("3_7sfm4")]
 offset_left = -526.0
@@ -1018,6 +1270,12 @@ libraries = {
 autoplay = "load"
 speed_scale = 0.8
 
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(480, 270)
+script = ExtResource("11_upb72")
+
+[connection signal="animation_finished" from="Player/Animate" to="." method="_player_animation_finished"]
+[connection signal="animation_finished" from="Opponent/Animate" to="." method="_on_animate_animation_finished"]
 [connection signal="pressed" from="BattleOptions/Options/Fight" to="." method="_on_fight_pressed"]
 [connection signal="pressed" from="BattleOptions/Options/Catch" to="." method="_on_catch_pressed"]
 [connection signal="pressed" from="BattleOptions/Options/Switch" to="." method="_on_switch_pressed"]

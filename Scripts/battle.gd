@@ -23,6 +23,9 @@ func _ready() -> void:
 	GameManager.seenDex.append(GameManager.toBattle.species)
 	$Opponent.initialize()
 	loadField()
+	await get_tree().create_timer(1.1).timeout
+	$Opponent/Animate.play("idle")
+	$Player/Animate.play("idle")
 	
 func loadField():
 	$Player.pokemon=GameManager.healthyTeam[activeIndex]
@@ -129,7 +132,10 @@ func loadAttack(playerAttack):
 	
 func attack(move, target, user):
 	$BattleOptions/Display.text=str(user.pokemon.name) + " used " + str(move.name)
-	await get_tree().create_timer(1).timeout
+	await get_tree().create_timer(.85).timeout
+	if(not GameManager.moveTypes.keys()[move.moveType]=="Status"):
+		user.get_node("Animate").play("attack")
+	await get_tree().create_timer(.15).timeout
 	if(randf()<=(move.accuracy * GameManager.get_stage_multiplier(user.accuracy))):
 		if(GameManager.moveTypes.keys()[move.moveType]=="Physical"):
 			var newAttack = float(user.pokemon.attack)
@@ -145,6 +151,8 @@ func attack(move, target, user):
 			target.pokemon.health-=damage
 			if(damage>0):
 				target.get_node("Hit").play("hit")
+				target.get_node("Animate").play("hit")
+				$Camera2D.shake(damage)
 			target.initialize()
 			if(multiplier==0):
 				$BattleOptions/Display.text="It had no effect"
@@ -169,6 +177,8 @@ func attack(move, target, user):
 			target.pokemon.health-=damage
 			if(damage>0):
 				target.get_node("Hit").play("hit")
+				target.get_node("Animate").play("hit")
+				$Camera2D.shake(damage)
 			target.initialize()
 			if(multiplier==0):
 				$BattleOptions/Display.text="It had no effect"
@@ -436,3 +446,11 @@ func xp():
 	
 	loadLevel($Player.pokemon)
 	await get_tree().create_timer(1).timeout
+
+
+func _on_animate_animation_finished(_anim_name: StringName) -> void:
+	$Opponent/Animate.play("idle")
+
+
+func _player_animation_finished(_anim_name: StringName) -> void:
+	$Player/Animate.play("idle")

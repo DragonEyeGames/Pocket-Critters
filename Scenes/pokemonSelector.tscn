@@ -61,6 +61,7 @@ use_parent_material = true
 texture = ExtResource("3_egjkw")
 
 [node name="Geckrow" type="Sprite2D" parent="Front"]
+visible = false
 use_parent_material = true
 texture = ExtResource("4_lsc3l")
 
@@ -143,7 +144,6 @@ use_parent_material = true
 texture = ExtResource("7_85yhy")
 
 [node name="Geckrow" type="Sprite2D" parent="Back"]
-visible = false
 use_parent_material = true
 texture = ExtResource("6_y7fif")
 
