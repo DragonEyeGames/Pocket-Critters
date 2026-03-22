@@ -5,6 +5,8 @@ extends CharacterBody2D
 @onready var sprite = $Sprite
 var canMove=true
 
+var overrideWalking:=false
+
 var direction = "down"
 var state="idle"
 
@@ -32,5 +34,8 @@ func _process(_delta: float) -> void:
 		state = "walk"
 	else:
 		state = "idle"
+		
+	if(overrideWalking):
+		state="walk"
 		
 	sprite.play(direction + "-" + state)

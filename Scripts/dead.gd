@@ -2,7 +2,7 @@ extends Control
 
 
 func _on_retry_pressed() -> void:
-	GameManager.playerPosition=Vector2.ZERO
+	GameManager.playerPosition=GameManager.respawnSpot
 	for pokemon in GameManager.playerTeam:
 		pokemon.health=pokemon.maxHealth
 	get_tree().change_scene_to_file("res://Levels/forest-1.tscn")

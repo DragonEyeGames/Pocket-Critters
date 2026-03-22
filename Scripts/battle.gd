@@ -239,7 +239,7 @@ func loadLevel(p: PokemonData):
 	if(backupLevel!=newLevel):
 		p.level=newLevel
 		var backupHealth=p.maxHealth
-		p.maxHealth=GameManager.get_stat(p.base.health, p.ivHealth, newLevel)*GameManager.healthMod
+		p.maxHealth=int(GameManager.get_stat(p.base.health, p.ivHealth, newLevel)*GameManager.healthMod)
 		p.health+=p.maxHealth-backupHealth
 		p.attack=GameManager.get_stat(p.base.attack, p.ivAttack, newLevel)
 		p.defense=GameManager.get_stat(p.base.defense, p.ivDefense, newLevel)

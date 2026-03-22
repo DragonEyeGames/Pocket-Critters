@@ -1,7 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://csi5giv4qbgfx"]
+[gd_scene load_steps=5 format=3 uid="uid://csi5giv4qbgfx"]
 
 [ext_resource type="PackedScene" uid="uid://ba24hclljygvv" path="res://Scenes/pokemonSelector.tscn" id="1_r058n"]
 [ext_resource type="Script" uid="uid://kugeqjublj4p" path="res://Scripts/team_slot.gd" id="1_utni4"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_23g4y"]
+bg_color = Color(0.67, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3a2dw"]
+bg_color = Color(0, 0.42, 0.04900005, 1)
 
 [node name="TeamSlot" type="Control"]
 custom_minimum_size = Vector2(150, 150)
@@ -23,8 +29,8 @@ grow_vertical = 2
 color = Color(0.3854925, 0.38549247, 0.38549247, 1)
 
 [node name="Pokemon" parent="." instance=ExtResource("1_r058n")]
-position = Vector2(73, 90)
-scale = Vector2(1.765, 1.765)
+position = Vector2(74, 83.00001)
+scale = Vector2(1.4, 1.4)
 back = false
 pokemon = null
 
@@ -53,5 +59,29 @@ offset_right = 121.0
 offset_bottom = 92.0
 theme_override_font_sizes/normal_font_size = 24
 text = "Fainted"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Health Bar" type="ProgressBar" parent="."]
+layout_mode = 0
+offset_left = 18.999996
+offset_top = 111.0
+offset_right = 333.0
+offset_bottom = 138.0
+scale = Vector2(0.36, 0.36)
+theme_override_styles/background = SubResource("StyleBoxFlat_23g4y")
+theme_override_styles/fill = SubResource("StyleBoxFlat_3a2dw")
+max_value = 20.0
+value = 20.0
+show_percentage = false
+
+[node name="Health" type="RichTextLabel" parent="Health Bar"]
+layout_mode = 0
+offset_left = 88.888885
+offset_top = 24.999996
+offset_right = 230.88889
+offset_bottom = 66.0
+theme_override_font_sizes/normal_font_size = 29
+text = "20/20"
 horizontal_alignment = 1
 vertical_alignment = 1

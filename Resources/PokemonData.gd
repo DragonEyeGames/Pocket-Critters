@@ -7,10 +7,10 @@ class_name PokemonData
 
 @export var xp: int = 10
 @export var level: int = 5
-@export var maxHealth=10
+@export var maxHealth: int =10
 
 #Stats
-@export var health = 10
+@export var health : int = 10
 @export var attack = 10
 @export var specialAttack = 10
 @export var defense = 10

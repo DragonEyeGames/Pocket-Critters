@@ -135,6 +135,7 @@ var attackingID:=0
 @export var healthyTeam: Array[PokemonData] = []
 
 @export var playerPosition:= Vector2.ZERO
+@export var respawnSpot:=Vector2.ZERO
 
 @export var currentScene = "res://Levels/forest-1.tscn"
 
@@ -180,15 +181,15 @@ func newPokemon(species, level = 5):
 	p.name = pokemonName(species)
 	p.species=species
 	p.level = level
-	p.xp=get_xp_for_level(level)
+	p.xp=get_xp_for_level(level)+1
 	p.ivHealth=loadIV()
 	p.ivSpeed=loadIV()
 	p.ivAttack=loadIV()
 	p.ivSpecialAttack=loadIV()
 	p.ivDefense=loadIV()
 	p.ivSpecialDefense=loadIV()
-	p.health=get_stat(p.base.health, p.ivHealth, level)*healthMod
-	p.maxHealth=get_stat(p.base.health, p.ivHealth, level)*healthMod
+	p.health=int(get_stat(p.base.health, p.ivHealth, level)*healthMod)
+	p.maxHealth=int(get_stat(p.base.health, p.ivHealth, level)*healthMod)
 	p.attack=get_stat(p.base.attack, p.ivAttack, level)
 	p.defense=get_stat(p.base.defense, p.ivDefense, level)
 	p.specialAttack=get_stat(p.base.specialAttack, p.ivSpecialAttack, level)
@@ -208,15 +209,15 @@ func setPokemon(species, level, moves):
 	p.name = pokemonName(species)
 	p.species=species
 	p.level = level
-	p.xp=get_xp_for_level(level)
+	p.xp=get_xp_for_level(level)+1
 	p.ivHealth=loadIV()
 	p.ivSpeed=loadIV()
 	p.ivAttack=loadIV()
 	p.ivSpecialAttack=loadIV()
 	p.ivDefense=loadIV()
 	p.ivSpecialDefense=loadIV()
-	p.health=get_stat(p.base.health, p.ivHealth, level)*healthMod
-	p.maxHealth=get_stat(p.base.health, p.ivHealth, level)*healthMod
+	p.health=int(get_stat(p.base.health, p.ivHealth, level)*healthMod)
+	p.maxHealth=int(get_stat(p.base.health, p.ivHealth, level)*healthMod)
 	p.attack=get_stat(p.base.attack, p.ivAttack, level)
 	p.defense=get_stat(p.base.defense, p.ivDefense, level)
 	p.specialAttack=get_stat(p.base.specialAttack, p.ivSpecialAttack, level)

@@ -12,12 +12,15 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if(Input.is_action_just_pressed("Pause")):
-		paused = !paused
-		get_tree().paused=paused
-		$Menu.visible=paused
-		$"Team Menu".visible=false
-		$"Reorder Team".visible=false
-		$Pokedex.visible=false
+		if($Menu.visible and ($"Team Menu".visible or $"Reorder Team".visible or $Pokedex.visible)):
+			$"Team Menu".visible=false
+			$"Reorder Team".visible=false
+			$Pokedex.visible=false
+		else:
+			paused = !paused
+			get_tree().paused=paused
+			$Menu.visible=paused
+		
 
 
 func _on_team_pressed() -> void:

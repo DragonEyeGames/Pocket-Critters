@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=4 uid="uid://4sc6wsoxl7ao"]
+[gd_scene load_steps=21 format=4 uid="uid://4sc6wsoxl7ao"]
 
 [ext_resource type="Texture2D" uid="uid://bo43kqdc3lvgx" path="res://Assets/Woods.png" id="1_ig7tw"]
 [ext_resource type="Script" uid="uid://swgsdmbo5fng" path="res://Scripts/main.gd" id="1_lquwl"]
@@ -12,6 +12,9 @@
 [ext_resource type="Resource" uid="uid://7stw2esp4fm5" path="res://Trainers/youngster-1.tres" id="10_pu377"]
 [ext_resource type="Resource" uid="uid://dp31kdgf40175" path="res://Trainers/rookie-1.tres" id="11_st1th"]
 [ext_resource type="Resource" uid="uid://ddvy8op0ryf1g" path="res://Trainers/scout-1.tres" id="12_kkedj"]
+[ext_resource type="Resource" uid="uid://d2e001rb1jev2" path="res://Trainers/trainee-1.tres" id="12_m8lh2"]
+[ext_resource type="Resource" uid="uid://b7ul6d7ek0cy2" path="res://Trainers/collector-1.tres" id="14_s0lm4"]
+[ext_resource type="PackedScene" uid="uid://bnmu8nd6pmhbt" path="res://Scenes/bench.tscn" id="15_xg0ie"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0xm2m"]
 texture = ExtResource("1_ig7tw")
@@ -279,7 +282,26 @@ position = Vector2(-294, -649)
 trainerData = ExtResource("11_st1th")
 player = NodePath("../Player")
 
+[node name="Trainee" parent="." node_paths=PackedStringArray("player") instance=ExtResource("7_6bp64")]
+position = Vector2(11, -812)
+trainerData = ExtResource("12_m8lh2")
+player = NodePath("../Player")
+
 [node name="Scout" parent="." node_paths=PackedStringArray("player") instance=ExtResource("7_6bp64")]
 position = Vector2(-669, -822)
 trainerData = ExtResource("12_kkedj")
 player = NodePath("../Player")
+
+[node name="Collector" parent="." node_paths=PackedStringArray("player") instance=ExtResource("7_6bp64")]
+position = Vector2(-348, -815)
+trainerData = ExtResource("14_s0lm4")
+player = NodePath("../Player")
+
+[node name="Bench" parent="." instance=ExtResource("15_xg0ie")]
+position = Vector2(-2, -417)
+
+[node name="Bench2" parent="." instance=ExtResource("15_xg0ie")]
+position = Vector2(243, -622)
+
+[node name="Bench3" parent="." instance=ExtResource("15_xg0ie")]
+position = Vector2(-670, -1025)

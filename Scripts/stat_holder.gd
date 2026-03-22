@@ -50,5 +50,5 @@ func xp(old, new, newPokemon):
 		
 		await get_tree().create_timer(0.01).timeout
 	
-	await get_tree().create_timer(0.5).timeout
+	await get_tree().create_timer(1).timeout
 	$"XP-Bar".visible = false

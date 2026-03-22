@@ -1,0 +1,40 @@
+[gd_resource type="Resource" script_class="TrainerData" load_steps=14 format=3 uid="uid://d2e001rb1jev2"]
+
+[ext_resource type="Script" uid="uid://0mhfdoexj3v2" path="res://Resources/TrainerData.gd" id="1_rd2ol"]
+[ext_resource type="Script" uid="uid://dxn4lkbl53l63" path="res://Resources/TeamData.gd" id="2_cdf1q"]
+[ext_resource type="Script" uid="uid://c3odxqj7xy866" path="res://Resources/MoveData.gd" id="3_qmgwm"]
+[ext_resource type="Resource" uid="uid://cjwtbcu7vkxjk" path="res://Moves/Normal/tackle.tres" id="4_lyx5l"]
+[ext_resource type="Resource" uid="uid://ch7rxit3qljs8" path="res://Moves/Flying/liftOff.tres" id="4_mvhys"]
+[ext_resource type="Resource" uid="uid://cowyv6e3lbnco" path="res://Moves/Flying/quickPeck.tres" id="5_pexsv"]
+[ext_resource type="Resource" uid="uid://5go1ihkf80au" path="res://Moves/Grass/branch.tres" id="5_shb4b"]
+[ext_resource type="Resource" uid="uid://dekuq5aj6tnxh" path="res://Moves/Flying/wingSlap.tres" id="6_dvtsy"]
+[ext_resource type="Resource" uid="uid://c3w2860616tbu" path="res://Moves/Normal/growl.tres" id="6_menma"]
+[ext_resource type="Resource" uid="uid://cepnl6u878py5" path="res://Moves/Grass/absorb.tres" id="7_rbvto"]
+
+[sub_resource type="Resource" id="Resource_fetqp"]
+script = ExtResource("2_cdf1q")
+species = 1
+level = 4
+moves = Array[ExtResource("3_qmgwm")]([ExtResource("4_mvhys"), ExtResource("5_pexsv"), ExtResource("6_dvtsy"), ExtResource("4_lyx5l")])
+metadata/_custom_type_script = "uid://dxn4lkbl53l63"
+
+[sub_resource type="Resource" id="Resource_xq83u"]
+script = ExtResource("2_cdf1q")
+level = 3
+moves = Array[ExtResource("3_qmgwm")]([ExtResource("4_lyx5l"), ExtResource("5_shb4b"), ExtResource("6_menma"), ExtResource("7_rbvto")])
+metadata/_custom_type_script = "uid://dxn4lkbl53l63"
+
+[sub_resource type="Resource" id="Resource_6t8bx"]
+script = ExtResource("2_cdf1q")
+level = 3
+moves = Array[ExtResource("3_qmgwm")]([ExtResource("4_lyx5l"), ExtResource("7_rbvto"), ExtResource("5_shb4b"), ExtResource("6_menma")])
+metadata/_custom_type_script = "uid://dxn4lkbl53l63"
+
+[resource]
+script = ExtResource("1_rd2ol")
+trainerName = "Trainee"
+preFightDialogue = Array[String](["I'm learning about all the critters in this world!"])
+afterFightDialogue = Array[String](["Guess I'm still learning."])
+team = Array[ExtResource("2_cdf1q")]([SubResource("Resource_fetqp"), SubResource("Resource_xq83u"), SubResource("Resource_6t8bx")])
+sprite = "M2"
+metadata/_custom_type_script = "uid://0mhfdoexj3v2"

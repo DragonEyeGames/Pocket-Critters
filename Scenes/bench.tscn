@@ -1,0 +1,45 @@
+[gd_scene load_steps=5 format=3 uid="uid://bnmu8nd6pmhbt"]
+
+[ext_resource type="Script" uid="uid://cxeotv3owj6mw" path="res://Scenes/bench.gd" id="1_e6kot"]
+[ext_resource type="Texture2D" uid="uid://dk2jhobo28om8" path="res://Assets/bench.png" id="1_rgxpg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rgxpg"]
+size = Vector2(32, 4)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e6kot"]
+size = Vector2(32, 14)
+
+[node name="Bench" type="Node2D" groups=["Y-Sort"]]
+script = ExtResource("1_e6kot")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+position = Vector2(0, -5)
+texture = ExtResource("1_rgxpg")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0, -2)
+shape = SubResource("RectangleShape2D_rgxpg")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, 3)
+shape = SubResource("RectangleShape2D_e6kot")
+
+[node name="Dark" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="Dark"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 0)
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]
