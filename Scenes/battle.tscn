@@ -361,7 +361,6 @@ offset_right = 484.0
 offset_bottom = 132.0
 theme_override_font_sizes/normal_font_size = 39
 text = "What will Geckrow do?"
-horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="ColorRect2" type="ColorRect" parent="."]

@@ -59,6 +59,14 @@ text = "Lv: 5"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 60.0
+offset_right = 325.0
+offset_bottom = 89.0
+color = Color(0, 0, 0, 1)
+
 [node name="Health Bar" type="ProgressBar" parent="."]
 layout_mode = 0
 offset_left = 10.0
@@ -83,6 +91,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="XP-Bar" type="ProgressBar" parent="."]
+visible = false
 layout_mode = 0
 offset_left = 11.0
 offset_top = 92.0
@@ -91,7 +100,6 @@ offset_bottom = 100.0
 theme_override_styles/background = SubResource("StyleBoxFlat_14h86")
 theme_override_styles/fill = SubResource("StyleBoxFlat_jtv1l")
 max_value = 20.0
-value = 10.0
 show_percentage = false
 
 [node name="XP" type="RichTextLabel" parent="XP-Bar"]

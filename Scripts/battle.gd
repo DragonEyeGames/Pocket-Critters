@@ -99,9 +99,7 @@ func loadAttack(playerAttack):
 		if($Opponent.pokemon.health>0):
 			await attack(opponentAttack, $Player, $Opponent)
 		if($Opponent.pokemon.health<=0):
-			var xp = 50 * $Opponent.pokemon.level / 5
-			$Player.pokemon.xp+=xp
-			loadLevel($Player.pokemon)
+			await xp()
 			if(!GameManager.teamBattle):
 				GameManager.toMain()
 			else:
@@ -114,9 +112,8 @@ func loadAttack(playerAttack):
 		if($Player.pokemon.health>0):
 			await attack(playerAttack, $Opponent, $Player)
 		if($Opponent.pokemon.health<=0):
-			var xp = 50 * $Opponent.pokemon.level / 5
-			$Player.pokemon.xp+=xp
-			loadLevel($Player.pokemon)
+			await xp()
+			await get_tree().create_timer(1).timeout
 			if(!GameManager.teamBattle):
 				GameManager.toMain()
 			else:
@@ -242,7 +239,7 @@ func loadLevel(p: PokemonData):
 	if(backupLevel!=newLevel):
 		p.level=newLevel
 		var backupHealth=p.maxHealth
-		p.maxHealth=GameManager.get_stat(p.base.health, p.ivHealth, newLevel)
+		p.maxHealth=GameManager.get_stat(p.base.health, p.ivHealth, newLevel)*GameManager.healthMod
 		p.health+=p.maxHealth-backupHealth
 		p.attack=GameManager.get_stat(p.base.attack, p.ivAttack, newLevel)
 		p.defense=GameManager.get_stat(p.base.defense, p.ivDefense, newLevel)
@@ -418,3 +415,12 @@ func calculateAmount(change, newText, target):
 	if(change==-2):
 		amountText=" fell sharply!"
 	return target.pokemon.name + "'s " + newText + amountText
+
+func xp():
+	var xpGained = int($Opponent.pokemon.maxHealth * $Opponent.pokemon.level / 3)
+	$BattleOptions/Display.text=str($Player.pokemon.name + " gained " + str(xpGained) + " xp.")
+	await $Player.xp($Player.pokemon.xp, $Player.pokemon.xp + xpGained)
+	
+	
+	loadLevel($Player.pokemon)
+	await get_tree().create_timer(1).timeout

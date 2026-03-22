@@ -54,3 +54,6 @@ func initialize() -> void:
 			
 func randomAttack():
 	return(pokemon.moves.pick_random())
+
+func xp(old, new):
+	await holder.xp(old, new, pokemon)

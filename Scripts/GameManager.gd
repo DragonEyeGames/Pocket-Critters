@@ -140,6 +140,8 @@ var attackingID:=0
 
 @export var blaze1:=false
 
+var healthMod=.6
+
 var toBattle: PokemonData
 
 var defeated=[]
@@ -148,9 +150,9 @@ func _ready() -> void:
 	restart()
 
 func restart():
-	playerTeam.append(newPokemon(pokemon.Geckrow))
-	pokedex.append(pokemon.Geckrow)
-	seenDex.append(pokemon.Geckrow)
+	playerTeam.append(newPokemon(pokemon.Pilfetch))
+	pokedex.append(pokemon.Pilfetch)
+	seenDex.append(pokemon.Pilfetch)
 
 
 func wildBattle(newPokemonInstance):
@@ -185,8 +187,8 @@ func newPokemon(species, level = 5):
 	p.ivSpecialAttack=loadIV()
 	p.ivDefense=loadIV()
 	p.ivSpecialDefense=loadIV()
-	p.health=get_stat(p.base.health, p.ivHealth, level)
-	p.maxHealth=get_stat(p.base.health, p.ivHealth, level)
+	p.health=get_stat(p.base.health, p.ivHealth, level)*healthMod
+	p.maxHealth=get_stat(p.base.health, p.ivHealth, level)*healthMod
 	p.attack=get_stat(p.base.attack, p.ivAttack, level)
 	p.defense=get_stat(p.base.defense, p.ivDefense, level)
 	p.specialAttack=get_stat(p.base.specialAttack, p.ivSpecialAttack, level)
@@ -213,8 +215,8 @@ func setPokemon(species, level, moves):
 	p.ivSpecialAttack=loadIV()
 	p.ivDefense=loadIV()
 	p.ivSpecialDefense=loadIV()
-	p.health=get_stat(p.base.health, p.ivHealth, level)
-	p.maxHealth=get_stat(p.base.health, p.ivHealth, level)
+	p.health=get_stat(p.base.health, p.ivHealth, level)*healthMod
+	p.maxHealth=get_stat(p.base.health, p.ivHealth, level)*healthMod
 	p.attack=get_stat(p.base.attack, p.ivAttack, level)
 	p.defense=get_stat(p.base.defense, p.ivDefense, level)
 	p.specialAttack=get_stat(p.base.specialAttack, p.ivSpecialAttack, level)
@@ -242,10 +244,10 @@ func loadIV():
 	return randf_range(.9, 1.1)
 	
 func get_level_from_xp(xp: int) -> int:
-	return int(pow(xp, 1.0/3.0))
+	return int(pow(xp / 0.5, 1.0/3.0))
 	
 func get_xp_for_level(level: int) -> int:
-	return int(pow(level, 3))
+	return int(pow(level, 3) * 0.5)
 
 func get_type_multiplier(moveType: String, defenderType1: String, defenderType2: String) -> float:
 	var multiplier = 1.0
@@ -269,7 +271,7 @@ func get_catch_chance(newPokemon2, ball_multiplier: float) -> float:
 	return clamp(chance, 0.0, 1.0)
 
 func get_level_modifier(pokemon_level: int) -> float:
-	return 1.0 / (1.0 + pokemon_level / 20.0)
+	return 1.0 / (1.0 + pokemon_level / 30.0)
 	
 func get_stage_multiplier(stage: int) -> float:
 	if stage >= 0:
