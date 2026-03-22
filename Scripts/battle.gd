@@ -94,11 +94,14 @@ func loadAttack(playerAttack):
 		for ability in opponentAttack.abilities:
 			if(ability.stat==GameManager.stats.Priority):
 				opponentSpeed+=1000
+	#Player is faster than opponent
 	if(playerSpeed>=opponentSpeed):
 		await attack(playerAttack, $Opponent, $Player)
 		if($Opponent.pokemon.health>0):
+			#If alive continue attacking
 			await attack(opponentAttack, $Player, $Opponent)
 		if($Opponent.pokemon.health<=0):
+			#If dead, add XP. Of a wild battle go to main. Otherwise load next pokemon.
 			await xp()
 			if(!GameManager.teamBattle):
 				GameManager.toMain()
@@ -140,7 +143,8 @@ func attack(move, target, user):
 				stab=1.5
 			var damage = round(((newAttack / defense) * (power / 10.0) + 1) * multiplier * stab)
 			target.pokemon.health-=damage
-			target.get_node("Hit").play("hit")
+			if(damage>0):
+				target.get_node("Hit").play("hit")
 			target.initialize()
 			if(multiplier==0):
 				$BattleOptions/Display.text="It had no effect"
@@ -163,6 +167,8 @@ func attack(move, target, user):
 				stab=1.5
 			var damage = round(((newAttack / defense) * (power / 10.0) + 1) * multiplier * stab)
 			target.pokemon.health-=damage
+			if(damage>0):
+				target.get_node("Hit").play("hit")
 			target.initialize()
 			if(multiplier==0):
 				$BattleOptions/Display.text="It had no effect"

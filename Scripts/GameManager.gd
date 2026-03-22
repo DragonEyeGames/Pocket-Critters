@@ -148,7 +148,10 @@ var toBattle: PokemonData
 var defeated=[]
 
 func _ready() -> void:
-	restart()
+	if(not loadGame()):
+		restart()
+	else:
+		SignalBus.emit_signal("loadData")
 
 func restart():
 	playerTeam.append(newPokemon(pokemon.Pilfetch))
@@ -279,3 +282,32 @@ func get_stage_multiplier(stage: int) -> float:
 		return (2.0 + stage) / 2.0
 	else:
 		return 2.0 / (2.0 - stage)
+
+func saveGame():
+	var data = GameData.new()
+	var teamResource = PlayerTeamData.new()
+	teamResource.team = playerTeam.duplicate()
+	data.team=teamResource
+	data.playerPos=playerPosition
+	data.safePos=respawnSpot
+	data.pokedex=pokedex.duplicate()
+	data.seenDex=seenDex.duplicate()
+	data.defeated=defeated.duplicate()
+	data.blaze1=blaze1
+	ResourceSaver.save(data, "user://save.tres")
+
+func loadGame():
+	if not FileAccess.file_exists("user://save.tres"):
+		print("No save file found")
+		return false
+	
+	var data = load("user://save.tres") as GameData
+	
+	playerTeam = data.team.team.duplicate()
+	playerPosition = data.playerPos
+	respawnSpot = data.safePos
+	pokedex = data.pokedex.duplicate()
+	seenDex = data.seenDex.duplicate()
+	defeated = data.defeated.duplicate()
+	blaze1=data.blaze1
+	return true

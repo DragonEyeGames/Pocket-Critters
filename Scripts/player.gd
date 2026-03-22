@@ -11,6 +11,7 @@ var direction = "down"
 var state="idle"
 
 func _ready() -> void:
+	SignalBus.loadData.connect(_load)
 	global_position=GameManager.playerPosition
 
 func _process(_delta: float) -> void:
@@ -39,3 +40,6 @@ func _process(_delta: float) -> void:
 		state="walk"
 		
 	sprite.play(direction + "-" + state)
+	
+func _load():
+	position=GameManager.playerPosition

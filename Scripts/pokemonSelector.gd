@@ -49,9 +49,12 @@ func initialize() -> void:
 		holder.health=pokemon.health
 		holder.maxHealth=pokemon.maxHealth
 		if(pokemon.health<=0):
-			visible=false
+			var tween=create_tween()
+			tween.tween_property(self, "scale", Vector2.ZERO, .15)
 			holder.health=0
 			pokemon.health=0
+		else:
+			scale=Vector2(3, 3)
 		holder.initialize(refresh)
 			
 func randomAttack():

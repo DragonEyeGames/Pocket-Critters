@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="TrainerData" load_steps=24 format=3 uid="uid://b7ul6d7ek0cy2"]
+[gd_resource type="Resource" script_class="TrainerData" load_steps=25 format=3 uid="uid://b7ul6d7ek0cy2"]
 
 [ext_resource type="Script" uid="uid://0mhfdoexj3v2" path="res://Resources/TrainerData.gd" id="1_2iuwb"]
 [ext_resource type="Script" uid="uid://dxn4lkbl53l63" path="res://Resources/TeamData.gd" id="2_3wpfk"]
@@ -11,6 +11,7 @@
 [ext_resource type="Resource" uid="uid://ch7rxit3qljs8" path="res://Moves/Flying/liftOff.tres" id="9_7dcay"]
 [ext_resource type="Resource" uid="uid://dekuq5aj6tnxh" path="res://Moves/Flying/wingSlap.tres" id="10_2md2x"]
 [ext_resource type="Resource" uid="uid://c4btm4xgx3fmv" path="res://Moves/Bug/bugBite.tres" id="11_o6jjn"]
+[ext_resource type="Resource" uid="uid://dxmq5lmjkulio" path="res://Moves/Bug/creepCrawl.tres" id="12_3wpfk"]
 [ext_resource type="Resource" uid="uid://egtxpc610uld" path="res://Moves/Bug/nibble.tres" id="12_l5fi4"]
 [ext_resource type="Resource" uid="uid://bhcuqnwgqnn3i" path="res://Moves/Bug/stringShot.tres" id="13_aygjx"]
 [ext_resource type="Resource" uid="uid://d4e4hfx0m8ar4" path="res://Moves/Ground/stomp.tres" id="14_e365e"]
@@ -20,41 +21,42 @@
 
 [sub_resource type="Resource" id="Resource_esbbw"]
 script = ExtResource("2_3wpfk")
-level = 2
+level = 3
 moves = Array[ExtResource("3_ixsea")]([ExtResource("4_y5w28"), ExtResource("5_drnxv"), ExtResource("6_aagft"), ExtResource("7_mrapf")])
 metadata/_custom_type_script = "uid://dxn4lkbl53l63"
 
 [sub_resource type="Resource" id="Resource_55jdc"]
 script = ExtResource("2_3wpfk")
 species = 1
-level = 2
+level = 3
 moves = Array[ExtResource("3_ixsea")]([ExtResource("7_mrapf"), ExtResource("8_rtkmh"), ExtResource("9_7dcay"), ExtResource("10_2md2x")])
 metadata/_custom_type_script = "uid://dxn4lkbl53l63"
 
 [sub_resource type="Resource" id="Resource_mpngm"]
 script = ExtResource("2_3wpfk")
 species = 3
-level = 2
+level = 3
+moves = Array[ExtResource("3_ixsea")]([ExtResource("11_o6jjn"), ExtResource("12_3wpfk"), ExtResource("12_l5fi4"), ExtResource("13_aygjx")])
 metadata/_custom_type_script = "uid://dxn4lkbl53l63"
 
 [sub_resource type="Resource" id="Resource_1at6r"]
 script = ExtResource("2_3wpfk")
 species = 5
-level = 2
+level = 3
 moves = Array[ExtResource("3_ixsea")]([ExtResource("11_o6jjn"), ExtResource("12_l5fi4"), ExtResource("13_aygjx"), ExtResource("7_mrapf")])
 metadata/_custom_type_script = "uid://dxn4lkbl53l63"
 
 [sub_resource type="Resource" id="Resource_6h0dd"]
 script = ExtResource("2_3wpfk")
 species = 6
-level = 2
+level = 3
 moves = Array[ExtResource("3_ixsea")]([ExtResource("7_mrapf"), ExtResource("14_e365e"), ExtResource("4_y5w28"), ExtResource("15_3ex6a")])
 metadata/_custom_type_script = "uid://dxn4lkbl53l63"
 
 [sub_resource type="Resource" id="Resource_oac0p"]
 script = ExtResource("2_3wpfk")
 species = 7
-level = 2
+level = 3
 moves = Array[ExtResource("3_ixsea")]([ExtResource("7_mrapf"), ExtResource("16_lfypb"), ExtResource("6_aagft"), ExtResource("17_nf7cq")])
 metadata/_custom_type_script = "uid://dxn4lkbl53l63"
 

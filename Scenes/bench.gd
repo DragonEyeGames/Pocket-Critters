@@ -31,6 +31,8 @@ func _process(_delta: float) -> void:
 		await tween2.finished
 		for pokemon in GameManager.playerTeam:
 			pokemon.health=pokemon.maxHealth
+		GameManager.playerPosition=Vector2(global_position.x, global_position.y+1)
+		await GameManager.saveGame()
 		await get_tree().create_timer(2).timeout
 		var tween3=create_tween()
 		tween3.tween_property($Dark/ColorRect, "color:a", 0, .4)
@@ -47,4 +49,4 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 
 
 func _on_area_2d_area_exited(_area: Area2D) -> void:
-	pass # Replace with function body.
+	playerEntered=false
