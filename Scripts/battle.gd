@@ -140,6 +140,7 @@ func attack(move, target, user):
 				stab=1.5
 			var damage = round(((newAttack / defense) * (power / 10.0) + 1) * multiplier * stab)
 			target.pokemon.health-=damage
+			target.get_node("Hit").play("hit")
 			target.initialize()
 			if(multiplier==0):
 				$BattleOptions/Display.text="It had no effect"
@@ -410,10 +411,15 @@ func calculateAmount(change, newText, target):
 	var amountText=" rose!"
 	if(change==2):
 		amountText=" rose sharply!"
-	if(change==-1):
+		target.get_node("Hit").play("statUp")
+	elif(change==-1):
 		amountText=" fell!"
-	if(change==-2):
+		target.get_node("Hit").play("statDown")
+	elif(change==-2):
 		amountText=" fell sharply!"
+		target.get_node("Hit").play("statDown")
+	else:
+		target.get_node("Hit").play("statUp")
 	return target.pokemon.name + "'s " + newText + amountText
 
 func xp():

@@ -7,12 +7,22 @@ class_name StatBlock
 @export var type1: GameManager.types
 @export var type2: GameManager.types
 
-func initialize():
+func initialize(refreshed):
+	if(refreshed):
+		$"Health Bar".max_value=maxHealth
+		$"Health Bar".value=health
+		$"Health Bar/Health Bar2".max_value=maxHealth
+		$"Health Bar/Health Bar2".value=health
 	$Name.text=pokemonName
 	$Level.text="Lv: " + str(level)
 	$"Health Bar/Health".text = str(health) + "/" + str(maxHealth)
 	$"Health Bar".max_value=maxHealth
-	$"Health Bar".value=health
+	$"Health Bar/Health Bar2".max_value=maxHealth
+	var tween=create_tween()
+	tween.tween_property($"Health Bar", "value", health, .2)
+	var tween2=create_tween()
+	tween2.tween_property($"Health Bar/Health Bar2", "value", health, .5)
+	#$"Health Bar".value=health
 	$Type1/AnimationPlayer.play(str(GameManager.types.keys()[type1]))
 	$Type2/AnimationPlayer.play(str(GameManager.types.keys()[type2]))
 

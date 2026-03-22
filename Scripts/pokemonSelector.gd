@@ -15,6 +15,7 @@ var backupPokemon=null
 
 # Called when the node enters the scene tree for the first time.
 func initialize() -> void:
+	var refresh=false
 	if(backupPokemon!=pokemon):
 		attack=0
 		defense=0
@@ -24,6 +25,7 @@ func initialize() -> void:
 		accuracy=0
 		backupPokemon=pokemon
 		print("refreshed stats")
+		refresh=true
 	for child in $Back.get_children():
 		child.visible=false
 	for child in $Front.get_children():
@@ -50,7 +52,7 @@ func initialize() -> void:
 			visible=false
 			holder.health=0
 			pokemon.health=0
-		holder.initialize()
+		holder.initialize(refresh)
 			
 func randomAttack():
 	return(pokemon.moves.pick_random())

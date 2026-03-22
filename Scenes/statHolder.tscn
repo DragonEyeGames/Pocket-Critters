@@ -1,13 +1,19 @@
-[gd_scene load_steps=7 format=3 uid="uid://csq0ccnt2o6ri"]
+[gd_scene load_steps=9 format=3 uid="uid://csq0ccnt2o6ri"]
 
 [ext_resource type="Script" uid="uid://ca571jdvs688u" path="res://Scripts/stat_holder.gd" id="1_2unu8"]
 [ext_resource type="PackedScene" uid="uid://jy4vn4rtcgkl" path="res://Scenes/colorSlot.tscn" id="2_mo86g"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mo86g"]
-bg_color = Color(0.67, 0, 0, 1)
+bg_color = Color(0.67, 0, 0, 0)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5i5ho"]
 bg_color = Color(0, 0.42, 0.04900005, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_47j04"]
+bg_color = Color(0.67, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_417hj"]
+bg_color = Color(0, 0.66, 0.07700009, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_14h86"]
 bg_color = Color(0.048400007, 0.28988662, 0.44, 1)
@@ -76,7 +82,18 @@ offset_bottom = 88.0
 theme_override_styles/background = SubResource("StyleBoxFlat_mo86g")
 theme_override_styles/fill = SubResource("StyleBoxFlat_5i5ho")
 max_value = 20.0
-value = 20.0
+value = 10.0
+show_percentage = false
+
+[node name="Health Bar2" type="ProgressBar" parent="Health Bar"]
+show_behind_parent = true
+layout_mode = 0
+offset_right = 314.0
+offset_bottom = 27.0
+theme_override_styles/background = SubResource("StyleBoxFlat_47j04")
+theme_override_styles/fill = SubResource("StyleBoxFlat_417hj")
+max_value = 20.0
+value = 13.0
 show_percentage = false
 
 [node name="Health" type="RichTextLabel" parent="Health Bar"]
