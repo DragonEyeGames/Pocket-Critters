@@ -138,7 +138,7 @@ var attackingID:=0
 @export var playerPosition:= Vector2.ZERO
 @export var respawnSpot:=Vector2.ZERO
 
-@export var currentScene = "res://Levels/forest-1.tscn"
+@export var currentScene = "res://Levels/forest.tscn"
 
 @export var blaze1:=false
 

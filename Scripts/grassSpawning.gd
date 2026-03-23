@@ -7,7 +7,7 @@ func _ready() -> void:
 		var instance = grass.instantiate()
 		
 		var pos =map_to_local(cell)
-		pos += Vector2(60, 116) / 2
+		pos += Vector2(0, 0) / 2
 		pos = to_global(pos)
 		instance.global_position = pos
-		add_child(instance)
+		$"../Y-Sort".add_child(instance)
