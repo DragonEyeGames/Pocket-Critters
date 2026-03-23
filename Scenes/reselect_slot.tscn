@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://c1n8nkmvur2yk"]
 
 [ext_resource type="PackedScene" uid="uid://csi5giv4qbgfx" path="res://Scenes/team_slot.tscn" id="1_3axak"]
-[ext_resource type="Script" uid="uid://bf1aodluhi7xr" path="res://Scenes/reselect_slot.gd" id="1_vni2j"]
+[ext_resource type="Script" uid="uid://bf1aodluhi7xr" path="res://Scripts/reselect_slot.gd" id="1_vni2j"]
 
 [node name="ReselectSlot" type="Control"]
 z_index = 1

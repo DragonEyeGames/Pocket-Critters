@@ -1,18 +1,19 @@
-[gd_scene load_steps=43 format=3 uid="uid://p6x3hd6afog6"]
+[gd_scene load_steps=45 format=3 uid="uid://p6x3hd6afog6"]
 
 [ext_resource type="PackedScene" uid="uid://ba24hclljygvv" path="res://Scenes/pokemonSelector.tscn" id="1_ip7xm"]
 [ext_resource type="Script" uid="uid://do3gaqda1wenc" path="res://Scripts/battle.gd" id="1_oxp8w"]
-[ext_resource type="Script" uid="uid://b5ehmgk77btv7" path="res://Scenes/moves.gd" id="3_1otgo"]
+[ext_resource type="Script" uid="uid://b5ehmgk77btv7" path="res://Scripts/moves.gd" id="3_1otgo"]
 [ext_resource type="PackedScene" uid="uid://csq0ccnt2o6ri" path="res://Scenes/statHolder.tscn" id="3_7sfm4"]
-[ext_resource type="Shader" uid="uid://bomfvo6o4mvg6" path="res://Scenes/flash.gdshader" id="3_k7mbx"]
+[ext_resource type="Shader" uid="uid://bomfvo6o4mvg6" path="res://Shaders/flash.gdshader" id="3_k7mbx"]
 [ext_resource type="PackedScene" uid="uid://b013ftqbgrpxx" path="res://Scenes/moveDisplay.tscn" id="4_pd5xk"]
 [ext_resource type="PackedScene" uid="uid://c1n8nkmvur2yk" path="res://Scenes/reselect_slot.tscn" id="6_f6xt6"]
 [ext_resource type="PackedScene" uid="uid://diacwj0uebdpj" path="res://Scenes/replace_slot.tscn" id="7_lrv64"]
 [ext_resource type="Texture2D" uid="uid://prt0a5vyjimx" path="res://Assets/Pokeball.png" id="7_ww2ai"]
-[ext_resource type="Script" uid="uid://drpkax8na82vo" path="res://Scenes/stats.gd" id="9_qeyqd"]
-[ext_resource type="Script" uid="uid://klm0bf5usy6q" path="res://Scenes/cinematicCamera.gd" id="11_upb72"]
+[ext_resource type="Script" uid="uid://drpkax8na82vo" path="res://Scripts/stats.gd" id="9_qeyqd"]
+[ext_resource type="Script" uid="uid://klm0bf5usy6q" path="res://Scripts/cinematicCamera.gd" id="11_upb72"]
 [ext_resource type="AudioStream" uid="uid://dru46jgfsbs2p" path="res://BattleSounds/stat-down.mp3" id="12_heh15"]
 [ext_resource type="AudioStream" uid="uid://3v3vqera0ljs" path="res://BattleSounds/stat-up.mp3" id="13_xkp4y"]
+[ext_resource type="AudioStream" uid="uid://tkklgkg3lbj3" path="res://GeneralSFX/spawnPokemon.mp3" id="14_xkp4y"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_upb72"]
 resource_local_to_scene = true
@@ -139,34 +140,6 @@ _data = {
 &"statUp": SubResource("Animation_rssjf")
 }
 
-[sub_resource type="Animation" id="Animation_387br"]
-resource_name = "idle"
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:rotation")
-tracks/0/interp = 2
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.25, 0.5, 0.75, 1),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
-"update": 0,
-"values": [0.0, 0.08726646, 0.0, -0.08726646, 0.0]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".:position")
-tracks/1/interp = 2
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.25, 0.5, 0.75, 1),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
-"update": 0,
-"values": [Vector2(142, 305), Vector2(145.21, 304.085), Vector2(142, 305), Vector2(138.88, 299.97), Vector2(142, 305)]
-}
-
 [sub_resource type="Animation" id="Animation_emx8f"]
 length = 0.001
 tracks/0/type = "value"
@@ -222,34 +195,6 @@ tracks/1/keys = {
 "values": [0.0, 0.34906584, 0.0]
 }
 
-[sub_resource type="Animation" id="Animation_hgaye"]
-resource_name = "hit"
-length = 0.2
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 2
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector2(142, 305), Vector2(143, 290), Vector2(142, 305)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".:rotation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.0]
-}
-
 [sub_resource type="Animation" id="Animation_cwdtu"]
 resource_name = "call"
 length = 0.65
@@ -278,6 +223,62 @@ tracks/1/keys = {
 "values": [0.0, -0.2617994, 0.0, 0.14835298, 0.0, -0.08726646, 0.0]
 }
 
+[sub_resource type="Animation" id="Animation_hgaye"]
+resource_name = "hit"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(142, 305), Vector2(143, 290), Vector2(142, 305)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_387br"]
+resource_name = "idle"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.5, 0.75, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.08726646, 0.0, -0.08726646, 0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.5, 0.75, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(142, 305), Vector2(145.21, 304.085), Vector2(142, 305), Vector2(138.88, 299.97), Vector2(142, 305)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_hgaye"]
 _data = {
 &"RESET": SubResource("Animation_emx8f"),
@@ -285,6 +286,33 @@ _data = {
 &"call": SubResource("Animation_cwdtu"),
 &"hit": SubResource("Animation_hgaye"),
 &"idle": SubResource("Animation_387br")
+}
+
+[sub_resource type="Animation" id="Animation_30jyd"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(3, 3)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:material:shader_parameter/flash_value")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
 }
 
 [sub_resource type="Animation" id="Animation_6atxy"]
@@ -315,33 +343,6 @@ tracks/1/keys = {
 "values": [1.0, 0.0]
 }
 
-[sub_resource type="Animation" id="Animation_30jyd"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:scale")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(3, 3)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".:material:shader_parameter/flash_value")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.0]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_dao0j"]
 _data = {
 &"RESET": SubResource("Animation_30jyd"),
@@ -352,35 +353,7 @@ _data = {
 resource_local_to_scene = true
 shader = ExtResource("3_k7mbx")
 shader_parameter/flash_color = Color(1, 1, 1, 1)
-shader_parameter/flash_value = 0.0
-
-[sub_resource type="Animation" id="Animation_nne6o"]
-resource_name = "idle"
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("../Opponent:rotation")
-tracks/0/interp = 2
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.26666668, 0.5, 0.75, 1),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
-"update": 0,
-"values": [0.0, -0.08726646259971647, 0.0, 0.08726646259971647, 0.0]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("../Opponent:position")
-tracks/1/interp = 2
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.25, 0.5, 0.75, 1),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
-"update": 0,
-"values": [Vector2(692, 144), Vector2(688.13, 137.98), Vector2(692, 144), Vector2(692.155, 139.425), Vector2(692, 144)]
-}
+shader_parameter/flash_value = 1.0
 
 [sub_resource type="Animation" id="Animation_fonr4"]
 length = 0.001
@@ -437,6 +410,34 @@ tracks/1/keys = {
 "values": [0.0, -0.5235988, 0.0]
 }
 
+[sub_resource type="Animation" id="Animation_ljaiu"]
+resource_name = "call"
+length = 0.65
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Opponent:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.23333333, 0.36666667, 0.46, 0.56, 0.65),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(692, 144), Vector2(677, 138), Vector2(692, 144), Vector2(724, 137.00002), Vector2(692, 144), Vector2(692, 130), Vector2(692, 144)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Opponent:rotation")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.23333333, 0.36666667, 0.46, 0.56, 0.65),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, -0.34906584, 0.0, 0.34906584, 0.0, -0.12217305, 0.0]
+}
+
 [sub_resource type="Animation" id="Animation_486ce"]
 resource_name = "hit"
 length = 0.2
@@ -465,32 +466,32 @@ tracks/1/keys = {
 "values": [0.0]
 }
 
-[sub_resource type="Animation" id="Animation_ljaiu"]
-resource_name = "call"
-length = 0.65
+[sub_resource type="Animation" id="Animation_nne6o"]
+resource_name = "idle"
+loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("../Opponent:position")
+tracks/0/path = NodePath("../Opponent:rotation")
 tracks/0/interp = 2
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.23333333, 0.36666667, 0.46, 0.56, 0.65),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.26666668, 0.5, 0.75, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 0,
-"values": [Vector2(692, 144), Vector2(677, 138), Vector2(692, 144), Vector2(724, 137.00002), Vector2(692, 144), Vector2(692, 130), Vector2(692, 144)]
+"values": [0.0, -0.08726646259971647, 0.0, 0.08726646259971647, 0.0]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("../Opponent:rotation")
+tracks/1/path = NodePath("../Opponent:position")
 tracks/1/interp = 2
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.23333333, 0.36666667, 0.46, 0.56, 0.65),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.25, 0.5, 0.75, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 0,
-"values": [0.0, -0.34906584, 0.0, 0.34906584, 0.0, -0.12217305, 0.0]
+"values": [Vector2(692, 144), Vector2(688.13, 137.98), Vector2(692, 144), Vector2(692.155, 139.425), Vector2(692, 144)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_387br"]
@@ -806,81 +807,6 @@ _data = {
 &"catch-succeed": SubResource("Animation_lrv64")
 }
 
-[sub_resource type="Animation" id="Animation_xkp4y"]
-resource_name = "load"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Player:scale")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.5, 0.75),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector2(1e-05, 1e-05), Vector2(1e-05, 1e-05), Vector2(3, 3)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Opponent:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(1059, 135), Vector2(709, 135)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Player:material:shader_parameter/flash_value")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0.5, 0.8666667),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [1.0, 0.0]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("BattleOptions:position")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0.85, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(3, 547), Vector2(0, 386)]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("StatHolder:position")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0.85, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(988, 230), Vector2(441, 242)]
-}
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("StatHolder2:position")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"times": PackedFloat32Array(0.85, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(-526, 18), Vector2(28, 35)]
-}
-
 [sub_resource type="Animation" id="Animation_vd41i"]
 length = 0.001
 tracks/0/type = "value"
@@ -955,17 +881,284 @@ tracks/5/keys = {
 "update": 0,
 "values": [Vector2(-526, 18)]
 }
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Player:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Opponent:scale")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1e-05, 1e-05)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Opponent:material:shader_parameter/flash_value")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
+
+[sub_resource type="Animation" id="Animation_xkp4y"]
+resource_name = "load"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Player:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 0.75),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1e-05, 1e-05), Vector2(1e-05, 1e-05), Vector2(3, 3)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Opponent:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1059, 135), Vector2(709, 135)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Player:material:shader_parameter/flash_value")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.5, 0.8666667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [1.0, 0.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("BattleOptions:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.85, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(3, 547), Vector2(0, 386)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("StatHolder:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.85, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(988, 230), Vector2(441, 242)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("StatHolder2:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0.85, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-526, 18), Vector2(28, 35)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Player:modulate")
+tracks/6/interp = 0
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.45),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/7/type = "method"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Spawn")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0.5),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [0.0],
+"method": &"play"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_gpeip"]
+resource_name = "trainerLoad"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Player:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 0.75),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1e-05, 1e-05), Vector2(1e-05, 1e-05), Vector2(3, 3)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Player:material:shader_parameter/flash_value")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.5, 0.8666667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [1.0, 0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("BattleOptions:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.85, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(3, 547), Vector2(0, 386)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("StatHolder:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.85, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(988, 230), Vector2(441, 242)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("StatHolder2:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.85, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-526, 18), Vector2(28, 35)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Player:modulate")
+tracks/5/interp = 0
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.45),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Opponent:scale")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.16666667, 0.43333334),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1e-05, 1e-05), Vector2(1e-05, 1e-05), Vector2(3, 3)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Opponent:material:shader_parameter/flash_value")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0.14, 0.57),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [1.0, 0.0]
+}
+tracks/8/type = "method"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Spawn")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0.23333333, 0.56666666),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [0.0],
+"method": &"play"
+}, {
+"args": [0.0],
+"method": &"play"
+}]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Opponent:position")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(709, 135)]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_nne6o"]
 _data = {
 &"RESET": SubResource("Animation_vd41i"),
-&"load": SubResource("Animation_xkp4y")
+&"load": SubResource("Animation_xkp4y"),
+&"trainerLoad": SubResource("Animation_gpeip")
 }
 
 [node name="Battle" type="Node2D"]
 script = ExtResource("1_oxp8w")
 
 [node name="Player" parent="." node_paths=PackedStringArray("holder") instance=ExtResource("1_ip7xm")]
+modulate = Color(1, 1, 1, 0)
 material = SubResource("ShaderMaterial_upb72")
 position = Vector2(142, 305)
 scale = Vector2(1e-05, 1e-05)
@@ -991,7 +1184,7 @@ speed_scale = 1.6
 [node name="Opponent" parent="." node_paths=PackedStringArray("holder") instance=ExtResource("1_ip7xm")]
 material = SubResource("ShaderMaterial_rssjf")
 position = Vector2(1059, 135)
-scale = Vector2(3, 3)
+scale = Vector2(1e-05, 1e-05)
 back = false
 holder = NodePath("../StatHolder2")
 
@@ -1014,10 +1207,9 @@ libraries = {
 speed_scale = 1.6
 
 [node name="BattleOptions" type="ColorRect" parent="."]
-offset_left = 3.0
-offset_top = 547.0
-offset_right = 1040.0
-offset_bottom = 730.0001
+offset_top = 386.0
+offset_right = 1037.0
+offset_bottom = 569.0
 mouse_filter = 2
 color = Color(0.44, 0.44, 0.44, 1)
 
@@ -1097,15 +1289,15 @@ color = Color(0.48909998, 0.73, 0.525235, 1)
 [node name="OpponentController" type="Node2D" parent="."]
 
 [node name="StatHolder" parent="." instance=ExtResource("3_7sfm4")]
-offset_left = 988.0
+offset_left = 423.0
 offset_top = 230.0
-offset_right = 1494.9988
-offset_bottom = 361.99966
+offset_right = 929.9989
+offset_bottom = 361.9989
 
 [node name="StatHolder2" parent="." instance=ExtResource("3_7sfm4")]
-offset_left = -526.0
+offset_left = 19.0
 offset_top = 18.0
-offset_right = -19.0
+offset_right = 526.0
 offset_bottom = 150.0
 
 [node name="Reorder Team" type="Control" parent="."]
@@ -1401,7 +1593,6 @@ text = "Accuracy: -1"
 libraries = {
 &"": SubResource("AnimationLibrary_nne6o")
 }
-autoplay = "load"
 speed_scale = 0.8
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -1415,6 +1606,11 @@ volume_db = -8.0
 [node name="statUp" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("13_xkp4y")
 volume_db = -8.0
+
+[node name="Spawn" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("14_xkp4y")
+volume_db = -22.0
+max_polyphony = 10
 
 [connection signal="animation_finished" from="Player/Animate" to="." method="_player_animation_finished"]
 [connection signal="animation_finished" from="Opponent/Animate" to="." method="_on_animate_animation_finished"]

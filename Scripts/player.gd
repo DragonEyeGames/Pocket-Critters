@@ -11,6 +11,7 @@ var direction = "down"
 var state="idle"
 
 func _ready() -> void:
+	GameManager.player=self
 	SignalBus.loadData.connect(_load)
 	global_position=GameManager.playerPosition
 

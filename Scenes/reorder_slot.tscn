@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://dsf85ixufbmqg"]
 
-[ext_resource type="Script" uid="uid://cei68s080kli0" path="res://Scenes/reorder_slot.gd" id="1_ndmew"]
+[ext_resource type="Script" uid="uid://cei68s080kli0" path="res://Scripts/reorder_slot.gd" id="1_ndmew"]
 [ext_resource type="PackedScene" uid="uid://csi5giv4qbgfx" path="res://Scenes/team_slot.tscn" id="1_tbjjy"]
 
 [node name="ReorderSlot" type="Control"]

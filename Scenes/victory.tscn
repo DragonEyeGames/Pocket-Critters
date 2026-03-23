@@ -1,0 +1,42 @@
+[gd_scene load_steps=2 format=3 uid="uid://b7lodndjoa1ur"]
+
+[ext_resource type="Script" uid="uid://fw8mx4qgfrso" path="res://Scenes/victory.gd" id="1_1fp7o"]
+
+[node name="Victory" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_1fp7o")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_right = 962.0
+offset_bottom = 168.0
+theme_override_font_sizes/normal_font_size = 40
+text = "You have beat the first part of the game! More is to come later, but this is it for now. You can keep exploring the world, or restart your save file."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Explore" type="Button" parent="."]
+layout_mode = 0
+offset_left = 256.0
+offset_top = 210.0
+offset_right = 721.0
+offset_bottom = 319.0
+theme_override_font_sizes/font_size = 50
+text = "Explore"
+
+[node name="Restart" type="Button" parent="."]
+layout_mode = 0
+offset_left = 258.0
+offset_top = 349.0
+offset_right = 723.0
+offset_bottom = 458.0
+theme_override_font_sizes/font_size = 50
+text = "Restart"
+
+[connection signal="pressed" from="Explore" to="." method="_on_explore_pressed"]
+[connection signal="pressed" from="Restart" to="." method="_on_restart_pressed"]

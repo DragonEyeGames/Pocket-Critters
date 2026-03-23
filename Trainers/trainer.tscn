@@ -1,8 +1,8 @@
 [gd_scene load_steps=39 format=3 uid="uid://bmsyi0138rgpo"]
 
 [ext_resource type="Texture2D" uid="uid://bhngxc6jw5euf" path="res://Assets/charsetA_1.png" id="1_2jmqy"]
-[ext_resource type="Script" uid="uid://ddt23cppjdwcy" path="res://Scenes/trainer.gd" id="1_j355o"]
-[ext_resource type="Script" uid="uid://crp3g76avkl7g" path="res://Scenes/dialogue.gd" id="3_ryukr"]
+[ext_resource type="Script" uid="uid://ddt23cppjdwcy" path="res://Scripts/trainer.gd" id="1_j355o"]
+[ext_resource type="Script" uid="uid://crp3g76avkl7g" path="res://Scripts/dialogue.gd" id="3_ryukr"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_6bp64"]
 radius = 4.0

@@ -39,6 +39,8 @@ func _ready():
 func _on_area_2d_area_entered(area: Area2D) -> void:
 	if(defeated):
 		return
+	GameManager.camera.target=self
+	GameManager.canPause=false
 	area.get_parent().canMove=false
 	dialogue.nameText=trainerData.trainerName
 	dialogue.bodyText=trainerData.preFightDialogue[0]
@@ -56,6 +58,7 @@ func nextText():
 		if(not defeated):
 			GameManager.playerPosition=player.global_position
 			Music.trainer()
+			GameManager.canPause=true
 			GameManager.trainerBattle(trainerData.trainerName, battleTeam, ID)
 		elif(len(trainerData.afterFightDialogue)>speechPage):
 			dialogue.nameText=trainerData.trainerName

@@ -5,8 +5,11 @@ var deadPokemon=false
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	if(GameManager.teamBattle):
+		$Intro.play("trainerLoad")
 		$BattleOptions/Options/Catch.disabled=true
 		$BattleOptions/Options/Run.disabled=true
+	else:
+		$Intro.play("load")
 	var healthy : Array[PokemonData] = []
 	var fainted: Array[PokemonData] =[]
 	for pokemon in GameManager.playerTeam:

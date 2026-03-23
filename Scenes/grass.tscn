@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://bw2ujrj6t7blx"]
+[gd_scene load_steps=5 format=3 uid="uid://bw2ujrj6t7blx"]
 
 [ext_resource type="Texture2D" uid="uid://bo43kqdc3lvgx" path="res://Assets/Woods.png" id="1_kl2qe"]
 [ext_resource type="Script" uid="uid://tkhhxcxbh2nt" path="res://Scripts/grass.gd" id="2_mw2ei"]
+[ext_resource type="AudioStream" uid="uid://8uqo7ln6vk2g" path="res://GeneralSFX/grassRustle.mp3" id="3_qm417"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_2qnaq"]
 radius = 9.0
@@ -24,5 +25,9 @@ position = Vector2(0, -4)
 texture = ExtResource("1_kl2qe")
 region_enabled = true
 region_rect = Rect2(224, 52, 15, 13)
+
+[node name="Rustle" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_qm417")
+volume_db = -35.0
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

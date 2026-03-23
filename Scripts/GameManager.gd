@@ -142,11 +142,17 @@ var attackingID:=0
 
 @export var blaze1:=false
 
+@export var starter: TeamData
+
+var camera: Camera2D
+
 var healthMod=.6
 
 var toBattle: PokemonData
 
 var defeated=[]
+
+var player
 
 var transitionAnimator: AnimationPlayer
 
@@ -157,9 +163,10 @@ func _ready() -> void:
 		SignalBus.emit_signal("loadData")
 
 func restart():
-	playerTeam.append(newPokemon(pokemon.Pilfetch))
-	pokedex.append(pokemon.Pilfetch)
-	seenDex.append(pokemon.Pilfetch)
+	starter=load("res://StarterPokemon/geckrowStarter.tres")
+	playerTeam.append(setPokemon(starter.species, starter.level, starter.moves))
+	pokedex.append(pokemon.Geckrow)
+	seenDex.append(pokemon.Geckrow)
 
 
 func wildBattle(newPokemonInstance):
@@ -184,7 +191,7 @@ func pokemonName(value):
 			return n
 	return "Unknown"
 
-func newPokemon(species, level = 5):
+func newPokemon(species, level = 6):
 	var p = PokemonData.new()
 	p.base = load("res://Pokemon/" + pokemonName(species).to_lower() + ".tres")
 	p.name = pokemonName(species)
@@ -295,7 +302,7 @@ func saveGame():
 	var teamResource = PlayerTeamData.new()
 	teamResource.team = playerTeam.duplicate()
 	data.team=teamResource
-	data.playerPos=playerPosition
+	data.playerPos=player.global_position
 	data.safePos=respawnSpot
 	data.pokedex=pokedex.duplicate()
 	data.seenDex=seenDex.duplicate()
@@ -318,3 +325,16 @@ func loadGame():
 	defeated = data.defeated.duplicate()
 	blaze1=data.blaze1
 	return true
+	
+func wipeSave():
+	if FileAccess.file_exists("user://save.tres"):
+		DirAccess.remove_absolute("user://save.tres")
+	playerTeam = []
+	playerPosition = Vector2.ZERO
+	respawnSpot = Vector2.ZERO
+	pokedex = []
+	seenDex = []
+	defeated = []
+	blaze1 = false
+	get_tree().change_scene_to_file("res://Levels/forest-1.tscn")
+	restart()

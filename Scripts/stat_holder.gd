@@ -50,6 +50,7 @@ func xp(old, new, newPokemon):
 		if new_level_check > current_level:
 			current_level = new_level_check
 			newPokemon.level+=1
+			$LevelUp.play()
 			$"..".loadLevel(newPokemon)
 			$"../Player".initialize()
 			$"../BattleOptions/Display".text=newPokemon.name + " leveled up to level " + str(newPokemon.level) + "!"

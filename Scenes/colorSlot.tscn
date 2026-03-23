@@ -1,6 +1,6 @@
 [gd_scene load_steps=12 format=3 uid="uid://jy4vn4rtcgkl"]
 
-[ext_resource type="Script" uid="uid://bk7icv30he8vy" path="res://Scenes/typeRect.gd" id="1_qcpwj"]
+[ext_resource type="Script" uid="uid://bk7icv30he8vy" path="res://Scripts/typeRect.gd" id="1_qcpwj"]
 
 [sub_resource type="Animation" id="Animation_ucl33"]
 resource_name = "Bug"

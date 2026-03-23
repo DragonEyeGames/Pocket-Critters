@@ -1,11 +1,12 @@
 [gd_scene load_steps=5 format=3 uid="uid://cwgwfsvuyqa0v"]
 
-[ext_resource type="Script" uid="uid://du8jh2d34bd3w" path="res://Scenes/music.gd" id="1_476t3"]
+[ext_resource type="Script" uid="uid://du8jh2d34bd3w" path="res://Scripts/music.gd" id="1_476t3"]
 [ext_resource type="AudioStream" uid="uid://cpqstbmhaovl3" path="res://Music/55 - Route 4 (Spring).mp3" id="1_fbmny"]
 [ext_resource type="AudioStream" uid="uid://bdxjptvmu78ya" path="res://Music/15 - Battle! (Wild Pokémon).mp3" id="3_vi5kw"]
 [ext_resource type="AudioStream" uid="uid://dbfkp3qhstuha" path="res://Music/28 - Battle! (Trainer).mp3" id="4_vi5kw"]
 
 [node name="Music" type="Node2D"]
+process_mode = 3
 script = ExtResource("1_476t3")
 
 [node name="Music" type="AudioStreamPlayer" parent="."]

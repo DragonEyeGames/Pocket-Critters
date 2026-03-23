@@ -10,3 +10,7 @@ func _ready() -> void:
 	GameManager.encounterMax=levelMax
 	GameManager.transitionAnimator=$Transition/AnimationPlayer
 	#pass
+
+
+func _on_exit_area_entered(_area: Area2D) -> void:
+	get_tree().call_deferred("change_scene_to_file", "res://Scenes/victory.tscn")
