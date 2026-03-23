@@ -16,6 +16,9 @@ var walkingAway=false
 var battleTeam: Array[PokemonData] = []
 var defeated=false
 
+var playerEntered=false
+var afterSpeaking=false
+
 func _ready():
 	ID=0
 	if ID == 0:
@@ -38,14 +41,6 @@ func _ready():
 
 func _on_area_2d_area_entered(area: Area2D) -> void:
 	if(defeated):
-		GameManager.camera.target=self
-		GameManager.canPause=false
-		area.get_parent().canMove=false
-		dialogue.nameText=trainerData.trainerName
-		dialogue.bodyText=trainerData.afterDefeatDialogue[0]
-		speechPage=1
-		dialogue.speaker=self
-		dialogue.loadDialogue()
 		return
 	GameManager.camera.target=self
 	GameManager.canPause=false
@@ -57,6 +52,13 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 	dialogue.loadDialogue()
 
 func nextText():
+	if(playerEntered):
+		dialogue.visible=false
+		player.canMove=true
+		playerEntered=false
+		GameManager.camera.target=player
+		afterSpeaking=false
+		return
 	if(len(trainerData.preFightDialogue)>speechPage and not defeated):
 		dialogue.nameText=trainerData.trainerName
 		dialogue.bodyText=trainerData.preFightDialogue[speechPage]
@@ -98,3 +100,21 @@ func _on_defeat(trainerID):
 func _process(_delta: float) -> void:
 	if(walkingAway):
 		position.y-=1
+	if(playerEntered and Input.is_action_just_pressed("Interact") and not afterSpeaking):
+		afterSpeaking=true
+		GameManager.camera.target=self
+		GameManager.canPause=false
+		player.canMove=false
+		dialogue.nameText=trainerData.trainerName
+		dialogue.bodyText=trainerData.afterDefeatDialogue[0]
+		speechPage=1
+		dialogue.speaker=self
+		dialogue.loadDialogue()
+
+
+func _on_player_small_area_entered(_area: Area2D) -> void:
+	playerEntered=true
+
+
+func _on_player_small_area_exited(_area: Area2D) -> void:
+	playerEntered=false
