@@ -38,6 +38,14 @@ func _ready():
 
 func _on_area_2d_area_entered(area: Area2D) -> void:
 	if(defeated):
+		GameManager.camera.target=self
+		GameManager.canPause=false
+		area.get_parent().canMove=false
+		dialogue.nameText=trainerData.trainerName
+		dialogue.bodyText=trainerData.afterDefeatDialogue[0]
+		speechPage=1
+		dialogue.speaker=self
+		dialogue.loadDialogue()
 		return
 	GameManager.camera.target=self
 	GameManager.canPause=false
@@ -68,7 +76,7 @@ func nextText():
 		else:
 			dialogue.visible=false
 			player.canMove=true
-			$Area2D.queue_free()
+			#$Area2D.queue_free()
 			if(trainerData.rival!=0):
 				sprite.play("walk-up")
 				walkingAway=true

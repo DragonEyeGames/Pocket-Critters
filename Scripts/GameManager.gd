@@ -336,5 +336,5 @@ func wipeSave():
 	seenDex = []
 	defeated = []
 	blaze1 = false
-	get_tree().change_scene_to_file("res://Levels/forest-1.tscn")
+	get_tree().change_scene_to_file("res://Levels/forest.tscn")
 	restart()

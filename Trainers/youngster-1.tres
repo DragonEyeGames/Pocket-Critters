@@ -29,6 +29,7 @@ script = ExtResource("1_d8vc6")
 trainerName = "Youngster"
 preFightDialogue = Array[String](["Hey Mister! Check out my cool critter collection!"])
 afterFightDialogue = Array[String](["I guess you had a cooler collection.", "Good battle though."])
+afterDefeatDialogue = Array[String](["I'm still young and have time to learn!"])
 team = Array[ExtResource("2_85jdt")]([SubResource("Resource_85jdt"), SubResource("Resource_oiqpx")])
 sprite = "M2"
 metadata/_custom_type_script = "uid://0mhfdoexj3v2"

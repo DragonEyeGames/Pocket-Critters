@@ -31,6 +31,7 @@ script = ExtResource("1_6cpjc")
 trainerName = "Rookie"
 preFightDialogue = Array[String](["I may have just started, but I think I'm the strongest in the land!", "Prepare for a crushing defeat!"])
 afterFightDialogue = Array[String](["Guess I overestimated my team a little."])
+afterDefeatDialogue = Array[String](["I'm working on getting better still! One day I'll be the best."])
 team = Array[ExtResource("2_ejocf")]([SubResource("Resource_bhuov"), SubResource("Resource_nfa4g")])
 sprite = "M4"
 metadata/_custom_type_script = "uid://0mhfdoexj3v2"

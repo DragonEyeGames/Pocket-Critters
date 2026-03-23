@@ -17,7 +17,7 @@
 
 [sub_resource type="Resource" id="Resource_xq83u"]
 script = ExtResource("2_tjyiu")
-level = 3
+level = 4
 moves = Array[ExtResource("3_1b184")]([ExtResource("7_k3w2l"), ExtResource("5_n883y"), ExtResource("6_tjyiu"), ExtResource("7_1b184")])
 metadata/_custom_type_script = "uid://dxn4lkbl53l63"
 
@@ -40,6 +40,7 @@ script = ExtResource("1_n883y")
 trainerName = "Scout"
 preFightDialogue = Array[String](["If I beat you I'll get a pokemon battling badge!"])
 afterFightDialogue = Array[String](["Good thing there is a badge for losing a battle too."])
+afterDefeatDialogue = Array[String](["I still have a few other badges I need to get first. I'll prioritize those."])
 team = Array[ExtResource("2_tjyiu")]([SubResource("Resource_xq83u"), SubResource("Resource_fetqp"), SubResource("Resource_6t8bx")])
 sprite = "M4"
 metadata/_custom_type_script = "uid://0mhfdoexj3v2"

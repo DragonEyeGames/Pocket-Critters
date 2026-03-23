@@ -8,7 +8,7 @@
 radius = 4.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_344ge"]
-radius = 47.042534
+radius = 67.00746
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_344ge"]
 atlas = ExtResource("1_2jmqy")

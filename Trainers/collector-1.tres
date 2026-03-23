@@ -65,6 +65,7 @@ script = ExtResource("1_2iuwb")
 trainerName = "Collector"
 preFightDialogue = Array[String](["I've almost completed my critter dex! Just a few more to go!"])
 afterFightDialogue = Array[String](["Atleast my critterdex is probably fuller than yours."])
+afterDefeatDialogue = Array[String](["I'm still missing just one critter from this area. I gotta find it soon."])
 team = Array[ExtResource("2_3wpfk")]([SubResource("Resource_esbbw"), SubResource("Resource_55jdc"), SubResource("Resource_mpngm"), SubResource("Resource_1at6r"), SubResource("Resource_6h0dd"), SubResource("Resource_oac0p")])
 sprite = "M2"
 metadata/_custom_type_script = "uid://0mhfdoexj3v2"
