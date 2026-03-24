@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=4 uid="uid://hvt8a8487efr"]
+[gd_scene load_steps=27 format=4 uid="uid://hvt8a8487efr"]
 
 [ext_resource type="Script" uid="uid://swgsdmbo5fng" path="res://Scripts/main.gd" id="1_yelr5"]
 [ext_resource type="PackedScene" uid="uid://c5yxtkkwi03pt" path="res://Scenes/player.tscn" id="2_fmudw"]
@@ -14,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://cfju02kgmoc4v" path="res://Assets/FireRedSprites/Game Boy Advance - Pokemon FireRed _ LeafGreen - Tilesets - Tileset.png" id="12_6t2tp"]
 [ext_resource type="Texture2D" uid="uid://c77i27y4iwujm" path="res://Assets/critterCenter.png" id="12_dvn4l"]
 [ext_resource type="Texture2D" uid="uid://cwpfb8frdw4go" path="res://Assets/FireRedSprites/improvedBuildings.png" id="13_c2nek"]
+[ext_resource type="Texture2D" uid="uid://6wkiv4wgjgy2" path="res://Assets/FireRedSprites/critterMart.png" id="14_eridb"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_sxxgb"]
 shader = ExtResource("7_rbf7e")
@@ -60,12 +61,12 @@ _data = {
 shader = ExtResource("11_6t2tp")
 shader_parameter/original_0 = Color(0.6, 0.2, 0.8, 1)
 shader_parameter/original_1 = Color(0.65882355, 0.9019608, 0.11372549, 1)
-shader_parameter/original_2 = Color(0, 0, 0, 1)
+shader_parameter/original_2 = Color(1, 0, 0.91764706, 1)
 shader_parameter/original_3 = Color(0, 0, 0, 1)
 shader_parameter/original_4 = Color(0, 0, 0, 1)
 shader_parameter/replace_0 = Color(0, 0, 0, 0)
 shader_parameter/replace_1 = Color(0.47, 0.47, 0.5, 0.47058824)
-shader_parameter/replace_2 = Color(0, 0, 0, 1)
+shader_parameter/replace_2 = Color(0.47, 0.47, 0.5, 0.47058824)
 shader_parameter/replace_3 = Color(0, 0, 0, 1)
 shader_parameter/replace_4 = Color(0, 0, 0, 1)
 
@@ -121,14 +122,20 @@ pokemonEncounters = Array[int]([6, 8, 5, 1, 9, 3, 0, 7])
 levelMin = 1
 levelMax = 6
 pokemonCenter = "res://Levels/PokemonCenters/waymeetPokemonCenter.tscn"
+pokeMart = "res://Levels/PokemonCenters/waymeetPokemonMart.tscn"
 
 [node name="Player" parent="." groups=["Y-Sort"] instance=ExtResource("2_fmudw")]
-position = Vector2(0, -79)
+position = Vector2(160, -172)
 
 [node name="Y-Sort" type="Node2D" parent="." node_paths=PackedStringArray("player")]
 y_sort_enabled = true
 script = ExtResource("3_ne0ai")
 player = NodePath("../Player")
+
+[node name="Trees" type="TileMapLayer" parent="Y-Sort"]
+y_sort_enabled = true
+tile_map_data = PackedByteArray("AAACAAEAAAAOABMAAAADAAEAAAAPABMAAAAEAAEAAAAOABMAAAAFAAEAAAAPABMAAAAGAAEAAAAOABMAAAAHAAEAAAAPABMAAAAIAAEAAAAOABMAAAAJAAEAAAAPABMAAAAKAAEAAAAOABMAAAALAAEAAAAPABMAAAAMAAEAAAAOABMAAAANAAEAAAAPABMAAAAOAAEAAAAOABMAAAAPAAEAAAAPABMAAAAQAAEAAAAOABMAAAARAAEAAAAPABMAAAASAAEAAAAOABMAAAATAAEAAAAPABMAAAD8/wEAAAAOABMAAAD9/wEAAAAPABMAAAD6/wEAAAAOABMAAAD7/wEAAAAPABMAAAD4/wEAAAAOABMAAAD5/wEAAAAPABMAAAD5/wAAAAARABIAAAD1/wAAAAARABIAAADz/wAAAAARABIAAAD0/wEAAAAOABMAAAD1/wEAAAAPABMAAAD2/wEAAAAOABMAAAD3/wEAAAAPABMAAADx/wAAAAARABIAAADw/wEAAAAOABMAAADx/wEAAAAPABMAAADy/wEAAAAOABMAAADz/wEAAAAPABMAAADu/wEAAAAOABMAAADv/wEAAAAPABMAAADv/wAAAAARABIAAADt/wAAAAARABIAAADs/wEAAAAOABMAAADt/wEAAAAPABMAAAATAAAAAAARABIAAAARAAAAAAARABIAAAAPAAAAAAARABIAAAANAAAAAAARABIAAAALAAAAAAARABIAAAAJAAAAAAARABIAAAAHAAAAAAARABIAAAAFAAAAAAARABIAAAADAAAAAAARABIAAAD9/wAAAAARABIAAAD7/wAAAAARABIAAAD3/wAAAAARABIAAAASAAAAAAAQABIAAAAQAAAAAAAQABIAAAAOAAAAAAAQABIAAAAMAAAAAAAQABIAAAAKAAAAAAAQABIAAAAIAAAAAAAQABIAAAAGAAAAAAAQABIAAAAEAAAAAAAQABIAAAACAAAAAAAQABIAAAD8/wAAAAAQABIAAAD6/wAAAAAQABIAAAD4/wAAAAAQABIAAAD2/wAAAAAQABIAAAD0/wAAAAAQABIAAADy/wAAAAAQABIAAADw/wAAAAAQABIAAADu/wAAAAAQABIAAADs/wAAAAAQABIAAAASAP//AAAQABMAAAATAP7/AgAAAAAAAAATAP//AAARABMAAAAQAP//AAAQABMAAAARAP7/AgAAAAAAAAARAP//AAARABMAAAAOAP//AAAQABMAAAAPAP//AAARABMAAAAMAP//AAAQABMAAAANAP7/AgAAAAAAAAANAP//AAARABMAAAAKAP//AAAQABMAAAALAP7/AgAAAAAAAAALAP//AAARABMAAAAIAP//AAAQABMAAAAJAP7/AgAAAAAAAAAJAP//AAARABMAAAAGAP//AAAQABMAAAAHAP7/AgAAAAAAAAAHAP//AAARABMAAAAEAP//AAAQABMAAAAFAP7/AgAAAAAAAAAFAP//AAARABMAAAACAP//AAAQABMAAAADAP7/AgAAAAAAAAADAP//AAARABMAAAD8////AAAQABMAAAD9//7/AgAAAAAAAAD9////AAARABMAAAD6////AAAQABMAAAD7//7/AgAAAAAAAAD7////AAARABMAAAD4////AAAQABMAAAD5//7/AgAAAAAAAAD5////AAARABMAAAD2////AAAQABMAAAD3//7/AgAAAAAAAAD3////AAARABMAAAD0////AAAQABMAAAD1//7/AgAAAAAAAAD1////AAARABMAAADy////AAAQABMAAADz//7/AgAAAAAAAADz////AAARABMAAADw////AAAQABMAAADx//7/AgAAAAAAAADx////AAARABMAAADu////AAAQABMAAADv//7/AgAAAAAAAADv////AAARABMAAADs////AAAQABMAAADt//7/AgAAAAAAAADt////AAARABMAAAAPAP7/AgAAAAAAAAA=")
+tile_set = ExtResource("4_1705y")
 
 [node name="Pause" parent="." instance=ExtResource("5_itvji")]
 
@@ -149,7 +156,7 @@ libraries = {
 
 [node name="Camera" type="Camera2D" parent="." node_paths=PackedStringArray("target")]
 zoom = Vector2(2.675, 2.675)
-limit_bottom = 169
+limit_bottom = 24
 script = ExtResource("8_t551v")
 target = NodePath("../Player")
 
@@ -205,10 +212,23 @@ region_rect = Rect2(89, 231, 112, 80)
 [node name="Mart" type="Sprite2D" parent="." groups=["Y-Sort"]]
 material = SubResource("ShaderMaterial_dvn4l")
 position = Vector2(161, -191)
-texture = ExtResource("12_6t2tp")
+texture = ExtResource("14_eridb")
 offset = Vector2(-9, -15)
-region_enabled = true
 region_rect = Rect2(15, 251, 64, 62)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Mart"]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="Mart/StaticBody2D"]
+polygon = PackedVector2Array(16, 15, 15, 16, 7, 16, 6, 15, 6, 14, -8, 14, -8, 15, -9, 16, -17, 16, -17, 15, -34, 15, -40, 9, -40, 2, -39, 2, -39, -19, 21, -19, 21, 2, 22, 2, 22, 9)
+
+[node name="PokeMart" type="Area2D" parent="Mart"]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mart/PokeMart"]
+position = Vector2(0, 6.5)
+shape = SubResource("RectangleShape2D_dvn4l")
 
 [node name="House" type="Sprite2D" parent="." groups=["Y-Sort"]]
 material = SubResource("ShaderMaterial_eridb")
@@ -235,3 +255,6 @@ region_enabled = true
 region_rect = Rect2(300, 24, 80, 56)
 
 [connection signal="area_entered" from="Poke Center/PokeCenter" to="." method="_on_poke_center_area_entered"]
+[connection signal="area_exited" from="Poke Center/PokeCenter" to="." method="_on_poke_center_area_exited"]
+[connection signal="area_entered" from="Mart/PokeMart" to="." method="_on_poke_mart_area_entered"]
+[connection signal="area_exited" from="Mart/PokeMart" to="." method="_on_poke_mart_area_exited"]

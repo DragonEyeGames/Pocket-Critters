@@ -4,7 +4,9 @@ extends Node2D
 @export var levelMin: int
 @export var levelMax: int
 @export var pokemonCenter: String
+@export var pokeMart: String
 var pokeCenterEntered=false
+var pokeMartEntered
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -18,6 +20,8 @@ func _ready() -> void:
 func _process(_delta: float) -> void:
 	if(Input.is_action_just_pressed("Interact") and pokeCenterEntered):
 		get_tree().call_deferred("change_scene_to_file", pokemonCenter)
+	if(Input.is_action_just_pressed("Interact") and pokeMartEntered):
+		get_tree().call_deferred("change_scene_to_file", pokeMart)
 
 func _on_exit_area_entered(_area: Area2D) -> void:
 	get_tree().call_deferred("change_scene_to_file", "res://Scenes/victory.tscn")
@@ -25,3 +29,13 @@ func _on_exit_area_entered(_area: Area2D) -> void:
 
 func _on_poke_center_area_entered(_area: Area2D) -> void:
 	pokeCenterEntered=true
+
+func _on_poke_center_area_exited(_area: Area2D) -> void:
+	pokeCenterEntered=false
+
+func _on_poke_mart_area_entered(_area: Area2D) -> void:
+	pokeMartEntered=true
+
+
+func _on_poke_mart_area_exited(_area: Area2D) -> void:
+	pokeMartEntered=false

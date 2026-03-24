@@ -1,0 +1,146 @@
+[gd_scene load_steps=11 format=3 uid="uid://dat7jgb1ow1l"]
+
+[ext_resource type="Script" uid="uid://fo75gmfav2sx" path="res://Scenes/pokeMart.gd" id="1_dgv07"]
+[ext_resource type="Texture2D" uid="uid://4q27dhcidos8" path="res://Assets/FireRedSprites/pokeMart.png" id="1_oodv3"]
+[ext_resource type="PackedScene" uid="uid://c5yxtkkwi03pt" path="res://Scenes/player.tscn" id="2_av5t7"]
+[ext_resource type="Texture2D" uid="uid://dv4otklr3xj3k" path="res://Assets/charsetB_1.png" id="3_6w3ke"]
+[ext_resource type="Script" uid="uid://0vwf4ig4k635" path="res://Scenes/critterStoryLady.gd" id="4_qfaje"]
+[ext_resource type="Script" uid="uid://crp3g76avkl7g" path="res://Scripts/dialogue.gd" id="5_s88xu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_av5t7"]
+size = Vector2(32, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qfaje"]
+atlas = ExtResource("3_6w3ke")
+region = Rect2(160, 64, 16, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_s88xu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qfaje")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s88xu"]
+size = Vector2(34, 35)
+
+[node name="PokeMartInt" type="Node2D"]
+script = ExtResource("1_dgv07")
+
+[node name="PokeMart" type="Sprite2D" parent="."]
+texture = ExtResource("1_oodv3")
+region_enabled = true
+region_rect = Rect2(784, 208, 176, 144)
+
+[node name="ColorRect" type="ColorRect" parent="."]
+z_index = -1
+offset_left = -304.0
+offset_top = -206.0
+offset_right = 304.0
+offset_bottom = 204.0
+color = Color(0, 0, 0, 1)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(-1, -6)
+zoom = Vector2(3.79, 3.79)
+
+[node name="Player" parent="." instance=ExtResource("2_av5t7")]
+position = Vector2(-16, 56)
+positionOverride = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+visible = false
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(-88, 8, -24, 8, -24, -40, 24, -40, 24, -32, 72, -32, 72, -39, 88, -23, 88, -80, -88, -80)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(-88, 8, -88, 40, -72, 56, -29, 56, -29, 60, -3, 60, -3, 56, 73, 56, 88, 41, 88, 40, 72, 40, 72, -7, 76, -11, 82, -12, 88, -12, 88, -23, 89, -23, 89, 57, -16, 63, -90, 58, -89, 40)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-56, 31)
+shape = SubResource("RectangleShape2D_av5t7")
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(24, 40, 56, 40, 56, -7, 52, -11, 46, -12, 34, -12, 28, -11, 24, -7)
+
+[node name="CritterStoreLady" type="AnimatedSprite2D" parent="." node_paths=PackedStringArray("dialogue", "player")]
+position = Vector2(-45, -28)
+sprite_frames = SubResource("SpriteFrames_s88xu")
+script = ExtResource("4_qfaje")
+dialogue = NodePath("Dialogue")
+player = NodePath("../Player")
+
+[node name="Dialogue" type="CanvasLayer" parent="CritterStoreLady"]
+layer = 0
+visible = false
+script = ExtResource("5_s88xu")
+
+[node name="ColorRect" type="ColorRect" parent="CritterStoreLady/Dialogue"]
+offset_left = -6.0
+offset_top = 358.0
+offset_right = 967.0
+offset_bottom = 545.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect4" type="ColorRect" parent="CritterStoreLady/Dialogue"]
+offset_left = -6.0
+offset_top = 362.0
+offset_right = 967.0
+offset_bottom = 545.0
+color = Color(0.61339027, 0.61339027, 0.61339027, 1)
+
+[node name="Nameplate" type="Control" parent="CritterStoreLady/Dialogue"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 287.0
+offset_top = 310.0
+offset_right = 666.0
+offset_bottom = 385.0
+
+[node name="ColorRect2" type="ColorRect" parent="CritterStoreLady/Dialogue/Nameplate"]
+layout_mode = 0
+offset_right = 379.0
+offset_bottom = 75.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="CritterStoreLady/Dialogue/Nameplate"]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 375.0
+offset_bottom = 72.0
+color = Color(0.6419343, 0.64193386, 0.6419341, 1)
+
+[node name="Name" type="RichTextLabel" parent="CritterStoreLady/Dialogue/Nameplate"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 4.0
+offset_right = 375.0
+offset_bottom = 72.0
+theme_override_font_sizes/normal_font_size = 38
+text = "???"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Text" type="RichTextLabel" parent="CritterStoreLady/Dialogue"]
+offset_left = 7.0
+offset_top = 401.0
+offset_right = 953.0
+offset_bottom = 533.0
+theme_override_font_sizes/normal_font_size = 27
+
+[node name="Area2D" type="Area2D" parent="CritterStoreLady"]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CritterStoreLady/Area2D"]
+position = Vector2(7, 7.5)
+shape = SubResource("RectangleShape2D_s88xu")
+
+[connection signal="area_entered" from="CritterStoreLady/Area2D" to="CritterStoreLady" method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="CritterStoreLady/Area2D" to="CritterStoreLady" method="_on_area_2d_area_exited"]
