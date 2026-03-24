@@ -12,12 +12,20 @@ var speechPage=0
 var playerEntered=false
 var healing=false
 var healed=false
+var alreadyHealed=false
 
 func talk():
 	GameManager.canPause=false
 	player.canMove=false
+	alreadyHealed=true
+	for pokemon in GameManager.playerTeam:
+		if(pokemon.health!=pokemon.maxHealth):
+			alreadyHealed=false
 	dialogue.nameText="Critter Center Man"
-	dialogue.bodyText="Give me your critters. They look sickly."
+	if(!alreadyHealed):
+		dialogue.bodyText="Give me your critters. They look sickly."
+	else:
+		dialogue.bodyText="Your critters are fine. I atleast can't fix whats wrong with them."
 	speechPage=1
 	dialogue.speaker=self
 	dialogue.loadDialogue()
@@ -26,7 +34,7 @@ func talk():
 func nextText():
 	if(not healed):
 		healed=true
-	else:
+	if(healed or alreadyHealed):
 		healed=false
 		healing=false
 		dialogue.visible=false

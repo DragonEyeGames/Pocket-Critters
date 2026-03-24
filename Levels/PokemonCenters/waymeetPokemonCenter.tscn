@@ -1,15 +1,16 @@
-[gd_scene load_steps=28 format=3 uid="uid://byjyrcw636o2i"]
+[gd_scene load_steps=30 format=3 uid="uid://c1lq8jc3apncf"]
 
-[ext_resource type="Texture2D" uid="uid://bqii4hcf38wod" path="res://Assets/critterCenterInterior.png" id="1_l1evu"]
-[ext_resource type="PackedScene" uid="uid://c5yxtkkwi03pt" path="res://Scenes/player.tscn" id="2_4txgt"]
-[ext_resource type="Texture2D" uid="uid://bhngxc6jw5euf" path="res://Assets/charsetA_1.png" id="3_j5vor"]
-[ext_resource type="Script" uid="uid://crp3g76avkl7g" path="res://Scripts/dialogue.gd" id="4_3lhkf"]
-[ext_resource type="Script" uid="uid://bkjchjqege2ql" path="res://Scenes/critterCenterMan.gd" id="4_qrubs"]
-[ext_resource type="AudioStream" uid="uid://d2ifd1umddsod" path="res://GeneralSFX/heal.mp3" id="6_3kyke"]
-[ext_resource type="PackedScene" uid="uid://d3i3no2grjwva" path="res://Scenes/critterball.tscn" id="7_l1evu"]
+[ext_resource type="Texture2D" uid="uid://bqii4hcf38wod" path="res://Assets/critterCenterInterior.png" id="1_g7jbf"]
+[ext_resource type="Script" uid="uid://cnf2er3al1w5d" path="res://Levels/PokemonCenters/pokeCenter.gd" id="1_p0tuk"]
+[ext_resource type="PackedScene" uid="uid://c5yxtkkwi03pt" path="res://Scenes/player.tscn" id="2_aguq6"]
+[ext_resource type="Texture2D" uid="uid://bhngxc6jw5euf" path="res://Assets/charsetA_1.png" id="3_a6hmm"]
+[ext_resource type="Script" uid="uid://bkjchjqege2ql" path="res://Scenes/critterCenterMan.gd" id="4_iidne"]
+[ext_resource type="Script" uid="uid://crp3g76avkl7g" path="res://Scripts/dialogue.gd" id="5_q2wfs"]
+[ext_resource type="AudioStream" uid="uid://d2ifd1umddsod" path="res://GeneralSFX/heal.mp3" id="6_n0pbm"]
+[ext_resource type="PackedScene" uid="uid://d3i3no2grjwva" path="res://Scenes/critterball.tscn" id="7_ue1an"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3lhkf"]
-atlas = ExtResource("3_j5vor")
+atlas = ExtResource("3_a6hmm")
 region = Rect2(64, 128, 16, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_qrubs"]
@@ -128,6 +129,81 @@ shader = SubResource("Shader_86dkv")
 shader_parameter/flash_color = Color(0.39005882, 0.3381437, 0.12027154, 1)
 shader_parameter/flash_value = 0.0
 
+[sub_resource type="Animation" id="Animation_oco1h"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Critterball:material:shader_parameter/flash_value")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Critterball2:material:shader_parameter/flash_value")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Critterball3:material:shader_parameter/flash_value")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Critterball4:material:shader_parameter/flash_value")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Critterball5:material:shader_parameter/flash_value")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Critterball6:material:shader_parameter/flash_value")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
 [sub_resource type="Animation" id="Animation_k6ri3"]
 resource_name = "heal"
 length = 0.8
@@ -204,81 +280,6 @@ tracks/5/keys = {
 "values": [0.0, 1.0, 0.0, 1.0, 0.0]
 }
 
-[sub_resource type="Animation" id="Animation_oco1h"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Critterball:material:shader_parameter/flash_value")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.0]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Critterball2:material:shader_parameter/flash_value")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.0]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Critterball3:material:shader_parameter/flash_value")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.0]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("Critterball4:material:shader_parameter/flash_value")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.0]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("Critterball5:material:shader_parameter/flash_value")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.0]
-}
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("Critterball6:material:shader_parameter/flash_value")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.0]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_q254r"]
 _data = {
 &"RESET": SubResource("Animation_oco1h"),
@@ -291,10 +292,15 @@ size = Vector2(28, 26)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qb0fl"]
 size = Vector2(12, 13)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p0tuk"]
+size = Vector2(28, 4)
+
 [node name="Node2D" type="Node2D"]
+script = ExtResource("1_p0tuk")
+cityPath = "res://Levels/waymeetCity.tscn"
 
 [node name="PokemonCenter" type="Sprite2D" parent="."]
-texture = ExtResource("1_l1evu")
+texture = ExtResource("1_g7jbf")
 region_rect = Rect2(784, 24, 240, 148)
 
 [node name="ColorRect" type="ColorRect" parent="."]
@@ -308,7 +314,7 @@ color = Color(0, 0, 0, 1)
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(3.46, 3.46)
 
-[node name="Player" parent="." groups=["Y-Sort"] instance=ExtResource("2_4txgt")]
+[node name="Player" parent="." groups=["Y-Sort"] instance=ExtResource("2_aguq6")]
 position = Vector2(0, 70)
 positionOverride = true
 
@@ -324,14 +330,14 @@ offset_bottom = -30.0
 [node name="CritterCenterMan" type="AnimatedSprite2D" parent="Control" node_paths=PackedStringArray("dialogue", "player")]
 position = Vector2(40, 24)
 sprite_frames = SubResource("SpriteFrames_qrubs")
-script = ExtResource("4_qrubs")
+script = ExtResource("4_iidne")
 dialogue = NodePath("Dialogue")
 player = NodePath("../../Player")
 
 [node name="Dialogue" type="CanvasLayer" parent="Control/CritterCenterMan"]
 layer = 0
 visible = false
-script = ExtResource("4_3lhkf")
+script = ExtResource("5_q2wfs")
 
 [node name="ColorRect" type="ColorRect" parent="Control/CritterCenterMan/Dialogue"]
 offset_left = -6.0
@@ -388,7 +394,7 @@ offset_bottom = 533.0
 theme_override_font_sizes/normal_font_size = 27
 
 [node name="Heal" type="AudioStreamPlayer" parent="Control/CritterCenterMan"]
-stream = ExtResource("6_3kyke")
+stream = ExtResource("6_n0pbm")
 volume_db = -10.0
 
 [node name="Area2D" type="Area2D" parent="."]
@@ -402,32 +408,32 @@ shape = SubResource("RectangleShape2D_qrubs")
 [node name="CritterBallHolder" type="Node2D" parent="."]
 position = Vector2(-24, -43)
 
-[node name="Critterball" parent="CritterBallHolder" instance=ExtResource("7_l1evu")]
+[node name="Critterball" parent="CritterBallHolder" instance=ExtResource("7_ue1an")]
 visible = false
 material = SubResource("ShaderMaterial_qb0fl")
 position = Vector2(-3, -4)
 
-[node name="Critterball2" parent="CritterBallHolder" instance=ExtResource("7_l1evu")]
+[node name="Critterball2" parent="CritterBallHolder" instance=ExtResource("7_ue1an")]
 visible = false
 material = SubResource("ShaderMaterial_hxybn")
 position = Vector2(3, -4)
 
-[node name="Critterball3" parent="CritterBallHolder" instance=ExtResource("7_l1evu")]
+[node name="Critterball3" parent="CritterBallHolder" instance=ExtResource("7_ue1an")]
 visible = false
 material = SubResource("ShaderMaterial_auu8o")
 position = Vector2(-3, 0)
 
-[node name="Critterball4" parent="CritterBallHolder" instance=ExtResource("7_l1evu")]
+[node name="Critterball4" parent="CritterBallHolder" instance=ExtResource("7_ue1an")]
 visible = false
 material = SubResource("ShaderMaterial_gajhs")
 position = Vector2(3, 0)
 
-[node name="Critterball5" parent="CritterBallHolder" instance=ExtResource("7_l1evu")]
+[node name="Critterball5" parent="CritterBallHolder" instance=ExtResource("7_ue1an")]
 visible = false
 material = SubResource("ShaderMaterial_ku1ho")
 position = Vector2(-3, 4)
 
-[node name="Critterball6" parent="CritterBallHolder" instance=ExtResource("7_l1evu")]
+[node name="Critterball6" parent="CritterBallHolder" instance=ExtResource("7_ue1an")]
 visible = false
 material = SubResource("ShaderMaterial_efqkt")
 position = Vector2(3, 4)
@@ -465,5 +471,15 @@ shape = SubResource("RectangleShape2D_qb0fl")
 position = Vector2(64, 14)
 shape = SubResource("RectangleShape2D_qb0fl")
 
+[node name="Exit" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Exit"]
+position = Vector2(0, 73)
+shape = SubResource("RectangleShape2D_p0tuk")
+
 [connection signal="area_entered" from="Area2D" to="Control/CritterCenterMan" method="_on_area_2d_area_entered"]
 [connection signal="area_exited" from="Area2D" to="Control/CritterCenterMan" method="_on_area_2d_area_exited"]
+[connection signal="area_entered" from="Exit" to="." method="_on_exit_area_entered"]
+[connection signal="area_exited" from="Exit" to="." method="_on_exit_area_exited"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=4 uid="uid://hvt8a8487efr"]
+[gd_scene load_steps=26 format=4 uid="uid://hvt8a8487efr"]
 
 [ext_resource type="Script" uid="uid://swgsdmbo5fng" path="res://Scripts/main.gd" id="1_yelr5"]
 [ext_resource type="PackedScene" uid="uid://c5yxtkkwi03pt" path="res://Scenes/player.tscn" id="2_fmudw"]
@@ -98,6 +98,9 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dvn4l"]
+size = Vector2(20, 17)
+
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_eridb"]
 shader = ExtResource("11_6t2tp")
 shader_parameter/original_0 = Color(1, 0, 0.91764706, 1)
@@ -117,8 +120,10 @@ script = ExtResource("1_yelr5")
 pokemonEncounters = Array[int]([6, 8, 5, 1, 9, 3, 0, 7])
 levelMin = 1
 levelMax = 6
+pokemonCenter = "res://Levels/PokemonCenters/waymeetPokemonCenter.tscn"
 
 [node name="Player" parent="." groups=["Y-Sort"] instance=ExtResource("2_fmudw")]
+position = Vector2(0, -79)
 
 [node name="Y-Sort" type="Node2D" parent="." node_paths=PackedStringArray("player")]
 y_sort_enabled = true
@@ -181,6 +186,14 @@ visible = false
 position = Vector2(0, 7)
 sprite_frames = SubResource("SpriteFrames_g5dor")
 
+[node name="PokeCenter" type="Area2D" parent="Poke Center"]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Poke Center/PokeCenter"]
+position = Vector2(0, 6.5)
+shape = SubResource("RectangleShape2D_dvn4l")
+
 [node name="Gym" type="Sprite2D" parent="." groups=["Y-Sort"]]
 material = SubResource("ShaderMaterial_dvn4l")
 position = Vector2(160, -334)
@@ -220,3 +233,5 @@ texture = ExtResource("13_c2nek")
 offset = Vector2(16, -11)
 region_enabled = true
 region_rect = Rect2(300, 24, 80, 56)
+
+[connection signal="area_entered" from="Poke Center/PokeCenter" to="." method="_on_poke_center_area_entered"]
