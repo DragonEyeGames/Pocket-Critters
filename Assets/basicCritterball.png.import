@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dj0lal575n2uu"
-path="res://.godot/imported/Pokeball.png-c79bb5f9c93b1fe1600b531b55d729b2.ctex"
+uid="uid://b6a1ta24tjyje"
+path="res://.godot/imported/basicCritterball.png-aca027416795e51af41b457dce7df787.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Pokeball.png"
-dest_files=["res://.godot/imported/Pokeball.png-c79bb5f9c93b1fe1600b531b55d729b2.ctex"]
+source_file="res://Assets/basicCritterball.png"
+dest_files=["res://.godot/imported/basicCritterball.png-aca027416795e51af41b457dce7df787.ctex"]
 
 [params]
 

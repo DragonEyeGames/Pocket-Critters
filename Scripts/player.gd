@@ -4,6 +4,7 @@ extends CharacterBody2D
 @export var speed = 30
 @onready var sprite = $Sprite
 var canMove=true
+@export var positionOverride=false
 
 var overrideWalking:=false
 
@@ -13,7 +14,8 @@ var state="idle"
 func _ready() -> void:
 	GameManager.player=self
 	SignalBus.loadData.connect(_load)
-	global_position=GameManager.playerPosition
+	if(not positionOverride):
+		global_position=GameManager.playerPosition
 
 func _process(_delta: float) -> void:
 	if(canMove):

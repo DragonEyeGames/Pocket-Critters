@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://d3i3no2grjwva"]
+
+[ext_resource type="Texture2D" uid="uid://b6a1ta24tjyje" path="res://Assets/basicCritterball.png" id="1_41mv1"]
+[ext_resource type="Shader" uid="uid://bomfvo6o4mvg6" path="res://Shaders/flash.gdshader" id="1_lx8xo"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_c36cv"]
+resource_local_to_scene = true
+shader = ExtResource("1_lx8xo")
+shader_parameter/flash_color = Color(0.39005882, 0.3381437, 0.12027154, 1)
+shader_parameter/flash_value = 0.0
+
+[node name="Critterball" type="Node2D"]
+material = SubResource("ShaderMaterial_c36cv")
+
+[node name="Basic" type="Sprite2D" parent="."]
+use_parent_material = true
+texture = ExtResource("1_41mv1")

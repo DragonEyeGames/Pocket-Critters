@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://b013ftqbgrpxx" path="res://Scenes/moveDisplay.tscn" id="4_pd5xk"]
 [ext_resource type="PackedScene" uid="uid://c1n8nkmvur2yk" path="res://Scenes/reselect_slot.tscn" id="6_f6xt6"]
 [ext_resource type="PackedScene" uid="uid://diacwj0uebdpj" path="res://Scenes/replace_slot.tscn" id="7_lrv64"]
-[ext_resource type="Texture2D" uid="uid://prt0a5vyjimx" path="res://Assets/Pokeball.png" id="7_ww2ai"]
+[ext_resource type="Texture2D" uid="uid://dj0lal575n2uu" path="res://Assets/Pokeball.png" id="7_ww2ai"]
 [ext_resource type="Script" uid="uid://drpkax8na82vo" path="res://Scripts/stats.gd" id="9_qeyqd"]
 [ext_resource type="Script" uid="uid://klm0bf5usy6q" path="res://Scripts/cinematicCamera.gd" id="11_upb72"]
 [ext_resource type="AudioStream" uid="uid://dru46jgfsbs2p" path="res://BattleSounds/stat-down.mp3" id="12_heh15"]
@@ -1207,9 +1207,10 @@ libraries = {
 speed_scale = 1.6
 
 [node name="BattleOptions" type="ColorRect" parent="."]
-offset_top = 386.0
-offset_right = 1037.0
-offset_bottom = 569.0
+offset_left = 3.0
+offset_top = 547.0
+offset_right = 1040.0
+offset_bottom = 730.0
 mouse_filter = 2
 color = Color(0.44, 0.44, 0.44, 1)
 
@@ -1289,15 +1290,15 @@ color = Color(0.48909998, 0.73, 0.525235, 1)
 [node name="OpponentController" type="Node2D" parent="."]
 
 [node name="StatHolder" parent="." instance=ExtResource("3_7sfm4")]
-offset_left = 423.0
+offset_left = 988.0
 offset_top = 230.0
-offset_right = 929.9989
+offset_right = 1494.9989
 offset_bottom = 361.9989
 
 [node name="StatHolder2" parent="." instance=ExtResource("3_7sfm4")]
-offset_left = 19.0
+offset_left = -526.0
 offset_top = 18.0
-offset_right = 526.0
+offset_right = -19.0
 offset_bottom = 150.0
 
 [node name="Reorder Team" type="Control" parent="."]
