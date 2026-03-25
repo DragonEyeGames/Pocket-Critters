@@ -83,7 +83,7 @@ metadata/_custom_type_script = "uid://kmcanhhb04o0"
 [resource]
 resource_name = "res://PokemonCries/darumaka.wav"
 script = ExtResource("6_n5bsg")
-species = 12
+species = 27
 health = 55
 attack = 60
 defense = 45

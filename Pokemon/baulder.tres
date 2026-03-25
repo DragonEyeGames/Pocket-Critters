@@ -1,11 +1,11 @@
 [gd_resource type="Resource" script_class="SpeciesData" load_steps=3 format=3 uid="uid://bhyurpsg14bjk"]
 
-[ext_resource type="Script" uid="uid://c3odxqj7xy866" path="res://Resources/MoveData.gd" id="1_4n6g5"]
+[ext_resource type="Script" uid="uid://kmcanhhb04o0" path="res://Resources/MoveResource.gd" id="1_8twff"]
 [ext_resource type="Script" uid="uid://1vun3nkcoo5i" path="res://Resources/SpeciesData.gd" id="6_gepct"]
 
 [resource]
 script = ExtResource("6_gepct")
-species = 15
+species = 36
 type1 = 16
 type2 = 10
 health = 55

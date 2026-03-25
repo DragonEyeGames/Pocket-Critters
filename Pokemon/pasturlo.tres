@@ -82,7 +82,7 @@ metadata/_custom_type_script = "uid://kmcanhhb04o0"
 
 [resource]
 script = ExtResource("4_5647h")
-species = 5
+species = 11
 type1 = 1
 type2 = 1
 health = 68

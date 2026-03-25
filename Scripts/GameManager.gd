@@ -1,22 +1,52 @@
 extends Node
 
 enum pokemon {
-	Timberry,
-	Pilfetch,
-	Geckrow,
-	Sligment,
-	Dunsparce,
-	Pasturlo,
-	Baoby,
-	Varmot,
-	Merlicun,
-	Pompet,
-	Saurky,
-	Dampurr,
-	Bonfur,
-	Lollybog,
-	Kankwart,
-	Baulder
+	Timberry, #Basic grass fox
+	Howliage, #1
+	Botanine, #2
+	Pilfetch, #Basic flying bird
+	Criminalis, #1
+	Geckrow,#basic grass (ground) lizard
+	Goanopy, #1
+	Varanitor, #2
+	Sligment, #Basic bug snal
+	Viscolor, #1
+	Gelescent, #2
+	Pasturlo, #Basic grass ram thing
+	Brambull, #1
+	Maizotaur, #2
+	Baoby, #Basic ground/grass
+	Baobaraffe, #1
+	Varmot, #Basic normal rat
+	Merlicun, # Basic dragon bug caterpillar thing
+	Firomenis, #1
+	Pompet, # Basic grass fairy
+	Pomprim, #1
+	Saurky, #Basic water lizard
+	Crestaka, #1
+	Avipex, #2
+	Dampurr, #basic water cat
+	Rainther, #1
+	Delugar, #2
+	Bonfur, #Basic fire bear
+	Tindursa, #1
+	Sizzly, #2
+	Lollybog, #Basic ghost poison
+	Brewtrid, #1
+	Forbiddron, #2
+	Kankwart, #Basic poison rock
+	Kankryst, #1
+	Kankersaur, #2
+	Baulder, #Basic rock dragon
+	Dreadrock, #1
+	Tekagon, #2
+	Minamai, #Basic water fish thing
+	Marelstorm, #1
+	Dripwirt, #basic water thing?
+	Pourka,
+	Appalyp,#basic dark water thing
+	Sycoral, #1
+	Nemesusa #2
 }
 
 enum types {
