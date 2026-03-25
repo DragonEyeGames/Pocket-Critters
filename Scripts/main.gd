@@ -23,9 +23,6 @@ func _process(_delta: float) -> void:
 	if(Input.is_action_just_pressed("Interact") and pokeMartEntered):
 		get_tree().call_deferred("change_scene_to_file", pokeMart)
 
-func _on_exit_area_entered(_area: Area2D) -> void:
-	get_tree().call_deferred("change_scene_to_file", "res://Scenes/victory.tscn")
-
 
 func _on_poke_center_area_entered(_area: Area2D) -> void:
 	pokeCenterEntered=true

@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://ca571jdvs688u" path="res://Scripts/stat_holder.gd" id="1_2unu8"]
 [ext_resource type="PackedScene" uid="uid://jy4vn4rtcgkl" path="res://Scenes/colorSlot.tscn" id="2_mo86g"]
-[ext_resource type="AudioStream" uid="uid://djkkbqkqq4t33" path="res://GeneralSFX/levelUp.mp3" id="3_5i5ho"]
+[ext_resource type="AudioStream" uid="uid://bpc1nftvrlgry" path="res://New Sounds/levelUp.mp3" id="3_5i5ho"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mo86g"]
 bg_color = Color(0.67, 0, 0, 0)

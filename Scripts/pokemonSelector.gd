@@ -66,6 +66,7 @@ func xp(old, new):
 	await holder.xp(old, new, pokemon)
 
 func cry():
+	return
 	if(pokemon.base.cryPath==""):
 		return
 	get_node("Animate").play("call")

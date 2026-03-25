@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=4 uid="uid://b07drnf5qheia"]
+[gd_scene load_steps=26 format=4 uid="uid://b07drnf5qheia"]
 
 [ext_resource type="Script" uid="uid://swgsdmbo5fng" path="res://Scripts/main.gd" id="1_rdxft"]
 [ext_resource type="PackedScene" uid="uid://c5yxtkkwi03pt" path="res://Scenes/player.tscn" id="3_ub67l"]
@@ -18,6 +18,7 @@
 [ext_resource type="Resource" uid="uid://d2e001rb1jev2" path="res://Trainers/trainee-1.tres" id="16_evao7"]
 [ext_resource type="Resource" uid="uid://ddvy8op0ryf1g" path="res://Trainers/scout-1.tres" id="17_os84l"]
 [ext_resource type="Resource" uid="uid://b7ul6d7ek0cy2" path="res://Trainers/collector-1.tres" id="18_8tpo1"]
+[ext_resource type="Script" uid="uid://crrtvghb3yxwo" path="res://Levels/exit.gd" id="19_b4rj7"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_rdxft"]
 
@@ -73,6 +74,7 @@ levelMin = 1
 levelMax = 6
 
 [node name="Player" parent="." groups=["Y-Sort"] instance=ExtResource("3_ub67l")]
+position = Vector2(-547, -1186)
 
 [node name="Y-Sort" type="Node2D" parent="." node_paths=PackedStringArray("player")]
 y_sort_enabled = true
@@ -113,7 +115,8 @@ libraries = {
 
 [node name="Camera" type="Camera2D" parent="." node_paths=PackedStringArray("target")]
 zoom = Vector2(2.675, 2.675)
-limit_bottom = 169
+limit_top = -1280
+limit_bottom = 249
 script = ExtResource("8_i30pn")
 target = NodePath("../Player")
 
@@ -173,7 +176,12 @@ player = NodePath("../Player")
 position = Vector2(-577, -1318)
 collision_layer = 0
 collision_mask = 2
+script = ExtResource("19_b4rj7")
+travelZone = "res://Levels/waymeetCity.tscn"
+travelPos = Vector2(0, -19)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Exit"]
 position = Vector2(27.5, 49.5)
 shape = SubResource("RectangleShape2D_i30pn")
+
+[connection signal="area_entered" from="Exit" to="Exit" method="_on_area_entered"]

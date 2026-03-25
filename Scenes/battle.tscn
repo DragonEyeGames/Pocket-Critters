@@ -1,4 +1,4 @@
-[gd_scene load_steps=45 format=3 uid="uid://p6x3hd6afog6"]
+[gd_scene load_steps=43 format=3 uid="uid://p6x3hd6afog6"]
 
 [ext_resource type="PackedScene" uid="uid://ba24hclljygvv" path="res://Scenes/pokemonSelector.tscn" id="1_ip7xm"]
 [ext_resource type="Script" uid="uid://do3gaqda1wenc" path="res://Scripts/battle.gd" id="1_oxp8w"]
@@ -11,9 +11,7 @@
 [ext_resource type="Script" uid="uid://drpkax8na82vo" path="res://Scripts/stats.gd" id="9_qeyqd"]
 [ext_resource type="Texture2D" uid="uid://dt7cm5p6mfbv5" path="res://Assets/critterBall.png" id="9_xkp4y"]
 [ext_resource type="Script" uid="uid://klm0bf5usy6q" path="res://Scripts/cinematicCamera.gd" id="11_upb72"]
-[ext_resource type="AudioStream" uid="uid://dru46jgfsbs2p" path="res://BattleSounds/stat-down.mp3" id="12_heh15"]
-[ext_resource type="AudioStream" uid="uid://3v3vqera0ljs" path="res://BattleSounds/stat-up.mp3" id="13_xkp4y"]
-[ext_resource type="AudioStream" uid="uid://tkklgkg3lbj3" path="res://GeneralSFX/spawnPokemon.mp3" id="14_xkp4y"]
+[ext_resource type="AudioStream" uid="uid://db2bhu45p8o1" path="res://New Sounds/critterEmerge.mp3" id="14_xkp4y"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_upb72"]
 resource_local_to_scene = true
@@ -1601,11 +1599,9 @@ position = Vector2(480, 270)
 script = ExtResource("11_upb72")
 
 [node name="statDown" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("12_heh15")
 volume_db = -8.0
 
 [node name="statUp" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("13_xkp4y")
 volume_db = -8.0
 
 [node name="Spawn" type="AudioStreamPlayer" parent="."]

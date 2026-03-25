@@ -475,6 +475,7 @@ func _player_animation_finished(_anim_name: StringName) -> void:
 	$Player/Animate.play("idle")
 
 func noise(soundPath):
+	return
 	if(soundPath==""):
 		soundPath="res://BattleSounds/Tackle.mp3"
 	var player = AudioStreamPlayer.new()
