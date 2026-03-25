@@ -8,8 +8,8 @@
 [ext_resource type="PackedScene" uid="uid://b013ftqbgrpxx" path="res://Scenes/moveDisplay.tscn" id="4_pd5xk"]
 [ext_resource type="PackedScene" uid="uid://c1n8nkmvur2yk" path="res://Scenes/reselect_slot.tscn" id="6_f6xt6"]
 [ext_resource type="PackedScene" uid="uid://diacwj0uebdpj" path="res://Scenes/replace_slot.tscn" id="7_lrv64"]
-[ext_resource type="Texture2D" uid="uid://dj0lal575n2uu" path="res://Assets/Pokeball.png" id="7_ww2ai"]
 [ext_resource type="Script" uid="uid://drpkax8na82vo" path="res://Scripts/stats.gd" id="9_qeyqd"]
+[ext_resource type="Texture2D" uid="uid://dt7cm5p6mfbv5" path="res://Assets/critterBall.png" id="9_xkp4y"]
 [ext_resource type="Script" uid="uid://klm0bf5usy6q" path="res://Scripts/cinematicCamera.gd" id="11_upb72"]
 [ext_resource type="AudioStream" uid="uid://dru46jgfsbs2p" path="res://BattleSounds/stat-down.mp3" id="12_heh15"]
 [ext_resource type="AudioStream" uid="uid://3v3vqera0ljs" path="res://BattleSounds/stat-up.mp3" id="13_xkp4y"]
@@ -532,7 +532,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Pokeball:position")
+tracks/2/path = NodePath("Critterball:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -568,7 +568,7 @@ tracks/4/keys = {
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("Pokeball:rotation")
+tracks/5/path = NodePath("Critterball:rotation")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
@@ -580,7 +580,7 @@ tracks/5/keys = {
 tracks/6/type = "value"
 tracks/6/imported = false
 tracks/6/enabled = true
-tracks/6/path = NodePath("Pokeball:visible")
+tracks/6/path = NodePath("Critterball:visible")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
@@ -631,7 +631,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Pokeball:position")
+tracks/2/path = NodePath("Critterball:position")
 tracks/2/interp = 2
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -667,7 +667,7 @@ tracks/4/keys = {
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("Pokeball:rotation")
+tracks/5/path = NodePath("Critterball:rotation")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
@@ -679,7 +679,7 @@ tracks/5/keys = {
 tracks/6/type = "value"
 tracks/6/imported = false
 tracks/6/enabled = true
-tracks/6/path = NodePath("Pokeball:visible")
+tracks/6/path = NodePath("Critterball:visible")
 tracks/6/interp = 0
 tracks/6/loop_wrap = true
 tracks/6/keys = {
@@ -730,7 +730,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Pokeball:position")
+tracks/2/path = NodePath("Critterball:position")
 tracks/2/interp = 2
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -766,7 +766,7 @@ tracks/4/keys = {
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("Pokeball:rotation")
+tracks/5/path = NodePath("Critterball:rotation")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
@@ -778,7 +778,7 @@ tracks/5/keys = {
 tracks/6/type = "value"
 tracks/6/imported = false
 tracks/6/enabled = true
-tracks/6/path = NodePath("Pokeball:visible")
+tracks/6/path = NodePath("Critterball:visible")
 tracks/6/interp = 0
 tracks/6/loop_wrap = true
 tracks/6/keys = {
@@ -1489,10 +1489,10 @@ libraries = {
 }
 speed_scale = 0.5
 
-[node name="Pokeball" type="Sprite2D" parent="."]
+[node name="Critterball" type="Sprite2D" parent="."]
 position = Vector2(338.99997, 575)
 scale = Vector2(3.785, 3.785)
-texture = ExtResource("7_ww2ai")
+texture = ExtResource("9_xkp4y")
 
 [node name="Stats" type="Control" parent="."]
 visible = false

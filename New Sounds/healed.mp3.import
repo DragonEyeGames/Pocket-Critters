@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c8uubdf078rn2"
+path="res://.godot/imported/healed.mp3-1215b0cb08c8cbc85bf1c203919dd4e3.mp3str"
+
+[deps]
+
+source_file="res://New Sounds/healed.mp3"
+dest_files=["res://.godot/imported/healed.mp3-1215b0cb08c8cbc85bf1c203919dd4e3.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

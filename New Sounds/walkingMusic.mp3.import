@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bwsm30hfeoqvh"
+path="res://.godot/imported/walkingMusic.mp3-6d58ccadfbc3813040db10b87357c49f.mp3str"
+
+[deps]
+
+source_file="res://New Sounds/walkingMusic.mp3"
+dest_files=["res://.godot/imported/walkingMusic.mp3-6d58ccadfbc3813040db10b87357c49f.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -52,11 +52,12 @@ func _on_pokedex_pressed() -> void:
 func _on_save_pressed() -> void:
 	$Menu/VBoxContainer/Save/save.disabled=true
 	$Menu/VBoxContainer/Save/save.text="Saving"
-	$Save.play()
+	
 	await GameManager.saveGame()
 	await get_tree().create_timer(.4).timeout
+	$Save.play()
 	$Menu/VBoxContainer/Save/save.text="Saved"
-	await get_tree().create_timer(1).timeout
+	await get_tree().create_timer(2).timeout
 	$Menu/VBoxContainer/Save/save.text="Save"
 	$Menu/VBoxContainer/Save/save.disabled=false
 

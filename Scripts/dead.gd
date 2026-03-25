@@ -1,5 +1,7 @@
 extends Control
 
+func _ready():
+	Music.battleEnded()
 
 func _on_retry_pressed() -> void:
 	GameManager.playerPosition=GameManager.respawnSpot

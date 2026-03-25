@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://csi5giv4qbgfx" path="res://Scenes/team_slot.tscn" id="2_6eyaj"]
 [ext_resource type="PackedScene" uid="uid://dsf85ixufbmqg" path="res://Scenes/reorder_slot.tscn" id="3_5a6ek"]
 [ext_resource type="PackedScene" uid="uid://o4aurj5ha233" path="res://Scenes/pokedex_slot.tscn" id="4_e0jm0"]
-[ext_resource type="AudioStream" uid="uid://da2h7chngrull" path="res://GeneralSFX/save.mp3" id="5_3fojq"]
+[ext_resource type="AudioStream" uid="uid://c8uubdf078rn2" path="res://New Sounds/healed.mp3" id="5_3fojq"]
 
 [node name="Pause" type="CanvasLayer"]
 process_mode = 3

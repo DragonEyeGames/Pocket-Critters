@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cxeotv3owj6mw" path="res://Scripts/bench.gd" id="1_e6kot"]
 [ext_resource type="Texture2D" uid="uid://dk2jhobo28om8" path="res://Assets/bench.png" id="1_rgxpg"]
-[ext_resource type="AudioStream" uid="uid://d2ifd1umddsod" path="res://GeneralSFX/heal.mp3" id="3_lwohs"]
+[ext_resource type="AudioStream" uid="uid://c8uubdf078rn2" path="res://New Sounds/healed.mp3" id="3_lwohs"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rgxpg"]
 size = Vector2(32, 4)

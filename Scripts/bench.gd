@@ -29,8 +29,8 @@ func _process(_delta: float) -> void:
 		await get_tree().create_timer(.5).timeout
 		var tween2=create_tween()
 		tween2.tween_property($Dark/ColorRect, "color:a", 1, .4)
-		$Heal.play()
 		await tween2.finished
+		$Heal.play()
 		for pokemon in GameManager.playerTeam:
 			pokemon.health=pokemon.maxHealth
 		GameManager.playerPosition=Vector2(global_position.x, global_position.y+1)

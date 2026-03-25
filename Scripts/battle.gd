@@ -48,6 +48,7 @@ func _on_catch_pressed() -> void:
 	print(GameManager.get_catch_chance($Opponent.pokemon, 1))
 	if(randf()<=GameManager.get_catch_chance($Opponent.pokemon, 1)):
 		$Catch.play("catch-succeed")
+		battleWon()
 		await get_tree().create_timer(2).timeout
 		$BattleOptions/Display.text="Caught it! " + $Opponent.pokemon.name + " has been caught!"
 		$Opponent.visible=false
@@ -111,7 +112,10 @@ func loadAttack(playerAttack):
 			await attack(opponentAttack, $Player, $Opponent)
 		if($Opponent.pokemon.health<=0):
 			#If dead, add XP. Of a wild battle go to main. Otherwise load next pokemon.
+			if(!GameManager.teamBattle):
+				battleWon()
 			await xp()
+			await get_tree().create_timer(1).timeout
 			if(!GameManager.teamBattle):
 				GameManager.toMain()
 			else:
@@ -124,6 +128,8 @@ func loadAttack(playerAttack):
 		if($Player.pokemon.health>0):
 			await attack(playerAttack, $Opponent, $Player)
 		if($Opponent.pokemon.health<=0):
+			if(!GameManager.teamBattle):
+				battleWon()
 			await xp()
 			await get_tree().create_timer(1).timeout
 			if(!GameManager.teamBattle):
@@ -426,6 +432,7 @@ func teamBattleDead():
 		
 	else:
 		$BattleOptions/Display.text="Knocked out " + GameManager.attacking + "'s " + $Opponent.pokemon.name + "!"
+		battleWon()
 		await get_tree().create_timer(1).timeout
 		$BattleOptions/Display.text=GameManager.attacking + " has been defeated!"
 		await get_tree().create_timer(3).timeout
@@ -479,3 +486,6 @@ func noise(soundPath):
 	
 	await player.finished
 	player.queue_free()
+
+func battleWon():
+	Music.battleOver()
