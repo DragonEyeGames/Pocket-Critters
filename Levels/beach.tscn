@@ -58,7 +58,6 @@ size = Vector2(135, 119)
 [node name="Main" type="Node2D"]
 texture_filter = 1
 script = ExtResource("1_dj533")
-pokemonEncounters = Array[int]([11, 10])
 levelMin = 1
 levelMax = 6
 

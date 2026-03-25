@@ -459,6 +459,8 @@ func calculateAmount(change, newText, target):
 
 func xp():
 	var xpGained = int($Opponent.pokemon.maxHealth * $Opponent.pokemon.level / 3)
+	if(GameManager.teamBattle):
+		xpGained*=1.5
 	$BattleOptions/Display.text=str($Player.pokemon.name + " gained " + str(xpGained) + " xp.")
 	await $Player.xp($Player.pokemon.xp, $Player.pokemon.xp + xpGained)
 	

@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://o4aurj5ha233"]
+[gd_scene load_steps=18 format=3 uid="uid://o4aurj5ha233"]
 
 [ext_resource type="Script" uid="uid://dq4jkmq4402hr" path="res://Scripts/pokedex_slot.gd" id="1_5lyfu"]
 [ext_resource type="Script" uid="uid://v80h5lclvn1j" path="res://Scripts/pokemonDisplay.gd" id="2_t6w81"]
@@ -6,7 +6,6 @@
 [ext_resource type="Texture2D" uid="uid://diwbntfmt43qj" path="res://Fakemon-PNG/pilfetch.png" id="4_oywqy"]
 [ext_resource type="Texture2D" uid="uid://cy5ixt1h2jqox" path="res://Fakemon-PNG/geckrow.png" id="5_xf0vc"]
 [ext_resource type="Texture2D" uid="uid://dmggf8l828rn7" path="res://Fakemon-PNG/sligment.png" id="6_1gy7e"]
-[ext_resource type="Texture2D" uid="uid://5bl0yq10tjgf" path="res://Fakemon-PNG/dunsparce.png" id="7_v63f4"]
 [ext_resource type="Texture2D" uid="uid://bk8ot7cpwdae3" path="res://Fakemon-PNG/pasturlo.png" id="8_v6207"]
 [ext_resource type="Texture2D" uid="uid://dhh1fa6gyyhfj" path="res://Fakemon-PNG/baoby.png" id="9_t7eqp"]
 [ext_resource type="Texture2D" uid="uid://cx0gdn7okrdob" path="res://Fakemon-PNG/varmot.png" id="10_e4ba0"]
@@ -54,10 +53,6 @@ texture = ExtResource("5_xf0vc")
 [node name="Sligment" type="Sprite2D" parent="Pokemon/Front"]
 visible = false
 texture = ExtResource("6_1gy7e")
-
-[node name="Dunsparce" type="Sprite2D" parent="Pokemon/Front"]
-visible = false
-texture = ExtResource("7_v63f4")
 
 [node name="Pasturlo" type="Sprite2D" parent="Pokemon/Front"]
 visible = false

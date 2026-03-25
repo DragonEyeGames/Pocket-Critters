@@ -16,6 +16,10 @@ func _ready() -> void:
 	GameManager.encounterMax=levelMax
 	GameManager.transitionAnimator=$Transition/AnimationPlayer
 	#pass
+	for newPokemon in GameManager.playerTeam:
+		if(newPokemon.base.evolution!=null and newPokemon.level>=newPokemon.base.evolution.level):
+			GameManager.evolvePokemon(newPokemon, newPokemon.base.evolution.into)
+			
 
 func _process(_delta: float) -> void:
 	if(Input.is_action_just_pressed("Interact") and pokeCenterEntered):

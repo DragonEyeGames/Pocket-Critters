@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://cy5ixt1h2jqox" path="res://Fakemon-PNG/geckrow.png" id="4_lsc3l"]
 [ext_resource type="Texture2D" uid="uid://ii1pbb1pc3mv" path="res://Fakemon-PNG/timberry-back.png" id="5_bypo8"]
 [ext_resource type="Texture2D" uid="uid://dmggf8l828rn7" path="res://Fakemon-PNG/sligment.png" id="5_oypsu"]
-[ext_resource type="Texture2D" uid="uid://5bl0yq10tjgf" path="res://Fakemon-PNG/dunsparce.png" id="6_k0ukg"]
+[ext_resource type="Texture2D" uid="uid://qyx746qq2sqh" path="res://Fakemon-PNG/goanopy.png" id="6_6atxy"]
 [ext_resource type="Texture2D" uid="uid://cyafkvm465t4r" path="res://Fakemon-PNG/geckrow-back.png" id="6_y7fif"]
 [ext_resource type="Texture2D" uid="uid://biriaivtjbjx5" path="res://Fakemon-PNG/pilfetch-back.png" id="7_85yhy"]
 [ext_resource type="Texture2D" uid="uid://bk8ot7cpwdae3" path="res://Fakemon-PNG/pasturlo.png" id="7_k0ukg"]
@@ -18,7 +18,6 @@
 [ext_resource type="Texture2D" uid="uid://b7kb5xv1u1k3n" path="res://Fakemon-PNG/saurky.png" id="12_2qjwf"]
 [ext_resource type="Texture2D" uid="uid://cfqgnasa27orh" path="res://Fakemon-PNG/sligment-back.png" id="13_usm3x"]
 [ext_resource type="Texture2D" uid="uid://dcu31aa4er1iu" path="res://Fakemon-PNG/dampurr.png" id="13_y7ws7"]
-[ext_resource type="Texture2D" uid="uid://doa4hdrlyh5vq" path="res://Fakemon-PNG/dunsparce-back.png" id="14_40ktw"]
 [ext_resource type="Texture2D" uid="uid://bqfx8jaeuhf05" path="res://Fakemon-PNG/bonfur.png" id="14_jadds"]
 [ext_resource type="Texture2D" uid="uid://blbo0dto4hfos" path="res://Fakemon-PNG/lollybog.png" id="15_etxp0"]
 [ext_resource type="Texture2D" uid="uid://b3p3ovwwgolld" path="res://Fakemon-PNG/pasturlo-back.png" id="15_r7ogs"]
@@ -26,6 +25,7 @@
 [ext_resource type="Texture2D" uid="uid://q5f2y5hibdcr" path="res://Fakemon-PNG/baoby-back.png" id="16_exi05"]
 [ext_resource type="Texture2D" uid="uid://cdt3aw3drbacm" path="res://Fakemon-PNG/varmot-back.png" id="17_1l2i3"]
 [ext_resource type="Texture2D" uid="uid://rurari3qfhj8" path="res://Fakemon-PNG/baulder.png" id="17_cj8ul"]
+[ext_resource type="Texture2D" uid="uid://bs6awpn2ophfp" path="res://Fakemon-PNG/goanopy-back.png" id="22_30jyd"]
 [ext_resource type="Texture2D" uid="uid://t86qm15tse7k" path="res://Fakemon-PNG/merlicun-back.png" id="26_g7rne"]
 [ext_resource type="Texture2D" uid="uid://b6l6ujjcws8yl" path="res://Fakemon-PNG/pompet-back.png" id="27_6atxy"]
 [ext_resource type="Texture2D" uid="uid://diqhy11f27655" path="res://Fakemon-PNG/saurky-back.png" id="28_30jyd"]
@@ -64,15 +64,15 @@ visible = false
 use_parent_material = true
 texture = ExtResource("4_lsc3l")
 
+[node name="Goanopy" type="Sprite2D" parent="Front"]
+visible = false
+use_parent_material = true
+texture = ExtResource("6_6atxy")
+
 [node name="Sligment" type="Sprite2D" parent="Front"]
 visible = false
 use_parent_material = true
 texture = ExtResource("5_oypsu")
-
-[node name="Dunsparce" type="Sprite2D" parent="Front"]
-visible = false
-use_parent_material = true
-texture = ExtResource("6_k0ukg")
 
 [node name="Pasturlo" type="Sprite2D" parent="Front"]
 visible = false
@@ -147,15 +147,15 @@ visible = false
 use_parent_material = true
 texture = ExtResource("6_y7fif")
 
+[node name="Goanopy" type="Sprite2D" parent="Back"]
+visible = false
+use_parent_material = true
+texture = ExtResource("22_30jyd")
+
 [node name="Sligment" type="Sprite2D" parent="Back"]
 visible = false
 use_parent_material = true
 texture = ExtResource("13_usm3x")
-
-[node name="Dunsparce" type="Sprite2D" parent="Back"]
-visible = false
-use_parent_material = true
-texture = ExtResource("14_40ktw")
 
 [node name="Pasturlo" type="Sprite2D" parent="Back"]
 visible = false

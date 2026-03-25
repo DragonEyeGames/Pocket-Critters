@@ -23,14 +23,14 @@ metadata/_custom_type_script = "uid://dxn4lkbl53l63"
 
 [sub_resource type="Resource" id="Resource_fetqp"]
 script = ExtResource("2_tjyiu")
-species = 3
+species = 8
 level = 4
 moves = Array[ExtResource("3_1b184")]([ExtResource("8_xr5lu"), ExtResource("9_ryu8a"), ExtResource("10_yg51d"), ExtResource("11_k3w2l")])
 metadata/_custom_type_script = "uid://dxn4lkbl53l63"
 
 [sub_resource type="Resource" id="Resource_6t8bx"]
 script = ExtResource("2_tjyiu")
-species = 9
+species = 19
 level = 4
 moves = Array[ExtResource("3_1b184")]([ExtResource("12_xr5lu"), ExtResource("13_ryu8a"), ExtResource("14_yg51d"), ExtResource("7_k3w2l")])
 metadata/_custom_type_script = "uid://dxn4lkbl53l63"

@@ -13,7 +13,7 @@
 
 [sub_resource type="Resource" id="Resource_fetqp"]
 script = ExtResource("2_cdf1q")
-species = 1
+species = 3
 level = 4
 moves = Array[ExtResource("3_qmgwm")]([ExtResource("4_mvhys"), ExtResource("5_pexsv"), ExtResource("6_dvtsy"), ExtResource("4_lyx5l")])
 metadata/_custom_type_script = "uid://dxn4lkbl53l63"

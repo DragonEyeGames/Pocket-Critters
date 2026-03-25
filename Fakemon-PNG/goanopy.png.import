@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://doa4hdrlyh5vq"
-path="res://.godot/imported/dunsparce-back.png-448d7493e6d98cad7e76d6951c06a535.ctex"
+uid="uid://qyx746qq2sqh"
+path="res://.godot/imported/goanopy.png-39fd446d99f30272cdc43d001435bfce.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Fakemon-PNG/dunsparce-back.png"
-dest_files=["res://.godot/imported/dunsparce-back.png-448d7493e6d98cad7e76d6951c06a535.ctex"]
+source_file="res://Fakemon-PNG/goanopy.png"
+dest_files=["res://.godot/imported/goanopy.png-39fd446d99f30272cdc43d001435bfce.ctex"]
 
 [params]
 

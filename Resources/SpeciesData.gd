@@ -15,3 +15,5 @@ class_name SpeciesData
 @export var catchRate:= 0.0
 
 @export var cryPath: String
+
+@export var evolution: EvolutionData

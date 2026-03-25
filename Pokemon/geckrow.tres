@@ -1,7 +1,9 @@
-[gd_resource type="Resource" script_class="SpeciesData" load_steps=29 format=3 uid="uid://dbpad56uixwli"]
+[gd_resource type="Resource" script_class="SpeciesData" load_steps=32 format=3 uid="uid://dbpad56uixwli"]
 
+[ext_resource type="Script" uid="uid://bdro5jjhj86t" path="res://Resources/EvolutionData.gd" id="1_6kh7r"]
 [ext_resource type="Script" uid="uid://kmcanhhb04o0" path="res://Resources/MoveResource.gd" id="1_i1mt6"]
 [ext_resource type="Resource" uid="uid://brvhs3akjs2ul" path="res://Moves/Grass/bramble.tres" id="2_6el0v"]
+[ext_resource type="Resource" uid="uid://bhaig3g01vrj6" path="res://Pokemon/goanopy.tres" id="2_cxorh"]
 [ext_resource type="Script" uid="uid://1vun3nkcoo5i" path="res://Resources/SpeciesData.gd" id="3_1poqq"]
 [ext_resource type="Resource" uid="uid://5go1ihkf80au" path="res://Moves/Grass/branch.tres" id="3_hjwmc"]
 [ext_resource type="Resource" uid="uid://bgileglrg45p2" path="res://Moves/Grass/trailblaze.tres" id="5_oi4u0"]
@@ -15,6 +17,12 @@
 [ext_resource type="Resource" uid="uid://cjwtbcu7vkxjk" path="res://Moves/Normal/tackle.tres" id="10_d5p8u"]
 [ext_resource type="Resource" uid="uid://cfuas1q540ijn" path="res://Moves/Dark/bite.tres" id="13_oi4u0"]
 [ext_resource type="Resource" uid="uid://dxdatetbl8tj" path="res://Moves/Dark/crunch.tres" id="14_6kh7r"]
+
+[sub_resource type="Resource" id="Resource_mrkbi"]
+script = ExtResource("1_6kh7r")
+into = ExtResource("2_cxorh")
+level = 16
+metadata/_custom_type_script = "uid://bdro5jjhj86t"
 
 [sub_resource type="Resource" id="Resource_0gxab"]
 script = ExtResource("1_i1mt6")
@@ -108,4 +116,5 @@ speed = 42
 potentialMoves = Array[ExtResource("1_i1mt6")]([SubResource("Resource_0gxab"), SubResource("Resource_f81nk"), SubResource("Resource_nwt6u"), SubResource("Resource_cvrrh"), SubResource("Resource_rggud"), SubResource("Resource_w12tr"), SubResource("Resource_ymqal"), SubResource("Resource_1df78"), SubResource("Resource_swn0w"), SubResource("Resource_2t72q"), SubResource("Resource_d50oh"), SubResource("Resource_cxorh"), SubResource("Resource_d5p8u")])
 catchRate = 0.45
 cryPath = "res://PokemonCries/snivy.wav"
+evolution = SubResource("Resource_mrkbi")
 metadata/_custom_type_script = "uid://c7t80kmu0l21k"

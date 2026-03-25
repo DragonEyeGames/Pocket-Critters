@@ -14,14 +14,14 @@
 
 [sub_resource type="Resource" id="Resource_bhuov"]
 script = ExtResource("2_ejocf")
-species = 7
+species = 16
 level = 4
 moves = Array[ExtResource("3_c4g85")]([ExtResource("4_fj0su"), ExtResource("5_ejocf"), ExtResource("6_c4g85"), ExtResource("5_i3qw8")])
 metadata/_custom_type_script = "uid://dxn4lkbl53l63"
 
 [sub_resource type="Resource" id="Resource_nfa4g"]
 script = ExtResource("2_ejocf")
-species = 1
+species = 3
 level = 3
 moves = Array[ExtResource("3_c4g85")]([ExtResource("8_fj0su"), ExtResource("9_i3qw8"), ExtResource("10_cp8op"), ExtResource("11_l4cut")])
 metadata/_custom_type_script = "uid://dxn4lkbl53l63"

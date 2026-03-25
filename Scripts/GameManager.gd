@@ -272,6 +272,19 @@ func setPokemon(species, level, moves):
 	p.moves=moves
 	return p
 	
+func evolvePokemon(original: PokemonData, evolution: SpeciesData):
+	original.base=evolution
+	original.species=evolution.species
+	original.name = pokemonName(evolution.species)
+	var backupHealth=original.maxHealth
+	original.maxHealth=int(get_stat(evolution.health, original.ivHealth, original.level)*healthMod)
+	original.health+=original.maxHealth-backupHealth
+	original.attack=get_stat(evolution.attack, original.ivAttack, original.level)
+	original.defense=get_stat(evolution.defense, original.ivDefense, original.level)
+	original.specialAttack=get_stat(evolution.specialAttack, original.ivSpecialAttack, original.level)
+	original.specialDefense=get_stat(evolution.specialDefense, original.ivSpecialDefense, original.level)
+	original.speed=get_stat(evolution.speed, original.ivSpeed, original.level)
+	
 func get_stat(base: int, iv: float,  level: int) -> int:
 	return int(base * (level / 10.0) * iv + 5)
 

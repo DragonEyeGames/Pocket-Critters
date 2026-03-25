@@ -69,7 +69,7 @@ size = Vector2(135, 119)
 [node name="Main" type="Node2D"]
 texture_filter = 1
 script = ExtResource("1_rdxft")
-pokemonEncounters = Array[int]([6, 8, 5, 1, 9, 3, 0, 7])
+pokemonEncounters = Array[int]([0, 3, 8, 11, 14, 16, 17, 19])
 levelMin = 1
 levelMax = 6
 

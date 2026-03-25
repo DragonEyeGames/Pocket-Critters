@@ -10,6 +10,6 @@
 [resource]
 script = ExtResource("6_mlird")
 species = 5
-level = 6
+level = 16
 moves = Array[ExtResource("1_ebihs")]([ExtResource("2_q5fma"), ExtResource("3_2f3ht"), ExtResource("4_xe7ks"), ExtResource("5_764cy")])
 metadata/_custom_type_script = "uid://c7t80kmu0l21k"

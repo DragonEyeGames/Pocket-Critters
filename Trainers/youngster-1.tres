@@ -19,7 +19,7 @@ metadata/_custom_type_script = "uid://dxn4lkbl53l63"
 
 [sub_resource type="Resource" id="Resource_oiqpx"]
 script = ExtResource("2_85jdt")
-species = 6
+species = 14
 level = 4
 moves = Array[ExtResource("3_oiqpx")]([ExtResource("7_7dk7e"), ExtResource("8_g6vvf"), ExtResource("9_6oi06"), ExtResource("10_d8vc6")])
 metadata/_custom_type_script = "uid://dxn4lkbl53l63"
