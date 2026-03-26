@@ -1,0 +1,121 @@
+[gd_scene load_steps=9 format=3 uid="uid://cw6s8v5p3vlha"]
+
+[ext_resource type="PackedScene" uid="uid://3ijnqbla51yb" path="res://Scenes/pokemonDisplay.tscn" id="1_0q5wy"]
+[ext_resource type="Script" uid="uid://uc16k0lmv6pw" path="res://Scenes/evolve.gd" id="1_6k2bf"]
+[ext_resource type="Shader" uid="uid://bomfvo6o4mvg6" path="res://Shaders/flash.gdshader" id="2_6k2bf"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_6k2bf"]
+resource_local_to_scene = true
+shader = ExtResource("2_6k2bf")
+shader_parameter/flash_color = Color(1, 1, 1, 1)
+shader_parameter/flash_value = 0.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_0q5wy"]
+resource_local_to_scene = true
+shader = ExtResource("2_6k2bf")
+shader_parameter/flash_color = Color(1, 1, 1, 1)
+shader_parameter/flash_value = 1.0
+
+[sub_resource type="Animation" id="Animation_6k2bf"]
+resource_name = "evolve"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CurrentPokemon:material:shader_parameter/flash_value")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("NewPokemon:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.75, 1.25, 1.75, 2, 2.25, 2.5, 2.65, 2.8, 2.95, 3.1, 3.3, 3.5, 3.7, 3.9, 4, 4.1, 4.2, 4.3, 4.35, 4.4, 4.45),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("NewPokemon:material:shader_parameter/flash_value")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 4.5, 5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [1.0, 1.0, 0.0]
+}
+
+[sub_resource type="Animation" id="Animation_c4p35"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CurrentPokemon:material:shader_parameter/flash_value")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("NewPokemon:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("NewPokemon:material:shader_parameter/flash_value")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5oiha"]
+_data = {
+&"RESET": SubResource("Animation_c4p35"),
+&"evolve": SubResource("Animation_6k2bf")
+}
+
+[node name="Evolve" type="Node2D"]
+script = ExtResource("1_6k2bf")
+
+[node name="CurrentPokemon" parent="." instance=ExtResource("1_0q5wy")]
+material = SubResource("ShaderMaterial_6k2bf")
+position = Vector2(474, 296)
+pokemon = 5
+
+[node name="NewPokemon" parent="." instance=ExtResource("1_0q5wy")]
+visible = false
+material = SubResource("ShaderMaterial_0q5wy")
+position = Vector2(474, 296)
+pokemon = 6
+
+[node name="Evolve" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_5oiha")
+}

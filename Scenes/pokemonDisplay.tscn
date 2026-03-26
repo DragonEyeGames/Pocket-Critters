@@ -1,0 +1,212 @@
+[gd_scene load_steps=36 format=3 uid="uid://3ijnqbla51yb"]
+
+[ext_resource type="Shader" uid="uid://bomfvo6o4mvg6" path="res://Shaders/flash.gdshader" id="1_p3h4s"]
+[ext_resource type="Script" uid="uid://dyg5osbtpg5ua" path="res://Scenes/pokemonDisplay.gd" id="2_mhsav"]
+[ext_resource type="Texture2D" uid="uid://bbctwkye4ujb4" path="res://Fakemon-PNG/timberry.png" id="3_cm7tk"]
+[ext_resource type="Texture2D" uid="uid://diwbntfmt43qj" path="res://Fakemon-PNG/pilfetch.png" id="4_5g8fa"]
+[ext_resource type="Texture2D" uid="uid://cy5ixt1h2jqox" path="res://Fakemon-PNG/geckrow.png" id="5_6v65q"]
+[ext_resource type="Texture2D" uid="uid://qyx746qq2sqh" path="res://Fakemon-PNG/goanopy.png" id="6_bbs5c"]
+[ext_resource type="Texture2D" uid="uid://dmggf8l828rn7" path="res://Fakemon-PNG/sligment.png" id="7_a71d6"]
+[ext_resource type="Texture2D" uid="uid://bk8ot7cpwdae3" path="res://Fakemon-PNG/pasturlo.png" id="8_552r7"]
+[ext_resource type="Texture2D" uid="uid://dhh1fa6gyyhfj" path="res://Fakemon-PNG/baoby.png" id="9_70h40"]
+[ext_resource type="Texture2D" uid="uid://cx0gdn7okrdob" path="res://Fakemon-PNG/varmot.png" id="10_a4u7d"]
+[ext_resource type="Texture2D" uid="uid://con11d3l6ipsl" path="res://Fakemon-PNG/merlicun.png" id="11_w4g0d"]
+[ext_resource type="Texture2D" uid="uid://d3ckwj4klm3xv" path="res://Fakemon-PNG/pompet.png" id="12_jssi5"]
+[ext_resource type="Texture2D" uid="uid://b7kb5xv1u1k3n" path="res://Fakemon-PNG/saurky.png" id="13_bejen"]
+[ext_resource type="Texture2D" uid="uid://dcu31aa4er1iu" path="res://Fakemon-PNG/dampurr.png" id="14_btdo2"]
+[ext_resource type="Texture2D" uid="uid://bqfx8jaeuhf05" path="res://Fakemon-PNG/bonfur.png" id="15_4o2j5"]
+[ext_resource type="Texture2D" uid="uid://blbo0dto4hfos" path="res://Fakemon-PNG/lollybog.png" id="16_rp3wj"]
+[ext_resource type="Texture2D" uid="uid://delt5pm1csr0u" path="res://Fakemon-PNG/kankwart.png" id="17_yyjib"]
+[ext_resource type="Texture2D" uid="uid://rurari3qfhj8" path="res://Fakemon-PNG/baulder.png" id="18_7wvrw"]
+[ext_resource type="Texture2D" uid="uid://ii1pbb1pc3mv" path="res://Fakemon-PNG/timberry-back.png" id="19_x20r2"]
+[ext_resource type="Texture2D" uid="uid://biriaivtjbjx5" path="res://Fakemon-PNG/pilfetch-back.png" id="20_f5fua"]
+[ext_resource type="Texture2D" uid="uid://cyafkvm465t4r" path="res://Fakemon-PNG/geckrow-back.png" id="21_bq1dn"]
+[ext_resource type="Texture2D" uid="uid://bs6awpn2ophfp" path="res://Fakemon-PNG/goanopy-back.png" id="22_xmjku"]
+[ext_resource type="Texture2D" uid="uid://cfqgnasa27orh" path="res://Fakemon-PNG/sligment-back.png" id="23_suhi2"]
+[ext_resource type="Texture2D" uid="uid://b3p3ovwwgolld" path="res://Fakemon-PNG/pasturlo-back.png" id="24_olgmr"]
+[ext_resource type="Texture2D" uid="uid://q5f2y5hibdcr" path="res://Fakemon-PNG/baoby-back.png" id="25_nyitt"]
+[ext_resource type="Texture2D" uid="uid://cdt3aw3drbacm" path="res://Fakemon-PNG/varmot-back.png" id="26_i176k"]
+[ext_resource type="Texture2D" uid="uid://t86qm15tse7k" path="res://Fakemon-PNG/merlicun-back.png" id="27_2cvln"]
+[ext_resource type="Texture2D" uid="uid://b6l6ujjcws8yl" path="res://Fakemon-PNG/pompet-back.png" id="28_t6s3o"]
+[ext_resource type="Texture2D" uid="uid://diqhy11f27655" path="res://Fakemon-PNG/saurky-back.png" id="29_a5qqs"]
+[ext_resource type="Texture2D" uid="uid://ckrdij5q5v04c" path="res://Fakemon-PNG/dampurr-back.png" id="30_0n0wv"]
+[ext_resource type="Texture2D" uid="uid://bpsdc0iuyui2d" path="res://Fakemon-PNG/bonfur-back.png" id="31_y58oc"]
+[ext_resource type="Texture2D" uid="uid://1824eslq378a" path="res://Fakemon-PNG/lollybog-back.png" id="32_mo7so"]
+[ext_resource type="Texture2D" uid="uid://cfbgaqc8xjn06" path="res://Fakemon-PNG/kankwart-back.png" id="33_affbm"]
+[ext_resource type="Texture2D" uid="uid://j67mobjo6oo0" path="res://Fakemon-PNG/baulder-back.png" id="34_tbl8y"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_c4p35"]
+resource_local_to_scene = true
+shader = ExtResource("1_p3h4s")
+shader_parameter/flash_color = Color(1, 1, 1, 1)
+shader_parameter/flash_value = 0.0
+
+[node name="CurrentPokemon" type="Node2D"]
+material = SubResource("ShaderMaterial_c4p35")
+scale = Vector2(3, 3)
+script = ExtResource("2_mhsav")
+
+[node name="Front" type="Node2D" parent="."]
+use_parent_material = true
+
+[node name="Timberry" type="Sprite2D" parent="Front"]
+visible = false
+use_parent_material = true
+texture = ExtResource("3_cm7tk")
+
+[node name="Pilfetch" type="Sprite2D" parent="Front"]
+use_parent_material = true
+texture = ExtResource("4_5g8fa")
+
+[node name="Geckrow" type="Sprite2D" parent="Front"]
+visible = false
+use_parent_material = true
+texture = ExtResource("5_6v65q")
+
+[node name="Goanopy" type="Sprite2D" parent="Front"]
+visible = false
+use_parent_material = true
+texture = ExtResource("6_bbs5c")
+
+[node name="Sligment" type="Sprite2D" parent="Front"]
+visible = false
+use_parent_material = true
+texture = ExtResource("7_a71d6")
+
+[node name="Pasturlo" type="Sprite2D" parent="Front"]
+visible = false
+use_parent_material = true
+texture = ExtResource("8_552r7")
+
+[node name="Baoby" type="Sprite2D" parent="Front"]
+visible = false
+use_parent_material = true
+texture = ExtResource("9_70h40")
+
+[node name="Varmot" type="Sprite2D" parent="Front"]
+visible = false
+use_parent_material = true
+texture = ExtResource("10_a4u7d")
+
+[node name="Merlicun" type="Sprite2D" parent="Front"]
+visible = false
+use_parent_material = true
+texture = ExtResource("11_w4g0d")
+
+[node name="Pompet" type="Sprite2D" parent="Front"]
+visible = false
+use_parent_material = true
+texture = ExtResource("12_jssi5")
+
+[node name="Saurky" type="Sprite2D" parent="Front"]
+visible = false
+use_parent_material = true
+texture = ExtResource("13_bejen")
+
+[node name="Dampurr" type="Sprite2D" parent="Front"]
+visible = false
+use_parent_material = true
+texture = ExtResource("14_btdo2")
+
+[node name="Bonfur" type="Sprite2D" parent="Front"]
+visible = false
+use_parent_material = true
+texture = ExtResource("15_4o2j5")
+
+[node name="Lollybog" type="Sprite2D" parent="Front"]
+visible = false
+use_parent_material = true
+texture = ExtResource("16_rp3wj")
+
+[node name="Kankwart" type="Sprite2D" parent="Front"]
+visible = false
+use_parent_material = true
+texture = ExtResource("17_yyjib")
+
+[node name="Baulder" type="Sprite2D" parent="Front"]
+visible = false
+use_parent_material = true
+texture = ExtResource("18_7wvrw")
+
+[node name="Back" type="Node2D" parent="."]
+use_parent_material = true
+
+[node name="Timberry" type="Sprite2D" parent="Back"]
+visible = false
+use_parent_material = true
+texture = ExtResource("19_x20r2")
+
+[node name="Pilfetch" type="Sprite2D" parent="Back"]
+visible = false
+use_parent_material = true
+texture = ExtResource("20_f5fua")
+
+[node name="Geckrow" type="Sprite2D" parent="Back"]
+visible = false
+use_parent_material = true
+texture = ExtResource("21_bq1dn")
+
+[node name="Goanopy" type="Sprite2D" parent="Back"]
+visible = false
+use_parent_material = true
+texture = ExtResource("22_xmjku")
+
+[node name="Sligment" type="Sprite2D" parent="Back"]
+visible = false
+use_parent_material = true
+texture = ExtResource("23_suhi2")
+
+[node name="Pasturlo" type="Sprite2D" parent="Back"]
+visible = false
+use_parent_material = true
+texture = ExtResource("24_olgmr")
+
+[node name="Baoby" type="Sprite2D" parent="Back"]
+visible = false
+use_parent_material = true
+texture = ExtResource("25_nyitt")
+
+[node name="Varmot" type="Sprite2D" parent="Back"]
+visible = false
+use_parent_material = true
+texture = ExtResource("26_i176k")
+
+[node name="Merlicun" type="Sprite2D" parent="Back"]
+visible = false
+use_parent_material = true
+texture = ExtResource("27_2cvln")
+
+[node name="Pompet" type="Sprite2D" parent="Back"]
+visible = false
+use_parent_material = true
+texture = ExtResource("28_t6s3o")
+
+[node name="Saurky" type="Sprite2D" parent="Back"]
+visible = false
+use_parent_material = true
+texture = ExtResource("29_a5qqs")
+
+[node name="Dampurr" type="Sprite2D" parent="Back"]
+visible = false
+use_parent_material = true
+texture = ExtResource("30_0n0wv")
+
+[node name="Bonfur" type="Sprite2D" parent="Back"]
+visible = false
+use_parent_material = true
+texture = ExtResource("31_y58oc")
+
+[node name="Lollybog" type="Sprite2D" parent="Back"]
+visible = false
+use_parent_material = true
+texture = ExtResource("32_mo7so")
+
+[node name="Kankwart" type="Sprite2D" parent="Back"]
+visible = false
+use_parent_material = true
+texture = ExtResource("33_affbm")
+
+[node name="Baulder" type="Sprite2D" parent="Back"]
+visible = false
+use_parent_material = true
+texture = ExtResource("34_tbl8y")
