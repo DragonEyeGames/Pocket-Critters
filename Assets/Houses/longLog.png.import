@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cw65bj3803ip4"
-path="res://.godot/imported/Barn objects.png-c00a5b69b165ca72138c77a910e55c8c.ctex"
+uid="uid://c5iimh6qjn77t"
+path="res://.godot/imported/longLog.png-5b0979e3fbdfb0f1df7ea11aec02a585.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Houses/Farm Buildings/Barn objects.png"
-dest_files=["res://.godot/imported/Barn objects.png-c00a5b69b165ca72138c77a910e55c8c.ctex"]
+source_file="res://Assets/Houses/longLog.png"
+dest_files=["res://.godot/imported/longLog.png-5b0979e3fbdfb0f1df7ea11aec02a585.ctex"]
 
 [params]
 
