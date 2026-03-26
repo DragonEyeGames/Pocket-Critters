@@ -1,0 +1,46 @@
+[gd_scene load_steps=6 format=3 uid="uid://cohvi3a5kb40k"]
+
+[ext_resource type="Script" uid="uid://b66kf02mnlvno" path="res://Levels/tree.gd" id="1_g1eax"]
+[ext_resource type="Texture2D" uid="uid://c7es62wpikcwl" path="res://Assets/Tree/Common/Shadow/Maple Tree.png" id="2_pg1oy"]
+[ext_resource type="Texture2D" uid="uid://jbcxus68ohyk" path="res://Assets/Tree/Common/Shadow/Mahogany Tree.png" id="3_wr6gd"]
+[ext_resource type="Texture2D" uid="uid://c437kb7v477jo" path="res://Assets/Tree/Common/Shadow/Birch Tree.png" id="4_wdona"]
+[ext_resource type="Texture2D" uid="uid://cod3q5coktkyf" path="res://Assets/Tree/Common/Shadow/Pine Tree.png" id="5_bshke"]
+
+[node name="Tree" type="Node2D" groups=["Y-Sort"]]
+z_index = 1
+script = ExtResource("1_g1eax")
+
+[node name="Maple" type="Sprite2D" parent="."]
+texture = ExtResource("2_pg1oy")
+region_enabled = true
+region_rect = Rect2(0, 48.917904, 31.971546, 46.042828)
+
+[node name="Maple2" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("2_pg1oy")
+region_enabled = true
+region_rect = Rect2(0, 48.917904, 31.971546, 46.042828)
+
+[node name="Mahogany" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("3_wr6gd")
+region_enabled = true
+region_rect = Rect2(96, 1, 32, 46)
+
+[node name="Mahogany2" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("3_wr6gd")
+region_enabled = true
+region_rect = Rect2(96, 1, 32, 46)
+
+[node name="Birch" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("4_wdona")
+region_enabled = true
+region_rect = Rect2(96, 2, 32, 46)
+
+[node name="Pine" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("5_bshke")
+region_enabled = true
+region_rect = Rect2(96, 2, 32, 46)
