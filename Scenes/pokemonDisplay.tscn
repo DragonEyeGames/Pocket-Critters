@@ -1,7 +1,7 @@
 [gd_scene load_steps=36 format=3 uid="uid://3ijnqbla51yb"]
 
 [ext_resource type="Shader" uid="uid://bomfvo6o4mvg6" path="res://Shaders/flash.gdshader" id="1_p3h4s"]
-[ext_resource type="Script" uid="uid://dyg5osbtpg5ua" path="res://Scenes/pokemonDisplay.gd" id="2_mhsav"]
+[ext_resource type="Script" uid="uid://dyg5osbtpg5ua" path="res://Scripts/newPokemonDisplay.gd" id="2_mhsav"]
 [ext_resource type="Texture2D" uid="uid://bbctwkye4ujb4" path="res://Fakemon-PNG/timberry.png" id="3_cm7tk"]
 [ext_resource type="Texture2D" uid="uid://diwbntfmt43qj" path="res://Fakemon-PNG/pilfetch.png" id="4_5g8fa"]
 [ext_resource type="Texture2D" uid="uid://cy5ixt1h2jqox" path="res://Fakemon-PNG/geckrow.png" id="5_6v65q"]

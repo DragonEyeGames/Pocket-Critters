@@ -14,15 +14,15 @@
 [ext_resource type="PackedScene" uid="uid://bmsyi0138rgpo" path="res://Trainers/trainer.tscn" id="12_i30pn"]
 [ext_resource type="Resource" uid="uid://byrlv6tws4kjy" path="res://Trainers/blaze-1.tres" id="13_b4rj7"]
 [ext_resource type="Resource" uid="uid://7stw2esp4fm5" path="res://Trainers/youngster-1.tres" id="14_xgj3m"]
-[ext_resource type="PackedScene" uid="uid://dxl5f3ov2520a" path="res://Levels/forestTrees.tscn" id="15_5dxj7"]
+[ext_resource type="PackedScene" uid="uid://dxl5f3ov2520a" path="res://Scenes/forestTrees.tscn" id="15_5dxj7"]
 [ext_resource type="Resource" uid="uid://dp31kdgf40175" path="res://Trainers/rookie-1.tres" id="15_x8ljv"]
 [ext_resource type="Resource" uid="uid://d2e001rb1jev2" path="res://Trainers/trainee-1.tres" id="16_evao7"]
 [ext_resource type="Resource" uid="uid://ddvy8op0ryf1g" path="res://Trainers/scout-1.tres" id="17_os84l"]
 [ext_resource type="Resource" uid="uid://b7ul6d7ek0cy2" path="res://Trainers/collector-1.tres" id="18_8tpo1"]
-[ext_resource type="Script" uid="uid://crrtvghb3yxwo" path="res://Levels/exit.gd" id="19_b4rj7"]
+[ext_resource type="Script" uid="uid://crrtvghb3yxwo" path="res://Scripts/exit.gd" id="19_b4rj7"]
 [ext_resource type="Resource" uid="uid://f5qvksh8iemt" path="res://Trainers/bugCatcher-1.tres" id="20_evao7"]
 [ext_resource type="TileSet" uid="uid://caeoktquk1783" path="res://tileset.tres" id="20_xgj3m"]
-[ext_resource type="PackedScene" uid="uid://daxn64tg8jns3" path="res://Levels/transitioner.tscn" id="23_os84l"]
+[ext_resource type="PackedScene" uid="uid://daxn64tg8jns3" path="res://Scenes/transitioner.tscn" id="23_os84l"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_sxxgb"]
 shader = ExtResource("7_yy64p")

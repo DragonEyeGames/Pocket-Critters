@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b0j4alieb54pt"
-path="res://.godot/imported/Stones.png-cec4865b52762ea3c3aeb6618ff8c484.ctex"
+uid="uid://w1pbd17im6ri"
+path="res://.godot/imported/wood canoe.png-8609ebec1610e66043cf3b42bcdc05f2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Beach/Beach/Stones.png"
-dest_files=["res://.godot/imported/Stones.png-cec4865b52762ea3c3aeb6618ff8c484.ctex"]
+source_file="res://Assets/Beach/wood canoe.png"
+dest_files=["res://.godot/imported/wood canoe.png-8609ebec1610e66043cf3b42bcdc05f2.ctex"]
 
 [params]
 

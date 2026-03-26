@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d2i53o100q6ll"
-path="res://.godot/imported/props 1.png-3cd6925c6feae9f3d5db1c13f8edb8f6.ctex"
+uid="uid://c7266wdh5g81e"
+path="res://.godot/imported/Stones 2.png-f735116db189db1f810a97d0128a1017.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Beach/Beach/props 1.png"
-dest_files=["res://.godot/imported/props 1.png-3cd6925c6feae9f3d5db1c13f8edb8f6.ctex"]
+source_file="res://Assets/Beach/Beach/Stones 2.png"
+dest_files=["res://.godot/imported/Stones 2.png-f735116db189db1f810a97d0128a1017.ctex"]
 
 [params]
 

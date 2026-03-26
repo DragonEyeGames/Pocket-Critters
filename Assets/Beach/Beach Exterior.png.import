@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c2sqlurto3p03"
-path="res://.godot/imported/plants.png-8b4b6338b4073f6229200820223a366b.ctex"
+uid="uid://drn0x6se85ebb"
+path="res://.godot/imported/Beach Exterior.png-3c06c25086e03e6994b39a433db8b380.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Beach/Beach/plants.png"
-dest_files=["res://.godot/imported/plants.png-8b4b6338b4073f6229200820223a366b.ctex"]
+source_file="res://Assets/Beach/Beach Exterior.png"
+dest_files=["res://.godot/imported/Beach Exterior.png-3c06c25086e03e6994b39a433db8b380.ctex"]
 
 [params]
 

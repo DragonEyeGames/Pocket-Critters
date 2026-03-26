@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ofb0iqkxdmvt"
-path="res://.godot/imported/Wood Boat.png-70dbe946afd58436f743e5f0482d612e.ctex"
+uid="uid://daff7kkh0i4jc"
+path="res://.godot/imported/Coconut Tree.png-a1aafaeee2b7a63e9c871155c22f22a7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Beach/Wood Boat.png"
-dest_files=["res://.godot/imported/Wood Boat.png-70dbe946afd58436f743e5f0482d612e.ctex"]
+source_file="res://Assets/Beach/Coconut Tree.png"
+dest_files=["res://.godot/imported/Coconut Tree.png-a1aafaeee2b7a63e9c871155c22f22a7.ctex"]
 
 [params]
 

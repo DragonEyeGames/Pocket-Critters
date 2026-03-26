@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=4 uid="uid://hvt8a8487efr"]
+[gd_scene load_steps=34 format=4 uid="uid://hvt8a8487efr"]
 
 [ext_resource type="Script" uid="uid://swgsdmbo5fng" path="res://Scripts/main.gd" id="1_yelr5"]
 [ext_resource type="PackedScene" uid="uid://c5yxtkkwi03pt" path="res://Scenes/player.tscn" id="2_fmudw"]
@@ -6,18 +6,18 @@
 [ext_resource type="PackedScene" uid="uid://dwbnx0jnjv6yx" path="res://Scenes/pause.tscn" id="5_itvji"]
 [ext_resource type="Shader" uid="uid://cfeiswkbpxh1p" path="res://Shaders/transition.gdshader" id="7_rbf7e"]
 [ext_resource type="Script" uid="uid://58m7l7uvvox7" path="res://Scripts/camera.gd" id="8_t551v"]
-[ext_resource type="Shader" uid="uid://bj6hwrrewmxbo" path="res://Levels/removeBackground.gdshader" id="11_6t2tp"]
+[ext_resource type="Shader" uid="uid://bj6hwrrewmxbo" path="res://Shaders/removeBackground.gdshader" id="11_6t2tp"]
 [ext_resource type="Texture2D" uid="uid://cfju02kgmoc4v" path="res://Assets/FireRedSprites/Game Boy Advance - Pokemon FireRed _ LeafGreen - Tilesets - Tileset.png" id="12_6t2tp"]
 [ext_resource type="Texture2D" uid="uid://c77i27y4iwujm" path="res://Assets/critterCenter.png" id="12_dvn4l"]
 [ext_resource type="Texture2D" uid="uid://cwpfb8frdw4go" path="res://Assets/FireRedSprites/improvedBuildings.png" id="13_c2nek"]
 [ext_resource type="Texture2D" uid="uid://6wkiv4wgjgy2" path="res://Assets/FireRedSprites/critterMart.png" id="14_eridb"]
-[ext_resource type="Script" uid="uid://crrtvghb3yxwo" path="res://Levels/exit.gd" id="16_m0uwm"]
+[ext_resource type="Script" uid="uid://crrtvghb3yxwo" path="res://Scripts/exit.gd" id="16_m0uwm"]
 [ext_resource type="Texture2D" uid="uid://cofed3e0ub73v" path="res://Assets/Houses/NPCS houses/Houses.png" id="17_yelr5"]
 [ext_resource type="Texture2D" uid="uid://c5iimh6qjn77t" path="res://Assets/Houses/longLog.png" id="18_fmudw"]
 [ext_resource type="Texture2D" uid="uid://do5pp61kh21dt" path="res://Assets/Houses/Door, windows, and chimney.png" id="18_yelr5"]
 [ext_resource type="TileSet" uid="uid://caeoktquk1783" path="res://tileset.tres" id="19_fmudw"]
-[ext_resource type="PackedScene" uid="uid://daxn64tg8jns3" path="res://Levels/transitioner.tscn" id="20_ne0ai"]
-[ext_resource type="PackedScene" uid="uid://bmkv32wul8bou" path="res://Levels/waymeetTrees.tscn" id="21_1705y"]
+[ext_resource type="PackedScene" uid="uid://daxn64tg8jns3" path="res://Scenes/transitioner.tscn" id="20_ne0ai"]
+[ext_resource type="PackedScene" uid="uid://bmkv32wul8bou" path="res://Scenes/waymeetTrees.tscn" id="21_1705y"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_sxxgb"]
 shader = ExtResource("7_rbf7e")
@@ -120,6 +120,9 @@ shader_parameter/replace_4 = Color(0, 0, 0, 1)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eridb"]
 size = Vector2(68, 29)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yelr5"]
+size = Vector2(20, 122)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ne0ai"]
 shader = ExtResource("11_6t2tp")
@@ -281,6 +284,18 @@ travelPos = Vector2(-529, -1256)
 position = Vector2(0, 19.5)
 shape = SubResource("RectangleShape2D_eridb")
 
+[node name="exit2" type="Area2D" parent="."]
+position = Vector2(428, -236)
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("16_m0uwm")
+travelZone = "res://Levels/beach.tscn"
+travelPos = Vector2(-647, 773)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="exit2"]
+position = Vector2(24, -4)
+shape = SubResource("RectangleShape2D_yelr5")
+
 [node name="CritterCenter" type="Node2D" parent="." groups=["Y-Sort"]]
 position = Vector2(0, -196)
 
@@ -374,3 +389,4 @@ tile_set = ExtResource("19_fmudw")
 [connection signal="area_entered" from="Mart/PokeMart" to="." method="_on_poke_mart_area_entered"]
 [connection signal="area_exited" from="Mart/PokeMart" to="." method="_on_poke_mart_area_exited"]
 [connection signal="area_entered" from="exit" to="exit" method="_on_area_entered"]
+[connection signal="area_entered" from="exit2" to="exit2" method="_on_area_entered"]

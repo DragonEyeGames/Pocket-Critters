@@ -1,10 +1,10 @@
 [gd_scene load_steps=30 format=3 uid="uid://c1lq8jc3apncf"]
 
 [ext_resource type="Texture2D" uid="uid://bqii4hcf38wod" path="res://Assets/critterCenterInterior.png" id="1_g7jbf"]
-[ext_resource type="Script" uid="uid://cnf2er3al1w5d" path="res://Levels/PokemonCenters/pokeCenter.gd" id="1_p0tuk"]
+[ext_resource type="Script" uid="uid://cnf2er3al1w5d" path="res://Scripts/pokeCenter.gd" id="1_p0tuk"]
 [ext_resource type="PackedScene" uid="uid://c5yxtkkwi03pt" path="res://Scenes/player.tscn" id="2_aguq6"]
 [ext_resource type="Texture2D" uid="uid://bhngxc6jw5euf" path="res://Assets/charsetA_1.png" id="3_a6hmm"]
-[ext_resource type="Script" uid="uid://bkjchjqege2ql" path="res://Scenes/critterCenterMan.gd" id="4_iidne"]
+[ext_resource type="Script" uid="uid://bkjchjqege2ql" path="res://Scripts/critterCenterMan.gd" id="4_iidne"]
 [ext_resource type="Script" uid="uid://crp3g76avkl7g" path="res://Scripts/dialogue.gd" id="5_q2wfs"]
 [ext_resource type="AudioStream" uid="uid://c8uubdf078rn2" path="res://New Sounds/healed.mp3" id="7_p0tuk"]
 [ext_resource type="PackedScene" uid="uid://d3i3no2grjwva" path="res://Scenes/critterball.tscn" id="7_ue1an"]

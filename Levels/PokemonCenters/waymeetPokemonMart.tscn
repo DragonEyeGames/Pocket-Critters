@@ -1,10 +1,10 @@
 [gd_scene load_steps=12 format=3 uid="uid://c4sjle78hy3al"]
 
-[ext_resource type="Script" uid="uid://fo75gmfav2sx" path="res://Scenes/pokeMart.gd" id="1_f6mit"]
+[ext_resource type="Script" uid="uid://fo75gmfav2sx" path="res://Scripts/pokeMart.gd" id="1_f6mit"]
 [ext_resource type="Texture2D" uid="uid://4q27dhcidos8" path="res://Assets/FireRedSprites/pokeMart.png" id="2_812t0"]
 [ext_resource type="PackedScene" uid="uid://c5yxtkkwi03pt" path="res://Scenes/player.tscn" id="3_6wh0e"]
 [ext_resource type="Texture2D" uid="uid://dv4otklr3xj3k" path="res://Assets/charsetB_1.png" id="4_ban38"]
-[ext_resource type="Script" uid="uid://0vwf4ig4k635" path="res://Scenes/critterStoryLady.gd" id="5_34a2k"]
+[ext_resource type="Script" uid="uid://0vwf4ig4k635" path="res://Scripts/critterStoryLady.gd" id="5_34a2k"]
 [ext_resource type="Script" uid="uid://crp3g76avkl7g" path="res://Scripts/dialogue.gd" id="6_rn261"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_av5t7"]

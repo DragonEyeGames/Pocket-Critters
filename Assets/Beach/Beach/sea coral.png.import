@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bngcpcgtbwx0o"
-path="res://.godot/imported/Beach Plates.png-340d12ef0650cb98b6c2daeee566b243.ctex"
+uid="uid://cxc7tv506rkqw"
+path="res://.godot/imported/sea coral.png-188a34c0f0588f303444e4a88bd0cfc1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Beach/Beach Plates.png"
-dest_files=["res://.godot/imported/Beach Plates.png-340d12ef0650cb98b6c2daeee566b243.ctex"]
+source_file="res://Assets/Beach/Beach/sea coral.png"
+dest_files=["res://.godot/imported/sea coral.png-188a34c0f0588f303444e4a88bd0cfc1.ctex"]
 
 [params]
 

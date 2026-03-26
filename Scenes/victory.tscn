@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://b7lodndjoa1ur"]
 
-[ext_resource type="Script" uid="uid://fw8mx4qgfrso" path="res://Scenes/victory.gd" id="1_1fp7o"]
+[ext_resource type="Script" uid="uid://fw8mx4qgfrso" path="res://Scripts/victory.gd" id="1_1fp7o"]
 
 [node name="Victory" type="Control"]
 layout_mode = 3

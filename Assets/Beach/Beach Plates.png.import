@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://daff7kkh0i4jc"
-path="res://.godot/imported/Coconut Tree.png-c2f642b87169137b476ca649205c93af.ctex"
+uid="uid://bngcpcgtbwx0o"
+path="res://.godot/imported/Beach Plates.png-804b44d133580d87b5ed3eb1414591f5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Beach/Coconut Tree.png"
-dest_files=["res://.godot/imported/Coconut Tree.png-c2f642b87169137b476ca649205c93af.ctex"]
+source_file="res://Assets/Beach/Beach Plates.png"
+dest_files=["res://.godot/imported/Beach Plates.png-804b44d133580d87b5ed3eb1414591f5.ctex"]
 
 [params]
 

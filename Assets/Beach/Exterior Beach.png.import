@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cxc7tv506rkqw"
-path="res://.godot/imported/sea coral.png-352d5ecb8dfa955002c6693ab7678c74.ctex"
+uid="uid://bvlcgu6oth225"
+path="res://.godot/imported/Exterior Beach.png-478367162515407b88f20134f3ad95cb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Beach/Beach/sea coral.png"
-dest_files=["res://.godot/imported/sea coral.png-352d5ecb8dfa955002c6693ab7678c74.ctex"]
+source_file="res://Assets/Beach/Exterior Beach.png"
+dest_files=["res://.godot/imported/Exterior Beach.png-478367162515407b88f20134f3ad95cb.ctex"]
 
 [params]
 

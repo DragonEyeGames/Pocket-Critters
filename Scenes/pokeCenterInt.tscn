@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://c5yxtkkwi03pt" path="res://Scenes/player.tscn" id="2_4txgt"]
 [ext_resource type="Texture2D" uid="uid://bhngxc6jw5euf" path="res://Assets/charsetA_1.png" id="3_j5vor"]
 [ext_resource type="Script" uid="uid://crp3g76avkl7g" path="res://Scripts/dialogue.gd" id="4_3lhkf"]
-[ext_resource type="Script" uid="uid://bkjchjqege2ql" path="res://Scenes/critterCenterMan.gd" id="4_qrubs"]
+[ext_resource type="Script" uid="uid://bkjchjqege2ql" path="res://Scripts/critterCenterMan.gd" id="4_qrubs"]
 [ext_resource type="AudioStream" uid="uid://d2ifd1umddsod" path="res://GeneralSFX/heal.mp3" id="6_3kyke"]
 [ext_resource type="PackedScene" uid="uid://d3i3no2grjwva" path="res://Scenes/critterball.tscn" id="7_l1evu"]
 

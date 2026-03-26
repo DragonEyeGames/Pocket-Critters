@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://uccxtcfa8d5n"
-path="res://.godot/imported/Bridge Beach.png-6a0d17b47ab9b67a78728c97726bc851.ctex"
+path="res://.godot/imported/Bridge Beach.png-756ae515b11b1fc58f7d70f2833aa39a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Beach/Bridge Beach.png"
-dest_files=["res://.godot/imported/Bridge Beach.png-6a0d17b47ab9b67a78728c97726bc851.ctex"]
+source_file="res://Assets/Beach/Bridge Beach.png"
+dest_files=["res://.godot/imported/Bridge Beach.png-756ae515b11b1fc58f7d70f2833aa39a.ctex"]
 
 [params]
 

@@ -1,0 +1,383 @@
+[gd_scene load_steps=2 format=3 uid="uid://b5ymdc0r6kj4"]
+
+[ext_resource type="PackedScene" uid="uid://cohvi3a5kb40k" path="res://Scenes/tree.tscn" id="1_mdlvc"]
+
+[node name="Trees" type="Node2D"]
+
+[node name="Tree" parent="." instance=ExtResource("1_mdlvc")]
+position = Vector2(-527, -315)
+
+[node name="Tree2" parent="." instance=ExtResource("1_mdlvc")]
+position = Vector2(-584, -353)
+
+[node name="Tree3" parent="." instance=ExtResource("1_mdlvc")]
+position = Vector2(-630, -316)
+
+[node name="Tree4" parent="." instance=ExtResource("1_mdlvc")]
+position = Vector2(-562, -276)
+
+[node name="Tree5" parent="." instance=ExtResource("1_mdlvc")]
+position = Vector2(-614, -228)
+
+[node name="Tree6" parent="." instance=ExtResource("1_mdlvc")]
+position = Vector2(-549, -205)
+
+[node name="Tree7" parent="." instance=ExtResource("1_mdlvc")]
+position = Vector2(-512, -262)
+
+[node name="Tree8" parent="." instance=ExtResource("1_mdlvc")]
+position = Vector2(-462, -211)
+
+[node name="Tree9" parent="." instance=ExtResource("1_mdlvc")]
+position = Vector2(-431, -138)
+
+[node name="Tree10" parent="." instance=ExtResource("1_mdlvc")]
+position = Vector2(-458, -98)
+
+[node name="Tree11" parent="." instance=ExtResource("1_mdlvc")]
+position = Vector2(-520, -82)
+
+[node name="Tree12" parent="." instance=ExtResource("1_mdlvc")]
+position = Vector2(-485, -143)
+
+[node name="Tree13" parent="." instance=ExtResource("1_mdlvc")]
+position = Vector2(-535, -141)
+
+[node name="Tree14" parent="." instance=ExtResource("1_mdlvc")]
+position = Vector2(-590, -166)
+
+[node name="Tree15" parent="." instance=ExtResource("1_mdlvc")]
+position = Vector2(-631, -164)
+
+[node name="Tree16" parent="." instance=ExtResource("1_mdlvc")]
+position = Vector2(-573, -101)
+
+[node name="Tree17" parent="." instance=ExtResource("1_mdlvc")]
+position = Vector2(-624, -103)
+
+[node name="Tree18" parent="." instance=ExtResource("1_mdlvc")]
+position = Vector2(-617, -15)
+
+[node name="Tree19" parent="." instance=ExtResource("1_mdlvc")]
+position = Vector2(-579, -47)
+
+[node name="Tree20" parent="." instance=ExtResource("1_mdlvc")]
+position = Vector2(-540, 24)
+
+[node name="Tree21" parent="." instance=ExtResource("1_mdlvc")]
+position = Vector2(-521, -21)
+
+[node name="Tree22" parent="." instance=ExtResource("1_mdlvc")]
+position = Vector2(-475, -43)
+
+[node name="Tree23" parent="." instance=ExtResource("1_mdlvc")]
+position = Vector2(-412, -30)
+
+[node name="Tree24" parent="." instance=ExtResource("1_mdlvc")]
+position = Vector2(-403, 40)
+
+[node name="Tree25" parent="." instance=ExtResource("1_mdlvc")]
+position = Vector2(-454, 5)
+
+[node name="Tree26" parent="." instance=ExtResource("1_mdlvc")]
+position = Vector2(-485, 48)
+
+[node name="Tree27" parent="." instance=ExtResource("1_mdlvc")]
+position = Vector2(-441, 85)
+
+[node name="Tree28" parent="." instance=ExtResource("1_mdlvc")]
+position = Vector2(-379, 101)
+
+[node name="Tree29" parent="." instance=ExtResource("1_mdlvc")]
+position = Vector2(-376, 159)
+
+[node name="Tree30" parent="." instance=ExtResource("1_mdlvc")]
+position = Vector2(-451, 182)
+
+[node name="Tree31" parent="." instance=ExtResource("1_mdlvc")]
+position = Vector2(-433, 134)
+
+[node name="Tree32" parent="." instance=ExtResource("1_mdlvc")]
+position = Vector2(-489, 138)
+
+[node name="Tree33" parent="." instance=ExtResource("1_mdlvc")]
+position = Vector2(-509, 88)
+
+[node name="Tree34" parent="." instance=ExtResource("1_mdlvc")]
+position = Vector2(-570, 89)
+
+[node name="Tree35" parent="." instance=ExtResource("1_mdlvc")]
+position = Vector2(-584, 30)
+
+[node name="Tree36" parent="." instance=ExtResource("1_mdlvc")]
+position = Vector2(-626, 63)
+
+[node name="Tree37" parent="." instance=ExtResource("1_mdlvc")]
+position = Vector2(-628, 134)
+
+[node name="Tree38" parent="." instance=ExtResource("1_mdlvc")]
+position = Vector2(-580, 141)
+
+[node name="Tree39" parent="." instance=ExtResource("1_mdlvc")]
+position = Vector2(-541, 144)
+
+[node name="Tree40" parent="." instance=ExtResource("1_mdlvc")]
+position = Vector2(-499, 202)
+
+[node name="Tree41" parent="." instance=ExtResource("1_mdlvc")]
+position = Vector2(-416, 227)
+
+[node name="Tree42" parent="." instance=ExtResource("1_mdlvc")]
+position = Vector2(-360, 222)
+
+[node name="Tree43" parent="." instance=ExtResource("1_mdlvc")]
+position = Vector2(-503, 264)
+
+[node name="Tree44" parent="." instance=ExtResource("1_mdlvc")]
+position = Vector2(-609, 271)
+
+[node name="Tree45" parent="." instance=ExtResource("1_mdlvc")]
+position = Vector2(-547, 272)
+
+[node name="Tree46" parent="." instance=ExtResource("1_mdlvc")]
+position = Vector2(-541, 210)
+
+[node name="Tree47" parent="." instance=ExtResource("1_mdlvc")]
+position = Vector2(-589, 226)
+
+[node name="Tree48" parent="." instance=ExtResource("1_mdlvc")]
+position = Vector2(-627, 189)
+
+[node name="Tree49" parent="." instance=ExtResource("1_mdlvc")]
+position = Vector2(-626, 340)
+
+[node name="Tree50" parent="." instance=ExtResource("1_mdlvc")]
+position = Vector2(-571, 327)
+
+[node name="Tree51" parent="." instance=ExtResource("1_mdlvc")]
+position = Vector2(-495, 367)
+
+[node name="Tree52" parent="." instance=ExtResource("1_mdlvc")]
+position = Vector2(-470, 309)
+
+[node name="Tree53" parent="." instance=ExtResource("1_mdlvc")]
+position = Vector2(-417, 279)
+
+[node name="Tree54" parent="." instance=ExtResource("1_mdlvc")]
+position = Vector2(-362, 275)
+
+[node name="Tree55" parent="." instance=ExtResource("1_mdlvc")]
+position = Vector2(-337, 328)
+
+[node name="Tree56" parent="." instance=ExtResource("1_mdlvc")]
+position = Vector2(-373, 391)
+
+[node name="Tree57" parent="." instance=ExtResource("1_mdlvc")]
+position = Vector2(-410, 331)
+
+[node name="Tree58" parent="." instance=ExtResource("1_mdlvc")]
+position = Vector2(-371, 460)
+
+[node name="Tree59" parent="." instance=ExtResource("1_mdlvc")]
+position = Vector2(-426, 477)
+
+[node name="Tree60" parent="." instance=ExtResource("1_mdlvc")]
+position = Vector2(-425, 399)
+
+[node name="Tree61" parent="." instance=ExtResource("1_mdlvc")]
+position = Vector2(-470, 437)
+
+[node name="Tree62" parent="." instance=ExtResource("1_mdlvc")]
+position = Vector2(-513, 485)
+
+[node name="Tree63" parent="." instance=ExtResource("1_mdlvc")]
+position = Vector2(-529, 408)
+
+[node name="Tree64" parent="." instance=ExtResource("1_mdlvc")]
+position = Vector2(-582, 384)
+
+[node name="Tree65" parent="." instance=ExtResource("1_mdlvc")]
+position = Vector2(-636, 408)
+
+[node name="Tree66" parent="." instance=ExtResource("1_mdlvc")]
+position = Vector2(-627, 496)
+
+[node name="Tree67" parent="." instance=ExtResource("1_mdlvc")]
+position = Vector2(-584, 447)
+
+[node name="Tree68" parent="." instance=ExtResource("1_mdlvc")]
+position = Vector2(-551, 486)
+
+[node name="Tree69" parent="." instance=ExtResource("1_mdlvc")]
+position = Vector2(-360, 518)
+
+[node name="Tree70" parent="." instance=ExtResource("1_mdlvc")]
+position = Vector2(-419, 526)
+
+[node name="Tree71" parent="." instance=ExtResource("1_mdlvc")]
+position = Vector2(-362, 579)
+
+[node name="Tree72" parent="." instance=ExtResource("1_mdlvc")]
+position = Vector2(-372, 630)
+
+[node name="Tree73" parent="." instance=ExtResource("1_mdlvc")]
+position = Vector2(-380, 685)
+
+[node name="Tree74" parent="." instance=ExtResource("1_mdlvc")]
+position = Vector2(-433, 676)
+
+[node name="Tree75" parent="." instance=ExtResource("1_mdlvc")]
+position = Vector2(-481, 671)
+
+[node name="Tree76" parent="." instance=ExtResource("1_mdlvc")]
+position = Vector2(-519, 671)
+
+[node name="Tree77" parent="." instance=ExtResource("1_mdlvc")]
+position = Vector2(-563, 678)
+
+[node name="Tree78" parent="." instance=ExtResource("1_mdlvc")]
+position = Vector2(-609, 680)
+
+[node name="Tree79" parent="." instance=ExtResource("1_mdlvc")]
+position = Vector2(-625, 634)
+
+[node name="Tree80" parent="." instance=ExtResource("1_mdlvc")]
+position = Vector2(-582, 624)
+
+[node name="Tree81" parent="." instance=ExtResource("1_mdlvc")]
+position = Vector2(-540, 601)
+
+[node name="Tree82" parent="." instance=ExtResource("1_mdlvc")]
+position = Vector2(-485, 592)
+
+[node name="Tree83" parent="." instance=ExtResource("1_mdlvc")]
+position = Vector2(-434, 624)
+
+[node name="Tree84" parent="." instance=ExtResource("1_mdlvc")]
+position = Vector2(-405, 578)
+
+[node name="Tree85" parent="." instance=ExtResource("1_mdlvc")]
+position = Vector2(-466, 528)
+
+[node name="Tree86" parent="." instance=ExtResource("1_mdlvc")]
+position = Vector2(-521, 546)
+
+[node name="Tree87" parent="." instance=ExtResource("1_mdlvc")]
+position = Vector2(-572, 543)
+
+[node name="Tree88" parent="." instance=ExtResource("1_mdlvc")]
+position = Vector2(-601, 583)
+
+[node name="Tree89" parent="." instance=ExtResource("1_mdlvc")]
+position = Vector2(-634, 560)
+
+[node name="Tree90" parent="." instance=ExtResource("1_mdlvc")]
+position = Vector2(-532, 341)
+
+[node name="Tree91" parent="." instance=ExtResource("1_mdlvc")]
+position = Vector2(-465, 245)
+
+[node name="Tree92" parent="." instance=ExtResource("1_mdlvc")]
+position = Vector2(-392, 841)
+
+[node name="Tree93" parent="." instance=ExtResource("1_mdlvc")]
+position = Vector2(-421, 895)
+
+[node name="Tree94" parent="." instance=ExtResource("1_mdlvc")]
+position = Vector2(-451, 847)
+
+[node name="Tree95" parent="." instance=ExtResource("1_mdlvc")]
+position = Vector2(-488, 883)
+
+[node name="Tree96" parent="." instance=ExtResource("1_mdlvc")]
+position = Vector2(-517, 841)
+
+[node name="Tree97" parent="." instance=ExtResource("1_mdlvc")]
+position = Vector2(-557, 870)
+
+[node name="Tree98" parent="." instance=ExtResource("1_mdlvc")]
+position = Vector2(-603, 834)
+
+[node name="Tree99" parent="." instance=ExtResource("1_mdlvc")]
+position = Vector2(-637, 854)
+
+[node name="Tree100" parent="." instance=ExtResource("1_mdlvc")]
+position = Vector2(-629, 935)
+
+[node name="Tree101" parent="." instance=ExtResource("1_mdlvc")]
+position = Vector2(-597, 893)
+
+[node name="Tree102" parent="." instance=ExtResource("1_mdlvc")]
+position = Vector2(-570, 948)
+
+[node name="Tree103" parent="." instance=ExtResource("1_mdlvc")]
+position = Vector2(-533, 902)
+
+[node name="Tree104" parent="." instance=ExtResource("1_mdlvc")]
+position = Vector2(-516, 957)
+
+[node name="Tree105" parent="." instance=ExtResource("1_mdlvc")]
+position = Vector2(-465, 960)
+
+[node name="Tree106" parent="." instance=ExtResource("1_mdlvc")]
+position = Vector2(-457, 899)
+
+[node name="Tree107" parent="." instance=ExtResource("1_mdlvc")]
+position = Vector2(-458, 1018)
+
+[node name="Tree108" parent="." instance=ExtResource("1_mdlvc")]
+position = Vector2(-494, 1045)
+
+[node name="Tree109" parent="." instance=ExtResource("1_mdlvc")]
+position = Vector2(-509, 1002)
+
+[node name="Tree110" parent="." instance=ExtResource("1_mdlvc")]
+position = Vector2(-546, 1035)
+
+[node name="Tree111" parent="." instance=ExtResource("1_mdlvc")]
+position = Vector2(-561, 995)
+
+[node name="Tree112" parent="." instance=ExtResource("1_mdlvc")]
+position = Vector2(-606, 986)
+
+[node name="Tree113" parent="." instance=ExtResource("1_mdlvc")]
+position = Vector2(-638, 1024)
+
+[node name="Tree114" parent="." instance=ExtResource("1_mdlvc")]
+position = Vector2(-596, 1044)
+
+[node name="Tree115" parent="." instance=ExtResource("1_mdlvc")]
+position = Vector2(-632, 1086)
+
+[node name="Tree116" parent="." instance=ExtResource("1_mdlvc")]
+position = Vector2(-571, 1115)
+
+[node name="Tree117" parent="." instance=ExtResource("1_mdlvc")]
+position = Vector2(-532, 1084)
+
+[node name="Tree118" parent="." instance=ExtResource("1_mdlvc")]
+position = Vector2(-492, 1097)
+
+[node name="Tree119" parent="." instance=ExtResource("1_mdlvc")]
+position = Vector2(-529, 1151)
+
+[node name="Tree120" parent="." instance=ExtResource("1_mdlvc")]
+position = Vector2(-562, 1198)
+
+[node name="Tree121" parent="." instance=ExtResource("1_mdlvc")]
+position = Vector2(-606, 1160)
+
+[node name="Tree122" parent="." instance=ExtResource("1_mdlvc")]
+position = Vector2(-637, 1132)
+
+[node name="Tree123" parent="." instance=ExtResource("1_mdlvc")]
+position = Vector2(-635, 1194)
+
+[node name="Tree124" parent="." instance=ExtResource("1_mdlvc")]
+position = Vector2(-594, 1220)
+
+[node name="Tree125" parent="." instance=ExtResource("1_mdlvc")]
+position = Vector2(-637, 1242)
+
+[node name="Tree126" parent="." instance=ExtResource("1_mdlvc")]
+position = Vector2(-425, 952)
