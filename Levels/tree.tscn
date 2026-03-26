@@ -11,6 +11,7 @@ z_index = 1
 script = ExtResource("1_g1eax")
 
 [node name="Maple" type="Sprite2D" parent="."]
+visible = false
 texture = ExtResource("2_pg1oy")
 region_enabled = true
 region_rect = Rect2(0, 48.917904, 31.971546, 46.042828)
@@ -39,8 +40,13 @@ texture = ExtResource("4_wdona")
 region_enabled = true
 region_rect = Rect2(96, 2, 32, 46)
 
-[node name="Pine" type="Sprite2D" parent="."]
+[node name="Birch2" type="Sprite2D" parent="."]
 visible = false
+texture = ExtResource("4_wdona")
+region_enabled = true
+region_rect = Rect2(96, 2, 32, 46)
+
+[node name="Pine" type="Sprite2D" parent="."]
 texture = ExtResource("5_bshke")
 region_enabled = true
 region_rect = Rect2(96, 2, 32, 46)
