@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://cwgwfsvuyqa0v"]
+[gd_scene load_steps=7 format=3 uid="uid://cwgwfsvuyqa0v"]
 
 [ext_resource type="Script" uid="uid://du8jh2d34bd3w" path="res://Scripts/music.gd" id="1_476t3"]
 [ext_resource type="AudioStream" uid="uid://bwsm30hfeoqvh" path="res://New Sounds/walkingMusic.mp3" id="2_vi5kw"]
 [ext_resource type="AudioStream" uid="uid://nuqkjkmpsuh0" path="res://New Sounds/battle.mp3" id="3_timup"]
 [ext_resource type="AudioStream" uid="uid://dwgcebx6mrji6" path="res://New Sounds/trainerBattle.mp3" id="4_8dy0s"]
 [ext_resource type="AudioStream" uid="uid://bk24j1h38ncof" path="res://New Sounds/battleWon.mp3" id="5_timup"]
+[ext_resource type="AudioStream" uid="uid://dpvp4h1137nva" path="res://New Sounds/evolutionMusic.mp3" id="6_8dy0s"]
 
 [node name="Music" type="Node2D"]
 process_mode = 3
@@ -26,3 +27,7 @@ volume_db = -13.0
 [node name="BattleWon" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_timup")
 volume_db = -20.0
+
+[node name="Evolve" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_8dy0s")
+volume_db = -10.0

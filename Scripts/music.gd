@@ -24,3 +24,9 @@ func battleOver():
 	var tween2=create_tween()
 	tween2.tween_property($Trainer, "volume_db", -40, .5)
 	$BattleWon.play()
+	
+func evolve():
+	$Battle.stop()
+	$Trainer.stop()
+	$Music.stream_paused=true
+	$Evolve.play()

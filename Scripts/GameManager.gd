@@ -186,6 +186,9 @@ var player
 
 var transitionAnimator: AnimationPlayer
 
+var evolvedSpecies
+var evolutionSpecies
+
 func _ready() -> void:
 	if(not loadGame()):
 		restart()
@@ -273,6 +276,10 @@ func setPokemon(species, level, moves):
 	return p
 	
 func evolvePokemon(original: PokemonData, evolution: SpeciesData):
+	get_tree().call_deferred("change_scene_to_file", "res://Scenes/evolve.tscn")
+	Music.evolve()
+	evolvedSpecies=original.species
+	evolutionSpecies=evolution.species
 	original.base=evolution
 	original.species=evolution.species
 	original.name = pokemonName(evolution.species)
