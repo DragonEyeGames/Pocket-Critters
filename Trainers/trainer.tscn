@@ -453,7 +453,6 @@ disabled = true
 
 [node name="Dialogue" type="CanvasLayer" parent="."]
 layer = 0
-visible = false
 script = ExtResource("3_ryukr")
 
 [node name="ColorRect" type="ColorRect" parent="Dialogue"]

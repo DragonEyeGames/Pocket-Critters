@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=4 uid="uid://b07drnf5qheia"]
+[gd_scene load_steps=29 format=4 uid="uid://b07drnf5qheia"]
 
 [ext_resource type="Script" uid="uid://swgsdmbo5fng" path="res://Scripts/main.gd" id="1_rdxft"]
 [ext_resource type="PackedScene" uid="uid://c5yxtkkwi03pt" path="res://Scenes/player.tscn" id="3_ub67l"]
@@ -12,8 +12,15 @@
 [ext_resource type="Script" uid="uid://wxcoju7jq384" path="res://Scripts/grassSpawning.gd" id="11_x8ljv"]
 [ext_resource type="PackedScene" uid="uid://bw2ujrj6t7blx" path="res://Scenes/grass.tscn" id="12_ckj4g"]
 [ext_resource type="PackedScene" uid="uid://bmsyi0138rgpo" path="res://Trainers/trainer.tscn" id="12_i30pn"]
+[ext_resource type="Resource" uid="uid://byrlv6tws4kjy" path="res://Trainers/blaze-1.tres" id="13_b4rj7"]
+[ext_resource type="Resource" uid="uid://7stw2esp4fm5" path="res://Trainers/youngster-1.tres" id="14_xgj3m"]
 [ext_resource type="PackedScene" uid="uid://dxl5f3ov2520a" path="res://Levels/forestTrees.tscn" id="15_5dxj7"]
+[ext_resource type="Resource" uid="uid://dp31kdgf40175" path="res://Trainers/rookie-1.tres" id="15_x8ljv"]
+[ext_resource type="Resource" uid="uid://d2e001rb1jev2" path="res://Trainers/trainee-1.tres" id="16_evao7"]
+[ext_resource type="Resource" uid="uid://ddvy8op0ryf1g" path="res://Trainers/scout-1.tres" id="17_os84l"]
+[ext_resource type="Resource" uid="uid://b7ul6d7ek0cy2" path="res://Trainers/collector-1.tres" id="18_8tpo1"]
 [ext_resource type="Script" uid="uid://crrtvghb3yxwo" path="res://Levels/exit.gd" id="19_b4rj7"]
+[ext_resource type="Resource" uid="uid://f5qvksh8iemt" path="res://Trainers/bugCatcher-1.tres" id="20_evao7"]
 [ext_resource type="TileSet" uid="uid://caeoktquk1783" path="res://tileset.tres" id="20_xgj3m"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_rdxft"]
@@ -72,7 +79,7 @@ walls = NodePath("Y-Sort/Walls")
 floors = NodePath("Floor")
 
 [node name="Player" parent="." groups=["Y-Sort"] instance=ExtResource("3_ub67l")]
-position = Vector2(-547, -1186)
+position = Vector2(-529, -1256)
 
 [node name="Y-Sort" type="Node2D" parent="." node_paths=PackedStringArray("player")]
 y_sort_enabled = true
@@ -106,10 +113,11 @@ position = Vector2(-295, -856)
 
 [node name="ColorRect" type="ColorRect" parent="Transition"]
 material = SubResource("ShaderMaterial_sxxgb")
-offset_left = -2.0
-offset_top = -3.0
-offset_right = 964.0
-offset_bottom = 544.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 mouse_filter = 2
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Transition"]
@@ -118,7 +126,7 @@ libraries = {
 }
 
 [node name="Camera" type="Camera2D" parent="." node_paths=PackedStringArray("target")]
-zoom = Vector2(2.675, 2.675)
+zoom = Vector2(5, 5)
 limit_top = -1280
 limit_bottom = 249
 script = ExtResource("8_i30pn")
@@ -136,34 +144,48 @@ tile_set = ExtResource("10_xgj3m")
 script = ExtResource("11_x8ljv")
 grass = ExtResource("12_ckj4g")
 
-[node name="Blaze" parent="." instance=ExtResource("12_i30pn")]
-position = Vector2(-547, -1152)
+[node name="Blaze" parent="." node_paths=PackedStringArray("player") instance=ExtResource("12_i30pn")]
+position = Vector2(-526, -1150)
+trainerData = ExtResource("13_b4rj7")
+player = NodePath("../Player")
 
-[node name="Youngster" parent="." instance=ExtResource("12_i30pn")]
+[node name="Youngster" parent="." node_paths=PackedStringArray("player") instance=ExtResource("12_i30pn")]
 position = Vector2(236, -376)
+trainerData = ExtResource("14_xgj3m")
+player = NodePath("../Player")
 
-[node name="Rookie" parent="." instance=ExtResource("12_i30pn")]
+[node name="Rookie" parent="." node_paths=PackedStringArray("player") instance=ExtResource("12_i30pn")]
 position = Vector2(-305, -654)
+trainerData = ExtResource("15_x8ljv")
+player = NodePath("../Player")
 
-[node name="Trainee" parent="." instance=ExtResource("12_i30pn")]
+[node name="Trainee" parent="." node_paths=PackedStringArray("player") instance=ExtResource("12_i30pn")]
 position = Vector2(-281, -382)
+trainerData = ExtResource("16_evao7")
+player = NodePath("../Player")
 
-[node name="Scout" parent="." instance=ExtResource("12_i30pn")]
+[node name="Scout" parent="." node_paths=PackedStringArray("player") instance=ExtResource("12_i30pn")]
 position = Vector2(-663, -667)
+trainerData = ExtResource("17_os84l")
+player = NodePath("../Player")
 
-[node name="Collector" parent="." instance=ExtResource("12_i30pn")]
+[node name="Collector" parent="." node_paths=PackedStringArray("player") instance=ExtResource("12_i30pn")]
 position = Vector2(-391, -812)
+trainerData = ExtResource("18_8tpo1")
+player = NodePath("../Player")
 
-[node name="BugCatcher" parent="." instance=ExtResource("12_i30pn")]
+[node name="BugCatcher" parent="." node_paths=PackedStringArray("player") instance=ExtResource("12_i30pn")]
 position = Vector2(33, -595)
+trainerData = ExtResource("20_evao7")
+player = NodePath("../Player")
 
 [node name="Exit" type="Area2D" parent="."]
-position = Vector2(-577, -1318)
+position = Vector2(-557, -1381)
 collision_layer = 0
 collision_mask = 2
 script = ExtResource("19_b4rj7")
 travelZone = "res://Levels/waymeetCity.tscn"
-travelPos = Vector2(0, -19)
+travelPos = Vector2(0, 19)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Exit"]
 position = Vector2(27.5, 49.5)

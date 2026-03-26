@@ -14,7 +14,7 @@ var season=1
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	GameManager.currentScene=get_tree().current_scene.scene_file_path
+	GameManager.safe=true
 	GameManager.encounterList=pokemonEncounters
 	GameManager.encounterMin=levelMin
 	GameManager.encounterMax=levelMax
@@ -24,6 +24,11 @@ func _ready() -> void:
 		if(newPokemon.base.evolution!=null and newPokemon.level>=newPokemon.base.evolution.level):
 			GameManager.evolvePokemon(newPokemon, newPokemon.base.evolution.into)
 			
+	await get_tree().process_frame
+	await get_tree().process_frame
+	GameManager.currentScene=get_tree().current_scene.scene_file_path
+	await get_tree().create_timer(.1).timeout
+	GameManager.safe=false
 
 func _process(_delta: float) -> void:
 	if(Input.is_action_just_pressed("Interact") and pokeCenterEntered):

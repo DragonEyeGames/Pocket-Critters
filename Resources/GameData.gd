@@ -7,6 +7,7 @@ class_name GameData
 @export var defeated: =[]
 @export var pokedex: Array[GameManager.pokemon]
 @export var seenDex: Array[GameManager.pokemon]
+@export var scene :=""
 
 #Rival Battles
 @export var blaze1:=false

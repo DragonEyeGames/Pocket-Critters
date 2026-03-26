@@ -194,6 +194,8 @@ func _ready() -> void:
 		restart()
 	else:
 		SignalBus.emit_signal("loadData")
+		await get_tree().process_frame
+		get_tree().call_deferred("change_scene_to_file", currentScene)
 
 func restart():
 	starter=load("res://StarterPokemon/geckrowStarter.tres")
@@ -358,6 +360,7 @@ func saveGame():
 	data.seenDex=seenDex.duplicate()
 	data.defeated=defeated.duplicate()
 	data.blaze1=blaze1
+	data.scene=currentScene
 	ResourceSaver.save(data, "user://save.tres")
 
 func loadGame():
@@ -374,6 +377,7 @@ func loadGame():
 	seenDex = data.seenDex.duplicate()
 	defeated = data.defeated.duplicate()
 	blaze1=data.blaze1
+	currentScene=data.scene
 	return true
 	
 func wipeSave():

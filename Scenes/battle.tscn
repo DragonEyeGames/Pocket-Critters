@@ -1276,8 +1276,18 @@ theme_override_font_sizes/normal_font_size = 39
 text = "What will Geckrow do?"
 vertical_alignment = 1
 
-[node name="ColorRect2" type="ColorRect" parent="."]
+[node name="Border" type="ColorRect" parent="BattleOptions"]
 z_index = -1
+layout_mode = 0
+offset_left = -1.0
+offset_top = -3.0
+offset_right = 1040.0
+offset_bottom = 4.0
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+z_index = -2
 offset_left = -47.0
 offset_top = -34.0
 offset_right = 1004.0
