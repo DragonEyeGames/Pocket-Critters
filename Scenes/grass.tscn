@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://bw2ujrj6t7blx"]
 
-[ext_resource type="Texture2D" uid="uid://bo43kqdc3lvgx" path="res://Assets/Woods.png" id="1_kl2qe"]
 [ext_resource type="Script" uid="uid://tkhhxcxbh2nt" path="res://Scripts/grass.gd" id="2_mw2ei"]
+[ext_resource type="Texture2D" uid="uid://bmo2ax7rg5dvm" path="res://Assets/Tileset/props.png" id="2_qm417"]
 [ext_resource type="AudioStream" uid="uid://8uqo7ln6vk2g" path="res://GeneralSFX/grassRustle.mp3" id="3_qm417"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_2qnaq"]
@@ -22,9 +22,9 @@ shape = SubResource("CircleShape2D_2qnaq")
 
 [node name="Sprite" type="Sprite2D" parent="."]
 position = Vector2(0, -4)
-texture = ExtResource("1_kl2qe")
+texture = ExtResource("2_qm417")
 region_enabled = true
-region_rect = Rect2(224, 52, 15, 13)
+region_rect = Rect2(160, 1, 16, 16)
 
 [node name="Rustle" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_qm417")

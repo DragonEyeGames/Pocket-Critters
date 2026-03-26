@@ -7,6 +7,10 @@ extends Node2D
 @export var pokeMart: String
 var pokeCenterEntered=false
 var pokeMartEntered
+var season=1
+
+@export var walls: TileMapLayer
+@export var floors: TileMapLayer
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -26,6 +30,13 @@ func _process(_delta: float) -> void:
 		get_tree().call_deferred("change_scene_to_file", pokemonCenter)
 	if(Input.is_action_just_pressed("Interact") and pokeMartEntered):
 		get_tree().call_deferred("change_scene_to_file", pokeMart)
+	if(Input.is_action_just_pressed("SeasonSwap")):
+		var newSeason = season+1
+		if(season==4):
+			newSeason=1
+		swap_season(floors, season, newSeason)
+		swap_season(walls, season, newSeason)
+		season=newSeason
 
 
 func _on_poke_center_area_entered(_area: Area2D) -> void:
@@ -40,3 +51,13 @@ func _on_poke_mart_area_entered(_area: Area2D) -> void:
 
 func _on_poke_mart_area_exited(_area: Area2D) -> void:
 	pokeMartEntered=false
+
+func swap_season(tilemap: TileMapLayer, from_source: int, to_source: int):
+	for cell in tilemap.get_used_cells():
+		var source_id = tilemap.get_cell_source_id(cell)
+		
+		if source_id == from_source:
+			var atlas = tilemap.get_cell_atlas_coords(cell)
+			var alt = tilemap.get_cell_alternative_tile(cell)
+			
+			tilemap.set_cell(cell, to_source, atlas, alt)
