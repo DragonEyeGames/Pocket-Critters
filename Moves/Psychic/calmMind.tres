@@ -1,0 +1,27 @@
+[gd_resource type="Resource" script_class="MoveDatas" load_steps=5 format=3 uid="uid://l4o587xf2mc6"]
+
+[ext_resource type="Script" uid="uid://2fme8eqsovvo" path="res://Resources/AbilityData.gd" id="1_1jbvx"]
+[ext_resource type="Script" uid="uid://c3odxqj7xy866" path="res://Resources/MoveData.gd" id="2_gwejo"]
+
+[sub_resource type="Resource" id="Resource_1jbvx"]
+script = ExtResource("1_1jbvx")
+stat = 5
+change = 1
+chance = 1.0
+metadata/_custom_type_script = "uid://2fme8eqsovvo"
+
+[sub_resource type="Resource" id="Resource_gwejo"]
+script = ExtResource("1_1jbvx")
+stat = 4
+change = 1
+chance = 1.0
+metadata/_custom_type_script = "uid://2fme8eqsovvo"
+
+[resource]
+script = ExtResource("2_gwejo")
+name = "Calm Mind"
+type = 8
+moveType = 2
+power = 0
+abilities = Array[ExtResource("1_1jbvx")]([SubResource("Resource_1jbvx"), SubResource("Resource_gwejo")])
+metadata/_custom_type_script = "uid://c3odxqj7xy866"

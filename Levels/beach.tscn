@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=4 uid="uid://ractyp8q6v8x"]
+[gd_scene load_steps=24 format=4 uid="uid://ractyp8q6v8x"]
 
 [ext_resource type="Script" uid="uid://swgsdmbo5fng" path="res://Scripts/main.gd" id="1_dj533"]
 [ext_resource type="PackedScene" uid="uid://c5yxtkkwi03pt" path="res://Scenes/player.tscn" id="2_dpjeg"]
@@ -14,6 +14,8 @@
 [ext_resource type="Script" uid="uid://wxcoju7jq384" path="res://Scripts/grassSpawning.gd" id="10_64c5a"]
 [ext_resource type="PackedScene" uid="uid://dny4nyskw1ksj" path="res://Scenes/sand.tscn" id="13_01flr"]
 [ext_resource type="PackedScene" uid="uid://bnmu8nd6pmhbt" path="res://Scenes/bench.tscn" id="14_0y4al"]
+[ext_resource type="Texture2D" uid="uid://clyuwhdv3du75" path="res://Assets/Beach/Moai.png" id="15_lr42m"]
+[ext_resource type="Script" uid="uid://crp3g76avkl7g" path="res://Scripts/dialogue.gd" id="16_lr42m"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_sxxgb"]
 shader = ExtResource("7_y7gf1")
@@ -71,6 +73,10 @@ shader_parameter/replace_1 = Color(0, 0, 0, 1)
 shader_parameter/replace_2 = Color(0, 0, 0, 1)
 shader_parameter/replace_3 = Color(0, 0, 0, 1)
 shader_parameter/replace_4 = Color(0, 0, 0, 1)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_02mk5"]
+radius = 5.0
+height = 16.0
 
 [node name="Main" type="Node2D"]
 texture_filter = 1
@@ -178,6 +184,46 @@ grass = ExtResource("13_01flr")
 [node name="Bench" parent="." instance=ExtResource("14_0y4al")]
 position = Vector2(-251, 373)
 direction = 2
+
+[node name="Moai" type="Node2D" parent="." groups=["Y-Sort"]]
+position = Vector2(-329, 1132)
+
+[node name="Sprite" type="Sprite2D" parent="Moai"]
+position = Vector2(0, -8)
+texture = ExtResource("15_lr42m")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Moai"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Moai/StaticBody2D"]
+position = Vector2(0, 4)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_02mk5")
+
+[node name="Dialogue" type="CanvasLayer" parent="Moai"]
+layer = 0
+visible = false
+script = ExtResource("16_lr42m")
+
+[node name="ColorRect" type="ColorRect" parent="Moai/Dialogue"]
+offset_left = -6.0
+offset_top = 358.0
+offset_right = 967.0
+offset_bottom = 545.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect4" type="ColorRect" parent="Moai/Dialogue"]
+offset_left = -6.0
+offset_top = 362.0
+offset_right = 967.0
+offset_bottom = 545.0
+color = Color(0.61339027, 0.61339027, 0.61339027, 1)
+
+[node name="Text" type="RichTextLabel" parent="Moai/Dialogue"]
+offset_left = 7.0
+offset_top = 401.0
+offset_right = 953.0
+offset_bottom = 533.0
+theme_override_font_sizes/normal_font_size = 27
 
 [connection signal="area_entered" from="Exit" to="Exit" method="_on_area_entered"]
 [connection signal="area_entered" from="Mud" to="Player" method="_on_mud_area_entered"]

@@ -1,0 +1,62 @@
+[gd_resource type="Resource" script_class="SpeciesData" load_steps=15 format=3 uid="uid://cgvljc4cpfssh"]
+
+[ext_resource type="Script" uid="uid://kmcanhhb04o0" path="res://Resources/MoveResource.gd" id="1_23klb"]
+[ext_resource type="Resource" uid="uid://l4o587xf2mc6" path="res://Moves/Psychic/calmMind.tres" id="2_mi72g"]
+[ext_resource type="Resource" uid="uid://sfqukecthw44" path="res://Moves/Psychic/illusion.tres" id="3_62dbl"]
+[ext_resource type="Resource" uid="uid://io7etbghp74a" path="res://Moves/Psychic/mentalBarrier.tres" id="4_cip7n"]
+[ext_resource type="Resource" uid="uid://bu8pdh0syum07" path="res://Moves/Psychic/mindBoggle.tres" id="5_p7dx3"]
+[ext_resource type="Resource" uid="uid://ttaoknwh4k5g" path="res://Moves/Psychic/psychicBeam.tres" id="6_q2kmr"]
+[ext_resource type="Resource" uid="uid://csaufj3wnppfr" path="res://Moves/Psychic/psychicFlick.tres" id="7_n7pp7"]
+[ext_resource type="Script" uid="uid://1vun3nkcoo5i" path="res://Resources/SpeciesData.gd" id="14_2lcq0"]
+
+[sub_resource type="Resource" id="Resource_23klb"]
+script = ExtResource("1_23klb")
+move = ExtResource("2_mi72g")
+level = 10
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_gisvn"]
+script = ExtResource("1_23klb")
+move = ExtResource("3_62dbl")
+level = 4
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_6msw7"]
+script = ExtResource("1_23klb")
+move = ExtResource("4_cip7n")
+level = 12
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_moh75"]
+script = ExtResource("1_23klb")
+move = ExtResource("5_p7dx3")
+level = 8
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_81kgm"]
+script = ExtResource("1_23klb")
+move = ExtResource("6_q2kmr")
+level = 14
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_53b8x"]
+script = ExtResource("1_23klb")
+move = ExtResource("7_n7pp7")
+level = 7
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[resource]
+resource_name = "res://PokemonCries/mudbray.wav"
+script = ExtResource("14_2lcq0")
+species = 46
+type1 = 16
+type2 = 8
+health = 85
+attack = 70
+defense = 120
+specialAttack = 100
+specialDefense = 90
+speed = 50
+potentialMoves = Array[ExtResource("1_23klb")]([SubResource("Resource_23klb"), SubResource("Resource_gisvn"), SubResource("Resource_6msw7"), SubResource("Resource_moh75"), SubResource("Resource_81kgm"), SubResource("Resource_53b8x")])
+catchRate = 0.35
+metadata/_custom_type_script = "uid://c7t80kmu0l21k"

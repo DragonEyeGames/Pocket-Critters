@@ -46,7 +46,8 @@ enum pokemon {
 	Pourka,
 	Appalyp,#basic dark water thing
 	Sycoral, #1
-	Nemesusa #2
+	Nemesusa, #2
+	Sillennium # Basic priest (in moai)
 }
 
 enum types {

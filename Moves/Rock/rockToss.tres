@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="MoveDatas" load_steps=3 format=3 uid="uid://b02gqh4ghtltn"]
+
+[ext_resource type="Script" uid="uid://2fme8eqsovvo" path="res://Resources/AbilityData.gd" id="1_xm6n6"]
+[ext_resource type="Script" uid="uid://c3odxqj7xy866" path="res://Resources/MoveData.gd" id="2_qjyj6"]
+
+[resource]
+script = ExtResource("2_qjyj6")
+name = "Rock Toss"
+type = 16
+moveType = 1
+metadata/_custom_type_script = "uid://c3odxqj7xy866"

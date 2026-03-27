@@ -3,6 +3,10 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	if(not GameManager.evolutionSpecies in GameManager.seenDex):
+		GameManager.seenDex.append(GameManager.evolutionSpecies)
+	if(not GameManager.evolutionSpecies in GameManager.pokedex):
+		GameManager.pokedex.append(GameManager.evolutionSpecies)
 	$CurrentPokemon.pokemon=GameManager.evolvedSpecies
 	$NewPokemon.pokemon=GameManager.evolutionSpecies
 	$CurrentPokemon.initialize()

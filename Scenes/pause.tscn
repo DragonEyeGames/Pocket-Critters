@@ -405,64 +405,59 @@ layout_mode = 2
 
 [node name="Pokedex Slot2" parent="Pokedex/GridContainer" instance=ExtResource("4_e0jm0")]
 layout_mode = 2
-pokemon = 1
+pokemon = 3
 
 [node name="Pokedex Slot3" parent="Pokedex/GridContainer" instance=ExtResource("4_e0jm0")]
 layout_mode = 2
-pokemon = 2
+pokemon = 5
 
 [node name="Pokedex Slot4" parent="Pokedex/GridContainer" instance=ExtResource("4_e0jm0")]
 layout_mode = 2
-pokemon = 3
+pokemon = 6
 
 [node name="Pokedex Slot5" parent="Pokedex/GridContainer" instance=ExtResource("4_e0jm0")]
 layout_mode = 2
-pokemon = 5
+pokemon = 8
 
 [node name="Pokedex Slot6" parent="Pokedex/GridContainer" instance=ExtResource("4_e0jm0")]
 layout_mode = 2
-pokemon = 6
+pokemon = 11
 
 [node name="Pokedex Slot7" parent="Pokedex/GridContainer" instance=ExtResource("4_e0jm0")]
 layout_mode = 2
-pokemon = 7
+pokemon = 14
 
 [node name="Pokedex Slot8" parent="Pokedex/GridContainer" instance=ExtResource("4_e0jm0")]
 layout_mode = 2
-pokemon = 8
+pokemon = 16
 
 [node name="Pokedex Slot9" parent="Pokedex/GridContainer" instance=ExtResource("4_e0jm0")]
 layout_mode = 2
-pokemon = 9
+pokemon = 17
 
 [node name="Pokedex Slot10" parent="Pokedex/GridContainer" instance=ExtResource("4_e0jm0")]
-visible = false
 layout_mode = 2
-pokemon = 10
+pokemon = 19
 
 [node name="Pokedex Slot11" parent="Pokedex/GridContainer" instance=ExtResource("4_e0jm0")]
-visible = false
 layout_mode = 2
-pokemon = 11
+pokemon = 21
 
 [node name="Pokedex Slot12" parent="Pokedex/GridContainer" instance=ExtResource("4_e0jm0")]
 layout_mode = 2
-pokemon = 12
+pokemon = 24
 
 [node name="Pokedex Slot13" parent="Pokedex/GridContainer" instance=ExtResource("4_e0jm0")]
-visible = false
 layout_mode = 2
-pokemon = 13
+pokemon = 39
 
 [node name="Pokedex Slot14" parent="Pokedex/GridContainer" instance=ExtResource("4_e0jm0")]
-visible = false
 layout_mode = 2
-pokemon = 14
+pokemon = 46
 
 [node name="Pokedex Slot15" parent="Pokedex/GridContainer" instance=ExtResource("4_e0jm0")]
-visible = false
 layout_mode = 2
-pokemon = 15
+pokemon = 33
 
 [node name="Save" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_3fojq")

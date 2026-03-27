@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="MoveDatas" load_steps=3 format=3 uid="uid://bu8pdh0syum07"]
+
+[ext_resource type="Script" uid="uid://2fme8eqsovvo" path="res://Resources/AbilityData.gd" id="1_hjqub"]
+[ext_resource type="Script" uid="uid://c3odxqj7xy866" path="res://Resources/MoveData.gd" id="2_8srax"]
+
+[resource]
+script = ExtResource("2_8srax")
+name = "Mind Boggle"
+type = 8
+metadata/_custom_type_script = "uid://c3odxqj7xy866"
