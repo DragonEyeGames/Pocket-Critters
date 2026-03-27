@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="MoveDatas" load_steps=4 format=3 uid="uid://dgmtrx7nld483"]
+
+[ext_resource type="Script" uid="uid://2fme8eqsovvo" path="res://Resources/AbilityData.gd" id="1_oddlm"]
+[ext_resource type="Script" uid="uid://c3odxqj7xy866" path="res://Resources/MoveData.gd" id="2_jtpc0"]
+
+[sub_resource type="Resource" id="Resource_ocpdt"]
+script = ExtResource("1_oddlm")
+stat = 3
+targetsSelf = false
+change = -1
+chance = 0.4
+metadata/_custom_type_script = "uid://2fme8eqsovvo"
+
+[resource]
+script = ExtResource("2_jtpc0")
+name = "Undertow"
+type = 2
+accuracy = 0.95
+abilities = Array[ExtResource("1_oddlm")]([SubResource("Resource_ocpdt")])
+metadata/_custom_type_script = "uid://c3odxqj7xy866"

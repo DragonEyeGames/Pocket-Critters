@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://jy4vn4rtcgkl"]
+[gd_scene load_steps=13 format=3 uid="uid://jy4vn4rtcgkl"]
 
 [ext_resource type="Script" uid="uid://bk7icv30he8vy" path="res://Scripts/typeRect.gd" id="1_qcpwj"]
 
@@ -98,6 +98,22 @@ tracks/0/keys = {
 "values": [Color(0.2602312, 0.47900367, 0.2041103, 1)]
 }
 
+[sub_resource type="Animation" id="Animation_p58e0"]
+resource_name = "Ground"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.38018963, 0.21975726, 0.034309812, 1)]
+}
+
 [sub_resource type="Animation" id="Animation_5i5ho"]
 resource_name = "Normal"
 length = 0.1
@@ -129,8 +145,8 @@ tracks/0/keys = {
 "values": [Color(0.2602312, 0.47900367, 0.2041103, 1)]
 }
 
-[sub_resource type="Animation" id="Animation_p58e0"]
-resource_name = "Ground"
+[sub_resource type="Animation" id="Animation_lobrt"]
+resource_name = "Water"
 length = 0.1
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -142,7 +158,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Color(0.38018963, 0.21975726, 0.034309812, 1)]
+"values": [Color(0.2171042, 0.35085356, 0.5838701, 1)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_14h86"]
@@ -155,7 +171,8 @@ _data = {
 &"Grass": SubResource("Animation_dswqo"),
 &"Ground": SubResource("Animation_p58e0"),
 &"Normal": SubResource("Animation_5i5ho"),
-&"RESET": SubResource("Animation_mo86g")
+&"RESET": SubResource("Animation_mo86g"),
+&"Water": SubResource("Animation_lobrt")
 }
 
 [node name="Type1" type="ColorRect"]

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://8uqo7ln6vk2g"
+path="res://.godot/imported/grassRustle.mp3-bed1d5d1b94dacf6c6c36a0eeb1cdbb1.mp3str"
+
+[deps]
+
+source_file="res://New Sounds/grassRustle.mp3"
+dest_files=["res://.godot/imported/grassRustle.mp3-bed1d5d1b94dacf6c6c36a0eeb1cdbb1.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

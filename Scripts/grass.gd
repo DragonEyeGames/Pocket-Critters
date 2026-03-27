@@ -8,10 +8,11 @@ func _ready() -> void:
 	pass # Replace with function body.
 
 func _on_area_2d_area_entered(area: Area2D) -> void:
+	$Rustle.pitch_scale=randf_range(.9, 1.1)
 	$Rustle.play()
 	if(GameManager.safe):
 		return
-	if(randf() <= .08):
+	if(randf() <= randomness):
 		Music.battle()
 		GameManager.canPause=false
 		area.get_parent().canMove=false

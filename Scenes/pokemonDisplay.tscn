@@ -55,6 +55,7 @@ use_parent_material = true
 texture = ExtResource("3_cm7tk")
 
 [node name="Pilfetch" type="Sprite2D" parent="Front"]
+visible = false
 use_parent_material = true
 texture = ExtResource("4_5g8fa")
 
@@ -99,7 +100,6 @@ use_parent_material = true
 texture = ExtResource("12_jssi5")
 
 [node name="Saurky" type="Sprite2D" parent="Front"]
-visible = false
 use_parent_material = true
 texture = ExtResource("13_bejen")
 

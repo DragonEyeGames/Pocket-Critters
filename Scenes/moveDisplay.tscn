@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://b013ftqbgrpxx"]
+[gd_scene load_steps=26 format=3 uid="uid://b013ftqbgrpxx"]
 
 [ext_resource type="Script" uid="uid://cfmuoh8gh7gx6" path="res://Scripts/move_display.gd" id="1_y1whx"]
 [ext_resource type="Texture2D" uid="uid://7wj1ubb3bdnp" path="res://Assets/PokemonTypes/normal.png" id="2_puv86"]
@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://bkhylnp658apc" path="res://Assets/PokemonTypes/fairy.png" id="9_trkvg"]
 [ext_resource type="Texture2D" uid="uid://tngu8uybt6mh" path="res://Assets/PokemonTypes/fighting.png" id="10_sdyjp"]
 [ext_resource type="Texture2D" uid="uid://cbqo5vgmaal3v" path="res://Assets/PokemonTypes/fire.png" id="11_rfvlf"]
+[ext_resource type="Texture2D" uid="uid://duvds5nvxaa2v" path="res://Assets/PokemonTypes/water.png" id="12_23fuj"]
 
 [sub_resource type="Animation" id="Animation_trkvg"]
 resource_name = "Bug"
@@ -426,6 +427,46 @@ tracks/10/keys = {
 "update": 1,
 "values": [false]
 }
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Types/Water:visible")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_skmr8"]
+resource_name = "Water"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Types/Water:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ColorRect:color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.56159306, 0.7223106, 0.84299785, 1)]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_lwgvd"]
 _data = {
@@ -439,7 +480,8 @@ _data = {
 &"Grass": SubResource("Animation_54dxv"),
 &"Ground": SubResource("Animation_sdyjp"),
 &"Normal": SubResource("Animation_kcutj"),
-&"RESET": SubResource("Animation_q7ryp")
+&"RESET": SubResource("Animation_q7ryp"),
+&"Water": SubResource("Animation_skmr8")
 }
 
 [node name="Move" type="Button"]
@@ -561,6 +603,10 @@ texture = ExtResource("10_sdyjp")
 [node name="Fire" type="Sprite2D" parent="Types"]
 visible = false
 texture = ExtResource("11_rfvlf")
+
+[node name="Water" type="Sprite2D" parent="Types"]
+visible = false
+texture = ExtResource("12_23fuj")
 
 [node name="Type Animator" type="AnimationPlayer" parent="."]
 libraries = {

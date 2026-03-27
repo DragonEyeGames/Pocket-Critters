@@ -46,3 +46,11 @@ func _process(_delta: float) -> void:
 	
 func _load():
 	position=GameManager.playerPosition
+
+
+func _on_mud_area_entered(_area: Area2D) -> void:
+	speed/=3
+
+
+func _on_mud_area_exited(_area: Area2D) -> void:
+	speed*=3

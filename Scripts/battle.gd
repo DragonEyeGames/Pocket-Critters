@@ -48,8 +48,8 @@ func _on_catch_pressed() -> void:
 	print(GameManager.get_catch_chance($Opponent.pokemon, 1))
 	if(randf()<=GameManager.get_catch_chance($Opponent.pokemon, 1)):
 		$Catch.play("catch-succeed")
-		battleWon()
 		await get_tree().create_timer(2).timeout
+		battleWon()
 		$BattleOptions/Display.text="Caught it! " + $Opponent.pokemon.name + " has been caught!"
 		$Opponent.visible=false
 		GameManager.pokedex.append($Opponent.pokemon.species)
