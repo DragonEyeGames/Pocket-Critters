@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://bnmu8nd6pmhbt"]
+[gd_scene load_steps=8 format=3 uid="uid://bnmu8nd6pmhbt"]
 
 [ext_resource type="Script" uid="uid://cxeotv3owj6mw" path="res://Scripts/bench.gd" id="1_e6kot"]
 [ext_resource type="Texture2D" uid="uid://bvlcgu6oth225" path="res://Assets/Beach/Exterior Beach.png" id="2_lwohs"]
@@ -10,28 +10,14 @@ size = Vector2(22, 4)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e6kot"]
 size = Vector2(28, 14)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lwohs"]
+size = Vector2(10, 18)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2j4nf"]
+size = Vector2(18, 19)
+
 [node name="Bench" type="Node2D" groups=["Y-Sort"]]
 script = ExtResource("1_e6kot")
-
-[node name="Sprite" type="Sprite2D" parent="."]
-position = Vector2(0, -5)
-texture = ExtResource("2_lwohs")
-region_enabled = true
-region_rect = Rect2(148, 76, 24, 18)
-
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(0, -2)
-shape = SubResource("RectangleShape2D_rgxpg")
-
-[node name="Area2D" type="Area2D" parent="."]
-collision_layer = 0
-collision_mask = 2
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(0, 3)
-shape = SubResource("RectangleShape2D_e6kot")
 
 [node name="Dark" type="CanvasLayer" parent="."]
 
@@ -48,5 +34,78 @@ color = Color(0, 0, 0, 0)
 stream = ExtResource("3_lwohs")
 volume_db = -16.0
 
-[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
-[connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]
+[node name="Front" type="Node2D" parent="."]
+
+[node name="Sprite" type="Sprite2D" parent="Front"]
+position = Vector2(0, -5)
+texture = ExtResource("2_lwohs")
+region_enabled = true
+region_rect = Rect2(148, 76, 24, 18)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Front"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Front/StaticBody2D"]
+position = Vector2(0, -2)
+shape = SubResource("RectangleShape2D_rgxpg")
+
+[node name="Area2D" type="Area2D" parent="Front"]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Front/Area2D"]
+position = Vector2(0, 3)
+shape = SubResource("RectangleShape2D_e6kot")
+
+[node name="Right" type="Node2D" parent="."]
+position = Vector2(0, 4)
+
+[node name="Sprite" type="Sprite2D" parent="Right"]
+position = Vector2(0, -5)
+texture = ExtResource("2_lwohs")
+region_enabled = true
+region_rect = Rect2(131, 68, 10, 27)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Right"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Right/StaticBody2D"]
+position = Vector2(0, -4)
+shape = SubResource("RectangleShape2D_lwohs")
+
+[node name="Area2D" type="Area2D" parent="Right"]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Right/Area2D"]
+position = Vector2(4, -3.5)
+shape = SubResource("RectangleShape2D_2j4nf")
+
+[node name="Left" type="Node2D" parent="."]
+position = Vector2(0, 4)
+scale = Vector2(-1, 1)
+
+[node name="Sprite" type="Sprite2D" parent="Left"]
+position = Vector2(0, -5)
+texture = ExtResource("2_lwohs")
+region_enabled = true
+region_rect = Rect2(131, 68, 10, 27)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Left"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Left/StaticBody2D"]
+position = Vector2(0, -4)
+shape = SubResource("RectangleShape2D_lwohs")
+
+[node name="Area2D" type="Area2D" parent="Left"]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Left/Area2D"]
+position = Vector2(4, -3.5)
+shape = SubResource("RectangleShape2D_2j4nf")
+
+[connection signal="area_entered" from="Front/Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="Front/Area2D" to="." method="_on_area_2d_area_exited"]
+[connection signal="area_entered" from="Right/Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="Right/Area2D" to="." method="_on_area_2d_area_exited"]
+[connection signal="area_entered" from="Left/Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="Left/Area2D" to="." method="_on_area_2d_area_exited"]

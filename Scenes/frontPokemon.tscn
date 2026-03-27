@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://i7w0yrolij1i"]
+[gd_scene load_steps=21 format=3 uid="uid://i7w0yrolij1i"]
 
 [ext_resource type="Shader" uid="uid://bomfvo6o4mvg6" path="res://Shaders/flash.gdshader" id="1_7yv3v"]
 [ext_resource type="Script" uid="uid://dyg5osbtpg5ua" path="res://Scripts/newPokemonDisplay.gd" id="2_t3bh2"]
@@ -18,6 +18,7 @@
 [ext_resource type="Texture2D" uid="uid://blbo0dto4hfos" path="res://Fakemon-PNG/lollybog.png" id="16_gj2b2"]
 [ext_resource type="Texture2D" uid="uid://delt5pm1csr0u" path="res://Fakemon-PNG/kankwart.png" id="17_vfyh4"]
 [ext_resource type="Texture2D" uid="uid://rurari3qfhj8" path="res://Fakemon-PNG/baulder.png" id="18_meeem"]
+[ext_resource type="Texture2D" uid="uid://7n0duhe3u8d6" path="res://Fakemon-PNG/minamai.png" id="19_t3bh2"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_0q5wy"]
 resource_local_to_scene = true
@@ -123,3 +124,9 @@ texture = ExtResource("17_vfyh4")
 use_parent_material = true
 position = Vector2(0, 12.05937)
 texture = ExtResource("18_meeem")
+
+[node name="Minamai" type="Sprite2D" parent="."]
+visible = false
+use_parent_material = true
+position = Vector2(-0.7421151, 11.317255)
+texture = ExtResource("19_t3bh2")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=4 uid="uid://ractyp8q6v8x"]
+[gd_scene load_steps=21 format=4 uid="uid://ractyp8q6v8x"]
 
 [ext_resource type="Script" uid="uid://swgsdmbo5fng" path="res://Scripts/main.gd" id="1_dj533"]
 [ext_resource type="PackedScene" uid="uid://c5yxtkkwi03pt" path="res://Scenes/player.tscn" id="2_dpjeg"]
@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://b5ymdc0r6kj4" path="res://Scenes/beachTrees.tscn" id="10_28ber"]
 [ext_resource type="Script" uid="uid://wxcoju7jq384" path="res://Scripts/grassSpawning.gd" id="10_64c5a"]
 [ext_resource type="PackedScene" uid="uid://dny4nyskw1ksj" path="res://Scenes/sand.tscn" id="13_01flr"]
+[ext_resource type="PackedScene" uid="uid://bnmu8nd6pmhbt" path="res://Scenes/bench.tscn" id="14_0y4al"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_sxxgb"]
 shader = ExtResource("7_y7gf1")
@@ -74,13 +75,12 @@ shader_parameter/replace_4 = Color(0, 0, 0, 1)
 [node name="Main" type="Node2D"]
 texture_filter = 1
 script = ExtResource("1_dj533")
-pokemonEncounters = Array[int]([21, 24])
+pokemonEncounters = Array[int]([21, 24, 39])
 levelMin = 8
 levelMax = 13
 
 [node name="Player" parent="." groups=["Y-Sort"] instance=ExtResource("2_dpjeg")]
 position = Vector2(-647, 773)
-positionOverride = true
 
 [node name="Y-Sort" type="Node2D" parent="." node_paths=PackedStringArray("player")]
 y_sort_enabled = true
@@ -174,6 +174,10 @@ tile_map_data = PackedByteArray("AADX/1QAAQAVABIAAADY/1QAAQAVABIAAADZ/1QAAQAVABI
 tile_set = ExtResource("8_ho6el")
 script = ExtResource("10_64c5a")
 grass = ExtResource("13_01flr")
+
+[node name="Bench" parent="." instance=ExtResource("14_0y4al")]
+position = Vector2(-251, 373)
+direction = 2
 
 [connection signal="area_entered" from="Exit" to="Exit" method="_on_area_entered"]
 [connection signal="area_entered" from="Mud" to="Player" method="_on_mud_area_entered"]
