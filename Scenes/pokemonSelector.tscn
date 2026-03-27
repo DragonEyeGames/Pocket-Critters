@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://ba24hclljygvv"]
+[gd_scene load_steps=40 format=3 uid="uid://ba24hclljygvv"]
 
 [ext_resource type="Script" uid="uid://bl525lufsugqy" path="res://Scripts/pokemonSelector.gd" id="1_0uh2f"]
 [ext_resource type="Shader" uid="uid://bomfvo6o4mvg6" path="res://Shaders/flash.gdshader" id="1_6atxy"]
@@ -26,6 +26,7 @@
 [ext_resource type="Texture2D" uid="uid://cdt3aw3drbacm" path="res://Fakemon-PNG/varmot-back.png" id="17_1l2i3"]
 [ext_resource type="Texture2D" uid="uid://rurari3qfhj8" path="res://Fakemon-PNG/baulder.png" id="17_cj8ul"]
 [ext_resource type="Texture2D" uid="uid://7n0duhe3u8d6" path="res://Fakemon-PNG/minamai.png" id="19_dao0j"]
+[ext_resource type="Texture2D" uid="uid://cml2wh3mmoqxb" path="res://Fakemon-PNG/sillennium.png" id="20_nqrrr"]
 [ext_resource type="Texture2D" uid="uid://bs6awpn2ophfp" path="res://Fakemon-PNG/goanopy-back.png" id="22_30jyd"]
 [ext_resource type="Texture2D" uid="uid://t86qm15tse7k" path="res://Fakemon-PNG/merlicun-back.png" id="26_g7rne"]
 [ext_resource type="Texture2D" uid="uid://b6l6ujjcws8yl" path="res://Fakemon-PNG/pompet-back.png" id="27_6atxy"]
@@ -36,6 +37,7 @@
 [ext_resource type="Texture2D" uid="uid://cfbgaqc8xjn06" path="res://Fakemon-PNG/kankwart-back.png" id="32_y5por"]
 [ext_resource type="Texture2D" uid="uid://j67mobjo6oo0" path="res://Fakemon-PNG/baulder-back.png" id="33_ryx7p"]
 [ext_resource type="Texture2D" uid="uid://df0bvuuvb1vsj" path="res://Fakemon-PNG/minamai-back.png" id="36_25tge"]
+[ext_resource type="Texture2D" uid="uid://xm1h16x46aro" path="res://Fakemon-PNG/sillennium-back.png" id="38_y5por"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_30jyd"]
 resource_local_to_scene = true
@@ -136,6 +138,11 @@ visible = false
 use_parent_material = true
 texture = ExtResource("19_dao0j")
 
+[node name="Sillennium" type="Sprite2D" parent="Front"]
+visible = false
+use_parent_material = true
+texture = ExtResource("20_nqrrr")
+
 [node name="Back" type="Node2D" parent="."]
 use_parent_material = true
 
@@ -223,3 +230,8 @@ texture = ExtResource("33_ryx7p")
 visible = false
 use_parent_material = true
 texture = ExtResource("36_25tge")
+
+[node name="Sillennium" type="Sprite2D" parent="Back"]
+visible = false
+use_parent_material = true
+texture = ExtResource("38_y5por")

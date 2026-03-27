@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="SpeciesData" load_steps=15 format=3 uid="uid://cgvljc4cpfssh"]
+[gd_resource type="Resource" script_class="SpeciesData" load_steps=21 format=3 uid="uid://cgvljc4cpfssh"]
 
 [ext_resource type="Script" uid="uid://kmcanhhb04o0" path="res://Resources/MoveResource.gd" id="1_23klb"]
 [ext_resource type="Resource" uid="uid://l4o587xf2mc6" path="res://Moves/Psychic/calmMind.tres" id="2_mi72g"]
@@ -7,6 +7,9 @@
 [ext_resource type="Resource" uid="uid://bu8pdh0syum07" path="res://Moves/Psychic/mindBoggle.tres" id="5_p7dx3"]
 [ext_resource type="Resource" uid="uid://ttaoknwh4k5g" path="res://Moves/Psychic/psychicBeam.tres" id="6_q2kmr"]
 [ext_resource type="Resource" uid="uid://csaufj3wnppfr" path="res://Moves/Psychic/psychicFlick.tres" id="7_n7pp7"]
+[ext_resource type="Resource" uid="uid://dnfjty3i41hh0" path="res://Moves/Rock/rockFlick.tres" id="8_p7dx3"]
+[ext_resource type="Resource" uid="uid://b02gqh4ghtltn" path="res://Moves/Rock/rockToss.tres" id="9_q2kmr"]
+[ext_resource type="Resource" uid="uid://ty1bu1oa2kiv" path="res://Moves/Rock/gravelSpin.tres" id="10_n7pp7"]
 [ext_resource type="Script" uid="uid://1vun3nkcoo5i" path="res://Resources/SpeciesData.gd" id="14_2lcq0"]
 
 [sub_resource type="Resource" id="Resource_23klb"]
@@ -45,6 +48,24 @@ move = ExtResource("7_n7pp7")
 level = 7
 metadata/_custom_type_script = "uid://kmcanhhb04o0"
 
+[sub_resource type="Resource" id="Resource_oq32o"]
+script = ExtResource("1_23klb")
+move = ExtResource("8_p7dx3")
+level = 4
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_mdy4v"]
+script = ExtResource("1_23klb")
+move = ExtResource("9_q2kmr")
+level = 9
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_adsei"]
+script = ExtResource("1_23klb")
+move = ExtResource("10_n7pp7")
+level = 11
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
 [resource]
 resource_name = "res://PokemonCries/mudbray.wav"
 script = ExtResource("14_2lcq0")
@@ -57,6 +78,6 @@ defense = 120
 specialAttack = 100
 specialDefense = 90
 speed = 50
-potentialMoves = Array[ExtResource("1_23klb")]([SubResource("Resource_23klb"), SubResource("Resource_gisvn"), SubResource("Resource_6msw7"), SubResource("Resource_moh75"), SubResource("Resource_81kgm"), SubResource("Resource_53b8x")])
-catchRate = 0.35
+potentialMoves = Array[ExtResource("1_23klb")]([SubResource("Resource_23klb"), SubResource("Resource_gisvn"), SubResource("Resource_6msw7"), SubResource("Resource_moh75"), SubResource("Resource_81kgm"), SubResource("Resource_53b8x"), SubResource("Resource_oq32o"), SubResource("Resource_mdy4v"), SubResource("Resource_adsei")])
+catchRate = 0.3
 metadata/_custom_type_script = "uid://c7t80kmu0l21k"

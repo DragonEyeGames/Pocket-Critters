@@ -1,0 +1,113 @@
+[gd_scene load_steps=13 format=3 uid="uid://dfc31rvi6sc8f"]
+
+[ext_resource type="Script" uid="uid://cqyc33gsyiun1" path="res://Levels/moai.gd" id="1_qpgin"]
+[ext_resource type="Script" uid="uid://c3odxqj7xy866" path="res://Resources/MoveData.gd" id="2_4rfy7"]
+[ext_resource type="Texture2D" uid="uid://clyuwhdv3du75" path="res://Assets/Beach/Moai.png" id="2_26gk3"]
+[ext_resource type="Script" uid="uid://crp3g76avkl7g" path="res://Scripts/dialogue.gd" id="3_4rfy7"]
+[ext_resource type="Resource" uid="uid://l4o587xf2mc6" path="res://Moves/Psychic/calmMind.tres" id="3_bjcfe"]
+[ext_resource type="Resource" uid="uid://ttaoknwh4k5g" path="res://Moves/Psychic/psychicBeam.tres" id="4_sxc6p"]
+[ext_resource type="Resource" uid="uid://csaufj3wnppfr" path="res://Moves/Psychic/psychicFlick.tres" id="5_3hiao"]
+[ext_resource type="Resource" uid="uid://dt38qa54d4gdn" path="res://Moves/Rock/miniBoulder.tres" id="6_wf461"]
+[ext_resource type="Script" uid="uid://dxn4lkbl53l63" path="res://Resources/TeamData.gd" id="7_3esv6"]
+
+[sub_resource type="Resource" id="Resource_m6275"]
+script = ExtResource("7_3esv6")
+species = 46
+level = 15
+moves = Array[ExtResource("2_4rfy7")]([ExtResource("3_bjcfe"), ExtResource("4_sxc6p"), ExtResource("5_3hiao"), ExtResource("6_wf461")])
+metadata/_custom_type_script = "uid://dxn4lkbl53l63"
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_02mk5"]
+radius = 5.0
+height = 16.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_bjcfe"]
+radius = 13.0
+
+[node name="Moai" type="Node2D" node_paths=PackedStringArray("dialogue") groups=["Y-Sort"]]
+script = ExtResource("1_qpgin")
+dialogue = NodePath("Dialogue")
+specialEncounter = SubResource("Resource_m6275")
+preEncounter = Array[String](["Rumble Rumble"])
+
+[node name="Sprite" type="Sprite2D" parent="."]
+position = Vector2(0, -8)
+texture = ExtResource("2_26gk3")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0, 4)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_02mk5")
+
+[node name="Dialogue" type="CanvasLayer" parent="."]
+layer = 0
+visible = false
+script = ExtResource("3_4rfy7")
+
+[node name="ColorRect" type="ColorRect" parent="Dialogue"]
+offset_left = -6.0
+offset_top = 358.0
+offset_right = 967.0
+offset_bottom = 545.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect4" type="ColorRect" parent="Dialogue"]
+offset_left = -6.0
+offset_top = 362.0
+offset_right = 967.0
+offset_bottom = 545.0
+color = Color(0.61339027, 0.61339027, 0.61339027, 1)
+
+[node name="Text" type="RichTextLabel" parent="Dialogue"]
+offset_left = 7.0
+offset_top = 401.0
+offset_right = 953.0
+offset_bottom = 533.0
+theme_override_font_sizes/normal_font_size = 27
+
+[node name="Nameplate" type="Control" parent="Dialogue"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = 287.0
+offset_top = 310.0
+offset_right = 666.0
+offset_bottom = 385.0
+
+[node name="ColorRect2" type="ColorRect" parent="Dialogue/Nameplate"]
+layout_mode = 0
+offset_right = 379.0
+offset_bottom = 75.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="Dialogue/Nameplate"]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 375.0
+offset_bottom = 72.0
+color = Color(0.6419343, 0.64193386, 0.6419341, 1)
+
+[node name="Name" type="RichTextLabel" parent="Dialogue/Nameplate"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 4.0
+offset_right = 375.0
+offset_bottom = 72.0
+theme_override_font_sizes/normal_font_size = 45
+text = "???"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, 4)
+shape = SubResource("CircleShape2D_bjcfe")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]

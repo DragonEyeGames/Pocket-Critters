@@ -13,4 +13,4 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
-	global_position=round(target.sprite.global_position)
+	global_position=round(target.global_position)
