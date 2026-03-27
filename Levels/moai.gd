@@ -19,9 +19,13 @@ var animating:=true
 @export var preEncounter: Array[String]
 
 func _ready():
+	$Area2D/CollisionShape2D.set_deferred("disabled", false)
+	if(GameManager.pokemon.Sillennium in GameManager.pokedex):
+		$Sprite.visible=false
+		$BrokenSprite.visible=true
+		$Area2D.call_deferred("queue_free")
 	pokemon=(GameManager.setPokemon(specialEncounter.species, specialEncounter.level, specialEncounter.moves))
 	await get_tree().create_timer(1).timeout
-	$Area2D/CollisionShape2D.set_deferred("disabled", false)
 
 func _on_area_2d_area_entered(_area: Area2D) -> void:
 	playerEntered=true

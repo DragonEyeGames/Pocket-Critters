@@ -381,3 +381,12 @@ position = Vector2(-637, 1242)
 
 [node name="Tree126" parent="." instance=ExtResource("1_mdlvc")]
 position = Vector2(-425, 952)
+
+[node name="Tree127" parent="." instance=ExtResource("1_mdlvc")]
+position = Vector2(-606, 1280)
+
+[node name="Tree128" parent="." instance=ExtResource("1_mdlvc")]
+position = Vector2(-646, 1307)
+
+[node name="Tree129" parent="." instance=ExtResource("1_mdlvc")]
+position = Vector2(-612, 1321)

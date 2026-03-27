@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://dfc31rvi6sc8f"]
+[gd_scene load_steps=14 format=3 uid="uid://dfc31rvi6sc8f"]
 
 [ext_resource type="Script" uid="uid://cqyc33gsyiun1" path="res://Levels/moai.gd" id="1_qpgin"]
 [ext_resource type="Script" uid="uid://c3odxqj7xy866" path="res://Resources/MoveData.gd" id="2_4rfy7"]
@@ -9,6 +9,7 @@
 [ext_resource type="Resource" uid="uid://csaufj3wnppfr" path="res://Moves/Psychic/psychicFlick.tres" id="5_3hiao"]
 [ext_resource type="Resource" uid="uid://dt38qa54d4gdn" path="res://Moves/Rock/miniBoulder.tres" id="6_wf461"]
 [ext_resource type="Script" uid="uid://dxn4lkbl53l63" path="res://Resources/TeamData.gd" id="7_3esv6"]
+[ext_resource type="Texture2D" uid="uid://7gwygfhocg8x" path="res://Assets/Beach/brokenMoai.png" id="9_sxc6p"]
 
 [sub_resource type="Resource" id="Resource_m6275"]
 script = ExtResource("7_3esv6")
@@ -33,6 +34,11 @@ preEncounter = Array[String](["Rumble Rumble"])
 [node name="Sprite" type="Sprite2D" parent="."]
 position = Vector2(0, -8)
 texture = ExtResource("2_26gk3")
+
+[node name="BrokenSprite" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(0, -8)
+texture = ExtResource("9_sxc6p")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
