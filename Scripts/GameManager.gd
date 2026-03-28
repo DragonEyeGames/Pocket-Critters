@@ -1,34 +1,34 @@
 extends Node
 
 enum pokemon {
-	Timberry, #Basic grass fox
-	Howliage, #1
-	Botanine, #2
-	Pilfetch, #Basic flying bird
-	Criminalis, #1
-	Geckrow,#basic grass (ground) lizard
-	Goanopy, #1
-	Varanitor, #2
-	Sligment, #Basic bug snal
-	Viscolor, #1
-	Gelescent, #2
-	Pasturlo, #Basic grass ram thing
+	Timberry, #Basic grass fox In-Game
+	Howliage, #1 In-Game
+	Botanine, #2 In-Game
+	Pilfetch, #Basic flying bird In-Game
+	Criminalis, #1  In-Game
+	Geckrow,#basic grass (ground) lizard In-Game
+	Goanopy, #1 In-Game
+	Varanitor, #2  In-Game
+	Sligment, #Basic bug snail In-Game
+	Viscolor, #1 In-Game
+	Gelescent, #2 In-Game
+	Pasturlo, #Basic grass ram thing In-Game
 	Brambull, #1
 	Maizotaur, #2
-	Baoby, #Basic ground/grass
+	Baoby, #Basic ground/grass In-Game
 	Baobaraffe, #1
-	Varmot, #Basic normal rat
-	Merlicun, # Basic dragon bug caterpillar thing
+	Varmot, #Basic normal rat In-Game
+	Merlicun, # Basic dragon bug caterpillar thing In-Game
 	Firomenis, #1
-	Pompet, # Basic grass fairy
+	Pompet, # Basic grass fairy In-Game
 	Pomprim, #1
-	Saurky, #Basic water lizard
+	Saurky, #Basic water lizard In-Game
 	Crestaka, #1
 	Avipex, #2
-	Dampurr, #basic water cat
+	Dampurr, #basic water cat In-Game
 	Rainther, #1
 	Delugar, #2
-	Bonfur, #Basic fire bear
+	Bonfur, #Basic fire bear In-Game
 	Tindursa, #1
 	Sizzly, #2
 	Lollybog, #Basic ghost poison
@@ -40,14 +40,14 @@ enum pokemon {
 	Baulder, #Basic rock dragon
 	Dreadrock, #1
 	Tekagon, #2
-	Minamai, #Basic water fish thing
+	Minamai, #Basic water fish thing In-Game
 	Marelstorm, #1
 	Dripwirt, #basic water thing?
 	Pourka,
 	Appalyp,#basic dark water thing
 	Sycoral, #1
 	Nemesusa, #2
-	Sillennium # Basic priest (in moai)
+	Sillennium # Basic priest (in moai) In-Game
 }
 
 enum types {
@@ -233,14 +233,14 @@ func newPokemon(species, level = 6):
 	p.name = pokemonName(species)
 	p.species=species
 	p.level = level
-	p.xp=get_xp_for_level(level)+1
+	p.xp=get_xp_for_level(level+1)-1
 	p.ivHealth=loadIV()
 	p.ivSpeed=loadIV()
 	p.ivAttack=loadIV()
 	p.ivSpecialAttack=loadIV()
 	p.ivDefense=loadIV()
 	p.ivSpecialDefense=loadIV()
-	p.health=int(get_stat(p.base.health, p.ivHealth, level)*healthMod)
+	p.health=1#int(get_stat(p.base.health, p.ivHealth, level)*healthMod)
 	p.maxHealth=int(get_stat(p.base.health, p.ivHealth, level)*healthMod)
 	p.attack=get_stat(p.base.attack, p.ivAttack, level)
 	p.defense=get_stat(p.base.defense, p.ivDefense, level)
@@ -279,6 +279,7 @@ func setPokemon(species, level, moves):
 	return p
 	
 func evolvePokemon(original: PokemonData, evolution: SpeciesData):
+	#get_tree().change_scene_to_file("res://Scenes/evolve.tscn")
 	get_tree().call_deferred("change_scene_to_file", "res://Scenes/evolve.tscn")
 	Music.evolve()
 	evolvedSpecies=original.species

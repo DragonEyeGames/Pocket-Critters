@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="TrainerData" load_steps=3 format=3 uid="uid://dhochwwrr20mo"]
+
+[ext_resource type="Script" uid="uid://0mhfdoexj3v2" path="res://Resources/TrainerData.gd" id="1_1hkmm"]
+[ext_resource type="Script" uid="uid://dxn4lkbl53l63" path="res://Resources/TeamData.gd" id="2_qkmio"]
+
+[resource]
+script = ExtResource("1_1hkmm")
+trainerName = "Tourist"
+preFightDialogue = Array[String](["I'm not from around here, so this should be fun!"])
+afterFightDialogue = Array[String](["I still had fun, even though I lost."])
+afterDefeatDialogue = Array[String](["I won't let this affect the rest of my vacation."])
+sprite = "F6"
+metadata/_custom_type_script = "uid://0mhfdoexj3v2"

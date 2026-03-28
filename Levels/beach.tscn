@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=4 uid="uid://ractyp8q6v8x"]
+[gd_scene load_steps=28 format=4 uid="uid://ractyp8q6v8x"]
 
 [ext_resource type="Script" uid="uid://swgsdmbo5fng" path="res://Scripts/main.gd" id="1_dj533"]
 [ext_resource type="PackedScene" uid="uid://c5yxtkkwi03pt" path="res://Scenes/player.tscn" id="2_dpjeg"]
@@ -17,6 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://dfc31rvi6sc8f" path="res://Scenes/moai.tscn" id="15_02mk5"]
 [ext_resource type="PackedScene" uid="uid://bhljdcmljp27d" path="res://Scenes/beachTreesUpper.tscn" id="16_orvb6"]
 [ext_resource type="PackedScene" uid="uid://bmsyi0138rgpo" path="res://Trainers/trainer.tscn" id="17_gdrsh"]
+[ext_resource type="Texture2D" uid="uid://bngcpcgtbwx0o" path="res://Assets/Beach/Beach Plates.png" id="19_dpjeg"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_sxxgb"]
 shader = ExtResource("7_y7gf1")
@@ -81,6 +82,9 @@ size = Vector2(20, 122)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_orvb6"]
 size = Vector2(2515, 1479)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cicoi"]
+size = Vector2(31, 8)
+
 [node name="Main" type="Node2D"]
 texture_filter = 1
 script = ExtResource("1_dj533")
@@ -89,7 +93,8 @@ levelMin = 8
 levelMax = 13
 
 [node name="Player" parent="." groups=["Y-Sort"] instance=ExtResource("2_dpjeg")]
-position = Vector2(-473, -337)
+position = Vector2(-621, 775)
+positionOverride = true
 
 [node name="Y-Sort" type="Node2D" parent="." node_paths=PackedStringArray("player")]
 y_sort_enabled = true
@@ -123,12 +128,11 @@ script = ExtResource("8_yw58a")
 target = NodePath("../Player")
 
 [node name="Exit" type="Area2D" parent="."]
-visible = false
-position = Vector2(-577, -1318)
+position = Vector2(-749, 716)
 collision_layer = 0
 collision_mask = 2
 script = ExtResource("7_pythp")
-travelZone = "res://Levels/waymeetCity.tscn"
+travelZone = "res://Levels/testingGrounds.tscn"
 travelPos = Vector2(0, -19)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Exit"]
@@ -193,7 +197,7 @@ position = Vector2(-329, 1132)
 player = NodePath("../Player")
 
 [node name="exit2" type="Area2D" parent="."]
-position = Vector2(-689, 770)
+position = Vector2(-739, 699)
 collision_layer = 0
 collision_mask = 2
 script = ExtResource("7_pythp")
@@ -265,6 +269,34 @@ radius = 40
 position = Vector2(-280, -161)
 radius = 40
 
+[node name="Trainer14" parent="." instance=ExtResource("17_gdrsh")]
+position = Vector2(-385, -396)
+radius = 40
+
+[node name="Trainer15" parent="." instance=ExtResource("17_gdrsh")]
+position = Vector2(-380, -616)
+radius = 40
+
+[node name="Trainer16" parent="." instance=ExtResource("17_gdrsh")]
+position = Vector2(364, -620)
+radius = 40
+
+[node name="Trainer17" parent="." instance=ExtResource("17_gdrsh")]
+position = Vector2(0, -615)
+radius = 40
+
+[node name="Trainer18" parent="." instance=ExtResource("17_gdrsh")]
+position = Vector2(366, -1047)
+radius = 40
+
+[node name="Trainer19" parent="." instance=ExtResource("17_gdrsh")]
+position = Vector2(-90, -1050)
+radius = 40
+
+[node name="Trainer20" parent="." instance=ExtResource("17_gdrsh")]
+position = Vector2(-221, 373)
+radius = 40
+
 [node name="PlayerDetector" type="Area2D" parent="."]
 visible = false
 collision_layer = 0
@@ -273,6 +305,36 @@ collision_mask = 2
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerDetector"]
 position = Vector2(122.5, -1637.5)
 shape = SubResource("RectangleShape2D_orvb6")
+
+[node name="Bench2" parent="." instance=ExtResource("14_0y4al")]
+position = Vector2(-153, -648)
+
+[node name="Bench3" parent="." instance=ExtResource("14_0y4al")]
+position = Vector2(135, -1082)
+
+[node name="Bench4" parent="." instance=ExtResource("14_0y4al")]
+position = Vector2(-436, -1753)
+
+[node name="Sign" type="Sprite2D" parent="." groups=["Y-Sort"]]
+position = Vector2(-373, 726)
+texture = ExtResource("19_dpjeg")
+offset = Vector2(-1, -6)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Sign"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sign/StaticBody2D"]
+position = Vector2(-0.5, -2)
+shape = SubResource("RectangleShape2D_cicoi")
+
+[node name="Beach Details" type="TileMapLayer" parent="."]
+z_index = -1
+tile_map_data = PackedByteArray("AAD//yYAAwAIAAoAAFD//ycAAwAJAAoAAFD+/yYAAwAIAAsAAFD+/ycAAwAJAAsAAFD9/xUAAwAKAAoAAFD9/xYAAwALAAoAAFD8/xUAAwAKAAsAAFD8/xYAAwALAAsAAFD8/wcAAwAQAA0AAFD8/wgAAwARAA0AAFD7/wcAAwAQAA4AAFD7/wgAAwARAA4AAFD0//T/AwAOAAoAAFD0//X/AwAPAAoAAFDz//T/AwAOAAsAAFDz//X/AwAPAAsAAFDL/4//AwAIAA0AAADL/5D/AwAIAA4AAADM/4//AwAJAA0AAADM/5D/AwAJAA4AAAA=")
+tile_set = ExtResource("8_ho6el")
+
+[node name="Y-Sort Details" type="TileMapLayer" parent="." groups=["Y-Sort"]]
+y_sort_enabled = true
+tile_map_data = PackedByteArray("AAD//yYAAwAIAAoAAFD//ycAAwAJAAoAAFD+/yYAAwAIAAsAAFD+/ycAAwAJAAsAAFD9/xUAAwAKAAoAAFD9/xYAAwALAAoAAFD8/xUAAwASAAYAAAD8/xYAAwALAAsAAFD7/wcAAwAWAAYAAADz//P/AwAWAA0AAAD+/ygAAwAUAAoAAAD4////AwAUAAYAAADu//X/AwASAAYAAAD9/x0AAwAIAAMAAAD8/xwAAwAKAAMAAAD+/xwAAwAJAAIAAADt//X/AwAVAAIAAADt//b/AwASAAIAAAD5/wAAAwAIAAMAAAD6/wAAAwAJAAMAAAD6//n/AwAIAAMAAAD+/xMAAwAIAAIAAAD9/xQAAwAKAAIAAAD2/zoAAwANAAIAAADL/4//AwAUAAYAAAA=")
+tile_set = ExtResource("8_ho6el")
 
 [connection signal="area_entered" from="Exit" to="Exit" method="_on_area_entered"]
 [connection signal="area_entered" from="Mud" to="Player" method="_on_mud_area_entered"]

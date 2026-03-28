@@ -1,6 +1,7 @@
-[gd_resource type="Resource" script_class="SpeciesData" load_steps=30 format=3 uid="uid://bhaig3g01vrj6"]
+[gd_resource type="Resource" script_class="SpeciesData" load_steps=32 format=3 uid="uid://bhaig3g01vrj6"]
 
 [ext_resource type="Script" uid="uid://bdro5jjhj86t" path="res://Resources/EvolutionData.gd" id="1_pgftf"]
+[ext_resource type="Resource" uid="uid://dashcyuf7fti6" path="res://Pokemon/varanitor.tres" id="1_xpbns"]
 [ext_resource type="Script" uid="uid://kmcanhhb04o0" path="res://Resources/MoveResource.gd" id="2_bqtie"]
 [ext_resource type="Resource" uid="uid://brvhs3akjs2ul" path="res://Moves/Grass/bramble.tres" id="3_ytsc4"]
 [ext_resource type="Resource" uid="uid://5go1ihkf80au" path="res://Moves/Grass/branch.tres" id="4_g2xm4"]
@@ -16,6 +17,12 @@
 [ext_resource type="Resource" uid="uid://cfuas1q540ijn" path="res://Moves/Dark/bite.tres" id="14_vftpk"]
 [ext_resource type="Resource" uid="uid://dxdatetbl8tj" path="res://Moves/Dark/crunch.tres" id="15_4dlmq"]
 [ext_resource type="Script" uid="uid://1vun3nkcoo5i" path="res://Resources/SpeciesData.gd" id="16_674tx"]
+
+[sub_resource type="Resource" id="Resource_dnwyj"]
+script = ExtResource("1_pgftf")
+into = ExtResource("1_xpbns")
+level = 34
+metadata/_custom_type_script = "uid://bdro5jjhj86t"
 
 [sub_resource type="Resource" id="Resource_0gxab"]
 script = ExtResource("2_bqtie")
@@ -109,4 +116,5 @@ speed = 54
 potentialMoves = Array[ExtResource("2_bqtie")]([SubResource("Resource_0gxab"), SubResource("Resource_f81nk"), SubResource("Resource_nwt6u"), SubResource("Resource_cvrrh"), SubResource("Resource_rggud"), SubResource("Resource_w12tr"), SubResource("Resource_ymqal"), SubResource("Resource_1df78"), SubResource("Resource_swn0w"), SubResource("Resource_2t72q"), SubResource("Resource_d50oh"), SubResource("Resource_cxorh"), SubResource("Resource_d5p8u")])
 catchRate = 0.35
 cryPath = "res://PokemonCries/snivy.wav"
+evolution = SubResource("Resource_dnwyj")
 metadata/_custom_type_script = "uid://c7t80kmu0l21k"

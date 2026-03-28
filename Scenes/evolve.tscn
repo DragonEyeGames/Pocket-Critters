@@ -1,20 +1,14 @@
-[gd_scene load_steps=10 format=3 uid="uid://cw6s8v5p3vlha"]
+[gd_scene load_steps=9 format=3 uid="uid://cw6s8v5p3vlha"]
 
 [ext_resource type="Script" uid="uid://uc16k0lmv6pw" path="res://Scripts/evolve.gd" id="1_6k2bf"]
 [ext_resource type="Shader" uid="uid://bomfvo6o4mvg6" path="res://Shaders/flash.gdshader" id="2_6k2bf"]
-[ext_resource type="PackedScene" uid="uid://i7w0yrolij1i" path="res://Scenes/frontPokemon.tscn" id="2_c4p35"]
+[ext_resource type="PackedScene" uid="uid://3ijnqbla51yb" path="res://Scenes/pokemonDisplay.tscn" id="2_c4p35"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_5oiha"]
 resource_local_to_scene = true
 shader = ExtResource("2_6k2bf")
 shader_parameter/flash_color = Color(1, 1, 1, 1)
 shader_parameter/flash_value = 1.0
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_6k2bf"]
-resource_local_to_scene = true
-shader = ExtResource("2_6k2bf")
-shader_parameter/flash_color = Color(1, 1, 1, 1)
-shader_parameter/flash_value = 0.0
 
 [sub_resource type="Animation" id="Animation_c4p35"]
 length = 0.001
@@ -65,18 +59,6 @@ tracks/3/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [false]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("CurrentPokemon:material:shader_parameter/flash_value")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.0]
 }
 
 [sub_resource type="Animation" id="Animation_6k2bf"]
@@ -130,18 +112,6 @@ tracks/3/keys = {
 "update": 1,
 "values": [false, true, false]
 }
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("CurrentPokemon:material:shader_parameter/flash_value")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0, 0.5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [0.0, 1.0]
-}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_5oiha"]
 _data = {
@@ -158,12 +128,11 @@ point_count = 3
 script = ExtResource("1_6k2bf")
 
 [node name="NewPokemon" parent="." instance=ExtResource("2_c4p35")]
-visible = false
 material = SubResource("ShaderMaterial_5oiha")
 position = Vector2(474, 296)
 
 [node name="CurrentPokemon" parent="." instance=ExtResource("2_c4p35")]
-material = SubResource("ShaderMaterial_6k2bf")
+material = SubResource("ShaderMaterial_5oiha")
 position = Vector2(474, 296)
 
 [node name="Evolve" type="AnimationPlayer" parent="."]

@@ -1,7 +1,9 @@
-[gd_resource type="Resource" script_class="SpeciesData" load_steps=23 format=3 uid="uid://ggusoa0ceclr"]
+[gd_resource type="Resource" script_class="SpeciesData" load_steps=26 format=3 uid="uid://ggusoa0ceclr"]
 
 [ext_resource type="Script" uid="uid://kmcanhhb04o0" path="res://Resources/MoveResource.gd" id="1_j0lyw"]
+[ext_resource type="Resource" uid="uid://dm3niahia0k3y" path="res://Pokemon/howliage.tres" id="1_y6f7w"]
 [ext_resource type="Resource" uid="uid://cfuas1q540ijn" path="res://Moves/Dark/bite.tres" id="2_dybwd"]
+[ext_resource type="Script" uid="uid://bdro5jjhj86t" path="res://Resources/EvolutionData.gd" id="2_fvq8r"]
 [ext_resource type="Script" uid="uid://1vun3nkcoo5i" path="res://Resources/SpeciesData.gd" id="3_qcl64"]
 [ext_resource type="Resource" uid="uid://dxdatetbl8tj" path="res://Moves/Dark/crunch.tres" id="3_y6f7w"]
 [ext_resource type="Resource" uid="uid://0adu54ws8kpt" path="res://Moves/Dark/gnaw.tres" id="4_fvq8r"]
@@ -12,6 +14,12 @@
 [ext_resource type="Resource" uid="uid://cjwtbcu7vkxjk" path="res://Moves/Normal/tackle.tres" id="9_rwj3b"]
 [ext_resource type="Resource" uid="uid://bd1h37ujt4yux" path="res://Moves/Normal/headbutt.tres" id="10_a68x5"]
 [ext_resource type="Resource" uid="uid://c3w2860616tbu" path="res://Moves/Normal/growl.tres" id="11_dvaml"]
+
+[sub_resource type="Resource" id="Resource_pwt77"]
+script = ExtResource("2_fvq8r")
+into = ExtResource("1_y6f7w")
+level = 16
+metadata/_custom_type_script = "uid://bdro5jjhj86t"
 
 [sub_resource type="Resource" id="Resource_letcp"]
 script = ExtResource("1_j0lyw")
@@ -86,4 +94,5 @@ speed = 60
 potentialMoves = Array[ExtResource("1_j0lyw")]([SubResource("Resource_letcp"), SubResource("Resource_xws2l"), SubResource("Resource_y187y"), SubResource("Resource_ywh05"), SubResource("Resource_suq7j"), SubResource("Resource_dnfov"), SubResource("Resource_h5iak"), SubResource("Resource_ag6th"), SubResource("Resource_5i03j"), SubResource("Resource_t0h1g")])
 catchRate = 0.4
 cryPath = "res://PokemonCries/rockruff.wav"
+evolution = SubResource("Resource_pwt77")
 metadata/_custom_type_script = "uid://c7t80kmu0l21k"

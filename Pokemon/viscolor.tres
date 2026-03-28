@@ -1,0 +1,85 @@
+[gd_resource type="Resource" script_class="SpeciesData" load_steps=22 format=3 uid="uid://c8d7x0mn0w2o2"]
+
+[ext_resource type="Script" uid="uid://kmcanhhb04o0" path="res://Resources/MoveResource.gd" id="1_iaitd"]
+[ext_resource type="Resource" uid="uid://c6rfeqwoevho2" path="res://Pokemon/gelescent.tres" id="1_wcmwu"]
+[ext_resource type="Resource" uid="uid://0adu54ws8kpt" path="res://Moves/Dark/gnaw.tres" id="2_q23xn"]
+[ext_resource type="Script" uid="uid://bdro5jjhj86t" path="res://Resources/EvolutionData.gd" id="2_w1tql"]
+[ext_resource type="Resource" uid="uid://c4btm4xgx3fmv" path="res://Moves/Bug/bugBite.tres" id="3_wcmwu"]
+[ext_resource type="Resource" uid="uid://egtxpc610uld" path="res://Moves/Bug/nibble.tres" id="4_w1tql"]
+[ext_resource type="Resource" uid="uid://bhcuqnwgqnn3i" path="res://Moves/Bug/stringShot.tres" id="5_klor1"]
+[ext_resource type="Resource" uid="uid://ymo5t14wyvl1" path="res://Moves/Bug/larvaLunge.tres" id="6_3nhxg"]
+[ext_resource type="Resource" uid="uid://dxmq5lmjkulio" path="res://Moves/Bug/creepCrawl.tres" id="7_k0aq5"]
+[ext_resource type="Resource" uid="uid://0swwqh1y5jcf" path="res://Moves/Normal/quickAttack.tres" id="8_lcibk"]
+[ext_resource type="Resource" uid="uid://cjwtbcu7vkxjk" path="res://Moves/Normal/tackle.tres" id="9_ll4q1"]
+[ext_resource type="Script" uid="uid://1vun3nkcoo5i" path="res://Resources/SpeciesData.gd" id="10_36ojv"]
+
+[sub_resource type="Resource" id="Resource_klor1"]
+script = ExtResource("2_w1tql")
+into = ExtResource("1_wcmwu")
+level = 36
+metadata/_custom_type_script = "uid://bdro5jjhj86t"
+
+[sub_resource type="Resource" id="Resource_isabj"]
+script = ExtResource("1_iaitd")
+move = ExtResource("2_q23xn")
+level = 2
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_8dqty"]
+script = ExtResource("1_iaitd")
+move = ExtResource("3_wcmwu")
+level = 1
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_cqt66"]
+script = ExtResource("1_iaitd")
+move = ExtResource("4_w1tql")
+level = 1
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_m8r8u"]
+script = ExtResource("1_iaitd")
+move = ExtResource("5_klor1")
+level = 1
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_oqjap"]
+script = ExtResource("1_iaitd")
+move = ExtResource("6_3nhxg")
+level = 5
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_gp4da"]
+script = ExtResource("1_iaitd")
+move = ExtResource("7_k0aq5")
+level = 7
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_kqhvv"]
+script = ExtResource("1_iaitd")
+move = ExtResource("8_lcibk")
+level = 3
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_vr67p"]
+script = ExtResource("1_iaitd")
+move = ExtResource("9_ll4q1")
+level = 4
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[resource]
+script = ExtResource("10_36ojv")
+species = 9
+type1 = 6
+type2 = 6
+health = 75
+attack = 40
+defense = 80
+specialAttack = 60
+specialDefense = 75
+speed = 35
+potentialMoves = Array[ExtResource("1_iaitd")]([SubResource("Resource_isabj"), SubResource("Resource_8dqty"), SubResource("Resource_cqt66"), SubResource("Resource_m8r8u"), SubResource("Resource_oqjap"), SubResource("Resource_gp4da"), SubResource("Resource_kqhvv"), SubResource("Resource_vr67p")])
+catchRate = 0.4
+cryPath = "res://PokemonCries/goomy.wav"
+evolution = SubResource("Resource_klor1")
+metadata/_custom_type_script = "uid://c7t80kmu0l21k"

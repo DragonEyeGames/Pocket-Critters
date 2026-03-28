@@ -46,7 +46,7 @@ func _on_catch_pressed() -> void:
 	$BattleOptions/Options.visible=false
 	$BattleOptions/Display.text="Threw a ball at " + $Opponent.pokemon.name + "!"
 	print(GameManager.get_catch_chance($Opponent.pokemon, 1))
-	if(randf()<=GameManager.get_catch_chance($Opponent.pokemon, 1)):
+	if(randf()<=1):#GameManager.get_catch_chance($Opponent.pokemon, 1)):
 		$Catch.play("catch-succeed")
 		await get_tree().create_timer(2).timeout
 		battleWon()

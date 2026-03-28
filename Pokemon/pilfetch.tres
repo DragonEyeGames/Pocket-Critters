@@ -1,7 +1,9 @@
-[gd_resource type="Resource" script_class="SpeciesData" load_steps=19 format=3 uid="uid://b0ivyhj4g48un"]
+[gd_resource type="Resource" script_class="SpeciesData" load_steps=22 format=3 uid="uid://b0ivyhj4g48un"]
 
 [ext_resource type="Script" uid="uid://kmcanhhb04o0" path="res://Resources/MoveResource.gd" id="1_rnmic"]
+[ext_resource type="Resource" uid="uid://cmrubsqwxochu" path="res://Pokemon/criminalis.tres" id="1_xjnv1"]
 [ext_resource type="Resource" uid="uid://bu7rm71701ktv" path="res://Moves/Flying/peck.tres" id="2_gpgau"]
+[ext_resource type="Script" uid="uid://bdro5jjhj86t" path="res://Resources/EvolutionData.gd" id="2_y8a34"]
 [ext_resource type="Script" uid="uid://1vun3nkcoo5i" path="res://Resources/SpeciesData.gd" id="3_eh1sg"]
 [ext_resource type="Resource" uid="uid://cowyv6e3lbnco" path="res://Moves/Flying/quickPeck.tres" id="3_xjnv1"]
 [ext_resource type="Resource" uid="uid://dekuq5aj6tnxh" path="res://Moves/Flying/wingSlap.tres" id="4_y8a34"]
@@ -10,6 +12,12 @@
 [ext_resource type="Resource" uid="uid://cao3lrn2sxdaa" path="res://Moves/Normal/focus.tres" id="7_nn3a1"]
 [ext_resource type="Resource" uid="uid://cjwtbcu7vkxjk" path="res://Moves/Normal/tackle.tres" id="8_l2m6l"]
 [ext_resource type="Resource" uid="uid://cbp1qoovefw0w" path="res://Moves/Normal/leer.tres" id="9_x3njm"]
+
+[sub_resource type="Resource" id="Resource_43sv0"]
+script = ExtResource("2_y8a34")
+into = ExtResource("1_xjnv1")
+level = 17
+metadata/_custom_type_script = "uid://bdro5jjhj86t"
 
 [sub_resource type="Resource" id="Resource_obhjb"]
 script = ExtResource("1_rnmic")
@@ -73,4 +81,5 @@ speed = 65
 potentialMoves = Array[ExtResource("1_rnmic")]([SubResource("Resource_obhjb"), SubResource("Resource_uippx"), SubResource("Resource_8k7m8"), SubResource("Resource_ihn01"), SubResource("Resource_vbm5g"), SubResource("Resource_jrt7w"), SubResource("Resource_lwqc5"), SubResource("Resource_407wf")])
 catchRate = 0.45
 cryPath = "res://PokemonCries/fletchling.mp3"
+evolution = SubResource("Resource_43sv0")
 metadata/_custom_type_script = "uid://c7t80kmu0l21k"

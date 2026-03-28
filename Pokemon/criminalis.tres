@@ -1,0 +1,76 @@
+[gd_resource type="Resource" script_class="SpeciesData" load_steps=19 format=3 uid="uid://cmrubsqwxochu"]
+
+[ext_resource type="Script" uid="uid://kmcanhhb04o0" path="res://Resources/MoveResource.gd" id="1_aqw5a"]
+[ext_resource type="Resource" uid="uid://bu7rm71701ktv" path="res://Moves/Flying/peck.tres" id="2_1amcl"]
+[ext_resource type="Resource" uid="uid://cowyv6e3lbnco" path="res://Moves/Flying/quickPeck.tres" id="3_ise7e"]
+[ext_resource type="Resource" uid="uid://dekuq5aj6tnxh" path="res://Moves/Flying/wingSlap.tres" id="4_5v5h8"]
+[ext_resource type="Resource" uid="uid://ch7rxit3qljs8" path="res://Moves/Flying/liftOff.tres" id="5_a5add"]
+[ext_resource type="Resource" uid="uid://cfn1x8bt84qye" path="res://Moves/Flying/airCut.tres" id="6_pw3oc"]
+[ext_resource type="Resource" uid="uid://cao3lrn2sxdaa" path="res://Moves/Normal/focus.tres" id="7_wn5vq"]
+[ext_resource type="Resource" uid="uid://cjwtbcu7vkxjk" path="res://Moves/Normal/tackle.tres" id="8_1m1l4"]
+[ext_resource type="Resource" uid="uid://cbp1qoovefw0w" path="res://Moves/Normal/leer.tres" id="9_p3jjd"]
+[ext_resource type="Script" uid="uid://1vun3nkcoo5i" path="res://Resources/SpeciesData.gd" id="10_qo84a"]
+
+[sub_resource type="Resource" id="Resource_obhjb"]
+script = ExtResource("1_aqw5a")
+move = ExtResource("2_1amcl")
+level = 1
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_uippx"]
+script = ExtResource("1_aqw5a")
+move = ExtResource("3_ise7e")
+level = 2
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_8k7m8"]
+script = ExtResource("1_aqw5a")
+move = ExtResource("4_5v5h8")
+level = 5
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_ihn01"]
+script = ExtResource("1_aqw5a")
+move = ExtResource("5_a5add")
+level = 4
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_vbm5g"]
+script = ExtResource("1_aqw5a")
+move = ExtResource("6_pw3oc")
+level = 6
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_jrt7w"]
+script = ExtResource("1_aqw5a")
+move = ExtResource("7_wn5vq")
+level = 1
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_lwqc5"]
+script = ExtResource("1_aqw5a")
+move = ExtResource("8_1m1l4")
+level = 1
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_407wf"]
+script = ExtResource("1_aqw5a")
+move = ExtResource("9_p3jjd")
+level = 1
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[resource]
+script = ExtResource("10_qo84a")
+species = 4
+type1 = 3
+type2 = 9
+health = 65
+attack = 90
+defense = 55
+specialAttack = 50
+specialDefense = 55
+speed = 110
+potentialMoves = Array[ExtResource("1_aqw5a")]([SubResource("Resource_obhjb"), SubResource("Resource_uippx"), SubResource("Resource_8k7m8"), SubResource("Resource_ihn01"), SubResource("Resource_vbm5g"), SubResource("Resource_jrt7w"), SubResource("Resource_lwqc5"), SubResource("Resource_407wf")])
+catchRate = 0.45
+cryPath = "res://PokemonCries/fletchling.mp3"
+metadata/_custom_type_script = "uid://c7t80kmu0l21k"

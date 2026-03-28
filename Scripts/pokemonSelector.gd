@@ -28,20 +28,12 @@ func initialize() -> void:
 		if has_node("Appear"):
 			get_node("Appear").play("spawn")
 		refresh=true
-	for child in $Back.get_children():
-		child.visible=false
-	for child in $Front.get_children():
-		child.visible=false
+	var appendage=".png"
+	
 	if(back):
-		for child in $Back.get_children():
-			child.visible=false
-			if(child.name==str(GameManager.pokemonName(pokemon.species))):
-				child.visible=true
-	elif(!back):
-		for child in $Front.get_children():
-			child.visible=false
-			if(child.name==str(GameManager.pokemonName(pokemon.species))):
-				child.visible=true
+		appendage="-back.png"
+		
+	$Pokemon.texture=load("res://Fakemon-PNG/" + str(GameManager.pokemonName(pokemon.species)).to_lower() +appendage)
 	
 	if(holder!=null):
 		holder.pokemonName=str(GameManager.pokemonName(pokemon.species))

@@ -24,10 +24,13 @@ func _ready() -> void:
 		if(newPokemon.base.evolution!=null and newPokemon.level>=newPokemon.base.evolution.level):
 			GameManager.evolvePokemon(newPokemon, newPokemon.base.evolution.into)
 			
-	await get_tree().process_frame
-	await get_tree().process_frame
-	GameManager.currentScene=get_tree().current_scene.scene_file_path
-	await get_tree().create_timer(.1).timeout
+	if(not get_tree()==null):
+		await get_tree().process_frame
+	if(not get_tree()==null):
+		await get_tree().process_frame
+	if(not get_tree()==null):
+		GameManager.currentScene=get_tree().current_scene.scene_file_path
+		await get_tree().create_timer(.1).timeout
 	GameManager.safe=false
 
 func _process(_delta: float) -> void:
