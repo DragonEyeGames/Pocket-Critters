@@ -13,18 +13,18 @@ enum pokemon {
 	Viscolor, #1 In-Game
 	Gelescent, #2 In-Game
 	Pasturlo, #Basic grass ram thing In-Game
-	Brambull, #1
-	Maizotaur, #2
+	Brambull, #1 In-Game
+	Maizotaur, #2 In-Game
 	Baoby, #Basic ground/grass In-Game
-	Baobaraffe, #1
+	Baobaraffe, #1 In-Game
 	Varmot, #Basic normal rat In-Game
 	Merlicun, # Basic dragon bug caterpillar thing In-Game
-	Firomenis, #1
+	Firomenis, #1 In-Game
 	Pompet, # Basic grass fairy In-Game
-	Pomprim, #1
+	Pomprim, #1 In-Game
 	Saurky, #Basic water lizard In-Game
-	Crestaka, #1
-	Avipex, #2
+	Crestaka, #1 In-Game
+	Avipex, #2 In-Game
 	Dampurr, #basic water cat In-Game
 	Rainther, #1
 	Delugar, #2

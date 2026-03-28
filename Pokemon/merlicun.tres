@@ -1,7 +1,9 @@
-[gd_resource type="Resource" script_class="SpeciesData" load_steps=27 format=3 uid="uid://c26vdjfpvb5q"]
+[gd_resource type="Resource" script_class="SpeciesData" load_steps=30 format=3 uid="uid://c26vdjfpvb5q"]
 
+[ext_resource type="Resource" uid="uid://bknrdxa4f7ljd" path="res://Pokemon/firomenis.tres" id="1_1c2wa"]
 [ext_resource type="Script" uid="uid://kmcanhhb04o0" path="res://Resources/MoveResource.gd" id="1_ibtjy"]
 [ext_resource type="Resource" uid="uid://c4btm4xgx3fmv" path="res://Moves/Bug/bugBite.tres" id="2_bv4y7"]
+[ext_resource type="Script" uid="uid://bdro5jjhj86t" path="res://Resources/EvolutionData.gd" id="2_t0lwv"]
 [ext_resource type="Resource" uid="uid://egtxpc610uld" path="res://Moves/Bug/nibble.tres" id="3_i4clv"]
 [ext_resource type="Resource" uid="uid://bhcuqnwgqnn3i" path="res://Moves/Bug/stringShot.tres" id="4_crrho"]
 [ext_resource type="Resource" uid="uid://ymo5t14wyvl1" path="res://Moves/Bug/larvaLunge.tres" id="5_hmbnv"]
@@ -14,6 +16,12 @@
 [ext_resource type="Resource" uid="uid://clxxnxbimbhvg" path="res://Moves/Dragon/wyrmRush.tres" id="11_crrho"]
 [ext_resource type="Resource" uid="uid://biimupcttiomf" path="res://Moves/Dragon/dragonFocus.tres" id="12_hmbnv"]
 [ext_resource type="Resource" uid="uid://c8cuk8cgdl73a" path="res://Moves/Dragon/draconicRoar.tres" id="13_1c2wa"]
+
+[sub_resource type="Resource" id="Resource_e2jjr"]
+script = ExtResource("2_t0lwv")
+into = ExtResource("1_1c2wa")
+level = 38
+metadata/_custom_type_script = "uid://bdro5jjhj86t"
 
 [sub_resource type="Resource" id="Resource_jhc5f"]
 script = ExtResource("1_ibtjy")
@@ -101,4 +109,5 @@ speed = 45
 potentialMoves = Array[ExtResource("1_ibtjy")]([SubResource("Resource_jhc5f"), SubResource("Resource_6q12k"), SubResource("Resource_i0mh3"), SubResource("Resource_e27h2"), SubResource("Resource_4mw77"), SubResource("Resource_mtog6"), SubResource("Resource_d1wb5"), SubResource("Resource_b1geo"), SubResource("Resource_bl487"), SubResource("Resource_t0lwv"), SubResource("Resource_8gubq"), SubResource("Resource_fe7kq")])
 catchRate = 0.25
 cryPath = "res://PokemonCries/wimpod.wav"
+evolution = SubResource("Resource_e2jjr")
 metadata/_custom_type_script = "uid://c7t80kmu0l21k"

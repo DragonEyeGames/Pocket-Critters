@@ -1,6 +1,8 @@
-[gd_resource type="Resource" script_class="SpeciesData" load_steps=27 format=3 uid="uid://u8yynao88t20"]
+[gd_resource type="Resource" script_class="SpeciesData" load_steps=30 format=3 uid="uid://u8yynao88t20"]
 
+[ext_resource type="Resource" uid="uid://da8g5i8fol83a" path="res://Pokemon/baobaraffe.tres" id="1_j1pn3"]
 [ext_resource type="Script" uid="uid://kmcanhhb04o0" path="res://Resources/MoveResource.gd" id="1_t552i"]
+[ext_resource type="Script" uid="uid://bdro5jjhj86t" path="res://Resources/EvolutionData.gd" id="2_e0luk"]
 [ext_resource type="Resource" uid="uid://cepnl6u878py5" path="res://Moves/Grass/absorb.tres" id="2_p1wfu"]
 [ext_resource type="Resource" uid="uid://5go1ihkf80au" path="res://Moves/Grass/branch.tres" id="3_s2pr0"]
 [ext_resource type="Script" uid="uid://1vun3nkcoo5i" path="res://Resources/SpeciesData.gd" id="4_s6xgl"]
@@ -14,6 +16,12 @@
 [ext_resource type="Resource" uid="uid://d4e4hfx0m8ar4" path="res://Moves/Ground/stomp.tres" id="11_ln024"]
 [ext_resource type="Resource" uid="uid://clq4k01n5yevi" path="res://Moves/Ground/mudSlap.tres" id="12_bidxp"]
 [ext_resource type="Resource" uid="uid://7c6dd5xtespl" path="res://Moves/Ground/heavyStomp.tres" id="13_j1pn3"]
+
+[sub_resource type="Resource" id="Resource_p0hea"]
+script = ExtResource("2_e0luk")
+into = ExtResource("1_j1pn3")
+level = 28
+metadata/_custom_type_script = "uid://bdro5jjhj86t"
 
 [sub_resource type="Resource" id="Resource_jrds2"]
 script = ExtResource("1_t552i")
@@ -102,4 +110,5 @@ speed = 40
 potentialMoves = Array[ExtResource("1_t552i")]([SubResource("Resource_jrds2"), SubResource("Resource_rb51j"), SubResource("Resource_le7m8"), SubResource("Resource_kkabu"), SubResource("Resource_qwrtc"), SubResource("Resource_c8i04"), SubResource("Resource_ydh57"), SubResource("Resource_vbf8m"), SubResource("Resource_2ciah"), SubResource("Resource_e0luk"), SubResource("Resource_bb8jb"), SubResource("Resource_fyfiv")])
 catchRate = 0.5
 cryPath = "res://PokemonCries/mudbray.wav"
+evolution = SubResource("Resource_p0hea")
 metadata/_custom_type_script = "uid://c7t80kmu0l21k"

@@ -1,6 +1,8 @@
-[gd_resource type="Resource" script_class="SpeciesData" load_steps=27 format=3 uid="uid://b4oic76jiove5"]
+[gd_resource type="Resource" script_class="SpeciesData" load_steps=30 format=3 uid="uid://b4oic76jiove5"]
 
+[ext_resource type="Resource" uid="uid://bfmo8rpcx3t0r" path="res://Pokemon/pomprim.tres" id="1_5jrgp"]
 [ext_resource type="Script" uid="uid://kmcanhhb04o0" path="res://Resources/MoveResource.gd" id="1_ljenr"]
+[ext_resource type="Script" uid="uid://bdro5jjhj86t" path="res://Resources/EvolutionData.gd" id="2_air7g"]
 [ext_resource type="Resource" uid="uid://cva7mwo0kvgv5" path="res://Moves/Fairy/charm.tres" id="2_pderr"]
 [ext_resource type="Resource" uid="uid://bxow2byw80u2u" path="res://Moves/Fairy/fairySpark.tres" id="3_5jrgp"]
 [ext_resource type="Resource" uid="uid://bgnpn75ef6edg" path="res://Moves/Fairy/pixieTap.tres" id="4_air7g"]
@@ -14,6 +16,12 @@
 [ext_resource type="Resource" uid="uid://cjwtbcu7vkxjk" path="res://Moves/Normal/tackle.tres" id="11_vthit"]
 [ext_resource type="Resource" uid="uid://bd1h37ujt4yux" path="res://Moves/Normal/headbutt.tres" id="12_t1fmo"]
 [ext_resource type="Resource" uid="uid://cao3lrn2sxdaa" path="res://Moves/Normal/focus.tres" id="13_6ucb0"]
+
+[sub_resource type="Resource" id="Resource_avro0"]
+script = ExtResource("2_air7g")
+into = ExtResource("1_5jrgp")
+level = 28
+metadata/_custom_type_script = "uid://bdro5jjhj86t"
 
 [sub_resource type="Resource" id="Resource_5aumt"]
 script = ExtResource("1_ljenr")
@@ -101,4 +109,5 @@ speed = 50
 potentialMoves = Array[ExtResource("1_ljenr")]([SubResource("Resource_5aumt"), SubResource("Resource_h3s8p"), SubResource("Resource_ja62e"), SubResource("Resource_fwrfq"), SubResource("Resource_rhqvu"), SubResource("Resource_ohy8v"), SubResource("Resource_vcv8e"), SubResource("Resource_pxqoe"), SubResource("Resource_nbjpb"), SubResource("Resource_nv4rk"), SubResource("Resource_yqw6e"), SubResource("Resource_yewbj")])
 catchRate = 0.6
 cryPath = "res://PokemonCries/swirlix.wav"
+evolution = SubResource("Resource_avro0")
 metadata/_custom_type_script = "uid://c7t80kmu0l21k"

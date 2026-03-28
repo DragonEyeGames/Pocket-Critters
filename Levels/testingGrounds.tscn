@@ -70,9 +70,9 @@ size = Vector2(135, 119)
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_lcfnf")
-pokemonEncounters = Array[int]([1])
-levelMin = 31
-levelMax = 31
+pokemonEncounters = Array[int]([3])
+levelMin = 16
+levelMax = 16
 
 [node name="Player" parent="." groups=["Y-Sort"] instance=ExtResource("2_ua4p5")]
 position = Vector2(-498, -818)

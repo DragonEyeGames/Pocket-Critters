@@ -1,6 +1,8 @@
-[gd_resource type="Resource" script_class="SpeciesData" load_steps=21 format=3 uid="uid://cdu1mqkaa1uep"]
+[gd_resource type="Resource" script_class="SpeciesData" load_steps=24 format=3 uid="uid://cdu1mqkaa1uep"]
 
 [ext_resource type="Script" uid="uid://kmcanhhb04o0" path="res://Resources/MoveResource.gd" id="1_38vsd"]
+[ext_resource type="Resource" uid="uid://cursmrhsk5wf0" path="res://Pokemon/crestaka.tres" id="1_j523a"]
+[ext_resource type="Script" uid="uid://bdro5jjhj86t" path="res://Resources/EvolutionData.gd" id="2_bwiej"]
 [ext_resource type="Resource" uid="uid://cao3lrn2sxdaa" path="res://Moves/Normal/focus.tres" id="2_j3fl1"]
 [ext_resource type="Resource" uid="uid://cbp1qoovefw0w" path="res://Moves/Normal/leer.tres" id="3_445bj"]
 [ext_resource type="Resource" uid="uid://cjwtbcu7vkxjk" path="res://Moves/Normal/tackle.tres" id="4_j523a"]
@@ -11,6 +13,12 @@
 [ext_resource type="Resource" uid="uid://d2q3b7wa4vkgn" path="res://Moves/Water/tideCrash.tres" id="8_i8n7w"]
 [ext_resource type="Resource" uid="uid://btxshbrw5u77r" path="res://Moves/Water/wavePush.tres" id="9_27vr1"]
 [ext_resource type="Resource" uid="uid://cd54c061rkodq" path="res://Moves/Water/drizzleCall.tres" id="10_xppeb"]
+
+[sub_resource type="Resource" id="Resource_0g5j0"]
+script = ExtResource("2_bwiej")
+into = ExtResource("1_j523a")
+level = 18
+metadata/_custom_type_script = "uid://bdro5jjhj86t"
 
 [sub_resource type="Resource" id="Resource_nwgll"]
 script = ExtResource("1_38vsd")
@@ -79,4 +87,5 @@ specialDefense = 40
 speed = 60
 potentialMoves = Array[ExtResource("1_38vsd")]([SubResource("Resource_nwgll"), SubResource("Resource_2y322"), SubResource("Resource_074tu"), SubResource("Resource_kb88e"), SubResource("Resource_lqs8g"), SubResource("Resource_44h0g"), SubResource("Resource_2a867"), SubResource("Resource_uq3r8"), SubResource("Resource_gfnd4")])
 catchRate = 0.55
+evolution = SubResource("Resource_0g5j0")
 metadata/_custom_type_script = "uid://c7t80kmu0l21k"
