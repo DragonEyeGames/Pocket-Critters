@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="MoveDatas" load_steps=3 format=3 uid="uid://cnpb2hsk6l6bw"]
+
+[ext_resource type="Script" uid="uid://2fme8eqsovvo" path="res://Resources/AbilityData.gd" id="1_m3x4y"]
+[ext_resource type="Script" uid="uid://c3odxqj7xy866" path="res://Resources/MoveData.gd" id="2_8ohrb"]
+
+[resource]
+script = ExtResource("2_8ohrb")
+name = "Seismic Strike"
+type = 13
+moveType = 1
+power = 95
+accuracy = 0.9
+metadata/_custom_type_script = "uid://c3odxqj7xy866"

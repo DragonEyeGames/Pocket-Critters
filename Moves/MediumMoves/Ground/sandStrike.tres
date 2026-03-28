@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="MoveDatas" load_steps=4 format=3 uid="uid://b7e8thmmc1lpp"]
+
+[ext_resource type="Script" uid="uid://2fme8eqsovvo" path="res://Resources/AbilityData.gd" id="1_430xk"]
+[ext_resource type="Script" uid="uid://c3odxqj7xy866" path="res://Resources/MoveData.gd" id="2_5huhx"]
+
+[sub_resource type="Resource" id="Resource_q7tjx"]
+script = ExtResource("1_430xk")
+stat = 7
+targetsSelf = false
+change = -1
+chance = 0.2
+metadata/_custom_type_script = "uid://2fme8eqsovvo"
+
+[resource]
+script = ExtResource("2_5huhx")
+name = "Sand Strike"
+type = 13
+moveType = 1
+power = 65
+abilities = Array[ExtResource("1_430xk")]([SubResource("Resource_q7tjx")])
+metadata/_custom_type_script = "uid://c3odxqj7xy866"

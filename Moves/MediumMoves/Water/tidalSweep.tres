@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="MoveDatas" load_steps=3 format=3 uid="uid://80nebtryr6wu"]
+
+[ext_resource type="Script" uid="uid://2fme8eqsovvo" path="res://Resources/AbilityData.gd" id="1_yndvw"]
+[ext_resource type="Script" uid="uid://c3odxqj7xy866" path="res://Resources/MoveData.gd" id="2_268tw"]
+
+[resource]
+script = ExtResource("2_268tw")
+name = "Tidal Sweep"
+type = 2
+power = 85
+metadata/_custom_type_script = "uid://c3odxqj7xy866"

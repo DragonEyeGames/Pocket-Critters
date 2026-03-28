@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="MoveDatas" load_steps=3 format=3 uid="uid://sygie25huomq"]
+
+[ext_resource type="Script" uid="uid://2fme8eqsovvo" path="res://Resources/AbilityData.gd" id="1_4qgxw"]
+[ext_resource type="Script" uid="uid://c3odxqj7xy866" path="res://Resources/MoveData.gd" id="2_4ox18"]
+
+[resource]
+script = ExtResource("2_4ox18")
+name = "Wave Crash"
+type = 2
+moveType = 1
+power = 85
+accuracy = 0.9
+metadata/_custom_type_script = "uid://c3odxqj7xy866"

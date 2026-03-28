@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="MoveDatas" load_steps=4 format=3 uid="uid://78nu043tsi3y"]
+
+[ext_resource type="Script" uid="uid://2fme8eqsovvo" path="res://Resources/AbilityData.gd" id="1_k4jlw"]
+[ext_resource type="Script" uid="uid://c3odxqj7xy866" path="res://Resources/MoveData.gd" id="2_4q4vy"]
+
+[sub_resource type="Resource" id="Resource_k4jlw"]
+script = ExtResource("1_k4jlw")
+stat = 1
+change = 1
+chance = 0.3
+metadata/_custom_type_script = "uid://2fme8eqsovvo"
+
+[resource]
+script = ExtResource("2_4q4vy")
+name = "Verdant Slash"
+type = 1
+moveType = 1
+power = 75
+abilities = Array[ExtResource("1_k4jlw")]([SubResource("Resource_k4jlw")])
+metadata/_custom_type_script = "uid://c3odxqj7xy866"

@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="MoveDatas" load_steps=4 format=3 uid="uid://rxjbtt5e7l4i"]
+
+[ext_resource type="Script" uid="uid://2fme8eqsovvo" path="res://Resources/AbilityData.gd" id="1_dbcb7"]
+[ext_resource type="Script" uid="uid://c3odxqj7xy866" path="res://Resources/MoveData.gd" id="2_b8so2"]
+
+[sub_resource type="Resource" id="Resource_dbcb7"]
+script = ExtResource("1_dbcb7")
+stat = 3
+targetsSelf = false
+change = -1
+chance = 0.2
+metadata/_custom_type_script = "uid://2fme8eqsovvo"
+
+[resource]
+script = ExtResource("2_b8so2")
+name = "Razor Vine"
+type = 1
+moveType = 1
+power = 75
+accuracy = 0.95
+abilities = Array[ExtResource("1_dbcb7")]([SubResource("Resource_dbcb7")])
+metadata/_custom_type_script = "uid://c3odxqj7xy866"

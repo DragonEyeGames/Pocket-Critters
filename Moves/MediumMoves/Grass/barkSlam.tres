@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="MoveDatas" load_steps=4 format=3 uid="uid://ck23yf3ovla25"]
+
+[ext_resource type="Script" uid="uid://2fme8eqsovvo" path="res://Resources/AbilityData.gd" id="1_3b8tv"]
+[ext_resource type="Script" uid="uid://c3odxqj7xy866" path="res://Resources/MoveData.gd" id="2_ogtu2"]
+
+[sub_resource type="Resource" id="Resource_3b8tv"]
+script = ExtResource("1_3b8tv")
+stat = 3
+targetsSelf = false
+change = -1
+chance = 0.15
+metadata/_custom_type_script = "uid://2fme8eqsovvo"
+
+[resource]
+script = ExtResource("2_ogtu2")
+name = "Bark Slam"
+type = 1
+moveType = 1
+power = 90
+accuracy = 0.95
+abilities = Array[ExtResource("1_3b8tv")]([SubResource("Resource_3b8tv")])
+metadata/_custom_type_script = "uid://c3odxqj7xy866"

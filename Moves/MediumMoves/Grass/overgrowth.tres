@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="MoveDatas" load_steps=3 format=3 uid="uid://da4kacwarvdmg"]
+
+[ext_resource type="Script" uid="uid://2fme8eqsovvo" path="res://Resources/AbilityData.gd" id="1_36e3d"]
+[ext_resource type="Script" uid="uid://c3odxqj7xy866" path="res://Resources/MoveData.gd" id="2_3yf28"]
+
+[resource]
+script = ExtResource("2_3yf28")
+name = "Overgrowth"
+type = 1
+moveType = 1
+power = 90
+accuracy = 0.9
+metadata/_custom_type_script = "uid://c3odxqj7xy866"

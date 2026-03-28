@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="MoveDatas" load_steps=4 format=3 uid="uid://cuvs4stan3k0a"]
+
+[ext_resource type="Script" uid="uid://2fme8eqsovvo" path="res://Resources/AbilityData.gd" id="1_plsh2"]
+[ext_resource type="Script" uid="uid://c3odxqj7xy866" path="res://Resources/MoveData.gd" id="2_p2pjw"]
+
+[sub_resource type="Resource" id="Resource_plsh2"]
+script = ExtResource("1_plsh2")
+stat = 2
+change = 1
+chance = 0.15
+metadata/_custom_type_script = "uid://2fme8eqsovvo"
+
+[resource]
+script = ExtResource("2_p2pjw")
+name = "Carapace Slam"
+type = 6
+moveType = 1
+power = 85
+accuracy = 0.95
+abilities = Array[ExtResource("1_plsh2")]([SubResource("Resource_plsh2")])
+metadata/_custom_type_script = "uid://c3odxqj7xy866"
