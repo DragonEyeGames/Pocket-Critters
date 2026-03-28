@@ -14,3 +14,11 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
 	global_position=round(target.global_position)
+
+
+func _on_player_detector_area_entered(_area: Area2D) -> void:
+	limit_left=-1015
+
+
+func _on_player_detector_area_exited(_area: Area2D) -> void:
+	limit_left=-655

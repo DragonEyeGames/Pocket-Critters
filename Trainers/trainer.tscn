@@ -8,7 +8,7 @@
 radius = 4.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_344ge"]
-radius = 67.00746
+radius = 40.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_344ge"]
 atlas = ExtResource("1_2jmqy")
@@ -436,6 +436,7 @@ radius = 12.0415945
 [node name="Trainer" type="Node2D" node_paths=PackedStringArray("dialogue") groups=["Y-Sort"]]
 script = ExtResource("1_j355o")
 dialogue = NodePath("Dialogue")
+radius = 65
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
@@ -453,6 +454,7 @@ disabled = true
 
 [node name="Dialogue" type="CanvasLayer" parent="."]
 layer = 0
+visible = false
 script = ExtResource("3_ryukr")
 
 [node name="ColorRect" type="ColorRect" parent="Dialogue"]

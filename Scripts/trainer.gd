@@ -11,6 +11,8 @@ var speechPage=0
 
 @export var player: Node2D
 
+@export var radius:=70
+
 var walkingAway=false
 
 var battleTeam: Array[PokemonData] = []
@@ -20,6 +22,10 @@ var playerEntered=false
 var afterSpeaking=false
 
 func _ready():
+	$Area2D/CollisionShape2D.shape.radius=radius
+	if(trainerData==null):
+		call_deferred("queue_free")
+		return
 	ID=0
 	if ID == 0:
 		ID = str(get_path()).hash()
