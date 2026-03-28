@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="MoveDatas" load_steps=3 format=3 uid="uid://c60yp4lvd3fba"]
+
+[ext_resource type="Script" uid="uid://2fme8eqsovvo" path="res://Resources/AbilityData.gd" id="1_l1aun"]
+[ext_resource type="Script" uid="uid://c3odxqj7xy866" path="res://Resources/MoveData.gd" id="2_s8ety"]
+
+[resource]
+script = ExtResource("2_s8ety")
+name = "Shadow Claw"
+type = 9
+moveType = 1
+power = 70
+soundPath = "res://BattleSounds/Crunch.mp3"
+metadata/_custom_type_script = "uid://c3odxqj7xy866"

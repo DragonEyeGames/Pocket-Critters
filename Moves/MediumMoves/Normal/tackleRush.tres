@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="MoveDatas" load_steps=3 format=3 uid="uid://cj0sms20byfxh"]
+
+[ext_resource type="Script" uid="uid://2fme8eqsovvo" path="res://Resources/AbilityData.gd" id="1_ru4qe"]
+[ext_resource type="Script" uid="uid://c3odxqj7xy866" path="res://Resources/MoveData.gd" id="2_j63q1"]
+
+[resource]
+script = ExtResource("2_j63q1")
+name = "Tackle Rush"
+type = 4
+moveType = 1
+power = 70
+metadata/_custom_type_script = "uid://c3odxqj7xy866"
