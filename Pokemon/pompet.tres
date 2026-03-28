@@ -110,4 +110,5 @@ potentialMoves = Array[ExtResource("1_ljenr")]([SubResource("Resource_5aumt"), S
 catchRate = 0.6
 cryPath = "res://PokemonCries/swirlix.wav"
 evolution = SubResource("Resource_avro0")
+prevolution = 19
 metadata/_custom_type_script = "uid://c7t80kmu0l21k"

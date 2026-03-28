@@ -103,4 +103,5 @@ potentialMoves = Array[ExtResource("1_iii08")]([SubResource("Resource_0yjwp"), S
 catchRate = 0.45
 cryPath = "res://PokemonCries/bouffalant.wav"
 evolution = SubResource("Resource_3wfhv")
+prevolution = 11
 metadata/_custom_type_script = "uid://c7t80kmu0l21k"

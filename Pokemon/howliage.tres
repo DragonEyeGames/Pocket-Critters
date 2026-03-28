@@ -1,18 +1,8 @@
-[gd_resource type="Resource" script_class="SpeciesData" load_steps=26 format=3 uid="uid://dm3niahia0k3y"]
+[gd_resource type="Resource" script_class="SpeciesData" load_steps=6 format=3 uid="uid://dm3niahia0k3y"]
 
 [ext_resource type="Script" uid="uid://kmcanhhb04o0" path="res://Resources/MoveResource.gd" id="1_3a4rp"]
 [ext_resource type="Resource" uid="uid://doppuo8xvc1pl" path="res://Pokemon/botanine.tres" id="1_xw0d6"]
 [ext_resource type="Script" uid="uid://bdro5jjhj86t" path="res://Resources/EvolutionData.gd" id="2_ds1ex"]
-[ext_resource type="Resource" uid="uid://cfuas1q540ijn" path="res://Moves/Dark/bite.tres" id="2_kctx8"]
-[ext_resource type="Resource" uid="uid://dxdatetbl8tj" path="res://Moves/Dark/crunch.tres" id="3_xw0d6"]
-[ext_resource type="Resource" uid="uid://0adu54ws8kpt" path="res://Moves/Dark/gnaw.tres" id="4_ds1ex"]
-[ext_resource type="Resource" uid="uid://cepnl6u878py5" path="res://Moves/Grass/absorb.tres" id="5_5ho3p"]
-[ext_resource type="Resource" uid="uid://5go1ihkf80au" path="res://Moves/Grass/branch.tres" id="6_r6bnm"]
-[ext_resource type="Resource" uid="uid://b82sm6juqfhay" path="res://Moves/Grass/gigaDrain.tres" id="7_w8hqy"]
-[ext_resource type="Resource" uid="uid://brvhs3akjs2ul" path="res://Moves/Grass/bramble.tres" id="8_exen8"]
-[ext_resource type="Resource" uid="uid://cjwtbcu7vkxjk" path="res://Moves/Normal/tackle.tres" id="9_q2sik"]
-[ext_resource type="Resource" uid="uid://bd1h37ujt4yux" path="res://Moves/Normal/headbutt.tres" id="10_gbnay"]
-[ext_resource type="Resource" uid="uid://c3w2860616tbu" path="res://Moves/Normal/growl.tres" id="11_dqr4a"]
 [ext_resource type="Script" uid="uid://1vun3nkcoo5i" path="res://Resources/SpeciesData.gd" id="12_oc5mi"]
 
 [sub_resource type="Resource" id="Resource_5ho3p"]
@@ -20,66 +10,6 @@ script = ExtResource("2_ds1ex")
 into = ExtResource("1_xw0d6")
 level = 32
 metadata/_custom_type_script = "uid://bdro5jjhj86t"
-
-[sub_resource type="Resource" id="Resource_letcp"]
-script = ExtResource("1_3a4rp")
-move = ExtResource("2_kctx8")
-level = 4
-metadata/_custom_type_script = "uid://kmcanhhb04o0"
-
-[sub_resource type="Resource" id="Resource_xws2l"]
-script = ExtResource("1_3a4rp")
-move = ExtResource("3_xw0d6")
-level = 9
-metadata/_custom_type_script = "uid://kmcanhhb04o0"
-
-[sub_resource type="Resource" id="Resource_y187y"]
-script = ExtResource("1_3a4rp")
-move = ExtResource("4_ds1ex")
-level = 3
-metadata/_custom_type_script = "uid://kmcanhhb04o0"
-
-[sub_resource type="Resource" id="Resource_ywh05"]
-script = ExtResource("1_3a4rp")
-move = ExtResource("5_5ho3p")
-level = 1
-metadata/_custom_type_script = "uid://kmcanhhb04o0"
-
-[sub_resource type="Resource" id="Resource_suq7j"]
-script = ExtResource("1_3a4rp")
-move = ExtResource("6_r6bnm")
-level = 1
-metadata/_custom_type_script = "uid://kmcanhhb04o0"
-
-[sub_resource type="Resource" id="Resource_dnfov"]
-script = ExtResource("1_3a4rp")
-move = ExtResource("7_w8hqy")
-level = 8
-metadata/_custom_type_script = "uid://kmcanhhb04o0"
-
-[sub_resource type="Resource" id="Resource_h5iak"]
-script = ExtResource("1_3a4rp")
-move = ExtResource("8_exen8")
-level = 6
-metadata/_custom_type_script = "uid://kmcanhhb04o0"
-
-[sub_resource type="Resource" id="Resource_ag6th"]
-script = ExtResource("1_3a4rp")
-move = ExtResource("9_q2sik")
-level = 1
-metadata/_custom_type_script = "uid://kmcanhhb04o0"
-
-[sub_resource type="Resource" id="Resource_5i03j"]
-script = ExtResource("1_3a4rp")
-move = ExtResource("10_gbnay")
-level = 7
-metadata/_custom_type_script = "uid://kmcanhhb04o0"
-
-[sub_resource type="Resource" id="Resource_t0h1g"]
-script = ExtResource("1_3a4rp")
-move = ExtResource("11_dqr4a")
-level = 1
-metadata/_custom_type_script = "uid://kmcanhhb04o0"
 
 [resource]
 script = ExtResource("12_oc5mi")
@@ -92,7 +22,6 @@ defense = 65
 specialAttack = 55
 specialDefense = 65
 speed = 90
-potentialMoves = Array[ExtResource("1_3a4rp")]([SubResource("Resource_letcp"), SubResource("Resource_xws2l"), SubResource("Resource_y187y"), SubResource("Resource_ywh05"), SubResource("Resource_suq7j"), SubResource("Resource_dnfov"), SubResource("Resource_h5iak"), SubResource("Resource_ag6th"), SubResource("Resource_5i03j"), SubResource("Resource_t0h1g")])
 catchRate = 0.3
 cryPath = "res://PokemonCries/rockruff.wav"
 evolution = SubResource("Resource_5ho3p")

@@ -64,4 +64,5 @@ specialDefense = 45
 speed = 55
 potentialMoves = Array[ExtResource("1_vcdqr")]([SubResource("Resource_ytd7x"), SubResource("Resource_pqd6s"), SubResource("Resource_vsrtg"), SubResource("Resource_bny8t"), SubResource("Resource_synsc"), SubResource("Resource_s6ce1"), SubResource("Resource_aakoc")])
 catchRate = 0.55
+prevolution = 24
 metadata/_custom_type_script = "uid://c7t80kmu0l21k"

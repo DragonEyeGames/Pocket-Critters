@@ -17,3 +17,4 @@ class_name SpeciesData
 @export var cryPath: String
 
 @export var evolution: EvolutionData
+@export var prevolution: GameManager.pokemon

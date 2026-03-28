@@ -1,70 +1,7 @@
-[gd_resource type="Resource" script_class="SpeciesData" load_steps=21 format=3 uid="uid://dnxk7h6tbkenq"]
+[gd_resource type="Resource" script_class="SpeciesData" load_steps=3 format=3 uid="uid://dnxk7h6tbkenq"]
 
 [ext_resource type="Script" uid="uid://kmcanhhb04o0" path="res://Resources/MoveResource.gd" id="1_5xq3a"]
-[ext_resource type="Resource" uid="uid://cao3lrn2sxdaa" path="res://Moves/Normal/focus.tres" id="2_6kl3g"]
-[ext_resource type="Resource" uid="uid://cbp1qoovefw0w" path="res://Moves/Normal/leer.tres" id="3_f8v4w"]
-[ext_resource type="Resource" uid="uid://cjwtbcu7vkxjk" path="res://Moves/Normal/tackle.tres" id="4_o3fxj"]
-[ext_resource type="Resource" uid="uid://dt7an0nxj7dpr" path="res://Moves/Normal/shove.tres" id="5_5h7y7"]
-[ext_resource type="Resource" uid="uid://ckleq3oq8wnp8" path="res://Moves/Water/aquaFlick.tres" id="6_tdka7"]
-[ext_resource type="Resource" uid="uid://ckl03roxinmlt" path="res://Moves/Water/soak.tres" id="7_kjsok"]
-[ext_resource type="Resource" uid="uid://d2q3b7wa4vkgn" path="res://Moves/Water/tideCrash.tres" id="8_endte"]
-[ext_resource type="Resource" uid="uid://btxshbrw5u77r" path="res://Moves/Water/wavePush.tres" id="9_qw7oe"]
-[ext_resource type="Resource" uid="uid://cd54c061rkodq" path="res://Moves/Water/drizzleCall.tres" id="10_e538u"]
 [ext_resource type="Script" uid="uid://1vun3nkcoo5i" path="res://Resources/SpeciesData.gd" id="11_yjv7g"]
-
-[sub_resource type="Resource" id="Resource_nwgll"]
-script = ExtResource("1_5xq3a")
-move = ExtResource("2_6kl3g")
-level = 5
-metadata/_custom_type_script = "uid://kmcanhhb04o0"
-
-[sub_resource type="Resource" id="Resource_2y322"]
-script = ExtResource("1_5xq3a")
-move = ExtResource("3_f8v4w")
-level = 1
-metadata/_custom_type_script = "uid://kmcanhhb04o0"
-
-[sub_resource type="Resource" id="Resource_074tu"]
-script = ExtResource("1_5xq3a")
-move = ExtResource("4_o3fxj")
-level = 1
-metadata/_custom_type_script = "uid://kmcanhhb04o0"
-
-[sub_resource type="Resource" id="Resource_kb88e"]
-script = ExtResource("1_5xq3a")
-move = ExtResource("5_5h7y7")
-level = 5
-metadata/_custom_type_script = "uid://kmcanhhb04o0"
-
-[sub_resource type="Resource" id="Resource_lqs8g"]
-script = ExtResource("1_5xq3a")
-move = ExtResource("6_tdka7")
-level = 6
-metadata/_custom_type_script = "uid://kmcanhhb04o0"
-
-[sub_resource type="Resource" id="Resource_44h0g"]
-script = ExtResource("1_5xq3a")
-move = ExtResource("7_kjsok")
-level = 7
-metadata/_custom_type_script = "uid://kmcanhhb04o0"
-
-[sub_resource type="Resource" id="Resource_2a867"]
-script = ExtResource("1_5xq3a")
-move = ExtResource("8_endte")
-level = 12
-metadata/_custom_type_script = "uid://kmcanhhb04o0"
-
-[sub_resource type="Resource" id="Resource_uq3r8"]
-script = ExtResource("1_5xq3a")
-move = ExtResource("9_qw7oe")
-level = 10
-metadata/_custom_type_script = "uid://kmcanhhb04o0"
-
-[sub_resource type="Resource" id="Resource_gfnd4"]
-script = ExtResource("1_5xq3a")
-move = ExtResource("10_e538u")
-level = 3
-metadata/_custom_type_script = "uid://kmcanhhb04o0"
 
 [resource]
 script = ExtResource("11_yjv7g")
@@ -77,6 +14,6 @@ defense = 70
 specialAttack = 95
 specialDefense = 75
 speed = 115
-potentialMoves = Array[ExtResource("1_5xq3a")]([SubResource("Resource_nwgll"), SubResource("Resource_2y322"), SubResource("Resource_074tu"), SubResource("Resource_kb88e"), SubResource("Resource_lqs8g"), SubResource("Resource_44h0g"), SubResource("Resource_2a867"), SubResource("Resource_uq3r8"), SubResource("Resource_gfnd4")])
 catchRate = 0.2
+prevolution = 22
 metadata/_custom_type_script = "uid://c7t80kmu0l21k"

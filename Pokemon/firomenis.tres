@@ -1,91 +1,7 @@
-[gd_resource type="Resource" script_class="SpeciesData" load_steps=27 format=3 uid="uid://bknrdxa4f7ljd"]
+[gd_resource type="Resource" script_class="SpeciesData" load_steps=3 format=3 uid="uid://bknrdxa4f7ljd"]
 
 [ext_resource type="Script" uid="uid://kmcanhhb04o0" path="res://Resources/MoveResource.gd" id="1_tkusa"]
-[ext_resource type="Resource" uid="uid://c4btm4xgx3fmv" path="res://Moves/Bug/bugBite.tres" id="2_ohxel"]
-[ext_resource type="Resource" uid="uid://egtxpc610uld" path="res://Moves/Bug/nibble.tres" id="3_fjght"]
-[ext_resource type="Resource" uid="uid://bhcuqnwgqnn3i" path="res://Moves/Bug/stringShot.tres" id="4_vaav2"]
-[ext_resource type="Resource" uid="uid://ymo5t14wyvl1" path="res://Moves/Bug/larvaLunge.tres" id="5_n7hmw"]
-[ext_resource type="Resource" uid="uid://dxmq5lmjkulio" path="res://Moves/Bug/creepCrawl.tres" id="6_ig1kr"]
-[ext_resource type="Resource" uid="uid://cbp1qoovefw0w" path="res://Moves/Normal/leer.tres" id="7_bgmx1"]
-[ext_resource type="Resource" uid="uid://cjwtbcu7vkxjk" path="res://Moves/Normal/tackle.tres" id="8_816b3"]
-[ext_resource type="Resource" uid="uid://bd1h37ujt4yux" path="res://Moves/Normal/headbutt.tres" id="9_uwkkx"]
-[ext_resource type="Resource" uid="uid://0swwqh1y5jcf" path="res://Moves/Normal/quickAttack.tres" id="10_6evdv"]
-[ext_resource type="Resource" uid="uid://clxxnxbimbhvg" path="res://Moves/Dragon/wyrmRush.tres" id="11_irsry"]
-[ext_resource type="Resource" uid="uid://biimupcttiomf" path="res://Moves/Dragon/dragonFocus.tres" id="12_dcsgg"]
-[ext_resource type="Resource" uid="uid://c8cuk8cgdl73a" path="res://Moves/Dragon/draconicRoar.tres" id="13_yiwfd"]
 [ext_resource type="Script" uid="uid://1vun3nkcoo5i" path="res://Resources/SpeciesData.gd" id="14_t1k3h"]
-
-[sub_resource type="Resource" id="Resource_jhc5f"]
-script = ExtResource("1_tkusa")
-move = ExtResource("2_ohxel")
-level = 1
-metadata/_custom_type_script = "uid://kmcanhhb04o0"
-
-[sub_resource type="Resource" id="Resource_6q12k"]
-script = ExtResource("1_tkusa")
-move = ExtResource("3_fjght")
-level = 1
-metadata/_custom_type_script = "uid://kmcanhhb04o0"
-
-[sub_resource type="Resource" id="Resource_i0mh3"]
-script = ExtResource("1_tkusa")
-move = ExtResource("4_vaav2")
-level = 1
-metadata/_custom_type_script = "uid://kmcanhhb04o0"
-
-[sub_resource type="Resource" id="Resource_e27h2"]
-script = ExtResource("1_tkusa")
-move = ExtResource("5_n7hmw")
-level = 4
-metadata/_custom_type_script = "uid://kmcanhhb04o0"
-
-[sub_resource type="Resource" id="Resource_4mw77"]
-script = ExtResource("1_tkusa")
-move = ExtResource("6_ig1kr")
-level = 5
-metadata/_custom_type_script = "uid://kmcanhhb04o0"
-
-[sub_resource type="Resource" id="Resource_mtog6"]
-script = ExtResource("1_tkusa")
-move = ExtResource("7_bgmx1")
-level = 1
-metadata/_custom_type_script = "uid://kmcanhhb04o0"
-
-[sub_resource type="Resource" id="Resource_d1wb5"]
-script = ExtResource("1_tkusa")
-move = ExtResource("8_816b3")
-level = 1
-metadata/_custom_type_script = "uid://kmcanhhb04o0"
-
-[sub_resource type="Resource" id="Resource_b1geo"]
-script = ExtResource("1_tkusa")
-move = ExtResource("9_uwkkx")
-level = 8
-metadata/_custom_type_script = "uid://kmcanhhb04o0"
-
-[sub_resource type="Resource" id="Resource_bl487"]
-script = ExtResource("1_tkusa")
-move = ExtResource("10_6evdv")
-level = 4
-metadata/_custom_type_script = "uid://kmcanhhb04o0"
-
-[sub_resource type="Resource" id="Resource_t0lwv"]
-script = ExtResource("1_tkusa")
-move = ExtResource("11_irsry")
-level = 5
-metadata/_custom_type_script = "uid://kmcanhhb04o0"
-
-[sub_resource type="Resource" id="Resource_8gubq"]
-script = ExtResource("1_tkusa")
-move = ExtResource("12_dcsgg")
-level = 7
-metadata/_custom_type_script = "uid://kmcanhhb04o0"
-
-[sub_resource type="Resource" id="Resource_fe7kq"]
-script = ExtResource("1_tkusa")
-move = ExtResource("13_yiwfd")
-level = 9
-metadata/_custom_type_script = "uid://kmcanhhb04o0"
 
 [resource]
 script = ExtResource("14_t1k3h")
@@ -98,7 +14,7 @@ defense = 80
 specialAttack = 120
 specialDefense = 80
 speed = 100
-potentialMoves = Array[ExtResource("1_tkusa")]([SubResource("Resource_jhc5f"), SubResource("Resource_6q12k"), SubResource("Resource_i0mh3"), SubResource("Resource_e27h2"), SubResource("Resource_4mw77"), SubResource("Resource_mtog6"), SubResource("Resource_d1wb5"), SubResource("Resource_b1geo"), SubResource("Resource_bl487"), SubResource("Resource_t0lwv"), SubResource("Resource_8gubq"), SubResource("Resource_fe7kq")])
 catchRate = 0.25
 cryPath = "res://PokemonCries/wimpod.wav"
+prevolution = 17
 metadata/_custom_type_script = "uid://c7t80kmu0l21k"

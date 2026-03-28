@@ -110,4 +110,5 @@ potentialMoves = Array[ExtResource("1_ibtjy")]([SubResource("Resource_jhc5f"), S
 catchRate = 0.25
 cryPath = "res://PokemonCries/wimpod.wav"
 evolution = SubResource("Resource_e2jjr")
+prevolution = 17
 metadata/_custom_type_script = "uid://c7t80kmu0l21k"

@@ -15,4 +15,5 @@ specialAttack = 60
 specialDefense = 55
 speed = 30
 catchRate = 0.45
+prevolution = 30
 metadata/_custom_type_script = "uid://c7t80kmu0l21k"

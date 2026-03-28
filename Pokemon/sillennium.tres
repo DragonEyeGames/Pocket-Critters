@@ -80,4 +80,5 @@ specialDefense = 90
 speed = 50
 potentialMoves = Array[ExtResource("1_23klb")]([SubResource("Resource_23klb"), SubResource("Resource_gisvn"), SubResource("Resource_6msw7"), SubResource("Resource_moh75"), SubResource("Resource_81kgm"), SubResource("Resource_53b8x"), SubResource("Resource_oq32o"), SubResource("Resource_mdy4v"), SubResource("Resource_adsei")])
 catchRate = 0.3
+prevolution = 46
 metadata/_custom_type_script = "uid://c7t80kmu0l21k"

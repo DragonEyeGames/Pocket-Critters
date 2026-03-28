@@ -82,4 +82,5 @@ potentialMoves = Array[ExtResource("1_wkyvk")]([SubResource("Resource_isabj"), S
 catchRate = 0.6
 cryPath = "res://PokemonCries/goomy.wav"
 evolution = SubResource("Resource_d7l7c")
+prevolution = 8
 metadata/_custom_type_script = "uid://c7t80kmu0l21k"

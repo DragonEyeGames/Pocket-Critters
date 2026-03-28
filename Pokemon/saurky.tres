@@ -88,4 +88,5 @@ speed = 60
 potentialMoves = Array[ExtResource("1_38vsd")]([SubResource("Resource_nwgll"), SubResource("Resource_2y322"), SubResource("Resource_074tu"), SubResource("Resource_kb88e"), SubResource("Resource_lqs8g"), SubResource("Resource_44h0g"), SubResource("Resource_2a867"), SubResource("Resource_uq3r8"), SubResource("Resource_gfnd4")])
 catchRate = 0.55
 evolution = SubResource("Resource_0g5j0")
+prevolution = 21
 metadata/_custom_type_script = "uid://c7t80kmu0l21k"

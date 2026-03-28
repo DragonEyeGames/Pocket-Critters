@@ -82,4 +82,5 @@ potentialMoves = Array[ExtResource("1_rnmic")]([SubResource("Resource_obhjb"), S
 catchRate = 0.45
 cryPath = "res://PokemonCries/fletchling.mp3"
 evolution = SubResource("Resource_43sv0")
+prevolution = 3
 metadata/_custom_type_script = "uid://c7t80kmu0l21k"

@@ -111,4 +111,5 @@ potentialMoves = Array[ExtResource("1_t552i")]([SubResource("Resource_jrds2"), S
 catchRate = 0.5
 cryPath = "res://PokemonCries/mudbray.wav"
 evolution = SubResource("Resource_p0hea")
+prevolution = 14
 metadata/_custom_type_script = "uid://c7t80kmu0l21k"

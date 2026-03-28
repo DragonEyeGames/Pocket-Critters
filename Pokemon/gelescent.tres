@@ -1,63 +1,7 @@
-[gd_resource type="Resource" script_class="SpeciesData" load_steps=19 format=3 uid="uid://c6rfeqwoevho2"]
+[gd_resource type="Resource" script_class="SpeciesData" load_steps=3 format=3 uid="uid://c6rfeqwoevho2"]
 
 [ext_resource type="Script" uid="uid://kmcanhhb04o0" path="res://Resources/MoveResource.gd" id="1_31xmj"]
-[ext_resource type="Resource" uid="uid://0adu54ws8kpt" path="res://Moves/Dark/gnaw.tres" id="2_wv7ik"]
-[ext_resource type="Resource" uid="uid://c4btm4xgx3fmv" path="res://Moves/Bug/bugBite.tres" id="3_n0q03"]
-[ext_resource type="Resource" uid="uid://egtxpc610uld" path="res://Moves/Bug/nibble.tres" id="4_47mdo"]
-[ext_resource type="Resource" uid="uid://bhcuqnwgqnn3i" path="res://Moves/Bug/stringShot.tres" id="5_8pe8d"]
-[ext_resource type="Resource" uid="uid://ymo5t14wyvl1" path="res://Moves/Bug/larvaLunge.tres" id="6_tryfk"]
-[ext_resource type="Resource" uid="uid://dxmq5lmjkulio" path="res://Moves/Bug/creepCrawl.tres" id="7_dihhg"]
-[ext_resource type="Resource" uid="uid://0swwqh1y5jcf" path="res://Moves/Normal/quickAttack.tres" id="8_uc2w3"]
-[ext_resource type="Resource" uid="uid://cjwtbcu7vkxjk" path="res://Moves/Normal/tackle.tres" id="9_xx2w5"]
 [ext_resource type="Script" uid="uid://1vun3nkcoo5i" path="res://Resources/SpeciesData.gd" id="10_lkqb4"]
-
-[sub_resource type="Resource" id="Resource_isabj"]
-script = ExtResource("1_31xmj")
-move = ExtResource("2_wv7ik")
-level = 2
-metadata/_custom_type_script = "uid://kmcanhhb04o0"
-
-[sub_resource type="Resource" id="Resource_8dqty"]
-script = ExtResource("1_31xmj")
-move = ExtResource("3_n0q03")
-level = 1
-metadata/_custom_type_script = "uid://kmcanhhb04o0"
-
-[sub_resource type="Resource" id="Resource_cqt66"]
-script = ExtResource("1_31xmj")
-move = ExtResource("4_47mdo")
-level = 1
-metadata/_custom_type_script = "uid://kmcanhhb04o0"
-
-[sub_resource type="Resource" id="Resource_m8r8u"]
-script = ExtResource("1_31xmj")
-move = ExtResource("5_8pe8d")
-level = 1
-metadata/_custom_type_script = "uid://kmcanhhb04o0"
-
-[sub_resource type="Resource" id="Resource_oqjap"]
-script = ExtResource("1_31xmj")
-move = ExtResource("6_tryfk")
-level = 5
-metadata/_custom_type_script = "uid://kmcanhhb04o0"
-
-[sub_resource type="Resource" id="Resource_gp4da"]
-script = ExtResource("1_31xmj")
-move = ExtResource("7_dihhg")
-level = 7
-metadata/_custom_type_script = "uid://kmcanhhb04o0"
-
-[sub_resource type="Resource" id="Resource_kqhvv"]
-script = ExtResource("1_31xmj")
-move = ExtResource("8_uc2w3")
-level = 3
-metadata/_custom_type_script = "uid://kmcanhhb04o0"
-
-[sub_resource type="Resource" id="Resource_vr67p"]
-script = ExtResource("1_31xmj")
-move = ExtResource("9_xx2w5")
-level = 4
-metadata/_custom_type_script = "uid://kmcanhhb04o0"
 
 [resource]
 script = ExtResource("10_lkqb4")
@@ -70,7 +14,7 @@ defense = 115
 specialAttack = 95
 specialDefense = 100
 speed = 40
-potentialMoves = Array[ExtResource("1_31xmj")]([SubResource("Resource_isabj"), SubResource("Resource_8dqty"), SubResource("Resource_cqt66"), SubResource("Resource_m8r8u"), SubResource("Resource_oqjap"), SubResource("Resource_gp4da"), SubResource("Resource_kqhvv"), SubResource("Resource_vr67p")])
 catchRate = 0.25
 cryPath = "res://PokemonCries/goomy.wav"
+prevolution = 9
 metadata/_custom_type_script = "uid://c7t80kmu0l21k"
