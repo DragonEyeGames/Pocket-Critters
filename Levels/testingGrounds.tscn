@@ -70,17 +70,16 @@ size = Vector2(135, 119)
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_lcfnf")
-pokemonEncounters = Array[int]([0])
-levelMin = 15
-levelMax = 15
+pokemonEncounters = Array[int]([1])
+levelMin = 31
+levelMax = 31
 
 [node name="Player" parent="." groups=["Y-Sort"] instance=ExtResource("2_ua4p5")]
 position = Vector2(-498, -818)
 
-[node name="Y-Sort" type="Node2D" parent="." node_paths=PackedStringArray("player")]
+[node name="Y-Sort" type="Node2D" parent="."]
 y_sort_enabled = true
 script = ExtResource("3_njj1p")
-player = NodePath("")
 
 [node name="Walls" type="TileMapLayer" parent="Y-Sort"]
 y_sort_enabled = true
@@ -134,40 +133,33 @@ tile_set = ExtResource("10_pe4qp")
 script = ExtResource("11_h64tb")
 grass = ExtResource("12_i6adl")
 
-[node name="Blaze" parent="." node_paths=PackedStringArray("player") instance=ExtResource("13_y6vaw")]
+[node name="Blaze" parent="." instance=ExtResource("13_y6vaw")]
 position = Vector2(-526, -1150)
 trainerData = ExtResource("14_j5fr2")
-player = NodePath("")
 
-[node name="Youngster" parent="." node_paths=PackedStringArray("player") instance=ExtResource("13_y6vaw")]
+[node name="Youngster" parent="." instance=ExtResource("13_y6vaw")]
 position = Vector2(236, -376)
 trainerData = ExtResource("15_xsbow")
-player = NodePath("")
 
-[node name="Rookie" parent="." node_paths=PackedStringArray("player") instance=ExtResource("13_y6vaw")]
+[node name="Rookie" parent="." instance=ExtResource("13_y6vaw")]
 position = Vector2(-305, -654)
 trainerData = ExtResource("16_4k1vc")
-player = NodePath("")
 
-[node name="Trainee" parent="." node_paths=PackedStringArray("player") instance=ExtResource("13_y6vaw")]
+[node name="Trainee" parent="." instance=ExtResource("13_y6vaw")]
 position = Vector2(-281, -382)
 trainerData = ExtResource("17_esb01")
-player = NodePath("")
 
-[node name="Scout" parent="." node_paths=PackedStringArray("player") instance=ExtResource("13_y6vaw")]
+[node name="Scout" parent="." instance=ExtResource("13_y6vaw")]
 position = Vector2(-663, -667)
 trainerData = ExtResource("18_g63ko")
-player = NodePath("")
 
-[node name="Collector" parent="." node_paths=PackedStringArray("player") instance=ExtResource("13_y6vaw")]
+[node name="Collector" parent="." instance=ExtResource("13_y6vaw")]
 position = Vector2(-391, -812)
 trainerData = ExtResource("19_gsgkp")
-player = NodePath("")
 
-[node name="BugCatcher" parent="." node_paths=PackedStringArray("player") instance=ExtResource("13_y6vaw")]
+[node name="BugCatcher" parent="." instance=ExtResource("13_y6vaw")]
 position = Vector2(33, -595)
 trainerData = ExtResource("20_3icr0")
-player = NodePath("")
 
 [node name="Exit" type="Area2D" parent="."]
 position = Vector2(-557, -1381)

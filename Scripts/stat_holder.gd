@@ -28,38 +28,47 @@ func initialize(refreshed):
 
 func xp(old, new, newPokemon):
 	$"XP-Bar".visible = true
-	
-	var current_xp = old
-	var current_level = GameManager.get_level_from_xp(current_xp)
 
-	while current_xp < new:
-		current_xp += 1
-		newPokemon.xp+=1
-		
-		
+	var duration = 3.0
+	var elapsed = 0.0
+
+	var start_xp = old
+	var end_xp = new
+
+	var current_level = GameManager.get_level_from_xp(start_xp)
+
+	while elapsed < duration:
+		await get_tree().process_frame
+		var delta = get_process_delta_time()
+		elapsed += delta
+
+		var t = elapsed / duration
+		var current_xp = lerp(start_xp, end_xp, t)
+
+		newPokemon.xp = int(current_xp)
+
 		var level_start = GameManager.get_xp_for_level(current_level)
 		var level_end = GameManager.get_xp_for_level(current_level + 1)
-		
+
 		$"XP-Bar".max_value = level_end - level_start
 		$"XP-Bar".value = current_xp - level_start
-		
+
 		$"XP-Bar/XP".text = str(int($"XP-Bar".value)) + "/" + str(int($"XP-Bar".max_value))
-		
-		# Check for level up
+
 		var new_level_check = GameManager.get_level_from_xp(current_xp)
 		if new_level_check > current_level:
 			current_level = new_level_check
-			newPokemon.level+=1
+			newPokemon.level += 1
+
 			$LevelUp.play()
 			$"..".loadLevel(newPokemon)
 			$"../Player".initialize()
-			$"../BattleOptions/Display".text=newPokemon.name + " leveled up to level " + str(newPokemon.level) + "!"
+
+			$"../BattleOptions/Display".text = newPokemon.name + " leveled up to level " + str(newPokemon.level) + "!"
 			await get_tree().create_timer(2).timeout
-			$"../BattleOptions/Display".text=""
-			# Reset bar visually (next loop will refill correctly)
-			await get_tree().create_timer(0.2).timeout
-		
-		await get_tree().create_timer(0.01).timeout
-	
-	await get_tree().create_timer(1).timeout
+			$"../BattleOptions/Display".text = ""
+
+	# Ensure final values are exact
+	newPokemon.xp = end_xp
+	await get_tree().create_timer(.2).timeout
 	$"XP-Bar".visible = false

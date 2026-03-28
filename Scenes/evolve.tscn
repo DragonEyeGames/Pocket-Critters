@@ -1,10 +1,16 @@
-[gd_scene load_steps=9 format=3 uid="uid://cw6s8v5p3vlha"]
+[gd_scene load_steps=10 format=3 uid="uid://cw6s8v5p3vlha"]
 
 [ext_resource type="Script" uid="uid://uc16k0lmv6pw" path="res://Scripts/evolve.gd" id="1_6k2bf"]
 [ext_resource type="Shader" uid="uid://bomfvo6o4mvg6" path="res://Shaders/flash.gdshader" id="2_6k2bf"]
 [ext_resource type="PackedScene" uid="uid://3ijnqbla51yb" path="res://Scenes/pokemonDisplay.tscn" id="2_c4p35"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_5oiha"]
+resource_local_to_scene = true
+shader = ExtResource("2_6k2bf")
+shader_parameter/flash_color = Color(1, 1, 1, 1)
+shader_parameter/flash_value = 1.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_6k2bf"]
 resource_local_to_scene = true
 shader = ExtResource("2_6k2bf")
 shader_parameter/flash_color = Color(1, 1, 1, 1)
@@ -128,12 +134,15 @@ point_count = 3
 script = ExtResource("1_6k2bf")
 
 [node name="NewPokemon" parent="." instance=ExtResource("2_c4p35")]
+visible = false
 material = SubResource("ShaderMaterial_5oiha")
 position = Vector2(474, 296)
+scale = Vector2(3, 3)
 
 [node name="CurrentPokemon" parent="." instance=ExtResource("2_c4p35")]
-material = SubResource("ShaderMaterial_5oiha")
+material = SubResource("ShaderMaterial_6k2bf")
 position = Vector2(474, 296)
+scale = Vector2(3, 3)
 
 [node name="Evolve" type="AnimationPlayer" parent="."]
 libraries = {

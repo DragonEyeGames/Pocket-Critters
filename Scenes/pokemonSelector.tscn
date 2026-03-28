@@ -17,3 +17,4 @@ back = true
 
 [node name="Pokemon" type="Sprite2D" parent="."]
 z_index = 2
+use_parent_material = true

@@ -10,12 +10,9 @@ shader_parameter/flash_color = Color(1, 1, 1, 1)
 shader_parameter/flash_value = 1.0
 
 [node name="NewPokemon" type="Node2D"]
-visible = false
 material = SubResource("ShaderMaterial_5oiha")
 scale = Vector2(5.39, 5.39)
 script = ExtResource("2_s74u3")
 
 [node name="Pokemon" type="Sprite2D" parent="."]
-z_index = 2
-position = Vector2(-87.940636, -54.916515)
-scale = Vector2(1e-05, 1e-05)
+use_parent_material = true
