@@ -1,11 +1,11 @@
 [gd_resource type="Resource" script_class="MoveDatas" load_steps=3 format=3 uid="uid://cfn1x8bt84qye"]
 
-[ext_resource type="Script" uid="uid://2fme8eqsovvo" path="res://Resources/AbilityData.gd" id="1_jdqb4"]
-[ext_resource type="Script" uid="uid://c3odxqj7xy866" path="res://Resources/MoveData.gd" id="2_r6abo"]
+[ext_resource type="Script" uid="uid://2fme8eqsovvo" path="res://Resources/AbilityData.gd" id="1_4xo5g"]
+[ext_resource type="Script" uid="uid://c3odxqj7xy866" path="res://Resources/MoveData.gd" id="2_ndunh"]
 
 [resource]
-script = ExtResource("2_r6abo")
-name = "Gust"
+script = ExtResource("2_ndunh")
+name = "Air Cut"
 type = 3
 moveType = 1
 power = 40

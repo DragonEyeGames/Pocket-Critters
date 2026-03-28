@@ -1,14 +1,14 @@
 [gd_resource type="Resource" script_class="SpeciesData" load_steps=17 format=3 uid="uid://duj3cn6hifmek"]
 
 [ext_resource type="Script" uid="uid://kmcanhhb04o0" path="res://Resources/MoveResource.gd" id="1_vcdqr"]
-[ext_resource type="Resource" uid="uid://c3w2860616tbu" path="res://Moves/Normal/growl.tres" id="2_soyew"]
-[ext_resource type="Resource" uid="uid://0swwqh1y5jcf" path="res://Moves/Normal/quickAttack.tres" id="3_6it71"]
-[ext_resource type="Resource" uid="uid://cjwtbcu7vkxjk" path="res://Moves/Normal/tackle.tres" id="4_7g42r"]
-[ext_resource type="Resource" uid="uid://bxfnc6dqke6t6" path="res://Moves/Water/splash.tres" id="5_gj4gt"]
+[ext_resource type="Resource" uid="uid://c3w2860616tbu" path="res://Moves/WeakMoves/Normal/growl.tres" id="2_soyew"]
+[ext_resource type="Resource" uid="uid://0swwqh1y5jcf" path="res://Moves/WeakMoves/Normal/quickAttack.tres" id="3_6it71"]
+[ext_resource type="Resource" uid="uid://cjwtbcu7vkxjk" path="res://Moves/WeakMoves/Normal/tackle.tres" id="4_7g42r"]
+[ext_resource type="Resource" uid="uid://bxfnc6dqke6t6" path="res://Moves/WeakMoves/Water/splash.tres" id="5_gj4gt"]
 [ext_resource type="Script" uid="uid://1vun3nkcoo5i" path="res://Resources/SpeciesData.gd" id="6_7g42r"]
-[ext_resource type="Resource" uid="uid://b7q6nc865v0d1" path="res://Moves/Water/bubbleGuard.tres" id="6_sqpta"]
-[ext_resource type="Resource" uid="uid://dgmtrx7nld483" path="res://Moves/Water/undertow.tres" id="7_50vy7"]
-[ext_resource type="Resource" uid="uid://btxshbrw5u77r" path="res://Moves/Water/wavePush.tres" id="8_8qswr"]
+[ext_resource type="Resource" uid="uid://b7q6nc865v0d1" path="res://Moves/WeakMoves/Water/bubbleGuard.tres" id="6_sqpta"]
+[ext_resource type="Resource" uid="uid://dgmtrx7nld483" path="res://Moves/MediumMoves/Water/undertow.tres" id="7_50vy7"]
+[ext_resource type="Resource" uid="uid://btxshbrw5u77r" path="res://Moves/WeakMoves/Water/wavePush.tres" id="8_8qswr"]
 
 [sub_resource type="Resource" id="Resource_ytd7x"]
 script = ExtResource("1_vcdqr")

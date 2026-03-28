@@ -250,17 +250,17 @@ func newPokemon(species, level = 6):
 	var backupMoves = p.base.potentialMoves.duplicate()
 
 	var current = p.base.prevolution
-
-	while current != null:
-		var species_data = load("res://Pokemon/" + pokemonName(current).to_lower() + ".tres")
-		
-		if species_data != null:
-			backupMoves.append_array(species_data.potentialMoves.duplicate())
-			current = species_data.prevolution
-			if(species_data.prevolution==species_data.species):
+	if(current!=p.species):
+		while current != null:
+			var species_data = load("res://Pokemon/" + pokemonName(current).to_lower() + ".tres")
+			
+			if species_data != null:
+				backupMoves.append_array(species_data.potentialMoves.duplicate())
+				current = species_data.prevolution
+				if(species_data.prevolution==species_data.species):
+					break
+			else:
 				break
-		else:
-			break
 	while len(backupMoves)>=1 and len(p.moves) < 4:
 		var move = backupMoves.pick_random()
 		if(move.level<=p.level):
@@ -384,7 +384,8 @@ func loadGame():
 		return false
 	
 	var data = load("user://save.tres") as GameData
-	
+	print("SAve found")
+	print(data)
 	playerTeam = data.team.team.duplicate()
 	playerPosition = data.playerPos
 	respawnSpot = data.safePos

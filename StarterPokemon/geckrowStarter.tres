@@ -1,10 +1,10 @@
 [gd_resource type="Resource" script_class="TeamData" load_steps=7 format=3 uid="uid://y6ctefv44wda"]
 
 [ext_resource type="Script" uid="uid://c3odxqj7xy866" path="res://Resources/MoveData.gd" id="1_ebihs"]
-[ext_resource type="Resource" uid="uid://cepnl6u878py5" path="res://Moves/Grass/absorb.tres" id="2_q5fma"]
-[ext_resource type="Resource" uid="uid://brvhs3akjs2ul" path="res://Moves/Grass/bramble.tres" id="3_2f3ht"]
-[ext_resource type="Resource" uid="uid://d4e4hfx0m8ar4" path="res://Moves/Ground/stomp.tres" id="4_xe7ks"]
-[ext_resource type="Resource" uid="uid://cjwtbcu7vkxjk" path="res://Moves/Normal/tackle.tres" id="5_764cy"]
+[ext_resource type="Resource" uid="uid://cepnl6u878py5" path="res://Moves/WeakMoves/Grass/absorb.tres" id="2_q5fma"]
+[ext_resource type="Resource" uid="uid://brvhs3akjs2ul" path="res://Moves/WeakMoves/Grass/bramble.tres" id="3_2f3ht"]
+[ext_resource type="Resource" uid="uid://d4e4hfx0m8ar4" path="res://Moves/WeakMoves/Ground/stomp.tres" id="4_xe7ks"]
+[ext_resource type="Resource" uid="uid://cjwtbcu7vkxjk" path="res://Moves/WeakMoves/Normal/tackle.tres" id="5_764cy"]
 [ext_resource type="Script" uid="uid://dxn4lkbl53l63" path="res://Resources/TeamData.gd" id="6_mlird"]
 
 [resource]
