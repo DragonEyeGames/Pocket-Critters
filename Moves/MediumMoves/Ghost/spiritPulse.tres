@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="MoveDatas" load_steps=4 format=3 uid="uid://d3t5vfw2nduvn"]
+
+[ext_resource type="Script" uid="uid://2fme8eqsovvo" path="res://Resources/AbilityData.gd" id="1_n1uri"]
+[ext_resource type="Script" uid="uid://c3odxqj7xy866" path="res://Resources/MoveData.gd" id="2_737qs"]
+
+[sub_resource type="Resource" id="Resource_n1uri"]
+script = ExtResource("1_n1uri")
+stat = 5
+targetsSelf = false
+change = -1
+chance = 0.25
+metadata/_custom_type_script = "uid://2fme8eqsovvo"
+
+[resource]
+script = ExtResource("2_737qs")
+name = "Spirit Pulse"
+type = 7
+power = 75
+abilities = Array[ExtResource("1_n1uri")]([SubResource("Resource_n1uri")])
+metadata/_custom_type_script = "uid://c3odxqj7xy866"

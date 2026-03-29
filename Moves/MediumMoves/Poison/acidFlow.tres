@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="MoveDatas" load_steps=4 format=3 uid="uid://bta61l4vdscbu"]
+
+[ext_resource type="Script" uid="uid://2fme8eqsovvo" path="res://Resources/AbilityData.gd" id="1_rtl1g"]
+[ext_resource type="Script" uid="uid://c3odxqj7xy866" path="res://Resources/MoveData.gd" id="2_wglyt"]
+
+[sub_resource type="Resource" id="Resource_rtl1g"]
+script = ExtResource("1_rtl1g")
+stat = 3
+targetsSelf = false
+change = -1
+chance = 0.3
+metadata/_custom_type_script = "uid://2fme8eqsovvo"
+
+[resource]
+script = ExtResource("2_wglyt")
+name = "Acid Flow"
+type = 15
+power = 70
+abilities = Array[ExtResource("1_rtl1g")]([SubResource("Resource_rtl1g")])
+metadata/_custom_type_script = "uid://c3odxqj7xy866"

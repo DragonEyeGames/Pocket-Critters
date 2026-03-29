@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="MoveDatas" load_steps=4 format=3 uid="uid://c0t6v7jsp8xwb"]
+
+[ext_resource type="Script" uid="uid://2fme8eqsovvo" path="res://Resources/AbilityData.gd" id="1_evqil"]
+[ext_resource type="Script" uid="uid://c3odxqj7xy866" path="res://Resources/MoveData.gd" id="2_mqy3x"]
+
+[sub_resource type="Resource" id="Resource_evqil"]
+script = ExtResource("1_evqil")
+stat = 5
+targetsSelf = false
+change = -1
+chance = 0.25
+metadata/_custom_type_script = "uid://2fme8eqsovvo"
+
+[resource]
+script = ExtResource("2_mqy3x")
+name = "Core Blast"
+type = 16
+power = 85
+accuracy = 0.95
+abilities = Array[ExtResource("1_evqil")]([SubResource("Resource_evqil")])
+metadata/_custom_type_script = "uid://c3odxqj7xy866"

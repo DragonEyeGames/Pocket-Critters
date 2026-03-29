@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="MoveDatas" load_steps=4 format=3 uid="uid://iaxdesq34hy6"]
+
+[ext_resource type="Script" uid="uid://2fme8eqsovvo" path="res://Resources/AbilityData.gd" id="1_1tudo"]
+[ext_resource type="Script" uid="uid://c3odxqj7xy866" path="res://Resources/MoveData.gd" id="2_dh8uh"]
+
+[sub_resource type="Resource" id="Resource_1tudo"]
+script = ExtResource("1_1tudo")
+stat = 1
+change = 1
+chance = 0.2
+metadata/_custom_type_script = "uid://2fme8eqsovvo"
+
+[resource]
+script = ExtResource("2_dh8uh")
+name = "Alloy Strike"
+type = 17
+moveType = 1
+power = 80
+abilities = Array[ExtResource("1_1tudo")]([SubResource("Resource_1tudo")])
+metadata/_custom_type_script = "uid://c3odxqj7xy866"

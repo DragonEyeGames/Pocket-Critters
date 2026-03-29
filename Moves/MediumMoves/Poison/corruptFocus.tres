@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="MoveDatas" load_steps=5 format=3 uid="uid://xpw788bcb81b"]
+
+[ext_resource type="Script" uid="uid://2fme8eqsovvo" path="res://Resources/AbilityData.gd" id="1_wchwb"]
+[ext_resource type="Script" uid="uid://c3odxqj7xy866" path="res://Resources/MoveData.gd" id="2_mulfx"]
+
+[sub_resource type="Resource" id="Resource_wchwb"]
+script = ExtResource("1_wchwb")
+stat = 4
+change = 1
+chance = 1.0
+metadata/_custom_type_script = "uid://2fme8eqsovvo"
+
+[sub_resource type="Resource" id="Resource_mulfx"]
+script = ExtResource("1_wchwb")
+stat = 5
+targetsSelf = false
+change = -1
+chance = 1.0
+metadata/_custom_type_script = "uid://2fme8eqsovvo"
+
+[resource]
+script = ExtResource("2_mulfx")
+name = "Corrupt Focus"
+type = 15
+moveType = 2
+power = 0
+abilities = Array[ExtResource("1_wchwb")]([SubResource("Resource_wchwb"), SubResource("Resource_mulfx")])
+metadata/_custom_type_script = "uid://c3odxqj7xy866"

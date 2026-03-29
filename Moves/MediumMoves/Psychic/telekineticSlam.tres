@@ -3,18 +3,20 @@
 [ext_resource type="Script" uid="uid://2fme8eqsovvo" path="res://Resources/AbilityData.gd" id="1_w0qo6"]
 [ext_resource type="Script" uid="uid://c3odxqj7xy866" path="res://Resources/MoveData.gd" id="2_e2s0p"]
 
-[sub_resource type="Resource" id="Resource_r8u4w"]
+[sub_resource type="Resource" id="Resource_w0qo6"]
 script = ExtResource("1_w0qo6")
-stat = 5
+stat = 3
 targetsSelf = false
-change = -1
+change = 1
 chance = 0.25
 metadata/_custom_type_script = "uid://2fme8eqsovvo"
 
 [resource]
 script = ExtResource("2_e2s0p")
-name = "Psy Beam"
+name = "Telekinetic Slam"
 type = 8
-power = 70
-abilities = Array[ExtResource("1_w0qo6")]([SubResource("Resource_r8u4w")])
+moveType = 1
+power = 85
+accuracy = 0.95
+abilities = Array[ExtResource("1_w0qo6")]([SubResource("Resource_w0qo6")])
 metadata/_custom_type_script = "uid://c3odxqj7xy866"

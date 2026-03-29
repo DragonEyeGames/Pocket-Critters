@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="MoveDatas" load_steps=5 format=3 uid="uid://bjgndctxn4gby"]
+
+[ext_resource type="Script" uid="uid://2fme8eqsovvo" path="res://Resources/AbilityData.gd" id="1_60guj"]
+[ext_resource type="Script" uid="uid://c3odxqj7xy866" path="res://Resources/MoveData.gd" id="2_u3mov"]
+
+[sub_resource type="Resource" id="Resource_60guj"]
+script = ExtResource("1_60guj")
+stat = 3
+targetsSelf = false
+change = -1
+chance = 0.3
+metadata/_custom_type_script = "uid://2fme8eqsovvo"
+
+[sub_resource type="Resource" id="Resource_u3mov"]
+script = ExtResource("1_60guj")
+stat = 7
+targetsSelf = false
+change = -1
+chance = 0.3
+metadata/_custom_type_script = "uid://2fme8eqsovvo"
+
+[resource]
+script = ExtResource("2_u3mov")
+name = "Gravel Shot"
+type = 16
+power = 65
+abilities = Array[ExtResource("1_60guj")]([SubResource("Resource_60guj"), SubResource("Resource_u3mov")])
+metadata/_custom_type_script = "uid://c3odxqj7xy866"

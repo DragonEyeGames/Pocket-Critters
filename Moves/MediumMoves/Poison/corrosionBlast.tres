@@ -1,0 +1,29 @@
+[gd_resource type="Resource" script_class="MoveDatas" load_steps=5 format=3 uid="uid://bav78ie75xtcm"]
+
+[ext_resource type="Script" uid="uid://2fme8eqsovvo" path="res://Resources/AbilityData.gd" id="1_wnieq"]
+[ext_resource type="Script" uid="uid://c3odxqj7xy866" path="res://Resources/MoveData.gd" id="2_r5lna"]
+
+[sub_resource type="Resource" id="Resource_wnieq"]
+script = ExtResource("1_wnieq")
+stat = 2
+targetsSelf = false
+change = -1
+chance = 0.25
+metadata/_custom_type_script = "uid://2fme8eqsovvo"
+
+[sub_resource type="Resource" id="Resource_r5lna"]
+script = ExtResource("1_wnieq")
+stat = 5
+targetsSelf = false
+change = -1
+chance = 0.25
+metadata/_custom_type_script = "uid://2fme8eqsovvo"
+
+[resource]
+script = ExtResource("2_r5lna")
+name = "Corrosion Blast"
+type = 15
+power = 85
+accuracy = 0.95
+abilities = Array[ExtResource("1_wnieq")]([SubResource("Resource_wnieq"), SubResource("Resource_r5lna")])
+metadata/_custom_type_script = "uid://c3odxqj7xy866"

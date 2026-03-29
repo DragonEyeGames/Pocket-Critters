@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="MoveDatas" load_steps=4 format=3 uid="uid://bkl1pnqmrgjro"]
+
+[ext_resource type="Script" uid="uid://2fme8eqsovvo" path="res://Resources/AbilityData.gd" id="1_vong0"]
+[ext_resource type="Script" uid="uid://c3odxqj7xy866" path="res://Resources/MoveData.gd" id="2_sxdj5"]
+
+[sub_resource type="Resource" id="Resource_i755r"]
+script = ExtResource("1_vong0")
+stat = 6
+change = 1
+chance = 1.0
+metadata/_custom_type_script = "uid://2fme8eqsovvo"
+
+[resource]
+script = ExtResource("2_sxdj5")
+name = "Shard Strike"
+type = 14
+moveType = 1
+power = 60
+abilities = Array[ExtResource("1_vong0")]([SubResource("Resource_i755r")])
+metadata/_custom_type_script = "uid://c3odxqj7xy866"

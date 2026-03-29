@@ -3,19 +3,17 @@
 [ext_resource type="Script" uid="uid://2fme8eqsovvo" path="res://Resources/AbilityData.gd" id="1_mhe5b"]
 [ext_resource type="Script" uid="uid://c3odxqj7xy866" path="res://Resources/MoveData.gd" id="2_0ocjy"]
 
-[sub_resource type="Resource" id="Resource_lwue2"]
+[sub_resource type="Resource" id="Resource_mhe5b"]
 script = ExtResource("1_mhe5b")
-stat = 5
-targetsSelf = false
-change = -1
+stat = 4
+change = 1
 chance = 0.2
 metadata/_custom_type_script = "uid://2fme8eqsovvo"
 
 [resource]
 script = ExtResource("2_0ocjy")
-name = "Psychic Wave"
+name = "Focus Drain"
 type = 8
-power = 90
-accuracy = 0.9
-abilities = Array[ExtResource("1_mhe5b")]([SubResource("Resource_lwue2")])
+power = 75
+abilities = Array[ExtResource("1_mhe5b")]([SubResource("Resource_mhe5b")])
 metadata/_custom_type_script = "uid://c3odxqj7xy866"
