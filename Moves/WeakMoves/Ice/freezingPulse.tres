@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="MoveDatas" load_steps=4 format=3 uid="uid://code7fm5jkvta"]
+
+[ext_resource type="Script" uid="uid://2fme8eqsovvo" path="res://Resources/AbilityData.gd" id="1_j76xm"]
+[ext_resource type="Script" uid="uid://c3odxqj7xy866" path="res://Resources/MoveData.gd" id="2_w8fyn"]
+
+[sub_resource type="Resource" id="Resource_j76xm"]
+script = ExtResource("1_j76xm")
+stat = 5
+change = -1
+chance = 0.25
+metadata/_custom_type_script = "uid://2fme8eqsovvo"
+
+[resource]
+script = ExtResource("2_w8fyn")
+name = "Freezing Pulse"
+type = 14
+power = 35
+abilities = Array[ExtResource("1_j76xm")]([SubResource("Resource_j76xm")])
+metadata/_custom_type_script = "uid://c3odxqj7xy866"

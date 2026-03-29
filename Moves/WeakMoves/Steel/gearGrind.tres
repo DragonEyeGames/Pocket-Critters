@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="MoveDatas" load_steps=4 format=3 uid="uid://iar3nepuaag0"]
+
+[ext_resource type="Script" uid="uid://2fme8eqsovvo" path="res://Resources/AbilityData.gd" id="1_rmtny"]
+[ext_resource type="Script" uid="uid://c3odxqj7xy866" path="res://Resources/MoveData.gd" id="2_k6c10"]
+
+[sub_resource type="Resource" id="Resource_rmtny"]
+script = ExtResource("1_rmtny")
+stat = 3
+targetsSelf = false
+change = -1
+chance = 0.25
+metadata/_custom_type_script = "uid://2fme8eqsovvo"
+
+[resource]
+script = ExtResource("2_k6c10")
+name = "Gear Grind"
+type = 17
+moveType = 1
+power = 35
+abilities = Array[ExtResource("1_rmtny")]([SubResource("Resource_rmtny")])
+metadata/_custom_type_script = "uid://c3odxqj7xy866"

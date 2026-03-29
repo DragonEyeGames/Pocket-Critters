@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="MoveDatas" load_steps=4 format=3 uid="uid://be80bh7ruibyr"]
+
+[ext_resource type="Script" uid="uid://2fme8eqsovvo" path="res://Resources/AbilityData.gd" id="1_vdmjd"]
+[ext_resource type="Script" uid="uid://c3odxqj7xy866" path="res://Resources/MoveData.gd" id="2_r76wo"]
+
+[sub_resource type="Resource" id="Resource_vdmjd"]
+script = ExtResource("1_vdmjd")
+stat = 4
+change = 1
+chance = 0.2
+metadata/_custom_type_script = "uid://2fme8eqsovvo"
+
+[resource]
+script = ExtResource("2_r76wo")
+name = "Charge Shot"
+type = 5
+power = 40
+accuracy = 0.95
+abilities = Array[ExtResource("1_vdmjd")]([SubResource("Resource_vdmjd")])
+metadata/_custom_type_script = "uid://c3odxqj7xy866"

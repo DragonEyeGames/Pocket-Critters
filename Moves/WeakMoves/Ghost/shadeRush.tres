@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="MoveDatas" load_steps=5 format=3 uid="uid://b3ppmttoda4ku"]
+
+[ext_resource type="Script" uid="uid://2fme8eqsovvo" path="res://Resources/AbilityData.gd" id="1_0vxpu"]
+[ext_resource type="Script" uid="uid://c3odxqj7xy866" path="res://Resources/MoveData.gd" id="2_ixebd"]
+
+[sub_resource type="Resource" id="Resource_0vxpu"]
+script = ExtResource("1_0vxpu")
+stat = 6
+change = 1
+chance = 1.0
+metadata/_custom_type_script = "uid://2fme8eqsovvo"
+
+[sub_resource type="Resource" id="Resource_ixebd"]
+script = ExtResource("1_0vxpu")
+stat = 3
+change = 1
+chance = 0.25
+metadata/_custom_type_script = "uid://2fme8eqsovvo"
+
+[resource]
+script = ExtResource("2_ixebd")
+name = "Shade Rush"
+type = 7
+moveType = 1
+power = 35
+accuracy = 0.95
+abilities = Array[ExtResource("1_0vxpu")]([SubResource("Resource_0vxpu"), SubResource("Resource_ixebd")])
+metadata/_custom_type_script = "uid://c3odxqj7xy866"
