@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="MoveDatas" load_steps=4 format=3 uid="uid://b5fljb56ia32x"]
+
+[ext_resource type="Script" uid="uid://2fme8eqsovvo" path="res://Resources/AbilityData.gd" id="1_bit7e"]
+[ext_resource type="Script" uid="uid://c3odxqj7xy866" path="res://Resources/MoveData.gd" id="2_b8qvd"]
+
+[sub_resource type="Resource" id="Resource_bj6gd"]
+script = ExtResource("1_bit7e")
+stat = 1
+change = 1
+chance = 0.2
+metadata/_custom_type_script = "uid://2fme8eqsovvo"
+
+[resource]
+script = ExtResource("2_b8qvd")
+name = "Inferno Drive"
+moveType = 1
+power = 120
+accuracy = 0.9
+abilities = Array[ExtResource("1_bit7e")]([SubResource("Resource_bj6gd")])
+metadata/_custom_type_script = "uid://c3odxqj7xy866"

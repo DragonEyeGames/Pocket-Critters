@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="MoveDatas" load_steps=4 format=3 uid="uid://djdqohfvhywij"]
+
+[ext_resource type="Script" uid="uid://2fme8eqsovvo" path="res://Resources/AbilityData.gd" id="1_t4y7h"]
+[ext_resource type="Script" uid="uid://c3odxqj7xy866" path="res://Resources/MoveData.gd" id="2_85yil"]
+
+[sub_resource type="Resource" id="Resource_t4y7h"]
+script = ExtResource("1_t4y7h")
+stat = 4
+change = 1
+chance = 0.25
+metadata/_custom_type_script = "uid://2fme8eqsovvo"
+
+[resource]
+script = ExtResource("2_85yil")
+name = "Solar Flare"
+power = 150
+accuracy = 0.8
+abilities = Array[ExtResource("1_t4y7h")]([SubResource("Resource_t4y7h")])
+metadata/_custom_type_script = "uid://c3odxqj7xy866"

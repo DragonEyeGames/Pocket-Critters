@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="MoveDatas" load_steps=4 format=3 uid="uid://c1vfl7q2ojsvg"]
+
+[ext_resource type="Script" uid="uid://2fme8eqsovvo" path="res://Resources/AbilityData.gd" id="1_x0n1q"]
+[ext_resource type="Script" uid="uid://c3odxqj7xy866" path="res://Resources/MoveData.gd" id="2_8xoes"]
+
+[sub_resource type="Resource" id="Resource_x0n1q"]
+script = ExtResource("1_x0n1q")
+stat = 3
+change = 1
+chance = 0.2
+metadata/_custom_type_script = "uid://2fme8eqsovvo"
+
+[resource]
+script = ExtResource("2_8xoes")
+name = "Scorching Rush"
+moveType = 1
+power = 125
+accuracy = 0.9
+abilities = Array[ExtResource("1_x0n1q")]([SubResource("Resource_x0n1q")])
+metadata/_custom_type_script = "uid://c3odxqj7xy866"

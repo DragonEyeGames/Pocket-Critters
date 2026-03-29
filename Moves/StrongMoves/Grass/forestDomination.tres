@@ -1,0 +1,27 @@
+[gd_resource type="Resource" script_class="MoveDatas" load_steps=5 format=3 uid="uid://bonbvti4iynrb"]
+
+[ext_resource type="Script" uid="uid://2fme8eqsovvo" path="res://Resources/AbilityData.gd" id="1_pg5h6"]
+[ext_resource type="Script" uid="uid://c3odxqj7xy866" path="res://Resources/MoveData.gd" id="2_fgxs0"]
+
+[sub_resource type="Resource" id="Resource_pg5h6"]
+script = ExtResource("1_pg5h6")
+stat = 1
+change = 2
+chance = 1.0
+metadata/_custom_type_script = "uid://2fme8eqsovvo"
+
+[sub_resource type="Resource" id="Resource_fgxs0"]
+script = ExtResource("1_pg5h6")
+stat = 4
+change = 2
+chance = 1.0
+metadata/_custom_type_script = "uid://2fme8eqsovvo"
+
+[resource]
+script = ExtResource("2_fgxs0")
+name = "Forest Domination"
+type = 1
+moveType = 2
+power = 0
+abilities = Array[ExtResource("1_pg5h6")]([SubResource("Resource_pg5h6"), SubResource("Resource_fgxs0")])
+metadata/_custom_type_script = "uid://c3odxqj7xy866"
