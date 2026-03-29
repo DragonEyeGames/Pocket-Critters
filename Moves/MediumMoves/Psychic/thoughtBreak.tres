@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="MoveDatas" load_steps=5 format=3 uid="uid://crp6kiw0q8l66"]
+
+[ext_resource type="Script" uid="uid://2fme8eqsovvo" path="res://Resources/AbilityData.gd" id="1_wgr7p"]
+[ext_resource type="Script" uid="uid://c3odxqj7xy866" path="res://Resources/MoveData.gd" id="2_tkm3y"]
+
+[sub_resource type="Resource" id="Resource_wgr7p"]
+script = ExtResource("1_wgr7p")
+stat = 1
+targetsSelf = false
+change = -1
+chance = 0.25
+metadata/_custom_type_script = "uid://2fme8eqsovvo"
+
+[sub_resource type="Resource" id="Resource_tkm3y"]
+script = ExtResource("1_wgr7p")
+stat = 4
+targetsSelf = false
+change = -1
+chance = 0.25
+metadata/_custom_type_script = "uid://2fme8eqsovvo"
+
+[resource]
+script = ExtResource("2_tkm3y")
+name = "Thought Break"
+type = 8
+power = 80
+abilities = Array[ExtResource("1_wgr7p")]([SubResource("Resource_wgr7p"), SubResource("Resource_tkm3y")])
+metadata/_custom_type_script = "uid://c3odxqj7xy866"

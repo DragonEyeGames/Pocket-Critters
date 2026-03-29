@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="MoveDatas" load_steps=4 format=3 uid="uid://28dapu87ba1u"]
+
+[ext_resource type="Script" uid="uid://2fme8eqsovvo" path="res://Resources/AbilityData.gd" id="1_2swv3"]
+[ext_resource type="Script" uid="uid://c3odxqj7xy866" path="res://Resources/MoveData.gd" id="2_le2dq"]
+
+[sub_resource type="Resource" id="Resource_2swv3"]
+script = ExtResource("1_2swv3")
+stat = 5
+targetsSelf = false
+change = -1
+chance = 0.25
+metadata/_custom_type_script = "uid://2fme8eqsovvo"
+
+[resource]
+script = ExtResource("2_le2dq")
+name = "Force Palm"
+type = 12
+power = 75
+abilities = Array[ExtResource("1_2swv3")]([SubResource("Resource_2swv3")])
+metadata/_custom_type_script = "uid://c3odxqj7xy866"

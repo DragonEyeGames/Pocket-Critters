@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="MoveDatas" load_steps=3 format=3 uid="uid://dh0m86ricr8ny"]
+
+[ext_resource type="Script" uid="uid://2fme8eqsovvo" path="res://Resources/AbilityData.gd" id="1_cchoc"]
+[ext_resource type="Script" uid="uid://c3odxqj7xy866" path="res://Resources/MoveData.gd" id="2_20vgc"]
+
+[resource]
+script = ExtResource("2_20vgc")
+name = "Mind Pulse"
+type = 8
+power = 75
+metadata/_custom_type_script = "uid://c3odxqj7xy866"
