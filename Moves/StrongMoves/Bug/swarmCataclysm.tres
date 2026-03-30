@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="MoveDatas" load_steps=4 format=3 uid="uid://bclywofufhyl0"]
+
+[ext_resource type="Script" uid="uid://2fme8eqsovvo" path="res://Resources/AbilityData.gd" id="1_6gvck"]
+[ext_resource type="Script" uid="uid://c3odxqj7xy866" path="res://Resources/MoveData.gd" id="2_rfwp7"]
+
+[sub_resource type="Resource" id="Resource_etprc"]
+script = ExtResource("1_6gvck")
+stat = 2
+targetsSelf = false
+change = -1
+chance = 0.2
+metadata/_custom_type_script = "uid://2fme8eqsovvo"
+
+[resource]
+script = ExtResource("2_rfwp7")
+name = "Swarm Cataclysm"
+type = 6
+moveType = 1
+power = 140
+accuracy = 0.85
+abilities = Array[ExtResource("1_6gvck")]([SubResource("Resource_etprc")])
+metadata/_custom_type_script = "uid://c3odxqj7xy866"

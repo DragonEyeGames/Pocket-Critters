@@ -3,19 +3,19 @@
 [ext_resource type="Script" uid="uid://2fme8eqsovvo" path="res://Resources/AbilityData.gd" id="1_14bbj"]
 [ext_resource type="Script" uid="uid://c3odxqj7xy866" path="res://Resources/MoveData.gd" id="2_byw3f"]
 
-[sub_resource type="Resource" id="Resource_d0gdj"]
+[sub_resource type="Resource" id="Resource_14bbj"]
 script = ExtResource("1_14bbj")
-stat = 5
+stat = 3
 targetsSelf = false
 change = -1
-chance = 0.25
+chance = 0.2
 metadata/_custom_type_script = "uid://2fme8eqsovvo"
 
 [resource]
 script = ExtResource("2_byw3f")
-name = "Leviathan Beam"
+name = "Cataclysm Current"
 type = 2
-power = 150
-accuracy = 0.8
-abilities = Array[ExtResource("1_14bbj")]([SubResource("Resource_d0gdj")])
+power = 140
+accuracy = 0.85
+abilities = Array[ExtResource("1_14bbj")]([SubResource("Resource_14bbj")])
 metadata/_custom_type_script = "uid://c3odxqj7xy866"

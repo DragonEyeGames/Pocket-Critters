@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="MoveDatas" load_steps=4 format=3 uid="uid://cg84g21rimm8c"]
+
+[ext_resource type="Script" uid="uid://2fme8eqsovvo" path="res://Resources/AbilityData.gd" id="1_p5eyn"]
+[ext_resource type="Script" uid="uid://c3odxqj7xy866" path="res://Resources/MoveData.gd" id="2_h74bh"]
+
+[sub_resource type="Resource" id="Resource_p5eyn"]
+script = ExtResource("1_p5eyn")
+stat = 5
+targetsSelf = false
+change = -1
+chance = 0.25
+metadata/_custom_type_script = "uid://2fme8eqsovvo"
+
+[resource]
+script = ExtResource("2_h74bh")
+name = "Tempest Cannon"
+type = 3
+power = 125
+accuracy = 0.9
+abilities = Array[ExtResource("1_p5eyn")]([SubResource("Resource_p5eyn")])
+metadata/_custom_type_script = "uid://c3odxqj7xy866"

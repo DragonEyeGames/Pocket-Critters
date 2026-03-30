@@ -14,7 +14,7 @@ metadata/_custom_type_script = "uid://2fme8eqsovvo"
 [resource]
 script = ExtResource("2_wxvrd")
 name = "Bloom Cataclysm"
-type = 2
+type = 1
 power = 140
 accuracy = 0.85
 abilities = Array[ExtResource("1_4laf4")]([SubResource("Resource_4laf4")])

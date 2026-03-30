@@ -1,0 +1,27 @@
+[gd_resource type="Resource" script_class="MoveDatas" load_steps=5 format=3 uid="uid://di2lccmpbtpmu"]
+
+[ext_resource type="Script" uid="uid://2fme8eqsovvo" path="res://Resources/AbilityData.gd" id="1_dfcxc"]
+[ext_resource type="Script" uid="uid://c3odxqj7xy866" path="res://Resources/MoveData.gd" id="2_sj52t"]
+
+[sub_resource type="Resource" id="Resource_yjlsl"]
+script = ExtResource("1_dfcxc")
+stat = 1
+change = 2
+chance = 1.0
+metadata/_custom_type_script = "uid://2fme8eqsovvo"
+
+[sub_resource type="Resource" id="Resource_whgki"]
+script = ExtResource("1_dfcxc")
+stat = 2
+change = 2
+chance = 1.0
+metadata/_custom_type_script = "uid://2fme8eqsovvo"
+
+[resource]
+script = ExtResource("2_sj52t")
+name = "Shadow King"
+type = 9
+moveType = 2
+power = 0
+abilities = Array[ExtResource("1_dfcxc")]([SubResource("Resource_yjlsl"), SubResource("Resource_whgki")])
+metadata/_custom_type_script = "uid://c3odxqj7xy866"

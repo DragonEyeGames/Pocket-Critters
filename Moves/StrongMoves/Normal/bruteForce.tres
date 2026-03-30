@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="MoveDatas" load_steps=4 format=3 uid="uid://clquya4b4ve4d"]
+
+[ext_resource type="Script" uid="uid://2fme8eqsovvo" path="res://Resources/AbilityData.gd" id="1_mdw8n"]
+[ext_resource type="Script" uid="uid://c3odxqj7xy866" path="res://Resources/MoveData.gd" id="2_ldfmp"]
+
+[sub_resource type="Resource" id="Resource_5brsr"]
+script = ExtResource("1_mdw8n")
+stat = 1
+change = 1
+chance = 0.2
+metadata/_custom_type_script = "uid://2fme8eqsovvo"
+
+[resource]
+script = ExtResource("2_ldfmp")
+name = "Brute Force"
+type = 4
+moveType = 1
+power = 120
+abilities = Array[ExtResource("1_mdw8n")]([SubResource("Resource_5brsr")])
+metadata/_custom_type_script = "uid://c3odxqj7xy866"

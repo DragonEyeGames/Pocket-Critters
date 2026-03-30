@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="MoveDatas" load_steps=4 format=3 uid="uid://cx3hn70631s45"]
+
+[ext_resource type="Script" uid="uid://2fme8eqsovvo" path="res://Resources/AbilityData.gd" id="1_ct6nn"]
+[ext_resource type="Script" uid="uid://c3odxqj7xy866" path="res://Resources/MoveData.gd" id="2_kt6cv"]
+
+[sub_resource type="Resource" id="Resource_ct6nn"]
+script = ExtResource("1_ct6nn")
+stat = 5
+targetsSelf = false
+change = -1
+chance = 0.2
+metadata/_custom_type_script = "uid://2fme8eqsovvo"
+
+[resource]
+script = ExtResource("2_kt6cv")
+name = "Hive Eruption"
+type = 6
+power = 130
+accuracy = 0.95
+abilities = Array[ExtResource("1_ct6nn")]([SubResource("Resource_ct6nn")])
+metadata/_custom_type_script = "uid://c3odxqj7xy866"

@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="MoveDatas" load_steps=4 format=3 uid="uid://c8rpdnobwsc62"]
+
+[ext_resource type="Script" uid="uid://2fme8eqsovvo" path="res://Resources/AbilityData.gd" id="1_jam8o"]
+[ext_resource type="Script" uid="uid://c3odxqj7xy866" path="res://Resources/MoveData.gd" id="2_erxfv"]
+
+[sub_resource type="Resource" id="Resource_jam8o"]
+script = ExtResource("1_jam8o")
+stat = 3
+change = 1
+chance = 0.25
+metadata/_custom_type_script = "uid://2fme8eqsovvo"
+
+[resource]
+script = ExtResource("2_erxfv")
+name = "Jetstream Break"
+type = 3
+moveType = 1
+power = 120
+accuracy = 0.9
+abilities = Array[ExtResource("1_jam8o")]([SubResource("Resource_jam8o")])
+metadata/_custom_type_script = "uid://c3odxqj7xy866"

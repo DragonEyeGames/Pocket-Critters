@@ -1,0 +1,29 @@
+[gd_resource type="Resource" script_class="MoveDatas" load_steps=5 format=3 uid="uid://nqnlq2ph8v47"]
+
+[ext_resource type="Script" uid="uid://2fme8eqsovvo" path="res://Resources/AbilityData.gd" id="1_so1ie"]
+[ext_resource type="Script" uid="uid://c3odxqj7xy866" path="res://Resources/MoveData.gd" id="2_p6kyw"]
+
+[sub_resource type="Resource" id="Resource_so1ie"]
+script = ExtResource("1_so1ie")
+stat = 7
+targetsSelf = false
+change = -1
+chance = 1.0
+metadata/_custom_type_script = "uid://2fme8eqsovvo"
+
+[sub_resource type="Resource" id="Resource_p6kyw"]
+script = ExtResource("1_so1ie")
+stat = 4
+targetsSelf = false
+change = -1
+chance = 0.25
+metadata/_custom_type_script = "uid://2fme8eqsovvo"
+
+[resource]
+script = ExtResource("2_p6kyw")
+name = "Blackout"
+type = 9
+power = 110
+accuracy = 0.9
+abilities = Array[ExtResource("1_so1ie")]([SubResource("Resource_so1ie"), SubResource("Resource_p6kyw")])
+metadata/_custom_type_script = "uid://c3odxqj7xy866"

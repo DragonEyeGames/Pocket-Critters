@@ -14,7 +14,7 @@ metadata/_custom_type_script = "uid://2fme8eqsovvo"
 [resource]
 script = ExtResource("2_bb4dm")
 name = "Verdant Collapse"
-type = 2
+type = 1
 moveType = 1
 power = 120
 accuracy = 0.9
