@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=4 uid="uid://bfqx57x727lrv"]
+[gd_scene load_steps=25 format=4 uid="uid://bfqx57x727lrv"]
 
 [ext_resource type="Script" uid="uid://swgsdmbo5fng" path="res://Scripts/main.gd" id="1_lcfnf"]
 [ext_resource type="PackedScene" uid="uid://c5yxtkkwi03pt" path="res://Scenes/player.tscn" id="2_ua4p5"]
@@ -13,11 +13,7 @@
 [ext_resource type="Script" uid="uid://wxcoju7jq384" path="res://Scripts/grassSpawning.gd" id="11_h64tb"]
 [ext_resource type="PackedScene" uid="uid://bw2ujrj6t7blx" path="res://Scenes/grass.tscn" id="12_i6adl"]
 [ext_resource type="PackedScene" uid="uid://bmsyi0138rgpo" path="res://Trainers/trainer.tscn" id="13_y6vaw"]
-[ext_resource type="Resource" uid="uid://byrlv6tws4kjy" path="res://Trainers/blaze-1.tres" id="14_j5fr2"]
 [ext_resource type="Resource" uid="uid://7stw2esp4fm5" path="res://Trainers/youngster-1.tres" id="15_xsbow"]
-[ext_resource type="Resource" uid="uid://dp31kdgf40175" path="res://Trainers/rookie-1.tres" id="16_4k1vc"]
-[ext_resource type="Resource" uid="uid://d2e001rb1jev2" path="res://Trainers/trainee-1.tres" id="17_esb01"]
-[ext_resource type="Resource" uid="uid://ddvy8op0ryf1g" path="res://Trainers/scout-1.tres" id="18_g63ko"]
 [ext_resource type="Resource" uid="uid://b7ul6d7ek0cy2" path="res://Trainers/collector-1.tres" id="19_gsgkp"]
 [ext_resource type="Resource" uid="uid://f5qvksh8iemt" path="res://Trainers/bugCatcher-1.tres" id="20_3icr0"]
 [ext_resource type="Script" uid="uid://crrtvghb3yxwo" path="res://Scripts/exit.gd" id="21_iefic"]
@@ -133,25 +129,9 @@ tile_set = ExtResource("10_pe4qp")
 script = ExtResource("11_h64tb")
 grass = ExtResource("12_i6adl")
 
-[node name="Blaze" parent="." instance=ExtResource("13_y6vaw")]
-position = Vector2(-526, -1150)
-trainerData = ExtResource("14_j5fr2")
-
 [node name="Youngster" parent="." instance=ExtResource("13_y6vaw")]
 position = Vector2(236, -376)
 trainerData = ExtResource("15_xsbow")
-
-[node name="Rookie" parent="." instance=ExtResource("13_y6vaw")]
-position = Vector2(-305, -654)
-trainerData = ExtResource("16_4k1vc")
-
-[node name="Trainee" parent="." instance=ExtResource("13_y6vaw")]
-position = Vector2(-281, -382)
-trainerData = ExtResource("17_esb01")
-
-[node name="Scout" parent="." instance=ExtResource("13_y6vaw")]
-position = Vector2(-663, -667)
-trainerData = ExtResource("18_g63ko")
 
 [node name="Collector" parent="." instance=ExtResource("13_y6vaw")]
 position = Vector2(-391, -812)

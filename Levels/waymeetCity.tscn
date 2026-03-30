@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=4 uid="uid://hvt8a8487efr"]
+[gd_scene load_steps=28 format=4 uid="uid://hvt8a8487efr"]
 
 [ext_resource type="Script" uid="uid://swgsdmbo5fng" path="res://Scripts/main.gd" id="1_yelr5"]
 [ext_resource type="PackedScene" uid="uid://c5yxtkkwi03pt" path="res://Scenes/player.tscn" id="2_fmudw"]
@@ -8,9 +8,7 @@
 [ext_resource type="Script" uid="uid://58m7l7uvvox7" path="res://Scripts/camera.gd" id="8_t551v"]
 [ext_resource type="Shader" uid="uid://bj6hwrrewmxbo" path="res://Shaders/removeBackground.gdshader" id="11_6t2tp"]
 [ext_resource type="Texture2D" uid="uid://cfju02kgmoc4v" path="res://Assets/FireRedSprites/Game Boy Advance - Pokemon FireRed _ LeafGreen - Tilesets - Tileset.png" id="12_6t2tp"]
-[ext_resource type="Texture2D" uid="uid://c77i27y4iwujm" path="res://Assets/critterCenter.png" id="12_dvn4l"]
 [ext_resource type="Texture2D" uid="uid://cwpfb8frdw4go" path="res://Assets/FireRedSprites/improvedBuildings.png" id="13_c2nek"]
-[ext_resource type="Texture2D" uid="uid://6wkiv4wgjgy2" path="res://Assets/FireRedSprites/critterMart.png" id="14_eridb"]
 [ext_resource type="Script" uid="uid://crrtvghb3yxwo" path="res://Scripts/exit.gd" id="16_m0uwm"]
 [ext_resource type="Texture2D" uid="uid://cofed3e0ub73v" path="res://Assets/Houses/NPCS houses/Houses.png" id="17_yelr5"]
 [ext_resource type="Texture2D" uid="uid://c5iimh6qjn77t" path="res://Assets/Houses/longLog.png" id="18_fmudw"]
@@ -73,38 +71,6 @@ shader_parameter/replace_2 = Color(0.47, 0.47, 0.5, 0.47058824)
 shader_parameter/replace_3 = Color(0, 0, 0, 1)
 shader_parameter/replace_4 = Color(0, 0, 0, 1)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_dvn4l"]
-atlas = ExtResource("12_6t2tp")
-region = Rect2(23, 231, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_eridb"]
-atlas = ExtResource("12_6t2tp")
-region = Rect2(40, 231, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_m0uwm"]
-atlas = ExtResource("12_6t2tp")
-region = Rect2(57, 231, 16, 16)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_g5dor"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_dvn4l")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_eridb")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_m0uwm")
-}],
-"loop": false,
-"name": &"default",
-"speed": 5.0
-}]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_dvn4l"]
-size = Vector2(20, 17)
-
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_eridb"]
 shader = ExtResource("11_6t2tp")
 shader_parameter/original_0 = Color(1, 0, 0.91764706, 1)
@@ -123,6 +89,9 @@ size = Vector2(68, 29)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yelr5"]
 size = Vector2(20, 122)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m0uwm"]
+size = Vector2(29, 2)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ne0ai"]
 shader = ExtResource("11_6t2tp")
@@ -191,33 +160,6 @@ limit_bottom = 24
 script = ExtResource("8_t551v")
 target = NodePath("../Player")
 
-[node name="Poke Center" type="Sprite2D" parent="." groups=["Y-Sort"]]
-visible = false
-material = SubResource("ShaderMaterial_dvn4l")
-position = Vector2(0, -189)
-texture = ExtResource("12_dvn4l")
-offset = Vector2(0, -20)
-region_rect = Rect2(8, 158, 80, 70)
-
-[node name="StaticBody2D" type="StaticBody2D" parent="Poke Center"]
-visible = false
-
-[node name="CollisionShape2D" type="CollisionPolygon2D" parent="Poke Center/StaticBody2D"]
-polygon = PackedVector2Array(8, 15, 8, 14, 7, 14, 7, 13, -7, 13, -7, 14, -8, 14, -8, 15, -16, 15, -35, 15, -40, 10, -40, -34, 40, -34, 40, -7, 40, 10, 35, 15, 16, 15)
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Poke Center"]
-visible = false
-position = Vector2(0, 7)
-sprite_frames = SubResource("SpriteFrames_g5dor")
-
-[node name="PokeCenter" type="Area2D" parent="Poke Center"]
-collision_layer = 0
-collision_mask = 2
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Poke Center/PokeCenter"]
-position = Vector2(0, 6.5)
-shape = SubResource("RectangleShape2D_dvn4l")
-
 [node name="Gym" type="Sprite2D" parent="." groups=["Y-Sort"]]
 material = SubResource("ShaderMaterial_dvn4l")
 position = Vector2(165, -382)
@@ -225,28 +167,6 @@ texture = ExtResource("12_6t2tp")
 offset = Vector2(0, -24)
 region_enabled = true
 region_rect = Rect2(89, 231, 112, 80)
-
-[node name="Mart" type="Sprite2D" parent="." groups=["Y-Sort"]]
-visible = false
-material = SubResource("ShaderMaterial_dvn4l")
-position = Vector2(161, -191)
-texture = ExtResource("14_eridb")
-offset = Vector2(-9, -15)
-region_rect = Rect2(15, 251, 64, 62)
-
-[node name="StaticBody2D" type="StaticBody2D" parent="Mart"]
-visible = false
-
-[node name="CollisionShape2D" type="CollisionPolygon2D" parent="Mart/StaticBody2D"]
-polygon = PackedVector2Array(16, 15, 15, 16, 7, 16, 6, 15, 6, 14, -8, 14, -8, 15, -9, 16, -17, 16, -17, 15, -34, 15, -40, 9, -40, 2, -39, 2, -39, -19, 21, -19, 21, 2, 22, 2, 22, 9)
-
-[node name="PokeMart" type="Area2D" parent="Mart"]
-collision_layer = 0
-collision_mask = 2
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Mart/PokeMart"]
-position = Vector2(0, 6.5)
-shape = SubResource("RectangleShape2D_dvn4l")
 
 [node name="House" type="Sprite2D" parent="." groups=["Y-Sort"]]
 material = SubResource("ShaderMaterial_eridb")
@@ -272,32 +192,38 @@ offset = Vector2(16, -11)
 region_enabled = true
 region_rect = Rect2(300, 24, 80, 56)
 
-[node name="exit" type="Area2D" parent="."]
+[node name="exit" type="Area2D" parent="." node_paths=PackedStringArray("transitioner")]
 position = Vector2(0, 19)
 collision_layer = 0
 collision_mask = 2
 script = ExtResource("16_m0uwm")
 travelZone = "res://Levels/forest.tscn"
 travelPos = Vector2(-529, -1256)
+transitioner = NodePath("../Transitioner")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="exit"]
 position = Vector2(0, 19.5)
 shape = SubResource("RectangleShape2D_eridb")
 
-[node name="exit2" type="Area2D" parent="."]
+[node name="exit2" type="Area2D" parent="." node_paths=PackedStringArray("transitioner")]
 position = Vector2(428, -236)
 collision_layer = 0
 collision_mask = 2
 script = ExtResource("16_m0uwm")
 travelZone = "res://Levels/beach.tscn"
 travelPos = Vector2(-647, 773)
+transitioner = NodePath("../Transitioner")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="exit2"]
 position = Vector2(24, -4)
 shape = SubResource("RectangleShape2D_yelr5")
 
-[node name="CritterCenter" type="Node2D" parent="." groups=["Y-Sort"]]
-position = Vector2(0, -196)
+[node name="CritterCenter" type="Node2D" parent="." node_paths=PackedStringArray("transitioner") groups=["Y-Sort"]]
+position = Vector2(-12, -196)
+script = ExtResource("16_m0uwm")
+travelZone = "res://Levels/PokemonCenters/waymeetPokemonCenter.tscn"
+locked = true
+transitioner = NodePath("../Transitioner")
 
 [node name="Houses" type="Sprite2D" parent="CritterCenter"]
 position = Vector2(0, -10)
@@ -323,10 +249,31 @@ texture = ExtResource("18_fmudw")
 region_rect = Rect2(499, 344, 10, 44)
 
 [node name="Door,Windows,AndChimney" type="Sprite2D" parent="CritterCenter"]
-position = Vector2(0, 10)
+position = Vector2(13, 10)
 texture = ExtResource("18_yelr5")
 region_enabled = true
 region_rect = Rect2(65, 67, 30, 24)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="CritterCenter"]
+visible = false
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="CritterCenter/StaticBody2D"]
+polygon = PackedVector2Array(35, 20, 25, 20, 25, 18, 0, 18, 0, 20, -35, 20, -36, -25, 35, -25, 35.000015, 0.24354553)
+
+[node name="Houses6" type="Sprite2D" parent="CritterCenter"]
+use_parent_material = true
+position = Vector2(-16, 7)
+texture = ExtResource("18_yelr5")
+region_enabled = true
+region_rect = Rect2(113, 128, 14, 16)
+
+[node name="Area2D" type="Area2D" parent="CritterCenter"]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CritterCenter/Area2D"]
+position = Vector2(12.5, 20)
+shape = SubResource("RectangleShape2D_m0uwm")
 
 [node name="CritterMart" type="Node2D" parent="." groups=["Y-Sort"]]
 position = Vector2(144, -196)
@@ -357,11 +304,24 @@ texture = ExtResource("18_yelr5")
 region_enabled = true
 region_rect = Rect2(65, 67, 30, 24)
 
+[node name="Houses5" type="Sprite2D" parent="CritterMart/Houses2"]
+use_parent_material = true
+position = Vector2(0, -2)
+texture = ExtResource("18_yelr5")
+region_enabled = true
+region_rect = Rect2(48, 97, 16, 16)
+
 [node name="Houses3" type="Sprite2D" parent="CritterMart"]
 position = Vector2(0, -51)
 texture = ExtResource("17_yelr5")
 region_enabled = true
 region_rect = Rect2(96, 106, 80, 86)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="CritterMart"]
+visible = false
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="CritterMart/StaticBody2D"]
+polygon = PackedVector2Array(35, 20, 12, 20, 12, 18, -13, 18, -13, 20, -35, 20, -36, -25, 35, -25)
 
 [node name="Floor" type="TileMapLayer" parent="."]
 z_index = -2
@@ -384,9 +344,7 @@ tile_set = ExtResource("19_fmudw")
 
 [node name="Trees" parent="." instance=ExtResource("21_1705y")]
 
-[connection signal="area_entered" from="Poke Center/PokeCenter" to="." method="_on_poke_center_area_entered"]
-[connection signal="area_exited" from="Poke Center/PokeCenter" to="." method="_on_poke_center_area_exited"]
-[connection signal="area_entered" from="Mart/PokeMart" to="." method="_on_poke_mart_area_entered"]
-[connection signal="area_exited" from="Mart/PokeMart" to="." method="_on_poke_mart_area_exited"]
 [connection signal="area_entered" from="exit" to="exit" method="_on_area_entered"]
 [connection signal="area_entered" from="exit2" to="exit2" method="_on_area_entered"]
+[connection signal="area_entered" from="CritterCenter/Area2D" to="CritterCenter" method="_on_area_entered"]
+[connection signal="area_exited" from="CritterCenter/Area2D" to="CritterCenter" method="_on_area_2d_area_exited"]

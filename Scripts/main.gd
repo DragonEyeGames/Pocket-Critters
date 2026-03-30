@@ -14,6 +14,10 @@ var season=1
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	var all_nodes = get_all_nodes(get_tree().root)
+	for node in all_nodes:
+		if(node is Node2D):
+			node.global_position=round(node.global_position)
 	GameManager.safe=true
 	GameManager.encounterList=pokemonEncounters
 	GameManager.encounterMin=levelMin
@@ -69,3 +73,9 @@ func swap_season(tilemap: TileMapLayer, from_source: int, to_source: int):
 			var alt = tilemap.get_cell_alternative_tile(cell)
 			
 			tilemap.set_cell(cell, to_source, atlas, alt)
+
+func get_all_nodes(node: Node) -> Array:
+	var nodes = [node]
+	for child in node.get_children():
+		nodes += get_all_nodes(child)
+	return nodes
