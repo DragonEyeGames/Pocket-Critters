@@ -1,10 +1,12 @@
 extends Camera2D
 
 @export var target: Node2D
+@export var zoomOverride: bool
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	zoom.x=2.5
-	zoom.y=2.5
+	if(not zoomOverride):
+		zoom.x=2.5
+		zoom.y=2.5
 	GameManager.camera=self
 	position_smoothing_enabled=false
 	await get_tree().create_timer(.2).timeout
@@ -13,7 +15,8 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
-	global_position=round(target.global_position)
+	if(not target==null):
+		global_position=round(target.global_position)
 
 
 func _on_player_detector_area_entered(_area: Area2D) -> void:

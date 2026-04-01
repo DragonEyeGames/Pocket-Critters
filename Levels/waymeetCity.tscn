@@ -221,7 +221,7 @@ shape = SubResource("RectangleShape2D_yelr5")
 [node name="CritterCenter" type="Node2D" parent="." node_paths=PackedStringArray("transitioner") groups=["Y-Sort"]]
 position = Vector2(-12, -196)
 script = ExtResource("16_m0uwm")
-travelZone = "res://Levels/PokemonCenters/waymeetPokemonCenter.tscn"
+travelZone = "res://Levels/pokemonCenter.tscn"
 locked = true
 transitioner = NodePath("../Transitioner")
 

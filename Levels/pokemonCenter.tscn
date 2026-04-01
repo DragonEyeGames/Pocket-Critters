@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=4 uid="uid://bh2c8uyhr24il"]
+[gd_scene load_steps=30 format=4 uid="uid://bh2c8uyhr24il"]
 
 [ext_resource type="Script" uid="uid://swgsdmbo5fng" path="res://Scripts/main.gd" id="1_x2gkq"]
 [ext_resource type="PackedScene" uid="uid://c5yxtkkwi03pt" path="res://Scenes/player.tscn" id="2_xokqn"]
@@ -15,6 +15,8 @@
 [ext_resource type="Texture2D" uid="uid://cjcrsvuomp6k6" path="res://Assets/Interior/Sofa and armchair.png" id="14_c2o0i"]
 [ext_resource type="Texture2D" uid="uid://dcuil2enpgqeu" path="res://Assets/Interior/School.png" id="15_fw84k"]
 [ext_resource type="PackedScene" uid="uid://daxn64tg8jns3" path="res://Scenes/transitioner.tscn" id="15_xe4u0"]
+[ext_resource type="Texture2D" uid="uid://bx6vfrgwyhgj2" path="res://Assets/Interior/Part 2 copiar.png" id="16_x2gkq"]
+[ext_resource type="Script" uid="uid://dgmox1tpkdppe" path="res://Levels/computer.gd" id="17_xokqn"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_sxxgb"]
 shader = ExtResource("5_0bjm7")
@@ -75,6 +77,21 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c2o0i"]
+size = Vector2(35, 31)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x2gkq"]
+size = Vector2(13, 22)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xokqn"]
+size = Vector2(32, 10)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kj8wy"]
+size = Vector2(32, 22)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0bjm7"]
+size = Vector2(26, 24)
+
 [node name="Main" type="Node2D"]
 texture_filter = 1
 script = ExtResource("1_x2gkq")
@@ -109,15 +126,17 @@ libraries = {
 &"": SubResource("AnimationLibrary_sxxgb")
 }
 
-[node name="Camera" type="Camera2D" parent="." node_paths=PackedStringArray("target")]
-zoom = Vector2(5, 5)
+[node name="Camera" type="Camera2D" parent="."]
+position = Vector2(0, -59)
+zoom = Vector2(2.3, 2.3)
+limit_enabled = false
 limit_right = 445
 limit_bottom = 24
 script = ExtResource("6_ctoo8")
-target = NodePath("../Player")
+zoomOverride = true
 
 [node name="exit" type="Area2D" parent="." node_paths=PackedStringArray("transitioner")]
-position = Vector2(0, 19)
+position = Vector2(0, 39)
 collision_layer = 0
 collision_mask = 2
 script = ExtResource("10_ytive")
@@ -131,7 +150,7 @@ shape = SubResource("RectangleShape2D_eridb")
 
 [node name="Floor" type="TileMapLayer" parent="."]
 z_index = -3
-tile_map_data = PackedByteArray("AAD8//7/CAAJAAYAAAD8////CAAJAAYAAAD8/wAACAAJAAYAAAD8/wEACAAJAAYAAAD9//7/CAAJAAYAAAD9////CAAJAAYAAAD9/wAACAAJAAYAAAD9/wEACAAJAAYAAAD+//7/CAAJAAYAAAD+////CAAJAAYAAAD+/wAACAAJAAYAAAD+/wEACAAJAAYAAAD///7/CAAJAAYAAAD/////CAAJAAYAAAD//wAACAAJAAYAAAD//wEACAAJAAYAAAD//wIACAAJAAYAAAAAAP7/CAAJAAYAAAAAAP//CAAJAAYAAAAAAAAACAAJAAYAAAAAAAEACAAJAAYAAAAAAAIACAAJAAYAAAABAP7/CAAJAAYAAAABAP//CAAJAAYAAAABAAAACAAJAAYAAAABAAEACAAJAAYAAAACAP7/CAAJAAYAAAACAP//CAAJAAYAAAACAAAACAAJAAYAAAACAAEACAAJAAYAAAADAP7/CAAJAAYAAAADAP//CAAJAAYAAAADAAAACAAJAAYAAAADAAEACAAJAAYAAAD7//3/CAAJAAYAAAD7//7/CAAJAAYAAAD7////CAAJAAYAAAD7/wAACAAJAAYAAAD7/wEACAAJAAYAAAD8//3/CAAJAAYAAAD9//3/CAAJAAYAAAD+//3/CAAJAAYAAAD///3/CAAJAAYAAAAAAP3/CAAJAAYAAAABAP3/CAAJAAYAAAACAP3/CAAJAAYAAAADAP3/CAAJAAYAAAAEAP3/CAAJAAYAAAAEAP7/CAAJAAYAAAAEAP//CAAJAAYAAAAEAAAACAAJAAYAAAAEAAEACAAJAAYAAAD7//v/CAAJAAYAAAD7//z/CAAJAAYAAAD8//v/CAAJAAYAAAD8//z/CAAJAAYAAAD9//v/CAAJAAYAAAD9//z/CAAJAAYAAAD+//v/CAAJAAYAAAD+//z/CAAJAAYAAAD///v/CAAJAAYAAAD///z/CAAJAAYAAAAAAPv/CAAJAAYAAAAAAPz/CAAJAAYAAAABAPv/CAAJAAYAAAABAPz/CAAJAAYAAAACAPv/CAAJAAYAAAACAPz/CAAJAAYAAAADAPv/CAAJAAYAAAADAPz/CAAJAAYAAAAEAPv/CAAJAAYAAAAEAPz/CAAJAAYAAAD6//n/CAAJAAYAAAD6//r/CAAJAAYAAAD6//v/CAAJAAYAAAD6//z/CAAJAAYAAAD6//3/CAAJAAYAAAD6//7/CAAJAAYAAAD6////CAAJAAYAAAD6/wAACAAJAAYAAAD6/wEACAAJAAYAAAD7//n/CAAJAAYAAAD7//r/CAAJAAYAAAD8//n/CAAJAAYAAAD8//r/CAAJAAYAAAD9//n/CAAJAAYAAAD9//r/CAAJAAYAAAD+//n/CAAJAAYAAAD+//r/CAAJAAYAAAD///n/CAAJAAYAAAD///r/CAAJAAYAAAAAAPn/CAAJAAYAAAAAAPr/CAAJAAYAAAABAPn/CAAJAAYAAAABAPr/CAAJAAYAAAACAPn/CAAJAAYAAAACAPr/CAAJAAYAAAADAPn/CAAJAAYAAAADAPr/CAAJAAYAAAAEAPn/CAAJAAYAAAAEAPr/CAAJAAYAAAAFAPn/CAAJAAYAAAAFAPr/CAAJAAYAAAAFAPv/CAAJAAYAAAAFAPz/CAAJAAYAAAAFAP3/CAAJAAYAAAAFAP7/CAAJAAYAAAAFAP//CAAJAAYAAAAFAAAACAAJAAYAAAAFAAEACAAJAAYAAAAGAPn/CAAJAAYAAAAGAPr/CAAJAAYAAAAGAPv/CAAJAAYAAAAGAPz/CAAJAAYAAAAGAP3/CAAJAAYAAAAGAP7/CAAJAAYAAAAGAP//CAAJAAYAAAAGAAAACAAJAAYAAAAGAAEACAAJAAYAAAD5//n/CAAUAAUAAAD5//r/CAAUAAUAAAD5//v/CAAUAAUAAAD5//z/CAAUAAUAAAD5//3/CAAUAAUAAAD5//7/CAAUAAUAAAD5////CAAUAAUAAAD5/wAACAAUAAUAAAD5/wEACAAUAAUAAAAGAPj/BAAfAAcAAAAFAPj/BAAeAAkAAAAEAPj/BAAeAAkAAAADAPj/BAAeAAkAAAACAPj/BAAeAAkAAAABAPj/BAAeAAkAAAAAAPj/BAAeAAkAAAD///j/BAAeAAkAAAD+//j/BAAeAAkAAAD9//j/BAAeAAkAAAD8//j/BAAeAAkAAAD7//j/BAAeAAkAAAD6//j/BAAeAAkAAAD5//j/BAAdAAcAAAD5//f/BQAdAAYAAAD5//b/BAAdAAYAAAD6//b/BAAeAAgAAAD7//b/BAAeAAgAAAD8//b/BAAeAAYAAAD9//b/BAAeAAYAAAD+//b/BAAeAAYAAAD///b/BAAeAAYAAAAAAPb/BAAeAAYAAAABAPb/BAAeAAYAAAACAPb/BAAeAAYAAAADAPb/BAAeAAYAAAAEAPb/BAAeAAYAAAAFAPb/BAAeAAYAAAAGAPb/BAAfAAYAAAAGAPf/BQAfAAYAAAAFAPf/BQAeAAYAAAAEAPf/BQAeAAYAAAADAPf/BQAeAAYAAAACAPf/BQAeAAYAAAABAPf/BQAeAAYAAAAAAPf/BQAeAAYAAAD///f/BQAeAAYAAAD+//f/BQAeAAYAAAD9//f/BQAeAAYAAAD8//f/BQAeAAYAAAD7//f/BQAeAAYAAAD6//f/BQAeAAYAAAA=")
+tile_map_data = PackedByteArray("AAD8//7/CAAJAAYAAAD8////CAAJAAYAAAD8/wAACAAJAAYAAAD8/wEACAAJAAYAAAD9//7/CAAJAAYAAAD9////CAAJAAYAAAD9/wAACAAJAAYAAAD9/wEACAAJAAYAAAD+//7/CAAJAAYAAAD+////CAAJAAYAAAD+/wAACAAJAAYAAAD+/wEACAAJAAYAAAD///7/CAAJAAYAAAD/////CAAJAAYAAAD//wAACAAJAAYAAAD//wEACAAJAAYAAAD//wIACAAJAAYAAAAAAP7/CAAJAAYAAAAAAP//CAAJAAYAAAAAAAAACAAJAAYAAAAAAAEACAAJAAYAAAAAAAIACAAJAAYAAAABAP7/CAAJAAYAAAABAP//CAAJAAYAAAABAAAACAAJAAYAAAABAAEACAAJAAYAAAACAP7/CAAJAAYAAAACAP//CAAJAAYAAAACAAAACAAJAAYAAAACAAEACAAJAAYAAAADAP7/CAAJAAYAAAADAP//CAAJAAYAAAADAAAACAAJAAYAAAADAAEACAAJAAYAAAD7//3/CAAJAAYAAAD7//7/CAAJAAYAAAD7////CAAJAAYAAAD7/wAACAAJAAYAAAD7/wEACAAJAAYAAAD8//3/CAAJAAYAAAD9//3/CAAJAAYAAAD+//3/CAAJAAYAAAD///3/CAAJAAYAAAAAAP3/CAAJAAYAAAABAP3/CAAJAAYAAAACAP3/CAAJAAYAAAADAP3/CAAJAAYAAAAEAP3/CAAJAAYAAAAEAP7/CAAJAAYAAAAEAP//CAAJAAYAAAAEAAAACAAJAAYAAAAEAAEACAAJAAYAAAD7//v/CAAJAAYAAAD7//z/CAAJAAYAAAD8//v/CAAJAAYAAAD8//z/CAAJAAYAAAD9//v/CAAJAAYAAAD9//z/CAAJAAYAAAD+//v/CAAJAAYAAAD+//z/CAAJAAYAAAD///v/CAAJAAYAAAD///z/CAAJAAYAAAAAAPv/CAAJAAYAAAAAAPz/CAAJAAYAAAABAPv/CAAJAAYAAAABAPz/CAAJAAYAAAACAPv/CAAJAAYAAAACAPz/CAAJAAYAAAADAPv/CAAJAAYAAAADAPz/CAAJAAYAAAAEAPv/CAAJAAYAAAAEAPz/CAAJAAYAAAD6//n/CAAJAAYAAAD6//r/CAAJAAYAAAD6//v/CAAJAAYAAAD6//z/CAAJAAYAAAD6//3/CAAJAAYAAAD6//7/CAAJAAYAAAD6////CAAJAAYAAAD6/wAACAAJAAYAAAD6/wEACAAJAAYAAAD7//n/CAAJAAYAAAD7//r/CAAJAAYAAAD8//n/CAAJAAYAAAD8//r/CAAJAAYAAAD9//n/CAAJAAYAAAD9//r/CAAJAAYAAAD+//n/CAAJAAYAAAD+//r/CAAJAAYAAAD///n/CAAJAAYAAAD///r/CAAJAAYAAAAAAPn/CAAJAAYAAAAAAPr/CAAJAAYAAAABAPn/CAAJAAYAAAABAPr/CAAJAAYAAAACAPn/CAAJAAYAAAACAPr/CAAJAAYAAAADAPn/CAAJAAYAAAADAPr/CAAJAAYAAAAEAPn/CAAJAAYAAAAEAPr/CAAJAAYAAAAFAPn/CAAJAAYAAAAFAPr/CAAJAAYAAAAFAPv/CAAJAAYAAAAFAPz/CAAJAAYAAAAFAP3/CAAJAAYAAAAFAP7/CAAJAAYAAAAFAP//CAAJAAYAAAAFAAAACAAJAAYAAAAFAAEACAAJAAYAAAAGAPn/CAAJAAYAAAAGAPr/CAAJAAYAAAAGAPv/CAAJAAYAAAAGAPz/CAAJAAYAAAAGAP3/CAAJAAYAAAAGAP7/CAAJAAYAAAAGAP//CAAJAAYAAAAGAAAACAAJAAYAAAAGAAEACAAJAAYAAAD5//n/CAAVAAYAAAD5//r/CAAVAAYAAAD5//v/CAAVAAYAAAD5//z/CAAVAAYAAAD5//3/CAAVAAYAAAD5//7/CAAVAAYAAAD5////CAAVAAYAAAD5/wAACAAVAAYAAAD5/wEACAAVAAYAAAAGAPj/BAAfAAcAAAAFAPj/BAAeAAkAAAAEAPj/BAAeAAkAAAADAPj/BAAeAAkAAAACAPj/BAAeAAkAAAABAPj/BAAeAAkAAAAAAPj/BAAeAAkAAAD///j/BAAeAAkAAAD+//j/BAAeAAkAAAD9//j/BAAeAAkAAAD8//j/BAAeAAkAAAD7//j/BAAeAAkAAAD6//j/BAAeAAkAAAD5//j/BAAdAAcAAAD5//f/BQAdAAYAAAD5//b/BAAdAAYAAAD6//b/BAAeAAgAAAD7//b/BAAeAAgAAAD8//b/BAAeAAYAAAD9//b/BAAeAAYAAAD+//b/BAAeAAYAAAD///b/BAAeAAYAAAAAAPb/BAAeAAYAAAABAPb/BAAeAAYAAAACAPb/BAAeAAYAAAADAPb/BAAeAAYAAAAEAPb/BAAeAAYAAAAFAPb/BAAeAAYAAAAGAPb/BAAfAAYAAAAGAPf/BQAfAAYAAAAFAPf/BQAeAAYAAAAEAPf/BQAeAAYAAAADAPf/BQAeAAYAAAACAPf/BQAeAAYAAAABAPf/BQAeAAYAAAAAAPf/BQAeAAYAAAD///f/BQAeAAYAAAD+//f/BQAeAAYAAAD9//f/BQAeAAYAAAD8//f/BQAeAAYAAAD7//f/BQAeAAYAAAD6//f/BQAeAAYAAAA=")
 tile_set = ExtResource("14_16ioe")
 
 [node name="Rug+Details" type="TileMapLayer" parent="."]
@@ -166,7 +185,7 @@ position = Vector2(0, -108)
 sprite_frames = SubResource("SpriteFrames_kj8wy")
 script = ExtResource("11_fw84k")
 dialogue = NodePath("Dialogue")
-player = NodePath("")
+player = NodePath("../Player")
 
 [node name="Dialogue" type="CanvasLayer" parent="CritterCenterMan"]
 layer = 0
@@ -231,16 +250,86 @@ theme_override_font_sizes/normal_font_size = 27
 stream = ExtResource("13_xokqn")
 volume_db = -10.0
 
-[node name="SofaAndArmchair" type="Sprite2D" parent="."]
-position = Vector2(105, -30)
+[node name="Area2D" type="Area2D" parent="CritterCenterMan"]
+position = Vector2(1, 33)
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CritterCenterMan/Area2D"]
+position = Vector2(-0.5, -10.5)
+shape = SubResource("RectangleShape2D_c2o0i")
+
+[node name="Sofa" type="Sprite2D" parent="." groups=["Y-Sort"]]
+position = Vector2(99, -31)
 texture = ExtResource("14_c2o0i")
+offset = Vector2(2, 8)
 region_enabled = true
 region_rect = Rect2(306, 66, 14, 30)
 
-[node name="School" type="Sprite2D" parent="."]
-position = Vector2(-87, -117)
+[node name="StaticBody2D" type="StaticBody2D" parent="Sofa"]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sofa/StaticBody2D"]
+position = Vector2(1.5, 10)
+shape = SubResource("RectangleShape2D_x2gkq")
+
+[node name="Bookshelf" type="Sprite2D" parent="." groups=["Y-Sort"]]
+position = Vector2(-87, -105)
 texture = ExtResource("15_fw84k")
+offset = Vector2(0, -12)
 region_enabled = true
 region_rect = Rect2(210, 137, 28, 34)
 
+[node name="StaticBody2D" type="StaticBody2D" parent="Bookshelf"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bookshelf/StaticBody2D"]
+position = Vector2(0, -1)
+shape = SubResource("RectangleShape2D_xokqn")
+
+[node name="Computer" type="Sprite2D" parent="."]
+position = Vector2(92, -119)
+texture = ExtResource("16_x2gkq")
+region_enabled = true
+region_rect = Rect2(68, 104, 24, 24)
+script = ExtResource("17_xokqn")
+
+[node name="Screen" type="ColorRect" parent="Computer"]
+offset_left = -9.0
+offset_top = -9.0
+offset_right = 7.0
+offset_bottom = -2.0
+color = Color(0.6532658, 0.8869929, 0.9999998, 1)
+
+[node name="Desk" type="Sprite2D" parent="Computer"]
+z_index = -1
+position = Vector2(0, 11)
+texture = ExtResource("15_fw84k")
+region_enabled = true
+region_rect = Rect2(129.98409, 9.954855, 28.06343, 22.011957)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Computer"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Computer/StaticBody2D"]
+position = Vector2(0, 11)
+shape = SubResource("RectangleShape2D_kj8wy")
+
+[node name="Area2D" type="Area2D" parent="Computer"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Computer/Area2D"]
+position = Vector2(0, 11)
+shape = SubResource("RectangleShape2D_0bjm7")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+visible = false
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(-112, 32, -112, -112, -64, -112, -64, -80, 64, -80, 64, -112, 112, -112, -25, -117, -115, -114, -117, -70)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(-112, 32, 112, 33, 112, -112, 138, -116, 134, 41, -113, 33)
+
 [connection signal="area_entered" from="exit" to="exit" method="_on_area_entered"]
+[connection signal="area_entered" from="CritterCenterMan/Area2D" to="CritterCenterMan" method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="CritterCenterMan/Area2D" to="CritterCenterMan" method="_on_area_2d_area_exited"]
+[connection signal="area_entered" from="Computer/Area2D" to="Computer" method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="Computer/Area2D" to="Computer" method="_on_area_2d_area_exited"]

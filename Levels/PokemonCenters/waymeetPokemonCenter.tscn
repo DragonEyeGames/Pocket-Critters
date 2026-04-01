@@ -27,7 +27,7 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qrubs"]
 size = Vector2(35, 31)
 
-[sub_resource type="Shader" id="Shader_l1evu"]
+[sub_resource type="Shader" id="Shader_p0tuk"]
 resource_local_to_scene = true
 code = "shader_type canvas_item;
 
@@ -40,11 +40,11 @@ void fragment() {
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_qb0fl"]
 resource_local_to_scene = true
-shader = SubResource("Shader_l1evu")
+shader = SubResource("Shader_p0tuk")
 shader_parameter/flash_color = Color(0.39005882, 0.3381437, 0.12027154, 1)
 shader_parameter/flash_value = 0.0
 
-[sub_resource type="Shader" id="Shader_h8jgo"]
+[sub_resource type="Shader" id="Shader_jmabg"]
 resource_local_to_scene = true
 code = "shader_type canvas_item;
 
@@ -57,11 +57,11 @@ void fragment() {
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_hxybn"]
 resource_local_to_scene = true
-shader = SubResource("Shader_h8jgo")
+shader = SubResource("Shader_jmabg")
 shader_parameter/flash_color = Color(0.39005882, 0.3381437, 0.12027154, 1)
 shader_parameter/flash_value = 0.0
 
-[sub_resource type="Shader" id="Shader_txqde"]
+[sub_resource type="Shader" id="Shader_qtxc8"]
 resource_local_to_scene = true
 code = "shader_type canvas_item;
 
@@ -74,11 +74,11 @@ void fragment() {
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_auu8o"]
 resource_local_to_scene = true
-shader = SubResource("Shader_txqde")
+shader = SubResource("Shader_qtxc8")
 shader_parameter/flash_color = Color(0.39005882, 0.3381437, 0.12027154, 1)
 shader_parameter/flash_value = 0.0
 
-[sub_resource type="Shader" id="Shader_ewqop"]
+[sub_resource type="Shader" id="Shader_cstpw"]
 resource_local_to_scene = true
 code = "shader_type canvas_item;
 
@@ -91,11 +91,11 @@ void fragment() {
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_gajhs"]
 resource_local_to_scene = true
-shader = SubResource("Shader_ewqop")
+shader = SubResource("Shader_cstpw")
 shader_parameter/flash_color = Color(0.39005882, 0.3381437, 0.12027154, 1)
 shader_parameter/flash_value = 0.0
 
-[sub_resource type="Shader" id="Shader_kyfwk"]
+[sub_resource type="Shader" id="Shader_lqh11"]
 resource_local_to_scene = true
 code = "shader_type canvas_item;
 
@@ -108,11 +108,11 @@ void fragment() {
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ku1ho"]
 resource_local_to_scene = true
-shader = SubResource("Shader_kyfwk")
+shader = SubResource("Shader_lqh11")
 shader_parameter/flash_color = Color(0.39005882, 0.3381437, 0.12027154, 1)
 shader_parameter/flash_value = 0.0
 
-[sub_resource type="Shader" id="Shader_86dkv"]
+[sub_resource type="Shader" id="Shader_xf4w6"]
 resource_local_to_scene = true
 code = "shader_type canvas_item;
 
@@ -125,7 +125,7 @@ void fragment() {
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_efqkt"]
 resource_local_to_scene = true
-shader = SubResource("Shader_86dkv")
+shader = SubResource("Shader_xf4w6")
 shader_parameter/flash_color = Color(0.39005882, 0.3381437, 0.12027154, 1)
 shader_parameter/flash_value = 0.0
 
