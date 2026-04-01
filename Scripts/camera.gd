@@ -25,3 +25,9 @@ func _on_player_detector_area_entered(_area: Area2D) -> void:
 
 func _on_player_detector_area_exited(_area: Area2D) -> void:
 	limit_left=-655
+	
+func zoomChange(newZoom):
+	#await get_tree().create_timer(.2).timeout
+	#var tween = create_tween()
+	#tween.tween_property(self, "zoom", newZoom, .1)
+	zoom=newZoom

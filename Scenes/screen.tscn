@@ -1,0 +1,92 @@
+[gd_scene load_steps=5 format=3 uid="uid://ed3p1dmj7la1"]
+
+[ext_resource type="FontFile" uid="uid://cnjtjvjhjjxia" path="res://Fonts/ByteBounce.ttf" id="1_fq6pb"]
+
+[sub_resource type="Animation" id="Animation_3cxpa"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ProgressBar:value")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_7h0tq"]
+resource_name = "initialize"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ProgressBar:value")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1.2, 1.3, 1.93, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 20.0, 80.0, 99.0, 99.0, 100.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_m7p0i"]
+_data = {
+&"RESET": SubResource("Animation_3cxpa"),
+&"initialize": SubResource("Animation_7h0tq")
+}
+
+[node name="Screen" type="ColorRect"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 107.0
+offset_bottom = -71.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.6532658, 0.8869929, 0.9999998, 1)
+
+[node name="Loading" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(8, 4)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Loading"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.003787899
+anchor_top = -0.10117826
+anchor_right = 0.9962121
+anchor_bottom = 0.8988217
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/normal_font = ExtResource("1_fq6pb")
+theme_override_font_sizes/normal_font_size = 68
+text = "Booting up Computer..."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.2340229
+anchor_top = 0.5130537
+anchor_right = 0.7683979
+anchor_bottom = 0.5985538
+offset_left = -25.040451
+offset_top = 36.42682
+offset_right = -238.04047
+offset_bottom = 23.327301
+scale = Vector2(1.71, 1.71)
+
+[node name="animator" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_m7p0i")
+}

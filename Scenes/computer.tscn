@@ -1,0 +1,55 @@
+[gd_scene load_steps=7 format=3 uid="uid://dxyb5wdk6pwua"]
+
+[ext_resource type="Texture2D" uid="uid://bx6vfrgwyhgj2" path="res://Assets/Interior/Part 2 copiar.png" id="1_m1ujp"]
+[ext_resource type="Script" uid="uid://dgmox1tpkdppe" path="res://Levels/computer.gd" id="2_7h0tq"]
+[ext_resource type="Texture2D" uid="uid://dcuil2enpgqeu" path="res://Assets/Interior/School.png" id="3_3cxpa"]
+[ext_resource type="PackedScene" uid="uid://ed3p1dmj7la1" path="res://Scenes/screen.tscn" id="3_7h0tq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kj8wy"]
+size = Vector2(32, 22)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0bjm7"]
+size = Vector2(26, 24)
+
+[node name="Computer" type="Sprite2D"]
+texture = ExtResource("1_m1ujp")
+region_enabled = true
+region_rect = Rect2(68, 104, 24, 24)
+script = ExtResource("2_7h0tq")
+
+[node name="Desk" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(0, 11)
+texture = ExtResource("3_3cxpa")
+region_enabled = true
+region_rect = Rect2(129.98409, 9.954855, 28.06343, 22.011957)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0, 11)
+shape = SubResource("RectangleShape2D_kj8wy")
+
+[node name="Area2D" type="Area2D" parent="."]
+visible = false
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, 11)
+shape = SubResource("RectangleShape2D_0bjm7")
+
+[node name="ZoomPoint" type="Marker2D" parent="."]
+visible = false
+position = Vector2(-1, -5)
+
+[node name="Screen" parent="." instance=ExtResource("3_7h0tq")]
+offset_left = -9.00032
+offset_top = -9.056744
+offset_right = 1033.9996
+offset_bottom = 435.94327
+scale = Vector2(0.015, 0.015)
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]
