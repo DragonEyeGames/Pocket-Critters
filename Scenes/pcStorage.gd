@@ -2,7 +2,7 @@ extends Control
 
 @export var pokemon: GameManager.pokemon
 var mouseEntered=false
-
+var canRecieve=true
 func initialize():
 	$NewPokemon.pokemon=pokemon
 	$NewPokemon.initialize()
@@ -27,5 +27,7 @@ func _on_mouse_detection_mouse_exited() -> void:
 	tween.tween_property($NewPokemon, "scale", Vector2(1, 1), .1)
 
 func _process(_delta: float) -> void:
+	$MouseDetection.visible=canRecieve
 	if(Input.is_action_just_pressed("Interact") and mouseEntered):
 		$OptionsMenu.visible=!$OptionsMenu.visible
+		get_parent().get_parent().get_parent().removeInput()

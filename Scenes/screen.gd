@@ -20,3 +20,7 @@ func bootUp():
 		$Normal/GridContainer.get_child(i).initialize()
 		$Normal/GridContainer.get_child(i).visible=true
 		i+=1
+		
+func removeInput():
+	for child in $Normal/GridContainer.get_children():
+		child.canRecieve=false
