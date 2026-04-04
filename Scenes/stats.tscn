@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://eobmjvi2eqj3"]
+[gd_scene load_steps=7 format=3 uid="uid://eobmjvi2eqj3"]
 
 [ext_resource type="PackedScene" uid="uid://3ijnqbla51yb" path="res://Scenes/pokemonDisplay.tscn" id="1_ehh3d"]
 [ext_resource type="Script" uid="uid://jbumnav3o3va" path="res://Scenes/stats.gd" id="1_lwp2e"]
 [ext_resource type="Shader" uid="uid://bomfvo6o4mvg6" path="res://Shaders/flash.gdshader" id="2_lwp2e"]
 [ext_resource type="FontFile" uid="uid://cnjtjvjhjjxia" path="res://Fonts/ByteBounce.ttf" id="4_i6gfd"]
+[ext_resource type="PackedScene" uid="uid://dkyjhyr5mfmtj" path="res://Scenes/statMove.tscn" id="5_wue6w"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_i6gfd"]
 resource_local_to_scene = true
@@ -33,10 +34,10 @@ offset_bottom = 522.0
 color = Color(0, 0, 0, 1)
 
 [node name="ColorRect2" type="ColorRect" parent="."]
-offset_left = 16.0
-offset_top = 16.0
-offset_right = 947.0
-offset_bottom = 518.0
+offset_left = 14.0
+offset_top = 15.0
+offset_right = 945.0
+offset_bottom = 517.0
 color = Color(0.728822, 0.728822, 0.728822, 1)
 
 [node name="PokemonHolder" type="Control" parent="."]
@@ -300,3 +301,11 @@ theme_override_font_sizes/normal_font_size = 96
 text = "Timberry"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Move" parent="." instance=ExtResource("5_wue6w")]
+
+[node name="Move2" parent="." instance=ExtResource("5_wue6w")]
+offset_left = 493.0
+offset_top = 368.0
+offset_right = 693.0
+offset_bottom = 428.0

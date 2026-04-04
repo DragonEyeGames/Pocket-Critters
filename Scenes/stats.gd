@@ -56,6 +56,8 @@ func displayStats(pokemon: PokemonData):
 	pokeStats.append(biggestStat)
 	pokeStats.append(biggestStat)
 	drawPokemon($StatHolder/NominalSpread)
+	$Move.loadMove(pokemon.moves[0])
+	$Move2.loadMove(pokemon.moves[1])
 	
 func normalizeStats(stat: float, maxStat: float) -> float:
 	return stat / maxStat
