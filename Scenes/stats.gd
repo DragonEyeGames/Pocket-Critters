@@ -4,6 +4,8 @@ extends CanvasLayer
 @export var radius: float = 100.0
 @export var stats: Array = [1.0, 1.0, 1.0, 1.0, 1.0, 1.0]
 var perfectStats: Array = [1.1, 1.1, 1.1, 1.1, 1.1, 1.1]
+var pokeStats: Array
+var biggestStat: int
 
 func _ready() -> void:
 	visible=false
@@ -32,6 +34,31 @@ func displayStats(pokemon: PokemonData):
 	$IVHolder/Speed.text=str("Spd:  " + str(normalize(round(pokemon.ivSpeed*100)/100)))
 	_draw(stats, $IVHolder/IVSpread)
 	_draw(perfectStats, $IVHolder/NominalSpread)
+	pokeStats.append(pokemon.health)
+	$StatHolder/Health.text=str("HP: " + str(pokemon.health))
+	pokeStats.append(pokemon.attack)
+	$StatHolder/Attack.text=str("Atk: " + str(pokemon.attack))
+	pokeStats.append(pokemon.defense)
+	$StatHolder/Defense.text=str("Def: " + str(pokemon.defense))
+	pokeStats.append(pokemon.specialAttack)
+	$StatHolder/SpecialAttack.text=str("Sp. Atk: " + str(pokemon.specialAttack))
+	pokeStats.append(pokemon.specialDefense)
+	$StatHolder/SpecialDefense.text=str("Sp. Def: " + str(pokemon.specialDefense))
+	pokeStats.append(pokemon.speed)
+	$StatHolder/Speed.text=str("Spd: " + str(pokemon.speed))
+	biggestStat=pokeStats.max()
+	drawPokemon($StatHolder/StatSpread)
+	pokeStats.clear()
+	pokeStats.append(biggestStat)
+	pokeStats.append(biggestStat)
+	pokeStats.append(biggestStat)
+	pokeStats.append(biggestStat)
+	pokeStats.append(biggestStat)
+	pokeStats.append(biggestStat)
+	drawPokemon($StatHolder/NominalSpread)
+	
+func normalizeStats(stat: float, maxStat: float) -> float:
+	return stat / maxStat
 	
 func normalize(iv: float) -> float:
 	return (iv - 0.9) / (1.1 - 0.9)
@@ -53,6 +80,28 @@ func get_points(array) -> Array:
 	
 	return points
 	
+func getPokemonPoints() -> Array:
+	var points = []
+	var count = stats.size()
+	
+	for i in count:
+		var angle = TAU * i / count - PI / 2
+		
+		var value = normalizeStats(pokeStats[i], biggestStat)
+		var r = radius * value
+		
+		var x = center.x + cos(angle) * r
+		var y = center.y + sin(angle) * r
+		
+		points.append(Vector2(x, y))
+	
+	return points
+	
+	
 func _draw(array, polygon):
 	var points = get_points(array)
+	polygon.polygon = points
+	
+func drawPokemon(polygon):
+	var points = getPokemonPoints()
 	polygon.polygon = points
