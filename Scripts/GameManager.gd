@@ -385,8 +385,6 @@ func loadGame():
 		return false
 	
 	var data = load("user://save.tres") as GameData
-	print("SAve found")
-	print(data)
 	playerTeam = data.team.team.duplicate()
 	playerPosition = data.playerPos
 	respawnSpot = data.safePos

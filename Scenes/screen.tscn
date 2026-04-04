@@ -173,7 +173,7 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
-[node name="RichTextLabel2" type="RichTextLabel" parent="Normal"]
+[node name="Title" type="RichTextLabel" parent="Normal"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = -0.003787899
@@ -186,6 +186,7 @@ offset_right = -0.38952637
 offset_bottom = -273.12366
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_fonts/normal_font = ExtResource("1_fq6pb")
 theme_override_font_sizes/normal_font_size = 68
 text = "Critter Storage"

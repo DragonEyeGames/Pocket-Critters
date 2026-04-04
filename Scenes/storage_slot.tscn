@@ -1,8 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://ds4a5n5wqh6aw"]
+[gd_scene load_steps=7 format=3 uid="uid://ds4a5n5wqh6aw"]
 
 [ext_resource type="PackedScene" uid="uid://3ijnqbla51yb" path="res://Scenes/pokemonDisplay.tscn" id="1_ebpty"]
 [ext_resource type="Script" uid="uid://cqqxqji1xd4vn" path="res://Scenes/pcStorage.gd" id="1_ety20"]
 [ext_resource type="Shader" uid="uid://bomfvo6o4mvg6" path="res://Shaders/flash.gdshader" id="2_ety20"]
+[ext_resource type="FontFile" uid="uid://cnjtjvjhjjxia" path="res://Fonts/ByteBounce.ttf" id="4_2m42m"]
+[ext_resource type="Script" uid="uid://c5ucw1t5i070d" path="res://Scenes/optionsButton.gd" id="5_45e81"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_rpafq"]
 resource_local_to_scene = true
@@ -14,7 +16,18 @@ shader_parameter/flash_value = 0.0
 custom_minimum_size = Vector2(110, 110)
 layout_mode = 3
 anchors_preset = 0
+mouse_filter = 2
 script = ExtResource("1_ety20")
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 0
+offset_left = 9.0
+offset_top = 9.0
+offset_right = 111.0
+offset_bottom = 110.0
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
 
 [node name="ColorRect" type="ColorRect" parent="."]
 custom_minimum_size = Vector2(100, 100)
@@ -23,9 +36,319 @@ offset_left = 10.0
 offset_top = 10.0
 offset_right = 110.0
 offset_bottom = 110.0
+mouse_filter = 2
 color = Color(0.6872149, 0.68721503, 0.6872149, 1)
 
 [node name="NewPokemon" parent="." instance=ExtResource("1_ebpty")]
 material = SubResource("ShaderMaterial_rpafq")
-position = Vector2(58, 63)
-scale = Vector2(1.76, 1.76)
+position = Vector2(58.607094, 52.621445)
+scale = Vector2(1, 1)
+
+[node name="NamePlate" type="Control" parent="."]
+anchors_preset = 0
+offset_left = -0.3945427
+offset_top = 1.4756165
+offset_right = 39.605457
+offset_bottom = 41.475616
+mouse_filter = 2
+
+[node name="ColorRect3" type="ColorRect" parent="NamePlate"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 91.34838
+offset_right = 110.0
+offset_bottom = 109.353226
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="NamePlate"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 92.35674
+offset_right = 110.0
+offset_bottom = 108.324265
+mouse_filter = 2
+color = Color(0.86036915, 0.8603692, 0.8603692, 1)
+
+[node name="Name" type="RichTextLabel" parent="NamePlate"]
+layout_mode = 0
+offset_left = 10.00251
+offset_top = 91.98593
+offset_right = 110.121414
+offset_bottom = 107.94308
+mouse_filter = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("4_2m42m")
+text = "Timberry"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MouseDetection" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 10.347824
+offset_top = 10.4625
+offset_right = 110.35042
+offset_bottom = 110.467804
+color = Color(1, 1, 1, 0)
+
+[node name="OptionsMenu" type="Control" parent="."]
+visible = false
+z_index = 1
+anchors_preset = 0
+offset_left = 85.0
+offset_top = -14.0
+offset_right = 161.0
+offset_bottom = 54.0
+
+[node name="ColorRect3" type="ColorRect" parent="OptionsMenu"]
+z_index = 1
+layout_mode = 0
+offset_left = -1.0
+offset_top = -1.0
+offset_right = 77.0
+offset_bottom = 93.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="OptionsMenu"]
+z_index = 1
+layout_mode = 0
+offset_right = 76.0
+offset_bottom = 92.0
+color = Color(0.9340804, 0.9340805, 0.93408036, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="OptionsMenu"]
+z_index = 1
+layout_mode = 0
+offset_right = 76.0
+offset_bottom = 94.0
+
+[node name="Switch" type="Control" parent="OptionsMenu/VBoxContainer"]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+
+[node name="Holder" type="Control" parent="OptionsMenu/VBoxContainer/Switch"]
+anchors_preset = 0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 75.0
+offset_bottom = 19.0
+pivot_offset = Vector2(36, 10)
+script = ExtResource("5_45e81")
+
+[node name="ColorRect" type="ColorRect" parent="OptionsMenu/VBoxContainer/Switch/Holder"]
+layout_mode = 0
+offset_right = 74.0
+offset_bottom = 18.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="OptionsMenu/VBoxContainer/Switch/Holder"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 73.0
+offset_bottom = 17.0
+color = Color(0.76240367, 0.76240367, 0.76240367, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="OptionsMenu/VBoxContainer/Switch/Holder"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 73.0
+offset_bottom = 17.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("4_2m42m")
+text = "Switch"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MouseChecker" type="ColorRect" parent="OptionsMenu/VBoxContainer/Switch"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 75.0
+offset_bottom = 19.0
+color = Color(1, 1, 1, 0)
+
+[node name="Stats" type="Control" parent="OptionsMenu/VBoxContainer"]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+
+[node name="Holder" type="Control" parent="OptionsMenu/VBoxContainer/Stats"]
+anchors_preset = 0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 75.0
+offset_bottom = 19.0
+pivot_offset = Vector2(36, 10)
+script = ExtResource("5_45e81")
+
+[node name="ColorRect" type="ColorRect" parent="OptionsMenu/VBoxContainer/Stats/Holder"]
+layout_mode = 0
+offset_right = 74.0
+offset_bottom = 18.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="OptionsMenu/VBoxContainer/Stats/Holder"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 73.0
+offset_bottom = 17.0
+color = Color(0.76240367, 0.76240367, 0.76240367, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="OptionsMenu/VBoxContainer/Stats/Holder"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 73.0
+offset_bottom = 17.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("4_2m42m")
+text = "Switch"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MouseChecker" type="ColorRect" parent="OptionsMenu/VBoxContainer/Stats"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 75.0
+offset_bottom = 19.0
+color = Color(1, 1, 1, 0)
+
+[node name="Critterdex" type="Control" parent="OptionsMenu/VBoxContainer"]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+
+[node name="Holder" type="Control" parent="OptionsMenu/VBoxContainer/Critterdex"]
+anchors_preset = 0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 75.0
+offset_bottom = 19.0
+pivot_offset = Vector2(36, 10)
+script = ExtResource("5_45e81")
+
+[node name="ColorRect" type="ColorRect" parent="OptionsMenu/VBoxContainer/Critterdex/Holder"]
+layout_mode = 0
+offset_right = 74.0
+offset_bottom = 18.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="OptionsMenu/VBoxContainer/Critterdex/Holder"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 73.0
+offset_bottom = 17.0
+color = Color(0.76240367, 0.76240367, 0.76240367, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="OptionsMenu/VBoxContainer/Critterdex/Holder"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 73.0
+offset_bottom = 17.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("4_2m42m")
+text = "Switch"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MouseChecker" type="ColorRect" parent="OptionsMenu/VBoxContainer/Critterdex"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 75.0
+offset_bottom = 19.0
+color = Color(1, 1, 1, 0)
+
+[node name="Close" type="Control" parent="OptionsMenu/VBoxContainer"]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+
+[node name="Holder" type="Control" parent="OptionsMenu/VBoxContainer/Close"]
+anchors_preset = 0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 75.0
+offset_bottom = 19.0
+pivot_offset = Vector2(36, 10)
+script = ExtResource("5_45e81")
+
+[node name="ColorRect" type="ColorRect" parent="OptionsMenu/VBoxContainer/Close/Holder"]
+layout_mode = 0
+offset_right = 74.0
+offset_bottom = 18.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="OptionsMenu/VBoxContainer/Close/Holder"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 73.0
+offset_bottom = 17.0
+color = Color(0.76240367, 0.76240367, 0.76240367, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="OptionsMenu/VBoxContainer/Close/Holder"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 73.0
+offset_bottom = 17.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("4_2m42m")
+text = "Switch"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MouseChecker" type="ColorRect" parent="OptionsMenu/VBoxContainer/Close"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 75.0
+offset_bottom = 19.0
+color = Color(1, 1, 1, 0)
+
+[node name="Blocker" type="ColorRect" parent="OptionsMenu"]
+layout_mode = 0
+offset_left = -615.0
+offset_top = -415.0
+offset_right = -1.0
+offset_bottom = 689.0
+color = Color(1, 1, 1, 0)
+
+[node name="Blocker2" type="ColorRect" parent="OptionsMenu"]
+layout_mode = 0
+offset_left = 77.0
+offset_top = -415.0
+offset_right = 796.0
+offset_bottom = 689.0
+color = Color(1, 1, 1, 0)
+
+[node name="Blocker3" type="ColorRect" parent="OptionsMenu"]
+layout_mode = 0
+offset_left = -185.0
+offset_top = -415.0
+offset_right = 249.0
+offset_bottom = -1.0
+color = Color(1, 1, 1, 0)
+
+[node name="Blocker4" type="ColorRect" parent="OptionsMenu"]
+layout_mode = 0
+offset_left = -161.0
+offset_top = 93.0
+offset_right = 273.0
+offset_bottom = 507.0
+color = Color(1, 1, 1, 0)
+
+[connection signal="mouse_entered" from="MouseDetection" to="." method="_on_mouse_detection_mouse_entered"]
+[connection signal="mouse_exited" from="MouseDetection" to="." method="_on_mouse_detection_mouse_exited"]
+[connection signal="mouse_entered" from="OptionsMenu/VBoxContainer/Switch/MouseChecker" to="OptionsMenu/VBoxContainer/Switch/Holder" method="_on_mouse_checker_mouse_entered"]
+[connection signal="mouse_exited" from="OptionsMenu/VBoxContainer/Switch/MouseChecker" to="OptionsMenu/VBoxContainer/Switch/Holder" method="_on_mouse_checker_mouse_exited"]
+[connection signal="mouse_entered" from="OptionsMenu/VBoxContainer/Stats/MouseChecker" to="OptionsMenu/VBoxContainer/Stats/Holder" method="_on_mouse_checker_mouse_entered"]
+[connection signal="mouse_exited" from="OptionsMenu/VBoxContainer/Stats/MouseChecker" to="OptionsMenu/VBoxContainer/Stats/Holder" method="_on_mouse_checker_mouse_exited"]
+[connection signal="mouse_entered" from="OptionsMenu/VBoxContainer/Critterdex/MouseChecker" to="OptionsMenu/VBoxContainer/Critterdex/Holder" method="_on_mouse_checker_mouse_entered"]
+[connection signal="mouse_exited" from="OptionsMenu/VBoxContainer/Critterdex/MouseChecker" to="OptionsMenu/VBoxContainer/Critterdex/Holder" method="_on_mouse_checker_mouse_exited"]
+[connection signal="mouse_entered" from="OptionsMenu/VBoxContainer/Close/MouseChecker" to="OptionsMenu/VBoxContainer/Close/Holder" method="_on_mouse_checker_mouse_entered"]
+[connection signal="mouse_exited" from="OptionsMenu/VBoxContainer/Close/MouseChecker" to="OptionsMenu/VBoxContainer/Close/Holder" method="_on_mouse_checker_mouse_exited"]
