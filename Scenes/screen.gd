@@ -16,7 +16,10 @@ func bootUp():
 	for child in $Normal/GridContainer.get_children():
 		child.visible=false
 	for pokemon in GameManager.playerBoxes:
-		$Normal/GridContainer.get_child(i).pokemon=pokemon.species
+		print("Boxemon")
+		print(pokemon)
+		$Normal/GridContainer.get_child(i).pokemon=pokemon
+		print($Normal/GridContainer.get_child(i).pokemon)
 		$Normal/GridContainer.get_child(i).initialize()
 		$Normal/GridContainer.get_child(i).visible=true
 		i+=1
@@ -24,3 +27,7 @@ func bootUp():
 func removeInput():
 	for child in $Normal/GridContainer.get_children():
 		child.canRecieve=false
+
+func restoreInput():
+	for child in $Normal/GridContainer.get_children():
+		child.canRecieve=true

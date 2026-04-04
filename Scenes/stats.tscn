@@ -1,0 +1,118 @@
+[gd_scene load_steps=6 format=3 uid="uid://eobmjvi2eqj3"]
+
+[ext_resource type="PackedScene" uid="uid://3ijnqbla51yb" path="res://Scenes/pokemonDisplay.tscn" id="1_ehh3d"]
+[ext_resource type="Script" uid="uid://jbumnav3o3va" path="res://Scenes/stats.gd" id="1_lwp2e"]
+[ext_resource type="Shader" uid="uid://bomfvo6o4mvg6" path="res://Shaders/flash.gdshader" id="2_lwp2e"]
+[ext_resource type="FontFile" uid="uid://cnjtjvjhjjxia" path="res://Fonts/ByteBounce.ttf" id="4_i6gfd"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_i6gfd"]
+resource_local_to_scene = true
+shader = ExtResource("2_lwp2e")
+shader_parameter/flash_color = Color(1, 1, 1, 1)
+shader_parameter/flash_value = 0.0
+
+[node name="Stats" type="CanvasLayer"]
+layer = 2
+script = ExtResource("1_lwp2e")
+radius = 200.0
+
+[node name="Transparizer" type="ColorRect" parent="."]
+z_index = -1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.1254902)
+
+[node name="ColorRect3" type="ColorRect" parent="."]
+offset_left = 12.0
+offset_top = 12.0
+offset_right = 951.0
+offset_bottom = 522.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 947.0
+offset_bottom = 518.0
+color = Color(0.728822, 0.728822, 0.728822, 1)
+
+[node name="PokemonHolder" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 42.0
+offset_top = 92.0
+offset_right = 323.0
+offset_bottom = 373.0
+
+[node name="Border" type="ColorRect" parent="PokemonHolder"]
+layout_mode = 0
+offset_right = 281.0
+offset_bottom = 281.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect" type="ColorRect" parent="PokemonHolder"]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 278.0
+offset_bottom = 278.0
+color = Color(0.91228896, 0.9122889, 0.91228884, 1)
+
+[node name="NewPokemon" parent="PokemonHolder" instance=ExtResource("1_ehh3d")]
+material = SubResource("ShaderMaterial_i6gfd")
+position = Vector2(131.00002, 135.00002)
+scale = Vector2(4.37, 4.37)
+
+[node name="IVHolder" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 406.0
+offset_top = 97.0
+offset_right = 691.0
+offset_bottom = 359.0
+
+[node name="ColorRect" type="ColorRect" parent="IVHolder"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="IVHolder"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 4.0
+offset_top = 4.0
+offset_right = -4.0
+offset_bottom = -4.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.9137255, 0.9137255, 0.9137255, 1)
+
+[node name="NominalSpread" type="Polygon2D" parent="IVHolder"]
+position = Vector2(141, 129)
+color = Color(0.7691837, 0.9357096, 0.9999997, 1)
+polygon = PackedVector2Array(-12, -13, 10, -13, 20, 1, 17, 20, -4, 22, -18, 7)
+
+[node name="IVSpread" type="Polygon2D" parent="IVHolder"]
+position = Vector2(141, 129)
+color = Color(0.51, 0.8693333, 1, 1)
+polygon = PackedVector2Array(-12, -13, 10, -13, 20, 1, 17, 20, -4, 22, -18, 7)
+
+[node name="Name" type="RichTextLabel" parent="."]
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 947.0
+offset_bottom = 91.0
+theme_override_fonts/normal_font = ExtResource("4_i6gfd")
+theme_override_font_sizes/normal_font_size = 96
+text = "Timberry"
+horizontal_alignment = 1
+vertical_alignment = 1

@@ -1,13 +1,17 @@
 extends Control
 
-@export var pokemon: GameManager.pokemon
+var pokemon
 var mouseEntered=false
 var canRecieve=true
+
 func initialize():
-	$NewPokemon.pokemon=pokemon
+	if(pokemon==null):
+		queue_free()
+		return
+	$NewPokemon.pokemon=pokemon.species
 	$NewPokemon.initialize()
 	$NewPokemon.position=Vector2(58, 52)
-	$NamePlate/Name.text=GameManager.pokemonName(pokemon)
+	$NamePlate/Name.text=GameManager.pokemonName(pokemon.species)
 
 
 func _on_animator_animation_finished(_anim_name: StringName) -> void:
@@ -31,3 +35,16 @@ func _process(_delta: float) -> void:
 	if(Input.is_action_just_pressed("Interact") and mouseEntered):
 		$OptionsMenu.visible=!$OptionsMenu.visible
 		get_parent().get_parent().get_parent().removeInput()
+		
+func buttonPressed(action: String):
+	print(action)
+	if(action=="Switch"):
+		pass
+	if(action=="Stats"):
+		Stats.displayStats(pokemon)
+	if(action=="Critterdex"):
+		pass
+	if(action=="Close"):
+		$OptionsMenu.visible=false
+		get_parent().get_parent().get_parent().restoreInput()
+	
