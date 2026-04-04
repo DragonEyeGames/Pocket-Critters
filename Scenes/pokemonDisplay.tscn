@@ -1,13 +1,14 @@
-[gd_scene load_steps=4 format=3 uid="uid://3ijnqbla51yb"]
+[gd_scene load_steps=5 format=3 uid="uid://3ijnqbla51yb"]
 
 [ext_resource type="Shader" uid="uid://bomfvo6o4mvg6" path="res://Shaders/flash.gdshader" id="1_p3h4s"]
 [ext_resource type="Script" uid="uid://v80h5lclvn1j" path="res://Scripts/pokemonDisplay.gd" id="2_s74u3"]
+[ext_resource type="Texture2D" uid="uid://bbctwkye4ujb4" path="res://Fakemon-PNG/timberry.png" id="3_xipqi"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_5oiha"]
 resource_local_to_scene = true
 shader = ExtResource("1_p3h4s")
 shader_parameter/flash_color = Color(1, 1, 1, 1)
-shader_parameter/flash_value = 1.0
+shader_parameter/flash_value = 0.0
 
 [node name="NewPokemon" type="Node2D"]
 material = SubResource("ShaderMaterial_5oiha")
@@ -16,3 +17,4 @@ script = ExtResource("2_s74u3")
 
 [node name="Pokemon" type="Sprite2D" parent="."]
 use_parent_material = true
+texture = ExtResource("3_xipqi")

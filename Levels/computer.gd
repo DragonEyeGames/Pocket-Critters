@@ -19,7 +19,7 @@ func _process(_delta: float) -> void:
 		$Screen.visible=true
 		entered=true
 		await get_tree().create_timer(.2).timeout
-		$Screen/animator.play("initialize")
+		$Screen.bootUp()
 	elif(playerEntered and Input.is_action_just_pressed("Interact") and entered and not locked):
 		GameManager.camera.target=backupZoomPoint
 		GameManager.camera.zoomChange(Vector2(2.3, 2.3))

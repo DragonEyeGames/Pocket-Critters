@@ -165,6 +165,7 @@ var attackingID:=0
 
 @export var playerTeam: Array[PokemonData] = []
 @export var healthyTeam: Array[PokemonData] = []
+@export var playerBoxes: Array[PokemonData] = []
 
 @export var playerPosition:= Vector2.ZERO
 @export var respawnSpot:=Vector2.ZERO
