@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://eobmjvi2eqj3"]
+[gd_scene load_steps=8 format=3 uid="uid://eobmjvi2eqj3"]
 
 [ext_resource type="PackedScene" uid="uid://3ijnqbla51yb" path="res://Scenes/pokemonDisplay.tscn" id="1_ehh3d"]
 [ext_resource type="Script" uid="uid://jbumnav3o3va" path="res://Scenes/stats.gd" id="1_lwp2e"]
 [ext_resource type="Shader" uid="uid://bomfvo6o4mvg6" path="res://Shaders/flash.gdshader" id="2_lwp2e"]
 [ext_resource type="FontFile" uid="uid://cnjtjvjhjjxia" path="res://Fonts/ByteBounce.ttf" id="4_i6gfd"]
 [ext_resource type="PackedScene" uid="uid://dkyjhyr5mfmtj" path="res://Scenes/statMove.tscn" id="5_wue6w"]
+[ext_resource type="Script" uid="uid://dlvt2dm6p6f2g" path="res://Scenes/closeButton.gd" id="6_qetgw"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_i6gfd"]
 resource_local_to_scene = true
@@ -303,9 +304,69 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Move" parent="." instance=ExtResource("5_wue6w")]
+offset_left = 40.0
+offset_right = 240.0
 
 [node name="Move2" parent="." instance=ExtResource("5_wue6w")]
-offset_left = 493.0
-offset_top = 368.0
-offset_right = 693.0
-offset_bottom = 428.0
+offset_left = 486.0
+offset_right = 686.0
+
+[node name="Move3" parent="." instance=ExtResource("5_wue6w")]
+offset_left = 40.0
+offset_top = 443.0
+offset_right = 240.0
+offset_bottom = 503.0
+
+[node name="Move4" parent="." instance=ExtResource("5_wue6w")]
+offset_left = 486.0
+offset_top = 443.0
+offset_right = 686.0
+offset_bottom = 503.0
+
+[node name="Close" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 917.0
+offset_top = 4.0
+offset_right = 957.0
+offset_bottom = 44.0
+mouse_filter = 2
+script = ExtResource("6_qetgw")
+
+[node name="ColorRect" type="ColorRect" parent="Close"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="Close"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 38.0
+offset_bottom = 38.0
+mouse_filter = 2
+color = Color(0.5726692, 1.0227784e-06, 1.92523e-07, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Close"]
+layout_mode = 0
+offset_left = -5.0
+offset_top = -8.0
+offset_right = 49.0
+offset_bottom = 39.0
+mouse_filter = 2
+theme_override_fonts/normal_font = ExtResource("4_i6gfd")
+theme_override_font_sizes/normal_font_size = 64
+text = "x"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MouseDetector" type="ColorRect" parent="Close"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+color = Color(1, 1, 1, 0)
+
+[connection signal="mouse_entered" from="Close/MouseDetector" to="Close" method="_on_mouse_detector_mouse_entered"]
+[connection signal="mouse_exited" from="Close/MouseDetector" to="Close" method="_on_mouse_detector_mouse_exited"]

@@ -4,14 +4,17 @@ extends CanvasLayer
 @export var radius: float = 100.0
 @export var stats: Array = [1.0, 1.0, 1.0, 1.0, 1.0, 1.0]
 var perfectStats: Array = [1.1, 1.1, 1.1, 1.1, 1.1, 1.1]
-var pokeStats: Array
+var pokeStats: Array = []
 var biggestStat: int
 
 func _ready() -> void:
 	visible=false
-	displayStats(GameManager.playerTeam[0])
+	#displayStats(GameManager.playerTeam[0])
 
 func displayStats(pokemon: PokemonData):
+	stats = []
+	pokeStats = []
+	biggestStat=0
 	visible=true
 	$Name.text=str(GameManager.pokemonName(pokemon.species))
 	$PokemonHolder/NewPokemon.pokemon=pokemon.species
@@ -29,13 +32,13 @@ func displayStats(pokemon: PokemonData):
 	stats.append(pokemon.ivSpecialAttack)
 	$IVHolder/SpecialAttack.text=str("Sp. Atk:  " + str(normalize(round(pokemon.ivSpecialAttack*100)/100)))
 	stats.append(pokemon.ivSpecialDefense)
-	$IVHolder/SpecialDefense.text=str("Def:  " + str(normalize(round(pokemon.ivSpecialDefense*100)/100)))
+	$IVHolder/SpecialDefense.text=str("Sp. Def:  " + str(normalize(round(pokemon.ivSpecialDefense*100)/100)))
 	stats.append(pokemon.ivSpeed)
 	$IVHolder/Speed.text=str("Spd:  " + str(normalize(round(pokemon.ivSpeed*100)/100)))
 	_draw(stats, $IVHolder/IVSpread)
 	_draw(perfectStats, $IVHolder/NominalSpread)
-	pokeStats.append(pokemon.health)
-	$StatHolder/Health.text=str("HP: " + str(pokemon.health))
+	pokeStats.append(pokemon.maxHealth)
+	$StatHolder/Health.text=str("HP: " + str(pokemon.maxHealth))
 	pokeStats.append(pokemon.attack)
 	$StatHolder/Attack.text=str("Atk: " + str(pokemon.attack))
 	pokeStats.append(pokemon.defense)
@@ -48,7 +51,7 @@ func displayStats(pokemon: PokemonData):
 	$StatHolder/Speed.text=str("Spd: " + str(pokemon.speed))
 	biggestStat=pokeStats.max()
 	drawPokemon($StatHolder/StatSpread)
-	pokeStats.clear()
+	pokeStats = []
 	pokeStats.append(biggestStat)
 	pokeStats.append(biggestStat)
 	pokeStats.append(biggestStat)
@@ -58,6 +61,8 @@ func displayStats(pokemon: PokemonData):
 	drawPokemon($StatHolder/NominalSpread)
 	$Move.loadMove(pokemon.moves[0])
 	$Move2.loadMove(pokemon.moves[1])
+	$Move3.loadMove(pokemon.moves[2])
+	$Move4.loadMove(pokemon.moves[3])
 	
 func normalizeStats(stat: float, maxStat: float) -> float:
 	return stat / maxStat
@@ -107,3 +112,6 @@ func _draw(array, polygon):
 func drawPokemon(polygon):
 	var points = getPokemonPoints()
 	polygon.polygon = points
+
+func close():
+	visible=false
