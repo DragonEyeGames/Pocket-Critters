@@ -1,21 +1,21 @@
-[gd_scene load_steps=8 format=3 uid="uid://eobmjvi2eqj3"]
+[gd_scene load_steps=8 format=3 uid="uid://bf51wq00jt2s3"]
 
-[ext_resource type="PackedScene" uid="uid://3ijnqbla51yb" path="res://Scenes/pokemonDisplay.tscn" id="1_ehh3d"]
-[ext_resource type="Script" uid="uid://jbumnav3o3va" path="res://Scenes/stats.gd" id="1_lwp2e"]
-[ext_resource type="Shader" uid="uid://bomfvo6o4mvg6" path="res://Shaders/flash.gdshader" id="2_lwp2e"]
-[ext_resource type="FontFile" uid="uid://cnjtjvjhjjxia" path="res://Fonts/ByteBounce.ttf" id="4_i6gfd"]
-[ext_resource type="PackedScene" uid="uid://dkyjhyr5mfmtj" path="res://Scenes/statMove.tscn" id="5_wue6w"]
-[ext_resource type="Script" uid="uid://dlvt2dm6p6f2g" path="res://Scenes/closeButton.gd" id="6_qetgw"]
+[ext_resource type="Script" uid="uid://jbumnav3o3va" path="res://Scripts/statsNew.gd" id="1_nmlck"]
+[ext_resource type="PackedScene" uid="uid://3ijnqbla51yb" path="res://Scenes/pokemonDisplay.tscn" id="2_v0v1k"]
+[ext_resource type="Shader" uid="uid://bomfvo6o4mvg6" path="res://Shaders/flash.gdshader" id="3_vq2vp"]
+[ext_resource type="FontFile" uid="uid://cnjtjvjhjjxia" path="res://Fonts/ByteBounce.ttf" id="4_ss1f6"]
+[ext_resource type="PackedScene" uid="uid://dkyjhyr5mfmtj" path="res://Scenes/statMove.tscn" id="5_wwoys"]
+[ext_resource type="Script" uid="uid://dlvt2dm6p6f2g" path="res://Scripts/closeButton.gd" id="6_p8sgs"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_i6gfd"]
 resource_local_to_scene = true
-shader = ExtResource("2_lwp2e")
+shader = ExtResource("3_vq2vp")
 shader_parameter/flash_color = Color(1, 1, 1, 1)
 shader_parameter/flash_value = 0.0
 
 [node name="Stats" type="CanvasLayer"]
 layer = 2
-script = ExtResource("1_lwp2e")
+script = ExtResource("1_nmlck")
 radius = 90.0
 
 [node name="Transparizer" type="ColorRect" parent="."]
@@ -63,7 +63,7 @@ offset_right = 278.0
 offset_bottom = 278.0
 color = Color(0.91228896, 0.9122889, 0.91228884, 1)
 
-[node name="NewPokemon" parent="PokemonHolder" instance=ExtResource("1_ehh3d")]
+[node name="NewPokemon" parent="PokemonHolder" instance=ExtResource("2_v0v1k")]
 material = SubResource("ShaderMaterial_i6gfd")
 position = Vector2(131.00002, 135.00002)
 scale = Vector2(4.37, 4.37)
@@ -115,7 +115,7 @@ offset_top = 14.0
 offset_right = 220.0
 offset_bottom = 44.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_fonts/normal_font = ExtResource("4_i6gfd")
+theme_override_fonts/normal_font = ExtResource("4_ss1f6")
 text = "HP: .5"
 
 [node name="Attack" type="RichTextLabel" parent="IVHolder"]
@@ -125,7 +125,7 @@ offset_top = 66.0
 offset_right = 315.0
 offset_bottom = 96.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_fonts/normal_font = ExtResource("4_i6gfd")
+theme_override_fonts/normal_font = ExtResource("4_ss1f6")
 text = "Atk: .5"
 
 [node name="Defense" type="RichTextLabel" parent="IVHolder"]
@@ -135,7 +135,7 @@ offset_top = 167.0
 offset_right = 315.0
 offset_bottom = 197.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_fonts/normal_font = ExtResource("4_i6gfd")
+theme_override_fonts/normal_font = ExtResource("4_ss1f6")
 text = "Def: .5"
 
 [node name="SpecialAttack" type="RichTextLabel" parent="IVHolder"]
@@ -145,7 +145,7 @@ offset_top = 223.0
 offset_right = 211.0
 offset_bottom = 253.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_fonts/normal_font = ExtResource("4_i6gfd")
+theme_override_fonts/normal_font = ExtResource("4_ss1f6")
 text = "Sp. Atk: .5"
 
 [node name="SpecialDefense" type="RichTextLabel" parent="IVHolder"]
@@ -155,7 +155,7 @@ offset_top = 180.0
 offset_right = 101.0
 offset_bottom = 210.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_fonts/normal_font = ExtResource("4_i6gfd")
+theme_override_fonts/normal_font = ExtResource("4_ss1f6")
 text = "Sp. Def: .5"
 
 [node name="Speed" type="RichTextLabel" parent="IVHolder"]
@@ -165,7 +165,7 @@ offset_top = 56.0
 offset_right = 109.0
 offset_bottom = 86.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_fonts/normal_font = ExtResource("4_i6gfd")
+theme_override_fonts/normal_font = ExtResource("4_ss1f6")
 text = "Spd: .5"
 
 [node name="Title" type="RichTextLabel" parent="IVHolder"]
@@ -174,7 +174,7 @@ offset_left = -36.0
 offset_top = -64.0
 offset_right = 322.0
 offset_bottom = 11.0
-theme_override_fonts/normal_font = ExtResource("4_i6gfd")
+theme_override_fonts/normal_font = ExtResource("4_ss1f6")
 theme_override_font_sizes/normal_font_size = 80
 text = "IV's"
 horizontal_alignment = 1
@@ -227,7 +227,7 @@ offset_top = 14.0
 offset_right = 220.0
 offset_bottom = 44.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_fonts/normal_font = ExtResource("4_i6gfd")
+theme_override_fonts/normal_font = ExtResource("4_ss1f6")
 text = "HP: 100"
 
 [node name="Attack" type="RichTextLabel" parent="StatHolder"]
@@ -237,7 +237,7 @@ offset_top = 66.0
 offset_right = 324.0
 offset_bottom = 96.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_fonts/normal_font = ExtResource("4_i6gfd")
+theme_override_fonts/normal_font = ExtResource("4_ss1f6")
 text = "Atk: .5"
 
 [node name="Defense" type="RichTextLabel" parent="StatHolder"]
@@ -247,7 +247,7 @@ offset_top = 168.0
 offset_right = 319.0
 offset_bottom = 198.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_fonts/normal_font = ExtResource("4_i6gfd")
+theme_override_fonts/normal_font = ExtResource("4_ss1f6")
 text = "Def: .5"
 
 [node name="SpecialAttack" type="RichTextLabel" parent="StatHolder"]
@@ -257,7 +257,7 @@ offset_top = 223.0
 offset_right = 211.0
 offset_bottom = 253.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_fonts/normal_font = ExtResource("4_i6gfd")
+theme_override_fonts/normal_font = ExtResource("4_ss1f6")
 text = "Sp. Atk: .5"
 
 [node name="SpecialDefense" type="RichTextLabel" parent="StatHolder"]
@@ -267,7 +267,7 @@ offset_top = 180.0
 offset_right = 101.0
 offset_bottom = 210.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_fonts/normal_font = ExtResource("4_i6gfd")
+theme_override_fonts/normal_font = ExtResource("4_ss1f6")
 text = "Sp. Def: .5"
 
 [node name="Speed" type="RichTextLabel" parent="StatHolder"]
@@ -277,7 +277,7 @@ offset_top = 56.0
 offset_right = 109.0
 offset_bottom = 86.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_fonts/normal_font = ExtResource("4_i6gfd")
+theme_override_fonts/normal_font = ExtResource("4_ss1f6")
 text = "Spd: .5"
 
 [node name="Title" type="RichTextLabel" parent="StatHolder"]
@@ -286,7 +286,7 @@ offset_left = -36.0
 offset_top = -64.0
 offset_right = 322.0
 offset_bottom = 11.0
-theme_override_fonts/normal_font = ExtResource("4_i6gfd")
+theme_override_fonts/normal_font = ExtResource("4_ss1f6")
 theme_override_font_sizes/normal_font_size = 80
 text = "Stats"
 horizontal_alignment = 1
@@ -297,27 +297,27 @@ offset_left = 16.0
 offset_top = 3.0
 offset_right = 374.0
 offset_bottom = 78.0
-theme_override_fonts/normal_font = ExtResource("4_i6gfd")
+theme_override_fonts/normal_font = ExtResource("4_ss1f6")
 theme_override_font_sizes/normal_font_size = 96
 text = "Timberry"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Move" parent="." instance=ExtResource("5_wue6w")]
+[node name="Move" parent="." instance=ExtResource("5_wwoys")]
 offset_left = 40.0
 offset_right = 240.0
 
-[node name="Move2" parent="." instance=ExtResource("5_wue6w")]
+[node name="Move2" parent="." instance=ExtResource("5_wwoys")]
 offset_left = 486.0
 offset_right = 686.0
 
-[node name="Move3" parent="." instance=ExtResource("5_wue6w")]
+[node name="Move3" parent="." instance=ExtResource("5_wwoys")]
 offset_left = 40.0
 offset_top = 443.0
 offset_right = 240.0
 offset_bottom = 503.0
 
-[node name="Move4" parent="." instance=ExtResource("5_wue6w")]
+[node name="Move4" parent="." instance=ExtResource("5_wwoys")]
 offset_left = 486.0
 offset_top = 443.0
 offset_right = 686.0
@@ -331,7 +331,7 @@ offset_top = 4.0
 offset_right = 957.0
 offset_bottom = 44.0
 mouse_filter = 2
-script = ExtResource("6_qetgw")
+script = ExtResource("6_p8sgs")
 
 [node name="ColorRect" type="ColorRect" parent="Close"]
 layout_mode = 0
@@ -356,7 +356,7 @@ offset_top = -8.0
 offset_right = 49.0
 offset_bottom = 39.0
 mouse_filter = 2
-theme_override_fonts/normal_font = ExtResource("4_i6gfd")
+theme_override_fonts/normal_font = ExtResource("4_ss1f6")
 theme_override_font_sizes/normal_font_size = 64
 text = "x"
 horizontal_alignment = 1

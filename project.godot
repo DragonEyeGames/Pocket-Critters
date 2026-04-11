@@ -21,6 +21,7 @@ GameManager="*res://Scripts/GameManager.gd"
 SignalBus="*res://Scripts/SignalBus.gd"
 Music="*res://Scenes/music.tscn"
 Stats="*res://Scenes/stats.tscn"
+Info="*res://Scenes/info.tscn"
 
 [display]
 

@@ -1,10 +1,10 @@
 [gd_scene load_steps=7 format=3 uid="uid://ds4a5n5wqh6aw"]
 
 [ext_resource type="PackedScene" uid="uid://3ijnqbla51yb" path="res://Scenes/pokemonDisplay.tscn" id="1_ebpty"]
-[ext_resource type="Script" uid="uid://cqqxqji1xd4vn" path="res://Scenes/pcStorage.gd" id="1_ety20"]
+[ext_resource type="Script" uid="uid://cqqxqji1xd4vn" path="res://Scripts/pcStorage.gd" id="1_ety20"]
 [ext_resource type="Shader" uid="uid://bomfvo6o4mvg6" path="res://Shaders/flash.gdshader" id="2_ety20"]
 [ext_resource type="FontFile" uid="uid://cnjtjvjhjjxia" path="res://Fonts/ByteBounce.ttf" id="4_2m42m"]
-[ext_resource type="Script" uid="uid://c5ucw1t5i070d" path="res://Scenes/optionsButton.gd" id="5_45e81"]
+[ext_resource type="Script" uid="uid://c5ucw1t5i070d" path="res://Scripts/optionsButton.gd" id="5_45e81"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_rpafq"]
 resource_local_to_scene = true

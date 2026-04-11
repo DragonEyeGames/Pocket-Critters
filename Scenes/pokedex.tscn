@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://cmsdeqmlib8fv"]
 
-[ext_resource type="Script" uid="uid://cui5hlidoyc0h" path="res://Scenes/pokedex.gd" id="1_c65m6"]
+[ext_resource type="Script" uid="uid://cui5hlidoyc0h" path="res://Scripts/pokedex.gd" id="1_c65m6"]
 [ext_resource type="PackedScene" uid="uid://o4aurj5ha233" path="res://Scenes/pokedex_slot.tscn" id="2_e6p7r"]
 
 [node name="Pokedex" type="Control"]

@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://dxyb5wdk6pwua"]
 
 [ext_resource type="Texture2D" uid="uid://bx6vfrgwyhgj2" path="res://Assets/Interior/Part 2 copiar.png" id="1_m1ujp"]
-[ext_resource type="Script" uid="uid://dgmox1tpkdppe" path="res://Levels/computer.gd" id="2_7h0tq"]
+[ext_resource type="Script" uid="uid://dgmox1tpkdppe" path="res://Scripts/computer.gd" id="2_7h0tq"]
 [ext_resource type="Texture2D" uid="uid://dcuil2enpgqeu" path="res://Assets/Interior/School.png" id="3_3cxpa"]
 [ext_resource type="PackedScene" uid="uid://ed3p1dmj7la1" path="res://Scenes/screen.tscn" id="3_7h0tq"]
 

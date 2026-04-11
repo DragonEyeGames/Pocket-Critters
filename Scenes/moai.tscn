@@ -1,6 +1,6 @@
 [gd_scene load_steps=14 format=3 uid="uid://dfc31rvi6sc8f"]
 
-[ext_resource type="Script" uid="uid://cqyc33gsyiun1" path="res://Levels/moai.gd" id="1_qpgin"]
+[ext_resource type="Script" uid="uid://cqyc33gsyiun1" path="res://Scripts/moai.gd" id="1_qpgin"]
 [ext_resource type="Script" uid="uid://c3odxqj7xy866" path="res://Resources/MoveData.gd" id="2_4rfy7"]
 [ext_resource type="Texture2D" uid="uid://clyuwhdv3du75" path="res://Assets/Beach/Moai.png" id="2_26gk3"]
 [ext_resource type="Script" uid="uid://crp3g76avkl7g" path="res://Scripts/dialogue.gd" id="3_4rfy7"]
