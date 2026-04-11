@@ -1,25 +1,14 @@
-[gd_scene load_steps=21 format=3 uid="uid://o4aurj5ha233"]
+[gd_scene load_steps=5 format=3 uid="uid://o4aurj5ha233"]
 
 [ext_resource type="Script" uid="uid://dq4jkmq4402hr" path="res://Scripts/pokedex_slot.gd" id="1_5lyfu"]
-[ext_resource type="Script" uid="uid://v80h5lclvn1j" path="res://Scripts/pokemonDisplay.gd" id="2_t6w81"]
-[ext_resource type="Texture2D" uid="uid://bbctwkye4ujb4" path="res://Fakemon-PNG/timberry.png" id="3_3em6j"]
-[ext_resource type="Texture2D" uid="uid://diwbntfmt43qj" path="res://Fakemon-PNG/pilfetch.png" id="4_oywqy"]
-[ext_resource type="Texture2D" uid="uid://cy5ixt1h2jqox" path="res://Fakemon-PNG/geckrow.png" id="5_xf0vc"]
-[ext_resource type="Texture2D" uid="uid://dmggf8l828rn7" path="res://Fakemon-PNG/sligment.png" id="6_1gy7e"]
-[ext_resource type="Texture2D" uid="uid://bk8ot7cpwdae3" path="res://Fakemon-PNG/pasturlo.png" id="8_v6207"]
-[ext_resource type="Texture2D" uid="uid://dhh1fa6gyyhfj" path="res://Fakemon-PNG/baoby.png" id="9_t7eqp"]
-[ext_resource type="Texture2D" uid="uid://cx0gdn7okrdob" path="res://Fakemon-PNG/varmot.png" id="10_e4ba0"]
-[ext_resource type="Texture2D" uid="uid://con11d3l6ipsl" path="res://Fakemon-PNG/merlicun.png" id="11_t6w81"]
-[ext_resource type="Texture2D" uid="uid://d3ckwj4klm3xv" path="res://Fakemon-PNG/pompet.png" id="12_3em6j"]
-[ext_resource type="Texture2D" uid="uid://b7kb5xv1u1k3n" path="res://Fakemon-PNG/saurky.png" id="13_oywqy"]
-[ext_resource type="Texture2D" uid="uid://dcu31aa4er1iu" path="res://Fakemon-PNG/dampurr.png" id="14_xf0vc"]
-[ext_resource type="Texture2D" uid="uid://bqfx8jaeuhf05" path="res://Fakemon-PNG/bonfur.png" id="15_1gy7e"]
-[ext_resource type="Texture2D" uid="uid://blbo0dto4hfos" path="res://Fakemon-PNG/lollybog.png" id="16_v63f4"]
-[ext_resource type="Texture2D" uid="uid://delt5pm1csr0u" path="res://Fakemon-PNG/kankwart.png" id="17_v6207"]
-[ext_resource type="Texture2D" uid="uid://7n0duhe3u8d6" path="res://Fakemon-PNG/minamai.png" id="18_3em6j"]
-[ext_resource type="Texture2D" uid="uid://rurari3qfhj8" path="res://Fakemon-PNG/baulder.png" id="18_t7eqp"]
-[ext_resource type="Texture2D" uid="uid://qyx746qq2sqh" path="res://Fakemon-PNG/goanopy.png" id="19_oywqy"]
-[ext_resource type="Texture2D" uid="uid://cml2wh3mmoqxb" path="res://Fakemon-PNG/sillennium.png" id="20_oywqy"]
+[ext_resource type="PackedScene" uid="uid://3ijnqbla51yb" path="res://Scenes/pokemonDisplay.tscn" id="2_k7twk"]
+[ext_resource type="Shader" uid="uid://bomfvo6o4mvg6" path="res://Shaders/flash.gdshader" id="3_yhhum"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_0p42q"]
+resource_local_to_scene = true
+shader = ExtResource("3_yhhum")
+shader_parameter/flash_color = Color(1, 1, 1, 1)
+shader_parameter/flash_value = 0.0
 
 [node name="Pokedex Slot" type="Control"]
 custom_minimum_size = Vector2(100, 100)
@@ -35,89 +24,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Pokemon" type="Node2D" parent="."]
-position = Vector2(48, 50)
-scale = Vector2(1.735, 1.735)
-script = ExtResource("2_t6w81")
-
-[node name="Front" type="Node2D" parent="Pokemon"]
-
-[node name="Timberry" type="Sprite2D" parent="Pokemon/Front"]
-texture = ExtResource("3_3em6j")
-
-[node name="Pilfetch" type="Sprite2D" parent="Pokemon/Front"]
-visible = false
-texture = ExtResource("4_oywqy")
-
-[node name="Geckrow" type="Sprite2D" parent="Pokemon/Front"]
-visible = false
-texture = ExtResource("5_xf0vc")
-
-[node name="Sligment" type="Sprite2D" parent="Pokemon/Front"]
-visible = false
-texture = ExtResource("6_1gy7e")
-
-[node name="Pasturlo" type="Sprite2D" parent="Pokemon/Front"]
-visible = false
-position = Vector2(1.1527377, 0.57636887)
-scale = Vector2(0.895, 0.895)
-texture = ExtResource("8_v6207")
-
-[node name="Baoby" type="Sprite2D" parent="Pokemon/Front"]
-visible = false
-texture = ExtResource("9_t7eqp")
-
-[node name="Varmot" type="Sprite2D" parent="Pokemon/Front"]
-visible = false
-texture = ExtResource("10_e4ba0")
-
-[node name="Merlicun" type="Sprite2D" parent="Pokemon/Front"]
-visible = false
-texture = ExtResource("11_t6w81")
-
-[node name="Pompet" type="Sprite2D" parent="Pokemon/Front"]
-visible = false
-texture = ExtResource("12_3em6j")
-
-[node name="Saurky" type="Sprite2D" parent="Pokemon/Front"]
-visible = false
-scale = Vector2(0.855, 0.855)
-texture = ExtResource("13_oywqy")
-
-[node name="Dampurr" type="Sprite2D" parent="Pokemon/Front"]
-visible = false
-texture = ExtResource("14_xf0vc")
-
-[node name="Bonfur" type="Sprite2D" parent="Pokemon/Front"]
-visible = false
-texture = ExtResource("15_1gy7e")
-
-[node name="Lollybog" type="Sprite2D" parent="Pokemon/Front"]
-visible = false
-position = Vector2(0.57636887, 0.57636887)
-scale = Vector2(0.745, 0.745)
-texture = ExtResource("16_v63f4")
-
-[node name="Kankwart" type="Sprite2D" parent="Pokemon/Front"]
-visible = false
-texture = ExtResource("17_v6207")
-
-[node name="Baulder" type="Sprite2D" parent="Pokemon/Front"]
-visible = false
-texture = ExtResource("18_t7eqp")
-
-[node name="Minamai" type="Sprite2D" parent="Pokemon/Front"]
-visible = false
-texture = ExtResource("18_3em6j")
-
-[node name="Goanopy" type="Sprite2D" parent="Pokemon/Front"]
-visible = false
-position = Vector2(1.1527376, 0)
-scale = Vector2(0.71, 0.71)
-texture = ExtResource("19_oywqy")
-
-[node name="Sillennium" type="Sprite2D" parent="Pokemon/Front"]
-visible = false
-position = Vector2(1.1527376, 0)
-scale = Vector2(0.71, 0.71)
-texture = ExtResource("20_oywqy")
+[node name="Pokemon" parent="." instance=ExtResource("2_k7twk")]
+material = SubResource("ShaderMaterial_0p42q")
+position = Vector2(49, 50)
+scale = Vector2(1.1, 1.1)

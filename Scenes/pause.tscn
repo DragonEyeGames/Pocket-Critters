@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://dp2xe7ys1trpk" path="res://Scripts/pause.gd" id="1_aq7p1"]
 [ext_resource type="PackedScene" uid="uid://csi5giv4qbgfx" path="res://Scenes/team_slot.tscn" id="2_6eyaj"]
 [ext_resource type="PackedScene" uid="uid://dsf85ixufbmqg" path="res://Scenes/reorder_slot.tscn" id="3_5a6ek"]
-[ext_resource type="PackedScene" uid="uid://o4aurj5ha233" path="res://Scenes/pokedex_slot.tscn" id="4_e0jm0"]
+[ext_resource type="PackedScene" uid="uid://cmsdeqmlib8fv" path="res://Scenes/pokedex.tscn" id="4_3fojq"]
 [ext_resource type="AudioStream" uid="uid://c8uubdf078rn2" path="res://New Sounds/healed.mp3" id="5_3fojq"]
 
 [node name="Pause" type="CanvasLayer"]
@@ -356,109 +356,7 @@ offset_bottom = 256.0
 theme_override_font_sizes/font_size = 26
 text = "No"
 
-[node name="Pokedex" type="Control" parent="."]
-visible = false
-layout_mode = 3
-anchors_preset = 0
-offset_left = 32.0
-offset_top = 38.0
-offset_right = 727.0
-offset_bottom = 494.0
-
-[node name="ColorRect" type="ColorRect" parent="Pokedex"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0.80784315, 0.80784315, 0.80784315, 1)
-
-[node name="ColorRect2" type="ColorRect" parent="Pokedex"]
-z_index = -1
-layout_mode = 0
-offset_left = -124.0
-offset_top = -85.0
-offset_right = 974.0
-offset_bottom = 538.0
-color = Color(0, 0, 0, 0.22745098)
-
-[node name="RichTextLabel" type="RichTextLabel" parent="Pokedex"]
-layout_mode = 0
-offset_right = 644.0
-offset_bottom = 69.0
-theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/normal_font_size = 39
-text = "Critterdex"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="GridContainer" type="GridContainer" parent="Pokedex"]
-layout_mode = 0
-offset_left = 72.0
-offset_top = 96.0
-offset_right = 588.0
-offset_bottom = 404.0
-columns = 5
-
-[node name="Pokedex Slot" parent="Pokedex/GridContainer" instance=ExtResource("4_e0jm0")]
-layout_mode = 2
-
-[node name="Pokedex Slot2" parent="Pokedex/GridContainer" instance=ExtResource("4_e0jm0")]
-layout_mode = 2
-pokemon = 3
-
-[node name="Pokedex Slot3" parent="Pokedex/GridContainer" instance=ExtResource("4_e0jm0")]
-layout_mode = 2
-pokemon = 5
-
-[node name="Pokedex Slot4" parent="Pokedex/GridContainer" instance=ExtResource("4_e0jm0")]
-layout_mode = 2
-pokemon = 6
-
-[node name="Pokedex Slot5" parent="Pokedex/GridContainer" instance=ExtResource("4_e0jm0")]
-layout_mode = 2
-pokemon = 8
-
-[node name="Pokedex Slot6" parent="Pokedex/GridContainer" instance=ExtResource("4_e0jm0")]
-layout_mode = 2
-pokemon = 11
-
-[node name="Pokedex Slot7" parent="Pokedex/GridContainer" instance=ExtResource("4_e0jm0")]
-layout_mode = 2
-pokemon = 14
-
-[node name="Pokedex Slot8" parent="Pokedex/GridContainer" instance=ExtResource("4_e0jm0")]
-layout_mode = 2
-pokemon = 16
-
-[node name="Pokedex Slot9" parent="Pokedex/GridContainer" instance=ExtResource("4_e0jm0")]
-layout_mode = 2
-pokemon = 17
-
-[node name="Pokedex Slot10" parent="Pokedex/GridContainer" instance=ExtResource("4_e0jm0")]
-layout_mode = 2
-pokemon = 19
-
-[node name="Pokedex Slot11" parent="Pokedex/GridContainer" instance=ExtResource("4_e0jm0")]
-layout_mode = 2
-pokemon = 21
-
-[node name="Pokedex Slot12" parent="Pokedex/GridContainer" instance=ExtResource("4_e0jm0")]
-layout_mode = 2
-pokemon = 24
-
-[node name="Pokedex Slot13" parent="Pokedex/GridContainer" instance=ExtResource("4_e0jm0")]
-layout_mode = 2
-pokemon = 39
-
-[node name="Pokedex Slot14" parent="Pokedex/GridContainer" instance=ExtResource("4_e0jm0")]
-layout_mode = 2
-pokemon = 46
-
-[node name="Pokedex Slot15" parent="Pokedex/GridContainer" instance=ExtResource("4_e0jm0")]
-layout_mode = 2
-pokemon = 33
+[node name="Pokedex" parent="." instance=ExtResource("4_3fojq")]
 
 [node name="Save" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_3fojq")
