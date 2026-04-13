@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://darlxafb3h648"]
+[gd_scene load_steps=19 format=3 uid="uid://darlxafb3h648"]
 
 [ext_resource type="Script" uid="uid://dik8xoc5fx31p" path="res://Scenes/type.gd" id="1_7ak2c"]
 [ext_resource type="Texture2D" uid="uid://7wj1ubb3bdnp" path="res://Assets/PokemonTypes/normal.png" id="2_4cgvm"]
@@ -14,11 +14,202 @@
 [ext_resource type="Texture2D" uid="uid://duvds5nvxaa2v" path="res://Assets/PokemonTypes/water.png" id="12_peky2"]
 [ext_resource type="FontFile" uid="uid://cnjtjvjhjjxia" path="res://Fonts/ByteBounce.ttf" id="13_67rww"]
 
+[sub_resource type="Animation" id="Animation_7ak2c"]
+resource_name = "Grass"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Name:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["Grass"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Types/Grass:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Color:color")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.52899003, 0.63, 0.4662, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_4cgvm"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Name:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["Grass"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Types/Grass:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Color:color")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.52899003, 0.63, 0.4662, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Types/Fire:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Types/Ground:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_lwroa"]
+resource_name = "Fire"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Types/Fire:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Name:text")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["Fire"]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Color:color")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.9, 0.423, 0.43094987, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_ir2n7"]
+resource_name = "Ground"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Types/Ground:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Name:text")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["Ground"]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Color:color")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.57, 0.43111, 0.3249, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_85ahu"]
+_data = {
+&"Fire": SubResource("Animation_lwroa"),
+&"Grass": SubResource("Animation_7ak2c"),
+&"Ground": SubResource("Animation_ir2n7"),
+&"RESET": SubResource("Animation_4cgvm")
+}
+
 [node name="Type" type="Node2D"]
 scale = Vector2(1.1, 1.1)
 script = ExtResource("1_7ak2c")
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="Color" type="ColorRect" parent="."]
 offset_right = 146.0
 offset_bottom = 40.0
 color = Color(0.52899003, 0.63, 0.4662, 1)
@@ -32,6 +223,7 @@ visible = false
 texture = ExtResource("2_4cgvm")
 
 [node name="Grass" type="Sprite2D" parent="Types"]
+visible = false
 texture = ExtResource("3_lwroa")
 
 [node name="Flying" type="Sprite2D" parent="Types"]
@@ -70,7 +262,7 @@ texture = ExtResource("11_uuopj")
 visible = false
 texture = ExtResource("12_peky2")
 
-[node name="RichTextLabel" type="RichTextLabel" parent="."]
+[node name="Name" type="RichTextLabel" parent="."]
 offset_left = 37.0
 offset_right = 146.0
 offset_bottom = 40.0
@@ -80,3 +272,8 @@ theme_override_font_sizes/normal_font_size = 32
 text = "Grass"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="TypeAnimator" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_85ahu")
+}

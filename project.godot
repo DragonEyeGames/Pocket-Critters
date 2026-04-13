@@ -22,6 +22,7 @@ SignalBus="*res://Scripts/SignalBus.gd"
 Music="*res://Scenes/music.tscn"
 Stats="*res://Scenes/stats.tscn"
 Info="*res://Scenes/info.tscn"
+PokedexText="*res://Scripts/pokedexText.gd"
 
 [display]
 

@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://3ijnqbla51yb" path="res://Scenes/pokemonDisplay.tscn" id="1_ehh3d"]
 [ext_resource type="Script" uid="uid://bik0ai7tpayrk" path="res://Scenes/info.gd" id="1_nmlck"]
 [ext_resource type="Shader" uid="uid://bomfvo6o4mvg6" path="res://Shaders/flash.gdshader" id="2_lwp2e"]
-[ext_resource type="Resource" uid="uid://dashcyuf7fti6" path="res://Pokemon/varanitor.tres" id="2_v0v1k"]
+[ext_resource type="Resource" uid="uid://doppuo8xvc1pl" path="res://Pokemon/botanine.tres" id="2_v0v1k"]
 [ext_resource type="FontFile" uid="uid://cnjtjvjhjjxia" path="res://Fonts/ByteBounce.ttf" id="4_i6gfd"]
 [ext_resource type="PackedScene" uid="uid://darlxafb3h648" path="res://Scenes/typeDisplay.tscn" id="5_wjprj"]
 [ext_resource type="Script" uid="uid://dlvt2dm6p6f2g" path="res://Scripts/closeButton.gd" id="6_qetgw"]
@@ -69,7 +69,7 @@ material = SubResource("ShaderMaterial_i6gfd")
 position = Vector2(142, 146)
 scale = Vector2(3.715, 3.715)
 
-[node name="Classification" type="Control" parent="."]
+[node name="Title" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
 offset_left = 51.0
@@ -77,14 +77,14 @@ offset_top = 166.0
 offset_right = 332.0
 offset_bottom = 447.0
 
-[node name="Border" type="ColorRect" parent="Classification"]
+[node name="Border" type="ColorRect" parent="Title"]
 layout_mode = 0
 offset_top = 203.0
 offset_right = 281.0
 offset_bottom = 261.0
 color = Color(0, 0, 0, 1)
 
-[node name="ColorRect" type="ColorRect" parent="Classification"]
+[node name="ColorRect" type="ColorRect" parent="Title"]
 layout_mode = 0
 offset_left = 3.0
 offset_top = 206.0
@@ -92,13 +92,13 @@ offset_right = 278.0
 offset_bottom = 257.0
 color = Color(0.91228896, 0.9122889, 0.91228884, 1)
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Classification"]
+[node name="title" type="RichTextLabel" parent="Title"]
 layout_mode = 0
-offset_left = 52.0
-offset_top = 216.99997
-offset_right = 252.74074
-offset_bottom = 251.81479
-scale = Vector2(1.35, 1.35)
+offset_left = 17.300003
+offset_top = 209.50002
+offset_right = 265.4818
+offset_bottom = 254.04546
+scale = Vector2(1.1, 1.1)
 pivot_offset = Vector2(133, 25)
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_fonts/normal_font = ExtResource("4_i6gfd")
@@ -129,7 +129,7 @@ offset_right = 544.0
 offset_bottom = 278.0
 color = Color(0.91228896, 0.9122889, 0.91228884, 1)
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Description"]
+[node name="description" type="RichTextLabel" parent="Description"]
 layout_mode = 0
 offset_left = 13.0
 offset_top = 10.0
@@ -141,15 +141,14 @@ theme_override_font_sizes/normal_font_size = 48
 text = "Timberry loves to frollick in forests. It can often be found near berry bushes, getting a light snack. It is a common first critter amoung yougsters because of its cute appearance."
 
 [node name="Name" type="RichTextLabel" parent="."]
-offset_left = 16.0
+offset_left = 31.0
 offset_top = 3.0
-offset_right = 374.0
+offset_right = 759.0
 offset_bottom = 78.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_fonts/normal_font = ExtResource("4_i6gfd")
 theme_override_font_sizes/normal_font_size = 96
 text = "Timberry"
-horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Close" type="Control" parent="."]
