@@ -210,5 +210,23 @@ position = Vector2(4, 4)
 [node name="Type2" parent="Types" instance=ExtResource("5_wjprj")]
 position = Vector2(170, 4)
 
+[node name="Left" type="Button" parent="."]
+offset_left = 371.0
+offset_top = 446.0
+offset_right = 389.0
+offset_bottom = 477.0
+scale = Vector2(1.825, 1.825)
+text = "<"
+
+[node name="Right" type="Button" parent="."]
+offset_left = 522.0
+offset_top = 448.00003
+offset_right = 540.0
+offset_bottom = 479.00003
+scale = Vector2(1.825, 1.825)
+text = ">"
+
 [connection signal="mouse_entered" from="Close/MouseDetector" to="Close" method="_on_mouse_detector_mouse_entered"]
 [connection signal="mouse_exited" from="Close/MouseDetector" to="Close" method="_on_mouse_detector_mouse_exited"]
+[connection signal="pressed" from="Left" to="." method="lastPage"]
+[connection signal="pressed" from="Right" to="." method="nextPage"]
