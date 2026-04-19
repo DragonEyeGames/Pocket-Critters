@@ -53,5 +53,18 @@ var pokemonTitle = {
 var pokemonDescription = {
 	GameManager.pokemon.Timberry: "Timberry loves to frollick in forests. It can often be found near berry bushes, getting a light snack. It is a common first critter among yougsters because of its cute appearance.",
 	GameManager.pokemon.Howliage: "Howliage start to assume more responsibilities in its packs. It now has to gather berries for it's pack. This critter can often be seen eating berries, as they are its favorite snack.",
-	GameManager.pokemon.Botanine: "Botanine is the leader of its pack. It takes care of the Timberrys and sends the howliage on missions. Without a botanine, the pack would quickly fall apart."
+	GameManager.pokemon.Botanine: "Botanine is the leader of its pack. It takes care of the Timberrys and sends the howliage on missions. Without a botanine, the pack would quickly fall apart.",
+	GameManager.pokemon.Pilfetch: "This sneaky little bird loves to steal nuts and berries from other critters. It can often be found in homes other than its own. Some experts think they might not even have their own home.",
+	GameManager.pokemon.Criminalis: "This bird is the ringleader of criminal activities. It is often seen in groups with pilfetch plundering stores of food. Many critters have learned of its evil doings and stay away though.",
+	GameManager.pokemon.Geckrow: "This adorable little critter is a fan favorite because of its cute appearance. It seems to always be happy, even if it just lost a battle. It likes to make its home in the mud.",
+	GameManager.pokemon.Goanopy: "This lizard likes to look out for the smaller critters in the forest. It protects them from fiends such as pilfetch and criminalis. It is hardly intimidating, but scares them away nonetheless.",
+	GameManager.pokemon.Varanitor: "This critter is the protector of the forest. It keeps everyone in check, even the maizotaurs. Every critter in the forests have learned that what a Varanitor says goes.",
+	GameManager.pokemon.Sligment: "This little slug loves the rain. It is easier to spot when it is actively raining. It slithers around the forest floor and leaves trails that youngsters like to follow.",
+	GameManager.pokemon.Viscolor: "No longer an adorable slug, viscolor's shell has grown. It is now fully encased in an impenetrable fortress. Many trainers are sad to see their sligment go, but what comes next makes up for it.",
+	GameManager.pokemon.Gelescent: "Now emerged from its shell, Gelescent is fully grown. It has grown a pearl which is the source of its power. While it would fetch a high price at a shop, it is highly illegal to take it.",
+	GameManager.pokemon.Pasturlo: "Pasturlo seems to always be asleep. For this reason, it has become a symbol of rest and happiness. It lives a quiet life, and is often seen in herds. They move around very little.",
+	GameManager.pokemon.Brambull: "Brambull is the more active version of Pasturlo. It is hard to tell if it is awake or not, so predators often stay away just in case. They protect the snoozing Pasturlo from any harm.",
+	GameManager.pokemon.Maizotaur: "These incredibly aggressive critters are the opposite of their predecessors. They are always running around, and often get into fights. They protect their herd, but are often found in other places.",
+	GameManager.pokemon.Baoby: "This cute little guy little guy can often be found near forest floors. It wanders around, looking for a nice ray of sunshine. After finding it, it will stay there for a while.",
+	GameManager.pokemon.Baobaraffe: "Now that their neck is taller, Baobaraffe can get more sun. This fills them with confidence, which often gets them in trouble. They are often seen stomping through crops for the fun of it."
 }

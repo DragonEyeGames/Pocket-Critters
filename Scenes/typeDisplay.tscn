@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://darlxafb3h648"]
+[gd_scene load_steps=42 format=3 uid="uid://darlxafb3h648"]
 
 [ext_resource type="Script" uid="uid://dik8xoc5fx31p" path="res://Scenes/type.gd" id="1_7ak2c"]
 [ext_resource type="Texture2D" uid="uid://7wj1ubb3bdnp" path="res://Assets/PokemonTypes/normal.png" id="2_4cgvm"]
@@ -6,13 +6,20 @@
 [ext_resource type="Texture2D" uid="uid://dcbad7vydy0wa" path="res://Assets/PokemonTypes/flying.png" id="4_ir2n7"]
 [ext_resource type="Texture2D" uid="uid://drpdahjorb8xu" path="res://Assets/PokemonTypes/dark.png" id="5_85ahu"]
 [ext_resource type="Texture2D" uid="uid://bolnyus8kljn2" path="res://Assets/PokemonTypes/bug.png" id="6_apsdo"]
+[ext_resource type="Texture2D" uid="uid://dljlp2du82mom" path="res://Assets/PokemonTypes/electric.png" id="7_5h73l"]
 [ext_resource type="Texture2D" uid="uid://bwer0db82wicq" path="res://Assets/PokemonTypes/ground.png" id="7_wvyc4"]
 [ext_resource type="Texture2D" uid="uid://dq0djsvh8vuac" path="res://Assets/PokemonTypes/dragon.png" id="8_5h73l"]
+[ext_resource type="Texture2D" uid="uid://q6brtbq7co5c" path="res://Assets/PokemonTypes/ghost.png" id="8_j05vk"]
 [ext_resource type="Texture2D" uid="uid://bkhylnp658apc" path="res://Assets/PokemonTypes/fairy.png" id="9_j05vk"]
+[ext_resource type="Texture2D" uid="uid://15d4j3vegt63" path="res://Assets/PokemonTypes/ice.png" id="9_to5ct"]
 [ext_resource type="Texture2D" uid="uid://tngu8uybt6mh" path="res://Assets/PokemonTypes/fighting.png" id="10_to5ct"]
+[ext_resource type="Texture2D" uid="uid://dthu5y8m5ki6u" path="res://Assets/PokemonTypes/poison.png" id="10_uuopj"]
+[ext_resource type="Texture2D" uid="uid://bqkiau0586pim" path="res://Assets/PokemonTypes/psychic.png" id="11_peky2"]
 [ext_resource type="Texture2D" uid="uid://cbqo5vgmaal3v" path="res://Assets/PokemonTypes/fire.png" id="11_uuopj"]
+[ext_resource type="Texture2D" uid="uid://dgyd81a1jbovs" path="res://Assets/PokemonTypes/rock.png" id="12_67rww"]
 [ext_resource type="Texture2D" uid="uid://duvds5nvxaa2v" path="res://Assets/PokemonTypes/water.png" id="12_peky2"]
 [ext_resource type="FontFile" uid="uid://cnjtjvjhjjxia" path="res://Fonts/ByteBounce.ttf" id="13_67rww"]
+[ext_resource type="Texture2D" uid="uid://hd01i41f1e2s" path="res://Assets/PokemonTypes/steel.png" id="13_bp87u"]
 
 [sub_resource type="Animation" id="Animation_apsdo"]
 resource_name = "Dark"
@@ -389,6 +396,102 @@ tracks/11/keys = {
 "update": 1,
 "values": [false]
 }
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("Types/Fairy:visible")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("Types/Steel:visible")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("Types/Poison:visible")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("Types/Ghost:visible")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("Types/Psychic:visible")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("Types/Ice:visible")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("Types/Electric:visible")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/19/type = "value"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath("Types/Rock:visible")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
 
 [sub_resource type="Animation" id="Animation_5h73l"]
 resource_name = "Bug"
@@ -590,19 +693,347 @@ tracks/2/keys = {
 "values": [Color(0.46240002, 0.4877867, 0.68, 1)]
 }
 
+[sub_resource type="Animation" id="Animation_67rww"]
+resource_name = "Fairy"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Types/Fairy:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Color:color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.67, 0.4355, 0.67, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Name:text")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["Fairy"]
+}
+
+[sub_resource type="Animation" id="Animation_bp87u"]
+resource_name = "Steel"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Types/Steel:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Color:color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.4389, 0.53503996, 0.57, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Name:text")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["Steel"]
+}
+
+[sub_resource type="Animation" id="Animation_43jec"]
+resource_name = "Poison"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Types/Poison:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Color:color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.483625, 0.41869998, 0.53, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Name:text")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["Poison"]
+}
+
+[sub_resource type="Animation" id="Animation_fp4cf"]
+resource_name = "Ghost"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Types/Ghost:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Color:color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.38, 0.3154, 0.38, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Name:text")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["Ghost"]
+}
+
+[sub_resource type="Animation" id="Animation_5nn72"]
+resource_name = "Psychic"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Types/Psychic:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Color:color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.71, 0.46149996, 0.54019165, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Name:text")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["Psychic"]
+}
+
+[sub_resource type="Animation" id="Animation_12vlg"]
+resource_name = "Ice"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Types/Ice:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Color:color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.4092, 0.60984, 0.66, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Name:text")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["Ice"]
+}
+
+[sub_resource type="Animation" id="Animation_0kqko"]
+resource_name = "Electric"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Types/Electric:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Color:color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.73, 0.66868, 0.4672, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Name:text")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["Electric"]
+}
+
+[sub_resource type="Animation" id="Animation_2bic4"]
+resource_name = "Rock"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Types/Rock:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Color:color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.51, 0.50184, 0.4488, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Name:text")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["Rock"]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_85ahu"]
 _data = {
 &"Bug": SubResource("Animation_5h73l"),
 &"Dark": SubResource("Animation_apsdo"),
 &"Dragon": SubResource("Animation_peky2"),
+&"Electric": SubResource("Animation_0kqko"),
+&"Fairy": SubResource("Animation_67rww"),
 &"Fighting": SubResource("Animation_to5ct"),
 &"Fire": SubResource("Animation_lwroa"),
 &"Flying": SubResource("Animation_85ahu"),
+&"Ghost": SubResource("Animation_fp4cf"),
 &"Grass": SubResource("Animation_7ak2c"),
 &"Ground": SubResource("Animation_ir2n7"),
+&"Ice": SubResource("Animation_12vlg"),
 &"Nonexistent": SubResource("Animation_wvyc4"),
 &"Normal": SubResource("Animation_uuopj"),
+&"Poison": SubResource("Animation_43jec"),
+&"Psychic": SubResource("Animation_5nn72"),
 &"RESET": SubResource("Animation_4cgvm"),
+&"Rock": SubResource("Animation_2bic4"),
+&"Steel": SubResource("Animation_bp87u"),
 &"Water": SubResource("Animation_j05vk")
 }
 
@@ -638,6 +1069,34 @@ texture = ExtResource("5_85ahu")
 [node name="Bug" type="Sprite2D" parent="Types"]
 visible = false
 texture = ExtResource("6_apsdo")
+
+[node name="Electric" type="Sprite2D" parent="Types"]
+visible = false
+texture = ExtResource("7_5h73l")
+
+[node name="Ghost" type="Sprite2D" parent="Types"]
+visible = false
+texture = ExtResource("8_j05vk")
+
+[node name="Ice" type="Sprite2D" parent="Types"]
+visible = false
+texture = ExtResource("9_to5ct")
+
+[node name="Poison" type="Sprite2D" parent="Types"]
+visible = false
+texture = ExtResource("10_uuopj")
+
+[node name="Psychic" type="Sprite2D" parent="Types"]
+visible = false
+texture = ExtResource("11_peky2")
+
+[node name="Rock" type="Sprite2D" parent="Types"]
+visible = false
+texture = ExtResource("12_67rww")
+
+[node name="Steel" type="Sprite2D" parent="Types"]
+visible = false
+texture = ExtResource("13_bp87u")
 
 [node name="Ground" type="Sprite2D" parent="Types"]
 visible = false
