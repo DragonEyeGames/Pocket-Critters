@@ -30,10 +30,10 @@ func initialize():
 		$Types/Type2.initialize()
 	else:
 		$Types/Type2.visible=false
-	if(species.species not in GameManager.seenDex):
-		$PokemonHolder/NewPokemon.modulate=Color.BLACK
-		$Title/title.text="???"
-		$Description/description.text="???"
+	#if(species.species not in GameManager.seenDex):
+		#$PokemonHolder/NewPokemon.modulate=Color.BLACK
+		#$Title/title.text="???"
+		#$Description/description.text="???"
 		#$Types/Type.visible=false
 		#$Types/Type2.visible=false
 	

@@ -79,26 +79,27 @@ offset_bottom = 447.0
 
 [node name="Border" type="ColorRect" parent="Title"]
 layout_mode = 0
+offset_left = -2.0
 offset_top = 203.0
-offset_right = 281.0
-offset_bottom = 261.0
+offset_right = 283.0
+offset_bottom = 251.0
 color = Color(0, 0, 0, 1)
 
 [node name="ColorRect" type="ColorRect" parent="Title"]
 layout_mode = 0
-offset_left = 3.0
+offset_left = 1.0
 offset_top = 206.0
-offset_right = 278.0
-offset_bottom = 257.0
+offset_right = 280.0
+offset_bottom = 248.0
 color = Color(0.91228896, 0.9122889, 0.91228884, 1)
 
 [node name="title" type="RichTextLabel" parent="Title"]
 layout_mode = 0
-offset_left = 17.300003
-offset_top = 209.50002
-offset_right = 265.4818
-offset_bottom = 254.04546
-scale = Vector2(1.1, 1.1)
+offset_left = -15.300001
+offset_top = 205.5
+offset_right = 301.3667
+offset_bottom = 245.5
+scale = Vector2(0.9, 0.9)
 pivot_offset = Vector2(133, 25)
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_fonts/normal_font = ExtResource("4_i6gfd")
