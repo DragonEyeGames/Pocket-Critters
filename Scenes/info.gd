@@ -8,7 +8,6 @@ func _ready() -> void:
 func initialize():
 	if(species==null):
 		return
-	print(species.species)
 	$PokemonHolder/NewPokemon.pokemon=species.species
 	$PokemonHolder/NewPokemon.initialize()
 	$Name.text=GameManager.pokemonName(species.species)
@@ -43,26 +42,31 @@ func close():
 
 
 func nextPage() -> void:
+	$Left.disabled=false
 	if(species==null):
 		return
 	var speciesInt=species.species+1
 	if(speciesInt>=GameManager.pokemon.size()):
 		return
-	print(GameManager.pokemonName(speciesInt))
 	if(ResourceLoader.exists("res://Pokemon/" + str(GameManager.pokemonName(speciesInt)).to_lower() + ".tres")):
 		species=load("res://Pokemon/" + str(GameManager.pokemonName(speciesInt)).to_lower() + ".tres")
 	else:
 		species.species=species.species+1 as GameManager.pokemon
+		print("Add " + GameManager.pokemonName(speciesInt) + " Evolves from " + GameManager.pokemonName(species.prevolution))
 	initialize()
+	if(speciesInt+1>=GameManager.pokemon.size()):
+		$Right.disabled=true
 
 
 func lastPage() -> void:
+	$Right.disabled=false
 	var speciesInt=species.species-1
 	if(speciesInt<0):
 		return
-	print(GameManager.pokemonName(speciesInt))
 	if(ResourceLoader.exists("res://Pokemon/" + str(GameManager.pokemonName(speciesInt)).to_lower() + ".tres")):
 		species=load("res://Pokemon/" + str(GameManager.pokemonName(speciesInt)).to_lower() + ".tres")
 	else:
 		species.species=species.species-1 as GameManager.pokemon
 	initialize()
+	if(speciesInt-1<0):
+		$Left.disabled=true

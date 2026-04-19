@@ -1,0 +1,96 @@
+[gd_resource type="Resource" script_class="SpeciesData" load_steps=25 format=3 uid="uid://dr1u7mxad2iny"]
+
+[ext_resource type="Script" uid="uid://kmcanhhb04o0" path="res://Resources/MoveResource.gd" id="1_w37do"]
+[ext_resource type="Resource" uid="uid://bpht2yixi5184" path="res://Moves/WeakMoves/Fire/ashSwipe.tres" id="2_qh2us"]
+[ext_resource type="Resource" uid="uid://bacv10uanvi4l" path="res://Moves/MediumMoves/Fire/blazeKick.tres" id="3_mulv0"]
+[ext_resource type="Resource" uid="uid://lpni5h5rdw7w" path="res://Moves/WeakMoves/Fire/fireFang.tres" id="4_8d8bg"]
+[ext_resource type="Resource" uid="uid://k7cdsl68ij0w" path="res://Moves/WeakMoves/Fire/heatUp.tres" id="5_7vmnr"]
+[ext_resource type="Resource" uid="uid://3ergnnh6o0xr" path="res://Moves/WeakMoves/Fighting/focusEnergy.tres" id="6_8twjy"]
+[ext_resource type="Resource" uid="uid://d1crvcuhrw8ib" path="res://Moves/WeakMoves/Fighting/quickJab.tres" id="7_27fla"]
+[ext_resource type="Resource" uid="uid://c2x8bnb1jliut" path="res://Moves/WeakMoves/Fighting/headStrike.tres" id="8_1jkol"]
+[ext_resource type="Resource" uid="uid://c3w2860616tbu" path="res://Moves/WeakMoves/Normal/growl.tres" id="9_qespb"]
+[ext_resource type="Resource" uid="uid://cbp1qoovefw0w" path="res://Moves/WeakMoves/Normal/leer.tres" id="10_yg165"]
+[ext_resource type="Resource" uid="uid://cjwtbcu7vkxjk" path="res://Moves/WeakMoves/Normal/tackle.tres" id="11_ucdc7"]
+[ext_resource type="Resource" uid="uid://bd1h37ujt4yux" path="res://Moves/WeakMoves/Normal/headbutt.tres" id="12_clmuw"]
+[ext_resource type="Script" uid="uid://1vun3nkcoo5i" path="res://Resources/SpeciesData.gd" id="13_x12m0"]
+
+[sub_resource type="Resource" id="Resource_ktj1j"]
+script = ExtResource("1_w37do")
+move = ExtResource("2_qh2us")
+level = 1
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_qjp8d"]
+script = ExtResource("1_w37do")
+move = ExtResource("3_mulv0")
+level = 6
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_x1557"]
+script = ExtResource("1_w37do")
+move = ExtResource("4_8d8bg")
+level = 3
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_hlk4o"]
+script = ExtResource("1_w37do")
+move = ExtResource("5_7vmnr")
+level = 1
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_pk2h4"]
+script = ExtResource("1_w37do")
+move = ExtResource("6_8twjy")
+level = 6
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_121jp"]
+script = ExtResource("1_w37do")
+move = ExtResource("7_27fla")
+level = 1
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_hb324"]
+script = ExtResource("1_w37do")
+move = ExtResource("8_1jkol")
+level = 7
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_faiwf"]
+script = ExtResource("1_w37do")
+move = ExtResource("9_qespb")
+level = 1
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_apii5"]
+script = ExtResource("1_w37do")
+move = ExtResource("10_yg165")
+level = 1
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_jlh5k"]
+script = ExtResource("1_w37do")
+move = ExtResource("11_ucdc7")
+level = 1
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_402b2"]
+script = ExtResource("1_w37do")
+move = ExtResource("12_clmuw")
+level = 10
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[resource]
+resource_name = "res://PokemonCries/darumaka.wav"
+script = ExtResource("13_x12m0")
+species = 28
+health = 55
+attack = 60
+defense = 45
+specialAttack = 40
+specialDefense = 40
+speed = 30
+potentialMoves = Array[ExtResource("1_w37do")]([SubResource("Resource_ktj1j"), SubResource("Resource_qjp8d"), SubResource("Resource_x1557"), SubResource("Resource_hlk4o"), SubResource("Resource_pk2h4"), SubResource("Resource_121jp"), SubResource("Resource_hb324"), SubResource("Resource_faiwf"), SubResource("Resource_apii5"), SubResource("Resource_jlh5k"), SubResource("Resource_402b2")])
+catchRate = 0.55
+prevolution = 27
+metadata/_custom_type_script = "uid://c7t80kmu0l21k"
