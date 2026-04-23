@@ -15,9 +15,7 @@ shader_parameter/flash_color = Color(1, 1, 1, 1)
 shader_parameter/flash_value = 0.0
 
 [node name="Info" type="CanvasLayer"]
-process_mode = 3
-layer = 6
-visible = false
+layer = 2
 script = ExtResource("1_nmlck")
 species = ExtResource("2_v0v1k")
 

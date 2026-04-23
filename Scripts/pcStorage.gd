@@ -37,13 +37,13 @@ func _process(_delta: float) -> void:
 		get_parent().get_parent().get_parent().removeInput()
 		
 func buttonPressed(action: String):
-	print(action)
 	if(action=="Switch"):
 		pass
 	if(action=="Stats"):
 		Stats.displayStats(pokemon)
 	if(action=="Critterdex"):
-		pass
+		print(GameManager.pokemonName(pokemon.species))
+		Info.display(pokemon)
 	if(action=="Close"):
 		$OptionsMenu.visible=false
 		get_parent().get_parent().get_parent().restoreInput()

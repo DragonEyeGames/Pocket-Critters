@@ -23,8 +23,20 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 
 [node name="Pokemon" parent="." instance=ExtResource("2_k7twk")]
 material = SubResource("ShaderMaterial_0p42q")
 position = Vector2(49, 50)
 scale = Vector2(1.1, 1.1)
+
+[node name="mouse" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 94.0
+offset_bottom = 95.0
+color = Color(1, 1, 1, 0)
+
+[connection signal="mouse_entered" from="mouse" to="." method="mouseEntered"]
+[connection signal="mouse_exited" from="mouse" to="." method="mouseExited"]

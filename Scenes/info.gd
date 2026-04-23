@@ -3,9 +3,19 @@ extends CanvasLayer
 @export var species: SpeciesData
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	visible=false
+	#initialize()
+
+func display(pokemon: PokemonData):
+	species=pokemon.base
+	initialize()
+
+func loadFromEnum(pokemon: GameManager.pokemon):
+	species = load("res://Pokemon/" + GameManager.pokemonName(pokemon).to_lower() + ".tres")
 	initialize()
 
 func initialize():
+	visible=true
 	if(species==null):
 		return
 	$PokemonHolder/NewPokemon.pokemon=species.species
@@ -24,18 +34,19 @@ func initialize():
 	$Types/Type.initialize()
 	$Types/Type.visible=true
 	$Types/Type2.visible=true
+	$PokemonHolder/NewPokemon.modulate=Color.WHITE
 	
 	if(species.type2!=species.type1):
 		$Types/Type2.type=species.type2
 		$Types/Type2.initialize()
 	else:
 		$Types/Type2.visible=false
-	#if(species.species not in GameManager.seenDex):
-		#$PokemonHolder/NewPokemon.modulate=Color.BLACK
-		#$Title/title.text="???"
-		#$Description/description.text="???"
-		#$Types/Type.visible=false
-		#$Types/Type2.visible=false
+	if(species.species not in GameManager.seenDex):
+		$PokemonHolder/NewPokemon.modulate=Color.BLACK
+		$Title/title.text="???"
+		$Description/description.text="???"
+		$Types/Type.visible=false
+		$Types/Type2.visible=false
 	
 func close():
 	visible=false
@@ -70,3 +81,7 @@ func lastPage() -> void:
 	initialize()
 	if(speciesInt-1<0):
 		$Left.disabled=true
+
+func _process(_delta: float) -> void:
+	if(Input.is_action_just_pressed("Pause")):
+		visible=false

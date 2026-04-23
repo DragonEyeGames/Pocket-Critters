@@ -11,6 +11,7 @@ offset_top = 23.999998
 offset_right = 802.0
 offset_bottom = 480.0
 scale = Vector2(1.085, 1.085)
+mouse_filter = 2
 script = ExtResource("1_c65m6")
 
 [node name="ColorRect3" type="ColorRect" parent="."]
@@ -24,6 +25,7 @@ offset_right = -31.0
 offset_bottom = 4.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 color = Color(0, 0, 0, 1)
 
 [node name="ColorRect" type="ColorRect" parent="."]
@@ -34,6 +36,7 @@ anchor_bottom = 1.0
 offset_right = -35.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 color = Color(0.80784315, 0.80784315, 0.80784315, 1)
 
 [node name="ColorRect2" type="ColorRect" parent="."]
@@ -43,12 +46,14 @@ offset_left = -124.0
 offset_top = -85.0
 offset_right = 974.0
 offset_bottom = 538.0
+mouse_filter = 2
 color = Color(0, 0, 0, 0.22745098)
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
 layout_mode = 0
 offset_right = 644.0
 offset_bottom = 69.0
+mouse_filter = 2
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/normal_font_size = 39
 text = "Critterdex"
@@ -61,65 +66,81 @@ offset_left = 68.0
 offset_top = 77.0
 offset_right = 584.0
 offset_bottom = 385.0
+mouse_filter = 2
 columns = 5
 
 [node name="Pokedex Slot" parent="GridContainer" instance=ExtResource("2_e6p7r")]
 layout_mode = 2
+mouse_filter = 2
 
 [node name="Pokedex Slot2" parent="GridContainer" instance=ExtResource("2_e6p7r")]
 layout_mode = 2
+mouse_filter = 2
 pokemon = 1
 
 [node name="Pokedex Slot3" parent="GridContainer" instance=ExtResource("2_e6p7r")]
 layout_mode = 2
+mouse_filter = 2
 pokemon = 2
 
 [node name="Pokedex Slot4" parent="GridContainer" instance=ExtResource("2_e6p7r")]
 layout_mode = 2
+mouse_filter = 2
 pokemon = 3
 
 [node name="Pokedex Slot5" parent="GridContainer" instance=ExtResource("2_e6p7r")]
 layout_mode = 2
+mouse_filter = 2
 pokemon = 5
 
 [node name="Pokedex Slot6" parent="GridContainer" instance=ExtResource("2_e6p7r")]
 layout_mode = 2
+mouse_filter = 2
 pokemon = 6
 
 [node name="Pokedex Slot7" parent="GridContainer" instance=ExtResource("2_e6p7r")]
 layout_mode = 2
+mouse_filter = 2
 pokemon = 7
 
 [node name="Pokedex Slot8" parent="GridContainer" instance=ExtResource("2_e6p7r")]
 layout_mode = 2
+mouse_filter = 2
 pokemon = 8
 
 [node name="Pokedex Slot9" parent="GridContainer" instance=ExtResource("2_e6p7r")]
 layout_mode = 2
+mouse_filter = 2
 pokemon = 9
 
 [node name="Pokedex Slot10" parent="GridContainer" instance=ExtResource("2_e6p7r")]
 layout_mode = 2
+mouse_filter = 2
 pokemon = 10
 
 [node name="Pokedex Slot11" parent="GridContainer" instance=ExtResource("2_e6p7r")]
 layout_mode = 2
+mouse_filter = 2
 pokemon = 11
 
 [node name="Pokedex Slot12" parent="GridContainer" instance=ExtResource("2_e6p7r")]
 layout_mode = 2
+mouse_filter = 2
 pokemon = 12
 
 [node name="Pokedex Slot13" parent="GridContainer" instance=ExtResource("2_e6p7r")]
 layout_mode = 2
+mouse_filter = 2
 pokemon = 13
 
 [node name="Pokedex Slot14" parent="GridContainer" instance=ExtResource("2_e6p7r")]
 layout_mode = 2
+mouse_filter = 2
 pokemon = 14
 
 [node name="Pokedex Slot15" parent="GridContainer" instance=ExtResource("2_e6p7r")]
 layout_mode = 2
+mouse_filter = 2
 pokemon = 15
 
 [node name="Left" type="Button" parent="."]
