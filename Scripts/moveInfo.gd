@@ -44,8 +44,8 @@ func loadMove(newMove):
 		individualDescription+=str(GameManager.stats.keys()[ability.stat]).to_lower()
 		if(ability.stat==GameManager.stats.Health):
 			individualDescription="Increases health by 50% of damage dealt"
-		if(ability.stat==GameManager.stats.Health):
-			individualDescription="Always goes first."
+		if(ability.stat==GameManager.stats.Priority):
+			individualDescription="Always goes first"
 		abilityDescription+=individualDescription
 		abilityDescription+=". "
 	$ColorRect/Abilities.text=abilityDescription

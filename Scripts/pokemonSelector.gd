@@ -33,8 +33,12 @@ func initialize() -> void:
 	if(back):
 		appendage="-back.png"
 		
-	$Pokemon.texture=load("res://Fakemon-PNG/" + str(GameManager.pokemonName(pokemon.species)).to_lower() +appendage)
-	
+	var tex = load("res://Fakemon-PNG/" + str(GameManager.pokemonName(pokemon.species)).to_lower() + appendage)
+	$Pokemon.texture = tex
+	var size = $Pokemon.texture.get_size()
+	var newScale = 70.0 / max(size.x, size.y)
+	$Pokemon.scale = Vector2(newScale, newScale)
+		
 	if(holder!=null):
 		holder.pokemonName=str(GameManager.pokemonName(pokemon.species))
 		holder.type1=pokemon.base.type1

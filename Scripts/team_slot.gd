@@ -1,6 +1,7 @@
 extends Control
 
 @export var index:= 0
+var mouse=false
 # Called when the node enters the scene tree for the first time.
 
 func loadSlot():
@@ -18,3 +19,28 @@ func loadSlot():
 		$Fainted.visible=false
 		$"Health Bar".visible=false
 	
+
+func _process(_delta: float) -> void:
+	if(mouse and Input.is_action_just_pressed("Interact")):
+		$OptionsMenu.visible=true
+		$MouseDetector.visible=false
+
+func mouseEntered() -> void:
+	var tween=create_tween()
+	tween.tween_property($Pokemon, "scale", Vector2(1.5, 1.5), .1)
+	mouse=true
+
+
+func mouseExited() -> void:
+	var tween=create_tween()
+	tween.tween_property($Pokemon, "scale", Vector2(1.4, 1.4), .1)
+	mouse=false
+
+func buttonPress(nodeName: String):
+	if(nodeName=="Close"):
+		$OptionsMenu.visible=false
+		$MouseDetector.visible=true
+	if(nodeName=="Stats"):
+		Stats.displayStats(GameManager.playerTeam[index])
+	if(nodeName=="Critterdex"):
+		Info.display(GameManager.playerTeam[index])

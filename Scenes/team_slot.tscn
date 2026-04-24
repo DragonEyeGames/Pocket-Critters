@@ -1,7 +1,16 @@
-[gd_scene load_steps=5 format=3 uid="uid://csi5giv4qbgfx"]
+[gd_scene load_steps=9 format=3 uid="uid://csi5giv4qbgfx"]
 
 [ext_resource type="PackedScene" uid="uid://ba24hclljygvv" path="res://Scenes/pokemonSelector.tscn" id="1_r058n"]
 [ext_resource type="Script" uid="uid://kugeqjublj4p" path="res://Scripts/team_slot.gd" id="1_utni4"]
+[ext_resource type="Shader" uid="uid://bomfvo6o4mvg6" path="res://Shaders/flash.gdshader" id="3_3a2dw"]
+[ext_resource type="Script" uid="uid://b6bgpqpxtckbb" path="res://Scenes/teamOptions.gd" id="5_oo1yl"]
+[ext_resource type="FontFile" uid="uid://cnjtjvjhjjxia" path="res://Fonts/ByteBounce.ttf" id="5_uucdy"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_8iefh"]
+resource_local_to_scene = true
+shader = ExtResource("3_3a2dw")
+shader_parameter/flash_color = Color(1, 1, 1, 1)
+shader_parameter/flash_value = 0.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_23g4y"]
 bg_color = Color(0.67, 0, 0, 1)
@@ -26,13 +35,14 @@ offset_right = -14.0
 offset_bottom = -14.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 color = Color(0.3854925, 0.38549247, 0.38549247, 1)
 
 [node name="Pokemon" parent="." instance=ExtResource("1_r058n")]
+material = SubResource("ShaderMaterial_8iefh")
 position = Vector2(74, 83.00001)
 scale = Vector2(1.4, 1.4)
 back = false
-pokemon = null
 
 [node name="Name" type="RichTextLabel" parent="."]
 layout_mode = 0
@@ -40,16 +50,19 @@ offset_left = 15.0
 offset_top = 15.0
 offset_right = 136.0
 offset_bottom = 47.0
+mouse_filter = 2
 text = "YUr Mum HAA"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Fainted" type="ColorRect" parent="."]
+visible = false
 layout_mode = 0
 offset_left = 15.0
 offset_top = 15.0
 offset_right = 136.0
 offset_bottom = 136.0
+mouse_filter = 2
 color = Color(0, 0, 0, 0.5921569)
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Fainted"]
@@ -57,18 +70,21 @@ layout_mode = 0
 offset_top = 52.0
 offset_right = 121.0
 offset_bottom = 92.0
+mouse_filter = 2
 theme_override_font_sizes/normal_font_size = 24
 text = "Fainted"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Health Bar" type="ProgressBar" parent="."]
+z_index = 2
 layout_mode = 0
 offset_left = 18.999996
 offset_top = 111.0
 offset_right = 333.0
 offset_bottom = 138.0
 scale = Vector2(0.36, 0.36)
+mouse_filter = 2
 theme_override_styles/background = SubResource("StyleBoxFlat_23g4y")
 theme_override_styles/fill = SubResource("StyleBoxFlat_3a2dw")
 max_value = 20.0
@@ -81,7 +97,245 @@ offset_left = 88.888885
 offset_top = 24.999996
 offset_right = 230.88889
 offset_bottom = 66.0
+mouse_filter = 2
 theme_override_font_sizes/normal_font_size = 29
 text = "20/20"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="MouseDetector" type="ColorRect" parent="."]
+z_index = 5
+layout_mode = 0
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 135.0
+offset_bottom = 135.0
+color = Color(1, 1, 1, 0)
+
+[node name="OptionsMenu" type="Control" parent="."]
+visible = false
+z_index = 2
+anchors_preset = 0
+offset_left = 104.0
+offset_top = 11.0
+offset_right = 180.0
+offset_bottom = 79.0
+mouse_filter = 2
+
+[node name="ColorRect3" type="ColorRect" parent="OptionsMenu"]
+z_index = 1
+layout_mode = 0
+offset_left = -1.0
+offset_top = -1.0
+offset_right = 77.0
+offset_bottom = 69.0
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="OptionsMenu"]
+z_index = 1
+layout_mode = 0
+offset_right = 76.0
+offset_bottom = 68.0
+mouse_filter = 2
+color = Color(0.9340804, 0.9340805, 0.93408036, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="OptionsMenu"]
+z_index = 1
+layout_mode = 0
+offset_right = 76.0
+offset_bottom = 94.0
+mouse_filter = 2
+
+[node name="Stats" type="Control" parent="OptionsMenu/VBoxContainer"]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+mouse_filter = 2
+
+[node name="Holder" type="Control" parent="OptionsMenu/VBoxContainer/Stats"]
+anchors_preset = 0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 75.0
+offset_bottom = 19.0
+pivot_offset = Vector2(36, 10)
+mouse_filter = 2
+script = ExtResource("5_oo1yl")
+
+[node name="ColorRect" type="ColorRect" parent="OptionsMenu/VBoxContainer/Stats/Holder"]
+layout_mode = 0
+offset_right = 74.0
+offset_bottom = 18.0
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="OptionsMenu/VBoxContainer/Stats/Holder"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 73.0
+offset_bottom = 17.0
+mouse_filter = 2
+color = Color(0.76240367, 0.76240367, 0.76240367, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="OptionsMenu/VBoxContainer/Stats/Holder"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 73.0
+offset_bottom = 17.0
+mouse_filter = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("5_uucdy")
+text = "Stats"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MouseChecker" type="ColorRect" parent="OptionsMenu/VBoxContainer/Stats"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 75.0
+offset_bottom = 19.0
+color = Color(1, 1, 1, 0)
+
+[node name="Critterdex" type="Control" parent="OptionsMenu/VBoxContainer"]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+mouse_filter = 2
+
+[node name="Holder" type="Control" parent="OptionsMenu/VBoxContainer/Critterdex"]
+anchors_preset = 0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 75.0
+offset_bottom = 19.0
+pivot_offset = Vector2(36, 10)
+script = ExtResource("5_oo1yl")
+
+[node name="ColorRect" type="ColorRect" parent="OptionsMenu/VBoxContainer/Critterdex/Holder"]
+layout_mode = 0
+offset_right = 74.0
+offset_bottom = 18.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="OptionsMenu/VBoxContainer/Critterdex/Holder"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 73.0
+offset_bottom = 17.0
+color = Color(0.76240367, 0.76240367, 0.76240367, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="OptionsMenu/VBoxContainer/Critterdex/Holder"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 73.0
+offset_bottom = 17.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("5_uucdy")
+text = "Critter Dex"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MouseChecker" type="ColorRect" parent="OptionsMenu/VBoxContainer/Critterdex"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 75.0
+offset_bottom = 19.0
+color = Color(1, 1, 1, 0)
+
+[node name="Close" type="Control" parent="OptionsMenu/VBoxContainer"]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+mouse_filter = 2
+
+[node name="Holder" type="Control" parent="OptionsMenu/VBoxContainer/Close"]
+anchors_preset = 0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 75.0
+offset_bottom = 19.0
+pivot_offset = Vector2(36, 10)
+script = ExtResource("5_oo1yl")
+
+[node name="ColorRect" type="ColorRect" parent="OptionsMenu/VBoxContainer/Close/Holder"]
+layout_mode = 0
+offset_right = 74.0
+offset_bottom = 18.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="OptionsMenu/VBoxContainer/Close/Holder"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 73.0
+offset_bottom = 17.0
+color = Color(0.76240367, 0.76240367, 0.76240367, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="OptionsMenu/VBoxContainer/Close/Holder"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 73.0
+offset_bottom = 17.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("5_uucdy")
+text = "Close"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MouseChecker" type="ColorRect" parent="OptionsMenu/VBoxContainer/Close"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 75.0
+offset_bottom = 19.0
+color = Color(1, 1, 1, 0)
+
+[node name="Blocker" type="ColorRect" parent="OptionsMenu"]
+layout_mode = 0
+offset_left = -615.0
+offset_top = -415.0
+offset_right = -1.0
+offset_bottom = 689.0
+mouse_filter = 2
+color = Color(1, 1, 1, 0)
+
+[node name="Blocker2" type="ColorRect" parent="OptionsMenu"]
+layout_mode = 0
+offset_left = 77.0
+offset_top = -415.0
+offset_right = 796.0
+offset_bottom = 689.0
+mouse_filter = 2
+color = Color(1, 1, 1, 0)
+
+[node name="Blocker3" type="ColorRect" parent="OptionsMenu"]
+layout_mode = 0
+offset_left = -185.0
+offset_top = -415.0
+offset_right = 249.0
+offset_bottom = -1.0
+mouse_filter = 2
+color = Color(1, 1, 1, 0)
+
+[node name="Blocker4" type="ColorRect" parent="OptionsMenu"]
+layout_mode = 0
+offset_left = -161.0
+offset_top = 93.0
+offset_right = 273.0
+offset_bottom = 507.0
+mouse_filter = 2
+color = Color(1, 1, 1, 0)
+
+[connection signal="mouse_entered" from="MouseDetector" to="." method="mouseEntered"]
+[connection signal="mouse_exited" from="MouseDetector" to="." method="mouseExited"]
+[connection signal="mouse_entered" from="OptionsMenu/VBoxContainer/Stats/MouseChecker" to="OptionsMenu/VBoxContainer/Stats/Holder" method="_on_mouse_checker_mouse_entered"]
+[connection signal="mouse_exited" from="OptionsMenu/VBoxContainer/Stats/MouseChecker" to="OptionsMenu/VBoxContainer/Stats/Holder" method="_on_mouse_checker_mouse_exited"]
+[connection signal="mouse_entered" from="OptionsMenu/VBoxContainer/Critterdex/MouseChecker" to="OptionsMenu/VBoxContainer/Critterdex/Holder" method="_on_mouse_checker_mouse_entered"]
+[connection signal="mouse_exited" from="OptionsMenu/VBoxContainer/Critterdex/MouseChecker" to="OptionsMenu/VBoxContainer/Critterdex/Holder" method="_on_mouse_checker_mouse_exited"]
+[connection signal="mouse_entered" from="OptionsMenu/VBoxContainer/Close/MouseChecker" to="OptionsMenu/VBoxContainer/Close/Holder" method="_on_mouse_checker_mouse_entered"]
+[connection signal="mouse_exited" from="OptionsMenu/VBoxContainer/Close/MouseChecker" to="OptionsMenu/VBoxContainer/Close/Holder" method="_on_mouse_checker_mouse_exited"]

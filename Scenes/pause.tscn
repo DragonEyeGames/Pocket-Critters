@@ -12,7 +12,6 @@ layer = 5
 script = ExtResource("1_aq7p1")
 
 [node name="Menu" type="Control" parent="."]
-visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -87,6 +86,7 @@ offset_bottom = 35.0
 text = "Clear Save"
 
 [node name="Bag" type="Control" parent="Menu/VBoxContainer"]
+visible = false
 custom_minimum_size = Vector2(0, 41.595)
 layout_mode = 2
 
@@ -130,7 +130,6 @@ offset_bottom = 35.0
 text = "Close"
 
 [node name="Team Menu" type="Control" parent="."]
-visible = false
 z_index = 1
 layout_mode = 3
 anchors_preset = 0
@@ -138,6 +137,7 @@ offset_left = 80.0
 offset_top = 61.0
 offset_right = 724.0
 offset_bottom = 463.0
+mouse_filter = 2
 
 [node name="ColorRect" type="ColorRect" parent="Team Menu"]
 layout_mode = 1
@@ -147,6 +147,7 @@ anchor_bottom = 1.0
 offset_bottom = 43.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 color = Color(0.80784315, 0.80784315, 0.80784315, 1)
 
 [node name="ColorRect2" type="ColorRect" parent="Team Menu"]
@@ -154,7 +155,17 @@ z_index = -1
 layout_mode = 0
 offset_left = -124.0
 offset_top = -85.0
-offset_right = 898.0
+offset_right = 686.0
+offset_bottom = 491.0
+mouse_filter = 2
+color = Color(0, 0, 0, 0.22745098)
+
+[node name="Blocker" type="ColorRect" parent="Team Menu"]
+z_index = -1
+layout_mode = 0
+offset_left = 686.0
+offset_top = -85.0
+offset_right = 924.0
 offset_bottom = 491.0
 color = Color(0, 0, 0, 0.22745098)
 
@@ -162,6 +173,7 @@ color = Color(0, 0, 0, 0.22745098)
 layout_mode = 0
 offset_right = 644.0
 offset_bottom = 69.0
+mouse_filter = 2
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/normal_font_size = 39
 text = "Team"
@@ -174,29 +186,36 @@ offset_left = 99.0
 offset_top = 68.0
 offset_right = 557.0
 offset_bottom = 382.0
+mouse_filter = 2
 columns = 3
 
 [node name="TeamSlot" parent="Team Menu/GridContainer" instance=ExtResource("2_6eyaj")]
 layout_mode = 2
+mouse_filter = 2
 
 [node name="TeamSlot2" parent="Team Menu/GridContainer" instance=ExtResource("2_6eyaj")]
 layout_mode = 2
+mouse_filter = 2
 index = 1
 
 [node name="TeamSlot3" parent="Team Menu/GridContainer" instance=ExtResource("2_6eyaj")]
 layout_mode = 2
+mouse_filter = 2
 index = 2
 
 [node name="TeamSlot4" parent="Team Menu/GridContainer" instance=ExtResource("2_6eyaj")]
 layout_mode = 2
+mouse_filter = 2
 index = 3
 
 [node name="TeamSlot5" parent="Team Menu/GridContainer" instance=ExtResource("2_6eyaj")]
 layout_mode = 2
+mouse_filter = 2
 index = 4
 
 [node name="TeamSlot6" parent="Team Menu/GridContainer" instance=ExtResource("2_6eyaj")]
 layout_mode = 2
+mouse_filter = 2
 index = 5
 
 [node name="Reorder" type="Button" parent="Team Menu"]
@@ -210,7 +229,7 @@ text = "Reorder Team"
 
 [node name="Reorder Team" type="Control" parent="."]
 visible = false
-z_index = 2
+z_index = 6
 layout_mode = 3
 anchors_preset = 0
 offset_left = 80.0
@@ -357,6 +376,7 @@ theme_override_font_sizes/font_size = 26
 text = "No"
 
 [node name="Pokedex" parent="." instance=ExtResource("4_3fojq")]
+visible = false
 
 [node name="Save" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_3fojq")
