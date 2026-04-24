@@ -479,17 +479,17 @@ func _player_animation_finished(_anim_name: StringName) -> void:
 
 func noise(soundPath):
 	return
-	if(soundPath==""):
-		soundPath="res://BattleSounds/Tackle.mp3"
-	var player = AudioStreamPlayer.new()
-	player.stream = load(soundPath)
-	player.volume_db=-10
-	player.pitch_scale=randf_range(.9, 1.1)
-	add_child(player)
-	player.play()
+	#if(soundPath==""):
+	#	soundPath="res://BattleSounds/Tackle.mp3"
+	#var player = AudioStreamPlayer.new()
+	#player.stream = load(soundPath)
+	#player.volume_db=-10
+	#player.pitch_scale=randf_range(.9, 1.1)
+	#add_child(player)
+	#player.play()
 	
-	await player.finished
-	player.queue_free()
+	#await player.finished
+	#player.queue_free()
 
 func battleWon():
 	Music.battleOver()

@@ -95,7 +95,7 @@ pokemonCenter = "res://Levels/PokemonCenters/waymeetPokemonCenter.tscn"
 pokeMart = "res://Levels/PokemonCenters/waymeetPokemonMart.tscn"
 
 [node name="Player" parent="." groups=["Y-Sort"] instance=ExtResource("2_xokqn")]
-position = Vector2(0, 19)
+position = Vector2(0, 41)
 
 [node name="Y-Sort" type="Node2D" parent="." node_paths=PackedStringArray("player")]
 y_sort_enabled = true
@@ -136,8 +136,8 @@ position = Vector2(0, 39)
 collision_layer = 0
 collision_mask = 2
 script = ExtResource("10_ytive")
-travelZone = "res://Levels/forest.tscn"
-travelPos = Vector2(-529, -1256)
+travelZone = "res://Levels/waymeetCity.tscn"
+travelPos = Vector2(0, -172)
 transitioner = NodePath("../Transitioner")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="exit"]
@@ -286,13 +286,12 @@ shape = SubResource("RectangleShape2D_xokqn")
 position = Vector2(92, -119)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
-visible = false
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
 polygon = PackedVector2Array(-112, 32, -112, -112, -64, -112, -64, -80, 64, -80, 64, -112, 112, -112, -25, -117, -115, -114, -117, -70)
 
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="StaticBody2D"]
-polygon = PackedVector2Array(-112, 32, 112, 33, 112, -112, 138, -116, 134, 41, -113, 33)
+polygon = PackedVector2Array(-112, 32, -16.042805, 32.428383, -16, 48, 16, 48, 15.986324, 32.57137, 112, 33, 112, -112, 138, -116, 134, 41, 21, 54, -21, 55, -113, 33)
 
 [node name="Zoom" type="Marker2D" parent="."]
 position = Vector2(0, -57)

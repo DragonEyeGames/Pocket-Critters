@@ -44,7 +44,7 @@ func initialize():
 	if(species.species not in GameManager.seenDex):
 		$PokemonHolder/NewPokemon.modulate=Color.BLACK
 		$Title/title.text="???"
-		$Description/description.text="???"
+		#$Description/description.text="???"
 		$Types/Type.visible=false
 		$Types/Type2.visible=false
 	

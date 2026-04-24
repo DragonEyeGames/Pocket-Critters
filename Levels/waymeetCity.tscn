@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=4 uid="uid://hvt8a8487efr"]
+[gd_scene load_steps=24 format=4 uid="uid://hvt8a8487efr"]
 
 [ext_resource type="Script" uid="uid://swgsdmbo5fng" path="res://Scripts/main.gd" id="1_yelr5"]
 [ext_resource type="PackedScene" uid="uid://c5yxtkkwi03pt" path="res://Scenes/player.tscn" id="2_fmudw"]
@@ -7,8 +7,6 @@
 [ext_resource type="Shader" uid="uid://cfeiswkbpxh1p" path="res://Shaders/transition.gdshader" id="7_rbf7e"]
 [ext_resource type="Script" uid="uid://58m7l7uvvox7" path="res://Scripts/camera.gd" id="8_t551v"]
 [ext_resource type="Shader" uid="uid://bj6hwrrewmxbo" path="res://Shaders/removeBackground.gdshader" id="11_6t2tp"]
-[ext_resource type="Texture2D" uid="uid://cfju02kgmoc4v" path="res://Assets/FireRedSprites/Game Boy Advance - Pokemon FireRed _ LeafGreen - Tilesets - Tileset.png" id="12_6t2tp"]
-[ext_resource type="Texture2D" uid="uid://cwpfb8frdw4go" path="res://Assets/FireRedSprites/improvedBuildings.png" id="13_c2nek"]
 [ext_resource type="Script" uid="uid://crrtvghb3yxwo" path="res://Scripts/exit.gd" id="16_m0uwm"]
 [ext_resource type="Texture2D" uid="uid://cofed3e0ub73v" path="res://Assets/Houses/NPCS houses/Houses.png" id="17_yelr5"]
 [ext_resource type="Texture2D" uid="uid://c5iimh6qjn77t" path="res://Assets/Houses/longLog.png" id="18_fmudw"]
@@ -57,32 +55,6 @@ _data = {
 &"RESET": SubResource("Animation_sxxgb"),
 &"transition": SubResource("Animation_cqqw3")
 }
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_dvn4l"]
-shader = ExtResource("11_6t2tp")
-shader_parameter/original_0 = Color(0.6, 0.2, 0.8, 1)
-shader_parameter/original_1 = Color(0.65882355, 0.9019608, 0.11372549, 1)
-shader_parameter/original_2 = Color(1, 0, 0.91764706, 1)
-shader_parameter/original_3 = Color(0, 0, 0, 1)
-shader_parameter/original_4 = Color(0, 0, 0, 1)
-shader_parameter/replace_0 = Color(0, 0, 0, 0)
-shader_parameter/replace_1 = Color(0.47, 0.47, 0.5, 0.47058824)
-shader_parameter/replace_2 = Color(0.47, 0.47, 0.5, 0.47058824)
-shader_parameter/replace_3 = Color(0, 0, 0, 1)
-shader_parameter/replace_4 = Color(0, 0, 0, 1)
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_eridb"]
-shader = ExtResource("11_6t2tp")
-shader_parameter/original_0 = Color(1, 0, 0.91764706, 1)
-shader_parameter/original_1 = Color(0, 0, 0, 1)
-shader_parameter/original_2 = Color(0, 0, 0, 1)
-shader_parameter/original_3 = Color(0, 0, 0, 1)
-shader_parameter/original_4 = Color(0, 0, 0, 1)
-shader_parameter/replace_0 = Color(1, 1, 1, 0)
-shader_parameter/replace_1 = Color(0, 0, 0, 1)
-shader_parameter/replace_2 = Color(0, 0, 0, 1)
-shader_parameter/replace_3 = Color(0, 0, 0, 1)
-shader_parameter/replace_4 = Color(0, 0, 0, 1)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eridb"]
 size = Vector2(68, 29)
@@ -160,38 +132,6 @@ limit_bottom = 24
 script = ExtResource("8_t551v")
 target = NodePath("../Player")
 
-[node name="Gym" type="Sprite2D" parent="." groups=["Y-Sort"]]
-material = SubResource("ShaderMaterial_dvn4l")
-position = Vector2(165, -382)
-texture = ExtResource("12_6t2tp")
-offset = Vector2(0, -24)
-region_enabled = true
-region_rect = Rect2(89, 231, 112, 80)
-
-[node name="House" type="Sprite2D" parent="." groups=["Y-Sort"]]
-material = SubResource("ShaderMaterial_eridb")
-position = Vector2(-160, -190)
-texture = ExtResource("13_c2nek")
-offset = Vector2(8, -13)
-region_enabled = true
-region_rect = Rect2(395, 24, 96, 56)
-
-[node name="House2" type="Sprite2D" parent="." groups=["Y-Sort"]]
-material = SubResource("ShaderMaterial_eridb")
-position = Vector2(-224, -383)
-texture = ExtResource("13_c2nek")
-offset = Vector2(17, -11)
-region_enabled = true
-region_rect = Rect2(300, 24, 80, 56)
-
-[node name="House3" type="Sprite2D" parent="." groups=["Y-Sort"]]
-material = SubResource("ShaderMaterial_eridb")
-position = Vector2(-109, -383)
-texture = ExtResource("13_c2nek")
-offset = Vector2(16, -11)
-region_enabled = true
-region_rect = Rect2(300, 24, 80, 56)
-
 [node name="exit" type="Area2D" parent="." node_paths=PackedStringArray("transitioner")]
 position = Vector2(0, 19)
 collision_layer = 0
@@ -222,6 +162,7 @@ shape = SubResource("RectangleShape2D_yelr5")
 position = Vector2(-12, -196)
 script = ExtResource("16_m0uwm")
 travelZone = "res://Levels/pokemonCenter.tscn"
+travelPos = Vector2(0, 41)
 locked = true
 transitioner = NodePath("../Transitioner")
 
