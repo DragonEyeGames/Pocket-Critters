@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="MoveDatas" load_steps=4 format=3 uid="uid://d2l26yd8xvj71"]
+
+[ext_resource type="Script" uid="uid://2fme8eqsovvo" path="res://Resources/AbilityData.gd" id="1_kmymh"]
+[ext_resource type="Script" uid="uid://c3odxqj7xy866" path="res://Resources/MoveData.gd" id="2_2k8gt"]
+
+[sub_resource type="Resource" id="Resource_kmymh"]
+script = ExtResource("1_kmymh")
+stat = 1
+change = 1
+chance = 0.6
+metadata/_custom_type_script = "uid://2fme8eqsovvo"
+
+[resource]
+script = ExtResource("2_2k8gt")
+name = "Boulder Decimate"
+type = 16
+moveType = 1
+power = 135
+accuracy = 0.95
+abilities = Array[ExtResource("1_kmymh")]([SubResource("Resource_kmymh")])
+metadata/_custom_type_script = "uid://c3odxqj7xy866"
