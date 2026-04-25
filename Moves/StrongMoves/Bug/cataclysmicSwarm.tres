@@ -13,7 +13,7 @@ metadata/_custom_type_script = "uid://2fme8eqsovvo"
 
 [resource]
 script = ExtResource("2_rfwp7")
-name = "Swarm Cataclysm"
+name = "Cataclysmic Swarm"
 type = 6
 moveType = 1
 power = 140

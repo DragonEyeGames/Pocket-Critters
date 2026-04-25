@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="MoveDatas" load_steps=5 format=3 uid="uid://cjw3l2wt0hpev"]
+
+[ext_resource type="Script" uid="uid://2fme8eqsovvo" path="res://Resources/AbilityData.gd" id="1_ngsm6"]
+[ext_resource type="Script" uid="uid://c3odxqj7xy866" path="res://Resources/MoveData.gd" id="2_qqs3g"]
+
+[sub_resource type="Resource" id="Resource_ngsm6"]
+script = ExtResource("1_ngsm6")
+stat = 6
+change = 1
+chance = 1.0
+metadata/_custom_type_script = "uid://2fme8eqsovvo"
+
+[sub_resource type="Resource" id="Resource_qqs3g"]
+script = ExtResource("1_ngsm6")
+stat = 3
+change = 1
+chance = 1.0
+metadata/_custom_type_script = "uid://2fme8eqsovvo"
+
+[resource]
+script = ExtResource("2_qqs3g")
+name = "Radiant Veil"
+type = 11
+power = 110
+abilities = Array[ExtResource("1_ngsm6")]([SubResource("Resource_ngsm6"), SubResource("Resource_qqs3g")])
+metadata/_custom_type_script = "uid://c3odxqj7xy866"

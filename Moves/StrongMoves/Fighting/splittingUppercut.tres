@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="MoveDatas" load_steps=4 format=3 uid="uid://dwi4nflujgbop"]
+
+[ext_resource type="Script" uid="uid://2fme8eqsovvo" path="res://Resources/AbilityData.gd" id="1_7em0o"]
+[ext_resource type="Script" uid="uid://c3odxqj7xy866" path="res://Resources/MoveData.gd" id="2_k2f8m"]
+
+[sub_resource type="Resource" id="Resource_1udju"]
+script = ExtResource("1_7em0o")
+stat = 6
+change = 1
+chance = 1.0
+metadata/_custom_type_script = "uid://2fme8eqsovvo"
+
+[resource]
+script = ExtResource("2_k2f8m")
+name = "Splitting Uppercut"
+type = 12
+moveType = 1
+power = 130
+abilities = Array[ExtResource("1_7em0o")]([SubResource("Resource_1udju")])
+metadata/_custom_type_script = "uid://c3odxqj7xy866"

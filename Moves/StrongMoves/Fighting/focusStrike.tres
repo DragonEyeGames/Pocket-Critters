@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="MoveDatas" load_steps=5 format=3 uid="uid://nmd2r4j07efa"]
+
+[ext_resource type="Script" uid="uid://2fme8eqsovvo" path="res://Resources/AbilityData.gd" id="1_qhkya"]
+[ext_resource type="Script" uid="uid://c3odxqj7xy866" path="res://Resources/MoveData.gd" id="2_3556n"]
+
+[sub_resource type="Resource" id="Resource_qhkya"]
+script = ExtResource("1_qhkya")
+stat = 1
+change = 1
+chance = 1.0
+metadata/_custom_type_script = "uid://2fme8eqsovvo"
+
+[sub_resource type="Resource" id="Resource_3556n"]
+script = ExtResource("1_qhkya")
+stat = 2
+change = -1
+chance = 1.0
+metadata/_custom_type_script = "uid://2fme8eqsovvo"
+
+[resource]
+script = ExtResource("2_3556n")
+name = "Focus Strike"
+type = 12
+moveType = 1
+power = 140
+accuracy = 0.95
+abilities = Array[ExtResource("1_qhkya")]([SubResource("Resource_qhkya"), SubResource("Resource_3556n")])
+metadata/_custom_type_script = "uid://c3odxqj7xy866"

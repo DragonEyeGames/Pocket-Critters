@@ -42,11 +42,11 @@ enum pokemon {
 	Tekagon, #2 In-Game
 	Minamai, #Basic water fish thing In-Game
 	Marelstorm, #1 In-Game
-	Dripwirt, #basic water thing?
-	Pourka,
-	Appalyp,#basic dark water thing
-	Sycoral, #1
-	Nemesusa, #2
+	Dripwirt, #basic water thing? In-Game
+	Pourka, # In-Game
+	Appalyp,#basic dark water thing In-Game
+	Sycoral, #1 In-Game
+	Nemesusa, #2 In-Game
 	Sillennium # Basic priest (in moai) In-Game
 }
 
