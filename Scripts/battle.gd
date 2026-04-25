@@ -477,7 +477,7 @@ func _on_animate_animation_finished(_anim_name: StringName) -> void:
 func _player_animation_finished(_anim_name: StringName) -> void:
 	$Player/Animate.play("idle")
 
-func noise(soundPath):
+func noise(_soundPath):
 	return
 	#if(soundPath==""):
 	#	soundPath="res://BattleSounds/Tackle.mp3"

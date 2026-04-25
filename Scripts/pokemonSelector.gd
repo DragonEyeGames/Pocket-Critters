@@ -1,6 +1,7 @@
 extends Node2D
 
 @export var back:=false
+@export var resize=true
 @export var pokemon: PokemonData
 @export var holder: StatBlock
 
@@ -37,7 +38,8 @@ func initialize() -> void:
 	$Pokemon.texture = tex
 	var size = $Pokemon.texture.get_size()
 	var newScale = 70.0 / max(size.x, size.y)
-	$Pokemon.scale = Vector2(newScale, newScale)
+	if(resize):
+		$Pokemon.scale = Vector2(newScale, newScale)
 		
 	if(holder!=null):
 		holder.pokemonName=str(GameManager.pokemonName(pokemon.species))
@@ -63,14 +65,14 @@ func xp(old, new):
 
 func cry():
 	return
-	if(pokemon.base.cryPath==""):
-		return
-	get_node("Animate").play("call")
-	var player = AudioStreamPlayer.new()
-	player.stream = load(pokemon.base.cryPath)
-	player.volume_db=-10
-	add_child(player)
-	player.play()
+	#if(pokemon.base.cryPath==""):
+	#	return
+	#get_node("Animate").play("call")
+	#var player = AudioStreamPlayer.new()
+	#player.stream = load(pokemon.base.cryPath)
+	#player.volume_db=-10
+	#add_child(player)
+	#player.play()
 	
-	await player.finished
-	player.queue_free()
+	#await player.finished
+	#player.queue_free()
