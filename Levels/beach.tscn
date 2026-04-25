@@ -93,7 +93,7 @@ levelMin = 8
 levelMax = 13
 
 [node name="Player" parent="." groups=["Y-Sort"] instance=ExtResource("2_dpjeg")]
-position = Vector2(-621, 775)
+position = Vector2(-238, 716)
 positionOverride = true
 
 [node name="Y-Sort" type="Node2D" parent="." node_paths=PackedStringArray("player")]

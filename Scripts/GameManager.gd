@@ -26,22 +26,22 @@ enum pokemon {
 	Crestaka, #1 In-Game
 	Avipex, #2 In-Game
 	Dampurr, #basic water cat In-Game
-	Rainther, #1
-	Delugar, #2
+	Rainther, #1 In-Game
+	Delugar, #2 In-Game
 	Bonfur, #Basic fire bear In-Game
-	Tindursa, #1
-	Sizzly, #2
-	Lollybog, #Basic ghost poison
-	Brewtrid, #1
-	Forbiddron, #2
-	Kankwart, #Basic poison rock
-	Kankryst, #1
-	Kankersaur, #2
-	Baulder, #Basic rock dragon
-	Dreadrock, #1
-	Tekagon, #2
+	Tindursa, #1 In-Game
+	Sizzly, #2 In-Game
+	Lollybog, #Basic ghost poison In-Game
+	Brewtrid, #1 In-Game
+	Forbiddron, #2 In-Game
+	Kankwart, #Basic poison rock In-Game
+	Kankryst, #1 In-Game
+	Kankersaur, #2 In-Game
+	Baulder, #Basic rock dragon In-Game
+	Dreadrock, #1 In-Game
+	Tekagon, #2 In-Game
 	Minamai, #Basic water fish thing In-Game
-	Marelstorm, #1
+	Marelstorm, #1 In-Game
 	Dripwirt, #basic water thing?
 	Pourka,
 	Appalyp,#basic dark water thing
@@ -241,7 +241,7 @@ func newPokemon(species, level = 6):
 	p.ivSpecialAttack=loadIV()
 	p.ivDefense=loadIV()
 	p.ivSpecialDefense=loadIV()
-	p.health=1#int(get_stat(p.base.health, p.ivHealth, level)*healthMod)
+	p.health=int(get_stat(p.base.health, p.ivHealth, level)*healthMod)
 	p.maxHealth=int(get_stat(p.base.health, p.ivHealth, level)*healthMod)
 	p.attack=get_stat(p.base.attack, p.ivAttack, level)
 	p.defense=get_stat(p.base.defense, p.ivDefense, level)

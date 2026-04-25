@@ -1,7 +1,15 @@
-[gd_resource type="Resource" script_class="SpeciesData" load_steps=3 format=3 uid="uid://bhyurpsg14bjk"]
+[gd_resource type="Resource" script_class="SpeciesData" load_steps=6 format=3 uid="uid://bhyurpsg14bjk"]
 
 [ext_resource type="Script" uid="uid://kmcanhhb04o0" path="res://Resources/MoveResource.gd" id="1_8twff"]
+[ext_resource type="Resource" uid="uid://dqsm66xgc062y" path="res://Pokemon/dreadrock.tres" id="1_e005o"]
+[ext_resource type="Script" uid="uid://bdro5jjhj86t" path="res://Resources/EvolutionData.gd" id="2_rxygm"]
 [ext_resource type="Script" uid="uid://1vun3nkcoo5i" path="res://Resources/SpeciesData.gd" id="6_gepct"]
+
+[sub_resource type="Resource" id="Resource_4n6g5"]
+script = ExtResource("2_rxygm")
+into = ExtResource("1_e005o")
+level = 31
+metadata/_custom_type_script = "uid://bdro5jjhj86t"
 
 [resource]
 script = ExtResource("6_gepct")
@@ -15,5 +23,6 @@ specialAttack = 40
 specialDefense = 45
 speed = 35
 catchRate = 0.35
+evolution = SubResource("Resource_4n6g5")
 prevolution = 36
 metadata/_custom_type_script = "uid://c7t80kmu0l21k"

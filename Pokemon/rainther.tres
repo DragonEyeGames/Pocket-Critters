@@ -1,6 +1,8 @@
-[gd_resource type="Resource" script_class="SpeciesData" load_steps=17 format=3 uid="uid://nevcmjrmmgo3"]
+[gd_resource type="Resource" script_class="SpeciesData" load_steps=20 format=3 uid="uid://nevcmjrmmgo3"]
 
+[ext_resource type="Resource" uid="uid://daeeyyp10dnbe" path="res://Pokemon/delugar.tres" id="1_3cjns"]
 [ext_resource type="Script" uid="uid://kmcanhhb04o0" path="res://Resources/MoveResource.gd" id="1_b26qn"]
+[ext_resource type="Script" uid="uid://bdro5jjhj86t" path="res://Resources/EvolutionData.gd" id="2_6klmx"]
 [ext_resource type="Resource" uid="uid://c3w2860616tbu" path="res://Moves/WeakMoves/Normal/growl.tres" id="2_rlu4l"]
 [ext_resource type="Resource" uid="uid://0swwqh1y5jcf" path="res://Moves/WeakMoves/Normal/quickAttack.tres" id="3_3cjns"]
 [ext_resource type="Resource" uid="uid://cjwtbcu7vkxjk" path="res://Moves/WeakMoves/Normal/tackle.tres" id="4_6klmx"]
@@ -9,6 +11,12 @@
 [ext_resource type="Resource" uid="uid://dgmtrx7nld483" path="res://Moves/MediumMoves/Water/undertow.tres" id="7_c14ue"]
 [ext_resource type="Resource" uid="uid://btxshbrw5u77r" path="res://Moves/WeakMoves/Water/wavePush.tres" id="8_wryt8"]
 [ext_resource type="Script" uid="uid://1vun3nkcoo5i" path="res://Resources/SpeciesData.gd" id="9_tatew"]
+
+[sub_resource type="Resource" id="Resource_6c8ob"]
+script = ExtResource("2_6klmx")
+into = ExtResource("1_3cjns")
+level = 36
+metadata/_custom_type_script = "uid://bdro5jjhj86t"
 
 [sub_resource type="Resource" id="Resource_ytd7x"]
 script = ExtResource("1_b26qn")
@@ -56,13 +64,14 @@ script = ExtResource("9_tatew")
 species = 25
 type1 = 2
 type2 = 2
-health = 45
-attack = 35
-defense = 35
-specialAttack = 60
-specialDefense = 45
-speed = 55
+health = 65
+attack = 70
+defense = 55
+specialAttack = 75
+specialDefense = 60
+speed = 85
 potentialMoves = Array[ExtResource("1_b26qn")]([SubResource("Resource_ytd7x"), SubResource("Resource_pqd6s"), SubResource("Resource_vsrtg"), SubResource("Resource_bny8t"), SubResource("Resource_synsc"), SubResource("Resource_s6ce1"), SubResource("Resource_aakoc")])
 catchRate = 0.55
+evolution = SubResource("Resource_6c8ob")
 prevolution = 24
 metadata/_custom_type_script = "uid://c7t80kmu0l21k"

@@ -1,19 +1,28 @@
-[gd_resource type="Resource" script_class="SpeciesData" load_steps=3 format=3 uid="uid://dqsm66xgc062y"]
+[gd_resource type="Resource" script_class="SpeciesData" load_steps=6 format=3 uid="uid://dqsm66xgc062y"]
 
+[ext_resource type="Resource" uid="uid://csbu6jtagcnyl" path="res://Pokemon/tekagon.tres" id="1_6jwu5"]
 [ext_resource type="Script" uid="uid://kmcanhhb04o0" path="res://Resources/MoveResource.gd" id="1_h572k"]
+[ext_resource type="Script" uid="uid://bdro5jjhj86t" path="res://Resources/EvolutionData.gd" id="2_8ub7t"]
 [ext_resource type="Script" uid="uid://1vun3nkcoo5i" path="res://Resources/SpeciesData.gd" id="2_muq65"]
+
+[sub_resource type="Resource" id="Resource_aatu8"]
+script = ExtResource("2_8ub7t")
+into = ExtResource("1_6jwu5")
+level = 42
+metadata/_custom_type_script = "uid://bdro5jjhj86t"
 
 [resource]
 script = ExtResource("2_muq65")
 species = 37
 type1 = 16
 type2 = 10
-health = 55
-attack = 60
-defense = 65
-specialAttack = 40
-specialDefense = 45
-speed = 35
+health = 65
+attack = 75
+defense = 90
+specialAttack = 55
+specialDefense = 60
+speed = 50
 catchRate = 0.35
+evolution = SubResource("Resource_aatu8")
 prevolution = 36
 metadata/_custom_type_script = "uid://c7t80kmu0l21k"

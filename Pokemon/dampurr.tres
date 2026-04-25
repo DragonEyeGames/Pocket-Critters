@@ -1,6 +1,8 @@
-[gd_resource type="Resource" script_class="SpeciesData" load_steps=17 format=3 uid="uid://duj3cn6hifmek"]
+[gd_resource type="Resource" script_class="SpeciesData" load_steps=20 format=3 uid="uid://duj3cn6hifmek"]
 
+[ext_resource type="Resource" uid="uid://nevcmjrmmgo3" path="res://Pokemon/rainther.tres" id="1_7g42r"]
 [ext_resource type="Script" uid="uid://kmcanhhb04o0" path="res://Resources/MoveResource.gd" id="1_vcdqr"]
+[ext_resource type="Script" uid="uid://bdro5jjhj86t" path="res://Resources/EvolutionData.gd" id="2_gj4gt"]
 [ext_resource type="Resource" uid="uid://c3w2860616tbu" path="res://Moves/WeakMoves/Normal/growl.tres" id="2_soyew"]
 [ext_resource type="Resource" uid="uid://0swwqh1y5jcf" path="res://Moves/WeakMoves/Normal/quickAttack.tres" id="3_6it71"]
 [ext_resource type="Resource" uid="uid://cjwtbcu7vkxjk" path="res://Moves/WeakMoves/Normal/tackle.tres" id="4_7g42r"]
@@ -9,6 +11,12 @@
 [ext_resource type="Resource" uid="uid://b7q6nc865v0d1" path="res://Moves/WeakMoves/Water/bubbleGuard.tres" id="6_sqpta"]
 [ext_resource type="Resource" uid="uid://dgmtrx7nld483" path="res://Moves/MediumMoves/Water/undertow.tres" id="7_50vy7"]
 [ext_resource type="Resource" uid="uid://btxshbrw5u77r" path="res://Moves/WeakMoves/Water/wavePush.tres" id="8_8qswr"]
+
+[sub_resource type="Resource" id="Resource_sqpta"]
+script = ExtResource("2_gj4gt")
+into = ExtResource("1_7g42r")
+level = 18
+metadata/_custom_type_script = "uid://bdro5jjhj86t"
 
 [sub_resource type="Resource" id="Resource_ytd7x"]
 script = ExtResource("1_vcdqr")
@@ -64,5 +72,6 @@ specialDefense = 45
 speed = 55
 potentialMoves = Array[ExtResource("1_vcdqr")]([SubResource("Resource_ytd7x"), SubResource("Resource_pqd6s"), SubResource("Resource_vsrtg"), SubResource("Resource_bny8t"), SubResource("Resource_synsc"), SubResource("Resource_s6ce1"), SubResource("Resource_aakoc")])
 catchRate = 0.55
+evolution = SubResource("Resource_sqpta")
 prevolution = 24
 metadata/_custom_type_script = "uid://c7t80kmu0l21k"

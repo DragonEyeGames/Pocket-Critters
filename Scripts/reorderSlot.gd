@@ -16,7 +16,6 @@ func initialize():
 		$"Health Bar".value=pokemon.health
 		$"Health Bar".max_value=pokemon.maxHealth
 		$"Health Bar/Health".text=str(pokemon.health) + "/" + str(pokemon.maxHealth)
-		prints(index, bigBoss.activeIndex)
 		$Button.disabled=(pokemon.health<=0 or bigBoss.activeIndex==index)
 		$Fainted.visible=pokemon.health<=0
 	else:

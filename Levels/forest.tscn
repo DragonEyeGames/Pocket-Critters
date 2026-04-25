@@ -171,13 +171,14 @@ position = Vector2(33, -595)
 trainerData = ExtResource("20_evao7")
 player = NodePath("../Player")
 
-[node name="Exit" type="Area2D" parent="."]
+[node name="Exit" type="Area2D" parent="." node_paths=PackedStringArray("transitioner")]
 position = Vector2(-557, -1381)
 collision_layer = 0
 collision_mask = 2
 script = ExtResource("19_b4rj7")
 travelZone = "res://Levels/waymeetCity.tscn"
 travelPos = Vector2(0, 19)
+transitioner = NodePath("../Transitioner")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Exit"]
 position = Vector2(27.5, 49.5)

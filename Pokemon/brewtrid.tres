@@ -1,19 +1,28 @@
-[gd_resource type="Resource" script_class="SpeciesData" load_steps=3 format=3 uid="uid://dpgusxdh314n3"]
+[gd_resource type="Resource" script_class="SpeciesData" load_steps=6 format=3 uid="uid://dpgusxdh314n3"]
 
 [ext_resource type="Script" uid="uid://kmcanhhb04o0" path="res://Resources/MoveResource.gd" id="1_0w040"]
+[ext_resource type="Resource" uid="uid://cxdrlh4476nhs" path="res://Pokemon/forbiddron.tres" id="1_xuqw3"]
+[ext_resource type="Script" uid="uid://bdro5jjhj86t" path="res://Resources/EvolutionData.gd" id="2_ar5fc"]
 [ext_resource type="Script" uid="uid://1vun3nkcoo5i" path="res://Resources/SpeciesData.gd" id="2_d0swf"]
+
+[sub_resource type="Resource" id="Resource_wi5hm"]
+script = ExtResource("2_ar5fc")
+into = ExtResource("1_xuqw3")
+level = 39
+metadata/_custom_type_script = "uid://bdro5jjhj86t"
 
 [resource]
 script = ExtResource("2_d0swf")
 species = 31
 type1 = 15
 type2 = 7
-health = 50
-attack = 35
-defense = 40
-specialAttack = 60
-specialDefense = 55
-speed = 30
+health = 75
+attack = 45
+defense = 55
+specialAttack = 90
+specialDefense = 70
+speed = 60
 catchRate = 0.45
+evolution = SubResource("Resource_wi5hm")
 prevolution = 30
 metadata/_custom_type_script = "uid://c7t80kmu0l21k"

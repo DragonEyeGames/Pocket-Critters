@@ -1,7 +1,15 @@
-[gd_resource type="Resource" script_class="SpeciesData" load_steps=3 format=3 uid="uid://nfq5f5lt4og"]
+[gd_resource type="Resource" script_class="SpeciesData" load_steps=6 format=3 uid="uid://nfq5f5lt4og"]
 
 [ext_resource type="Script" uid="uid://kmcanhhb04o0" path="res://Resources/MoveResource.gd" id="1_878sn"]
+[ext_resource type="Resource" uid="uid://dpgusxdh314n3" path="res://Pokemon/brewtrid.tres" id="1_qxpox"]
+[ext_resource type="Script" uid="uid://bdro5jjhj86t" path="res://Resources/EvolutionData.gd" id="2_4m1iq"]
 [ext_resource type="Script" uid="uid://1vun3nkcoo5i" path="res://Resources/SpeciesData.gd" id="6_bwfn5"]
+
+[sub_resource type="Resource" id="Resource_ed4rg"]
+script = ExtResource("2_4m1iq")
+into = ExtResource("1_qxpox")
+level = 18
+metadata/_custom_type_script = "uid://bdro5jjhj86t"
 
 [resource]
 script = ExtResource("6_bwfn5")
@@ -10,10 +18,11 @@ type1 = 15
 type2 = 7
 health = 50
 attack = 35
-defense = 40
-specialAttack = 60
-specialDefense = 55
-speed = 30
+defense = 55
+specialAttack = 50
+specialDefense = 50
+speed = 45
 catchRate = 0.45
+evolution = SubResource("Resource_ed4rg")
 prevolution = 30
 metadata/_custom_type_script = "uid://c7t80kmu0l21k"

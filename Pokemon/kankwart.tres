@@ -1,19 +1,28 @@
-[gd_resource type="Resource" script_class="SpeciesData" load_steps=3 format=3 uid="uid://0yls4l6bpatb"]
+[gd_resource type="Resource" script_class="SpeciesData" load_steps=6 format=3 uid="uid://0yls4l6bpatb"]
 
 [ext_resource type="Script" uid="uid://kmcanhhb04o0" path="res://Resources/MoveResource.gd" id="1_i8mvm"]
+[ext_resource type="Resource" uid="uid://dqihlyglwa2fx" path="res://Pokemon/kankryst.tres" id="1_x2qpl"]
+[ext_resource type="Script" uid="uid://bdro5jjhj86t" path="res://Resources/EvolutionData.gd" id="2_3avu6"]
 [ext_resource type="Script" uid="uid://1vun3nkcoo5i" path="res://Resources/SpeciesData.gd" id="6_0uel1"]
+
+[sub_resource type="Resource" id="Resource_48cj3"]
+script = ExtResource("2_3avu6")
+into = ExtResource("1_x2qpl")
+level = 20
+metadata/_custom_type_script = "uid://bdro5jjhj86t"
 
 [resource]
 script = ExtResource("6_0uel1")
 species = 33
 type1 = 16
 type2 = 15
-health = 60
-attack = 45
-defense = 60
-specialAttack = 30
-specialDefense = 50
-speed = 20
+health = 55
+attack = 50
+defense = 65
+specialAttack = 35
+specialDefense = 55
+speed = 25
 catchRate = 0.5
+evolution = SubResource("Resource_48cj3")
 prevolution = 33
 metadata/_custom_type_script = "uid://c7t80kmu0l21k"
