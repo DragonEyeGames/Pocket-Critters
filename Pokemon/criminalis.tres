@@ -83,36 +83,43 @@ metadata/_custom_type_script = "uid://kmcanhhb04o0"
 [sub_resource type="Resource" id="Resource_ise7e"]
 script = ExtResource("1_aqw5a")
 move = ExtResource("12_qo84a")
+level = 44
 metadata/_custom_type_script = "uid://kmcanhhb04o0"
 
 [sub_resource type="Resource" id="Resource_5v5h8"]
 script = ExtResource("1_aqw5a")
 move = ExtResource("13_g1mjt")
+level = 34
 metadata/_custom_type_script = "uid://kmcanhhb04o0"
 
 [sub_resource type="Resource" id="Resource_a5add"]
 script = ExtResource("1_aqw5a")
 move = ExtResource("14_qa2um")
+level = 38
 metadata/_custom_type_script = "uid://kmcanhhb04o0"
 
 [sub_resource type="Resource" id="Resource_pw3oc"]
 script = ExtResource("1_aqw5a")
 move = ExtResource("15_8oewy")
+level = 41
 metadata/_custom_type_script = "uid://kmcanhhb04o0"
 
 [sub_resource type="Resource" id="Resource_wn5vq"]
 script = ExtResource("1_aqw5a")
 move = ExtResource("16_8lach")
+level = 36
 metadata/_custom_type_script = "uid://kmcanhhb04o0"
 
 [sub_resource type="Resource" id="Resource_xvs1w"]
 script = ExtResource("1_aqw5a")
 move = ExtResource("17_1qud5")
+level = 50
 metadata/_custom_type_script = "uid://kmcanhhb04o0"
 
 [sub_resource type="Resource" id="Resource_4ymb1"]
 script = ExtResource("1_aqw5a")
 move = ExtResource("18_dw6ro")
+level = 47
 metadata/_custom_type_script = "uid://kmcanhhb04o0"
 
 [resource]

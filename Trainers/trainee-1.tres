@@ -6,7 +6,7 @@
 [ext_resource type="Resource" uid="uid://cjwtbcu7vkxjk" path="res://Moves/WeakMoves/Normal/tackle.tres" id="4_lyx5l"]
 [ext_resource type="Resource" uid="uid://ch7rxit3qljs8" path="res://Moves/WeakMoves/Flying/liftOff.tres" id="4_mvhys"]
 [ext_resource type="Resource" uid="uid://cowyv6e3lbnco" path="res://Moves/WeakMoves/Flying/quickPeck.tres" id="5_pexsv"]
-[ext_resource type="Resource" uid="uid://5go1ihkf80au" path="res://Moves/WeakMoves/Grass/branch.tres" id="5_shb4b"]
+[ext_resource type="Resource" uid="uid://5go1ihkf80au" path="res://Moves/WeakMoves/Grass/branchPoke.tres" id="5_shb4b"]
 [ext_resource type="Resource" uid="uid://dekuq5aj6tnxh" path="res://Moves/WeakMoves/Flying/wingSlap.tres" id="6_dvtsy"]
 [ext_resource type="Resource" uid="uid://c3w2860616tbu" path="res://Moves/WeakMoves/Normal/growl.tres" id="6_menma"]
 [ext_resource type="Resource" uid="uid://cepnl6u878py5" path="res://Moves/WeakMoves/Grass/absorb.tres" id="7_rbvto"]

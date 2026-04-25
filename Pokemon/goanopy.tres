@@ -1,8 +1,17 @@
-[gd_resource type="Resource" script_class="SpeciesData" load_steps=6 format=3 uid="uid://bhaig3g01vrj6"]
+[gd_resource type="Resource" script_class="SpeciesData" load_steps=24 format=3 uid="uid://bhaig3g01vrj6"]
 
 [ext_resource type="Script" uid="uid://bdro5jjhj86t" path="res://Resources/EvolutionData.gd" id="1_pgftf"]
 [ext_resource type="Resource" uid="uid://dashcyuf7fti6" path="res://Pokemon/varanitor.tres" id="1_xpbns"]
 [ext_resource type="Script" uid="uid://kmcanhhb04o0" path="res://Resources/MoveResource.gd" id="2_bqtie"]
+[ext_resource type="Resource" uid="uid://b82sm6juqfhay" path="res://Moves/MediumMoves/Grass/gigaDrain.tres" id="4_cneet"]
+[ext_resource type="Resource" uid="uid://sm5rc8642hn7" path="res://Moves/MediumMoves/Grass/leafBurst.tres" id="5_2jrd8"]
+[ext_resource type="Resource" uid="uid://da4kacwarvdmg" path="res://Moves/MediumMoves/Grass/overgrowth.tres" id="6_wkfje"]
+[ext_resource type="Resource" uid="uid://drfam3qlv8mbg" path="res://Moves/MediumMoves/Grass/seedBomb.tres" id="7_mnp0a"]
+[ext_resource type="Resource" uid="uid://2obpwthkqcnh" path="res://Moves/MediumMoves/Grass/razorVine.tres" id="8_hovrl"]
+[ext_resource type="Resource" uid="uid://fte73ih4a5dq" path="res://Moves/MediumMoves/Ground/mudSurge.tres" id="9_ku3vn"]
+[ext_resource type="Resource" uid="uid://b7e8thmmc1lpp" path="res://Moves/MediumMoves/Ground/sandStrike.tres" id="10_xpbns"]
+[ext_resource type="Resource" uid="uid://bsfslymrmko3c" path="res://Moves/MediumMoves/Normal/bodySlam.tres" id="11_wkfje"]
+[ext_resource type="Resource" uid="uid://cdwss7jsvtro3" path="res://Moves/MediumMoves/Normal/quickStrike.tres" id="12_mnp0a"]
 [ext_resource type="Script" uid="uid://1vun3nkcoo5i" path="res://Resources/SpeciesData.gd" id="16_674tx"]
 
 [sub_resource type="Resource" id="Resource_dnwyj"]
@@ -10,6 +19,60 @@ script = ExtResource("1_pgftf")
 into = ExtResource("1_xpbns")
 level = 34
 metadata/_custom_type_script = "uid://bdro5jjhj86t"
+
+[sub_resource type="Resource" id="Resource_34xac"]
+script = ExtResource("2_bqtie")
+move = ExtResource("4_cneet")
+level = 24
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_hwlt4"]
+script = ExtResource("2_bqtie")
+move = ExtResource("5_2jrd8")
+level = 19
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_5nts0"]
+script = ExtResource("2_bqtie")
+move = ExtResource("6_wkfje")
+level = 28
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_d0jny"]
+script = ExtResource("2_bqtie")
+move = ExtResource("7_mnp0a")
+level = 22
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_ucuho"]
+script = ExtResource("2_bqtie")
+move = ExtResource("8_hovrl")
+level = 26
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_72wyh"]
+script = ExtResource("2_bqtie")
+move = ExtResource("9_ku3vn")
+level = 23
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_y2osa"]
+script = ExtResource("2_bqtie")
+move = ExtResource("10_xpbns")
+level = 27
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_hovrl"]
+script = ExtResource("2_bqtie")
+move = ExtResource("11_wkfje")
+level = 18
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_ku3vn"]
+script = ExtResource("2_bqtie")
+move = ExtResource("12_mnp0a")
+level = 20
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
 
 [resource]
 script = ExtResource("16_674tx")
@@ -22,6 +85,7 @@ defense = 65
 specialAttack = 62
 specialDefense = 76
 speed = 54
+potentialMoves = Array[ExtResource("2_bqtie")]([SubResource("Resource_34xac"), SubResource("Resource_hwlt4"), SubResource("Resource_5nts0"), SubResource("Resource_d0jny"), SubResource("Resource_ucuho"), SubResource("Resource_72wyh"), SubResource("Resource_y2osa"), SubResource("Resource_hovrl"), SubResource("Resource_ku3vn")])
 catchRate = 0.35
 cryPath = "res://PokemonCries/snivy.wav"
 evolution = SubResource("Resource_dnwyj")

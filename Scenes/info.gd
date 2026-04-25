@@ -42,11 +42,12 @@ func initialize():
 	else:
 		$Types/Type2.visible=false
 	if(species.species not in GameManager.seenDex):
-		$PokemonHolder/NewPokemon.modulate=Color.BLACK
-		$Title/title.text="???"
+		#$PokemonHolder/NewPokemon.modulate=Color.BLACK
+		#$Title/title.text="???"
 		#$Description/description.text="???"
-		$Types/Type.visible=false
-		$Types/Type2.visible=false
+		#$Types/Type.visible=false
+		#$Types/Type2.visible=false
+		pass
 	
 func close():
 	visible=false

@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://kmcanhhb04o0" path="res://Resources/MoveResource.gd" id="1_t552i"]
 [ext_resource type="Script" uid="uid://bdro5jjhj86t" path="res://Resources/EvolutionData.gd" id="2_e0luk"]
 [ext_resource type="Resource" uid="uid://cepnl6u878py5" path="res://Moves/WeakMoves/Grass/absorb.tres" id="2_p1wfu"]
-[ext_resource type="Resource" uid="uid://5go1ihkf80au" path="res://Moves/WeakMoves/Grass/branch.tres" id="3_s2pr0"]
+[ext_resource type="Resource" uid="uid://5go1ihkf80au" path="res://Moves/WeakMoves/Grass/branchPoke.tres" id="3_s2pr0"]
 [ext_resource type="Script" uid="uid://1vun3nkcoo5i" path="res://Resources/SpeciesData.gd" id="4_s6xgl"]
 [ext_resource type="Resource" uid="uid://b82sm6juqfhay" path="res://Moves/MediumMoves/Grass/gigaDrain.tres" id="4_veuph"]
 [ext_resource type="Resource" uid="uid://drfam3qlv8mbg" path="res://Moves/MediumMoves/Grass/seedBomb.tres" id="5_ln024"]

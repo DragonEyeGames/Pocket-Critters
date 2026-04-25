@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://dxn4lkbl53l63" path="res://Resources/TeamData.gd" id="2_3wpfk"]
 [ext_resource type="Script" uid="uid://c3odxqj7xy866" path="res://Resources/MoveData.gd" id="3_ixsea"]
 [ext_resource type="Resource" uid="uid://cepnl6u878py5" path="res://Moves/WeakMoves/Grass/absorb.tres" id="4_y5w28"]
-[ext_resource type="Resource" uid="uid://5go1ihkf80au" path="res://Moves/WeakMoves/Grass/branch.tres" id="5_drnxv"]
+[ext_resource type="Resource" uid="uid://5go1ihkf80au" path="res://Moves/WeakMoves/Grass/branchPoke.tres" id="5_drnxv"]
 [ext_resource type="Resource" uid="uid://c3w2860616tbu" path="res://Moves/WeakMoves/Normal/growl.tres" id="6_aagft"]
 [ext_resource type="Resource" uid="uid://cjwtbcu7vkxjk" path="res://Moves/WeakMoves/Normal/tackle.tres" id="7_mrapf"]
 [ext_resource type="Resource" uid="uid://bu7rm71701ktv" path="res://Moves/WeakMoves/Flying/peck.tres" id="8_rtkmh"]

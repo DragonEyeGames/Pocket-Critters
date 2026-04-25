@@ -11,7 +11,7 @@
 [ext_resource type="Resource" uid="uid://0qmc82cfrnxf" path="res://Moves/WeakMoves/Fairy/sweetLight.tres" id="6_ncft5"]
 [ext_resource type="Resource" uid="uid://dbw6orbhl273f" path="res://Moves/WeakMoves/Fairy/playfulKick.tres" id="7_p7v7d"]
 [ext_resource type="Resource" uid="uid://cepnl6u878py5" path="res://Moves/WeakMoves/Grass/absorb.tres" id="8_fccjs"]
-[ext_resource type="Resource" uid="uid://bme468jn1i7gt" path="res://Moves/WeakMoves/Grass/cotton.tres" id="9_evl74"]
+[ext_resource type="Resource" uid="uid://bme468jn1i7gt" path="res://Moves/WeakMoves/Grass/cottonGuard.tres" id="9_evl74"]
 [ext_resource type="Resource" uid="uid://b82sm6juqfhay" path="res://Moves/MediumMoves/Grass/gigaDrain.tres" id="10_lt8tu"]
 [ext_resource type="Resource" uid="uid://cjwtbcu7vkxjk" path="res://Moves/WeakMoves/Normal/tackle.tres" id="11_vthit"]
 [ext_resource type="Resource" uid="uid://bd1h37ujt4yux" path="res://Moves/WeakMoves/Normal/headbutt.tres" id="12_t1fmo"]
