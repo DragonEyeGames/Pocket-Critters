@@ -14,7 +14,7 @@
 [ext_resource type="Resource" uid="uid://r1xk2iaavgak" path="res://Moves/WeakMoves/Ground/pebbleKick.tres" id="8_0pmhf"]
 [ext_resource type="Resource" uid="uid://bgileglrg45p2" path="res://Moves/WeakMoves/Grass/trailblaze.tres" id="8_3wfhv"]
 [ext_resource type="Resource" uid="uid://q6b04edas3s7" path="res://Moves/WeakMoves/Ground/earthCrack.tres" id="9_nee4x"]
-[ext_resource type="Resource" uid="uid://brvhs3akjs2ul" path="res://Moves/WeakMoves/Grass/bramble.tres" id="10_nee4x"]
+[ext_resource type="Resource" uid="uid://brvhs3akjs2ul" path="res://Moves/WeakMoves/Grass/brambleUp.tres" id="10_nee4x"]
 
 [sub_resource type="Resource" id="Resource_3wfhv"]
 script = ExtResource("2_jyk1k")

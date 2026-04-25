@@ -1,7 +1,70 @@
-[gd_resource type="Resource" script_class="SpeciesData" load_steps=3 format=3 uid="uid://doppuo8xvc1pl"]
+[gd_resource type="Resource" script_class="SpeciesData" load_steps=21 format=3 uid="uid://doppuo8xvc1pl"]
 
 [ext_resource type="Script" uid="uid://kmcanhhb04o0" path="res://Resources/MoveResource.gd" id="1_k0mi5"]
+[ext_resource type="Resource" uid="uid://d01yucg1dexvh" path="res://Moves/StrongMoves/Dark/predatoryRush.tres" id="2_2pyr0"]
+[ext_resource type="Resource" uid="uid://b4qaxjl7hm8s1" path="res://Moves/StrongMoves/Dark/finalHunt.tres" id="3_k0mi5"]
+[ext_resource type="Resource" uid="uid://dfolp27qc08ty" path="res://Moves/StrongMoves/Grass/canopyCrash.tres" id="4_xfrfq"]
+[ext_resource type="Resource" uid="uid://bonbvti4iynrb" path="res://Moves/StrongMoves/Grass/forestDomination.tres" id="5_k6asg"]
+[ext_resource type="Resource" uid="uid://cjfffyrv62nsi" path="res://Moves/StrongMoves/Grass/thornCatapult.tres" id="6_x4f63"]
+[ext_resource type="Resource" uid="uid://65iq6p3hsflg" path="res://Moves/StrongMoves/Grass/wildBurst.tres" id="7_tjm6b"]
+[ext_resource type="Resource" uid="uid://clquya4b4ve4d" path="res://Moves/StrongMoves/Normal/bruteForce.tres" id="8_uji2b"]
+[ext_resource type="Resource" uid="uid://dhu1v80dcwjqc" path="res://Moves/StrongMoves/Normal/breakthrough.tres" id="9_jkj07"]
+[ext_resource type="Resource" uid="uid://cdo5cttjhstoy" path="res://Moves/StrongMoves/Normal/heavyImpact.tres" id="10_rc13f"]
 [ext_resource type="Script" uid="uid://1vun3nkcoo5i" path="res://Resources/SpeciesData.gd" id="12_y7xan"]
+
+[sub_resource type="Resource" id="Resource_nyqju"]
+script = ExtResource("1_k0mi5")
+move = ExtResource("2_2pyr0")
+level = 40
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_w18qj"]
+script = ExtResource("1_k0mi5")
+move = ExtResource("3_k0mi5")
+level = 56
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_f0tly"]
+script = ExtResource("1_k0mi5")
+move = ExtResource("4_xfrfq")
+level = 38
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_y7xan"]
+script = ExtResource("1_k0mi5")
+move = ExtResource("5_k6asg")
+level = 30
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_fxfna"]
+script = ExtResource("1_k0mi5")
+move = ExtResource("6_x4f63")
+level = 35
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_ktyp6"]
+script = ExtResource("1_k0mi5")
+move = ExtResource("7_tjm6b")
+level = 42
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_ahmla"]
+script = ExtResource("1_k0mi5")
+move = ExtResource("8_uji2b")
+level = 33
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_omvgv"]
+script = ExtResource("1_k0mi5")
+move = ExtResource("9_jkj07")
+level = 39
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_rnjx4"]
+script = ExtResource("1_k0mi5")
+move = ExtResource("10_rc13f")
+level = 51
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
 
 [resource]
 script = ExtResource("12_y7xan")
@@ -14,6 +77,7 @@ defense = 75
 specialAttack = 60
 specialDefense = 75
 speed = 105
+potentialMoves = Array[ExtResource("1_k0mi5")]([SubResource("Resource_nyqju"), SubResource("Resource_w18qj"), SubResource("Resource_f0tly"), SubResource("Resource_y7xan"), SubResource("Resource_fxfna"), SubResource("Resource_ktyp6"), SubResource("Resource_ahmla"), SubResource("Resource_omvgv"), SubResource("Resource_rnjx4")])
 catchRate = 0.2
 cryPath = "res://PokemonCries/rockruff.wav"
 prevolution = 1

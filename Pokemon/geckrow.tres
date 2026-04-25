@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bdro5jjhj86t" path="res://Resources/EvolutionData.gd" id="1_6kh7r"]
 [ext_resource type="Script" uid="uid://kmcanhhb04o0" path="res://Resources/MoveResource.gd" id="1_i1mt6"]
-[ext_resource type="Resource" uid="uid://brvhs3akjs2ul" path="res://Moves/WeakMoves/Grass/bramble.tres" id="2_6el0v"]
+[ext_resource type="Resource" uid="uid://brvhs3akjs2ul" path="res://Moves/WeakMoves/Grass/brambleUp.tres" id="2_6el0v"]
 [ext_resource type="Resource" uid="uid://bhaig3g01vrj6" path="res://Pokemon/goanopy.tres" id="2_cxorh"]
 [ext_resource type="Script" uid="uid://1vun3nkcoo5i" path="res://Resources/SpeciesData.gd" id="3_1poqq"]
 [ext_resource type="Resource" uid="uid://5go1ihkf80au" path="res://Moves/WeakMoves/Grass/branch.tres" id="3_hjwmc"]

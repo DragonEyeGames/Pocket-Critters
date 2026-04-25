@@ -1,7 +1,119 @@
-[gd_resource type="Resource" script_class="SpeciesData" load_steps=3 format=3 uid="uid://cmrubsqwxochu"]
+[gd_resource type="Resource" script_class="SpeciesData" load_steps=37 format=3 uid="uid://cmrubsqwxochu"]
 
 [ext_resource type="Script" uid="uid://kmcanhhb04o0" path="res://Resources/MoveResource.gd" id="1_aqw5a"]
+[ext_resource type="Resource" uid="uid://dtur5frr1obit" path="res://Moves/MediumMoves/Dark/darkPulse.tres" id="2_pi60d"]
+[ext_resource type="Resource" uid="uid://b1lpe7v3th25d" path="res://Moves/MediumMoves/Dark/nightSlash.tres" id="3_d2pk4"]
+[ext_resource type="Resource" uid="uid://crki4cwm7vdnn" path="res://Moves/MediumMoves/Dark/sneakStrike.tres" id="4_o0t3j"]
+[ext_resource type="Resource" uid="uid://clhgeufbj13xd" path="res://Moves/MediumMoves/Flying/divebomb.tres" id="5_ise7e"]
+[ext_resource type="Resource" uid="uid://8e3njc15lot7" path="res://Moves/MediumMoves/Flying/updraft.tres" id="6_5v5h8"]
+[ext_resource type="Resource" uid="uid://bv8cu7pjltfm5" path="res://Moves/MediumMoves/Flying/whirlwind.tres" id="7_a5add"]
+[ext_resource type="Resource" uid="uid://b0e3xrvvcl5kc" path="res://Moves/MediumMoves/Flying/cyclone.tres" id="8_pw3oc"]
+[ext_resource type="Resource" uid="uid://cw4i4l1ruw61b" path="res://Moves/MediumMoves/Flying/airPulse.tres" id="9_wn5vq"]
+[ext_resource type="Resource" uid="uid://bsfslymrmko3c" path="res://Moves/MediumMoves/Normal/bodySlam.tres" id="10_1m1l4"]
 [ext_resource type="Script" uid="uid://1vun3nkcoo5i" path="res://Resources/SpeciesData.gd" id="10_qo84a"]
+[ext_resource type="Resource" uid="uid://cdwss7jsvtro3" path="res://Moves/MediumMoves/Normal/quickStrike.tres" id="11_p3jjd"]
+[ext_resource type="Resource" uid="uid://cryjnnmuxs5u8" path="res://Moves/StrongMoves/Dark/nightshade.tres" id="12_qo84a"]
+[ext_resource type="Resource" uid="uid://nqnlq2ph8v47" path="res://Moves/StrongMoves/Dark/blackout.tres" id="13_g1mjt"]
+[ext_resource type="Resource" uid="uid://dfodwvlb6l3yo" path="res://Moves/StrongMoves/Dark/shadowStrike.tres" id="14_qa2um"]
+[ext_resource type="Resource" uid="uid://cfmju8llntqih" path="res://Moves/StrongMoves/Flying/cyclone.tres" id="15_8oewy"]
+[ext_resource type="Resource" uid="uid://c1rry0yewyr02" path="res://Moves/StrongMoves/Flying/stormAscent.tres" id="16_8lach"]
+[ext_resource type="Resource" uid="uid://ejlpiqxohlcr" path="res://Moves/StrongMoves/Flying/windDominion.tres" id="17_1qud5"]
+[ext_resource type="Resource" uid="uid://ddpohw7ki6umv" path="res://Moves/StrongMoves/Flying/stratosPierce.tres" id="18_dw6ro"]
+
+[sub_resource type="Resource" id="Resource_cn3e6"]
+script = ExtResource("1_aqw5a")
+move = ExtResource("2_pi60d")
+level = 20
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_hiu3u"]
+script = ExtResource("1_aqw5a")
+move = ExtResource("3_d2pk4")
+level = 25
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_aqw5a"]
+script = ExtResource("1_aqw5a")
+move = ExtResource("4_o0t3j")
+level = 10
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_qo84a"]
+script = ExtResource("1_aqw5a")
+move = ExtResource("5_ise7e")
+level = 23
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_g1mjt"]
+script = ExtResource("1_aqw5a")
+move = ExtResource("6_5v5h8")
+level = 21
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_qa2um"]
+script = ExtResource("1_aqw5a")
+move = ExtResource("7_a5add")
+level = 18
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_8oewy"]
+script = ExtResource("1_aqw5a")
+move = ExtResource("8_pw3oc")
+level = 29
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_8lach"]
+script = ExtResource("1_aqw5a")
+move = ExtResource("9_wn5vq")
+level = 26
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_1qud5"]
+script = ExtResource("1_aqw5a")
+move = ExtResource("10_1m1l4")
+level = 31
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_dw6ro"]
+script = ExtResource("1_aqw5a")
+move = ExtResource("11_p3jjd")
+level = 24
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_ise7e"]
+script = ExtResource("1_aqw5a")
+move = ExtResource("12_qo84a")
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_5v5h8"]
+script = ExtResource("1_aqw5a")
+move = ExtResource("13_g1mjt")
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_a5add"]
+script = ExtResource("1_aqw5a")
+move = ExtResource("14_qa2um")
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_pw3oc"]
+script = ExtResource("1_aqw5a")
+move = ExtResource("15_8oewy")
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_wn5vq"]
+script = ExtResource("1_aqw5a")
+move = ExtResource("16_8lach")
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_xvs1w"]
+script = ExtResource("1_aqw5a")
+move = ExtResource("17_1qud5")
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_4ymb1"]
+script = ExtResource("1_aqw5a")
+move = ExtResource("18_dw6ro")
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
 
 [resource]
 script = ExtResource("10_qo84a")
@@ -14,6 +126,7 @@ defense = 55
 specialAttack = 50
 specialDefense = 55
 speed = 110
+potentialMoves = Array[ExtResource("1_aqw5a")]([SubResource("Resource_cn3e6"), SubResource("Resource_hiu3u"), SubResource("Resource_aqw5a"), SubResource("Resource_qo84a"), SubResource("Resource_g1mjt"), SubResource("Resource_qa2um"), SubResource("Resource_8oewy"), SubResource("Resource_8lach"), SubResource("Resource_1qud5"), SubResource("Resource_dw6ro"), SubResource("Resource_ise7e"), SubResource("Resource_5v5h8"), SubResource("Resource_a5add"), SubResource("Resource_pw3oc"), SubResource("Resource_wn5vq"), SubResource("Resource_xvs1w"), SubResource("Resource_4ymb1")])
 catchRate = 0.45
 cryPath = "res://PokemonCries/fletchling.mp3"
 prevolution = 3

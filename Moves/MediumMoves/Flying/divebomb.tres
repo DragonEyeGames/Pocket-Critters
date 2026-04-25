@@ -5,7 +5,7 @@
 
 [resource]
 script = ExtResource("2_bahe1")
-name = "Divebomb Strike"
+name = "Divebomb"
 type = 3
 moveType = 1
 power = 90

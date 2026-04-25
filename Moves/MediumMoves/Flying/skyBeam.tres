@@ -12,7 +12,7 @@ metadata/_custom_type_script = "uid://2fme8eqsovvo"
 
 [resource]
 script = ExtResource("2_5xuwa")
-name = "Soaring Beam"
+name = "Sky Beam"
 type = 3
 power = 95
 accuracy = 0.9

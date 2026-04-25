@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="SpeciesData" load_steps=22 format=3 uid="uid://b0ivyhj4g48un"]
+[gd_resource type="Resource" script_class="SpeciesData" load_steps=24 format=3 uid="uid://b0ivyhj4g48un"]
 
 [ext_resource type="Script" uid="uid://kmcanhhb04o0" path="res://Resources/MoveResource.gd" id="1_rnmic"]
 [ext_resource type="Resource" uid="uid://cmrubsqwxochu" path="res://Pokemon/criminalis.tres" id="1_xjnv1"]
@@ -8,10 +8,11 @@
 [ext_resource type="Resource" uid="uid://cowyv6e3lbnco" path="res://Moves/WeakMoves/Flying/quickPeck.tres" id="3_xjnv1"]
 [ext_resource type="Resource" uid="uid://dekuq5aj6tnxh" path="res://Moves/WeakMoves/Flying/wingSlap.tres" id="4_y8a34"]
 [ext_resource type="Resource" uid="uid://ch7rxit3qljs8" path="res://Moves/WeakMoves/Flying/liftOff.tres" id="5_43sv0"]
-[ext_resource type="Resource" uid="uid://cfn1x8bt84qye" path="res://Moves/WeakMoves/Flying/airCut.tres" id="6_f31f3"]
-[ext_resource type="Resource" uid="uid://cao3lrn2sxdaa" path="res://Moves/WeakMoves/Normal/focus.tres" id="7_nn3a1"]
+[ext_resource type="Resource" uid="uid://r38dwjvqcumg" path="res://Moves/WeakMoves/Flying/gust.tres" id="7_y8a34"]
 [ext_resource type="Resource" uid="uid://cjwtbcu7vkxjk" path="res://Moves/WeakMoves/Normal/tackle.tres" id="8_l2m6l"]
 [ext_resource type="Resource" uid="uid://cbp1qoovefw0w" path="res://Moves/WeakMoves/Normal/leer.tres" id="9_x3njm"]
+[ext_resource type="Resource" uid="uid://bd1h37ujt4yux" path="res://Moves/WeakMoves/Normal/headbutt.tres" id="10_43sv0"]
+[ext_resource type="Resource" uid="uid://0swwqh1y5jcf" path="res://Moves/WeakMoves/Normal/quickAttack.tres" id="12_f31f3"]
 
 [sub_resource type="Resource" id="Resource_43sv0"]
 script = ExtResource("2_y8a34")
@@ -19,52 +20,58 @@ into = ExtResource("1_xjnv1")
 level = 17
 metadata/_custom_type_script = "uid://bdro5jjhj86t"
 
-[sub_resource type="Resource" id="Resource_obhjb"]
+[sub_resource type="Resource" id="Resource_nn3a1"]
 script = ExtResource("1_rnmic")
 move = ExtResource("2_gpgau")
 level = 1
 metadata/_custom_type_script = "uid://kmcanhhb04o0"
 
-[sub_resource type="Resource" id="Resource_uippx"]
+[sub_resource type="Resource" id="Resource_l2m6l"]
 script = ExtResource("1_rnmic")
 move = ExtResource("3_xjnv1")
-level = 2
-metadata/_custom_type_script = "uid://kmcanhhb04o0"
-
-[sub_resource type="Resource" id="Resource_8k7m8"]
-script = ExtResource("1_rnmic")
-move = ExtResource("4_y8a34")
 level = 5
 metadata/_custom_type_script = "uid://kmcanhhb04o0"
 
-[sub_resource type="Resource" id="Resource_ihn01"]
+[sub_resource type="Resource" id="Resource_x3njm"]
 script = ExtResource("1_rnmic")
 move = ExtResource("5_43sv0")
-level = 4
+level = 7
 metadata/_custom_type_script = "uid://kmcanhhb04o0"
 
-[sub_resource type="Resource" id="Resource_vbm5g"]
+[sub_resource type="Resource" id="Resource_obhjb"]
 script = ExtResource("1_rnmic")
-move = ExtResource("6_f31f3")
+move = ExtResource("7_y8a34")
+level = 12
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_uippx"]
+script = ExtResource("1_rnmic")
+move = ExtResource("4_y8a34")
 level = 6
 metadata/_custom_type_script = "uid://kmcanhhb04o0"
 
-[sub_resource type="Resource" id="Resource_jrt7w"]
-script = ExtResource("1_rnmic")
-move = ExtResource("7_nn3a1")
-level = 1
-metadata/_custom_type_script = "uid://kmcanhhb04o0"
-
-[sub_resource type="Resource" id="Resource_lwqc5"]
+[sub_resource type="Resource" id="Resource_8k7m8"]
 script = ExtResource("1_rnmic")
 move = ExtResource("8_l2m6l")
 level = 1
 metadata/_custom_type_script = "uid://kmcanhhb04o0"
 
-[sub_resource type="Resource" id="Resource_407wf"]
+[sub_resource type="Resource" id="Resource_ihn01"]
+script = ExtResource("1_rnmic")
+move = ExtResource("10_43sv0")
+level = 16
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_vbm5g"]
 script = ExtResource("1_rnmic")
 move = ExtResource("9_x3njm")
 level = 1
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_jrt7w"]
+script = ExtResource("1_rnmic")
+move = ExtResource("12_f31f3")
+level = 8
 metadata/_custom_type_script = "uid://kmcanhhb04o0"
 
 [resource]
@@ -78,7 +85,7 @@ defense = 40
 specialAttack = 35
 specialDefense = 40
 speed = 65
-potentialMoves = Array[ExtResource("1_rnmic")]([SubResource("Resource_obhjb"), SubResource("Resource_uippx"), SubResource("Resource_8k7m8"), SubResource("Resource_ihn01"), SubResource("Resource_vbm5g"), SubResource("Resource_jrt7w"), SubResource("Resource_lwqc5"), SubResource("Resource_407wf")])
+potentialMoves = Array[ExtResource("1_rnmic")]([SubResource("Resource_nn3a1"), SubResource("Resource_l2m6l"), SubResource("Resource_x3njm"), SubResource("Resource_obhjb"), SubResource("Resource_uippx"), SubResource("Resource_8k7m8"), SubResource("Resource_ihn01"), SubResource("Resource_vbm5g"), SubResource("Resource_jrt7w")])
 catchRate = 0.45
 cryPath = "res://PokemonCries/fletchling.mp3"
 evolution = SubResource("Resource_43sv0")

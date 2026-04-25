@@ -1,8 +1,16 @@
-[gd_resource type="Resource" script_class="SpeciesData" load_steps=6 format=3 uid="uid://dm3niahia0k3y"]
+[gd_resource type="Resource" script_class="SpeciesData" load_steps=22 format=3 uid="uid://dm3niahia0k3y"]
 
 [ext_resource type="Script" uid="uid://kmcanhhb04o0" path="res://Resources/MoveResource.gd" id="1_3a4rp"]
 [ext_resource type="Resource" uid="uid://doppuo8xvc1pl" path="res://Pokemon/botanine.tres" id="1_xw0d6"]
 [ext_resource type="Script" uid="uid://bdro5jjhj86t" path="res://Resources/EvolutionData.gd" id="2_ds1ex"]
+[ext_resource type="Resource" uid="uid://dxdatetbl8tj" path="res://Moves/MediumMoves/Dark/crunch.tres" id="4_3a4rp"]
+[ext_resource type="Resource" uid="uid://c60yp4lvd3fba" path="res://Moves/MediumMoves/Dark/shadowClaw.tres" id="5_kctx8"]
+[ext_resource type="Resource" uid="uid://2obpwthkqcnh" path="res://Moves/MediumMoves/Grass/razorVine.tres" id="6_xw0d6"]
+[ext_resource type="Resource" uid="uid://sm5rc8642hn7" path="res://Moves/MediumMoves/Grass/leafBurst.tres" id="7_ds1ex"]
+[ext_resource type="Resource" uid="uid://drfam3qlv8mbg" path="res://Moves/MediumMoves/Grass/seedBomb.tres" id="8_5ho3p"]
+[ext_resource type="Resource" uid="uid://bhvdchd2k3ntj" path="res://Moves/MediumMoves/Normal/balanceBreak.tres" id="9_r6bnm"]
+[ext_resource type="Resource" uid="uid://cdwss7jsvtro3" path="res://Moves/MediumMoves/Normal/quickStrike.tres" id="10_w8hqy"]
+[ext_resource type="Resource" uid="uid://da4kacwarvdmg" path="res://Moves/MediumMoves/Grass/overgrowth.tres" id="11_exen8"]
 [ext_resource type="Script" uid="uid://1vun3nkcoo5i" path="res://Resources/SpeciesData.gd" id="12_oc5mi"]
 
 [sub_resource type="Resource" id="Resource_5ho3p"]
@@ -10,6 +18,54 @@ script = ExtResource("2_ds1ex")
 into = ExtResource("1_xw0d6")
 level = 32
 metadata/_custom_type_script = "uid://bdro5jjhj86t"
+
+[sub_resource type="Resource" id="Resource_q2sik"]
+script = ExtResource("1_3a4rp")
+move = ExtResource("4_3a4rp")
+level = 24
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_gbnay"]
+script = ExtResource("1_3a4rp")
+move = ExtResource("5_kctx8")
+level = 30
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_dqr4a"]
+script = ExtResource("1_3a4rp")
+move = ExtResource("6_xw0d6")
+level = 18
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_oc5mi"]
+script = ExtResource("1_3a4rp")
+move = ExtResource("7_ds1ex")
+level = 29
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_xtpk2"]
+script = ExtResource("1_3a4rp")
+move = ExtResource("8_5ho3p")
+level = 22
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_nrxtr"]
+script = ExtResource("1_3a4rp")
+move = ExtResource("9_r6bnm")
+level = 17
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_2k7vh"]
+script = ExtResource("1_3a4rp")
+move = ExtResource("10_w8hqy")
+level = 15
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_g4l6l"]
+script = ExtResource("1_3a4rp")
+move = ExtResource("11_exen8")
+level = 27
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
 
 [resource]
 script = ExtResource("12_oc5mi")
@@ -22,6 +78,7 @@ defense = 65
 specialAttack = 55
 specialDefense = 65
 speed = 90
+potentialMoves = Array[ExtResource("1_3a4rp")]([SubResource("Resource_q2sik"), SubResource("Resource_gbnay"), SubResource("Resource_dqr4a"), SubResource("Resource_oc5mi"), SubResource("Resource_xtpk2"), SubResource("Resource_nrxtr"), SubResource("Resource_2k7vh"), SubResource("Resource_g4l6l")])
 catchRate = 0.3
 cryPath = "res://PokemonCries/rockruff.wav"
 evolution = SubResource("Resource_5ho3p")
