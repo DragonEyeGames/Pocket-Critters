@@ -18,7 +18,7 @@ func _ready() -> void:
 		else:
 			fainted.append(pokemon)
 	if(len(healthy)>=1):
-		GameManager.healthyTeam = healthy
+		GameManager.healthyTeam = GameManager.playerTeam#healthy
 	else:
 		get_tree().change_scene_to_file("res://Scenes/dead.tscn")
 		return
@@ -281,6 +281,7 @@ func loadLevel(p: PokemonData):
 
 func _on_switch_pressed() -> void:
 	$"Reorder Team".visible=true
+	$"Reorder Team/Button".visible=true
 	for child in $"Reorder Team/GridContainer".get_children():
 		child.initialize()
 
@@ -301,6 +302,14 @@ func replacePokemon(index: int):
 	GameManager.playerTeam[index]=$Opponent.pokemon
 	GameManager.toMain()
 
+func swapPokemon(index: int):
+	$Player.pokemon=GameManager.playerTeam[index]
+	$"Reorder Team".visible=false
+	$Player.initialize()
+	activeIndex=index
+	$BattleOptions/Display.text="What will " + str(GameManager.playerTeam[index].name) + " do?"
+	nonAttack()
+
 func toBoxes() -> void:
 	GameManager.toMain()
 	
@@ -314,7 +323,7 @@ func checkPlayer():
 			else:
 				fainted.append(pokemon)
 		if(len(healthy)>=1):
-			GameManager.healthyTeam = healthy
+			GameManager.healthyTeam = GameManager.playerTeam#healthy
 		else:
 			get_tree().change_scene_to_file("res://Scenes/dead.tscn")
 			return false
@@ -493,3 +502,7 @@ func noise(_soundPath):
 
 func battleWon():
 	Music.battleOver()
+
+
+func closeSwap() -> void:
+	$"Reorder Team".visible=false
