@@ -27,7 +27,12 @@ func _ready() -> void:
 	for newPokemon in GameManager.playerTeam:
 		if(newPokemon.base.evolution!=null and newPokemon.level>=newPokemon.base.evolution.level):
 			GameManager.evolvePokemon(newPokemon, newPokemon.base.evolution.into)
-			
+		else:
+			for move in newPokemon.uncheckedMoves:
+				if(move.level<=newPokemon.level):
+					print("Potential Move: " + move.move.name)
+					GameManager.learnMove(newPokemon, move.move)
+					break
 	if(is_inside_tree()):
 		await get_tree().process_frame
 	if(is_inside_tree()):

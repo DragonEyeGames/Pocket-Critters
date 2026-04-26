@@ -1,0 +1,173 @@
+[gd_scene load_steps=7 format=3 uid="uid://dvox6oe46twvi"]
+
+[ext_resource type="PackedScene" uid="uid://3ijnqbla51yb" path="res://Scenes/pokemonDisplay.tscn" id="1_fru35"]
+[ext_resource type="Script" uid="uid://ck23ohci182wi" path="res://Scenes/moveLearning.gd" id="1_xlh4i"]
+[ext_resource type="Shader" uid="uid://bomfvo6o4mvg6" path="res://Shaders/flash.gdshader" id="2_xlh4i"]
+[ext_resource type="FontFile" uid="uid://cnjtjvjhjjxia" path="res://Fonts/ByteBounce.ttf" id="4_loa7w"]
+[ext_resource type="PackedScene" uid="uid://dkyjhyr5mfmtj" path="res://Scenes/statMove.tscn" id="5_or6i6"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_loa7w"]
+resource_local_to_scene = true
+shader = ExtResource("2_xlh4i")
+shader_parameter/flash_color = Color(1, 1, 1, 1)
+shader_parameter/flash_value = 0.0
+
+[node name="MoveLearning" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_xlh4i")
+
+[node name="NewPokemon" parent="." instance=ExtResource("1_fru35")]
+material = SubResource("ShaderMaterial_loa7w")
+position = Vector2(488.00003, 114)
+scale = Vector2(2.555, 2.555)
+
+[node name="Visuals" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 968.0
+offset_bottom = 547.0
+
+[node name="Backer" type="ColorRect" parent="Visuals"]
+z_index = -1
+layout_mode = 0
+offset_left = -7.0
+offset_top = -7.0
+offset_right = 974.0
+offset_bottom = 549.0
+color = Color(0.45840472, 0.45840514, 0.45840502, 1)
+
+[node name="Backer2" type="ColorRect" parent="Visuals"]
+z_index = -1
+layout_mode = 0
+offset_left = -9.0
+offset_top = 219.0
+offset_right = 972.0
+offset_bottom = 546.0
+color = Color(0, 0, 0, 1)
+
+[node name="Backer3" type="ColorRect" parent="Visuals"]
+z_index = -1
+layout_mode = 0
+offset_left = -9.0
+offset_top = 223.0
+offset_right = 972.0
+offset_bottom = 546.0
+color = Color(0.66656864, 0.6665687, 0.66656864, 1)
+
+[node name="Backer4" type="ColorRect" parent="Visuals"]
+z_index = -1
+layout_mode = 0
+offset_left = 8.0
+offset_top = 237.0
+offset_right = 956.0
+offset_bottom = 310.0
+color = Color(0, 0, 0, 1)
+
+[node name="Backer5" type="ColorRect" parent="Visuals"]
+z_index = -1
+layout_mode = 0
+offset_left = 11.0
+offset_top = 240.0
+offset_right = 953.0
+offset_bottom = 307.0
+color = Color(0.9428228, 0.94282264, 0.94282264, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Visuals"]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 241.0
+offset_right = 840.19385
+offset_bottom = 298.26874
+scale = Vector2(1.135, 1.135)
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("4_loa7w")
+theme_override_font_sizes/normal_font_size = 32
+bbcode_enabled = true
+text = "Flitty wants to learn the move Wing Slap.
+Delete an old move to learn or skip learning."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Learning" parent="." instance=ExtResource("5_or6i6")]
+layout_mode = 0
+offset_left = 220.00002
+offset_top = 313.00003
+offset_right = 420.00006
+offset_bottom = 373.00003
+scale = Vector2(0.73, 0.73)
+
+[node name="Move2" parent="." instance=ExtResource("5_or6i6")]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 370.0
+offset_right = 216.0
+offset_bottom = 430.0
+scale = Vector2(0.73, 0.73)
+
+[node name="ColorRect3" type="ColorRect" parent="Move2"]
+layout_mode = 0
+offset_left = 443.8356
+offset_top = -1.013279e-05
+offset_right = 523.8356
+offset_bottom = 73.369865
+color = Color(0, 0, 0, 1)
+
+[node name="Button" type="Button" parent="Move2"]
+layout_mode = 0
+offset_left = 443.83563
+offset_top = 1.3698616
+offset_right = 523.2877
+offset_bottom = 69.86299
+text = "Forget"
+
+[node name="Move3" parent="." instance=ExtResource("5_or6i6")]
+layout_mode = 0
+offset_left = 16.000002
+offset_top = 426.99997
+offset_right = 216.0
+offset_bottom = 486.99997
+scale = Vector2(0.73, 0.73)
+
+[node name="Button2" type="Button" parent="Move3"]
+layout_mode = 0
+offset_left = 446.57532
+offset_top = 20.547989
+offset_right = 521.91785
+offset_bottom = 51.54799
+text = "Forget"
+
+[node name="Move5" parent="." instance=ExtResource("5_or6i6")]
+layout_mode = 0
+offset_left = 400.99997
+offset_top = 370.0
+offset_right = 601.0
+offset_bottom = 430.0
+scale = Vector2(0.73, 0.73)
+
+[node name="Button3" type="Button" parent="Move5"]
+layout_mode = 0
+offset_left = 445.2055
+offset_top = 17.808243
+offset_right = 520.54803
+offset_bottom = 48.808243
+text = "Forget"
+
+[node name="Move4" parent="." instance=ExtResource("5_or6i6")]
+layout_mode = 0
+offset_left = 400.0
+offset_top = 426.0
+offset_right = 600.0
+offset_bottom = 486.00006
+scale = Vector2(0.73, 0.73)
+
+[node name="Button4" type="Button" parent="Move4"]
+layout_mode = 0
+offset_left = 446.57535
+offset_top = 21.917816
+offset_right = 521.91785
+offset_bottom = 52.917816
+text = "Forget"

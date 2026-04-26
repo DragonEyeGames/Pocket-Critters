@@ -191,6 +191,10 @@ var transitionAnimator: AnimationPlayer
 var evolvedSpecies
 var evolutionSpecies
 
+#Move learning stuff
+var learningPokemon: PokemonData
+var learningMove: MoveDatas
+
 func _ready() -> void:
 	if(not loadGame()):
 		restart()
@@ -267,6 +271,7 @@ func newPokemon(species, level = 6):
 		if(move.level<=p.level):
 			p.moves.append(move.move)
 		backupMoves.erase(move)
+	p.initialize()
 	return p
 	
 func setPokemon(species, level, moves):
@@ -290,6 +295,7 @@ func setPokemon(species, level, moves):
 	p.specialDefense=get_stat(p.base.specialDefense, p.ivSpecialDefense, level)
 	p.speed=get_stat(p.base.speed, p.ivSpeed, level)
 	p.moves=moves
+	p.initialize()
 	return p
 	
 func evolvePokemon(original: PokemonData, evolution: SpeciesData):
@@ -309,6 +315,11 @@ func evolvePokemon(original: PokemonData, evolution: SpeciesData):
 	original.specialAttack=get_stat(evolution.specialAttack, original.ivSpecialAttack, original.level)
 	original.specialDefense=get_stat(evolution.specialDefense, original.ivSpecialDefense, original.level)
 	original.speed=get_stat(evolution.speed, original.ivSpeed, original.level)
+	
+func learnMove(newPokemons: PokemonData, newMove: MoveDatas):
+	learningPokemon=newPokemons
+	learningMove=newMove
+	get_tree().call_deferred("change_scene_to_file", "res://Scenes/move_learning.tscn")
 	
 func get_stat(base: int, iv: float,  level: int) -> int:
 	return int(base * (level / 10.0) * iv + 5)

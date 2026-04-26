@@ -27,3 +27,9 @@ class_name PokemonData
 
 #Moves
 @export var moves: Array[MoveDatas] = []
+@export var uncheckedMoves: Array[MoveResource] = []
+
+func initialize():
+	for move in base.potentialMoves:
+		if(level<move.level):
+			uncheckedMoves.append(move)
