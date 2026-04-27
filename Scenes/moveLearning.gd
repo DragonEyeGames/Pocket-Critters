@@ -33,8 +33,14 @@ func replace(id: int):
 	var originalName=pokemon.moves[id].name
 	pokemon.moves[id]=newMove
 	$Learned.visible=true
+	#$Learned/Description.text=pokemon.name + " forgot " + originalName + " and learned " + newMove.name
+	$MouseBlocker.visible=true
+	#$Visuals/Text.text=pokemon.name + " forgot " + originalName + " and learned " + newMove.name
+	$Learned/AnimationPlayer.play("load")
+	await get_tree().create_timer(1.2).timeout
 	$Learned/Description.text=pokemon.name + " forgot " + originalName + " and learned " + newMove.name
-	await get_tree().create_timer(1).timeout
+	await get_tree().create_timer(2.5).timeout
+	await $Transitioner.darkenScreen()
 	GameManager.toMain()
 
 func replace1() -> void:

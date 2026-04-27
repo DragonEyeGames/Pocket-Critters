@@ -1,16 +1,53 @@
-[gd_scene load_steps=7 format=3 uid="uid://dvox6oe46twvi"]
+[gd_scene load_steps=11 format=3 uid="uid://dvox6oe46twvi"]
 
 [ext_resource type="PackedScene" uid="uid://3ijnqbla51yb" path="res://Scenes/pokemonDisplay.tscn" id="1_fru35"]
 [ext_resource type="Script" uid="uid://ck23ohci182wi" path="res://Scenes/moveLearning.gd" id="1_xlh4i"]
 [ext_resource type="Shader" uid="uid://bomfvo6o4mvg6" path="res://Shaders/flash.gdshader" id="2_xlh4i"]
 [ext_resource type="FontFile" uid="uid://cnjtjvjhjjxia" path="res://Fonts/ByteBounce.ttf" id="4_loa7w"]
 [ext_resource type="PackedScene" uid="uid://dkyjhyr5mfmtj" path="res://Scenes/statMove.tscn" id="5_or6i6"]
+[ext_resource type="PackedScene" uid="uid://daxn64tg8jns3" path="res://Scenes/transitioner.tscn" id="6_ih40v"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_loa7w"]
 resource_local_to_scene = true
 shader = ExtResource("2_xlh4i")
 shader_parameter/flash_color = Color(1, 1, 1, 1)
 shader_parameter/flash_value = 0.0
+
+[sub_resource type="Animation" id="Animation_ih40v"]
+resource_name = "load"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Description:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.23333333, 0.46666667, 0.76666665),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": ["1", "1, 2", "1, 2, and...", "1, 2, and... 3!"]
+}
+
+[sub_resource type="Animation" id="Animation_eaqna"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Description:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["1"]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1vvf6"]
+_data = {
+&"RESET": SubResource("Animation_eaqna"),
+&"load": SubResource("Animation_ih40v")
+}
 
 [node name="MoveLearning" type="Control"]
 layout_mode = 3
@@ -250,9 +287,26 @@ offset_bottom = 170.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_fonts/normal_font = ExtResource("4_loa7w")
 theme_override_font_sizes/normal_font_size = 48
-text = "Flitty forgot Peck and learned Wing Slap!"
+text = "1"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Learned"]
+libraries = {
+&"": SubResource("AnimationLibrary_1vvf6")
+}
+
+[node name="Transitioner" parent="." instance=ExtResource("6_ih40v")]
+visible = false
+
+[node name="MouseBlocker" type="ColorRect" parent="."]
+visible = false
+layout_mode = 0
+offset_left = -10.0
+offset_top = -16.0
+offset_right = 984.0
+offset_bottom = 555.0
+color = Color(1, 1, 1, 0)
 
 [connection signal="pressed" from="Move1/Button" to="." method="replace1"]
 [connection signal="pressed" from="Move2/Button" to="." method="replace2"]
