@@ -2,6 +2,7 @@ extends Resource
 class_name GameData
 
 @export var team: PlayerTeamData
+@export var playerBoxes: Array[PokemonData] = []
 @export var playerPos: Vector2
 @export var safePos: Vector2
 @export var defeated: =[]

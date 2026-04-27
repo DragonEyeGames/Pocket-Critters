@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=3 uid="uid://p6x3hd6afog6"]
+[gd_scene load_steps=44 format=3 uid="uid://p6x3hd6afog6"]
 
 [ext_resource type="PackedScene" uid="uid://ba24hclljygvv" path="res://Scenes/pokemonSelector.tscn" id="1_ip7xm"]
 [ext_resource type="Script" uid="uid://do3gaqda1wenc" path="res://Scripts/battle.gd" id="1_oxp8w"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://d0y2vai1u3oot" path="res://Scenes/active_slot.tscn" id="11_rssjf"]
 [ext_resource type="Script" uid="uid://klm0bf5usy6q" path="res://Scripts/cinematicCamera.gd" id="11_upb72"]
 [ext_resource type="PackedScene" uid="uid://dpi5iitk8m736" path="res://Scenes/reorderSlotNew.tscn" id="12_rssjf"]
+[ext_resource type="PackedScene" uid="uid://daxn64tg8jns3" path="res://Scenes/transitioner.tscn" id="13_heh15"]
 [ext_resource type="AudioStream" uid="uid://db2bhu45p8o1" path="res://New Sounds/critterEmerge.mp3" id="14_xkp4y"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_upb72"]
@@ -1445,15 +1446,17 @@ visible = false
 z_index = 4
 layout_mode = 3
 anchors_preset = 0
-offset_right = 960.0
-offset_bottom = 542.0
+offset_left = 13.0
+offset_top = -38.0
+offset_right = 973.0
+offset_bottom = 504.0
 
 [node name="Panel2" type="ColorRect" parent="Replace Team"]
 layout_mode = 0
 offset_left = 227.0
 offset_top = 45.0
 offset_right = 748.0
-offset_bottom = 518.0
+offset_bottom = 564.0
 color = Color(0, 0, 0, 1)
 
 [node name="Panel" type="ColorRect" parent="Replace Team"]
@@ -1461,7 +1464,7 @@ layout_mode = 0
 offset_left = 232.0
 offset_top = 50.0
 offset_right = 743.0
-offset_bottom = 513.0
+offset_bottom = 560.0
 color = Color(0.4392157, 0.4392157, 0.4392157, 1)
 
 [node name="ColorRect2" type="ColorRect" parent="Replace Team"]
@@ -1520,6 +1523,15 @@ bigBoss = NodePath("../../..")
 layout_mode = 2
 index = 5
 bigBoss = NodePath("../../..")
+
+[node name="boxes" type="Button" parent="Replace Team"]
+layout_mode = 0
+offset_left = 388.00003
+offset_top = 494.00003
+offset_right = 508.00003
+offset_bottom = 525.0
+scale = Vector2(1.645, 1.645)
+text = "Send To Boxes"
 
 [node name="Reorder Team" type="Control" parent="."]
 visible = false
@@ -1613,6 +1625,9 @@ offset_bottom = 541.0
 theme_override_font_sizes/font_size = 35
 text = "Close"
 
+[node name="Transitioner" parent="." instance=ExtResource("13_heh15")]
+visible = false
+
 [connection signal="animation_finished" from="Player/Animate" to="." method="_player_animation_finished"]
 [connection signal="animation_finished" from="Opponent/Animate" to="." method="_on_animate_animation_finished"]
 [connection signal="pressed" from="BattleOptions/Options/Fight" to="." method="_on_fight_pressed"]
@@ -1623,4 +1638,5 @@ text = "Close"
 [connection signal="pressed" from="BattleOptions/Moves/Move2" to="." method="_on_move_2_pressed"]
 [connection signal="pressed" from="BattleOptions/Moves/Move3" to="." method="_on_move_3_pressed"]
 [connection signal="pressed" from="BattleOptions/Moves/Move4" to="." method="_on_move_4_pressed"]
+[connection signal="pressed" from="Replace Team/boxes" to="." method="toBoxes"]
 [connection signal="pressed" from="Reorder Team/Button" to="." method="closeSwap"]

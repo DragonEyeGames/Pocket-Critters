@@ -27,13 +27,13 @@ func _process(_delta: float) -> void:
 
 func mouseEntered() -> void:
 	var tween=create_tween()
-	tween.tween_property($Pokemon, "scale", Vector2(1.5, 1.5), .1)
+	tween.tween_property($Pokemon, "scale", Vector2(1.1, 1.1), .1)
 	mouse=true
 
 
 func mouseExited() -> void:
 	var tween=create_tween()
-	tween.tween_property($Pokemon, "scale", Vector2(1.4, 1.4), .1)
+	tween.tween_property($Pokemon, "scale", Vector2(1, 1), .1)
 	mouse=false
 
 func buttonPress(nodeName: String):

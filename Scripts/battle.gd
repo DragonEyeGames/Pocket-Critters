@@ -39,13 +39,13 @@ func loadField():
 	$BattleOptions/Display.text="What will " + str(GameManager.healthyTeam[activeIndex].name) + " do?"
 
 func _on_run_pressed() -> void:
-	GameManager.toMain()
+	end()
 
 
 func _on_catch_pressed() -> void:
 	$BattleOptions/Options.visible=false
 	$BattleOptions/Display.text="Threw a ball at " + $Opponent.pokemon.name + "!"
-	if(randf()<=GameManager.get_catch_chance($Opponent.pokemon, 1)):
+	if(randf()<=1):#GameManager.get_catch_chance($Opponent.pokemon, 1)):
 		$Catch.play("catch-succeed")
 		await get_tree().create_timer(2).timeout
 		battleWon()
@@ -55,7 +55,7 @@ func _on_catch_pressed() -> void:
 		if(len(GameManager.playerTeam)<=5):
 			GameManager.playerTeam.append(GameManager.toBattle)
 			await get_tree().create_timer(3).timeout
-			GameManager.toMain()
+			end()
 			return
 		else:
 			$"Replace Team".visible=true
@@ -116,7 +116,7 @@ func loadAttack(playerAttack):
 			await xp()
 			await get_tree().create_timer(1).timeout
 			if(!GameManager.teamBattle):
-				GameManager.toMain()
+				end()
 			else:
 				teamBattleDead()
 			return
@@ -132,7 +132,7 @@ func loadAttack(playerAttack):
 			await xp()
 			await get_tree().create_timer(1).timeout
 			if(!GameManager.teamBattle):
-				GameManager.toMain()
+				end()
 			else:
 				teamBattleDead()
 			return
@@ -299,7 +299,7 @@ func nonAttack():
 
 func replacePokemon(index: int):
 	GameManager.playerTeam[index]=$Opponent.pokemon
-	GameManager.toMain()
+	end()
 
 func swapPokemon(index: int):
 	$Player.pokemon=GameManager.playerTeam[index]
@@ -310,7 +310,8 @@ func swapPokemon(index: int):
 	nonAttack()
 
 func toBoxes() -> void:
-	GameManager.toMain()
+	GameManager.playerBoxes.append(GameManager.toBattle)
+	end()
 	
 func checkPlayer():
 	if($Player.pokemon.health<=0):
@@ -444,7 +445,7 @@ func teamBattleDead():
 		await get_tree().create_timer(1).timeout
 		$BattleOptions/Display.text=GameManager.attacking + " has been defeated!"
 		await get_tree().create_timer(3).timeout
-		GameManager.toMain()
+		end()
 
 func calculateAmount(change, newText, target):
 	var amountText=" rose!"
@@ -505,3 +506,7 @@ func battleWon():
 
 func closeSwap() -> void:
 	$"Reorder Team".visible=false
+
+func end():
+	await $Transitioner.darkenScreen()
+	GameManager.toMain()

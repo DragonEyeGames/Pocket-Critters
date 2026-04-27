@@ -9,8 +9,15 @@ func _ready() -> void:
 func initialize():
 	if(len(GameManager.playerTeam)-1>=index):
 		visible=true
-		$NewPokemon.pokemon=GameManager.playerTeam[index].species
+		var pokemon: PokemonData = GameManager.playerTeam[index]
+		$NewPokemon.pokemon=pokemon.species
 		$NewPokemon.initialize()
+		$Name.text=pokemon.name
+		$"Health Bar".value=pokemon.health
+		$"Health Bar".max_value=pokemon.maxHealth
+		$"Health Bar/Health".text=str(pokemon.health) + "/" + str(pokemon.maxHealth)
+		$Button.disabled=(pokemon.health<=0 or bigBoss.activeIndex==index)
+		$Fainted.visible=pokemon.health<=0
 	else:
 		visible=false
 

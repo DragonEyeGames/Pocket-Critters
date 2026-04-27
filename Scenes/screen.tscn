@@ -199,6 +199,7 @@ offset_left = 282.1878
 offset_top = 104.01718
 offset_right = 799.93585
 offset_bottom = 458.01718
+mouse_filter = 2
 columns = 4
 
 [node name="StorageSlot" parent="Normal/GridContainer" instance=ExtResource("2_rxw1a")]

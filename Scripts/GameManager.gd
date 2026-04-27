@@ -388,6 +388,7 @@ func saveGame():
 	data.defeated=defeated.duplicate()
 	data.blaze1=blaze1
 	data.scene=currentScene
+	data.playerBoxes=playerBoxes
 	ResourceSaver.save(data, "user://save.tres")
 
 func loadGame():
@@ -404,6 +405,7 @@ func loadGame():
 	defeated = data.defeated.duplicate()
 	blaze1=data.blaze1
 	currentScene=data.scene
+	playerBoxes=data.playerBoxes
 	return true
 	
 func wipeSave():

@@ -40,8 +40,8 @@ color = Color(0.3854925, 0.38549247, 0.38549247, 1)
 
 [node name="Pokemon" parent="." instance=ExtResource("1_r058n")]
 material = SubResource("ShaderMaterial_8iefh")
-position = Vector2(74, 83.00001)
-scale = Vector2(1.4, 1.4)
+position = Vector2(80, 79)
+scale = Vector2(1, 1)
 back = false
 
 [node name="Name" type="RichTextLabel" parent="."]

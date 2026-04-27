@@ -89,7 +89,6 @@ offset_left = 10.347824
 offset_top = 10.4625
 offset_right = 110.35042
 offset_bottom = 110.467804
-mouse_filter = 2
 color = Color(1, 1, 1, 0)
 
 [node name="OptionsMenu" type="Control" parent="."]
@@ -225,7 +224,6 @@ offset_left = 1.0
 offset_top = 1.0
 offset_right = 75.0
 offset_bottom = 19.0
-mouse_filter = 2
 color = Color(1, 1, 1, 0)
 
 [node name="Critterdex" type="Control" parent="OptionsMenu/VBoxContainer"]
