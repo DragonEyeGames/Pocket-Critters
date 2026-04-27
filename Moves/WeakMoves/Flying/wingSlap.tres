@@ -8,6 +8,6 @@ script = ExtResource("2_3qbgc")
 name = "Wing Slap"
 type = 3
 moveType = 1
-power = 35
+power = 40
 accuracy = 0.95
 metadata/_custom_type_script = "uid://c3odxqj7xy866"

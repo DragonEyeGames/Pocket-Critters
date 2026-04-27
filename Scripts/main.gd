@@ -31,7 +31,7 @@ func _ready() -> void:
 			for move in newPokemon.uncheckedMoves:
 				if(move.level<=newPokemon.level):
 					print("Potential Move: " + move.move.name)
-					GameManager.learnMove(newPokemon, move.move)
+					GameManager.learnMove(newPokemon, move)
 					break
 	if(is_inside_tree()):
 		await get_tree().process_frame

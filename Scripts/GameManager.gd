@@ -193,7 +193,7 @@ var evolutionSpecies
 
 #Move learning stuff
 var learningPokemon: PokemonData
-var learningMove: MoveDatas
+var learningMove: MoveResource
 
 func _ready() -> void:
 	if(not loadGame()):
@@ -316,7 +316,7 @@ func evolvePokemon(original: PokemonData, evolution: SpeciesData):
 	original.specialDefense=get_stat(evolution.specialDefense, original.ivSpecialDefense, original.level)
 	original.speed=get_stat(evolution.speed, original.ivSpeed, original.level)
 	
-func learnMove(newPokemons: PokemonData, newMove: MoveDatas):
+func learnMove(newPokemons: PokemonData, newMove: MoveResource):
 	learningPokemon=newPokemons
 	learningMove=newMove
 	get_tree().call_deferred("change_scene_to_file", "res://Scenes/move_learning.tscn")

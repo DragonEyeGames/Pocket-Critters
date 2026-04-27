@@ -76,7 +76,7 @@ offset_right = 953.0
 offset_bottom = 307.0
 color = Color(0.9428228, 0.94282264, 0.94282264, 1)
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Visuals"]
+[node name="Text" type="RichTextLabel" parent="Visuals"]
 layout_mode = 0
 offset_left = 12.0
 offset_top = 241.0
@@ -88,24 +88,50 @@ theme_override_fonts/normal_font = ExtResource("4_loa7w")
 theme_override_font_sizes/normal_font_size = 32
 bbcode_enabled = true
 text = "Flitty wants to learn the move Wing Slap.
-Delete an old move to learn or skip learning."
+Replace an old move to learn or skip learning."
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Learning" parent="." instance=ExtResource("5_or6i6")]
 layout_mode = 0
-offset_left = 220.00002
-offset_top = 313.00003
-offset_right = 420.00006
-offset_bottom = 373.00003
+offset_left = 309.0
+offset_top = 313.0
+offset_right = 509.00006
+offset_bottom = 373.0
 scale = Vector2(0.73, 0.73)
+
+[node name="Move1" parent="." instance=ExtResource("5_or6i6")]
+layout_mode = 0
+offset_left = 105.0
+offset_top = 369.99997
+offset_right = 305.0
+offset_bottom = 429.99997
+scale = Vector2(0.73, 0.73)
+
+[node name="ColorRect3" type="ColorRect" parent="Move1"]
+layout_mode = 0
+offset_left = 443.8356
+offset_top = -1.013279e-05
+offset_right = 523.8356
+offset_bottom = 73.369865
+scale = Vector2(0.995, 0.995)
+color = Color(0, 0, 0, 1)
+
+[node name="Button" type="Button" parent="Move1"]
+layout_mode = 0
+offset_left = 443.83563
+offset_top = 1.3698616
+offset_right = 521.9178
+offset_bottom = 69.86299
+focus_mode = 0
+text = "Replace"
 
 [node name="Move2" parent="." instance=ExtResource("5_or6i6")]
 layout_mode = 0
-offset_left = 16.0
-offset_top = 370.0
-offset_right = 216.0
-offset_bottom = 430.0
+offset_left = 105.0
+offset_top = 426.99994
+offset_right = 305.0
+offset_bottom = 486.99994
 scale = Vector2(0.73, 0.73)
 
 [node name="ColorRect3" type="ColorRect" parent="Move2"]
@@ -114,60 +140,122 @@ offset_left = 443.8356
 offset_top = -1.013279e-05
 offset_right = 523.8356
 offset_bottom = 73.369865
+scale = Vector2(0.995, 0.995)
 color = Color(0, 0, 0, 1)
 
 [node name="Button" type="Button" parent="Move2"]
 layout_mode = 0
 offset_left = 443.83563
 offset_top = 1.3698616
-offset_right = 523.2877
+offset_right = 521.9178
 offset_bottom = 69.86299
-text = "Forget"
+focus_mode = 0
+text = "Replace"
 
 [node name="Move3" parent="." instance=ExtResource("5_or6i6")]
 layout_mode = 0
-offset_left = 16.000002
-offset_top = 426.99997
-offset_right = 216.0
-offset_bottom = 486.99997
+offset_left = 489.99997
+offset_top = 369.99997
+offset_right = 690.0
+offset_bottom = 429.99997
 scale = Vector2(0.73, 0.73)
 
-[node name="Button2" type="Button" parent="Move3"]
+[node name="ColorRect3" type="ColorRect" parent="Move3"]
 layout_mode = 0
-offset_left = 446.57532
-offset_top = 20.547989
-offset_right = 521.91785
-offset_bottom = 51.54799
-text = "Forget"
+offset_left = 443.8356
+offset_top = -1.013279e-05
+offset_right = 523.8356
+offset_bottom = 73.369865
+scale = Vector2(0.995, 0.995)
+color = Color(0, 0, 0, 1)
 
-[node name="Move5" parent="." instance=ExtResource("5_or6i6")]
+[node name="Button" type="Button" parent="Move3"]
 layout_mode = 0
-offset_left = 400.99997
-offset_top = 370.0
-offset_right = 601.0
-offset_bottom = 430.0
-scale = Vector2(0.73, 0.73)
-
-[node name="Button3" type="Button" parent="Move5"]
-layout_mode = 0
-offset_left = 445.2055
-offset_top = 17.808243
-offset_right = 520.54803
-offset_bottom = 48.808243
-text = "Forget"
+offset_left = 443.83563
+offset_top = 1.3698616
+offset_right = 521.9178
+offset_bottom = 69.86299
+focus_mode = 0
+text = "Replace"
 
 [node name="Move4" parent="." instance=ExtResource("5_or6i6")]
 layout_mode = 0
-offset_left = 400.0
-offset_top = 426.0
-offset_right = 600.0
-offset_bottom = 486.00006
+offset_left = 489.0
+offset_top = 425.99997
+offset_right = 689.0
+offset_bottom = 486.00003
 scale = Vector2(0.73, 0.73)
 
-[node name="Button4" type="Button" parent="Move4"]
+[node name="ColorRect3" type="ColorRect" parent="Move4"]
 layout_mode = 0
-offset_left = 446.57535
-offset_top = 21.917816
-offset_right = 521.91785
-offset_bottom = 52.917816
-text = "Forget"
+offset_left = 443.8356
+offset_top = -1.013279e-05
+offset_right = 523.8356
+offset_bottom = 73.369865
+scale = Vector2(0.995, 0.995)
+color = Color(0, 0, 0, 1)
+
+[node name="Button" type="Button" parent="Move4"]
+layout_mode = 0
+offset_left = 443.83563
+offset_top = 1.3698616
+offset_right = 521.9178
+offset_bottom = 69.86299
+focus_mode = 0
+text = "Replace"
+
+[node name="Skip" type="Button" parent="."]
+layout_mode = 0
+offset_left = 316.0
+offset_top = 484.0
+offset_right = 612.0
+offset_bottom = 535.0
+theme_override_fonts/font = ExtResource("4_loa7w")
+theme_override_font_sizes/font_size = 48
+text = "Skip Learning"
+
+[node name="Learned" type="Control" parent="."]
+visible = false
+anchors_preset = 0
+offset_left = -6.0
+offset_top = 368.0
+offset_right = 968.0
+offset_bottom = 543.0
+
+[node name="ColorRect" type="ColorRect" parent="Learned"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="Learned"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.9411765, 0.9411765, 0.9411765, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Learned"]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 5.0
+offset_right = 961.0
+offset_bottom = 170.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("4_loa7w")
+theme_override_font_sizes/normal_font_size = 48
+text = "Flitty forgot Peck and learned Wing Slap!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="Move1/Button" to="." method="replace1"]
+[connection signal="pressed" from="Move2/Button" to="." method="replace2"]
+[connection signal="pressed" from="Move3/Button" to="." method="replace3"]
+[connection signal="pressed" from="Move4/Button" to="." method="replaced4"]
+[connection signal="pressed" from="Skip" to="." method="_on_skip_pressed"]
