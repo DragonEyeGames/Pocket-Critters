@@ -11,7 +11,8 @@ func initialize():
 	$NewPokemon.pokemon=pokemon.species
 	$NewPokemon.initialize()
 	$NewPokemon.position=Vector2(58, 52)
-	$NamePlate/Name.text=GameManager.pokemonName(pokemon.species)
+	#$NamePlate/Name.text=GameManager.pokemonName(pokemon.species)
+	$NamePlate/Name.text=pokemon.name
 
 
 func _on_animator_animation_finished(_anim_name: StringName) -> void:
@@ -34,7 +35,7 @@ func _process(_delta: float) -> void:
 	$MouseDetection.visible=canRecieve
 	if(Input.is_action_just_pressed("Interact") and mouseEntered):
 		$OptionsMenu.visible=!$OptionsMenu.visible
-		get_parent().get_parent().get_parent().removeInput()
+		get_parent().get_parent().get_parent().get_parent().removeInput()
 		
 func buttonPressed(action: String):
 	if(action=="Switch"):
@@ -46,5 +47,5 @@ func buttonPressed(action: String):
 		Info.display(pokemon)
 	if(action=="Close"):
 		$OptionsMenu.visible=false
-		get_parent().get_parent().get_parent().restoreInput()
+		get_parent().get_parent().get_parent().get_parent().restoreInput()
 	

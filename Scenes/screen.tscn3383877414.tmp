@@ -94,7 +94,7 @@ anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_right = 107.0
-offset_bottom = -1.0
+offset_bottom = -71.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.6532658, 0.8869929, 0.9999998, 1)
@@ -156,7 +156,6 @@ grow_vertical = 2
 anchors_preset = 0
 offset_right = 993.22736
 offset_bottom = 464.56
-mouse_filter = 2
 
 [node name="Title2" type="RichTextLabel" parent="Normal/Team"]
 layout_mode = 1
@@ -183,7 +182,7 @@ layout_mode = 0
 offset_left = 53.561172
 offset_top = 82.49596
 offset_right = 314.99115
-offset_bottom = 444.7619
+offset_bottom = 454.09204
 
 [node name="ColorRect2" type="ColorRect" parent="Normal/Team/ColorRect2"]
 z_index = -1
@@ -229,7 +228,6 @@ layout_mode = 2
 anchors_preset = 0
 offset_right = 1130.7545
 offset_bottom = 460.19678
-mouse_filter = 2
 
 [node name="ColorRect" type="ColorRect" parent="Normal/Storage"]
 layout_mode = 0
@@ -317,17 +315,4 @@ text = "Critter Storage"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Close" type="Button" parent="Normal"]
-layout_mode = 0
-offset_left = 444.49744
-offset_top = 465.98734
-offset_right = 559.72815
-offset_bottom = 501.9274
-scale = Vector2(1.555, 1.555)
-focus_mode = 0
-theme_override_fonts/font = ExtResource("1_fq6pb")
-theme_override_font_sizes/font_size = 32
-text = "Close"
-
 [connection signal="animation_finished" from="animator" to="Normal/Storage/GridContainer/StorageSlot" method="_on_animator_animation_finished"]
-[connection signal="pressed" from="Normal/Close" to="." method="_on_close_pressed"]

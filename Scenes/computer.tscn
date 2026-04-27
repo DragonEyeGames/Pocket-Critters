@@ -48,7 +48,7 @@ position = Vector2(-1, -5)
 offset_left = -9.00032
 offset_top = -9.056744
 offset_right = 1033.9996
-offset_bottom = 435.94327
+offset_bottom = 500.4101
 scale = Vector2(0.015, 0.015)
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
