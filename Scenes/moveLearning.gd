@@ -29,22 +29,27 @@ func _process(_delta: float) -> void:
 func _on_skip_pressed() -> void:
 	GameManager.toMain()
 
+func replace(id: int):
+	var originalName=pokemon.moves[id].name
+	pokemon.moves[id]=newMove
+	$Learned.visible=true
+	$Learned/Description.text=pokemon.name + " forgot " + originalName + " and learned " + newMove.name
+	await get_tree().create_timer(1).timeout
+	GameManager.toMain()
 
 func replace1() -> void:
-	pokemon.moves[0]=newMove
-	GameManager.toMain()
+	replace(0)
+	#GameManager.toMain()
 
 
 func replace2() -> void:
-	pokemon.moves[1]=newMove
-	GameManager.toMain()
+	replace(1)
+	#GameManager.toMain()
 
 
 func replace3() -> void:
-	pokemon.moves[2]=newMove
-	GameManager.toMain()
+	replace(2)
 
 
 func replaced4() -> void:
-	pokemon.moves[3]=newMove
-	GameManager.toMain()
+	replace(3)

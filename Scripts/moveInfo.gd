@@ -41,7 +41,12 @@ func loadMove(newMove):
 			individualDescription+="own "
 		elif(!ability.targetsSelf):
 			individualDescription+="opponent's "
-		individualDescription+=str(GameManager.stats.keys()[ability.stat]).to_lower()
+		var moveTypes=str(GameManager.stats.keys()[ability.stat]).to_lower()
+		if(ability.stat==GameManager.stats.SpecialAttack):
+			moveTypes="special attack"
+		if(ability.stat==GameManager.stats.SpecialDefense):
+			moveTypes="special defense"
+		individualDescription+=moveTypes
 		if(ability.stat==GameManager.stats.Health):
 			individualDescription="Increases health by 50% of damage dealt"
 		if(ability.stat==GameManager.stats.Priority):

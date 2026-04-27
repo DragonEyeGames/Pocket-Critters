@@ -7,7 +7,7 @@
 script = ExtResource("1_vka3y")
 stat = 2
 change = 2
-chance = 100.0
+chance = 1.0
 metadata/_custom_type_script = "uid://2fme8eqsovvo"
 
 [resource]
