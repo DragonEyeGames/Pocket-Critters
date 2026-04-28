@@ -144,6 +144,20 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -4.0
+offset_top = -4.0
+offset_right = 4.0
+offset_bottom = 47.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="Team Menu"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 offset_bottom = 43.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -153,9 +167,9 @@ color = Color(0.80784315, 0.80784315, 0.80784315, 1)
 [node name="ColorRect2" type="ColorRect" parent="Team Menu"]
 z_index = -1
 layout_mode = 0
-offset_left = -124.0
+offset_left = -125.0
 offset_top = -85.0
-offset_right = 686.0
+offset_right = 685.0
 offset_bottom = 491.0
 mouse_filter = 2
 color = Color(0, 0, 0, 0.22745098)
@@ -168,6 +182,22 @@ offset_top = -85.0
 offset_right = 924.0
 offset_bottom = 491.0
 color = Color(0, 0, 0, 0.22745098)
+
+[node name="ColorRect4" type="ColorRect" parent="Team Menu"]
+layout_mode = 0
+offset_left = 252.0
+offset_top = 8.0
+offset_right = 394.0
+offset_bottom = 64.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect5" type="ColorRect" parent="Team Menu"]
+layout_mode = 0
+offset_left = 255.0
+offset_top = 11.0
+offset_right = 391.0
+offset_bottom = 61.0
+color = Color(0.9384497, 0.9384497, 0.9384497, 1)
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Team Menu"]
 layout_mode = 0

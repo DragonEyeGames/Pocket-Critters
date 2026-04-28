@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://d0y2vai1u3oot"]
+[gd_scene load_steps=8 format=3 uid="uid://d0y2vai1u3oot"]
 
 [ext_resource type="PackedScene" uid="uid://3ijnqbla51yb" path="res://Scenes/pokemonDisplay.tscn" id="1_q8fng"]
 [ext_resource type="Script" uid="uid://c8oaleu0gofbj" path="res://Scripts/replaceSlot.gd" id="1_r87s7"]
 [ext_resource type="Shader" uid="uid://bomfvo6o4mvg6" path="res://Shaders/flash.gdshader" id="2_r87s7"]
+[ext_resource type="FontFile" uid="uid://cnjtjvjhjjxia" path="res://Fonts/ByteBounce.ttf" id="4_xst5f"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_xst5f"]
 resource_local_to_scene = true
@@ -81,10 +82,12 @@ color = Color(0.9764706, 0.9764706, 0.9764706, 1)
 layout_mode = 0
 offset_left = 103.0
 offset_top = 7.0
-offset_right = 232.0
-offset_bottom = 37.0
+offset_right = 208.83333
+offset_bottom = 31.166668
+scale = Vector2(1.2, 1.2)
 theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/normal_font_size = 20
+theme_override_fonts/normal_font = ExtResource("4_xst5f")
+theme_override_font_sizes/normal_font_size = 16
 text = "Timberry"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -112,7 +115,8 @@ offset_right = 230.88889
 offset_bottom = 66.0
 mouse_filter = 2
 theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/normal_font_size = 29
+theme_override_fonts/normal_font = ExtResource("4_xst5f")
+theme_override_font_sizes/normal_font_size = 32
 text = "20/20"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -121,8 +125,11 @@ vertical_alignment = 1
 layout_mode = 0
 offset_left = 123.0
 offset_top = 38.0
-offset_right = 207.0
-offset_bottom = 69.0
+offset_right = 191.1648
+offset_bottom = 61.970036
+scale = Vector2(1.335, 1.335)
+theme_override_fonts/font = ExtResource("4_xst5f")
+theme_override_font_sizes/font_size = 16
 text = "Replace"
 
 [node name="Fainted" type="ColorRect" parent="."]
@@ -145,6 +152,7 @@ layout_mode = 0
 offset_right = 85.0
 offset_bottom = 85.0
 theme_override_constants/outline_size = 8
+theme_override_fonts/normal_font = ExtResource("4_xst5f")
 text = "Fainted"
 horizontal_alignment = 1
 vertical_alignment = 1
