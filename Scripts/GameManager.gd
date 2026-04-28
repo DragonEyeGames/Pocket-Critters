@@ -420,3 +420,10 @@ func wipeSave():
 	blaze1 = false
 	get_tree().change_scene_to_file("res://Levels/forest.tscn")
 	restart()
+	
+func newFind(foundPokemon: PokemonData):
+	Info.loadFromEnum(foundPokemon.species)
+	caughtPokemon(foundPokemon)
+	
+func caughtPokemon(newPokemons: PokemonData):
+	Rename.rename(newPokemons)

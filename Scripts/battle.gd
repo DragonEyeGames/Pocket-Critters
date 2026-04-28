@@ -51,7 +51,11 @@ func _on_catch_pressed() -> void:
 		battleWon()
 		$BattleOptions/Display.text="Caught it! " + $Opponent.pokemon.name + " has been caught!"
 		$Opponent.visible=false
-		GameManager.pokedex.append($Opponent.pokemon.species)
+		if(not $Opponent.pokemon.species in GameManager.pokedex):
+			GameManager.pokedex.append($Opponent.pokemon.species)
+			GameManager.newFind($Opponent.pokemon)
+		else:
+			GameManager.caughtPokemon($Opponent.pokemon)
 		if(len(GameManager.playerTeam)<=5):
 			GameManager.playerTeam.append(GameManager.toBattle)
 			await get_tree().create_timer(3).timeout
@@ -298,6 +302,7 @@ func nonAttack():
 	$BattleOptions/Options.visible=true
 
 func replacePokemon(index: int):
+	GameManager.playerBoxes.append(GameManager.playerTeam[index])
 	GameManager.playerTeam[index]=$Opponent.pokemon
 	end()
 
