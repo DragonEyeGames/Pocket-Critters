@@ -6,7 +6,8 @@ var canRecieve=true
 
 func initialize():
 	if(pokemon==null):
-		queue_free()
+		visible=false
+		#queue_free()
 		return
 	$NewPokemon.pokemon=pokemon.species
 	$NewPokemon.initialize()
@@ -36,10 +37,25 @@ func _process(_delta: float) -> void:
 	if(Input.is_action_just_pressed("Interact") and mouseEntered):
 		$OptionsMenu.visible=!$OptionsMenu.visible
 		get_parent().get_parent().get_parent().get_parent().removeInput()
+	if(get_parent().get_parent().name=="Team"):
+		$OptionsMenu/VBoxContainer/Switch/MouseChecker.visible=len(GameManager.playerTeam)>1
+	else:
+		$OptionsMenu/VBoxContainer/Switch/MouseChecker.visible=len(GameManager.playerTeam)<6
 		
 func buttonPressed(action: String):
 	if(action=="Switch"):
-		pass
+		if(get_parent().get_parent().name=="Team"):
+			GameManager.playerTeam.erase(pokemon)
+			GameManager.playerBoxes.append(pokemon)
+			$OptionsMenu.visible=false
+			get_parent().get_parent().get_parent().get_parent().restoreInput()
+			$"../../../..".initializeSlots()
+		else:
+			GameManager.playerBoxes.erase(pokemon)
+			GameManager.playerTeam.append(pokemon)
+			$OptionsMenu.visible=false
+			get_parent().get_parent().get_parent().get_parent().restoreInput()
+			$"../../../..".initializeSlots()
 	if(action=="Stats"):
 		Stats.displayStats(pokemon)
 	if(action=="Critterdex"):

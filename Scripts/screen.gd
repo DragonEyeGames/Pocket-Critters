@@ -12,23 +12,7 @@ func bootUp():
 	#GameManager.playerBoxes.append(GameManager.newPokemon(GameManager.pokemon.Merlicun, 8))
 	#GameManager.playerBoxes.append(GameManager.newPokemon(GameManager.pokemon.Criminalis, 8))
 	$animator.play("initialize")
-	var i = 0
-	for child in $Normal/Storage/GridContainer.get_children():
-		child.visible=false
-	for pokemon in GameManager.playerBoxes:
-		$Normal/Storage/GridContainer.get_child(i).pokemon=pokemon
-		$Normal/Storage/GridContainer.get_child(i).initialize()
-		$Normal/Storage/GridContainer.get_child(i).visible=true
-		i+=1
-	for child in $Normal/Team/GridContainer.get_children():
-		child.visible=false
-	i=0
-	for pokemon in GameManager.playerTeam:
-		print($Normal/Team/GridContainer.get_child(i))
-		$Normal/Team/GridContainer.get_child(i).pokemon=pokemon
-		$Normal/Team/GridContainer.get_child(i).initialize()
-		$Normal/Team/GridContainer.get_child(i).visible=true
-		i+=1
+	initializeSlots()
 		
 func removeInput():
 	for child in $Normal/Team/GridContainer.get_children():
@@ -45,3 +29,23 @@ func restoreInput():
 
 func _on_close_pressed() -> void:
 	get_parent().close()
+	
+func initializeSlots():
+	var i = 0
+	for child in $Normal/Storage/GridContainer.get_children():
+		child.visible=false
+	print($Normal/Storage/GridContainer.get_children())
+	for pokemon in GameManager.playerBoxes:
+		$Normal/Storage/GridContainer.get_child(i).pokemon=pokemon
+		$Normal/Storage/GridContainer.get_child(i).initialize()
+		$Normal/Storage/GridContainer.get_child(i).visible=true
+		i+=1
+	for child in $Normal/Team/GridContainer.get_children():
+		child.visible=false
+	i=0
+	for pokemon in GameManager.playerTeam:
+		print($Normal/Team/GridContainer.get_child(i))
+		$Normal/Team/GridContainer.get_child(i).pokemon=pokemon
+		$Normal/Team/GridContainer.get_child(i).initialize()
+		$Normal/Team/GridContainer.get_child(i).visible=true
+		i+=1
