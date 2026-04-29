@@ -19,6 +19,15 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
+[node name="ColorRect3" type="ColorRect" parent="Menu"]
+layout_mode = 0
+offset_left = 762.0
+offset_top = -8.0
+offset_right = 966.0
+offset_bottom = 562.0
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
 [node name="ColorRect2" type="ColorRect" parent="Menu"]
 layout_mode = 0
 offset_left = 766.0
@@ -130,6 +139,7 @@ offset_bottom = 35.0
 text = "Close"
 
 [node name="Team Menu" type="Control" parent="."]
+visible = false
 z_index = 1
 layout_mode = 3
 anchors_preset = 0

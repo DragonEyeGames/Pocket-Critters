@@ -94,15 +94,17 @@ color = Color(0.49354547, 0.49354553, 0.49354535, 1)
 
 [node name="Name" type="RichTextLabel" parent="."]
 layout_mode = 0
-offset_left = 15.0
-offset_top = 15.0
-offset_right = 115.41494
-offset_bottom = 41.55602
-scale = Vector2(1.205, 1.205)
+offset_left = 16.0
+offset_top = 14.0
+offset_right = 134.0
+offset_bottom = 48.0
+scale = Vector2(0.765, 0.765)
+pivot_offset = Vector2(59, 17)
 mouse_filter = 2
 theme_override_fonts/normal_font = ExtResource("5_uucdy")
 theme_override_font_sizes/normal_font_size = 16
-text = "Geckrow"
+text = "WWWWWWWWWWWW"
+autowrap_mode = 0
 horizontal_alignment = 1
 vertical_alignment = 1
 

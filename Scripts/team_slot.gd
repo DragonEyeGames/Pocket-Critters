@@ -7,6 +7,7 @@ var mouse=false
 func loadSlot():
 	if(len(GameManager.playerTeam)-1>=index):
 		$Name.text=str(GameManager.playerTeam[index].name)
+		fitText()
 		$Pokemon.pokemon=GameManager.playerTeam[index]
 		$Fainted.visible=GameManager.playerTeam[index].health<=0
 		$Pokemon.initialize()
@@ -19,6 +20,19 @@ func loadSlot():
 		$Fainted.visible=false
 		$"Health Bar".visible=false
 	
+
+func fitText():
+	var font = $Name.get_theme_font("font")
+	var sizes = 16  # your pixel font size
+
+	var text_width = font.get_string_size($Name.text, HORIZONTAL_ALIGNMENT_LEFT, -1, sizes).x
+	var text_height = font.get_height(sizes)
+	var widthPercent = 100/text_width
+	var heightPercent = 34/text_height
+	var largestVal = min(widthPercent, heightPercent)
+	largestVal/=.9
+	$Name.scale=Vector2(largestVal, largestVal)
+	#$Name.scale = Vector2(text_width + 20, text_height + 10)
 
 func _process(_delta: float) -> void:
 	if(mouse and Input.is_action_just_pressed("Interact")):

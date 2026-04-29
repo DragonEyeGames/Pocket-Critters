@@ -4,7 +4,7 @@ extends CanvasLayer
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	visible=false
-	rename(GameManager.playerTeam[1])
+	#rename(GameManager.playerTeam[1])
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -18,6 +18,8 @@ func rename(newPokemon: PokemonData):
 	initialize()
 	
 func initialize():
+	visible=true
+	$LineEdit.text=""
 	$PokemonHolder/NewPokemon.pokemon=pokemon.species
 	$PokemonHolder/NewPokemon.initialize()
 	$Name.text=pokemon.name
