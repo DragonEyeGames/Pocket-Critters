@@ -1,7 +1,8 @@
-[gd_scene load_steps=91 format=3 uid="uid://bmsyi0138rgpo"]
+[gd_scene load_steps=92 format=3 uid="uid://bmsyi0138rgpo"]
 
 [ext_resource type="Texture2D" uid="uid://bhngxc6jw5euf" path="res://Assets/charsetA_1.png" id="1_2jmqy"]
 [ext_resource type="Script" uid="uid://ddt23cppjdwcy" path="res://Scripts/trainer.gd" id="1_j355o"]
+[ext_resource type="FontFile" uid="uid://cnjtjvjhjjxia" path="res://Fonts/ByteBounce.ttf" id="3_ecc1g"]
 [ext_resource type="Script" uid="uid://crp3g76avkl7g" path="res://Scripts/dialogue.gd" id="3_ryukr"]
 [ext_resource type="Texture2D" uid="uid://dv4otklr3xj3k" path="res://Assets/charsetB_1.png" id="4_bv41c"]
 
@@ -1135,7 +1136,6 @@ disabled = true
 
 [node name="Dialogue" type="CanvasLayer" parent="."]
 layer = 0
-visible = false
 script = ExtResource("3_ryukr")
 
 [node name="ColorRect" type="ColorRect" parent="Dialogue"]
@@ -1180,7 +1180,8 @@ offset_left = 5.0
 offset_top = 4.0
 offset_right = 375.0
 offset_bottom = 72.0
-theme_override_font_sizes/normal_font_size = 45
+theme_override_fonts/normal_font = ExtResource("3_ecc1g")
+theme_override_font_sizes/normal_font_size = 64
 text = "???"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -1190,7 +1191,9 @@ offset_left = 7.0
 offset_top = 401.0
 offset_right = 953.0
 offset_bottom = 533.0
-theme_override_font_sizes/normal_font_size = 27
+theme_override_fonts/normal_font = ExtResource("3_ecc1g")
+theme_override_font_sizes/normal_font_size = 48
+text = "Hey I know you! Prepare to lose."
 
 [node name="CharsetA1" type="Sprite2D" parent="."]
 visible = false

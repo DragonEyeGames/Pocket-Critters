@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://dwbnx0jnjv6yx"]
+[gd_scene load_steps=7 format=3 uid="uid://dwbnx0jnjv6yx"]
 
 [ext_resource type="Script" uid="uid://dp2xe7ys1trpk" path="res://Scripts/pause.gd" id="1_aq7p1"]
 [ext_resource type="PackedScene" uid="uid://csi5giv4qbgfx" path="res://Scenes/team_slot.tscn" id="2_6eyaj"]
+[ext_resource type="FontFile" uid="uid://cnjtjvjhjjxia" path="res://Fonts/ByteBounce.ttf" id="2_nsogc"]
 [ext_resource type="PackedScene" uid="uid://dsf85ixufbmqg" path="res://Scenes/reorder_slot.tscn" id="3_5a6ek"]
 [ext_resource type="PackedScene" uid="uid://cmsdeqmlib8fv" path="res://Scenes/pokedex.tscn" id="4_3fojq"]
 [ext_resource type="AudioStream" uid="uid://c8uubdf078rn2" path="res://New Sounds/healed.mp3" id="5_3fojq"]
@@ -62,6 +63,8 @@ layout_mode = 2
 layout_mode = 0
 offset_right = 171.0
 offset_bottom = 35.0
+theme_override_fonts/font = ExtResource("2_nsogc")
+theme_override_font_sizes/font_size = 32
 text = "Team"
 
 [node name="Pokedex" type="Control" parent="Menu/VBoxContainer"]
@@ -72,6 +75,8 @@ layout_mode = 2
 layout_mode = 0
 offset_right = 171.0
 offset_bottom = 35.0
+theme_override_fonts/font = ExtResource("2_nsogc")
+theme_override_font_sizes/font_size = 32
 text = "Critterdex"
 
 [node name="Save" type="Control" parent="Menu/VBoxContainer"]
@@ -82,6 +87,8 @@ layout_mode = 2
 layout_mode = 0
 offset_right = 171.0
 offset_bottom = 35.0
+theme_override_fonts/font = ExtResource("2_nsogc")
+theme_override_font_sizes/font_size = 32
 text = "Save"
 
 [node name="ClearSave" type="Control" parent="Menu/VBoxContainer"]
@@ -92,6 +99,8 @@ layout_mode = 2
 layout_mode = 0
 offset_right = 171.0
 offset_bottom = 35.0
+theme_override_fonts/font = ExtResource("2_nsogc")
+theme_override_font_sizes/font_size = 32
 text = "Clear Save"
 
 [node name="Bag" type="Control" parent="Menu/VBoxContainer"]
@@ -103,6 +112,8 @@ layout_mode = 2
 layout_mode = 0
 offset_right = 171.0
 offset_bottom = 35.0
+theme_override_fonts/font = ExtResource("2_nsogc")
+theme_override_font_sizes/font_size = 32
 disabled = true
 text = "Bag"
 
@@ -114,6 +125,8 @@ layout_mode = 2
 layout_mode = 0
 offset_right = 171.0
 offset_bottom = 35.0
+theme_override_fonts/font = ExtResource("2_nsogc")
+theme_override_font_sizes/font_size = 32
 disabled = true
 text = "Menu"
 
@@ -125,6 +138,8 @@ layout_mode = 2
 layout_mode = 0
 offset_right = 171.0
 offset_bottom = 35.0
+theme_override_fonts/font = ExtResource("2_nsogc")
+theme_override_font_sizes/font_size = 32
 disabled = true
 text = "Quit"
 
@@ -136,6 +151,8 @@ layout_mode = 2
 layout_mode = 0
 offset_right = 171.0
 offset_bottom = 35.0
+theme_override_fonts/font = ExtResource("2_nsogc")
+theme_override_font_sizes/font_size = 32
 text = "Close"
 
 [node name="Team Menu" type="Control" parent="."]

@@ -1,6 +1,7 @@
-[gd_scene load_steps=26 format=3 uid="uid://b013ftqbgrpxx"]
+[gd_scene load_steps=27 format=3 uid="uid://b013ftqbgrpxx"]
 
 [ext_resource type="Script" uid="uid://cfmuoh8gh7gx6" path="res://Scripts/move_display.gd" id="1_y1whx"]
+[ext_resource type="FontFile" uid="uid://cnjtjvjhjjxia" path="res://Fonts/ByteBounce.ttf" id="2_mkqv3"]
 [ext_resource type="Texture2D" uid="uid://7wj1ubb3bdnp" path="res://Assets/PokemonTypes/normal.png" id="2_puv86"]
 [ext_resource type="Texture2D" uid="uid://d0i6w16fnln0l" path="res://Assets/PokemonTypes/grass.png" id="3_kcutj"]
 [ext_resource type="Texture2D" uid="uid://dcbad7vydy0wa" path="res://Assets/PokemonTypes/flying.png" id="4_54dxv"]
@@ -516,49 +517,58 @@ mouse_filter = 2
 
 [node name="Name" type="RichTextLabel" parent="ColorRect"]
 layout_mode = 0
-offset_left = 52.0
-offset_right = 194.0
-offset_bottom = 24.0
+offset_left = 61.0
+offset_top = 1.9999998
+offset_right = 145.69055
+offset_bottom = 21.543972
+scale = Vector2(1.535, 1.535)
 mouse_filter = 2
 theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("2_mkqv3")
+theme_override_font_sizes/normal_font_size = 16
 text = "Tackle"
-horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Power" type="RichTextLabel" parent="ColorRect"]
 layout_mode = 0
-offset_left = 52.0
-offset_top = 28.0
-offset_right = 83.0
-offset_bottom = 59.0
+offset_left = 60.999996
+offset_top = 30.0
+offset_right = 83.14984
+offset_bottom = 45.635178
+scale = Vector2(1.23, 1.23)
 mouse_filter = 2
 theme_override_colors/default_color = Color(0, 0, 0, 1)
-text = "50"
-horizontal_alignment = 1
+theme_override_fonts/normal_font = ExtResource("2_mkqv3")
+theme_override_font_sizes/normal_font_size = 16
+text = "150"
 vertical_alignment = 1
 
 [node name="Accuracy" type="RichTextLabel" parent="ColorRect"]
 layout_mode = 0
-offset_left = 81.0
-offset_top = 29.0
-offset_right = 125.0
-offset_bottom = 58.0
+offset_left = 93.0
+offset_top = 30.999996
+offset_right = 121.66449
+offset_bottom = 44.680775
+scale = Vector2(1.23, 1.23)
 mouse_filter = 2
 theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("2_mkqv3")
+theme_override_font_sizes/normal_font_size = 16
 text = "95%"
-horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Type" type="RichTextLabel" parent="ColorRect"]
 layout_mode = 0
-offset_left = 126.0
-offset_top = 29.0
-offset_right = 194.0
-offset_bottom = 58.0
+offset_left = 133.0
+offset_top = 21.0
+offset_right = 182.5935
+offset_bottom = 50.0
+scale = Vector2(1.23, 1.23)
 mouse_filter = 2
 theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("2_mkqv3")
+theme_override_font_sizes/normal_font_size = 16
 text = "Physical"
-horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Types" type="Node2D" parent="."]

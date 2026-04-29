@@ -80,10 +80,10 @@ color = Color(0.9764706, 0.9764706, 0.9764706, 1)
 
 [node name="Name" type="RichTextLabel" parent="."]
 layout_mode = 0
-offset_left = 103.0
-offset_top = 7.0
-offset_right = 208.83333
-offset_bottom = 31.166668
+offset_left = 104.0
+offset_top = 15.0
+offset_right = 210.0
+offset_bottom = 33.0
 scale = Vector2(1.2, 1.2)
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_fonts/normal_font = ExtResource("4_xst5f")
