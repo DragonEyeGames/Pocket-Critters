@@ -21,3 +21,4 @@ func loadDialogue():
 	while not Input.is_action_just_pressed("Interact"):
 		await get_tree().process_frame
 	speaker.nextText()
+	print("NEXT")

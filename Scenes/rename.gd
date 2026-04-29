@@ -10,14 +10,13 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
 	$Choose.disabled=$LineEdit.text.length()==0
-	if(visible):
-		get_tree().paused=true
 
 func rename(newPokemon: PokemonData):
 	pokemon=newPokemon
 	initialize()
 	
 func initialize():
+	get_tree().paused=true
 	visible=true
 	$LineEdit.text=""
 	$PokemonHolder/NewPokemon.pokemon=pokemon.species

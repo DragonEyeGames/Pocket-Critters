@@ -101,7 +101,7 @@ pokemonCenter = "res://Levels/PokemonCenters/waymeetPokemonCenter.tscn"
 pokeMart = "res://Levels/PokemonCenters/waymeetPokemonMart.tscn"
 
 [node name="Player" parent="." groups=["Y-Sort"] instance=ExtResource("2_fmudw")]
-position = Vector2(0, 19)
+position = Vector2(433, -241)
 
 [node name="Y-Sort" type="Node2D" parent="." node_paths=PackedStringArray("player")]
 y_sort_enabled = true

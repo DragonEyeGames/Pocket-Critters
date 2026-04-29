@@ -14,6 +14,7 @@ func initialize():
 	$NewPokemon.position=Vector2(58, 52)
 	#$NamePlate/Name.text=GameManager.pokemonName(pokemon.species)
 	$NamePlate/Name.text=pokemon.name
+	fitText()
 
 
 func _on_animator_animation_finished(_anim_name: StringName) -> void:
@@ -65,3 +66,15 @@ func buttonPressed(action: String):
 		$OptionsMenu.visible=false
 		get_parent().get_parent().get_parent().get_parent().restoreInput()
 	
+func fitText():
+	var font = $NamePlate/Name.get_theme_font("font")
+	var sizes = 16  # your pixel font size
+
+	var text_width = font.get_string_size($NamePlate/Name.text, HORIZONTAL_ALIGNMENT_LEFT, -1, sizes).x
+	var text_height = font.get_height(sizes)
+	var widthPercent = 110/text_width
+	var heightPercent = 20/text_height
+	var largestVal = min(widthPercent, heightPercent)
+	largestVal/=.9
+	$NamePlate/Name.scale=Vector2(largestVal, largestVal)
+	#$Name.scale = Vector2(text_width + 20, text_height + 10)

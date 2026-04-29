@@ -32,8 +32,6 @@ func talk():
 		
 		
 func nextText():
-	if(not healed):
-		healed=true
 	if(healed or alreadyHealed):
 		healed=false
 		healing=false
@@ -41,21 +39,23 @@ func nextText():
 		player.canMove=true
 		playerEntered=false
 		return
+	if(not healed):
+		healed=true
 	dialogue.visible=false
-	var i=0
+	#var i=0
 	for pokemon in GameManager.playerTeam:
 		pokemon.health=pokemon.maxHealth
-		$"../../CritterBallHolder".get_child(i).visible=true
+		#$"../../CritterBallHolder".get_child(i).visible=true
 		await get_tree().create_timer(.2).timeout
-		i+=1
+		#i+=1
 	$Heal.play()
-	$"../../CritterBallHolder/Heal".play("heal")
+	#$"../../CritterBallHolder/Heal".play("heal")
 	await get_tree().create_timer(2).timeout
-	for child in $"../../CritterBallHolder".get_children():
-		if(child is Node2D):
-			child.visible=false
+#	for child in $"../../CritterBallHolder".get_children():
+#		if(child is Node2D):
+#			child.visible=false
 	dialogue.visible=true
-	dialogue.bodyText="They are perfectly healthy. Except for appearance. Now go away."
+	dialogue.bodyText="They are now perfectly healthy. Except for appearance. Now go away."
 	dialogue.loadDialogue()
 	
 

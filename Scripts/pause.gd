@@ -14,6 +14,7 @@ func _process(_delta: float) -> void:
 	if(not GameManager.canPause):
 		return
 	if(Input.is_action_just_pressed("Pause")):
+		#print("PAUSE")
 		if($Menu.visible and ($"Team Menu".visible or $"Reorder Team".visible or $Pokedex.visible or $"Confirm Delete".visible)):
 			$"Team Menu".visible=false
 			$"Reorder Team".visible=false

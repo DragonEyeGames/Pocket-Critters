@@ -72,10 +72,11 @@ color = Color(0.86036915, 0.8603692, 0.8603692, 1)
 
 [node name="Name" type="RichTextLabel" parent="NamePlate"]
 layout_mode = 0
-offset_left = 10.00251
-offset_top = 91.98593
-offset_right = 110.121414
-offset_bottom = 107.94308
+offset_left = 0.3945427
+offset_top = 89.52438
+offset_right = 120.39455
+offset_bottom = 109.52438
+pivot_offset = Vector2(58, 10)
 mouse_filter = 2
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_fonts/normal_font = ExtResource("4_2m42m")

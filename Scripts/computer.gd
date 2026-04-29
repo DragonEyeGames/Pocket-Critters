@@ -12,6 +12,7 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
 	if(playerEntered and Input.is_action_just_pressed("Interact") and not entered):
+		GameManager.canPause=false
 		backupZoomPoint=GameManager.camera.target
 		GameManager.camera.target=$ZoomPoint
 		GameManager.player.canMove=false
@@ -33,6 +34,7 @@ func _on_area_2d_area_exited(_area: Area2D) -> void:
 	playerEntered=false
 
 func close():
+	GameManager.canPause=true
 	GameManager.camera.target=backupZoomPoint
 	GameManager.camera.zoomChange(Vector2(2.3, 2.3))
 	GameManager.player.canMove=true
