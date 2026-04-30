@@ -195,7 +195,7 @@ var evolutionSpecies
 var learningPokemon: PokemonData
 var learningMove: MoveResource
 
-func _ready() -> void:
+func initialize() -> void:
 	if(not loadGame()):
 		restart()
 	else:

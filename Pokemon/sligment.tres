@@ -1,8 +1,7 @@
-[gd_resource type="Resource" script_class="SpeciesData" load_steps=22 format=3 uid="uid://qg7i6v3i2kk4"]
+[gd_resource type="Resource" script_class="SpeciesData" load_steps=21 format=3 uid="uid://qg7i6v3i2kk4"]
 
 [ext_resource type="Resource" uid="uid://c8d7x0mn0w2o2" path="res://Pokemon/viscolor.tres" id="1_k63ny"]
 [ext_resource type="Script" uid="uid://kmcanhhb04o0" path="res://Resources/MoveResource.gd" id="1_wkyvk"]
-[ext_resource type="Resource" uid="uid://0adu54ws8kpt" path="res://Moves/WeakMoves/Dark/gnaw.tres" id="2_hjcs6"]
 [ext_resource type="Script" uid="uid://bdro5jjhj86t" path="res://Resources/EvolutionData.gd" id="2_q6srq"]
 [ext_resource type="Resource" uid="uid://c4btm4xgx3fmv" path="res://Moves/WeakMoves/Bug/bugBite.tres" id="3_k63ny"]
 [ext_resource type="Resource" uid="uid://egtxpc610uld" path="res://Moves/WeakMoves/Bug/nibble.tres" id="4_q6srq"]
@@ -19,52 +18,50 @@ into = ExtResource("1_k63ny")
 level = 21
 metadata/_custom_type_script = "uid://bdro5jjhj86t"
 
-[sub_resource type="Resource" id="Resource_isabj"]
-script = ExtResource("1_wkyvk")
-move = ExtResource("2_hjcs6")
-level = 2
-metadata/_custom_type_script = "uid://kmcanhhb04o0"
-
-[sub_resource type="Resource" id="Resource_8dqty"]
+[sub_resource type="Resource" id="Resource_won6j"]
 script = ExtResource("1_wkyvk")
 move = ExtResource("3_k63ny")
-level = 1
+level = 4
 metadata/_custom_type_script = "uid://kmcanhhb04o0"
 
-[sub_resource type="Resource" id="Resource_cqt66"]
+[sub_resource type="Resource" id="Resource_wkyvk"]
+script = ExtResource("1_wkyvk")
+move = ExtResource("6_jq7jd")
+level = 7
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_hjcs6"]
 script = ExtResource("1_wkyvk")
 move = ExtResource("4_q6srq")
 level = 1
 metadata/_custom_type_script = "uid://kmcanhhb04o0"
 
-[sub_resource type="Resource" id="Resource_m8r8u"]
+[sub_resource type="Resource" id="Resource_k63ny"]
+script = ExtResource("1_wkyvk")
+move = ExtResource("7_ep2mq")
+level = 9
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_q6srq"]
+script = ExtResource("1_wkyvk")
+move = ExtResource("6_jq7jd")
+level = 13
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_jq7jd"]
 script = ExtResource("1_wkyvk")
 move = ExtResource("5_d7l7c")
 level = 1
 metadata/_custom_type_script = "uid://kmcanhhb04o0"
 
-[sub_resource type="Resource" id="Resource_oqjap"]
-script = ExtResource("1_wkyvk")
-move = ExtResource("6_jq7jd")
-level = 5
-metadata/_custom_type_script = "uid://kmcanhhb04o0"
-
-[sub_resource type="Resource" id="Resource_gp4da"]
-script = ExtResource("1_wkyvk")
-move = ExtResource("7_ep2mq")
-level = 7
-metadata/_custom_type_script = "uid://kmcanhhb04o0"
-
-[sub_resource type="Resource" id="Resource_kqhvv"]
+[sub_resource type="Resource" id="Resource_ep2mq"]
 script = ExtResource("1_wkyvk")
 move = ExtResource("8_nh801")
-level = 3
 metadata/_custom_type_script = "uid://kmcanhhb04o0"
 
-[sub_resource type="Resource" id="Resource_vr67p"]
+[sub_resource type="Resource" id="Resource_nh801"]
 script = ExtResource("1_wkyvk")
 move = ExtResource("9_nedks")
-level = 4
 metadata/_custom_type_script = "uid://kmcanhhb04o0"
 
 [resource]
@@ -78,7 +75,7 @@ defense = 50
 specialAttack = 25
 specialDefense = 45
 speed = 20
-potentialMoves = Array[ExtResource("1_wkyvk")]([SubResource("Resource_isabj"), SubResource("Resource_8dqty"), SubResource("Resource_cqt66"), SubResource("Resource_m8r8u"), SubResource("Resource_oqjap"), SubResource("Resource_gp4da"), SubResource("Resource_kqhvv"), SubResource("Resource_vr67p")])
+potentialMoves = Array[ExtResource("1_wkyvk")]([SubResource("Resource_won6j"), SubResource("Resource_wkyvk"), SubResource("Resource_hjcs6"), SubResource("Resource_k63ny"), SubResource("Resource_q6srq"), SubResource("Resource_jq7jd"), SubResource("Resource_ep2mq"), SubResource("Resource_nh801")])
 catchRate = 0.6
 cryPath = "res://PokemonCries/goomy.wav"
 evolution = SubResource("Resource_d7l7c")
