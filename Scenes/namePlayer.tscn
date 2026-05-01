@@ -1,0 +1,175 @@
+[gd_scene load_steps=5 format=3 uid="uid://csblpf0mdgbq2"]
+
+[ext_resource type="Script" uid="uid://bjwjm5rcwf14c" path="res://Scenes/namePlayer.gd" id="1_6vflt"]
+[ext_resource type="Texture2D" uid="uid://bhngxc6jw5euf" path="res://Assets/charsetA_1.png" id="8_8fmpo"]
+[ext_resource type="FontFile" uid="uid://cnjtjvjhjjxia" path="res://Fonts/ByteBounce.ttf" id="8_wd0mj"]
+[ext_resource type="Script" uid="uid://dlvt2dm6p6f2g" path="res://Scripts/closeButton.gd" id="9_plu4g"]
+
+[node name="namePlayer" type="CanvasLayer"]
+process_mode = 3
+visible = false
+script = ExtResource("1_6vflt")
+names = Array[String](["Frank", "Biljamin", "Bobbert", "Gregory", "Jeff Jones", "Young", "Name"])
+
+[node name="ColorRect3" type="ColorRect" parent="."]
+offset_left = 10.0
+offset_top = 15.0
+offset_right = 949.0
+offset_bottom = 525.0
+color = Color(0, 0, 0, 1)
+
+[node name="Transparizer" type="ColorRect" parent="."]
+z_index = -1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -3.0
+offset_top = -4.0
+offset_right = 2.0
+offset_bottom = 5.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.28627452)
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+offset_left = 16.0
+offset_top = 20.0
+offset_right = 944.0
+offset_bottom = 520.0
+color = Color(0.728822, 0.728822, 0.728822, 1)
+
+[node name="PokemonHolder" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 55.0
+offset_top = 210.0
+offset_right = 336.0
+offset_bottom = 491.0
+
+[node name="Border" type="ColorRect" parent="PokemonHolder"]
+layout_mode = 0
+offset_right = 281.0
+offset_bottom = 281.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect" type="ColorRect" parent="PokemonHolder"]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 278.0
+offset_bottom = 278.0
+color = Color(0.91228896, 0.9122889, 0.91228884, 1)
+
+[node name="Name" type="RichTextLabel" parent="."]
+offset_left = 20.0
+offset_top = 6.0
+offset_right = 944.0
+offset_bottom = 81.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("8_wd0mj")
+theme_override_font_sizes/normal_font_size = 96
+text = "You"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Prompt" type="RichTextLabel" parent="."]
+offset_left = 18.000002
+offset_top = 64.0
+offset_right = 1200.1655
+offset_bottom = 163.0
+scale = Vector2(0.785, 0.785)
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("8_wd0mj")
+theme_override_font_sizes/normal_font_size = 64
+text = "What is your name? The old man wants to know."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Close" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = 915.0
+offset_top = 7.0
+offset_right = 955.0
+offset_bottom = 47.0
+mouse_filter = 2
+script = ExtResource("9_plu4g")
+
+[node name="ColorRect" type="ColorRect" parent="Close"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="Close"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 38.0
+offset_bottom = 38.0
+mouse_filter = 2
+color = Color(0.5726692, 1.0227784e-06, 1.92523e-07, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Close"]
+layout_mode = 0
+offset_left = -5.0
+offset_top = -8.0
+offset_right = 49.0
+offset_bottom = 39.0
+mouse_filter = 2
+theme_override_fonts/normal_font = ExtResource("8_wd0mj")
+theme_override_font_sizes/normal_font_size = 64
+text = "x"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MouseDetector" type="ColorRect" parent="Close"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+color = Color(1, 1, 1, 0)
+
+[node name="LineEdit" type="LineEdit" parent="."]
+offset_left = 258.0
+offset_top = 127.0
+offset_right = 733.0
+offset_bottom = 190.0
+theme_override_fonts/font = ExtResource("8_wd0mj")
+theme_override_font_sizes/font_size = 48
+placeholder_text = "Type in your name here!"
+alignment = 1
+max_length = 10
+
+[node name="Choose" type="Button" parent="."]
+offset_left = 442.0
+offset_top = 249.0
+offset_right = 698.0
+offset_bottom = 320.0
+focus_mode = 0
+theme_override_fonts/font = ExtResource("8_wd0mj")
+theme_override_font_sizes/font_size = 48
+text = "Choose Name"
+
+[node name="Random" type="Button" parent="."]
+offset_left = 441.0
+offset_top = 346.0
+offset_right = 710.0
+offset_bottom = 417.0
+focus_mode = 0
+theme_override_fonts/font = ExtResource("8_wd0mj")
+theme_override_font_sizes/font_size = 48
+text = "Generate Name"
+
+[node name="CharsetA1" type="Sprite2D" parent="."]
+position = Vector2(196, 367.99997)
+scale = Vector2(12.135, 12.135)
+texture = ExtResource("8_8fmpo")
+region_enabled = true
+region_rect = Rect2(113, 13, 14, 18)
+
+[connection signal="mouse_entered" from="Close/MouseDetector" to="Close" method="_on_mouse_detector_mouse_entered"]
+[connection signal="mouse_exited" from="Close/MouseDetector" to="Close" method="_on_mouse_detector_mouse_exited"]
+[connection signal="pressed" from="Choose" to="." method="_on_choose_pressed"]
+[connection signal="pressed" from="Random" to="." method="_on_random_pressed"]

@@ -23,6 +23,9 @@ var afterSpeaking=false
 
 @export var combatant:=true
 
+var playerNamed=false
+var geckrowNamed=false
+
 func _ready():
 	$Area2D/CollisionShape2D.shape.radius=radius
 	if(trainerData==null):
@@ -32,8 +35,7 @@ func _ready():
 	if ID == 0:
 		ID = str(get_path()).hash()
 	if(ID in GameManager.defeated):
-		defeated=true
-		speechPage=len(trainerData.afterFightDialogue)+1
+		queue_free()
 	for child in $Sprites.get_children():
 		child.visible=false
 	sprite=get_node("Sprites/" + trainerData.sprite)
@@ -74,11 +76,30 @@ func nextText():
 		dialogue.loadDialogue()
 		speechPage+=1
 	else:
-		if(not defeated and combatant):
-			GameManager.playerPosition=player.global_position
-			Music.trainer()
-			GameManager.canPause=true
-			GameManager.trainerBattle(trainerData.trainerName, battleTeam, ID)
+		if(not playerNamed):
+			NamePlayer.initialize()
+			print("AFter the funtera")
+			get_tree().paused=true
+			while get_tree().paused:
+				await get_tree().process_frame
+				print("still paused")
+			print("Aha")
+			playerNamed=true
+			dialogue.nameText=trainerData.trainerName
+			dialogue.bodyText="And now for your lizard that you seem to have."
+			dialogue.loadDialogue()
+		elif(not geckrowNamed):
+			print("GECVKRO")
+			Rename.rename(GameManager.playerTeam[0])
+			while get_tree().paused:
+				await get_tree().process_frame
+				print("still paused")
+			print("Aha")
+			defeated=true
+			GameManager.defeated.append(ID)
+			geckrowNamed=true
+			speechPage=0
+			nextText()
 		elif(len(trainerData.afterFightDialogue)>speechPage):
 			dialogue.nameText=trainerData.trainerName
 			dialogue.bodyText=trainerData.afterFightDialogue[speechPage]
@@ -90,9 +111,8 @@ func nextText():
 			GameManager.camera.target=player
 			GameManager.canPause=true
 			#$Area2D.queue_free()
-			if(trainerData.rival!=0):
-				sprite.play("walk-up")
-				walkingAway=true
+			sprite.play("walk-up")
+			walkingAway=true
 		
 func _on_defeat(trainerID):
 	if(trainerID==ID):

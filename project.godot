@@ -24,6 +24,7 @@ Stats="*res://Scenes/stats.tscn"
 Info="*res://Scenes/info.tscn"
 PokedexText="*res://Scripts/pokedexText.gd"
 Rename="*res://Scenes/rename.tscn"
+NamePlayer="*res://Scenes/namePlayer.tscn"
 
 [display]
 
