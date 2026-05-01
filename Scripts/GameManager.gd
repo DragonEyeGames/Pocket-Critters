@@ -169,6 +169,7 @@ var attackingID:=0
 
 @export var playerPosition:= Vector2.ZERO
 @export var respawnSpot:=Vector2.ZERO
+@export var respawnScene:="res://Levels/forest.tscn"
 
 @export var currentScene = "res://Levels/forest.tscn"
 
@@ -389,6 +390,7 @@ func saveGame():
 	data.team=teamResource
 	data.playerPos=player.global_position
 	data.safePos=respawnSpot
+	data.safeScene=respawnScene
 	data.pokedex=pokedex.duplicate()
 	data.seenDex=seenDex.duplicate()
 	data.defeated=defeated.duplicate()
@@ -408,6 +410,7 @@ func loadGame():
 	playerTeam = data.team.team.duplicate()
 	playerPosition = data.playerPos
 	respawnSpot = data.safePos
+	respawnScene=data.safeScene
 	pokedex = data.pokedex.duplicate()
 	seenDex = data.seenDex.duplicate()
 	defeated = data.defeated.duplicate()
@@ -424,6 +427,7 @@ func wipeSave():
 	playerTeam = []
 	playerPosition = Vector2.ZERO
 	respawnSpot = Vector2.ZERO
+	respawnScene="res://Levels/forest.tscn"
 	pokedex = []
 	seenDex = []
 	defeated = []

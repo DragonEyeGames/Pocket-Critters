@@ -82,19 +82,14 @@ func nextText():
 			get_tree().paused=true
 			while get_tree().paused:
 				await get_tree().process_frame
-				print("still paused")
-			print("Aha")
 			playerNamed=true
 			dialogue.nameText=trainerData.trainerName
-			dialogue.bodyText="And now for your lizard that you seem to have."
+			dialogue.bodyText="And now name your first partner. It is thought to be impossible to forget your first critter."
 			dialogue.loadDialogue()
 		elif(not geckrowNamed):
-			print("GECVKRO")
 			Rename.rename(GameManager.playerTeam[0])
 			while get_tree().paused:
 				await get_tree().process_frame
-				print("still paused")
-			print("Aha")
 			defeated=true
 			GameManager.defeated.append(ID)
 			geckrowNamed=true

@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://c0fibty7fcims"]
+[gd_scene load_steps=3 format=3 uid="uid://c0fibty7fcims"]
 
 [ext_resource type="Script" uid="uid://dct63hjivul2e" path="res://Scripts/dead.gd" id="1_6bsmv"]
+[ext_resource type="FontFile" uid="uid://cnjtjvjhjjxia" path="res://Fonts/ByteBounce.ttf" id="2_h7u37"]
 
 [node name="Dead" type="Control"]
 layout_mode = 3
@@ -13,23 +14,41 @@ script = ExtResource("1_6bsmv")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
 layout_mode = 0
+offset_left = -2.0
 offset_right = 962.0
 offset_bottom = 168.0
-theme_override_font_sizes/normal_font_size = 40
-text = "All of you critters have fainted! You got it this time!"
+theme_override_fonts/normal_font = ExtResource("2_h7u37")
+theme_override_font_sizes/normal_font_size = 64
+text = "Your critters fainted! "
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Retry" type="Button" parent="."]
+[node name="resolution" type="RichTextLabel" parent="."]
+visible = false
 layout_mode = 0
-offset_left = 256.0
-offset_top = 210.0
-offset_right = 721.0
+offset_left = -2.0
+offset_top = 119.0
+offset_right = 962.0
+offset_bottom = 187.0
+theme_override_fonts/normal_font = ExtResource("2_h7u37")
+theme_override_font_sizes/normal_font_size = 48
+text = "You took a break and they healed back up."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Continue" type="Button" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 283.0
+offset_top = 242.0
+offset_right = 658.0
 offset_bottom = 319.0
-theme_override_font_sizes/font_size = 50
-text = "Retry"
+theme_override_fonts/font = ExtResource("2_h7u37")
+theme_override_font_sizes/font_size = 64
+text = "Continue"
 
 [node name="Quit" type="Button" parent="."]
+visible = false
 layout_mode = 0
 offset_left = 259.0
 offset_top = 341.0
@@ -38,5 +57,5 @@ offset_bottom = 450.0
 theme_override_font_sizes/font_size = 50
 text = "Quit"
 
-[connection signal="pressed" from="Retry" to="." method="_on_retry_pressed"]
+[connection signal="pressed" from="Continue" to="." method="_on_retry_pressed"]
 [connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]

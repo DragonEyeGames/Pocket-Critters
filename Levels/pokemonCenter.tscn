@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=4 uid="uid://bh2c8uyhr24il"]
+[gd_scene load_steps=31 format=4 uid="uid://bh2c8uyhr24il"]
 
 [ext_resource type="Script" uid="uid://swgsdmbo5fng" path="res://Scripts/main.gd" id="1_x2gkq"]
 [ext_resource type="PackedScene" uid="uid://c5yxtkkwi03pt" path="res://Scenes/player.tscn" id="2_xokqn"]
@@ -79,6 +79,43 @@ animations = [{
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_c2o0i"]
 size = Vector2(35, 31)
+
+[sub_resource type="Animation" id="Animation_xokqn"]
+resource_name = "heal"
+length = 2.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Dark/ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1.8, 2.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1), Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_c2o0i"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Dark/ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_kj8wy"]
+_data = {
+&"RESET": SubResource("Animation_c2o0i"),
+&"heal": SubResource("Animation_xokqn")
+}
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x2gkq"]
 size = Vector2(13, 22)
@@ -232,8 +269,8 @@ offset_top = 4.0
 offset_right = 375.0
 offset_bottom = 72.0
 theme_override_fonts/normal_font = ExtResource("13_c2o0i")
-theme_override_font_sizes/normal_font_size = 48
-text = "Critter Center Man"
+theme_override_font_sizes/normal_font_size = 64
+text = "Doctor Fizz"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -257,6 +294,22 @@ collision_mask = 2
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CritterCenterMan/Area2D"]
 position = Vector2(-0.5, -10.5)
 shape = SubResource("RectangleShape2D_c2o0i")
+
+[node name="Dark" type="CanvasLayer" parent="CritterCenterMan"]
+
+[node name="ColorRect" type="ColorRect" parent="CritterCenterMan/Dark"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 0)
+
+[node name="Animator" type="AnimationPlayer" parent="CritterCenterMan"]
+libraries = {
+&"": SubResource("AnimationLibrary_kj8wy")
+}
 
 [node name="Sofa" type="Sprite2D" parent="." groups=["Y-Sort"]]
 position = Vector2(99, -31)

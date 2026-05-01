@@ -5,6 +5,7 @@ class_name GameData
 @export var playerBoxes: Array[PokemonData] = []
 @export var playerPos: Vector2
 @export var safePos: Vector2
+@export var safeScene:="res://Levels/forest.tscn"
 @export var defeated: =[]
 @export var pokedex: Array[GameManager.pokemon]
 @export var seenDex: Array[GameManager.pokemon]

@@ -1,9 +1,11 @@
-[gd_scene load_steps=14 format=3 uid="uid://cw40qak10lmw"]
+[gd_scene load_steps=23 format=3 uid="uid://cw40qak10lmw"]
 
 [ext_resource type="FontFile" uid="uid://cnjtjvjhjjxia" path="res://Fonts/ByteBounce.ttf" id="1_60k44"]
 [ext_resource type="Script" uid="uid://bs1jf78q36onw" path="res://Scenes/mainMenu.gd" id="1_kqm77"]
 [ext_resource type="Texture2D" uid="uid://cf8eorrqjaxvq" path="res://Assets/parallax/forest/forest_sky.png" id="3_b7htb"]
+[ext_resource type="Texture2D" uid="uid://b2bpfx17gjepy" path="res://Assets/bird.png" id="3_yij4q"]
 [ext_resource type="Texture2D" uid="uid://ci74fxmcke20d" path="res://Assets/parallax/forest/forest_mountain.png" id="4_kqm77"]
+[ext_resource type="Script" uid="uid://dpkt0vcaonh6m" path="res://Scenes/bird.gd" id="4_o8ral"]
 [ext_resource type="Texture2D" uid="uid://dhex7ea4vfjly" path="res://Assets/parallax/forest/forest_mid.png" id="5_snj4n"]
 [ext_resource type="Texture2D" uid="uid://ms2lpaxhgrj3" path="res://Assets/parallax/forest/forest_back.png" id="6_wofhc"]
 [ext_resource type="Texture2D" uid="uid://ca8klgtgdkltj" path="res://Assets/parallax/forest/forest_long.png" id="7_qmf6k"]
@@ -11,6 +13,82 @@
 [ext_resource type="Script" uid="uid://b5deph5gpxf2g" path="res://Scenes/load_save.gd" id="9_rn1t7"]
 [ext_resource type="PackedScene" uid="uid://c6v7im2t0kf5d" path="res://Scenes/uiSaveSlot.tscn" id="9_wofhc"]
 [ext_resource type="Script" uid="uid://dlvt2dm6p6f2g" path="res://Scripts/closeButton.gd" id="11_yij4q"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o8ral"]
+atlas = ExtResource("3_yij4q")
+region = Rect2(0, 147, 32, 21)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_urxp8"]
+atlas = ExtResource("3_yij4q")
+region = Rect2(32, 147, 32, 21)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j8oe5"]
+atlas = ExtResource("3_yij4q")
+region = Rect2(64, 147, 32, 21)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0gbn6"]
+atlas = ExtResource("3_yij4q")
+region = Rect2(96, 147, 32, 21)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nyik7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o8ral")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_urxp8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j8oe5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0gbn6")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_o8ral"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j8oe5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0gbn6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o8ral")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_urxp8")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_urxp8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0gbn6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o8ral")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_urxp8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j8oe5")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="Gradient" id="Gradient_v10og"]
 colors = PackedColorArray(0, 0, 0, 0.5254902, 0, 0, 0, 0)
@@ -27,6 +105,7 @@ script = ExtResource("1_kqm77")
 scroll_scale = Vector2(0.05, 0.05)
 scroll_offset = Vector2(-159, -91)
 repeat_size = Vector2(569.97, 0)
+autoscroll = Vector2(1, 0)
 repeat_times = 2
 
 [node name="ForestSky" type="Sprite2D" parent="Parallax2D"]
@@ -47,7 +126,38 @@ scroll_offset = Vector2(-1137, -30)
 repeat_size = Vector2(1139.38, 0)
 repeat_times = 2
 
-[node name="ForestSky" type="Sprite2D" parent="Parallax2D3"]
+[node name="Bird" type="AnimatedSprite2D" parent="Parallax2D3"]
+modulate = Color(0.49621218, 0.60274744, 0.80200523, 0.6784314)
+position = Vector2(1216.7928, 210.51001)
+scale = Vector2(0.18, 0.18)
+sprite_frames = SubResource("SpriteFrames_nyik7")
+autoplay = "default"
+frame_progress = 0.87605673
+script = ExtResource("4_o8ral")
+
+[node name="Bird2" type="AnimatedSprite2D" parent="Parallax2D3"]
+modulate = Color(0.49621218, 0.60274744, 0.80200523, 0.6784314)
+position = Vector2(1209.8242, 208.97585)
+scale = Vector2(0.18, 0.18)
+sprite_frames = SubResource("SpriteFrames_o8ral")
+autoplay = "default"
+script = ExtResource("4_o8ral")
+
+[node name="Bird3" type="AnimatedSprite2D" parent="Parallax2D3"]
+modulate = Color(0.49621218, 0.60274744, 0.80200523, 0.6784314)
+position = Vector2(1202.7378, 207.34305)
+scale = Vector2(0.18, 0.18)
+sprite_frames = SubResource("SpriteFrames_urxp8")
+autoplay = "default"
+script = ExtResource("4_o8ral")
+
+[node name="Parallax2D6" type="Parallax2D" parent="."]
+scroll_scale = Vector2(0.2, 0.2)
+scroll_offset = Vector2(-1137, -30)
+repeat_size = Vector2(1139.38, 0)
+repeat_times = 2
+
+[node name="ForestSky" type="Sprite2D" parent="Parallax2D6"]
 position = Vector2(480, 270)
 scale = Vector2(0.3, 0.3)
 texture = ExtResource("4_kqm77")
