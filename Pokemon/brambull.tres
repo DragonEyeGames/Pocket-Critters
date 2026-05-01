@@ -1,8 +1,16 @@
-[gd_resource type="Resource" script_class="SpeciesData" load_steps=6 format=3 uid="uid://biaqo0ohnq2rn"]
+[gd_resource type="Resource" script_class="SpeciesData" load_steps=22 format=3 uid="uid://biaqo0ohnq2rn"]
 
 [ext_resource type="Script" uid="uid://kmcanhhb04o0" path="res://Resources/MoveResource.gd" id="1_c5n2h"]
 [ext_resource type="Resource" uid="uid://cvshjloa0bdgc" path="res://Pokemon/maizotaur.tres" id="1_usmeb"]
 [ext_resource type="Script" uid="uid://bdro5jjhj86t" path="res://Resources/EvolutionData.gd" id="2_q08jl"]
+[ext_resource type="Resource" uid="uid://5622jru6gfrd" path="res://Moves/MediumMoves/Fighting/focusStrike.tres" id="4_eh467"]
+[ext_resource type="Resource" uid="uid://dfqaoysnkkgdm" path="res://Moves/MediumMoves/Fighting/guardBreak.tres" id="5_rk8eq"]
+[ext_resource type="Resource" uid="uid://gtb308633ni2" path="res://Moves/MediumMoves/Fighting/rushingKick.tres" id="6_2uj4n"]
+[ext_resource type="Resource" uid="uid://b82sm6juqfhay" path="res://Moves/MediumMoves/Grass/gigaDrain.tres" id="7_rpb01"]
+[ext_resource type="Resource" uid="uid://da4kacwarvdmg" path="res://Moves/MediumMoves/Grass/overgrowth.tres" id="8_c5n2h"]
+[ext_resource type="Resource" uid="uid://sm5rc8642hn7" path="res://Moves/MediumMoves/Grass/leafBurst.tres" id="9_iahvc"]
+[ext_resource type="Resource" uid="uid://bhvdchd2k3ntj" path="res://Moves/MediumMoves/Normal/balanceBreak.tres" id="10_usmeb"]
+[ext_resource type="Resource" uid="uid://cdwss7jsvtro3" path="res://Moves/MediumMoves/Normal/quickStrike.tres" id="11_q08jl"]
 [ext_resource type="Script" uid="uid://1vun3nkcoo5i" path="res://Resources/SpeciesData.gd" id="13_ao425"]
 
 [sub_resource type="Resource" id="Resource_rpwhf"]
@@ -10,6 +18,54 @@ script = ExtResource("2_q08jl")
 into = ExtResource("1_usmeb")
 level = 35
 metadata/_custom_type_script = "uid://bdro5jjhj86t"
+
+[sub_resource type="Resource" id="Resource_fbfo2"]
+script = ExtResource("1_c5n2h")
+move = ExtResource("4_eh467")
+level = 21
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_1ho7h"]
+script = ExtResource("1_c5n2h")
+move = ExtResource("5_rk8eq")
+level = 32
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_rpb01"]
+script = ExtResource("1_c5n2h")
+move = ExtResource("6_2uj4n")
+level = 26
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_ctxmg"]
+script = ExtResource("1_c5n2h")
+move = ExtResource("7_rpb01")
+level = 28
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_l6o71"]
+script = ExtResource("1_c5n2h")
+move = ExtResource("8_c5n2h")
+level = 34
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_ks7mc"]
+script = ExtResource("1_c5n2h")
+move = ExtResource("9_iahvc")
+level = 20
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_xdwr6"]
+script = ExtResource("1_c5n2h")
+move = ExtResource("10_usmeb")
+level = 19
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_r2lfr"]
+script = ExtResource("1_c5n2h")
+move = ExtResource("11_q08jl")
+level = 25
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
 
 [resource]
 script = ExtResource("13_ao425")
@@ -22,6 +78,7 @@ defense = 78
 specialAttack = 68
 specialDefense = 51
 speed = 53
+potentialMoves = Array[ExtResource("1_c5n2h")]([SubResource("Resource_fbfo2"), SubResource("Resource_1ho7h"), SubResource("Resource_rpb01"), SubResource("Resource_ctxmg"), SubResource("Resource_l6o71"), SubResource("Resource_ks7mc"), SubResource("Resource_xdwr6"), SubResource("Resource_r2lfr")])
 catchRate = 0.3
 cryPath = "res://PokemonCries/bouffalant.wav"
 evolution = SubResource("Resource_rpwhf")

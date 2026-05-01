@@ -1,7 +1,77 @@
-[gd_resource type="Resource" script_class="SpeciesData" load_steps=3 format=3 uid="uid://cvshjloa0bdgc"]
+[gd_resource type="Resource" script_class="SpeciesData" load_steps=23 format=3 uid="uid://cvshjloa0bdgc"]
 
 [ext_resource type="Script" uid="uid://kmcanhhb04o0" path="res://Resources/MoveResource.gd" id="1_epvwh"]
+[ext_resource type="Resource" uid="uid://c67i3drmfvbpc" path="res://Moves/StrongMoves/Fighting/crushingForce.tres" id="2_lp8xm"]
+[ext_resource type="Resource" uid="uid://cio2yokb4g350" path="res://Moves/StrongMoves/Fighting/heavySlam.tres" id="3_epvwh"]
+[ext_resource type="Resource" uid="uid://dwi4nflujgbop" path="res://Moves/StrongMoves/Fighting/splittingUppercut.tres" id="4_gf1mt"]
+[ext_resource type="Resource" uid="uid://bob7a3gh0k38u" path="res://Moves/StrongMoves/Fighting/shatteringBlow.tres" id="5_2xy22"]
+[ext_resource type="Resource" uid="uid://bonbvti4iynrb" path="res://Moves/StrongMoves/Grass/forestDomination.tres" id="6_ykuxb"]
+[ext_resource type="Resource" uid="uid://k2ixext2awvm" path="res://Moves/StrongMoves/Grass/rootbreaker.tres" id="7_y3u38"]
+[ext_resource type="Resource" uid="uid://65iq6p3hsflg" path="res://Moves/StrongMoves/Grass/wildBurst.tres" id="8_86p0d"]
+[ext_resource type="Resource" uid="uid://d0gqnd33wa8ue" path="res://Moves/StrongMoves/Normal/bodyCrash.tres" id="9_3haxm"]
+[ext_resource type="Resource" uid="uid://clquya4b4ve4d" path="res://Moves/StrongMoves/Normal/bruteForce.tres" id="10_d1ulg"]
+[ext_resource type="Resource" uid="uid://4ubjunx2fska" path="res://Moves/StrongMoves/Normal/overrun.tres" id="11_4n3kd"]
 [ext_resource type="Script" uid="uid://1vun3nkcoo5i" path="res://Resources/SpeciesData.gd" id="13_juixk"]
+
+[sub_resource type="Resource" id="Resource_e60h8"]
+script = ExtResource("1_epvwh")
+move = ExtResource("2_lp8xm")
+level = 37
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_he6s7"]
+script = ExtResource("1_epvwh")
+move = ExtResource("3_epvwh")
+level = 42
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_8be63"]
+script = ExtResource("1_epvwh")
+move = ExtResource("4_gf1mt")
+level = 47
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_juixk"]
+script = ExtResource("1_epvwh")
+move = ExtResource("5_2xy22")
+level = 53
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_e4sks"]
+script = ExtResource("1_epvwh")
+move = ExtResource("6_ykuxb")
+level = 45
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_1jspt"]
+script = ExtResource("1_epvwh")
+move = ExtResource("7_y3u38")
+level = 43
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_ua4v5"]
+script = ExtResource("1_epvwh")
+move = ExtResource("8_86p0d")
+level = 39
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_jiv0w"]
+script = ExtResource("1_epvwh")
+move = ExtResource("9_3haxm")
+level = 50
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_gu8ky"]
+script = ExtResource("1_epvwh")
+move = ExtResource("10_d1ulg")
+level = 36
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_ndjwk"]
+script = ExtResource("1_epvwh")
+move = ExtResource("11_4n3kd")
+level = 48
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
 
 [resource]
 script = ExtResource("13_juixk")
@@ -14,6 +84,7 @@ defense = 100
 specialAttack = 92
 specialDefense = 68
 speed = 65
+potentialMoves = Array[ExtResource("1_epvwh")]([SubResource("Resource_e60h8"), SubResource("Resource_he6s7"), SubResource("Resource_8be63"), SubResource("Resource_juixk"), SubResource("Resource_e4sks"), SubResource("Resource_1jspt"), SubResource("Resource_ua4v5"), SubResource("Resource_jiv0w"), SubResource("Resource_gu8ky"), SubResource("Resource_ndjwk")])
 catchRate = 0.15
 cryPath = "res://PokemonCries/bouffalant.wav"
 prevolution = 12
