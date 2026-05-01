@@ -85,3 +85,9 @@ func _on_confirm_delete_pressed() -> void:
 
 func _on_deny_delete_pressed() -> void:
 	$"Confirm Delete".visible=false
+
+
+func menu() -> void:
+	#GameManager.toMenu()
+	get_tree().paused=false
+	get_tree().change_scene_to_file("res://Scenes/mainMenu.tscn")

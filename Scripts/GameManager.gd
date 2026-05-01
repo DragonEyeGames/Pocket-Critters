@@ -197,6 +197,9 @@ var learningMove: MoveResource
 
 var loadedSave=1
 
+var playtime:=0.0
+var playerName:=""
+
 func initialize() -> void:
 	if(not loadGame()):
 		restart()
@@ -210,6 +213,7 @@ func restart():
 	playerTeam.append(setPokemon(starter.species, starter.level, starter.moves))
 	pokedex.append(pokemon.Geckrow)
 	seenDex.append(pokemon.Geckrow)
+	get_tree().change_scene_to_file("res://Levels/forest.tscn")
 
 
 func wildBattle(newPokemonInstance):
@@ -391,14 +395,16 @@ func saveGame():
 	data.blaze1=blaze1
 	data.scene=currentScene
 	data.playerBoxes=playerBoxes
-	ResourceSaver.save(data, "user://save-" + loadedSave + ".tres")
+	data.playtime=playtime
+	data.playerName=playerName
+	ResourceSaver.save(data, "user://save-" + str(loadedSave) + ".tres")
 
 func loadGame():
-	if not FileAccess.file_exists("user://save-" + loadedSave + ".tres"):
+	if not FileAccess.file_exists("user://save-" + str(loadedSave) + ".tres"):
 		print("No save file found")
 		return false
 	
-	var data = load("user://save-" + loadedSave + ".tres") as GameData
+	var data = load("user://save-" + str(loadedSave) + ".tres") as GameData
 	playerTeam = data.team.team.duplicate()
 	playerPosition = data.playerPos
 	respawnSpot = data.safePos
@@ -408,17 +414,21 @@ func loadGame():
 	blaze1=data.blaze1
 	currentScene=data.scene
 	playerBoxes=data.playerBoxes
+	playtime=data.playtime
+	playerName=data.playerName
 	return true
 	
 func wipeSave():
-	if FileAccess.file_exists("user://save-" + loadedSave + ".tres"):
-		DirAccess.remove_absolute("user://save-" + loadedSave + ".tres")
+	if FileAccess.file_exists("user://save-" + str(loadedSave) + ".tres"):
+		DirAccess.remove_absolute("user://save-" + str(loadedSave) + ".tres")
 	playerTeam = []
 	playerPosition = Vector2.ZERO
 	respawnSpot = Vector2.ZERO
 	pokedex = []
 	seenDex = []
 	defeated = []
+	playtime=0.0
+	playerName=""
 	blaze1 = false
 	get_tree().change_scene_to_file("res://Levels/forest.tscn")
 	restart()

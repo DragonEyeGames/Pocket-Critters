@@ -42,7 +42,8 @@ func _ready() -> void:
 		await get_tree().create_timer(.1).timeout
 	GameManager.safe=false
 
-func _process(_delta: float) -> void:
+func _process(delta: float) -> void:
+	GameManager.playtime+=delta
 	if(Input.is_action_just_pressed("Interact") and pokeCenterEntered):
 		get_tree().call_deferred("change_scene_to_file", pokemonCenter)
 	if(Input.is_action_just_pressed("Interact") and pokeMartEntered):

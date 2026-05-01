@@ -112,6 +112,7 @@ text = "20/20"
 vertical_alignment = 1
 
 [node name="XP-Bar" type="ProgressBar" parent="."]
+visible = false
 layout_mode = 0
 offset_left = 11.0
 offset_top = 92.0

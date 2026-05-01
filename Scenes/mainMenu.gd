@@ -7,8 +7,6 @@ func _ready() -> void:
 		$Menu/New.size=$Menu/Load.size
 		$Menu/New.position.x=$Menu/Load.position.x
 		$Menu/New.text="New Game"
-		var data = load("user://save-1.tres") as GameData
-		$Menu/Control/VBoxContainer/SaveSlot/TeamSlot.loadPokemon(data.team.team[0])
 	else:
 		$Menu/Load.visible=false
 
@@ -21,8 +19,8 @@ func _process(_delta: float) -> void:
 
 
 func _on_new_pressed() -> void:
-	pass # Replace with function body.
+	$Menu/NewSave.open()
 
 
 func _on_load_pressed() -> void:
-	pass # Replace with function body.
+	$Menu/LoadSave.open()

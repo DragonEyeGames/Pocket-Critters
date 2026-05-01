@@ -1,0 +1,346 @@
+[gd_scene load_steps=7 format=3 uid="uid://c6v7im2t0kf5d"]
+
+[ext_resource type="Script" uid="uid://cy7tx7l4xovl1" path="res://Scenes/uiSaveSlot.gd" id="1_7pspm"]
+[ext_resource type="Script" uid="uid://biq68mbdnsa7t" path="res://Scenes/saveSlotPokemon.gd" id="1_yphgx"]
+[ext_resource type="PackedScene" uid="uid://ba24hclljygvv" path="res://Scenes/pokemonSelector.tscn" id="2_7pspm"]
+[ext_resource type="Shader" uid="uid://bomfvo6o4mvg6" path="res://Shaders/flash.gdshader" id="3_w0y52"]
+[ext_resource type="FontFile" uid="uid://cnjtjvjhjjxia" path="res://Fonts/ByteBounce.ttf" id="4_1kr3b"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_8iefh"]
+resource_local_to_scene = true
+shader = ExtResource("3_w0y52")
+shader_parameter/flash_color = Color(1, 1, 1, 1)
+shader_parameter/flash_value = 0.0
+
+[node name="SaveSlot" type="Control"]
+z_index = 1
+custom_minimum_size = Vector2(0, 90)
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_7pspm")
+
+[node name="Colors" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 7.5
+offset_top = 5.0
+offset_right = -7.5
+offset_bottom = -5.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="Colors"]
+z_index = -1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.8156863, 0.8156863, 0.8156863, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="Colors"]
+z_index = -2
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.0
+offset_top = -2.0
+offset_right = 2.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Critter" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect3" type="ColorRect" parent="Critter"]
+layout_mode = 0
+offset_left = 11.609848
+offset_top = 9.671707
+offset_right = 175.11217
+offset_bottom = 80.07449
+color = Color(0.66656864, 0.6665687, 0.66656864, 1)
+
+[node name="ColorRect4" type="ColorRect" parent="Critter/ColorRect3"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1.8788452
+offset_top = -1.7354889
+offset_right = 1.8260193
+offset_bottom = 2.152832
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="TeamSlot" type="Control" parent="Critter"]
+custom_minimum_size = Vector2(150, 150)
+anchors_preset = 0
+offset_left = 9.855605
+offset_top = 7.037959
+offset_right = 161.37074
+offset_bottom = 159.05817
+scale = Vector2(0.495, 0.495)
+script = ExtResource("1_yphgx")
+
+[node name="ColorRect" type="ColorRect" parent="Critter/TeamSlot"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 12.0
+offset_top = 12.0
+offset_right = -11.0
+offset_bottom = -11.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="Critter/TeamSlot"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 15.0
+offset_top = 15.0
+offset_right = -14.0
+offset_bottom = -14.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.3854925, 0.38549247, 0.38549247, 1)
+
+[node name="Pokemon" parent="Critter/TeamSlot" instance=ExtResource("2_7pspm")]
+material = SubResource("ShaderMaterial_8iefh")
+position = Vector2(80, 79)
+scale = Vector2(1, 1)
+back = false
+
+[node name="Name" type="Control" parent="Critter/TeamSlot"]
+anchors_preset = 0
+offset_left = -309.74716
+offset_top = 47.119568
+offset_right = -269.74716
+offset_bottom = 87.11957
+scale = Vector2(2, 2)
+
+[node name="ColorRect3" type="ColorRect" parent="Critter/TeamSlot/Name"]
+layout_mode = 0
+offset_left = 227.31541
+offset_top = 20.770493
+offset_right = 322.89752
+offset_bottom = 47.714737
+scale = Vector2(0.965, 0.965)
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect4" type="ColorRect" parent="Critter/TeamSlot/Name"]
+layout_mode = 0
+offset_left = 228.26263
+offset_top = 22.202026
+offset_right = 318.26263
+offset_bottom = 46.202026
+color = Color(0.49354547, 0.49354553, 0.49354535, 1)
+
+[node name="Name" type="RichTextLabel" parent="Critter/TeamSlot/Name"]
+layout_mode = 0
+offset_left = 214.26262
+offset_top = 17.202053
+offset_right = 332.26263
+offset_bottom = 51.202053
+scale = Vector2(0.765, 0.765)
+pivot_offset = Vector2(59, 17)
+mouse_filter = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("4_1kr3b")
+theme_override_font_sizes/normal_font_size = 16
+text = "Geckrow"
+autowrap_mode = 0
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Critter/TeamSlot"]
+layout_mode = 0
+offset_left = 126.42587
+offset_top = 32.814255
+offset_right = 309.09387
+offset_bottom = 73.78148
+scale = Vector2(1.275, 1.275)
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("4_1kr3b")
+theme_override_font_sizes/normal_font_size = 32
+text = "Lead Critter"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PlayerName" type="Control" parent="."]
+anchors_preset = 0
+offset_left = 181.55585
+offset_top = 9.6280365
+offset_right = 472.2771
+offset_bottom = 41.636826
+
+[node name="ColorRect3" type="ColorRect" parent="PlayerName"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.66656864, 0.6665687, 0.66656864, 1)
+
+[node name="ColorRect4" type="ColorRect" parent="PlayerName/ColorRect3"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1.8788452
+offset_top = -1.7354889
+offset_right = 1.8260193
+offset_bottom = 2.152832
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="PlayerName"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.7524847
+offset_right = -135.02562
+offset_bottom = 6.8388977
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.82, 0.82)
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("4_1kr3b")
+theme_override_font_sizes/normal_font_size = 32
+text = "Player Name:"
+vertical_alignment = 1
+
+[node name="Name" type="RichTextLabel" parent="PlayerName"]
+layout_mode = 0
+offset_left = 129.99121
+offset_top = 1.1757851
+offset_right = 326.13455
+offset_bottom = 38.296146
+scale = Vector2(0.82, 0.82)
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("4_1kr3b")
+theme_override_font_sizes/normal_font_size = 32
+text = "Taxalottle"
+vertical_alignment = 1
+
+[node name="TimePlayed" type="Control" parent="."]
+anchors_preset = 0
+offset_left = 182.1203
+offset_top = 49.31836
+offset_right = 377.8437
+offset_bottom = 80.97664
+
+[node name="ColorRect3" type="ColorRect" parent="TimePlayed"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.66656864, 0.6665687, 0.66656864, 1)
+
+[node name="ColorRect4" type="ColorRect" parent="TimePlayed/ColorRect3"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1.8788452
+offset_top = -1.7354889
+offset_right = 1.8260193
+offset_bottom = 2.152832
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="TimePlayed"]
+layout_mode = 0
+offset_left = 3.0527496
+offset_top = -0.3062706
+offset_right = 157.15834
+offset_bottom = 40.66095
+scale = Vector2(0.82, 0.82)
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("4_1kr3b")
+theme_override_font_sizes/normal_font_size = 32
+text = "Time Spent:"
+vertical_alignment = 1
+
+[node name="Time" type="RichTextLabel" parent="TimePlayed"]
+layout_mode = 0
+offset_left = 123.6823
+offset_top = 3.9797406
+offset_right = 208.2661
+offset_bottom = 35.11603
+scale = Vector2(0.82, 0.82)
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("4_1kr3b")
+theme_override_font_sizes/normal_font_size = 32
+text = "86:04"
+vertical_alignment = 1
+
+[node name="loadSave" type="Button" parent="."]
+layout_mode = 0
+offset_left = 394.12585
+offset_top = 56.209686
+offset_right = 463.12585
+offset_bottom = 75.20969
+scale = Vector2(1.3, 1.3)
+pivot_offset = Vector2(34.231934, 9.471893)
+focus_mode = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0.5330367, 0.5330367, 0.5330367, 1)
+theme_override_colors/font_hover_color = Color(0.24839991, 0.24840021, 0.24840078, 1)
+theme_override_colors/icon_pressed_color = Color(0.29586652, 0.2958665, 0.2958665, 1)
+theme_override_fonts/font = ExtResource("4_1kr3b")
+text = "Load Save"
+flat = true
+
+[node name="ColorRect3" type="ColorRect" parent="loadSave"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.66656864, 0.6665687, 0.66656864, 1)
+
+[node name="ColorRect4" type="ColorRect" parent="loadSave/ColorRect3"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1.8788452
+offset_top = -1.7354889
+offset_right = 1.8260193
+offset_bottom = 2.152832
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[connection signal="pressed" from="loadSave" to="." method="_on_load_save_pressed"]
