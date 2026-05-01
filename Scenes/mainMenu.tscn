@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://cw40qak10lmw"]
+[gd_scene load_steps=15 format=3 uid="uid://cw40qak10lmw"]
 
 [ext_resource type="FontFile" uid="uid://cnjtjvjhjjxia" path="res://Fonts/ByteBounce.ttf" id="1_60k44"]
 [ext_resource type="Script" uid="uid://bs1jf78q36onw" path="res://Scenes/mainMenu.gd" id="1_kqm77"]
@@ -8,6 +8,9 @@
 [ext_resource type="Texture2D" uid="uid://ms2lpaxhgrj3" path="res://Assets/parallax/forest/forest_back.png" id="6_wofhc"]
 [ext_resource type="Texture2D" uid="uid://ca8klgtgdkltj" path="res://Assets/parallax/forest/forest_long.png" id="7_qmf6k"]
 [ext_resource type="FontFile" uid="uid://ko516spyiyle" path="res://Fonts/japanese.ttf" id="8_snj4n"]
+[ext_resource type="Script" uid="uid://biq68mbdnsa7t" path="res://Scenes/saveSlotPokemon.gd" id="9_rn1t7"]
+[ext_resource type="PackedScene" uid="uid://ba24hclljygvv" path="res://Scenes/pokemonSelector.tscn" id="10_yij4q"]
+[ext_resource type="Shader" uid="uid://bomfvo6o4mvg6" path="res://Shaders/flash.gdshader" id="11_o8ral"]
 
 [sub_resource type="Gradient" id="Gradient_v10og"]
 colors = PackedColorArray(0, 0, 0, 0.5254902, 0, 0, 0, 0)
@@ -16,6 +19,12 @@ colors = PackedColorArray(0, 0, 0, 0.5254902, 0, 0, 0, 0)
 gradient = SubResource("Gradient_v10og")
 width = 700
 height = 1000
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_8iefh"]
+resource_local_to_scene = true
+shader = ExtResource("11_o8ral")
+shader_parameter/flash_color = Color(1, 1, 1, 1)
+shader_parameter/flash_value = 0.0
 
 [node name="MainMenu" type="Node2D"]
 script = ExtResource("1_kqm77")
@@ -84,7 +93,7 @@ texture = ExtResource("7_qmf6k")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Menu"]
 modulate = Color(0.8175212, 0.81752133, 0.8175211, 1)
-z_index = 100
+z_index = 15
 offset_left = -7.0
 offset_top = 9.0
 offset_right = 956.0
@@ -99,7 +108,7 @@ vertical_alignment = 1
 
 [node name="Japanese" type="RichTextLabel" parent="Menu"]
 modulate = Color(0.8175212, 0.81752133, 0.8175211, 1)
-z_index = 100
+z_index = 15
 offset_left = 303.0
 offset_top = 84.0
 offset_right = 533.61224
@@ -114,7 +123,7 @@ vertical_alignment = 1
 
 [node name="Japanese2" type="RichTextLabel" parent="Menu"]
 modulate = Color(0.8175212, 0.81752133, 0.8175211, 1)
-z_index = 100
+z_index = 15
 offset_left = 462.0
 offset_top = 179.0
 offset_right = 894.653
@@ -129,7 +138,6 @@ vertical_alignment = 1
 
 [node name="Sprite2D" type="Sprite2D" parent="Menu"]
 modulate = Color(1, 1, 1, 0.62352943)
-z_index = 10
 position = Vector2(476, 341)
 rotation = 1.5707964
 texture = SubResource("GradientTexture2D_kqm77")
@@ -214,5 +222,301 @@ grow_vertical = 2
 mouse_filter = 2
 color = Color(0, 0, 0, 1)
 
+[node name="Control" type="Control" parent="Menu"]
+z_index = 20
+layout_mode = 3
+anchor_right = -0.0010416667
+offset_left = 233.0
+offset_top = 115.0
+offset_right = 719.0
+offset_bottom = 482.0
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect" type="ColorRect" parent="Menu/Control"]
+z_index = -1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.8156863, 0.8156863, 0.8156863, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="Menu/Control"]
+z_index = -2
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.0
+offset_top = -2.0
+offset_right = 2.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Title" type="RichTextLabel" parent="Menu/Control"]
+modulate = Color(0.8175212, 0.81752133, 0.8175211, 1)
+z_index = 15
+layout_mode = 0
+offset_left = 38.999992
+offset_top = -12.0
+offset_right = 626.0
+offset_bottom = 107.0
+scale = Vector2(0.7, 0.7)
+theme_override_constants/outline_size = 10
+theme_override_fonts/normal_font = ExtResource("1_60k44")
+theme_override_font_sizes/normal_font_size = 128
+text = "Save Slots"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Description" type="RichTextLabel" parent="Menu/Control"]
+modulate = Color(0.8175212, 0.81752133, 0.8175211, 1)
+z_index = 15
+layout_mode = 0
+offset_left = 8.000006
+offset_top = 31.999996
+offset_right = 685.1428
+offset_bottom = 143.42857
+scale = Vector2(0.7, 0.7)
+theme_override_constants/outline_size = 6
+theme_override_fonts/normal_font = ExtResource("1_60k44")
+theme_override_font_sizes/normal_font_size = 64
+text = "Select a save slot to load"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Menu/Control"]
+layout_mode = 0
+offset_top = 96.0
+offset_right = 485.0
+offset_bottom = 367.0
+
+[node name="SaveSlot" type="Control" parent="Menu/Control/VBoxContainer"]
+z_index = 1
+custom_minimum_size = Vector2(0, 90)
+layout_mode = 2
+
+[node name="ColorRect3" type="ColorRect" parent="Menu/Control/VBoxContainer/SaveSlot"]
+layout_mode = 0
+offset_left = 11.609848
+offset_top = 9.671707
+offset_right = 175.11217
+offset_bottom = 80.07449
+color = Color(0.66656864, 0.6665687, 0.66656864, 1)
+
+[node name="ColorRect4" type="ColorRect" parent="Menu/Control/VBoxContainer/SaveSlot/ColorRect3"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1.8788452
+offset_top = -1.7354889
+offset_right = 1.8260193
+offset_bottom = 2.152832
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Colors" type="Control" parent="Menu/Control/VBoxContainer/SaveSlot"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 7.5
+offset_top = 5.0
+offset_right = -7.5
+offset_bottom = -5.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="Menu/Control/VBoxContainer/SaveSlot/Colors"]
+z_index = -1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.8156863, 0.8156863, 0.8156863, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="Menu/Control/VBoxContainer/SaveSlot/Colors"]
+z_index = -2
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.0
+offset_top = -2.0
+offset_right = 2.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="TeamSlot" type="Control" parent="Menu/Control/VBoxContainer/SaveSlot"]
+custom_minimum_size = Vector2(150, 150)
+anchors_preset = 0
+offset_left = 9.855605
+offset_top = 7.037959
+offset_right = 161.37074
+offset_bottom = 159.05817
+scale = Vector2(0.495, 0.495)
+script = ExtResource("9_rn1t7")
+
+[node name="ColorRect" type="ColorRect" parent="Menu/Control/VBoxContainer/SaveSlot/TeamSlot"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 12.0
+offset_top = 12.0
+offset_right = -11.0
+offset_bottom = -11.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="Menu/Control/VBoxContainer/SaveSlot/TeamSlot"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 15.0
+offset_top = 15.0
+offset_right = -14.0
+offset_bottom = -14.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.3854925, 0.38549247, 0.38549247, 1)
+
+[node name="Pokemon" parent="Menu/Control/VBoxContainer/SaveSlot/TeamSlot" instance=ExtResource("10_yij4q")]
+material = SubResource("ShaderMaterial_8iefh")
+position = Vector2(80, 79)
+scale = Vector2(1, 1)
+back = false
+
+[node name="Name" type="Control" parent="Menu/Control/VBoxContainer/SaveSlot/TeamSlot"]
+anchors_preset = 0
+offset_left = -309.74716
+offset_top = 47.119568
+offset_right = -269.74716
+offset_bottom = 87.11957
+scale = Vector2(2, 2)
+
+[node name="ColorRect3" type="ColorRect" parent="Menu/Control/VBoxContainer/SaveSlot/TeamSlot/Name"]
+layout_mode = 0
+offset_left = 227.31541
+offset_top = 20.770493
+offset_right = 322.89752
+offset_bottom = 47.714737
+scale = Vector2(0.965, 0.965)
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect4" type="ColorRect" parent="Menu/Control/VBoxContainer/SaveSlot/TeamSlot/Name"]
+layout_mode = 0
+offset_left = 228.26263
+offset_top = 22.202026
+offset_right = 318.26263
+offset_bottom = 46.202026
+color = Color(0.49354547, 0.49354553, 0.49354535, 1)
+
+[node name="Name" type="RichTextLabel" parent="Menu/Control/VBoxContainer/SaveSlot/TeamSlot/Name"]
+layout_mode = 0
+offset_left = 214.26262
+offset_top = 17.202053
+offset_right = 332.26263
+offset_bottom = 51.202053
+scale = Vector2(0.765, 0.765)
+pivot_offset = Vector2(59, 17)
+mouse_filter = 2
+theme_override_fonts/normal_font = ExtResource("1_60k44")
+theme_override_font_sizes/normal_font_size = 16
+text = "Geckrow"
+autowrap_mode = 0
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Menu/Control/VBoxContainer/SaveSlot/TeamSlot"]
+layout_mode = 0
+offset_left = 145.08617
+offset_top = 41.1077
+offset_right = 327.75415
+offset_bottom = 82.07492
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("1_60k44")
+theme_override_font_sizes/normal_font_size = 32
+text = "Lead Critter"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PlayerName" type="Control" parent="Menu/Control/VBoxContainer/SaveSlot"]
+anchors_preset = 0
+offset_left = 181.55585
+offset_top = 9.6280365
+offset_right = 472.2771
+offset_bottom = 46.54373
+
+[node name="ColorRect3" type="ColorRect" parent="Menu/Control/VBoxContainer/SaveSlot/PlayerName"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.66656864, 0.6665687, 0.66656864, 1)
+
+[node name="ColorRect4" type="ColorRect" parent="Menu/Control/VBoxContainer/SaveSlot/PlayerName/ColorRect3"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1.8788452
+offset_top = -1.7354889
+offset_right = 1.8260193
+offset_bottom = 2.152832
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Menu/Control/VBoxContainer/SaveSlot/PlayerName"]
+layout_mode = 0
+offset_left = 3.403244
+offset_top = 2.4976845
+offset_right = 157.50883
+offset_bottom = 43.464905
+scale = Vector2(0.82, 0.82)
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("1_60k44")
+theme_override_font_sizes/normal_font_size = 32
+text = "Player Name:"
+vertical_alignment = 1
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="Menu/Control/VBoxContainer/SaveSlot/PlayerName"]
+layout_mode = 0
+offset_left = 130.69212
+offset_top = 1.8767738
+offset_right = 323.41602
+offset_bottom = 42.843994
+scale = Vector2(0.82, 0.82)
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("1_60k44")
+theme_override_font_sizes/normal_font_size = 32
+text = "Taxalottle"
+vertical_alignment = 1
+
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(481, 270)
+
+[connection signal="pressed" from="Menu/New" to="." method="_on_new_pressed"]
+[connection signal="pressed" from="Menu/Load" to="." method="_on_load_pressed"]
