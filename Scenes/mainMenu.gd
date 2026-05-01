@@ -19,7 +19,16 @@ func _process(_delta: float) -> void:
 
 
 func _on_new_pressed() -> void:
-	$Menu/NewSave.open()
+	var toMake=1
+	if(FileAccess.file_exists("user://save-1.tres")):
+		toMake = 2
+	if(FileAccess.file_exists("user://save-2.tres")):
+		toMake = 3
+	if(FileAccess.file_exists("user://save-3.tres")):
+		$Menu/NewSave.open()
+	else:
+		GameManager.loadedSave=toMake
+		GameManager.initialize()
 
 
 func _on_load_pressed() -> void:

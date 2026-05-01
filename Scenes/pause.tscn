@@ -438,7 +438,7 @@ visible = false
 
 [node name="Save" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_3fojq")
-volume_db = -10.0
+volume_db = -17.0
 
 [connection signal="pressed" from="Menu/VBoxContainer/Team/team" to="." method="_on_team_pressed"]
 [connection signal="pressed" from="Menu/VBoxContainer/Pokedex/pokedex" to="." method="_on_pokedex_pressed"]

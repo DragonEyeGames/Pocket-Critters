@@ -89,5 +89,6 @@ func _on_deny_delete_pressed() -> void:
 
 func menu() -> void:
 	#GameManager.toMenu()
+	Music.openMenu()
 	get_tree().paused=false
 	get_tree().change_scene_to_file("res://Scenes/mainMenu.tscn")

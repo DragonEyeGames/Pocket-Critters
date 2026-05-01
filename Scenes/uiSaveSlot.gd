@@ -25,6 +25,7 @@ func loadTime(seconds: float):
 
 
 func _on_load_save_pressed() -> void:
+	Music.closeMenu()
 	GameManager.loadedSave=index
 	if(overwriteSlot):
 		GameManager.wipeSave()

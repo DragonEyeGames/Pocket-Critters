@@ -35,7 +35,7 @@ func _ready():
 	if ID == 0:
 		ID = str(get_path()).hash()
 	if(ID in GameManager.defeated):
-		queue_free()
+		call_deferred("queue_free")
 	for child in $Sprites.get_children():
 		child.visible=false
 	sprite=get_node("Sprites/" + trainerData.sprite)

@@ -1,5 +1,24 @@
 extends Node2D
 
+func closeMenu():
+	print("close")
+	var tween=create_tween()
+	tween.tween_property($Menu, "volume_db", -80, 1)
+	#$Menu.stop()
+	$Music.volume_db=-80
+	$Music.play()
+	var tween2=create_tween()
+	tween2.tween_property($Music, "volume_db", -20, .5)
+	
+func openMenu():
+	print("open")
+	var tween=create_tween()
+	tween.tween_property($Music, "volume_db", -80, 1)
+	#$Menu.stop()
+	$Menu.volume_db=-80
+	$Menu.play()
+	var tween2=create_tween()
+	tween2.tween_property($Menu, "volume_db", -20, .5)
 
 func battle():
 	$Music.stream_paused=true

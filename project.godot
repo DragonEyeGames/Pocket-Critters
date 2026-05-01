@@ -43,8 +43,7 @@ folder_colors={
 "res://Levels/": "green",
 "res://Moves/MediumMoves/": "orange",
 "res://Moves/StrongMoves/": "yellow",
-"res://Moves/WeakMoves/": "red",
-"res://Music/": "purple"
+"res://Moves/WeakMoves/": "red"
 }
 
 [global_group]

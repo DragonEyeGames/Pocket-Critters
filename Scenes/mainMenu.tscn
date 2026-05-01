@@ -296,18 +296,14 @@ offset_bottom = 365.30713
 
 [node name="SaveSlot" parent="Menu/LoadSave/VBoxContainer" instance=ExtResource("9_wofhc")]
 layout_mode = 2
-index = 1
-overwriteSlot = false
 
 [node name="SaveSlot2" parent="Menu/LoadSave/VBoxContainer" instance=ExtResource("9_wofhc")]
 layout_mode = 2
 index = 2
-overwriteSlot = false
 
 [node name="SaveSlot3" parent="Menu/LoadSave/VBoxContainer" instance=ExtResource("9_wofhc")]
 layout_mode = 2
 index = 3
-overwriteSlot = false
 
 [node name="Close" type="Control" parent="Menu/LoadSave"]
 anchors_preset = 0
@@ -434,7 +430,6 @@ offset_bottom = 365.30713
 
 [node name="SaveSlot" parent="Menu/NewSave/VBoxContainer" instance=ExtResource("9_wofhc")]
 layout_mode = 2
-index = 1
 overwriteSlot = true
 
 [node name="SaveSlot2" parent="Menu/NewSave/VBoxContainer" instance=ExtResource("9_wofhc")]
