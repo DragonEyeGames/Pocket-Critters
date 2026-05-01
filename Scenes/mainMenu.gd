@@ -1,13 +1,12 @@
 extends Node2D
 
-
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	if FileAccess.file_exists("user://save.tres"):
+	if FileAccess.file_exists("user://save-1.tres"):
 		$Menu/Load.visible=true
 		$Menu/New.size=$Menu/Load.size
 		$Menu/New.position.x=$Menu/Load.position.x
-		$Menu/New.text="New Save"
+		$Menu/New.text="New Game"
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

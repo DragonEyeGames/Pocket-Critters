@@ -195,6 +195,8 @@ var evolutionSpecies
 var learningPokemon: PokemonData
 var learningMove: MoveResource
 
+var loadedSave=1
+
 func initialize() -> void:
 	if(not loadGame()):
 		restart()
@@ -389,14 +391,14 @@ func saveGame():
 	data.blaze1=blaze1
 	data.scene=currentScene
 	data.playerBoxes=playerBoxes
-	ResourceSaver.save(data, "user://save.tres")
+	ResourceSaver.save(data, "user://save-" + loadedSave + ".tres")
 
 func loadGame():
-	if not FileAccess.file_exists("user://save.tres"):
+	if not FileAccess.file_exists("user://save-" + loadedSave + ".tres"):
 		print("No save file found")
 		return false
 	
-	var data = load("user://save.tres") as GameData
+	var data = load("user://save-" + loadedSave + ".tres") as GameData
 	playerTeam = data.team.team.duplicate()
 	playerPosition = data.playerPos
 	respawnSpot = data.safePos
@@ -409,8 +411,8 @@ func loadGame():
 	return true
 	
 func wipeSave():
-	if FileAccess.file_exists("user://save.tres"):
-		DirAccess.remove_absolute("user://save.tres")
+	if FileAccess.file_exists("user://save-" + loadedSave + ".tres"):
+		DirAccess.remove_absolute("user://save-" + loadedSave + ".tres")
 	playerTeam = []
 	playerPosition = Vector2.ZERO
 	respawnSpot = Vector2.ZERO
