@@ -1,4 +1,4 @@
-[gd_scene load_steps=74 format=4 uid="uid://ractyp8q6v8x"]
+[gd_scene load_steps=81 format=4 uid="uid://ractyp8q6v8x"]
 
 [ext_resource type="Script" uid="uid://swgsdmbo5fng" path="res://Scripts/main.gd" id="1_dj533"]
 [ext_resource type="PackedScene" uid="uid://c5yxtkkwi03pt" path="res://Scenes/player.tscn" id="2_dpjeg"]
@@ -48,6 +48,9 @@
 [ext_resource type="Resource" uid="uid://dk8voplr2wdmb" path="res://Moves/WeakMoves/Dark/creepStrike.tres" id="45_obk75"]
 [ext_resource type="Resource" uid="uid://0adu54ws8kpt" path="res://Moves/WeakMoves/Dark/gnaw.tres" id="46_ywvg6"]
 [ext_resource type="Resource" uid="uid://c3w2860616tbu" path="res://Moves/WeakMoves/Normal/growl.tres" id="47_x8wy1"]
+[ext_resource type="Resource" uid="uid://ckl03roxinmlt" path="res://Moves/WeakMoves/Water/soak.tres" id="48_0yrk5"]
+[ext_resource type="Resource" uid="uid://cjwtbcu7vkxjk" path="res://Moves/WeakMoves/Normal/tackle.tres" id="49_tvsbe"]
+[ext_resource type="Resource" uid="uid://cbp1qoovefw0w" path="res://Moves/WeakMoves/Normal/leer.tres" id="50_m8s5u"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_sxxgb"]
 shader = ExtResource("7_y7gf1")
@@ -234,6 +237,37 @@ afterFightDialogue = Array[String](["Dang I lost!", "Sorry for the act sir. I wa
 afterDefeatDialogue = Array[String](["Enjoy your day!"])
 team = Array[ExtResource("19_cicoi")]([SubResource("Resource_frg8t")])
 sprite = "M5"
+metadata/_custom_type_script = "uid://0mhfdoexj3v2"
+
+[sub_resource type="Resource" id="Resource_be8vh"]
+script = ExtResource("19_cicoi")
+species = 39
+level = 9
+moves = Array[ExtResource("20_i8osr")]([ExtResource("48_0yrk5"), ExtResource("29_bpjux"), ExtResource("21_5p8ow"), ExtResource("31_6atwm")])
+metadata/_custom_type_script = "uid://dxn4lkbl53l63"
+
+[sub_resource type="Resource" id="Resource_tram5"]
+script = ExtResource("19_cicoi")
+species = 8
+level = 10
+moves = Array[ExtResource("20_i8osr")]([ExtResource("26_xq6ml"), ExtResource("42_i0ahb"), ExtResource("40_obk75"), ExtResource("49_tvsbe")])
+metadata/_custom_type_script = "uid://dxn4lkbl53l63"
+
+[sub_resource type="Resource" id="Resource_57w5l"]
+script = ExtResource("19_cicoi")
+species = 8
+level = 10
+moves = Array[ExtResource("20_i8osr")]([ExtResource("42_i0ahb"), ExtResource("27_p63bw"), ExtResource("46_ywvg6"), ExtResource("50_m8s5u")])
+metadata/_custom_type_script = "uid://dxn4lkbl53l63"
+
+[sub_resource type="Resource" id="Resource_obk75"]
+script = ExtResource("18_dpjeg")
+trainerName = "Fisher"
+preFightDialogue = Array[String](["Howdy! I'm a fisher.", "I love fishing."])
+afterFightDialogue = Array[String](["I've actually only ever caught the one fish.", "The other critters were supposed to be bait but they didn't work."])
+afterDefeatDialogue = Array[String](["I'll catch one eventually!"])
+team = Array[ExtResource("19_cicoi")]([SubResource("Resource_be8vh"), SubResource("Resource_tram5"), SubResource("Resource_57w5l")])
+sprite = "M8"
 metadata/_custom_type_script = "uid://0mhfdoexj3v2"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_orvb6"]
@@ -449,7 +483,8 @@ player = NodePath("../Player")
 radius = 40
 
 [node name="Trainer17" parent="." node_paths=PackedStringArray("player") instance=ExtResource("17_gdrsh")]
-position = Vector2(0, -615)
+position = Vector2(94, -609)
+trainerData = SubResource("Resource_obk75")
 player = NodePath("../Player")
 radius = 40
 

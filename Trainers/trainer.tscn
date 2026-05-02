@@ -1225,7 +1225,6 @@ animation = &"idle-down"
 autoplay = "idle-down"
 
 [node name="M4" type="AnimatedSprite2D" parent="Sprites"]
-visible = false
 position = Vector2(0, -13)
 sprite_frames = SubResource("SpriteFrames_g46p5")
 animation = &"idle-down"

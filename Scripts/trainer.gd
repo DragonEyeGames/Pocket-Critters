@@ -63,6 +63,7 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 func nextText():
 	if(playerEntered):
 		dialogue.visible=false
+		GameManager.canPause=true
 		player.canMove=true
 		playerEntered=false
 		GameManager.camera.target=player

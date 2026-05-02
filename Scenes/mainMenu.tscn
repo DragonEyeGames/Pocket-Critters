@@ -121,7 +121,7 @@ offset_bottom = 338.0
 color = Color(0.8156863, 0.9372549, 0.9411765, 1)
 
 [node name="Parallax2D3" type="Parallax2D" parent="."]
-scroll_scale = Vector2(0.2, 0.2)
+scroll_scale = Vector2(0.1, 0.1)
 scroll_offset = Vector2(-1137, -30)
 repeat_size = Vector2(1139.38, 0)
 repeat_times = 2
@@ -132,7 +132,7 @@ position = Vector2(1216.7928, 210.51001)
 scale = Vector2(0.18, 0.18)
 sprite_frames = SubResource("SpriteFrames_nyik7")
 autoplay = "default"
-frame_progress = 0.87605673
+frame_progress = 0.9089487
 script = ExtResource("4_o8ral")
 
 [node name="Bird2" type="AnimatedSprite2D" parent="Parallax2D3"]
@@ -163,7 +163,7 @@ scale = Vector2(0.3, 0.3)
 texture = ExtResource("4_kqm77")
 
 [node name="Parallax2D5" type="Parallax2D" parent="."]
-scroll_scale = Vector2(0.5, 0.5)
+scroll_scale = Vector2(0.35, 0.35)
 scroll_offset = Vector2(0, -23)
 repeat_size = Vector2(1139.98, 0)
 repeat_times = 2
@@ -174,7 +174,7 @@ scale = Vector2(0.3, 0.3)
 texture = ExtResource("6_wofhc")
 
 [node name="Parallax2D4" type="Parallax2D" parent="."]
-scroll_scale = Vector2(0.75, 0.75)
+scroll_scale = Vector2(0.6, 0.6)
 scroll_offset = Vector2(-639, -42)
 repeat_size = Vector2(1140, 0)
 repeat_times = 2
