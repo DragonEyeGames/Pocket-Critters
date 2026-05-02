@@ -1,7 +1,98 @@
-[gd_resource type="Resource" script_class="SpeciesData" load_steps=3 format=3 uid="uid://bfmo8rpcx3t0r"]
+[gd_resource type="Resource" script_class="SpeciesData" load_steps=29 format=3 uid="uid://bfmo8rpcx3t0r"]
 
 [ext_resource type="Script" uid="uid://kmcanhhb04o0" path="res://Resources/MoveResource.gd" id="1_4c05e"]
+[ext_resource type="Resource" uid="uid://28dapu87ba1u" path="res://Moves/MediumMoves/Fighting/forcePalm.tres" id="2_aejie"]
+[ext_resource type="Resource" uid="uid://bhducqhjympfk" path="res://Moves/MediumMoves/Fighting/powerPunch.tres" id="3_tja6s"]
+[ext_resource type="Resource" uid="uid://bnin8tc40w8mj" path="res://Moves/MediumMoves/Fighting/sweepingKick.tres" id="4_cpx2e"]
+[ext_resource type="Resource" uid="uid://ca27s52dckdk6" path="res://Moves/MediumMoves/Fairy/fairyRush.tres" id="5_jrncc"]
+[ext_resource type="Resource" uid="uid://cuajq2vjjo6ve" path="res://Moves/MediumMoves/Fairy/lightBurst.tres" id="6_nsucv"]
+[ext_resource type="Resource" uid="uid://ch5blnnkva41y" path="res://Moves/MediumMoves/Fairy/radiantBeam.tres" id="7_t8cxe"]
+[ext_resource type="Resource" uid="uid://d2k2i76ovwmfr" path="res://Moves/MediumMoves/Fairy/charmBash.tres" id="8_7wpq5"]
+[ext_resource type="Resource" uid="uid://da4kacwarvdmg" path="res://Moves/MediumMoves/Grass/overgrowth.tres" id="9_io0wi"]
+[ext_resource type="Resource" uid="uid://drfam3qlv8mbg" path="res://Moves/MediumMoves/Grass/seedBomb.tres" id="10_kgywq"]
+[ext_resource type="Resource" uid="uid://x6xvpuyf5f1f" path="res://Moves/StrongMoves/Fairy/celestialCharm.tres" id="11_0tdw5"]
+[ext_resource type="Resource" uid="uid://cjw3l2wt0hpev" path="res://Moves/StrongMoves/Fairy/radiantVeil.tres" id="12_qexmr"]
+[ext_resource type="Resource" uid="uid://c67i3drmfvbpc" path="res://Moves/StrongMoves/Fighting/crushingForce.tres" id="13_fetgy"]
 [ext_resource type="Script" uid="uid://1vun3nkcoo5i" path="res://Resources/SpeciesData.gd" id="14_1rjfs"]
+[ext_resource type="Resource" uid="uid://cio2yokb4g350" path="res://Moves/StrongMoves/Fighting/heavySlam.tres" id="14_pjuq4"]
+
+[sub_resource type="Resource" id="Resource_gt6bb"]
+script = ExtResource("1_4c05e")
+move = ExtResource("2_aejie")
+level = 31
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_rrlp0"]
+script = ExtResource("1_4c05e")
+move = ExtResource("3_tja6s")
+level = 28
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_nnmjg"]
+script = ExtResource("1_4c05e")
+move = ExtResource("4_cpx2e")
+level = 24
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_o25hp"]
+script = ExtResource("1_4c05e")
+move = ExtResource("5_jrncc")
+level = 26
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_6tm3e"]
+script = ExtResource("1_4c05e")
+move = ExtResource("6_nsucv")
+level = 29
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_1rjfs"]
+script = ExtResource("1_4c05e")
+move = ExtResource("7_t8cxe")
+level = 33
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_o2pk3"]
+script = ExtResource("1_4c05e")
+move = ExtResource("8_7wpq5")
+level = 22
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_aiylg"]
+script = ExtResource("1_4c05e")
+move = ExtResource("9_io0wi")
+level = 32
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_y36d8"]
+script = ExtResource("1_4c05e")
+move = ExtResource("10_kgywq")
+level = 25
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_bpios"]
+script = ExtResource("1_4c05e")
+move = ExtResource("11_0tdw5")
+level = 40
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_c720k"]
+script = ExtResource("1_4c05e")
+move = ExtResource("12_qexmr")
+level = 36
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_s60ed"]
+script = ExtResource("1_4c05e")
+move = ExtResource("13_fetgy")
+level = 34
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_4pg3g"]
+script = ExtResource("1_4c05e")
+move = ExtResource("14_pjuq4")
+level = 43
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
 
 [resource]
 script = ExtResource("14_1rjfs")
@@ -14,6 +105,7 @@ defense = 75
 specialAttack = 110
 specialDefense = 90
 speed = 95
+potentialMoves = Array[ExtResource("1_4c05e")]([SubResource("Resource_gt6bb"), SubResource("Resource_rrlp0"), SubResource("Resource_nnmjg"), SubResource("Resource_o25hp"), SubResource("Resource_6tm3e"), SubResource("Resource_1rjfs"), SubResource("Resource_o2pk3"), SubResource("Resource_aiylg"), SubResource("Resource_y36d8"), SubResource("Resource_bpios"), SubResource("Resource_c720k"), SubResource("Resource_s60ed"), SubResource("Resource_4pg3g")])
 catchRate = 0.6
 cryPath = "res://PokemonCries/swirlix.wav"
 prevolution = 19

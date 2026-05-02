@@ -1,11 +1,13 @@
-[gd_scene load_steps=7 format=3 uid="uid://dwbnx0jnjv6yx"]
+[gd_scene load_steps=9 format=3 uid="uid://dwbnx0jnjv6yx"]
 
 [ext_resource type="Script" uid="uid://dp2xe7ys1trpk" path="res://Scripts/pause.gd" id="1_aq7p1"]
 [ext_resource type="PackedScene" uid="uid://csi5giv4qbgfx" path="res://Scenes/team_slot.tscn" id="2_6eyaj"]
 [ext_resource type="FontFile" uid="uid://cnjtjvjhjjxia" path="res://Fonts/ByteBounce.ttf" id="2_nsogc"]
 [ext_resource type="PackedScene" uid="uid://dsf85ixufbmqg" path="res://Scenes/reorder_slot.tscn" id="3_5a6ek"]
+[ext_resource type="Script" uid="uid://kb3s5dbvxloh" path="res://Scenes/pauseSlot.gd" id="3_54e2h"]
 [ext_resource type="PackedScene" uid="uid://cmsdeqmlib8fv" path="res://Scenes/pokedex.tscn" id="4_3fojq"]
 [ext_resource type="AudioStream" uid="uid://c8uubdf078rn2" path="res://New Sounds/healed.mp3" id="5_3fojq"]
+[ext_resource type="Script" uid="uid://dlvt2dm6p6f2g" path="res://Scripts/closeButton.gd" id="5_vfiib"]
 
 [node name="Pause" type="CanvasLayer"]
 process_mode = 3
@@ -166,6 +168,7 @@ offset_top = 61.0
 offset_right = 724.0
 offset_bottom = 463.0
 mouse_filter = 2
+script = ExtResource("3_54e2h")
 
 [node name="ColorRect" type="ColorRect" parent="Team Menu"]
 layout_mode = 1
@@ -233,7 +236,8 @@ offset_right = 644.0
 offset_bottom = 69.0
 mouse_filter = 2
 theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/normal_font_size = 39
+theme_override_fonts/normal_font = ExtResource("2_nsogc")
+theme_override_font_sizes/normal_font_size = 48
 text = "Team"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -282,20 +286,80 @@ offset_left = 207.0
 offset_top = 374.0
 offset_right = 446.0
 offset_bottom = 427.0
-theme_override_font_sizes/font_size = 26
+theme_override_fonts/font = ExtResource("2_nsogc")
+theme_override_font_sizes/font_size = 32
 text = "Reorder Team"
+
+[node name="Close" type="Control" parent="Team Menu"]
+anchors_preset = 0
+offset_left = 621.0
+offset_top = -10.0
+offset_right = 661.0
+offset_bottom = 30.0
+scale = Vector2(0.8, 0.8)
+mouse_filter = 2
+script = ExtResource("5_vfiib")
+
+[node name="ColorRect" type="ColorRect" parent="Team Menu/Close"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="Team Menu/Close"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 38.0
+offset_bottom = 38.0
+mouse_filter = 2
+color = Color(0.5726692, 1.0227784e-06, 1.92523e-07, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Team Menu/Close"]
+layout_mode = 0
+offset_left = -5.0
+offset_top = -8.0
+offset_right = 49.0
+offset_bottom = 39.0
+mouse_filter = 2
+theme_override_fonts/normal_font = ExtResource("2_nsogc")
+theme_override_font_sizes/normal_font_size = 64
+text = "x"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MouseDetector" type="ColorRect" parent="Team Menu/Close"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+color = Color(1, 1, 1, 0)
 
 [node name="Reorder Team" type="Control" parent="."]
 visible = false
 z_index = 6
 layout_mode = 3
 anchors_preset = 0
-offset_left = 80.0
-offset_top = 61.0
-offset_right = 724.0
-offset_bottom = 463.0
+offset_left = 96.0
+offset_top = 82.0
+offset_right = 740.0
+offset_bottom = 484.0
 
 [node name="ColorRect" type="ColorRect" parent="Reorder Team"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 174.0
+offset_top = -46.0
+offset_right = -169.0
+offset_bottom = -5.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="Reorder Team"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -303,7 +367,7 @@ anchor_bottom = 1.0
 offset_left = 177.0
 offset_top = -43.0
 offset_right = -172.0
-offset_bottom = 66.0
+offset_bottom = -9.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
@@ -318,57 +382,102 @@ offset_right = 898.0
 offset_bottom = 491.0
 color = Color(0, 0, 0, 0.22745098)
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Reorder Team"]
+[node name="ColorRect4" type="ColorRect" parent="Reorder Team"]
 layout_mode = 0
 offset_left = 184.0
-offset_top = -48.0
-offset_right = 468.0
-offset_bottom = 21.0
+offset_top = -24.0
+offset_right = 464.0
+offset_bottom = 20.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect5" type="ColorRect" parent="Reorder Team"]
+layout_mode = 0
+offset_left = 187.0
+offset_top = -21.0
+offset_right = 461.0
+offset_bottom = 17.0
+color = Color(0.9384497, 0.9384497, 0.9384497, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Reorder Team"]
+layout_mode = 0
+offset_left = 181.0
+offset_top = -37.0
+offset_right = 465.0
+offset_bottom = 32.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/normal_font_size = 35
+theme_override_fonts/normal_font = ExtResource("2_nsogc")
+theme_override_font_sizes/normal_font_size = 48
 text = "Reorder Team"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="GridContainer" type="VBoxContainer" parent="Reorder Team"]
-layout_mode = 0
-offset_left = 234.0
-offset_top = 10.0
-offset_right = 692.0
-offset_bottom = 930.0
-scale = Vector2(0.41, 0.41)
-
-[node name="ReorderSlot" parent="Reorder Team/GridContainer" instance=ExtResource("3_5a6ek")]
-layout_mode = 2
-
-[node name="ReorderSlot2" parent="Reorder Team/GridContainer" instance=ExtResource("3_5a6ek")]
-layout_mode = 2
-index = 1
-
-[node name="ReorderSlot3" parent="Reorder Team/GridContainer" instance=ExtResource("3_5a6ek")]
-layout_mode = 2
-index = 2
-
-[node name="ReorderSlot4" parent="Reorder Team/GridContainer" instance=ExtResource("3_5a6ek")]
-layout_mode = 2
-index = 3
-
-[node name="ReorderSlot5" parent="Reorder Team/GridContainer" instance=ExtResource("3_5a6ek")]
-layout_mode = 2
-index = 4
-
-[node name="ReorderSlot6" parent="Reorder Team/GridContainer" instance=ExtResource("3_5a6ek")]
-layout_mode = 2
-index = 5
-
 [node name="Button" type="Button" parent="Reorder Team"]
 layout_mode = 0
-offset_left = 208.0
-offset_top = 396.0
-offset_right = 447.0
-offset_bottom = 449.0
-theme_override_font_sizes/font_size = 26
+offset_left = 203.0
+offset_top = 329.0
+offset_right = 442.0
+offset_bottom = 382.0
+theme_override_fonts/font = ExtResource("2_nsogc")
+theme_override_font_sizes/font_size = 48
 text = "Save"
+
+[node name="GridContainer" type="Control" parent="Reorder Team"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ReorderSlot3" parent="Reorder Team/GridContainer" instance=ExtResource("3_5a6ek")]
+layout_mode = 0
+offset_left = 324.28
+offset_top = 36.0
+offset_right = 544.28
+offset_bottom = 186.0
+scale = Vector2(0.595, 0.595)
+index = 3
+
+[node name="ReorderSlot" parent="Reorder Team/GridContainer" instance=ExtResource("3_5a6ek")]
+layout_mode = 0
+offset_left = 191.0
+offset_top = 36.0
+offset_right = 411.0
+offset_bottom = 186.0
+scale = Vector2(0.595, 0.595)
+
+[node name="ReorderSlot2" parent="Reorder Team/GridContainer" instance=ExtResource("3_5a6ek")]
+layout_mode = 0
+offset_left = 191.0
+offset_top = 127.630005
+offset_right = 411.0
+offset_bottom = 277.63
+scale = Vector2(0.595, 0.595)
+index = 1
+
+[node name="ReorderSlot4" parent="Reorder Team/GridContainer" instance=ExtResource("3_5a6ek")]
+layout_mode = 0
+offset_left = 324.28
+offset_top = 127.630005
+offset_right = 544.28
+offset_bottom = 277.63
+scale = Vector2(0.595, 0.595)
+index = 4
+
+[node name="ReorderSlot5" parent="Reorder Team/GridContainer" instance=ExtResource("3_5a6ek")]
+layout_mode = 0
+offset_left = 191.0
+offset_top = 219.26001
+offset_right = 411.0
+offset_bottom = 369.26
+scale = Vector2(0.595, 0.595)
+index = 2
+
+[node name="ReorderSlot6" parent="Reorder Team/GridContainer" instance=ExtResource("3_5a6ek")]
+layout_mode = 0
+offset_left = 324.28
+offset_top = 219.26001
+offset_right = 544.28
+offset_bottom = 369.26
+scale = Vector2(0.595, 0.595)
+index = 5
 
 [node name="Confirm Delete" type="Control" parent="."]
 visible = false
@@ -447,6 +556,8 @@ volume_db = -17.0
 [connection signal="pressed" from="Menu/VBoxContainer/Menu/Button" to="." method="menu"]
 [connection signal="pressed" from="Menu/VBoxContainer/Close/close" to="." method="_on_close_pressed"]
 [connection signal="pressed" from="Team Menu/Reorder" to="." method="_on_reorder_pressed"]
+[connection signal="mouse_entered" from="Team Menu/Close/MouseDetector" to="Team Menu/Close" method="_on_mouse_detector_mouse_entered"]
+[connection signal="mouse_exited" from="Team Menu/Close/MouseDetector" to="Team Menu/Close" method="_on_mouse_detector_mouse_exited"]
 [connection signal="pressed" from="Reorder Team/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Confirm Delete/ConfirmDelete" to="." method="_on_confirm_delete_pressed"]
 [connection signal="pressed" from="Confirm Delete/DenyDelete" to="." method="_on_deny_delete_pressed"]

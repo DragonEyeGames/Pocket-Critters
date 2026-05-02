@@ -1,32 +1,30 @@
-[gd_resource type="Resource" script_class="SpeciesData" load_steps=30 format=3 uid="uid://c26vdjfpvb5q"]
+[gd_resource type="Resource" script_class="SpeciesData" load_steps=26 format=3 uid="uid://c26vdjfpvb5q"]
 
 [ext_resource type="Resource" uid="uid://bknrdxa4f7ljd" path="res://Pokemon/firomenis.tres" id="1_1c2wa"]
 [ext_resource type="Script" uid="uid://kmcanhhb04o0" path="res://Resources/MoveResource.gd" id="1_ibtjy"]
 [ext_resource type="Resource" uid="uid://c4btm4xgx3fmv" path="res://Moves/WeakMoves/Bug/bugBite.tres" id="2_bv4y7"]
 [ext_resource type="Script" uid="uid://bdro5jjhj86t" path="res://Resources/EvolutionData.gd" id="2_t0lwv"]
 [ext_resource type="Resource" uid="uid://egtxpc610uld" path="res://Moves/WeakMoves/Bug/nibble.tres" id="3_i4clv"]
-[ext_resource type="Resource" uid="uid://bhcuqnwgqnn3i" path="res://Moves/WeakMoves/Bug/stringShot.tres" id="4_crrho"]
 [ext_resource type="Resource" uid="uid://ymo5t14wyvl1" path="res://Moves/WeakMoves/Bug/larvaLunge.tres" id="5_hmbnv"]
-[ext_resource type="Resource" uid="uid://dxmq5lmjkulio" path="res://Moves/WeakMoves/Bug/creepCrawl.tres" id="6_1c2wa"]
 [ext_resource type="Script" uid="uid://1vun3nkcoo5i" path="res://Resources/SpeciesData.gd" id="6_ibtjy"]
-[ext_resource type="Resource" uid="uid://cbp1qoovefw0w" path="res://Moves/WeakMoves/Normal/leer.tres" id="7_t0lwv"]
-[ext_resource type="Resource" uid="uid://cjwtbcu7vkxjk" path="res://Moves/WeakMoves/Normal/tackle.tres" id="8_8gubq"]
-[ext_resource type="Resource" uid="uid://bd1h37ujt4yux" path="res://Moves/WeakMoves/Normal/headbutt.tres" id="9_fe7kq"]
-[ext_resource type="Resource" uid="uid://0swwqh1y5jcf" path="res://Moves/WeakMoves/Normal/quickAttack.tres" id="10_e2jjr"]
+[ext_resource type="Resource" uid="uid://dxfv2rnraqnvq" path="res://Moves/WeakMoves/Dragon/ancientSpark.tres" id="8_crrho"]
+[ext_resource type="Resource" uid="uid://cmql8akm7x2a3" path="res://Moves/WeakMoves/Dragon/tailSlam.tres" id="9_hmbnv"]
+[ext_resource type="Resource" uid="uid://dbfpvup3w08s3" path="res://Moves/MediumMoves/Bug/infestation.tres" id="10_1c2wa"]
 [ext_resource type="Resource" uid="uid://clxxnxbimbhvg" path="res://Moves/WeakMoves/Dragon/wyrmRush.tres" id="11_crrho"]
-[ext_resource type="Resource" uid="uid://biimupcttiomf" path="res://Moves/WeakMoves/Dragon/dragonFocus.tres" id="12_hmbnv"]
-[ext_resource type="Resource" uid="uid://c8cuk8cgdl73a" path="res://Moves/WeakMoves/Dragon/draconicRoar.tres" id="13_1c2wa"]
+[ext_resource type="Resource" uid="uid://c6mhdxyby6dh4" path="res://Moves/MediumMoves/Bug/swarmStrike.tres" id="11_t0lwv"]
+[ext_resource type="Resource" uid="uid://ddr185s0105s1" path="res://Moves/MediumMoves/Dragon/draconicSurge.tres" id="12_8gubq"]
+[ext_resource type="Resource" uid="uid://cimva07kflkiy" path="res://Moves/MediumMoves/Dragon/dragonClaw.tres" id="13_fe7kq"]
 
 [sub_resource type="Resource" id="Resource_e2jjr"]
 script = ExtResource("2_t0lwv")
 into = ExtResource("1_1c2wa")
-level = 38
+level = 30
 metadata/_custom_type_script = "uid://bdro5jjhj86t"
 
 [sub_resource type="Resource" id="Resource_jhc5f"]
 script = ExtResource("1_ibtjy")
 move = ExtResource("2_bv4y7")
-level = 1
+level = 8
 metadata/_custom_type_script = "uid://kmcanhhb04o0"
 
 [sub_resource type="Resource" id="Resource_6q12k"]
@@ -37,62 +35,50 @@ metadata/_custom_type_script = "uid://kmcanhhb04o0"
 
 [sub_resource type="Resource" id="Resource_i0mh3"]
 script = ExtResource("1_ibtjy")
-move = ExtResource("4_crrho")
-level = 1
+move = ExtResource("5_hmbnv")
+level = 13
 metadata/_custom_type_script = "uid://kmcanhhb04o0"
 
 [sub_resource type="Resource" id="Resource_e27h2"]
 script = ExtResource("1_ibtjy")
-move = ExtResource("5_hmbnv")
-level = 4
+move = ExtResource("11_crrho")
+level = 10
 metadata/_custom_type_script = "uid://kmcanhhb04o0"
 
 [sub_resource type="Resource" id="Resource_4mw77"]
 script = ExtResource("1_ibtjy")
-move = ExtResource("6_1c2wa")
-level = 5
+move = ExtResource("8_crrho")
+level = 17
 metadata/_custom_type_script = "uid://kmcanhhb04o0"
 
 [sub_resource type="Resource" id="Resource_mtog6"]
 script = ExtResource("1_ibtjy")
-move = ExtResource("7_t0lwv")
-level = 1
+move = ExtResource("9_hmbnv")
+level = 20
 metadata/_custom_type_script = "uid://kmcanhhb04o0"
 
 [sub_resource type="Resource" id="Resource_d1wb5"]
 script = ExtResource("1_ibtjy")
-move = ExtResource("8_8gubq")
-level = 1
+move = ExtResource("10_1c2wa")
+level = 28
 metadata/_custom_type_script = "uid://kmcanhhb04o0"
 
 [sub_resource type="Resource" id="Resource_b1geo"]
 script = ExtResource("1_ibtjy")
-move = ExtResource("9_fe7kq")
-level = 8
+move = ExtResource("11_t0lwv")
+level = 24
 metadata/_custom_type_script = "uid://kmcanhhb04o0"
 
 [sub_resource type="Resource" id="Resource_bl487"]
 script = ExtResource("1_ibtjy")
-move = ExtResource("10_e2jjr")
-level = 4
+move = ExtResource("12_8gubq")
+level = 24
 metadata/_custom_type_script = "uid://kmcanhhb04o0"
 
-[sub_resource type="Resource" id="Resource_t0lwv"]
+[sub_resource type="Resource" id="Resource_oolsl"]
 script = ExtResource("1_ibtjy")
-move = ExtResource("11_crrho")
-level = 5
-metadata/_custom_type_script = "uid://kmcanhhb04o0"
-
-[sub_resource type="Resource" id="Resource_8gubq"]
-script = ExtResource("1_ibtjy")
-move = ExtResource("12_hmbnv")
-level = 7
-metadata/_custom_type_script = "uid://kmcanhhb04o0"
-
-[sub_resource type="Resource" id="Resource_fe7kq"]
-script = ExtResource("1_ibtjy")
-move = ExtResource("13_1c2wa")
-level = 9
+move = ExtResource("13_fe7kq")
+level = 26
 metadata/_custom_type_script = "uid://kmcanhhb04o0"
 
 [resource]
@@ -106,7 +92,7 @@ defense = 60
 specialAttack = 35
 specialDefense = 60
 speed = 45
-potentialMoves = Array[ExtResource("1_ibtjy")]([SubResource("Resource_jhc5f"), SubResource("Resource_6q12k"), SubResource("Resource_i0mh3"), SubResource("Resource_e27h2"), SubResource("Resource_4mw77"), SubResource("Resource_mtog6"), SubResource("Resource_d1wb5"), SubResource("Resource_b1geo"), SubResource("Resource_bl487"), SubResource("Resource_t0lwv"), SubResource("Resource_8gubq"), SubResource("Resource_fe7kq")])
+potentialMoves = Array[ExtResource("1_ibtjy")]([SubResource("Resource_jhc5f"), SubResource("Resource_6q12k"), SubResource("Resource_i0mh3"), SubResource("Resource_e27h2"), SubResource("Resource_4mw77"), SubResource("Resource_mtog6"), SubResource("Resource_d1wb5"), SubResource("Resource_b1geo"), SubResource("Resource_bl487"), SubResource("Resource_oolsl")])
 catchRate = 0.25
 cryPath = "res://PokemonCries/wimpod.wav"
 evolution = SubResource("Resource_e2jjr")

@@ -1,7 +1,56 @@
-[gd_resource type="Resource" script_class="SpeciesData" load_steps=3 format=3 uid="uid://da8g5i8fol83a"]
+[gd_resource type="Resource" script_class="SpeciesData" load_steps=17 format=3 uid="uid://da8g5i8fol83a"]
 
 [ext_resource type="Script" uid="uid://kmcanhhb04o0" path="res://Resources/MoveResource.gd" id="1_ba7j5"]
+[ext_resource type="Resource" uid="uid://dfolp27qc08ty" path="res://Moves/StrongMoves/Grass/canopyCrash.tres" id="2_i8odt"]
+[ext_resource type="Resource" uid="uid://k2ixext2awvm" path="res://Moves/StrongMoves/Grass/rootbreaker.tres" id="3_ip52b"]
+[ext_resource type="Resource" uid="uid://65iq6p3hsflg" path="res://Moves/StrongMoves/Grass/wildBurst.tres" id="4_dn833"]
+[ext_resource type="Resource" uid="uid://gni4ubc3mctc" path="res://Moves/StrongMoves/Ground/continentSplitter.tres" id="5_j1awg"]
+[ext_resource type="Resource" uid="uid://c0kyf81qksyib" path="res://Moves/StrongMoves/Ground/groundShatter.tres" id="6_gds3r"]
+[ext_resource type="Resource" uid="uid://db6wmobg3fqhd" path="res://Moves/StrongMoves/Ground/coreBurst.tres" id="7_ba7j5"]
+[ext_resource type="Resource" uid="uid://b1id477v3cepa" path="res://Moves/StrongMoves/Ground/seismicBlow.tres" id="8_x6bh5"]
 [ext_resource type="Script" uid="uid://1vun3nkcoo5i" path="res://Resources/SpeciesData.gd" id="14_bktvs"]
+
+[sub_resource type="Resource" id="Resource_dxqn3"]
+script = ExtResource("1_ba7j5")
+move = ExtResource("2_i8odt")
+level = 35
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_0qgad"]
+script = ExtResource("1_ba7j5")
+move = ExtResource("3_ip52b")
+level = 30
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_n55fo"]
+script = ExtResource("1_ba7j5")
+move = ExtResource("4_dn833")
+level = 28
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_i0l0e"]
+script = ExtResource("1_ba7j5")
+move = ExtResource("5_j1awg")
+level = 46
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_ytyyf"]
+script = ExtResource("1_ba7j5")
+move = ExtResource("6_gds3r")
+level = 40
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_bhgmy"]
+script = ExtResource("1_ba7j5")
+move = ExtResource("7_ba7j5")
+level = 27
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_cucvd"]
+script = ExtResource("1_ba7j5")
+move = ExtResource("8_x6bh5")
+level = 33
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
 
 [resource]
 resource_name = "res://PokemonCries/mudbray.wav"
@@ -15,6 +64,7 @@ defense = 100
 specialAttack = 65
 specialDefense = 75
 speed = 60
+potentialMoves = Array[ExtResource("1_ba7j5")]([SubResource("Resource_dxqn3"), SubResource("Resource_0qgad"), SubResource("Resource_n55fo"), SubResource("Resource_i0l0e"), SubResource("Resource_ytyyf"), SubResource("Resource_bhgmy"), SubResource("Resource_cucvd")])
 catchRate = 0.3
 cryPath = "res://PokemonCries/mudbray.wav"
 prevolution = 14

@@ -6,6 +6,7 @@ var mouse=false
 
 func loadSlot():
 	if(len(GameManager.playerTeam)-1>=index):
+		visible=true
 		$Name.text=str(GameManager.playerTeam[index].name)
 		fitText()
 		$Pokemon.pokemon=GameManager.playerTeam[index]
@@ -15,6 +16,7 @@ func loadSlot():
 		$"Health Bar".value=GameManager.playerTeam[index].health
 		$"Health Bar/Health".text=str(GameManager.playerTeam[index].health) + "/" + str(GameManager.playerTeam[index].maxHealth)
 	else:
+		visible=false
 		$Pokemon.visible=false
 		$Name.visible=false
 		$Fainted.visible=false
