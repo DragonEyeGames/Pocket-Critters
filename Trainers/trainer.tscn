@@ -1136,6 +1136,7 @@ disabled = true
 
 [node name="Dialogue" type="CanvasLayer" parent="."]
 layer = 0
+visible = false
 script = ExtResource("3_ryukr")
 
 [node name="ColorRect" type="ColorRect" parent="Dialogue"]
@@ -1203,99 +1204,115 @@ texture = ExtResource("1_2jmqy")
 [node name="Sprites" type="Node2D" parent="."]
 
 [node name="M1" type="AnimatedSprite2D" parent="Sprites"]
+visible = false
 position = Vector2(0, -13)
 sprite_frames = SubResource("SpriteFrames_ynf5e")
-animation = &"idle-up"
+animation = &"idle-down"
 autoplay = "idle-down"
 
 [node name="M2" type="AnimatedSprite2D" parent="Sprites"]
+visible = false
 position = Vector2(0, -13)
 sprite_frames = SubResource("SpriteFrames_qwip1")
 animation = &"idle-down"
 autoplay = "idle-down"
 
 [node name="M3" type="AnimatedSprite2D" parent="Sprites"]
+visible = false
 position = Vector2(0, -13)
 sprite_frames = SubResource("SpriteFrames_pqt5m")
-animation = &"idle-up"
+animation = &"idle-down"
 autoplay = "idle-down"
 
 [node name="M4" type="AnimatedSprite2D" parent="Sprites"]
+visible = false
 position = Vector2(0, -13)
 sprite_frames = SubResource("SpriteFrames_g46p5")
-animation = &"idle-up"
+animation = &"idle-down"
 autoplay = "idle-down"
 
 [node name="M5" type="AnimatedSprite2D" parent="Sprites"]
+visible = false
 position = Vector2(0, -13)
 sprite_frames = SubResource("SpriteFrames_xlj42")
-animation = &"idle-up"
+animation = &"idle-down"
 autoplay = "idle-down"
 
 [node name="M6" type="AnimatedSprite2D" parent="Sprites"]
+visible = false
 position = Vector2(0, -13)
 sprite_frames = SubResource("SpriteFrames_3mpvx")
-animation = &"idle-up"
+animation = &"idle-down"
 autoplay = "idle-down"
 
 [node name="M7" type="AnimatedSprite2D" parent="Sprites"]
+visible = false
 position = Vector2(0, -13)
 sprite_frames = SubResource("SpriteFrames_o8o1t")
-animation = &"idle-up"
+animation = &"idle-down"
 autoplay = "idle-down"
 
 [node name="M8" type="AnimatedSprite2D" parent="Sprites"]
+visible = false
 position = Vector2(0, -13)
 sprite_frames = SubResource("SpriteFrames_chggf")
-animation = &"idle-up"
+animation = &"idle-down"
 autoplay = "idle-down"
 
 [node name="F1" type="AnimatedSprite2D" parent="Sprites"]
+visible = false
 position = Vector2(0, -13)
 sprite_frames = SubResource("SpriteFrames_m0rgl")
-animation = &"idle-up"
+animation = &"idle-down"
 autoplay = "idle-down"
 
 [node name="F2" type="AnimatedSprite2D" parent="Sprites"]
+visible = false
 position = Vector2(0, -13)
 sprite_frames = SubResource("SpriteFrames_l5ulk")
-animation = &"idle-up"
+animation = &"idle-down"
 autoplay = "idle-down"
 
 [node name="F3" type="AnimatedSprite2D" parent="Sprites"]
+visible = false
 position = Vector2(0, -13)
 sprite_frames = SubResource("SpriteFrames_d8xiv")
-animation = &"idle-up"
+animation = &"idle-down"
 autoplay = "idle-down"
 
 [node name="F4" type="AnimatedSprite2D" parent="Sprites"]
+visible = false
 position = Vector2(0, -13)
 sprite_frames = SubResource("SpriteFrames_0lx4x")
-animation = &"idle-up"
+animation = &"idle-down"
 autoplay = "idle-down"
 
 [node name="F5" type="AnimatedSprite2D" parent="Sprites"]
+visible = false
 position = Vector2(0, -13)
 sprite_frames = SubResource("SpriteFrames_qyads")
-animation = &"idle-up"
+animation = &"idle-down"
 autoplay = "idle-down"
 
 [node name="F6" type="AnimatedSprite2D" parent="Sprites"]
+visible = false
 position = Vector2(0, -13)
 sprite_frames = SubResource("SpriteFrames_oh4qj")
-animation = &"idle-right"
+animation = &"idle-down"
 autoplay = "idle-down"
 
 [node name="F7" type="AnimatedSprite2D" parent="Sprites"]
+visible = false
 position = Vector2(0, -13)
 sprite_frames = SubResource("SpriteFrames_277x4")
-animation = &"idle-up"
+animation = &"idle-down"
 autoplay = "idle-down"
 
 [node name="F8" type="AnimatedSprite2D" parent="Sprites"]
+visible = false
 position = Vector2(0, -13)
 sprite_frames = SubResource("SpriteFrames_lb2dw")
-animation = &"idle-up"
+animation = &"idle-down"
 autoplay = "idle-down"
 
 [node name="PlayerSmall" type="Area2D" parent="."]

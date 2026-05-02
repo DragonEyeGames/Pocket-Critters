@@ -1312,15 +1312,15 @@ color = Color(0.48909998, 0.73, 0.525235, 1)
 [node name="OpponentController" type="Node2D" parent="."]
 
 [node name="StatHolder" parent="." instance=ExtResource("3_7sfm4")]
-offset_left = 423.0
+offset_left = 988.0
 offset_top = 230.0
-offset_right = 929.9989
+offset_right = 1494.9989
 offset_bottom = 361.9989
 
 [node name="StatHolder2" parent="." instance=ExtResource("3_7sfm4")]
-offset_left = 19.0
+offset_left = -526.0
 offset_top = 18.0
-offset_right = 526.0
+offset_right = -19.0
 offset_bottom = 150.0
 
 [node name="Catch" type="AnimationPlayer" parent="."]
@@ -1343,6 +1343,7 @@ offset_bottom = 40.0
 script = ExtResource("9_qeyqd")
 
 [node name="Player" type="ColorRect" parent="Stats"]
+modulate = Color(1, 1, 1, 0)
 layout_mode = 0
 offset_left = 238.0
 offset_top = 213.0
@@ -1387,6 +1388,7 @@ layout_mode = 2
 text = "Accuracy: -1"
 
 [node name="Opponent" type="ColorRect" parent="Stats"]
+modulate = Color(1, 1, 1, 0)
 layout_mode = 0
 offset_left = 512.0
 offset_top = 4.0
