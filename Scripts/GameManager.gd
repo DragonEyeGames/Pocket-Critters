@@ -322,6 +322,8 @@ func evolvePokemon(original: PokemonData, evolution: SpeciesData):
 	original.specialAttack=get_stat(evolution.specialAttack, original.ivSpecialAttack, original.level)
 	original.specialDefense=get_stat(evolution.specialDefense, original.ivSpecialDefense, original.level)
 	original.speed=get_stat(evolution.speed, original.ivSpeed, original.level)
+	for move in evolution.potentialMoves:
+		original.uncheckedMoves.append(move)
 	
 func learnMove(newPokemons: PokemonData, newMove: MoveResource):
 	learningPokemon=newPokemons

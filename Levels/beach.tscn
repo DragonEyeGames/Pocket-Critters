@@ -1,4 +1,4 @@
-[gd_scene load_steps=81 format=4 uid="uid://ractyp8q6v8x"]
+[gd_scene load_steps=117 format=4 uid="uid://ractyp8q6v8x"]
 
 [ext_resource type="Script" uid="uid://swgsdmbo5fng" path="res://Scripts/main.gd" id="1_dj533"]
 [ext_resource type="PackedScene" uid="uid://c5yxtkkwi03pt" path="res://Scenes/player.tscn" id="2_dpjeg"]
@@ -22,10 +22,14 @@
 [ext_resource type="Texture2D" uid="uid://bngcpcgtbwx0o" path="res://Assets/Beach/Beach Plates.png" id="19_dpjeg"]
 [ext_resource type="Script" uid="uid://c3odxqj7xy866" path="res://Resources/MoveData.gd" id="20_i8osr"]
 [ext_resource type="Resource" uid="uid://ckleq3oq8wnp8" path="res://Moves/WeakMoves/Water/aquaFlick.tres" id="21_5p8ow"]
+[ext_resource type="Resource" uid="uid://d4e4hfx0m8ar4" path="res://Moves/WeakMoves/Ground/stomp.tres" id="21_dboji"]
+[ext_resource type="Resource" uid="uid://clq4k01n5yevi" path="res://Moves/WeakMoves/Ground/mudSlap.tres" id="22_6sefr"]
 [ext_resource type="Resource" uid="uid://b7q6nc865v0d1" path="res://Moves/WeakMoves/Water/bubbleGuard.tres" id="22_lmiwv"]
 [ext_resource type="Resource" uid="uid://bxfnc6dqke6t6" path="res://Moves/WeakMoves/Water/splash.tres" id="23_bpjux"]
+[ext_resource type="Resource" uid="uid://cx4jkkqijxg5j" path="res://Moves/WeakMoves/Grass/vineWhip.tres" id="23_ueqph"]
 [ext_resource type="Resource" uid="uid://0swwqh1y5jcf" path="res://Moves/WeakMoves/Normal/quickAttack.tres" id="24_wawfa"]
 [ext_resource type="Resource" uid="uid://cuvs4stan3k0a" path="res://Moves/MediumMoves/Bug/carapaceSlam.tres" id="25_6atwm"]
+[ext_resource type="Resource" uid="uid://c2x8bnb1jliut" path="res://Moves/WeakMoves/Fighting/headStrike.tres" id="26_kn757"]
 [ext_resource type="Resource" uid="uid://c4btm4xgx3fmv" path="res://Moves/WeakMoves/Bug/bugBite.tres" id="26_xq6ml"]
 [ext_resource type="Resource" uid="uid://egtxpc610uld" path="res://Moves/WeakMoves/Bug/nibble.tres" id="27_p63bw"]
 [ext_resource type="Resource" uid="uid://bd1h37ujt4yux" path="res://Moves/WeakMoves/Normal/headbutt.tres" id="28_xd7hi"]
@@ -39,6 +43,7 @@
 [ext_resource type="Resource" uid="uid://bme468jn1i7gt" path="res://Moves/WeakMoves/Grass/cottonGuard.tres" id="36_nrge1"]
 [ext_resource type="Resource" uid="uid://cvqv22tmh0ni1" path="res://Moves/WeakMoves/Grass/razorLeaf.tres" id="37_j1wa6"]
 [ext_resource type="Resource" uid="uid://bxow2byw80u2u" path="res://Moves/WeakMoves/Fairy/fairySpark.tres" id="38_i0ahb"]
+[ext_resource type="Resource" uid="uid://bhcuqnwgqnn3i" path="res://Moves/WeakMoves/Bug/stringShot.tres" id="39_6sefr"]
 [ext_resource type="Resource" uid="uid://b7icu6ylr0opg" path="res://Moves/WeakMoves/Dark/ambush.tres" id="39_7tqv4"]
 [ext_resource type="Resource" uid="uid://cfuas1q540ijn" path="res://Moves/WeakMoves/Dark/bite.tres" id="40_obk75"]
 [ext_resource type="Resource" uid="uid://cao3lrn2sxdaa" path="res://Moves/WeakMoves/Normal/focus.tres" id="41_j1wa6"]
@@ -51,6 +56,16 @@
 [ext_resource type="Resource" uid="uid://ckl03roxinmlt" path="res://Moves/WeakMoves/Water/soak.tres" id="48_0yrk5"]
 [ext_resource type="Resource" uid="uid://cjwtbcu7vkxjk" path="res://Moves/WeakMoves/Normal/tackle.tres" id="49_tvsbe"]
 [ext_resource type="Resource" uid="uid://cbp1qoovefw0w" path="res://Moves/WeakMoves/Normal/leer.tres" id="50_m8s5u"]
+[ext_resource type="Resource" uid="uid://bgileglrg45p2" path="res://Moves/WeakMoves/Grass/trailblaze.tres" id="51_1smxe"]
+[ext_resource type="Resource" uid="uid://cva7mwo0kvgv5" path="res://Moves/WeakMoves/Fairy/charm.tres" id="52_frg8t"]
+[ext_resource type="Resource" uid="uid://bbgtdng2r0osm" path="res://Moves/WeakMoves/Fairy/magicGleam.tres" id="53_be8vh"]
+[ext_resource type="Resource" uid="uid://ch7rxit3qljs8" path="res://Moves/WeakMoves/Flying/liftOff.tres" id="54_shcbc"]
+[ext_resource type="Resource" uid="uid://dekuq5aj6tnxh" path="res://Moves/WeakMoves/Flying/wingSlap.tres" id="55_8bpqo"]
+[ext_resource type="Resource" uid="uid://cowyv6e3lbnco" path="res://Moves/WeakMoves/Flying/quickPeck.tres" id="56_ubpn0"]
+[ext_resource type="Resource" uid="uid://cfn1x8bt84qye" path="res://Moves/WeakMoves/Flying/airCut.tres" id="57_mbixb"]
+[ext_resource type="Resource" uid="uid://5go1ihkf80au" path="res://Moves/WeakMoves/Grass/branchPoke.tres" id="58_dboji"]
+[ext_resource type="Resource" uid="uid://q6b04edas3s7" path="res://Moves/WeakMoves/Ground/earthCrack.tres" id="59_6sefr"]
+[ext_resource type="Resource" uid="uid://7c6dd5xtespl" path="res://Moves/WeakMoves/Ground/heavyStomp.tres" id="60_ueqph"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_sxxgb"]
 shader = ExtResource("7_y7gf1")
@@ -111,6 +126,116 @@ shader_parameter/replace_4 = Color(0, 0, 0, 1)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_02mk5"]
 size = Vector2(20, 122)
+
+[sub_resource type="Resource" id="Resource_dboji"]
+script = ExtResource("19_cicoi")
+species = 14
+level = 7
+moves = Array[ExtResource("20_i8osr")]([ExtResource("21_dboji"), ExtResource("22_6sefr"), ExtResource("23_ueqph"), ExtResource("37_j1wa6")])
+metadata/_custom_type_script = "uid://dxn4lkbl53l63"
+
+[sub_resource type="Resource" id="Resource_6sefr"]
+script = ExtResource("19_cicoi")
+species = 16
+level = 9
+moves = Array[ExtResource("20_i8osr")]([ExtResource("33_dk8ds"), ExtResource("26_kn757"), ExtResource("49_tvsbe"), ExtResource("47_x8wy1")])
+metadata/_custom_type_script = "uid://dxn4lkbl53l63"
+
+[sub_resource type="Resource" id="Resource_ueqph"]
+script = ExtResource("19_cicoi")
+species = 24
+level = 8
+moves = Array[ExtResource("20_i8osr")]([ExtResource("23_bpjux"), ExtResource("21_5p8ow"), ExtResource("29_bpjux"), ExtResource("49_tvsbe")])
+metadata/_custom_type_script = "uid://dxn4lkbl53l63"
+
+[sub_resource type="Resource" id="Resource_mbixb"]
+script = ExtResource("18_dpjeg")
+trainerName = "Digger"
+preFightDialogue = Array[String](["I spent all day digging this maze!", "If you beat all five of us inside you wil get...", "...", "I'm actually not sure?", "Lemme think on that."])
+afterFightDialogue = Array[String](["Drats! Even after the battle I don't know what the reward is.", "Umm...", "No need. You will never beat all of us."])
+afterDefeatDialogue = Array[String](["Still thinking for a reward idea."])
+team = Array[ExtResource("19_cicoi")]([SubResource("Resource_dboji"), SubResource("Resource_6sefr"), SubResource("Resource_ueqph")])
+sprite = "M2"
+metadata/_custom_type_script = "uid://0mhfdoexj3v2"
+
+[sub_resource type="Resource" id="Resource_g8wkn"]
+script = ExtResource("19_cicoi")
+species = 39
+level = 8
+moves = Array[ExtResource("20_i8osr")]([ExtResource("48_0yrk5"), ExtResource("29_bpjux"), ExtResource("31_6atwm"), ExtResource("28_xd7hi")])
+metadata/_custom_type_script = "uid://dxn4lkbl53l63"
+
+[sub_resource type="Resource" id="Resource_ckwrx"]
+script = ExtResource("19_cicoi")
+species = 39
+level = 9
+moves = Array[ExtResource("20_i8osr")]([ExtResource("23_bpjux"), ExtResource("21_5p8ow"), ExtResource("31_6atwm"), ExtResource("30_wawfa")])
+metadata/_custom_type_script = "uid://dxn4lkbl53l63"
+
+[sub_resource type="Resource" id="Resource_7le1r"]
+script = ExtResource("18_dpjeg")
+trainerName = "Swimmer"
+preFightDialogue = Array[String](["I was out for a nice swim before this kid recruited me to defend this here strip of sand.", "I will do everything in my power to not let him down."])
+afterFightDialogue = Array[String](["Dang. I guess I let him down.", "Oh well. I can probably go back to swimming now.", "But the water looks kinda cold...", "And the beach is so warm..."])
+afterDefeatDialogue = Array[String](["I'll stay here a little longer."])
+team = Array[ExtResource("19_cicoi")]([SubResource("Resource_g8wkn"), SubResource("Resource_ckwrx")])
+sprite = "M7"
+metadata/_custom_type_script = "uid://0mhfdoexj3v2"
+
+[sub_resource type="Resource" id="Resource_xdbpx"]
+script = ExtResource("19_cicoi")
+species = 8
+level = 10
+moves = Array[ExtResource("20_i8osr")]([ExtResource("41_j1wa6"), ExtResource("27_p63bw"), ExtResource("26_xq6ml"), ExtResource("39_6sefr")])
+metadata/_custom_type_script = "uid://dxn4lkbl53l63"
+
+[sub_resource type="Resource" id="Resource_2r8qa"]
+script = ExtResource("19_cicoi")
+species = 24
+level = 9
+moves = Array[ExtResource("20_i8osr")]([ExtResource("49_tvsbe"), ExtResource("23_bpjux"), ExtResource("29_bpjux"), ExtResource("22_lmiwv")])
+metadata/_custom_type_script = "uid://dxn4lkbl53l63"
+
+[sub_resource type="Resource" id="Resource_fgdpt"]
+script = ExtResource("19_cicoi")
+species = 16
+level = 10
+moves = Array[ExtResource("20_i8osr")]([ExtResource("28_xd7hi"), ExtResource("33_dk8ds"), ExtResource("34_xjh0e"), ExtResource("40_obk75")])
+metadata/_custom_type_script = "uid://dxn4lkbl53l63"
+
+[sub_resource type="Resource" id="Resource_mtw5i"]
+script = ExtResource("18_dpjeg")
+trainerName = "Digger"
+preFightDialogue = Array[String](["Me and my friend made this awesome maze!", "Do you like it?"])
+afterFightDialogue = Array[String](["Aww man. Atleast the maze is cool.", "You are now halfway done! keep it up!"])
+afterDefeatDialogue = Array[String](["Maybe I'll expand it more tomorrow!"])
+team = Array[ExtResource("19_cicoi")]([SubResource("Resource_xdbpx"), SubResource("Resource_2r8qa"), SubResource("Resource_fgdpt")])
+sprite = "F1"
+metadata/_custom_type_script = "uid://0mhfdoexj3v2"
+
+[sub_resource type="Resource" id="Resource_5qp60"]
+script = ExtResource("19_cicoi")
+species = 21
+level = 11
+moves = Array[ExtResource("20_i8osr")]([ExtResource("22_lmiwv"), ExtResource("23_bpjux"), ExtResource("21_5p8ow"), ExtResource("32_wawfa")])
+metadata/_custom_type_script = "uid://dxn4lkbl53l63"
+
+[sub_resource type="Resource" id="Resource_lss8o"]
+script = ExtResource("19_cicoi")
+species = 24
+level = 10
+moves = Array[ExtResource("20_i8osr")]([ExtResource("22_lmiwv"), ExtResource("29_bpjux"), ExtResource("48_0yrk5"), ExtResource("24_wawfa")])
+metadata/_custom_type_script = "uid://dxn4lkbl53l63"
+
+[sub_resource type="Resource" id="Resource_b3qlh"]
+script = ExtResource("18_dpjeg")
+trainerName = "Terrance"
+preFightDialogue = Array[String](["Hi! I'm Terrance.", "Thats about it."])
+afterFightDialogue = Array[String](["Well atleast you know my name!", "(if you forgot its Terrance)"])
+afterDefeatDialogue = Array[String](["Remember me! (Terrance)"])
+team = Array[ExtResource("19_cicoi")]([SubResource("Resource_5qp60"), SubResource("Resource_lss8o")])
+sprite = "M4"
+metadata/_custom_type_script = "uid://0mhfdoexj3v2"
 
 [sub_resource type="Resource" id="Resource_0bnm6"]
 script = ExtResource("19_cicoi")
@@ -268,6 +393,60 @@ afterFightDialogue = Array[String](["I've actually only ever caught the one fish
 afterDefeatDialogue = Array[String](["I'll catch one eventually!"])
 team = Array[ExtResource("19_cicoi")]([SubResource("Resource_be8vh"), SubResource("Resource_tram5"), SubResource("Resource_57w5l")])
 sprite = "M8"
+metadata/_custom_type_script = "uid://0mhfdoexj3v2"
+
+[sub_resource type="Resource" id="Resource_kvbb1"]
+script = ExtResource("19_cicoi")
+level = 9
+moves = Array[ExtResource("20_i8osr")]([ExtResource("35_mtp0s"), ExtResource("37_j1wa6"), ExtResource("51_1smxe"), ExtResource("28_xd7hi")])
+metadata/_custom_type_script = "uid://dxn4lkbl53l63"
+
+[sub_resource type="Resource" id="Resource_shcbc"]
+script = ExtResource("19_cicoi")
+species = 24
+level = 8
+moves = Array[ExtResource("20_i8osr")]([ExtResource("22_lmiwv"), ExtResource("48_0yrk5"), ExtResource("29_bpjux"), ExtResource("49_tvsbe")])
+metadata/_custom_type_script = "uid://dxn4lkbl53l63"
+
+[sub_resource type="Resource" id="Resource_8bpqo"]
+script = ExtResource("19_cicoi")
+species = 19
+level = 9
+moves = Array[ExtResource("20_i8osr")]([ExtResource("35_mtp0s"), ExtResource("36_nrge1"), ExtResource("52_frg8t"), ExtResource("53_be8vh")])
+metadata/_custom_type_script = "uid://dxn4lkbl53l63"
+
+[sub_resource type="Resource" id="Resource_cuoc5"]
+script = ExtResource("18_dpjeg")
+trainerName = "Walker"
+preFightDialogue = Array[String](["I just love walking by the beach, don't you?", "I think I could do this as my job if someone would pay me."])
+afterFightDialogue = Array[String](["Welp that was a jolly break.", "I'll stay here and take in the scenes a bit."])
+afterDefeatDialogue = Array[String](["Jolly good view, eh?"])
+team = Array[ExtResource("19_cicoi")]([SubResource("Resource_kvbb1"), SubResource("Resource_shcbc"), SubResource("Resource_8bpqo")])
+sprite = "F2"
+metadata/_custom_type_script = "uid://0mhfdoexj3v2"
+
+[sub_resource type="Resource" id="Resource_kn757"]
+script = ExtResource("19_cicoi")
+species = 3
+level = 9
+moves = Array[ExtResource("20_i8osr")]([ExtResource("54_shcbc"), ExtResource("55_8bpqo"), ExtResource("56_ubpn0"), ExtResource("57_mbixb")])
+metadata/_custom_type_script = "uid://dxn4lkbl53l63"
+
+[sub_resource type="Resource" id="Resource_nb8ic"]
+script = ExtResource("19_cicoi")
+species = 14
+level = 9
+moves = Array[ExtResource("20_i8osr")]([ExtResource("35_mtp0s"), ExtResource("58_dboji"), ExtResource("59_6sefr"), ExtResource("60_ueqph")])
+metadata/_custom_type_script = "uid://dxn4lkbl53l63"
+
+[sub_resource type="Resource" id="Resource_ubpn0"]
+script = ExtResource("18_dpjeg")
+trainerName = "Sightseer"
+preFightDialogue = Array[String](["Look! You can see a Marelstorm in the water over there!", "Haha made you look!"])
+afterFightDialogue = Array[String](["I may have lost but you gotta admit it was a funny joke.", "He he."])
+afterDefeatDialogue = Array[String](["Hah."])
+team = Array[ExtResource("19_cicoi")]([SubResource("Resource_kn757"), SubResource("Resource_nb8ic")])
+sprite = "F3"
 metadata/_custom_type_script = "uid://0mhfdoexj3v2"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_orvb6"]
@@ -429,26 +608,30 @@ tile_set = ExtResource("8_ho6el")
 
 [node name="Trainer" parent="." node_paths=PackedStringArray("player") instance=ExtResource("17_gdrsh")]
 position = Vector2(-98, -1545)
+trainerData = SubResource("Resource_mbixb")
 player = NodePath("../Player")
 radius = 30
 
 [node name="Trainer3" parent="." node_paths=PackedStringArray("player") instance=ExtResource("17_gdrsh")]
 position = Vector2(-619, -1650)
+trainerData = SubResource("Resource_7le1r")
 player = NodePath("../Player")
 radius = 40
 
 [node name="Trainer4" parent="." node_paths=PackedStringArray("player") instance=ExtResource("17_gdrsh")]
 position = Vector2(-156, -1631)
+trainerData = SubResource("Resource_mtw5i")
 player = NodePath("../Player")
 radius = 40
 
 [node name="Trainer5" parent="." node_paths=PackedStringArray("player") instance=ExtResource("17_gdrsh")]
 position = Vector2(247, -1728)
+trainerData = SubResource("Resource_b3qlh")
 player = NodePath("../Player")
 radius = 40
 
 [node name="Trainer6" parent="." node_paths=PackedStringArray("player") instance=ExtResource("17_gdrsh")]
-position = Vector2(349, -1812)
+position = Vector2(344, -1817)
 player = NodePath("../Player")
 radius = 40
 
@@ -490,11 +673,13 @@ radius = 40
 
 [node name="Trainer18" parent="." node_paths=PackedStringArray("player") instance=ExtResource("17_gdrsh")]
 position = Vector2(366, -1047)
+trainerData = SubResource("Resource_cuoc5")
 player = NodePath("../Player")
 radius = 40
 
 [node name="Trainer19" parent="." node_paths=PackedStringArray("player") instance=ExtResource("17_gdrsh")]
 position = Vector2(-90, -1050)
+trainerData = SubResource("Resource_ubpn0")
 player = NodePath("../Player")
 radius = 40
 

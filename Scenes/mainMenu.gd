@@ -2,7 +2,7 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	if FileAccess.file_exists("user://save-1.tres"):
+	if FileAccess.file_exists("user://save-1.tres") or FileAccess.file_exists("user://save-2.tres") or FileAccess.file_exists("user://save-3.tres"):
 		$Menu/Load.visible=true
 		$Menu/New.size=$Menu/Load.size
 		$Menu/New.position.x=$Menu/Load.position.x
@@ -19,16 +19,19 @@ func _process(_delta: float) -> void:
 
 
 func _on_new_pressed() -> void:
-	var toMake=1
-	if(FileAccess.file_exists("user://save-1.tres")):
+	var toMake=-1
+	if(not FileAccess.file_exists("user://save-1.tres")):
+		toMake = 1
+	elif(not FileAccess.file_exists("user://save-2.tres")):
 		toMake = 2
-	if(FileAccess.file_exists("user://save-2.tres")):
-		toMake = 3
-	if(FileAccess.file_exists("user://save-3.tres")):
-		$Menu/NewSave.open()
-	else:
+	elif(not FileAccess.file_exists("user://save-3.tres")):
+		toMake=3
+	if(not toMake==-1):
 		GameManager.loadedSave=toMake
 		GameManager.initialize()
+		return
+	else:
+		$Menu/NewSave.open()
 
 
 func _on_load_pressed() -> void:

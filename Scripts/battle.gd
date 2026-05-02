@@ -34,6 +34,10 @@ func _ready() -> void:
 	$Player.cry()
 	
 func loadField():
+	if(GameManager.healthyTeam[activeIndex].health<=0):
+		activeIndex+=1
+		loadField()
+		return
 	$Player.pokemon=GameManager.healthyTeam[activeIndex]
 	$Player.initialize()
 	$BattleOptions/Display.text="What will " + str(GameManager.healthyTeam[activeIndex].name) + " do?"
