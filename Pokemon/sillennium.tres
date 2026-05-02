@@ -1,69 +1,111 @@
-[gd_resource type="Resource" script_class="SpeciesData" load_steps=21 format=3 uid="uid://cgvljc4cpfssh"]
+[gd_resource type="Resource" script_class="SpeciesData" load_steps=33 format=3 uid="uid://cgvljc4cpfssh"]
 
 [ext_resource type="Script" uid="uid://kmcanhhb04o0" path="res://Resources/MoveResource.gd" id="1_23klb"]
 [ext_resource type="Resource" uid="uid://l4o587xf2mc6" path="res://Moves/WeakMoves/Psychic/calmMind.tres" id="2_mi72g"]
 [ext_resource type="Resource" uid="uid://sfqukecthw44" path="res://Moves/WeakMoves/Psychic/illusion.tres" id="3_62dbl"]
-[ext_resource type="Resource" uid="uid://io7etbghp74a" path="res://Moves/WeakMoves/Psychic/mentalBarrier.tres" id="4_cip7n"]
-[ext_resource type="Resource" uid="uid://bu8pdh0syum07" path="res://Moves/MediumMoves/Psychic/mindBoggle.tres" id="5_p7dx3"]
+[ext_resource type="Resource" uid="uid://w46ax8b61102" path="res://Moves/WeakMoves/Psychic/mindTap.tres" id="4_62dbl"]
+[ext_resource type="Resource" uid="uid://cxhvmxi3w1bq8" path="res://Moves/WeakMoves/Rock/crumble.tres" id="6_cip7n"]
 [ext_resource type="Resource" uid="uid://ttaoknwh4k5g" path="res://Moves/MediumMoves/Psychic/psychicBeam.tres" id="6_q2kmr"]
 [ext_resource type="Resource" uid="uid://csaufj3wnppfr" path="res://Moves/WeakMoves/Psychic/psychicFlick.tres" id="7_n7pp7"]
-[ext_resource type="Resource" uid="uid://dnfjty3i41hh0" path="res://Moves/WeakMoves/Rock/rockFlick.tres" id="8_p7dx3"]
-[ext_resource type="Resource" uid="uid://b02gqh4ghtltn" path="res://Moves/MediumMoves/Rock/rockToss.tres" id="9_q2kmr"]
+[ext_resource type="Resource" uid="uid://142d1v60jg3k" path="res://Moves/WeakMoves/Rock/stoneJab.tres" id="8_p7dx3"]
+[ext_resource type="Resource" uid="uid://pha3m7qrtk4c" path="res://Moves/MediumMoves/Rock/cliffBreaker.tres" id="9_moh75"]
+[ext_resource type="Resource" uid="uid://c41b0jtwvny8w" path="res://Moves/MediumMoves/Rock/mountainForce.tres" id="10_81kgm"]
 [ext_resource type="Resource" uid="uid://ty1bu1oa2kiv" path="res://Moves/WeakMoves/Rock/gravelSpin.tres" id="10_n7pp7"]
+[ext_resource type="Resource" uid="uid://dkqdrdogua3d6" path="res://Moves/MediumMoves/Rock/stoneGuard.tres" id="11_53b8x"]
+[ext_resource type="Resource" uid="uid://cj60bwf5lmh2b" path="res://Moves/MediumMoves/Rock/boulderCrash.tres" id="12_oq32o"]
+[ext_resource type="Resource" uid="uid://dx7gjuj3wgpes" path="res://Moves/MediumMoves/Psychic/brainCrush.tres" id="13_mdy4v"]
 [ext_resource type="Script" uid="uid://1vun3nkcoo5i" path="res://Resources/SpeciesData.gd" id="14_2lcq0"]
+[ext_resource type="Resource" uid="uid://pflh4oe2ik03" path="res://Moves/MediumMoves/Psychic/mindPierce.tres" id="14_adsei"]
+[ext_resource type="Resource" uid="uid://b568vgm4dx1ta" path="res://Moves/MediumMoves/Psychic/telekineticSlam.tres" id="16_ufp0b"]
+
+[sub_resource type="Resource" id="Resource_q2kmr"]
+script = ExtResource("1_23klb")
+move = ExtResource("2_mi72g")
+level = 8
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_n7pp7"]
+script = ExtResource("1_23klb")
+move = ExtResource("3_62dbl")
+level = 15
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
 
 [sub_resource type="Resource" id="Resource_23klb"]
 script = ExtResource("1_23klb")
-move = ExtResource("2_mi72g")
-level = 10
+move = ExtResource("4_62dbl")
+level = 5
 metadata/_custom_type_script = "uid://kmcanhhb04o0"
 
 [sub_resource type="Resource" id="Resource_gisvn"]
 script = ExtResource("1_23klb")
-move = ExtResource("3_62dbl")
-level = 4
+move = ExtResource("7_n7pp7")
+level = 18
 metadata/_custom_type_script = "uid://kmcanhhb04o0"
 
 [sub_resource type="Resource" id="Resource_6msw7"]
 script = ExtResource("1_23klb")
-move = ExtResource("4_cip7n")
-level = 12
+move = ExtResource("6_cip7n")
+level = 9
 metadata/_custom_type_script = "uid://kmcanhhb04o0"
 
 [sub_resource type="Resource" id="Resource_moh75"]
 script = ExtResource("1_23klb")
-move = ExtResource("5_p7dx3")
-level = 8
+move = ExtResource("10_n7pp7")
+level = 16
 metadata/_custom_type_script = "uid://kmcanhhb04o0"
 
 [sub_resource type="Resource" id="Resource_81kgm"]
 script = ExtResource("1_23klb")
-move = ExtResource("6_q2kmr")
-level = 14
-metadata/_custom_type_script = "uid://kmcanhhb04o0"
-
-[sub_resource type="Resource" id="Resource_53b8x"]
-script = ExtResource("1_23klb")
-move = ExtResource("7_n7pp7")
-level = 7
-metadata/_custom_type_script = "uid://kmcanhhb04o0"
-
-[sub_resource type="Resource" id="Resource_oq32o"]
-script = ExtResource("1_23klb")
 move = ExtResource("8_p7dx3")
-level = 4
+level = 13
 metadata/_custom_type_script = "uid://kmcanhhb04o0"
 
-[sub_resource type="Resource" id="Resource_mdy4v"]
+[sub_resource type="Resource" id="Resource_7laib"]
 script = ExtResource("1_23klb")
-move = ExtResource("9_q2kmr")
-level = 9
+move = ExtResource("9_moh75")
+level = 23
 metadata/_custom_type_script = "uid://kmcanhhb04o0"
 
-[sub_resource type="Resource" id="Resource_adsei"]
+[sub_resource type="Resource" id="Resource_ex64y"]
 script = ExtResource("1_23klb")
-move = ExtResource("10_n7pp7")
-level = 11
+move = ExtResource("10_81kgm")
+level = 27
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_7hiyp"]
+script = ExtResource("1_23klb")
+move = ExtResource("11_53b8x")
+level = 25
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_2lcq0"]
+script = ExtResource("1_23klb")
+move = ExtResource("12_oq32o")
+level = 33
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_gnfaf"]
+script = ExtResource("1_23klb")
+move = ExtResource("13_mdy4v")
+level = 31
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_wugi1"]
+script = ExtResource("1_23klb")
+move = ExtResource("14_adsei")
+level = 26
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_q2gn3"]
+script = ExtResource("1_23klb")
+move = ExtResource("6_q2kmr")
+level = 20
+metadata/_custom_type_script = "uid://kmcanhhb04o0"
+
+[sub_resource type="Resource" id="Resource_nxw4w"]
+script = ExtResource("1_23klb")
+move = ExtResource("16_ufp0b")
+level = 35
 metadata/_custom_type_script = "uid://kmcanhhb04o0"
 
 [resource]
@@ -78,7 +120,7 @@ defense = 120
 specialAttack = 100
 specialDefense = 90
 speed = 50
-potentialMoves = Array[ExtResource("1_23klb")]([SubResource("Resource_23klb"), SubResource("Resource_gisvn"), SubResource("Resource_6msw7"), SubResource("Resource_moh75"), SubResource("Resource_81kgm"), SubResource("Resource_53b8x"), SubResource("Resource_oq32o"), SubResource("Resource_mdy4v"), SubResource("Resource_adsei")])
+potentialMoves = Array[ExtResource("1_23klb")]([SubResource("Resource_q2kmr"), SubResource("Resource_n7pp7"), SubResource("Resource_23klb"), SubResource("Resource_gisvn"), SubResource("Resource_6msw7"), SubResource("Resource_moh75"), SubResource("Resource_81kgm"), SubResource("Resource_7laib"), SubResource("Resource_ex64y"), SubResource("Resource_7hiyp"), SubResource("Resource_2lcq0"), SubResource("Resource_gnfaf"), SubResource("Resource_wugi1"), SubResource("Resource_q2gn3"), SubResource("Resource_nxw4w")])
 catchRate = 0.3
 prevolution = 46
 metadata/_custom_type_script = "uid://c7t80kmu0l21k"
