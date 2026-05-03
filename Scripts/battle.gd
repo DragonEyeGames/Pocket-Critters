@@ -49,7 +49,7 @@ func _on_run_pressed() -> void:
 func _on_catch_pressed() -> void:
 	$BattleOptions/Options.visible=false
 	$BattleOptions/Display.text="Threw a ball at " + $Opponent.pokemon.name + "!"
-	if(randf()<=1):#GameManager.get_catch_chance($Opponent.pokemon, 1)):
+	if(randf()<=GameManager.get_catch_chance($Opponent.pokemon, 1.5)):
 		$Catch.play("catch-succeed")
 		await get_tree().create_timer(2).timeout
 		battleWon()
@@ -344,6 +344,12 @@ func checkPlayer():
 		if(len(healthy)>=1):
 			GameManager.healthyTeam = GameManager.playerTeam#healthy
 		else:
+			if(GameManager.teamBattle):
+				GameManager.attackingID=0
+				GameManager.attacking=""
+				GameManager.toBattle=null
+				GameManager.opposingTeam.clear()
+				GameManager.teamBattle=false
 			get_tree().change_scene_to_file("res://Scenes/dead.tscn")
 			return false
 		$"Reorder Team".visible=true

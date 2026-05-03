@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="TrainerData" load_steps=14 format=3 uid="uid://f5qvksh8iemt"]
+[gd_resource type="Resource" script_class="TrainerData" load_steps=13 format=3 uid="uid://f5qvksh8iemt"]
 
 [ext_resource type="Script" uid="uid://0mhfdoexj3v2" path="res://Resources/TrainerData.gd" id="1_4orp6"]
 [ext_resource type="Script" uid="uid://dxn4lkbl53l63" path="res://Resources/TeamData.gd" id="2_i2d2o"]
@@ -18,13 +18,6 @@ level = 4
 moves = Array[ExtResource("3_a0lhm")]([ExtResource("4_4orp6"), ExtResource("5_i2d2o"), ExtResource("6_a0lhm"), ExtResource("5_nd8np")])
 metadata/_custom_type_script = "uid://dxn4lkbl53l63"
 
-[sub_resource type="Resource" id="Resource_rhwdr"]
-script = ExtResource("2_i2d2o")
-species = 17
-level = 3
-moves = Array[ExtResource("3_a0lhm")]([ExtResource("4_4orp6"), ExtResource("5_i2d2o"), ExtResource("6_a0lhm"), ExtResource("5_nd8np")])
-metadata/_custom_type_script = "uid://dxn4lkbl53l63"
-
 [sub_resource type="Resource" id="Resource_h0fnm"]
 script = ExtResource("2_i2d2o")
 species = 8
@@ -38,6 +31,6 @@ trainerName = "Bug Catcher"
 preFightDialogue = Array[String](["I think I have the best critters in the whole world!"])
 afterFightDialogue = Array[String](["I guess they aren't the strongest critters in the whole world.", "Good thing they are the coolest pokemon still. Can't prove me wrong on that."])
 afterDefeatDialogue = Array[String](["I'm catching more bugs for our rematch!"])
-team = Array[ExtResource("2_i2d2o")]([SubResource("Resource_57rye"), SubResource("Resource_rhwdr"), SubResource("Resource_h0fnm")])
+team = Array[ExtResource("2_i2d2o")]([SubResource("Resource_57rye"), SubResource("Resource_h0fnm")])
 sprite = "M2"
 metadata/_custom_type_script = "uid://0mhfdoexj3v2"

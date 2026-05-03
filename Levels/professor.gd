@@ -125,7 +125,7 @@ func _on_defeat(trainerID):
 		
 func _process(_delta: float) -> void:
 	if(walkingAway):
-		position.y-=1
+		position.y-=2
 	if(playerEntered and Input.is_action_just_pressed("Interact") and not afterSpeaking):
 		afterSpeaking=true
 		GameManager.camera.target=self
