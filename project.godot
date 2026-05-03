@@ -11,9 +11,10 @@ config_version=5
 [application]
 
 config/name="Pocket Critters"
-run/main_scene="uid://cw40qak10lmw"
+run/main_scene="uid://b54x4u5qby8a0"
 config/features=PackedStringArray("4.5", "GL Compatibility")
-config/icon="res://Assets/icon.svg"
+boot_splash/image="uid://cukfvux8qn08g"
+config/icon="uid://bbctwkye4ujb4"
 
 [autoload]
 

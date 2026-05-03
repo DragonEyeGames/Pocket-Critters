@@ -25,6 +25,7 @@ func loadTime(seconds: float):
 
 
 func _on_load_save_pressed() -> void:
+	await $"../../../../Transitioner".darkenScreen()
 	Music.closeMenu()
 	GameManager.loadedSave=index
 	if(overwriteSlot):

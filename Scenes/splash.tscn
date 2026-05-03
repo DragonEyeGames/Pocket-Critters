@@ -1,0 +1,458 @@
+[gd_scene load_steps=60 format=3 uid="uid://b54x4u5qby8a0"]
+
+[ext_resource type="Script" uid="uid://kbrap6gib52n" path="res://Scenes/splash.gd" id="1_r6sp7"]
+[ext_resource type="FontFile" uid="uid://cnjtjvjhjjxia" path="res://Fonts/ByteBounce.ttf" id="1_t3al1"]
+[ext_resource type="FontFile" uid="uid://ko516spyiyle" path="res://Fonts/japanese.ttf" id="2_7xstc"]
+[ext_resource type="Texture2D" uid="uid://bbctwkye4ujb4" path="res://Fakemon-PNG/timberry.png" id="3_n6ssg"]
+[ext_resource type="Texture2D" uid="uid://6mafsod54ove" path="res://Fakemon-PNG/sizzly.png" id="4_rm4tq"]
+[ext_resource type="Texture2D" uid="uid://c37nc555oexrj" path="res://Fakemon-PNG/varanitor.png" id="5_u3vd8"]
+[ext_resource type="Texture2D" uid="uid://cx0gdn7okrdob" path="res://Fakemon-PNG/varmot.png" id="6_lbbo1"]
+[ext_resource type="Texture2D" uid="uid://cevctsktscgu2" path="res://Fakemon-PNG/viscolor.png" id="7_j35wq"]
+[ext_resource type="Texture2D" uid="uid://cigk1itn13kyq" path="res://Fakemon-PNG/tindursa.png" id="8_10c0j"]
+[ext_resource type="Texture2D" uid="uid://dr87q5gr5xerp" path="res://Fakemon-PNG/tekagon.png" id="9_3u7pv"]
+[ext_resource type="Texture2D" uid="uid://b1w21qsu8nk3h" path="res://Fakemon-PNG/sycoral.png" id="10_wa32b"]
+[ext_resource type="Texture2D" uid="uid://dmggf8l828rn7" path="res://Fakemon-PNG/sligment.png" id="11_toxwf"]
+[ext_resource type="Texture2D" uid="uid://cml2wh3mmoqxb" path="res://Fakemon-PNG/sillennium.png" id="12_2u25f"]
+[ext_resource type="Texture2D" uid="uid://b7kb5xv1u1k3n" path="res://Fakemon-PNG/saurky.png" id="13_rmru0"]
+[ext_resource type="Texture2D" uid="uid://bapuhgjwja3hw" path="res://Fakemon-PNG/rainther.png" id="14_pyj6e"]
+[ext_resource type="Texture2D" uid="uid://d10ehw55mthd2" path="res://Fakemon-PNG/pourka.png" id="15_xcvc2"]
+[ext_resource type="Texture2D" uid="uid://d3ktbkfvgb7u2" path="res://Fakemon-PNG/pomprim.png" id="16_35lw4"]
+[ext_resource type="Texture2D" uid="uid://d3ckwj4klm3xv" path="res://Fakemon-PNG/pompet.png" id="17_t6ix7"]
+[ext_resource type="Texture2D" uid="uid://diwbntfmt43qj" path="res://Fakemon-PNG/pilfetch.png" id="18_ge2eq"]
+[ext_resource type="Texture2D" uid="uid://bk8ot7cpwdae3" path="res://Fakemon-PNG/pasturlo.png" id="19_unsj1"]
+[ext_resource type="Texture2D" uid="uid://d4h2pi1yb1y1d" path="res://Fakemon-PNG/nemesusa.png" id="20_r6sp7"]
+[ext_resource type="Texture2D" uid="uid://7n0duhe3u8d6" path="res://Fakemon-PNG/minamai.png" id="21_6uc0j"]
+[ext_resource type="Texture2D" uid="uid://con11d3l6ipsl" path="res://Fakemon-PNG/merlicun.png" id="22_74il6"]
+[ext_resource type="Texture2D" uid="uid://c8iav700aqrvq" path="res://Fakemon-PNG/marelstorm.png" id="23_irwsi"]
+[ext_resource type="Texture2D" uid="uid://d0r65i2oev53b" path="res://Fakemon-PNG/maizotaur.png" id="24_lv73v"]
+[ext_resource type="Texture2D" uid="uid://blbo0dto4hfos" path="res://Fakemon-PNG/lollybog.png" id="25_bwpv1"]
+[ext_resource type="Texture2D" uid="uid://delt5pm1csr0u" path="res://Fakemon-PNG/kankwart.png" id="26_yl5rr"]
+[ext_resource type="Texture2D" uid="uid://h1oj3qg56l0g" path="res://Fakemon-PNG/kankryst.png" id="27_46716"]
+[ext_resource type="Texture2D" uid="uid://d1leuagc2x2dm" path="res://Fakemon-PNG/kankersaur.png" id="28_h3p1g"]
+[ext_resource type="Texture2D" uid="uid://ckpb18ydnlkug" path="res://Fakemon-PNG/howliage.png" id="29_upttj"]
+[ext_resource type="Texture2D" uid="uid://qyx746qq2sqh" path="res://Fakemon-PNG/goanopy.png" id="30_6vmnc"]
+[ext_resource type="Texture2D" uid="uid://df3pp1yeqrdcu" path="res://Fakemon-PNG/gelescent.png" id="31_umht3"]
+[ext_resource type="Texture2D" uid="uid://cy5ixt1h2jqox" path="res://Fakemon-PNG/geckrow.png" id="32_5xuj1"]
+[ext_resource type="Texture2D" uid="uid://b1muf4jpy8srg" path="res://Fakemon-PNG/forbiddron.png" id="33_8odne"]
+[ext_resource type="Texture2D" uid="uid://d1islopj3ddbf" path="res://Fakemon-PNG/firomenis.png" id="34_unsj1"]
+[ext_resource type="Texture2D" uid="uid://b4276f80vesl4" path="res://Fakemon-PNG/dripwirt.png" id="35_r6sp7"]
+[ext_resource type="Texture2D" uid="uid://px405ucrodpw" path="res://Fakemon-PNG/dreadrock.png" id="36_6uc0j"]
+[ext_resource type="Texture2D" uid="uid://dqu8i4xgkch3u" path="res://Fakemon-PNG/delugar.png" id="37_74il6"]
+[ext_resource type="Texture2D" uid="uid://dcu31aa4er1iu" path="res://Fakemon-PNG/dampurr.png" id="38_irwsi"]
+[ext_resource type="Texture2D" uid="uid://ds46q4ouimv0x" path="res://Fakemon-PNG/criminalis.png" id="39_lv73v"]
+[ext_resource type="Texture2D" uid="uid://cbmj45p0etiap" path="res://Fakemon-PNG/crestaka.png" id="40_bwpv1"]
+[ext_resource type="Texture2D" uid="uid://dc8y4xhlg30ng" path="res://Fakemon-PNG/brewtrid.png" id="41_yl5rr"]
+[ext_resource type="Texture2D" uid="uid://ctd7bfk4w7d23" path="res://Fakemon-PNG/brambull.png" id="42_46716"]
+[ext_resource type="Texture2D" uid="uid://dnymogm7r257s" path="res://Fakemon-PNG/botanine.png" id="43_h3p1g"]
+[ext_resource type="Texture2D" uid="uid://bqfx8jaeuhf05" path="res://Fakemon-PNG/bonfur.png" id="44_upttj"]
+[ext_resource type="Texture2D" uid="uid://rurari3qfhj8" path="res://Fakemon-PNG/baulder.png" id="45_6vmnc"]
+[ext_resource type="Texture2D" uid="uid://dhh1fa6gyyhfj" path="res://Fakemon-PNG/baoby.png" id="46_umht3"]
+[ext_resource type="Texture2D" uid="uid://dyp75spsiwmbr" path="res://Fakemon-PNG/baobaraffe.png" id="47_5xuj1"]
+[ext_resource type="Texture2D" uid="uid://bxty4nft4brw" path="res://Fakemon-PNG/avipex.png" id="48_8odne"]
+[ext_resource type="Texture2D" uid="uid://c54kq1xaa76wq" path="res://Fakemon-PNG/appalyp.png" id="49_ithax"]
+[ext_resource type="Script" uid="uid://brd3tyakklx2n" path="res://Scripts/transitioner.gd" id="51_6uc0j"]
+
+[sub_resource type="Gradient" id="Gradient_t3al1"]
+colors = PackedColorArray(0.003911428, 0.015139197, 0.09199343, 1, 1.6845763e-07, 0.30956113, 0.39372975, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_7xstc"]
+gradient = SubResource("Gradient_t3al1")
+width = 700
+height = 1000
+
+[sub_resource type="Animation" id="Animation_unsj1"]
+resource_name = "ready"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Goofs:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.19999999, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_r6sp7"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Goofs:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6uc0j"]
+_data = {
+&"RESET": SubResource("Animation_r6sp7"),
+&"ready": SubResource("Animation_unsj1")
+}
+
+[sub_resource type="Animation" id="Animation_74il6"]
+resource_name = "darken"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_irwsi"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_lv73v"]
+_data = {
+&"RESET": SubResource("Animation_irwsi"),
+&"darken": SubResource("Animation_74il6")
+}
+
+[node name="Splash" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_r6sp7")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = -6.0
+offset_top = -12.0
+offset_right = 965.0
+offset_bottom = 551.0
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+z_index = 1
+layout_mode = 0
+offset_left = 252.0
+offset_top = 68.0
+offset_right = 703.0
+offset_bottom = 319.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="."]
+z_index = 1
+layout_mode = 0
+offset_left = 257.0
+offset_top = 73.0
+offset_right = 698.0
+offset_bottom = 314.0
+color = Color(0.9340804, 0.9340805, 0.93408036, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(476, 274.8227)
+rotation = 1.5707964
+scale = Vector2(0.80255574, 1)
+texture = SubResource("GradientTexture2D_7xstc")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(481, 270)
+
+[node name="Name" type="Control" parent="."]
+z_index = 5
+anchors_preset = 0
+offset_left = 275.0
+offset_top = 95.0
+offset_right = 671.0
+offset_bottom = 294.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Name"]
+modulate = Color(0.8175212, 0.81752133, 0.8175211, 1)
+z_index = 15
+layout_mode = 0
+offset_left = -280.0
+offset_top = -17.0
+offset_right = 683.0
+offset_bottom = 168.0
+theme_override_constants/outline_size = 10
+theme_override_fonts/normal_font = ExtResource("1_t3al1")
+theme_override_font_sizes/normal_font_size = 128
+text = " Pocket 
+Critters!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Japanese" type="RichTextLabel" parent="Name"]
+modulate = Color(0.8175212, 0.81752133, 0.8175211, 1)
+z_index = 15
+layout_mode = 0
+offset_left = 30.0
+offset_top = 58.0
+offset_right = 260.61224
+offset_bottom = 129.09268
+scale = Vector2(0.49, 0.49)
+theme_override_constants/outline_size = 10
+theme_override_fonts/normal_font = ExtResource("2_7xstc")
+theme_override_font_sizes/normal_font_size = 52
+text = "ポケット"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Japanese2" type="RichTextLabel" parent="Name"]
+modulate = Color(0.8175212, 0.81752133, 0.8175211, 1)
+z_index = 15
+layout_mode = 0
+offset_left = 189.0
+offset_top = 153.0
+offset_right = 621.653
+offset_bottom = 224.09268
+scale = Vector2(0.49, 0.49)
+theme_override_constants/outline_size = 10
+theme_override_fonts/normal_font = ExtResource("2_7xstc")
+theme_override_font_sizes/normal_font_size = 52
+text = "クリッターズ"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Goofs" type="Control" parent="."]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Timberry" type="Sprite2D" parent="Goofs"]
+position = Vector2(133, 80)
+texture = ExtResource("3_n6ssg")
+
+[node name="Sizzly" type="Sprite2D" parent="Goofs"]
+position = Vector2(222, 422)
+texture = ExtResource("4_rm4tq")
+
+[node name="Varanitor" type="Sprite2D" parent="Goofs"]
+position = Vector2(815, 374)
+texture = ExtResource("5_u3vd8")
+
+[node name="Varmot" type="Sprite2D" parent="Goofs"]
+position = Vector2(770, 107)
+texture = ExtResource("6_lbbo1")
+
+[node name="Viscolor" type="Sprite2D" parent="Goofs"]
+position = Vector2(94, 288)
+texture = ExtResource("7_j35wq")
+
+[node name="Tindursa" type="Sprite2D" parent="Goofs"]
+position = Vector2(642, 390)
+texture = ExtResource("8_10c0j")
+
+[node name="Tekagon" type="Sprite2D" parent="Goofs"]
+position = Vector2(870, 209)
+texture = ExtResource("9_3u7pv")
+
+[node name="Sycoral" type="Sprite2D" parent="Goofs"]
+position = Vector2(57, 480)
+texture = ExtResource("10_wa32b")
+
+[node name="Sligment" type="Sprite2D" parent="Goofs"]
+position = Vector2(453, 419)
+texture = ExtResource("11_toxwf")
+
+[node name="Sillennium" type="Sprite2D" parent="Goofs"]
+position = Vector2(800, 486)
+texture = ExtResource("12_2u25f")
+
+[node name="Saurky" type="Sprite2D" parent="Goofs"]
+position = Vector2(333, 500)
+texture = ExtResource("13_rmru0")
+
+[node name="Rainther" type="Sprite2D" parent="Goofs"]
+position = Vector2(64, 140)
+texture = ExtResource("14_pyj6e")
+
+[node name="Pourka" type="Sprite2D" parent="Goofs"]
+position = Vector2(433, 46)
+texture = ExtResource("15_xcvc2")
+
+[node name="Pomprim" type="Sprite2D" parent="Goofs"]
+position = Vector2(657, 50)
+texture = ExtResource("16_35lw4")
+
+[node name="Pompet" type="Sprite2D" parent="Goofs"]
+position = Vector2(201, 227)
+texture = ExtResource("17_t6ix7")
+
+[node name="Pilfetch" type="Sprite2D" parent="Goofs"]
+position = Vector2(501, 454)
+texture = ExtResource("18_ge2eq")
+
+[node name="Pasturlo" type="Sprite2D" parent="Goofs"]
+position = Vector2(809, 286)
+texture = ExtResource("19_unsj1")
+
+[node name="Nemesusa" type="Sprite2D" parent="Goofs"]
+position = Vector2(65, 386)
+texture = ExtResource("20_r6sp7")
+
+[node name="Minamai" type="Sprite2D" parent="Goofs"]
+position = Vector2(912, 383)
+texture = ExtResource("21_6uc0j")
+
+[node name="Merlicun" type="Sprite2D" parent="Goofs"]
+position = Vector2(720, 414)
+texture = ExtResource("22_74il6")
+
+[node name="Marelstorm" type="Sprite2D" parent="Goofs"]
+position = Vector2(203, 136)
+texture = ExtResource("23_irwsi")
+
+[node name="Maizotaur" type="Sprite2D" parent="Goofs"]
+position = Vector2(542, 372)
+texture = ExtResource("24_lv73v")
+
+[node name="Lollybog" type="Sprite2D" parent="Goofs"]
+position = Vector2(438, 504)
+texture = ExtResource("25_bwpv1")
+
+[node name="Kankwart" type="Sprite2D" parent="Goofs"]
+position = Vector2(893, 56)
+texture = ExtResource("26_yl5rr")
+
+[node name="Kankryst" type="Sprite2D" parent="Goofs"]
+position = Vector2(63, 51)
+texture = ExtResource("27_46716")
+
+[node name="Kankersaur" type="Sprite2D" parent="Goofs"]
+position = Vector2(896, 467)
+texture = ExtResource("28_h3p1g")
+
+[node name="Howliage" type="Sprite2D" parent="Goofs"]
+position = Vector2(902, 306)
+texture = ExtResource("29_upttj")
+
+[node name="Goanopy" type="Sprite2D" parent="Goofs"]
+position = Vector2(187, 330)
+texture = ExtResource("30_6vmnc")
+
+[node name="Gelescent" type="Sprite2D" parent="Goofs"]
+position = Vector2(149, 490)
+texture = ExtResource("31_umht3")
+
+[node name="Geckrow" type="Sprite2D" parent="Goofs"]
+position = Vector2(295, 453)
+texture = ExtResource("32_5xuj1")
+
+[node name="Forbiddron" type="Sprite2D" parent="Goofs"]
+position = Vector2(847, 119)
+texture = ExtResource("33_8odne")
+
+[node name="Firomenis" type="Sprite2D" parent="Goofs"]
+position = Vector2(698, 480)
+texture = ExtResource("34_unsj1")
+
+[node name="Dripwirt" type="Sprite2D" parent="Goofs"]
+position = Vector2(207, 50)
+texture = ExtResource("35_r6sp7")
+
+[node name="Dreadrock" type="Sprite2D" parent="Goofs"]
+position = Vector2(416, 357)
+texture = ExtResource("36_6uc0j")
+
+[node name="Delugar" type="Sprite2D" parent="Goofs"]
+position = Vector2(725, 326)
+texture = ExtResource("37_74il6")
+
+[node name="Dampurr" type="Sprite2D" parent="Goofs"]
+position = Vector2(228, 510)
+texture = ExtResource("38_irwsi")
+
+[node name="Criminalis" type="Sprite2D" parent="Goofs"]
+position = Vector2(52, 239)
+texture = ExtResource("39_lv73v")
+
+[node name="Crestaka" type="Sprite2D" parent="Goofs"]
+position = Vector2(787, 41)
+texture = ExtResource("40_bwpv1")
+
+[node name="Brewtrid" type="Sprite2D" parent="Goofs"]
+position = Vector2(147, 394)
+texture = ExtResource("41_yl5rr")
+
+[node name="Brambull" type="Sprite2D" parent="Goofs"]
+position = Vector2(141, 203)
+texture = ExtResource("42_46716")
+
+[node name="Botanine" type="Sprite2D" parent="Goofs"]
+position = Vector2(584, 490)
+texture = ExtResource("43_h3p1g")
+
+[node name="Bonfur" type="Sprite2D" parent="Goofs"]
+position = Vector2(526, 34)
+texture = ExtResource("44_upttj")
+
+[node name="Baulder" type="Sprite2D" parent="Goofs"]
+position = Vector2(321, 30)
+texture = ExtResource("45_6vmnc")
+
+[node name="Baoby" type="Sprite2D" parent="Goofs"]
+position = Vector2(928, 150)
+texture = ExtResource("46_umht3")
+
+[node name="Baobaraffe" type="Sprite2D" parent="Goofs"]
+position = Vector2(767, 198)
+texture = ExtResource("47_5xuj1")
+
+[node name="Avipex" type="Sprite2D" parent="Goofs"]
+position = Vector2(383, 438)
+texture = ExtResource("48_8odne")
+
+[node name="Appalyp" type="Sprite2D" parent="Goofs"]
+position = Vector2(311, 358)
+texture = ExtResource("49_ithax")
+
+[node name="Reveal" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_6uc0j")
+}
+autoplay = "ready"
+
+[node name="Transitioner" type="CanvasLayer" parent="."]
+layer = 3
+script = ExtResource("51_6uc0j")
+
+[node name="ColorRect" type="ColorRect" parent="Transitioner"]
+z_index = 6
+offset_left = -42.0
+offset_top = -29.0
+offset_right = 978.0
+offset_bottom = 583.0
+mouse_filter = 2
+color = Color(0, 0, 0, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Transitioner"]
+libraries = {
+&"": SubResource("AnimationLibrary_lv73v")
+}
+
+[connection signal="animation_finished" from="Reveal" to="." method="_on_reveal_animation_finished"]
+[connection signal="animation_finished" from="Transitioner/AnimationPlayer" to="Transitioner" method="_on_animation_player_animation_finished"]

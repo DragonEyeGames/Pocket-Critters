@@ -1247,8 +1247,10 @@ libraries = {
 
 [node name="Camera" type="Camera2D" parent="." node_paths=PackedStringArray("target")]
 zoom = Vector2(5, 5)
+limit_left = -835
 limit_top = -1280
-limit_bottom = 249
+limit_right = 450
+limit_bottom = 174
 script = ExtResource("8_i30pn")
 target = NodePath("../Player")
 

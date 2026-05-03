@@ -27,6 +27,7 @@ func _on_new_pressed() -> void:
 	elif(not FileAccess.file_exists("user://save-3.tres")):
 		toMake=3
 	if(not toMake==-1):
+		await $Transitioner.darkenScreen()
 		Music.closeMenu()
 		GameManager.loadedSave=toMake
 		GameManager.initialize()
